@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<VirtualInHttp HintText="" Title="Wetterstation Ecowitt" Comment="Beispiel: Station über die Ecowitt-Weiche" Address="http://loxberry/plugins/ecowittweiche/live.php?token=DEIN_TOKEN" PollingTime="60">
+	<Info templateType="2" minVersion="17010727"/>
+	<VirtualInHttpCmd Title="Außentemperatur" Comment="common_list id 0x02" Check="\i&quot;0x02&quot;,&quot;val&quot;:&quot;\i\v" Signed="true" Analog="true" SourceValLow="0" DestValLow="0" SourceValHigh="1" DestValHigh="1" DefVal="0" MinVal="-50" MaxVal="70" Unit="&lt;v.1&gt; °C" HintText=""/>
+</VirtualInHttp>

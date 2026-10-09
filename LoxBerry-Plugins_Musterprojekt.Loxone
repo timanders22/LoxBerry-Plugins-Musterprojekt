@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<ControlList Version="274" LxAV="87" NextObj="55" NextConst="1" NextNote="1" NextMem="1">
-	<C Type="Document" V="17020828" U="216373ab-00cc-41fa-ffffe001fe9bf86f" Title="LoxBerry-Plugins Musterprojekt" WF="16384" ConfigVersion="17020828" PaperFormat="2" SPSfreq="100" OpenIsHigh="false" Date="2026-10-09 10:46:06" CDate="" BDate="" DateS="560767566" Street="" Town="" PostCode="" Ctry="" Latitude="0.000" Longitude="0.000" Timezone="Europe/Vienna" Timeserver="" Logo="" uuidNotifications="216373ab-00cb-41f6-ffffe001fe9bf86f" uuidFavSeq="216373ab-00cb-41f8-ffffe001fe9bf86f" uuidFavCol="216373ab-00cb-41f9-ffffe001fe9bf86f" FC="hsv(25,96,50);hsv(24,95,80);hsv(337,94,50)" uuidTime="216373ab-00cb-41f7-ffffe001fe9bf86f" UnitPrecipitation="1" Currency="€" UpdTime="120" AUE="true" DeviceTelemetry="true" CrashL="true" Geo="0" NumO="444" APPKEY="717BCB5938494F35EA25202FC850B65F" APPID="227A0B">
+<ControlList Version="274" LxAV="87" NextObj="98" NextConst="1" NextNote="1" NextMem="2">
+	<C Type="Document" V="17020828" U="216373ab-00cc-41fa-ffffe001fe9bf86f" Title="LoxBerry-Plugins Musterprojekt" ConfigVersion="17020828" PaperFormat="2" SPSfreq="100" OpenIsHigh="false" Date="2026-10-09 12:25:29" CDate="" BDate="" DateS="560773529" Street="" Town="" PostCode="" Ctry="" Latitude="0.000" Longitude="0.000" Timezone="Europe/Vienna" Timeserver="" Logo="" uuidNotifications="216373ab-00cb-41f6-ffffe001fe9bf86f" uuidFavSeq="216373ab-00cb-41f8-ffffe001fe9bf86f" uuidFavCol="216373ab-00cb-41f9-ffffe001fe9bf86f" FC="hsv(25,96,50);hsv(24,95,80);hsv(337,94,50)" uuidTime="216373ab-00cb-41f7-ffffe001fe9bf86f" UnitPrecipitation="1" Currency="€" UpdTime="120" AUE="true" DeviceTelemetry="true" CrashL="true" Geo="0" NumO="588" APPKEY="717BCB5938494F35EA25202FC850B65F" APPID="227A0B">
 		<HP H="" Sc="-2" S="WGpiqX5LbyaIrGD1MuWTTyrxvlVqUpqf" Alg="1"/>
 		<C Type="LoxCaption" V="178" U="216373ab-00cd-41fc-ffffe001fe9bf86f" Title="Symbole" Cl="0,0,0" WF="16384" CaptionType="5" SubType="5"/>
 		<C Type="CategoryCaption" V="178" U="216373ab-00cd-41fe-ffffe001fe9bf86f" Title="Kategorien" WF="16384">
@@ -1016,6 +1016,544 @@
 						<Display Type="2" Unit="&lt;v.0&gt; s" StateOnly="true"/>
 					</C>
 				</C>
+				<C Type="VirtualHttpIn" Desc="Dashboard-Designer" IName="VHI6" V="178" U="216cb14d-0354-1c77-ffffe001fe9bf86f" Title="Dashboard-Designer" Cl="0,0,0" WF="16384" Address="http://loxberry/plugins/dashboard/index.php?token=DEIN_TOKEN&amp;aktion=status" Poll="60" Timeout="4000" Allowedtimeouts="10" on="true">
+					<C Type="Online" IName="S0" V="178" U="216cb14d-0358-1c7a-ffffe001fe9bf86f" Title="Onlinestatus Eingang VHI1" Cl="0,0,0" Nio="1" WF="20480" ValOT="1" MinTime="10" NoMsg="true" Idx="-1">
+						<Co K="Q" U="216cb14d-0358-1c79-00ff82be0fffb85f"/>
+						<IoData Cr="216373ab-00d3-432c-ffffe001fe9bf86f" Pr="216373ab-00ce-42f4-ffffe001fe9bf86f" St="2"/>
+						<Display Unit="&lt;v&gt;" StateOnly="true" IxText="8"/>
+					</C>
+					<C Type="VirtualHttpInCmd" Desc="1 = verbunden und Werte frisch" IName="VCI56" V="178" U="216cb14d-0358-1c7e-ffffe001fe9bf86f" Title="DASHBOARD_OK" Cl="238,238,238" Nio="2" WF="16400" ValOT="1" Check="\i;OK=\i\v" Analog="true" SourceValHigh="1" DestValHigh="1" MaxVal="1">
+						<Co K="AQ" U="216cb14d-0358-1c7c-00ff82be0fffb85f"/>
+						<Co K="Q" U="216cb14d-0358-1c7d-01ff82be0fffb85f"/>
+						<IoData Cr="216373ab-00cf-42fc-ffffe001fe9bf86f" Pr="216373ab-00cf-42f8-ffffe001fe9bf86f"/>
+						<Display Type="2" Unit="&lt;v&gt;" StateOnly="true"/>
+					</C>
+					<C Type="VirtualHttpInCmd" Desc="Anzahl der Bausteine" IName="VCI57" V="178" U="216cb14d-035a-1c82-ffffe001fe9bf86f" Title="DASHBOARD_BAUSTEINE" Cl="238,238,238" Nio="2" WF="16400" ValOT="1" Check="\i;BAUSTEINE=\i\v" Analog="true" SourceValHigh="1" DestValHigh="1" MaxVal="65535">
+						<Co K="AQ" U="216cb14d-035a-1c80-00ff82be0fffb85f"/>
+						<Co K="Q" U="216cb14d-035a-1c81-01ff82be0fffb85f"/>
+						<IoData Cr="216373ab-00cf-42fc-ffffe001fe9bf86f" Pr="216373ab-00cf-42f8-ffffe001fe9bf86f"/>
+						<Display Type="2" Unit="&lt;v&gt;" StateOnly="true"/>
+					</C>
+					<C Type="VirtualHttpInCmd" Desc="Anzahl der Dashboard-Seiten" IName="VCI58" V="178" U="216cb14d-035a-1c86-ffffe001fe9bf86f" Title="DASHBOARD_SEITEN" Cl="0,0,0" Nio="2" WF="16384" ValOT="1" Check="\i;SEITEN=\i\v" Analog="true" SourceValHigh="1" DestValHigh="1" MaxVal="255">
+						<Co K="AQ" U="216cb14d-035a-1c84-00ff82be0fffb85f"/>
+						<Co K="Q" U="216cb14d-035a-1c85-01ff82be0fffb85f"/>
+						<IoData Cr="216373ab-00cf-42fc-ffffe001fe9bf86f" Pr="216373ab-00ce-42f4-ffffe001fe9bf86f"/>
+						<Display Type="2" Unit="&lt;v&gt;" StateOnly="true"/>
+					</C>
+					<C Type="VirtualHttpInCmd" Desc="Anzahl aller Kacheln" IName="VCI59" V="178" U="216cb14d-035a-1c8a-ffffe001fe9bf86f" Title="DASHBOARD_KACHELN" Cl="0,0,0" Nio="2" WF="16384" ValOT="1" Check="\i;KACHELN=\i\v" Analog="true" SourceValHigh="1" DestValHigh="1" MaxVal="65535">
+						<Co K="AQ" U="216cb14d-035a-1c88-00ff82be0fffb85f"/>
+						<Co K="Q" U="216cb14d-035a-1c89-01ff82be0fffb85f"/>
+						<IoData Cr="216373ab-00cf-42fc-ffffe001fe9bf86f" Pr="216373ab-00ce-42f4-ffffe001fe9bf86f"/>
+						<Display Type="2" Unit="&lt;v&gt;" StateOnly="true"/>
+					</C>
+					<C Type="VirtualHttpInCmd" Desc="Alter der Werte, -1 = keine" IName="VCI60" V="178" U="216cb14d-035a-1c8e-ffffe001fe9bf86f" Title="DASHBOARD_ALTER" Cl="238,238,238" Nio="2" WF="16400" ValOT="1" Check="\i;ALTER=\i\v" Signed="true" Analog="true" SourceValHigh="1" DestValHigh="1" MinVal="-1" MaxVal="2147483647">
+						<Co K="AQ" U="216cb14d-035a-1c8c-00ff82be0fffb85f"/>
+						<Co K="Q" U="216cb14d-035a-1c8d-01ff82be0fffb85f"/>
+						<IoData Cr="216373ab-00cf-42fc-ffffe001fe9bf86f" Pr="216373ab-00cf-42f8-ffffe001fe9bf86f"/>
+						<Display Type="2" Unit="&lt;v.1&gt; s" StateOnly="true"/>
+					</C>
+				</C>
+				<C Type="VirtualHttpIn" Desc="Ecowitt-Weiche Zustand" IName="VHI7" V="178" U="216cb45f-0331-61c8-ffffe001fe9bf86f" Title="Ecowitt-Weiche Zustand" Cl="0,0,0" WF="16384" Address="http://loxberry/plugins/ecowittweiche/live.php?status=1&amp;token=DEIN_TOKEN" Poll="60" Timeout="7000" Allowedtimeouts="10" on="true">
+					<C Type="Online" IName="S0" V="178" U="216cb45f-0331-61cb-ffffe001fe9bf86f" Title="Onlinestatus Eingang VHI1" Cl="0,0,0" Nio="1" WF="20480" ValOT="1" MinTime="10" NoMsg="true" Idx="-1">
+						<Co K="Q" U="216cb45f-0331-61ca-00ffc8900e811197"/>
+						<IoData Cr="216373ab-00d3-432c-ffffe001fe9bf86f" Pr="216373ab-00ce-42f4-ffffe001fe9bf86f" St="2"/>
+						<Display Unit="&lt;v&gt;" StateOnly="true" IxText="8"/>
+					</C>
+					<C Type="VirtualHttpInCmd" Desc="1 = brauchbare Daten" IName="VCI61" V="178" U="216cb45f-0331-61cf-ffffe001fe9bf86f" Title="Ecowitt-Weiche OK" Cl="238,238,238" Nio="2" WF="16400" ValOT="1" Check="\i;OK=\i\v" Analog="true" SourceValHigh="1" DestValHigh="1" MaxVal="1">
+						<Co K="AQ" U="216cb45f-0331-61cd-00ffc8900e811197"/>
+						<Co K="Q" U="216cb45f-0331-61ce-01ffc8900e811197"/>
+						<IoData Cr="216373ab-00cf-42fc-ffffe001fe9bf86f" Pr="216373ab-00cf-42f8-ffffe001fe9bf86f"/>
+						<Display Type="2" Unit="&lt;v&gt;" StateOnly="true"/>
+					</C>
+					<C Type="VirtualHttpInCmd" Desc="1 primär, 2 Ersatz, 0 keine" IName="VCI62" V="178" U="216cb45f-0341-61d3-ffffe001fe9bf86f" Title="Ecowitt-Weiche Quelle" Cl="238,238,238" Nio="2" WF="16400" ValOT="1" Check="\i;QUELLE=\i\v" Analog="true" SourceValHigh="1" DestValHigh="1" MaxVal="2">
+						<Co K="AQ" U="216cb45f-0341-61d1-00ffc8900e811197"/>
+						<Co K="Q" U="216cb45f-0341-61d2-01ffc8900e811197"/>
+						<IoData Cr="216373ab-00cf-42fc-ffffe001fe9bf86f" Pr="216373ab-00cf-42f8-ffffe001fe9bf86f"/>
+						<Display Type="2" Unit="&lt;v&gt;" StateOnly="true"/>
+					</C>
+					<C Type="VirtualHttpInCmd" Desc="Anzahl der Quellwechsel" IName="VCI63" V="178" U="216cb45f-0341-61d7-ffffe001fe9bf86f" Title="Ecowitt-Weiche Wechsel" Cl="0,0,0" Nio="2" WF="16384" ValOT="1" Check="\i;WECHSEL=\i\v" Analog="true" SourceValHigh="1" DestValHigh="1" MaxVal="100000">
+						<Co K="AQ" U="216cb45f-0341-61d5-00ffc8900e811197"/>
+						<Co K="Q" U="216cb45f-0341-61d6-01ffc8900e811197"/>
+						<IoData Cr="216373ab-00cf-42fc-ffffe001fe9bf86f" Pr="216373ab-00ce-42f4-ffffe001fe9bf86f"/>
+						<Display Type="2" Unit="&lt;v&gt;" StateOnly="true"/>
+					</C>
+					<C Type="VirtualHttpInCmd" Desc="Alter der Daten in s, -1 = keine" IName="VCI64" V="178" U="216cb45f-0341-61db-ffffe001fe9bf86f" Title="Ecowitt-Weiche Alter" Cl="238,238,238" Nio="2" WF="16400" ValOT="1" Check="\i;ALTER=\i\v" Signed="true" Analog="true" SourceValHigh="1" DestValHigh="1" MinVal="-1" MaxVal="1000000">
+						<Co K="AQ" U="216cb45f-0341-61d9-00ffc8900e811197"/>
+						<Co K="Q" U="216cb45f-0341-61da-01ffc8900e811197"/>
+						<IoData Cr="216373ab-00cf-42fc-ffffe001fe9bf86f" Pr="216373ab-00cf-42f8-ffffe001fe9bf86f"/>
+						<Display Type="2" Unit="&lt;v&gt; s" StateOnly="true"/>
+					</C>
+				</C>
+				<C Type="VirtualHttpIn" Desc="Wetterstation Ecowitt" IName="VHI8" V="178" U="216cb476-0151-6cc9-ffffe001fe9bf86f" Title="Wetterstation Ecowitt" Cl="0,0,0" WF="16384" Address="http://loxberry/plugins/ecowittweiche/live.php?token=DEIN_TOKEN" Poll="60" Timeout="7000" Allowedtimeouts="10" on="true">
+					<C Type="Online" IName="S0" V="178" U="216cb476-0154-6ccc-ffffe001fe9bf86f" Title="Onlinestatus Eingang VHI1" Cl="0,0,0" Nio="1" WF="20480" ValOT="1" MinTime="10" NoMsg="true" Idx="-1">
+						<Co K="Q" U="216cb476-0154-6ccb-00ffba5a4e67eed1"/>
+						<IoData Cr="216373ab-00d3-432c-ffffe001fe9bf86f" Pr="216373ab-00ce-42f4-ffffe001fe9bf86f" St="2"/>
+						<Display Unit="&lt;v&gt;" StateOnly="true" IxText="8"/>
+					</C>
+					<C Type="VirtualHttpInCmd" Desc="common_list id 0x02" IName="VCI65" V="178" U="216cb476-015a-6cd0-ffffe001fe9bf86f" Title="Außentemperatur" Cl="238,238,238" Nio="2" WF="16400" ValOT="1" Check="\i&quot;0x02&quot;,&quot;val&quot;:&quot;\i\v" Signed="true" Analog="true" SourceValHigh="1" DestValHigh="1" MinVal="-50" MaxVal="70">
+						<Co K="AQ" U="216cb476-015a-6cce-00ffba5a4e67eed1"/>
+						<Co K="Q" U="216cb476-015a-6ccf-01ffba5a4e67eed1"/>
+						<IoData Cr="216373ab-00cf-42fc-ffffe001fe9bf86f" Pr="216373ab-00cf-42f8-ffffe001fe9bf86f"/>
+						<Display Type="2" Unit="&lt;v.1&gt; °C" StateOnly="true"/>
+					</C>
+				</C>
+				<C Type="VirtualHttpIn" Desc="Raumklima" IName="VHI9" V="178" U="216cb609-0358-5a9f-ffffe001fe9bf86f" Title="Raumklima" Cl="0,0,0" WF="16384" Address="http://loxberry/plugins/raumklima/index.php?token=DEIN_TOKEN&amp;aktion=status" Poll="300" Timeout="4000" Allowedtimeouts="10" on="true">
+					<C Type="Online" IName="S0" V="178" U="216cb609-036f-5aa2-ffffe001fe9bf86f" Title="Onlinestatus Eingang VHI1" Cl="0,0,0" Nio="1" WF="20480" ValOT="1" MinTime="10" NoMsg="true" Idx="-1">
+						<Co K="Q" U="216cb609-036d-5aa1-00ff30518fa2f1a2"/>
+						<IoData Cr="216373ab-00d3-432c-ffffe001fe9bf86f" Pr="216373ab-00ce-42f4-ffffe001fe9bf86f" St="2"/>
+						<Display Unit="&lt;v&gt;" StateOnly="true" IxText="8"/>
+					</C>
+					<C Type="VirtualHttpInCmd" Desc="Wohnzimmer Temperatur" IName="VCI66" V="178" U="216cb609-036f-5aa6-ffffe001fe9bf86f" Title="RK_WOHNZIMMER_T" Cl="0,0,0" Nio="2" WF="16384" ValOT="1" Check="\i;R1T=\i\v" Signed="true" Analog="true" SourceValHigh="1" DestValHigh="1" MinVal="-60" MaxVal="80">
+						<Co K="AQ" U="216cb609-036f-5aa4-00ff30518fa2f1a2"/>
+						<Co K="Q" U="216cb609-036f-5aa5-01ff30518fa2f1a2"/>
+						<IoData Cr="216373ab-00cf-42fc-ffffe001fe9bf86f" Pr="216373ab-00ce-42f4-ffffe001fe9bf86f"/>
+						<Display Type="2" Unit="&lt;v.1&gt; °C" StateOnly="true"/>
+					</C>
+					<C Type="VirtualHttpInCmd" Desc="Wohnzimmer Feuchte" IName="VCI67" V="178" U="216cb609-0370-5aaa-ffffe001fe9bf86f" Title="RK_WOHNZIMMER_RF" Cl="0,0,0" Nio="2" WF="16384" ValOT="1" Check="\i;R1RF=\i\v" Signed="true" Analog="true" SourceValHigh="1" DestValHigh="1" MaxVal="100">
+						<Co K="AQ" U="216cb609-0370-5aa8-00ff30518fa2f1a2"/>
+						<Co K="Q" U="216cb609-0370-5aa9-01ff30518fa2f1a2"/>
+						<IoData Cr="216373ab-00cf-42fc-ffffe001fe9bf86f" Pr="216373ab-00ce-42f4-ffffe001fe9bf86f"/>
+						<Display Type="2" Unit="&lt;v.0&gt; %" StateOnly="true"/>
+					</C>
+					<C Type="VirtualHttpInCmd" Desc="Wohnzimmer Taupunkt" IName="VCI68" V="178" U="216cb609-0370-5aae-ffffe001fe9bf86f" Title="RK_WOHNZIMMER_TAU" Cl="0,0,0" Nio="2" WF="16384" ValOT="1" Check="\i;R1TAU=\i\v" Signed="true" Analog="true" SourceValHigh="1" DestValHigh="1" MinVal="-60" MaxVal="80">
+						<Co K="AQ" U="216cb609-0370-5aac-00ff30518fa2f1a2"/>
+						<Co K="Q" U="216cb609-0370-5aad-01ff30518fa2f1a2"/>
+						<IoData Cr="216373ab-00cf-42fc-ffffe001fe9bf86f" Pr="216373ab-00ce-42f4-ffffe001fe9bf86f"/>
+						<Display Type="2" Unit="&lt;v.1&gt; °C" StateOnly="true"/>
+					</C>
+					<C Type="VirtualHttpInCmd" Desc="Wohnzimmer abs. Feuchte" IName="VCI69" V="178" U="216cb609-0370-5ab2-ffffe001fe9bf86f" Title="RK_WOHNZIMMER_ABS" Cl="0,0,0" Nio="2" WF="16384" ValOT="1" Check="\i;R1ABS=\i\v" Signed="true" Analog="true" SourceValHigh="1" DestValHigh="1" MaxVal="300">
+						<Co K="AQ" U="216cb609-0370-5ab0-00ff30518fa2f1a2"/>
+						<Co K="Q" U="216cb609-0370-5ab1-01ff30518fa2f1a2"/>
+						<IoData Cr="216373ab-00cf-42fc-ffffe001fe9bf86f" Pr="216373ab-00ce-42f4-ffffe001fe9bf86f"/>
+						<Display Type="2" Unit="&lt;v.2&gt; g/m³" StateOnly="true"/>
+					</C>
+					<C Type="VirtualHttpInCmd" Desc="Wohnzimmer Wandtemperatur" IName="VCI70" V="178" U="216cb609-0370-5ab6-ffffe001fe9bf86f" Title="RK_WOHNZIMMER_OBERT" Cl="0,0,0" Nio="2" WF="16384" ValOT="1" Check="\i;R1OBERT=\i\v" Signed="true" Analog="true" SourceValHigh="1" DestValHigh="1" MinVal="-60" MaxVal="80">
+						<Co K="AQ" U="216cb609-0370-5ab4-00ff30518fa2f1a2"/>
+						<Co K="Q" U="216cb609-0370-5ab5-01ff30518fa2f1a2"/>
+						<IoData Cr="216373ab-00cf-42fc-ffffe001fe9bf86f" Pr="216373ab-00ce-42f4-ffffe001fe9bf86f"/>
+						<Display Type="2" Unit="&lt;v.1&gt; °C" StateOnly="true"/>
+					</C>
+					<C Type="VirtualHttpInCmd" Desc="Wohnzimmer Wandfeuchte" IName="VCI71" V="178" U="216cb609-0370-5aba-ffffe001fe9bf86f" Title="RK_WOHNZIMMER_OBERRF" Cl="0,0,0" Nio="2" WF="16384" ValOT="1" Check="\i;R1OBERRF=\i\v" Signed="true" Analog="true" SourceValHigh="1" DestValHigh="1" MaxVal="100">
+						<Co K="AQ" U="216cb609-0370-5ab8-00ff30518fa2f1a2"/>
+						<Co K="Q" U="216cb609-0370-5ab9-01ff30518fa2f1a2"/>
+						<IoData Cr="216373ab-00cf-42fc-ffffe001fe9bf86f" Pr="216373ab-00ce-42f4-ffffe001fe9bf86f"/>
+						<Display Type="2" Unit="&lt;v.0&gt; %" StateOnly="true"/>
+					</C>
+					<C Type="VirtualHttpInCmd" Desc="Wohnzimmer Lüften lohnt" IName="VCI72" V="178" U="216cb609-0370-5abe-ffffe001fe9bf86f" Title="RK_WOHNZIMMER_LUEFTEN" Cl="238,238,238" Nio="2" WF="16400" ValOT="1" Check="\i;R1LUEFTEN=\i\v" Signed="true" Analog="true" SourceValHigh="1" DestValHigh="1" MaxVal="1">
+						<Co K="AQ" U="216cb609-0370-5abc-00ff30518fa2f1a2"/>
+						<Co K="Q" U="216cb609-0370-5abd-01ff30518fa2f1a2"/>
+						<IoData Cr="216373ab-00cf-42fc-ffffe001fe9bf86f" Pr="216373ab-00cf-42f8-ffffe001fe9bf86f"/>
+						<Display Type="2" Unit="&lt;v.0&gt;" StateOnly="true"/>
+					</C>
+					<C Type="VirtualHttpInCmd" Desc="Wohnzimmer Feuchtegewinn" IName="VCI73" V="178" U="216cb609-0370-5ac2-ffffe001fe9bf86f" Title="RK_WOHNZIMMER_GEWINN" Cl="0,0,0" Nio="2" WF="16384" ValOT="1" Check="\i;R1GEWINN=\i\v" Signed="true" Analog="true" SourceValHigh="1" DestValHigh="1" MinVal="-300" MaxVal="300">
+						<Co K="AQ" U="216cb609-0370-5ac0-00ff30518fa2f1a2"/>
+						<Co K="Q" U="216cb609-0370-5ac1-01ff30518fa2f1a2"/>
+						<IoData Cr="216373ab-00cf-42fc-ffffe001fe9bf86f" Pr="216373ab-00ce-42f4-ffffe001fe9bf86f"/>
+						<Display Type="2" Unit="&lt;v.2&gt; g/m³" StateOnly="true"/>
+					</C>
+					<C Type="VirtualHttpInCmd" Desc="Wohnzimmer Schimmelgefahr" IName="VCI74" V="178" U="216cb609-0370-5ac6-ffffe001fe9bf86f" Title="RK_WOHNZIMMER_SCHIMMEL" Cl="238,238,238" Nio="2" WF="16400" ValOT="1" Check="\i;R1SCHIMMEL=\i\v" Signed="true" Analog="true" SourceValHigh="1" DestValHigh="1" MinVal="-1" MaxVal="1">
+						<Co K="AQ" U="216cb609-0370-5ac4-00ff30518fa2f1a2"/>
+						<Co K="Q" U="216cb609-0370-5ac5-01ff30518fa2f1a2"/>
+						<IoData Cr="216373ab-00cf-42fc-ffffe001fe9bf86f" Pr="216373ab-00cf-42f8-ffffe001fe9bf86f"/>
+						<Display Type="2" Unit="&lt;v.0&gt;" StateOnly="true"/>
+					</C>
+					<C Type="VirtualHttpInCmd" Desc="Wohnzimmer zu feucht" IName="VCI75" V="178" U="216cb609-0370-5aca-ffffe001fe9bf86f" Title="RK_WOHNZIMMER_FEUCHT" Cl="0,0,0" Nio="2" WF="16384" ValOT="1" Check="\i;R1FEUCHT=\i\v" Signed="true" Analog="true" SourceValHigh="1" DestValHigh="1" MaxVal="1">
+						<Co K="AQ" U="216cb609-0370-5ac8-00ff30518fa2f1a2"/>
+						<Co K="Q" U="216cb609-0370-5ac9-01ff30518fa2f1a2"/>
+						<IoData Cr="216373ab-00cf-42fc-ffffe001fe9bf86f" Pr="216373ab-00ce-42f4-ffffe001fe9bf86f"/>
+						<Display Type="2" Unit="&lt;v.0&gt;" StateOnly="true"/>
+					</C>
+					<C Type="VirtualHttpInCmd" Desc="Wohnzimmer zu trocken" IName="VCI76" V="178" U="216cb609-0370-5ace-ffffe001fe9bf86f" Title="RK_WOHNZIMMER_TROCKEN" Cl="0,0,0" Nio="2" WF="16384" ValOT="1" Check="\i;R1TROCKEN=\i\v" Signed="true" Analog="true" SourceValHigh="1" DestValHigh="1" MaxVal="1">
+						<Co K="AQ" U="216cb609-0370-5acc-00ff30518fa2f1a2"/>
+						<Co K="Q" U="216cb609-0370-5acd-01ff30518fa2f1a2"/>
+						<IoData Cr="216373ab-00cf-42fc-ffffe001fe9bf86f" Pr="216373ab-00ce-42f4-ffffe001fe9bf86f"/>
+						<Display Type="2" Unit="&lt;v.0&gt;" StateOnly="true"/>
+					</C>
+					<C Type="VirtualHttpInCmd" Desc="Wohnzimmer Lüften in Minuten" IName="VCI77" V="178" U="216cb609-0370-5ad2-ffffe001fe9bf86f" Title="RK_WOHNZIMMER_BESTIN" Cl="0,0,0" Nio="2" WF="16384" ValOT="1" Check="\i;R1BESTIN=\i\v" Signed="true" Analog="true" SourceValHigh="1" DestValHigh="1" MinVal="-1" MaxVal="2880">
+						<Co K="AQ" U="216cb609-0370-5ad0-00ff30518fa2f1a2"/>
+						<Co K="Q" U="216cb609-0370-5ad1-01ff30518fa2f1a2"/>
+						<IoData Cr="216373ab-00cf-42fc-ffffe001fe9bf86f" Pr="216373ab-00ce-42f4-ffffe001fe9bf86f"/>
+						<Display Type="2" Unit="&lt;v.0&gt; min" StateOnly="true"/>
+					</C>
+					<C Type="VirtualHttpInCmd" Desc="Wohnzimmer Lüften um Uhr" IName="VCI78" V="178" U="216cb609-0370-5ad6-ffffe001fe9bf86f" Title="RK_WOHNZIMMER_BESTSTD" Cl="0,0,0" Nio="2" WF="16384" ValOT="1" Check="\i;R1BESTSTD=\i\v" Signed="true" Analog="true" SourceValHigh="1" DestValHigh="1" MinVal="-1" MaxVal="23">
+						<Co K="AQ" U="216cb609-0370-5ad4-00ff30518fa2f1a2"/>
+						<Co K="Q" U="216cb609-0370-5ad5-01ff30518fa2f1a2"/>
+						<IoData Cr="216373ab-00cf-42fc-ffffe001fe9bf86f" Pr="216373ab-00ce-42f4-ffffe001fe9bf86f"/>
+						<Display Type="2" Unit="&lt;v.0&gt; h" StateOnly="true"/>
+					</C>
+					<C Type="VirtualHttpInCmd" Desc="Wohnzimmer Abstand Taupunkt" IName="VCI79" V="178" U="216cb609-0381-5ada-ffffe001fe9bf86f" Title="RK_WOHNZIMMER_SPREAD" Cl="0,0,0" Nio="2" WF="16384" ValOT="1" Check="\i;R1SPREAD=\i\v" Signed="true" Analog="true" SourceValHigh="1" DestValHigh="1" MinVal="-140" MaxVal="140">
+						<Co K="AQ" U="216cb609-0370-5ad8-00ff30518fa2f1a2"/>
+						<Co K="Q" U="216cb609-0370-5ad9-01ff30518fa2f1a2"/>
+						<IoData Cr="216373ab-00cf-42fc-ffffe001fe9bf86f" Pr="216373ab-00ce-42f4-ffffe001fe9bf86f"/>
+						<Display Type="2" Unit="&lt;v.1&gt; K" StateOnly="true"/>
+					</C>
+					<C Type="VirtualHttpInCmd" Desc="Wohnzimmer Kühlvorlauf min." IName="VCI80" V="178" U="216cb609-0382-5ade-ffffe001fe9bf86f" Title="RK_WOHNZIMMER_VLMIN" Cl="238,238,238" Nio="2" WF="16400" ValOT="1" Check="\i;R1VLMIN=\i\v" Signed="true" Analog="true" SourceValHigh="1" DestValHigh="1" MinVal="-60" MaxVal="90">
+						<Co K="AQ" U="216cb609-0382-5adc-00ff30518fa2f1a2"/>
+						<Co K="Q" U="216cb609-0382-5add-01ff30518fa2f1a2"/>
+						<IoData Cr="216373ab-00cf-42fc-ffffe001fe9bf86f" Pr="216373ab-00cf-42f8-ffffe001fe9bf86f"/>
+						<Display Type="2" Unit="&lt;v.1&gt; °C" StateOnly="true"/>
+					</C>
+					<C Type="VirtualHttpInCmd" Desc="Wohnzimmer Wertalter" IName="VCI81" V="178" U="216cb609-0382-5ae2-ffffe001fe9bf86f" Title="RK_WOHNZIMMER_RALTER" Cl="238,238,238" Nio="2" WF="16400" ValOT="1" Check="\i;R1RALTER=\i\v" Signed="true" Analog="true" SourceValHigh="1" DestValHigh="1" MinVal="-1" MaxVal="8640000">
+						<Co K="AQ" U="216cb609-0382-5ae0-00ff30518fa2f1a2"/>
+						<Co K="Q" U="216cb609-0382-5ae1-01ff30518fa2f1a2"/>
+						<IoData Cr="216373ab-00cf-42fc-ffffe001fe9bf86f" Pr="216373ab-00cf-42f8-ffffe001fe9bf86f"/>
+						<Display Type="2" Unit="&lt;v.0&gt; s" StateOnly="true"/>
+					</C>
+					<C Type="VirtualHttpInCmd" Desc="Wohnzimmer Fühler steht" IName="VCI82" V="178" U="216cb609-0382-5ae6-ffffe001fe9bf86f" Title="RK_WOHNZIMMER_STEHT" Cl="238,238,238" Nio="2" WF="16400" ValOT="1" Check="\i;R1STEHT=\i\v" Signed="true" Analog="true" SourceValHigh="1" DestValHigh="1" MaxVal="1">
+						<Co K="AQ" U="216cb609-0382-5ae4-00ff30518fa2f1a2"/>
+						<Co K="Q" U="216cb609-0382-5ae5-01ff30518fa2f1a2"/>
+						<IoData Cr="216373ab-00cf-42fc-ffffe001fe9bf86f" Pr="216373ab-00cf-42f8-ffffe001fe9bf86f"/>
+						<Display Type="2" Unit="&lt;v.0&gt;" StateOnly="true"/>
+					</C>
+					<C Type="VirtualHttpInCmd" Desc="Wohnzimmer Enthalpie" IName="VCI83" V="178" U="216cb609-0385-5aea-ffffe001fe9bf86f" Title="RK_WOHNZIMMER_ENTH" Cl="0,0,0" Nio="2" WF="16384" ValOT="1" Check="\i;R1ENTH=\i\v" Signed="true" Analog="true" SourceValHigh="1" DestValHigh="1" MinVal="-70" MaxVal="1600">
+						<Co K="AQ" U="216cb609-0385-5ae8-00ff30518fa2f1a2"/>
+						<Co K="Q" U="216cb609-0385-5ae9-01ff30518fa2f1a2"/>
+						<IoData Cr="216373ab-00cf-42fc-ffffe001fe9bf86f" Pr="216373ab-00ce-42f4-ffffe001fe9bf86f"/>
+						<Display Type="2" Unit="&lt;v.1&gt; kJ/kg" StateOnly="true"/>
+					</C>
+					<C Type="VirtualHttpInCmd" Desc="Wohnzimmer Schimmelampel" IName="VCI84" V="178" U="216cb609-0385-5aee-ffffe001fe9bf86f" Title="RK_WOHNZIMMER_AMPEL" Cl="0,0,0" Nio="2" WF="16384" ValOT="1" Check="\i;R1AMPEL=\i\v" Signed="true" Analog="true" SourceValHigh="1" DestValHigh="1" MinVal="-1" MaxVal="3">
+						<Co K="AQ" U="216cb609-0385-5aec-00ff30518fa2f1a2"/>
+						<Co K="Q" U="216cb609-0385-5aed-01ff30518fa2f1a2"/>
+						<IoData Cr="216373ab-00cf-42fc-ffffe001fe9bf86f" Pr="216373ab-00ce-42f4-ffffe001fe9bf86f"/>
+						<Display Type="2" Unit="&lt;v.0&gt;" StateOnly="true"/>
+					</C>
+					<C Type="VirtualHttpInCmd" Desc="Wohnzimmer nass 24 h" IName="VCI85" V="178" U="216cb609-0385-5af2-ffffe001fe9bf86f" Title="RK_WOHNZIMMER_NASS24" Cl="0,0,0" Nio="2" WF="16384" ValOT="1" Check="\i;R1NASS24=\i\v" Signed="true" Analog="true" SourceValHigh="1" DestValHigh="1" MinVal="-1" MaxVal="24">
+						<Co K="AQ" U="216cb609-0385-5af0-00ff30518fa2f1a2"/>
+						<Co K="Q" U="216cb609-0385-5af1-01ff30518fa2f1a2"/>
+						<IoData Cr="216373ab-00cf-42fc-ffffe001fe9bf86f" Pr="216373ab-00ce-42f4-ffffe001fe9bf86f"/>
+						<Display Type="2" Unit="&lt;v.1&gt; h" StateOnly="true"/>
+					</C>
+					<C Type="VirtualHttpInCmd" Desc="Wohnzimmer nass 7 Tage" IName="VCI86" V="178" U="216cb609-0385-5af6-ffffe001fe9bf86f" Title="RK_WOHNZIMMER_NASS7T" Cl="0,0,0" Nio="2" WF="16384" ValOT="1" Check="\i;R1NASS7T=\i\v" Signed="true" Analog="true" SourceValHigh="1" DestValHigh="1" MinVal="-1" MaxVal="168">
+						<Co K="AQ" U="216cb609-0385-5af4-00ff30518fa2f1a2"/>
+						<Co K="Q" U="216cb609-0385-5af5-01ff30518fa2f1a2"/>
+						<IoData Cr="216373ab-00cf-42fc-ffffe001fe9bf86f" Pr="216373ab-00ce-42f4-ffffe001fe9bf86f"/>
+						<Display Type="2" Unit="&lt;v.1&gt; h" StateOnly="true"/>
+					</C>
+					<C Type="VirtualHttpInCmd" Desc="Wohnzimmer Lüften kühlt" IName="VCI87" V="178" U="216cb609-0385-5afa-ffffe001fe9bf86f" Title="RK_WOHNZIMMER_KUEHLEN" Cl="0,0,0" Nio="2" WF="16384" ValOT="1" Check="\i;R1KUEHLEN=\i\v" Signed="true" Analog="true" SourceValHigh="1" DestValHigh="1" MaxVal="1">
+						<Co K="AQ" U="216cb609-0385-5af8-00ff30518fa2f1a2"/>
+						<Co K="Q" U="216cb609-0385-5af9-01ff30518fa2f1a2"/>
+						<IoData Cr="216373ab-00cf-42fc-ffffe001fe9bf86f" Pr="216373ab-00ce-42f4-ffffe001fe9bf86f"/>
+						<Display Type="2" Unit="&lt;v.0&gt;" StateOnly="true"/>
+					</C>
+					<C Type="VirtualHttpInCmd" Desc="Wohnzimmer Kühlgewinn" IName="VCI88" V="178" U="216cb609-038b-5afe-ffffe001fe9bf86f" Title="RK_WOHNZIMMER_KUEHLG" Cl="0,0,0" Nio="2" WF="16384" ValOT="1" Check="\i;R1KUEHLG=\i\v" Signed="true" Analog="true" SourceValHigh="1" DestValHigh="1" MinVal="-140" MaxVal="140">
+						<Co K="AQ" U="216cb609-038b-5afc-00ff30518fa2f1a2"/>
+						<Co K="Q" U="216cb609-038b-5afd-01ff30518fa2f1a2"/>
+						<IoData Cr="216373ab-00cf-42fc-ffffe001fe9bf86f" Pr="216373ab-00ce-42f4-ffffe001fe9bf86f"/>
+						<Display Type="2" Unit="&lt;v.1&gt; K" StateOnly="true"/>
+					</C>
+					<C Type="VirtualHttpInCmd" Desc="Wohnzimmer Lüftungsdauer" IName="VCI89" V="178" U="216cb609-038b-5b02-ffffe001fe9bf86f" Title="RK_WOHNZIMMER_DAUER" Cl="0,0,0" Nio="2" WF="16384" ValOT="1" Check="\i;R1DAUER=\i\v" Signed="true" Analog="true" SourceValHigh="1" DestValHigh="1" MinVal="-1" MaxVal="60">
+						<Co K="AQ" U="216cb609-038b-5b00-00ff30518fa2f1a2"/>
+						<Co K="Q" U="216cb609-038b-5b01-01ff30518fa2f1a2"/>
+						<IoData Cr="216373ab-00cf-42fc-ffffe001fe9bf86f" Pr="216373ab-00ce-42f4-ffffe001fe9bf86f"/>
+						<Display Type="2" Unit="&lt;v.0&gt; min" StateOnly="true"/>
+					</C>
+					<C Type="VirtualHttpInCmd" Desc="Wohnzimmer Wärmeverlust" IName="VCI90" V="178" U="216cb609-038b-5b06-ffffe001fe9bf86f" Title="RK_WOHNZIMMER_KOSTEN" Cl="0,0,0" Nio="2" WF="16384" ValOT="1" Check="\i;R1KOSTEN=\i\v" Signed="true" Analog="true" SourceValHigh="1" DestValHigh="1" MinVal="-1" MaxVal="99999">
+						<Co K="AQ" U="216cb609-038b-5b04-00ff30518fa2f1a2"/>
+						<Co K="Q" U="216cb609-038b-5b05-01ff30518fa2f1a2"/>
+						<IoData Cr="216373ab-00cf-42fc-ffffe001fe9bf86f" Pr="216373ab-00ce-42f4-ffffe001fe9bf86f"/>
+						<Display Type="2" Unit="&lt;v.0&gt; Wh" StateOnly="true"/>
+					</C>
+					<C Type="VirtualHttpInCmd" Desc="Wohnzimmer Lüfterfolg" IName="VCI91" V="178" U="216cb609-038f-5b0a-ffffe001fe9bf86f" Title="RK_WOHNZIMMER_ERFOLG" Cl="0,0,0" Nio="2" WF="16384" ValOT="1" Check="\i;R1ERFOLG=\i\v" Signed="true" Analog="true" SourceValHigh="1" DestValHigh="1" MinVal="-1" MaxVal="100">
+						<Co K="AQ" U="216cb609-038f-5b08-00ff30518fa2f1a2"/>
+						<Co K="Q" U="216cb609-038f-5b09-01ff30518fa2f1a2"/>
+						<IoData Cr="216373ab-00cf-42fc-ffffe001fe9bf86f" Pr="216373ab-00ce-42f4-ffffe001fe9bf86f"/>
+						<Display Type="2" Unit="&lt;v.0&gt; %" StateOnly="true"/>
+					</C>
+					<C Type="VirtualHttpInCmd" Desc="Wohnzimmer Feuchteeintrag" IName="VCI92" V="178" U="216cb609-0390-5b0e-ffffe001fe9bf86f" Title="RK_WOHNZIMMER_EINTRAG" Cl="0,0,0" Nio="2" WF="16384" ValOT="1" Check="\i;R1EINTRAG=\i\v" Signed="true" Analog="true" SourceValHigh="1" DestValHigh="1" MinVal="-1" MaxVal="99999">
+						<Co K="AQ" U="216cb609-0390-5b0c-00ff30518fa2f1a2"/>
+						<Co K="Q" U="216cb609-0390-5b0d-01ff30518fa2f1a2"/>
+						<IoData Cr="216373ab-00cf-42fc-ffffe001fe9bf86f" Pr="216373ab-00ce-42f4-ffffe001fe9bf86f"/>
+						<Display Type="2" Unit="&lt;v.0&gt; g/h" StateOnly="true"/>
+					</C>
+					<C Type="VirtualHttpInCmd" Desc="Wohnzimmer CO₂" IName="VCI93" V="178" U="216cb609-0391-5b12-ffffe001fe9bf86f" Title="RK_WOHNZIMMER_CO2" Cl="0,0,0" Nio="2" WF="16384" ValOT="1" Check="\i;R1CO2=\i\v" Signed="true" Analog="true" SourceValHigh="1" DestValHigh="1" MinVal="-1" MaxVal="5000">
+						<Co K="AQ" U="216cb609-0391-5b10-00ff30518fa2f1a2"/>
+						<Co K="Q" U="216cb609-0391-5b11-01ff30518fa2f1a2"/>
+						<IoData Cr="216373ab-00cf-42fc-ffffe001fe9bf86f" Pr="216373ab-00ce-42f4-ffffe001fe9bf86f"/>
+						<Display Type="2" Unit="&lt;v.0&gt; ppm" StateOnly="true"/>
+					</C>
+					<C Type="VirtualHttpInCmd" Desc="Wohnzimmer CO₂ zu hoch" IName="VCI94" V="178" U="216cb609-0393-5b16-ffffe001fe9bf86f" Title="RK_WOHNZIMMER_CO2HOCH" Cl="0,0,0" Nio="2" WF="16384" ValOT="1" Check="\i;R1CO2HOCH=\i\v" Signed="true" Analog="true" SourceValHigh="1" DestValHigh="1" MaxVal="1">
+						<Co K="AQ" U="216cb609-0393-5b14-00ff30518fa2f1a2"/>
+						<Co K="Q" U="216cb609-0393-5b15-01ff30518fa2f1a2"/>
+						<IoData Cr="216373ab-00cf-42fc-ffffe001fe9bf86f" Pr="216373ab-00ce-42f4-ffffe001fe9bf86f"/>
+						<Display Type="2" Unit="&lt;v.0&gt;" StateOnly="true"/>
+					</C>
+					<C Type="VirtualHttpInCmd" Desc="Wohnzimmer Fenster offen" IName="VCI95" V="178" U="216cb609-0395-5b1a-ffffe001fe9bf86f" Title="RK_WOHNZIMMER_FENSTER" Cl="0,0,0" Nio="2" WF="16384" ValOT="1" Check="\i;R1FENSTER=\i\v" Signed="true" Analog="true" SourceValHigh="1" DestValHigh="1" MinVal="-1" MaxVal="1">
+						<Co K="AQ" U="216cb609-0395-5b18-00ff30518fa2f1a2"/>
+						<Co K="Q" U="216cb609-0395-5b19-01ff30518fa2f1a2"/>
+						<IoData Cr="216373ab-00cf-42fc-ffffe001fe9bf86f" Pr="216373ab-00ce-42f4-ffffe001fe9bf86f"/>
+						<Display Type="2" Unit="&lt;v.0&gt;" StateOnly="true"/>
+					</C>
+					<C Type="VirtualHttpInCmd" Desc="Wohnzimmer Fenster schließen" IName="VCI96" V="178" U="216cb609-0398-5b1e-ffffe001fe9bf86f" Title="RK_WOHNZIMMER_FENSTERZU" Cl="0,0,0" Nio="2" WF="16384" ValOT="1" Check="\i;R1FENSTERZU=\i\v" Signed="true" Analog="true" SourceValHigh="1" DestValHigh="1" MaxVal="1">
+						<Co K="AQ" U="216cb609-0398-5b1c-00ff30518fa2f1a2"/>
+						<Co K="Q" U="216cb609-0398-5b1d-01ff30518fa2f1a2"/>
+						<IoData Cr="216373ab-00cf-42fc-ffffe001fe9bf86f" Pr="216373ab-00ce-42f4-ffffe001fe9bf86f"/>
+						<Display Type="2" Unit="&lt;v.0&gt;" StateOnly="true"/>
+					</C>
+					<C Type="VirtualHttpInCmd" Desc="Wohnzimmer schwül" IName="VCI97" V="178" U="216cb609-0398-5b22-ffffe001fe9bf86f" Title="RK_WOHNZIMMER_SCHWUEL" Cl="0,0,0" Nio="2" WF="16384" ValOT="1" Check="\i;R1SCHWUEL=\i\v" Signed="true" Analog="true" SourceValHigh="1" DestValHigh="1" MinVal="-1" MaxVal="1">
+						<Co K="AQ" U="216cb609-0398-5b20-00ff30518fa2f1a2"/>
+						<Co K="Q" U="216cb609-0398-5b21-01ff30518fa2f1a2"/>
+						<IoData Cr="216373ab-00cf-42fc-ffffe001fe9bf86f" Pr="216373ab-00ce-42f4-ffffe001fe9bf86f"/>
+						<Display Type="2" Unit="&lt;v.0&gt;" StateOnly="true"/>
+					</C>
+					<C Type="VirtualHttpInCmd" Desc="Wohnzimmer Wasseraustrag" IName="VCI98" V="178" U="216cb609-0398-5b26-ffffe001fe9bf86f" Title="RK_WOHNZIMMER_TROCKNEN" Cl="0,0,0" Nio="2" WF="16384" ValOT="1" Check="\i;R1TROCKNEN=\i\v" Signed="true" Analog="true" SourceValHigh="1" DestValHigh="1" MinVal="-99999" MaxVal="99999">
+						<Co K="AQ" U="216cb609-0398-5b24-00ff30518fa2f1a2"/>
+						<Co K="Q" U="216cb609-0398-5b25-01ff30518fa2f1a2"/>
+						<IoData Cr="216373ab-00cf-42fc-ffffe001fe9bf86f" Pr="216373ab-00ce-42f4-ffffe001fe9bf86f"/>
+						<Display Type="2" Unit="&lt;v.0&gt; g/h" StateOnly="true"/>
+					</C>
+					<C Type="VirtualHttpInCmd" Desc="Wohnzimmer Wäsche trocken in" IName="VCI99" V="178" U="216cb609-0398-5b2a-ffffe001fe9bf86f" Title="RK_WOHNZIMMER_TROCKENREST" Cl="0,0,0" Nio="2" WF="16384" ValOT="1" Check="\i;R1TROCKENREST=\i\v" Signed="true" Analog="true" SourceValHigh="1" DestValHigh="1" MinVal="-1" MaxVal="99999">
+						<Co K="AQ" U="216cb609-0398-5b28-00ff30518fa2f1a2"/>
+						<Co K="Q" U="216cb609-0398-5b29-01ff30518fa2f1a2"/>
+						<IoData Cr="216373ab-00cf-42fc-ffffe001fe9bf86f" Pr="216373ab-00ce-42f4-ffffe001fe9bf86f"/>
+						<Display Type="2" Unit="&lt;v.1&gt; h" StateOnly="true"/>
+					</C>
+					<C Type="VirtualHttpInCmd" Desc="Wohnzimmer Zuluft" IName="VCI100" V="178" U="216cb609-039d-5b2e-ffffe001fe9bf86f" Title="RK_WOHNZIMMER_ZULUFT" Cl="0,0,0" Nio="2" WF="16384" ValOT="1" Check="\i;R1ZULUFT=\i\v" Signed="true" Analog="true" SourceValHigh="1" DestValHigh="1" MinVal="-60" MaxVal="80">
+						<Co K="AQ" U="216cb609-039d-5b2c-00ff30518fa2f1a2"/>
+						<Co K="Q" U="216cb609-039d-5b2d-01ff30518fa2f1a2"/>
+						<IoData Cr="216373ab-00cf-42fc-ffffe001fe9bf86f" Pr="216373ab-00ce-42f4-ffffe001fe9bf86f"/>
+						<Display Type="2" Unit="&lt;v.1&gt; °C" StateOnly="true"/>
+					</C>
+					<C Type="VirtualHttpInCmd" Desc="Wohnzimmer Rückwärmzahl" IName="VCI101" V="178" U="216cb609-039f-5b32-ffffe001fe9bf86f" Title="RK_WOHNZIMMER_WRG" Cl="0,0,0" Nio="2" WF="16384" ValOT="1" Check="\i;R1WRG=\i\v" Signed="true" Analog="true" SourceValHigh="1" DestValHigh="1" MinVal="-1" MaxVal="100">
+						<Co K="AQ" U="216cb609-039f-5b30-00ff30518fa2f1a2"/>
+						<Co K="Q" U="216cb609-039f-5b31-01ff30518fa2f1a2"/>
+						<IoData Cr="216373ab-00cf-42fc-ffffe001fe9bf86f" Pr="216373ab-00ce-42f4-ffffe001fe9bf86f"/>
+						<Display Type="2" Unit="&lt;v.0&gt; %" StateOnly="true"/>
+					</C>
+					<C Type="VirtualHttpInCmd" Desc="Wohnzimmer Fortluft" IName="VCI102" V="178" U="216cb609-03a1-5b36-ffffe001fe9bf86f" Title="RK_WOHNZIMMER_FORTLUFT" Cl="0,0,0" Nio="2" WF="16384" ValOT="1" Check="\i;R1FORTLUFT=\i\v" Signed="true" Analog="true" SourceValHigh="1" DestValHigh="1" MinVal="-60" MaxVal="80">
+						<Co K="AQ" U="216cb609-03a1-5b34-00ff30518fa2f1a2"/>
+						<Co K="Q" U="216cb609-03a1-5b35-01ff30518fa2f1a2"/>
+						<IoData Cr="216373ab-00cf-42fc-ffffe001fe9bf86f" Pr="216373ab-00ce-42f4-ffffe001fe9bf86f"/>
+						<Display Type="2" Unit="&lt;v.1&gt; °C" StateOnly="true"/>
+					</C>
+					<C Type="VirtualHttpInCmd" Desc="Wohnzimmer Vereisungsgefahr" IName="VCI103" V="178" U="216cb609-03a3-5b3a-ffffe001fe9bf86f" Title="RK_WOHNZIMMER_VEREIST" Cl="0,0,0" Nio="2" WF="16384" ValOT="1" Check="\i;R1VEREIST=\i\v" Signed="true" Analog="true" SourceValHigh="1" DestValHigh="1" MaxVal="1">
+						<Co K="AQ" U="216cb609-03a3-5b38-00ff30518fa2f1a2"/>
+						<Co K="Q" U="216cb609-03a3-5b39-01ff30518fa2f1a2"/>
+						<IoData Cr="216373ab-00cf-42fc-ffffe001fe9bf86f" Pr="216373ab-00ce-42f4-ffffe001fe9bf86f"/>
+						<Display Type="2" Unit="&lt;v.0&gt;" StateOnly="true"/>
+					</C>
+					<C Type="VirtualHttpInCmd" Desc="Wohnzimmer Ruhezeit" IName="VCI104" V="178" U="216cb609-03a4-5b3e-ffffe001fe9bf86f" Title="RK_WOHNZIMMER_RUHE" Cl="0,0,0" Nio="2" WF="16384" ValOT="1" Check="\i;R1RUHE=\i\v" Signed="true" Analog="true" SourceValHigh="1" DestValHigh="1" MinVal="-1" MaxVal="1">
+						<Co K="AQ" U="216cb609-03a4-5b3c-00ff30518fa2f1a2"/>
+						<Co K="Q" U="216cb609-03a4-5b3d-01ff30518fa2f1a2"/>
+						<IoData Cr="216373ab-00cf-42fc-ffffe001fe9bf86f" Pr="216373ab-00ce-42f4-ffffe001fe9bf86f"/>
+						<Display Type="2" Unit="&lt;v.0&gt;" StateOnly="true"/>
+					</C>
+					<C Type="VirtualHttpInCmd" Desc="Wohnzimmer Zwangslüftung" IName="VCI105" V="178" U="216cb609-03a6-5b42-ffffe001fe9bf86f" Title="RK_WOHNZIMMER_ZWANG" Cl="0,0,0" Nio="2" WF="16384" ValOT="1" Check="\i;R1ZWANG=\i\v" Signed="true" Analog="true" SourceValHigh="1" DestValHigh="1" MaxVal="1">
+						<Co K="AQ" U="216cb609-03a6-5b40-00ff30518fa2f1a2"/>
+						<Co K="Q" U="216cb609-03a6-5b41-01ff30518fa2f1a2"/>
+						<IoData Cr="216373ab-00cf-42fc-ffffe001fe9bf86f" Pr="216373ab-00ce-42f4-ffffe001fe9bf86f"/>
+						<Display Type="2" Unit="&lt;v.0&gt;" StateOnly="true"/>
+					</C>
+					<C Type="VirtualHttpInCmd" Desc="Wohnzimmer Feuchtetrend" IName="VCI106" V="178" U="216cb609-03a7-5b46-ffffe001fe9bf86f" Title="RK_WOHNZIMMER_TREND" Cl="0,0,0" Nio="2" WF="16384" ValOT="1" Check="\i;R1TREND=\i\v" Signed="true" Analog="true" SourceValHigh="1" DestValHigh="1" MinVal="-300" MaxVal="300">
+						<Co K="AQ" U="216cb609-03a7-5b44-00ff30518fa2f1a2"/>
+						<Co K="Q" U="216cb609-03a7-5b45-01ff30518fa2f1a2"/>
+						<IoData Cr="216373ab-00cf-42fc-ffffe001fe9bf86f" Pr="216373ab-00ce-42f4-ffffe001fe9bf86f"/>
+						<Display Type="2" Unit="&lt;v.2&gt; g/m³h" StateOnly="true"/>
+					</C>
+					<C Type="VirtualHttpInCmd" Desc="Wohnzimmer Feuchtestoß" IName="VCI107" V="178" U="216cb609-03a9-5b4a-ffffe001fe9bf86f" Title="RK_WOHNZIMMER_DUSCHE" Cl="0,0,0" Nio="2" WF="16384" ValOT="1" Check="\i;R1DUSCHE=\i\v" Signed="true" Analog="true" SourceValHigh="1" DestValHigh="1" MaxVal="1">
+						<Co K="AQ" U="216cb609-03a9-5b48-00ff30518fa2f1a2"/>
+						<Co K="Q" U="216cb609-03a9-5b49-01ff30518fa2f1a2"/>
+						<IoData Cr="216373ab-00cf-42fc-ffffe001fe9bf86f" Pr="216373ab-00ce-42f4-ffffe001fe9bf86f"/>
+						<Display Type="2" Unit="&lt;v.0&gt;" StateOnly="true"/>
+					</C>
+					<C Type="VirtualHttpInCmd" Desc="Wohnzimmer Kühlfreigabe" IName="VCI108" V="178" U="216cb609-03aa-5b4e-ffffe001fe9bf86f" Title="RK_WOHNZIMMER_KUEHLFREI" Cl="0,0,0" Nio="2" WF="16384" ValOT="1" Check="\i;R1KUEHLFREI=\i\v" Signed="true" Analog="true" SourceValHigh="1" DestValHigh="1" MinVal="-1" MaxVal="1">
+						<Co K="AQ" U="216cb609-03aa-5b4c-00ff30518fa2f1a2"/>
+						<Co K="Q" U="216cb609-03aa-5b4d-01ff30518fa2f1a2"/>
+						<IoData Cr="216373ab-00cf-42fc-ffffe001fe9bf86f" Pr="216373ab-00ce-42f4-ffffe001fe9bf86f"/>
+						<Display Type="2" Unit="&lt;v.0&gt;" StateOnly="true"/>
+					</C>
+					<C Type="VirtualHttpInCmd" Desc="Wohnzimmer Kühlen in Minuten" IName="VCI109" V="178" U="216cb609-03ab-5b52-ffffe001fe9bf86f" Title="RK_WOHNZIMMER_KBESTIN" Cl="0,0,0" Nio="2" WF="16384" ValOT="1" Check="\i;R1KBESTIN=\i\v" Signed="true" Analog="true" SourceValHigh="1" DestValHigh="1" MinVal="-1" MaxVal="2880">
+						<Co K="AQ" U="216cb609-03ab-5b50-00ff30518fa2f1a2"/>
+						<Co K="Q" U="216cb609-03ab-5b51-01ff30518fa2f1a2"/>
+						<IoData Cr="216373ab-00cf-42fc-ffffe001fe9bf86f" Pr="216373ab-00ce-42f4-ffffe001fe9bf86f"/>
+						<Display Type="2" Unit="&lt;v.0&gt; min" StateOnly="true"/>
+					</C>
+					<C Type="VirtualHttpInCmd" Desc="Wohnzimmer Kühlen um Uhr" IName="VCI110" V="178" U="216cb609-03ad-5b56-ffffe001fe9bf86f" Title="RK_WOHNZIMMER_KBESTSTD" Cl="0,0,0" Nio="2" WF="16384" ValOT="1" Check="\i;R1KBESTSTD=\i\v" Signed="true" Analog="true" SourceValHigh="1" DestValHigh="1" MinVal="-1" MaxVal="23">
+						<Co K="AQ" U="216cb609-03ad-5b54-00ff30518fa2f1a2"/>
+						<Co K="Q" U="216cb609-03ad-5b55-01ff30518fa2f1a2"/>
+						<IoData Cr="216373ab-00cf-42fc-ffffe001fe9bf86f" Pr="216373ab-00ce-42f4-ffffe001fe9bf86f"/>
+						<Display Type="2" Unit="&lt;v.0&gt; h" StateOnly="true"/>
+					</C>
+					<C Type="VirtualHttpInCmd" Desc="Wohnzimmer Sperre" IName="VCI111" V="178" U="216cb609-03ad-5b5a-ffffe001fe9bf86f" Title="RK_WOHNZIMMER_SPERRE" Cl="238,238,238" Nio="2" WF="16400" ValOT="1" Check="\i;R1SPERRE=\i\v" Signed="true" Analog="true" SourceValHigh="1" DestValHigh="1" MaxVal="1">
+						<Co K="AQ" U="216cb609-03ad-5b58-00ff30518fa2f1a2"/>
+						<Co K="Q" U="216cb609-03ad-5b59-01ff30518fa2f1a2"/>
+						<IoData Cr="216373ab-00cf-42fc-ffffe001fe9bf86f" Pr="216373ab-00cf-42f8-ffffe001fe9bf86f"/>
+						<Display Type="2" Unit="&lt;v.0&gt;" StateOnly="true"/>
+					</C>
+					<C Type="VirtualHttpInCmd" Desc="Wohnzimmer CO₂-Anstieg" IName="VCI112" V="178" U="216cb609-03b0-5b5e-ffffe001fe9bf86f" Title="RK_WOHNZIMMER_CO2ANSTIEG" Cl="0,0,0" Nio="2" WF="16384" ValOT="1" Check="\i;R1CO2ANSTIEG=\i\v" Signed="true" Analog="true" SourceValHigh="1" DestValHigh="1" MinVal="-5000" MaxVal="5000">
+						<Co K="AQ" U="216cb609-03b0-5b5c-00ff30518fa2f1a2"/>
+						<Co K="Q" U="216cb609-03b0-5b5d-01ff30518fa2f1a2"/>
+						<IoData Cr="216373ab-00cf-42fc-ffffe001fe9bf86f" Pr="216373ab-00ce-42f4-ffffe001fe9bf86f"/>
+						<Display Type="2" Unit="&lt;v.0&gt; ppm/h" StateOnly="true"/>
+					</C>
+					<C Type="VirtualHttpInCmd" Desc="Wohnzimmer CO₂-Anstieg erwartet" IName="VCI113" V="178" U="216cb609-03b2-5b62-ffffe001fe9bf86f" Title="RK_WOHNZIMMER_CO2ERWARTET" Cl="0,0,0" Nio="2" WF="16384" ValOT="1" Check="\i;R1CO2ERWARTET=\i\v" Signed="true" Analog="true" SourceValHigh="1" DestValHigh="1" MaxVal="5000">
+						<Co K="AQ" U="216cb609-03b2-5b60-00ff30518fa2f1a2"/>
+						<Co K="Q" U="216cb609-03b2-5b61-01ff30518fa2f1a2"/>
+						<IoData Cr="216373ab-00cf-42fc-ffffe001fe9bf86f" Pr="216373ab-00ce-42f4-ffffe001fe9bf86f"/>
+						<Display Type="2" Unit="&lt;v.0&gt; ppm/h" StateOnly="true"/>
+					</C>
+					<C Type="VirtualHttpInCmd" Desc="Wohnzimmer CO₂-Grenze in" IName="VCI114" V="178" U="216cb609-03b4-5b66-ffffe001fe9bf86f" Title="RK_WOHNZIMMER_CO2VOLL" Cl="0,0,0" Nio="2" WF="16384" ValOT="1" Check="\i;R1CO2VOLL=\i\v" Signed="true" Analog="true" SourceValHigh="1" DestValHigh="1" MinVal="-1" MaxVal="2880">
+						<Co K="AQ" U="216cb609-03b4-5b64-00ff30518fa2f1a2"/>
+						<Co K="Q" U="216cb609-03b4-5b65-01ff30518fa2f1a2"/>
+						<IoData Cr="216373ab-00cf-42fc-ffffe001fe9bf86f" Pr="216373ab-00ce-42f4-ffffe001fe9bf86f"/>
+						<Display Type="2" Unit="&lt;v.0&gt; min" StateOnly="true"/>
+					</C>
+					<C Type="VirtualHttpInCmd" Desc="Wohnzimmer Luftwechsel CO₂" IName="VCI115" V="178" U="216cb609-03b5-5b6a-ffffe001fe9bf86f" Title="RK_WOHNZIMMER_CO2LW" Cl="0,0,0" Nio="2" WF="16384" ValOT="1" Check="\i;R1CO2LW=\i\v" Signed="true" Analog="true" SourceValHigh="1" DestValHigh="1" MaxVal="50">
+						<Co K="AQ" U="216cb609-03b5-5b68-00ff30518fa2f1a2"/>
+						<Co K="Q" U="216cb609-03b5-5b69-01ff30518fa2f1a2"/>
+						<IoData Cr="216373ab-00cf-42fc-ffffe001fe9bf86f" Pr="216373ab-00ce-42f4-ffffe001fe9bf86f"/>
+						<Display Type="2" Unit="&lt;v.2&gt; 1/h" StateOnly="true"/>
+					</C>
+					<C Type="VirtualHttpInCmd" Desc="Raumklima Außentemperatur" IName="VCI116" V="178" U="216cb609-03b6-5b6e-ffffe001fe9bf86f" Title="RK_AT" Cl="0,0,0" Nio="2" WF="16384" ValOT="1" Check="\i;AT=\i\v" Signed="true" Analog="true" SourceValHigh="1" DestValHigh="1" MinVal="-60" MaxVal="80">
+						<Co K="AQ" U="216cb609-03b6-5b6c-00ff30518fa2f1a2"/>
+						<Co K="Q" U="216cb609-03b6-5b6d-01ff30518fa2f1a2"/>
+						<IoData Cr="216373ab-00cf-42fc-ffffe001fe9bf86f" Pr="216373ab-00ce-42f4-ffffe001fe9bf86f"/>
+						<Display Type="2" Unit="&lt;v.1&gt; °C" StateOnly="true"/>
+					</C>
+					<C Type="VirtualHttpInCmd" Desc="Raumklima Außenfeuchte" IName="VCI117" V="178" U="216cb609-03b8-5b72-ffffe001fe9bf86f" Title="RK_ARF" Cl="0,0,0" Nio="2" WF="16384" ValOT="1" Check="\i;ARF=\i\v" Signed="true" Analog="true" SourceValHigh="1" DestValHigh="1" MaxVal="100">
+						<Co K="AQ" U="216cb609-03b8-5b70-00ff30518fa2f1a2"/>
+						<Co K="Q" U="216cb609-03b8-5b71-01ff30518fa2f1a2"/>
+						<IoData Cr="216373ab-00cf-42fc-ffffe001fe9bf86f" Pr="216373ab-00ce-42f4-ffffe001fe9bf86f"/>
+						<Display Type="2" Unit="&lt;v.0&gt; %" StateOnly="true"/>
+					</C>
+					<C Type="VirtualHttpInCmd" Desc="Raumklima Taupunkt außen" IName="VCI118" V="178" U="216cb609-03b9-5b76-ffffe001fe9bf86f" Title="RK_ATAU" Cl="0,0,0" Nio="2" WF="16384" ValOT="1" Check="\i;ATAU=\i\v" Signed="true" Analog="true" SourceValHigh="1" DestValHigh="1" MinVal="-60" MaxVal="80">
+						<Co K="AQ" U="216cb609-03b9-5b74-00ff30518fa2f1a2"/>
+						<Co K="Q" U="216cb609-03b9-5b75-01ff30518fa2f1a2"/>
+						<IoData Cr="216373ab-00cf-42fc-ffffe001fe9bf86f" Pr="216373ab-00ce-42f4-ffffe001fe9bf86f"/>
+						<Display Type="2" Unit="&lt;v.1&gt; °C" StateOnly="true"/>
+					</C>
+					<C Type="VirtualHttpInCmd" Desc="Raumklima abs. Feuchte außen" IName="VCI119" V="178" U="216cb609-03ba-5b7a-ffffe001fe9bf86f" Title="RK_AABS" Cl="0,0,0" Nio="2" WF="16384" ValOT="1" Check="\i;AABS=\i\v" Signed="true" Analog="true" SourceValHigh="1" DestValHigh="1" MaxVal="300">
+						<Co K="AQ" U="216cb609-03ba-5b78-00ff30518fa2f1a2"/>
+						<Co K="Q" U="216cb609-03ba-5b79-01ff30518fa2f1a2"/>
+						<IoData Cr="216373ab-00cf-42fc-ffffe001fe9bf86f" Pr="216373ab-00ce-42f4-ffffe001fe9bf86f"/>
+						<Display Type="2" Unit="&lt;v.2&gt; g/m³" StateOnly="true"/>
+					</C>
+					<C Type="VirtualHttpInCmd" Desc="Raumklima Räume Lüften" IName="VCI120" V="178" U="216cb609-03bb-5b7e-ffffe001fe9bf86f" Title="RK_NLUEFT" Cl="0,0,0" Nio="2" WF="16384" ValOT="1" Check="\i;NLUEFT=\i\v" Signed="true" Analog="true" SourceValHigh="1" DestValHigh="1" MaxVal="99">
+						<Co K="AQ" U="216cb609-03bb-5b7c-00ff30518fa2f1a2"/>
+						<Co K="Q" U="216cb609-03bb-5b7d-01ff30518fa2f1a2"/>
+						<IoData Cr="216373ab-00cf-42fc-ffffe001fe9bf86f" Pr="216373ab-00ce-42f4-ffffe001fe9bf86f"/>
+						<Display Type="2" Unit="&lt;v.0&gt;" StateOnly="true"/>
+					</C>
+					<C Type="VirtualHttpInCmd" Desc="Raumklima Räume Schimmel" IName="VCI121" V="178" U="216cb609-03bd-5b82-ffffe001fe9bf86f" Title="RK_NSCHIMMEL" Cl="0,0,0" Nio="2" WF="16384" ValOT="1" Check="\i;NSCHIMMEL=\i\v" Signed="true" Analog="true" SourceValHigh="1" DestValHigh="1" MaxVal="99">
+						<Co K="AQ" U="216cb609-03bd-5b80-00ff30518fa2f1a2"/>
+						<Co K="Q" U="216cb609-03bd-5b81-01ff30518fa2f1a2"/>
+						<IoData Cr="216373ab-00cf-42fc-ffffe001fe9bf86f" Pr="216373ab-00ce-42f4-ffffe001fe9bf86f"/>
+						<Display Type="2" Unit="&lt;v.0&gt;" StateOnly="true"/>
+					</C>
+					<C Type="VirtualHttpInCmd" Desc="Raumklima Messalter" IName="VCI122" V="178" U="216cb609-03bf-5b86-ffffe001fe9bf86f" Title="RK_ALTER" Cl="238,238,238" Nio="2" WF="16400" ValOT="1" Check="\i;ALTER=\i\v" Signed="true" Analog="true" SourceValHigh="1" DestValHigh="1" MinVal="-1" MaxVal="8640000">
+						<Co K="AQ" U="216cb609-03bf-5b84-00ff30518fa2f1a2"/>
+						<Co K="Q" U="216cb609-03bf-5b85-01ff30518fa2f1a2"/>
+						<IoData Cr="216373ab-00cf-42fc-ffffe001fe9bf86f" Pr="216373ab-00cf-42f8-ffffe001fe9bf86f"/>
+						<Display Type="2" Unit="&lt;v.0&gt; s" StateOnly="true"/>
+					</C>
+					<C Type="VirtualHttpInCmd" Desc="Raumklima Werte da" IName="VCI123" V="178" U="216cb609-03c3-5b8a-ffffe001fe9bf86f" Title="RK_OK" Cl="238,238,238" Nio="2" WF="16400" ValOT="1" Check="\i;OK=\i\v" Signed="true" Analog="true" SourceValHigh="1" DestValHigh="1" MaxVal="1">
+						<Co K="AQ" U="216cb609-03c1-5b88-00ff30518fa2f1a2"/>
+						<Co K="Q" U="216cb609-03c1-5b89-01ff30518fa2f1a2"/>
+						<IoData Cr="216373ab-00cf-42fc-ffffe001fe9bf86f" Pr="216373ab-00cf-42f8-ffffe001fe9bf86f"/>
+						<Display Type="2" Unit="&lt;v.0&gt;" StateOnly="true"/>
+					</C>
+					<C Type="VirtualHttpInCmd" Desc="Raumklima Räume ohne Werte" IName="VCI124" V="178" U="216cb609-03c6-5b8e-ffffe001fe9bf86f" Title="RK_NOHNE" Cl="0,0,0" Nio="2" WF="16384" ValOT="1" Check="\i;NOHNE=\i\v" Signed="true" Analog="true" SourceValHigh="1" DestValHigh="1" MaxVal="99">
+						<Co K="AQ" U="216cb609-03c6-5b8c-00ff30518fa2f1a2"/>
+						<Co K="Q" U="216cb609-03c6-5b8d-01ff30518fa2f1a2"/>
+						<IoData Cr="216373ab-00cf-42fc-ffffe001fe9bf86f" Pr="216373ab-00ce-42f4-ffffe001fe9bf86f"/>
+						<Display Type="2" Unit="&lt;v.0&gt;" StateOnly="true"/>
+					</C>
+					<C Type="VirtualHttpInCmd" Desc="Raumklima Fühler stehen" IName="VCI125" V="178" U="216cb609-03c8-5b92-ffffe001fe9bf86f" Title="RK_NSTEHT" Cl="0,0,0" Nio="2" WF="16384" ValOT="1" Check="\i;NSTEHT=\i\v" Signed="true" Analog="true" SourceValHigh="1" DestValHigh="1" MaxVal="99">
+						<Co K="AQ" U="216cb609-03c8-5b90-00ff30518fa2f1a2"/>
+						<Co K="Q" U="216cb609-03c8-5b91-01ff30518fa2f1a2"/>
+						<IoData Cr="216373ab-00cf-42fc-ffffe001fe9bf86f" Pr="216373ab-00ce-42f4-ffffe001fe9bf86f"/>
+						<Display Type="2" Unit="&lt;v.0&gt;" StateOnly="true"/>
+					</C>
+					<C Type="VirtualHttpInCmd" Desc="Raumklima Räume Kühlen" IName="VCI126" V="178" U="216cb609-03c9-5b96-ffffe001fe9bf86f" Title="RK_NKUEHL" Cl="0,0,0" Nio="2" WF="16384" ValOT="1" Check="\i;NKUEHL=\i\v" Signed="true" Analog="true" SourceValHigh="1" DestValHigh="1" MaxVal="99">
+						<Co K="AQ" U="216cb609-03c9-5b94-00ff30518fa2f1a2"/>
+						<Co K="Q" U="216cb609-03c9-5b95-01ff30518fa2f1a2"/>
+						<IoData Cr="216373ab-00cf-42fc-ffffe001fe9bf86f" Pr="216373ab-00ce-42f4-ffffe001fe9bf86f"/>
+						<Display Type="2" Unit="&lt;v.0&gt;" StateOnly="true"/>
+					</C>
+					<C Type="VirtualHttpInCmd" Desc="Raumklima Räume CO₂" IName="VCI127" V="178" U="216cb609-03ca-5b9a-ffffe001fe9bf86f" Title="RK_NCO2" Cl="0,0,0" Nio="2" WF="16384" ValOT="1" Check="\i;NCO2=\i\v" Signed="true" Analog="true" SourceValHigh="1" DestValHigh="1" MaxVal="99">
+						<Co K="AQ" U="216cb609-03ca-5b98-00ff30518fa2f1a2"/>
+						<Co K="Q" U="216cb609-03ca-5b99-01ff30518fa2f1a2"/>
+						<IoData Cr="216373ab-00cf-42fc-ffffe001fe9bf86f" Pr="216373ab-00ce-42f4-ffffe001fe9bf86f"/>
+						<Display Type="2" Unit="&lt;v.0&gt;" StateOnly="true"/>
+					</C>
+					<C Type="VirtualHttpInCmd" Desc="Raumklima Fenster schließen" IName="VCI128" V="178" U="216cb609-03cc-5b9e-ffffe001fe9bf86f" Title="RK_NFENSTER" Cl="0,0,0" Nio="2" WF="16384" ValOT="1" Check="\i;NFENSTER=\i\v" Signed="true" Analog="true" SourceValHigh="1" DestValHigh="1" MaxVal="99">
+						<Co K="AQ" U="216cb609-03cc-5b9c-00ff30518fa2f1a2"/>
+						<Co K="Q" U="216cb609-03cc-5b9d-01ff30518fa2f1a2"/>
+						<IoData Cr="216373ab-00cf-42fc-ffffe001fe9bf86f" Pr="216373ab-00ce-42f4-ffffe001fe9bf86f"/>
+						<Display Type="2" Unit="&lt;v.0&gt;" StateOnly="true"/>
+					</C>
+					<C Type="VirtualHttpInCmd" Desc="Raumklima Räume zu feucht" IName="VCI129" V="178" U="216cb609-03cd-5ba2-ffffe001fe9bf86f" Title="RK_NFEUCHT" Cl="0,0,0" Nio="2" WF="16384" ValOT="1" Check="\i;NFEUCHT=\i\v" Signed="true" Analog="true" SourceValHigh="1" DestValHigh="1" MaxVal="99">
+						<Co K="AQ" U="216cb609-03cd-5ba0-00ff30518fa2f1a2"/>
+						<Co K="Q" U="216cb609-03cd-5ba1-01ff30518fa2f1a2"/>
+						<IoData Cr="216373ab-00cf-42fc-ffffe001fe9bf86f" Pr="216373ab-00ce-42f4-ffffe001fe9bf86f"/>
+						<Display Type="2" Unit="&lt;v.0&gt;" StateOnly="true"/>
+					</C>
+					<C Type="VirtualHttpInCmd" Desc="Raumklima Räume zu trocken" IName="VCI130" V="178" U="216cb609-03cf-5ba6-ffffe001fe9bf86f" Title="RK_NTROCKEN" Cl="0,0,0" Nio="2" WF="16384" ValOT="1" Check="\i;NTROCKEN=\i\v" Signed="true" Analog="true" SourceValHigh="1" DestValHigh="1" MaxVal="99">
+						<Co K="AQ" U="216cb609-03cf-5ba4-00ff30518fa2f1a2"/>
+						<Co K="Q" U="216cb609-03cf-5ba5-01ff30518fa2f1a2"/>
+						<IoData Cr="216373ab-00cf-42fc-ffffe001fe9bf86f" Pr="216373ab-00ce-42f4-ffffe001fe9bf86f"/>
+						<Display Type="2" Unit="&lt;v.0&gt;" StateOnly="true"/>
+					</C>
+					<C Type="VirtualHttpInCmd" Desc="Raumklima Laufzähler" IName="VCI131" V="178" U="216cb609-03d0-5baa-ffffe001fe9bf86f" Title="RK_ZAEHLER" Cl="238,238,238" Nio="2" WF="16400" ValOT="1" Check="\i;ZAEHLER=\i\v" Signed="true" Analog="true" SourceValHigh="1" DestValHigh="1" MaxVal="999">
+						<Co K="AQ" U="216cb609-03d0-5ba8-00ff30518fa2f1a2"/>
+						<Co K="Q" U="216cb609-03d0-5ba9-01ff30518fa2f1a2"/>
+						<IoData Cr="216373ab-00cf-42fc-ffffe001fe9bf86f" Pr="216373ab-00cf-42f8-ffffe001fe9bf86f"/>
+						<Display Type="2" Unit="&lt;v.0&gt;" StateOnly="true"/>
+					</C>
+					<C Type="VirtualHttpInCmd" Desc="Raumklima letzte Messung" IName="VCI132" V="178" U="216cb609-03d4-5bae-ffffe001fe9bf86f" Title="RK_TS" Cl="0,0,0" Nio="2" WF="16384" ValOT="1" Check="\i;TS=\i\v" Signed="true" Analog="true" SourceValHigh="1" DestValHigh="1" MaxVal="2147483647">
+						<Co K="AQ" U="216cb609-03d4-5bac-00ff30518fa2f1a2"/>
+						<Co K="Q" U="216cb609-03d4-5bad-01ff30518fa2f1a2"/>
+						<IoData Cr="216373ab-00cf-42fc-ffffe001fe9bf86f" Pr="216373ab-00ce-42f4-ffffe001fe9bf86f"/>
+						<Display Type="2" Unit="&lt;v.0&gt;" StateOnly="true"/>
+					</C>
+					<C Type="VirtualHttpInCmd" Desc="Raumklima letzter Lauf" IName="VCI133" V="178" U="216cb609-03d6-5bb2-ffffe001fe9bf86f" Title="RK_LAUFTS" Cl="0,0,0" Nio="2" WF="16384" ValOT="1" Check="\i;LAUFTS=\i\v" Signed="true" Analog="true" SourceValHigh="1" DestValHigh="1" MaxVal="2147483647">
+						<Co K="AQ" U="216cb609-03d6-5bb0-00ff30518fa2f1a2"/>
+						<Co K="Q" U="216cb609-03d6-5bb1-01ff30518fa2f1a2"/>
+						<IoData Cr="216373ab-00cf-42fc-ffffe001fe9bf86f" Pr="216373ab-00ce-42f4-ffffe001fe9bf86f"/>
+						<Display Type="2" Unit="&lt;v.0&gt;" StateOnly="true"/>
+					</C>
+					<C Type="VirtualHttpInCmd" Desc="Raumklima Räume ohne Ampel" IName="VCI134" V="178" U="216cb609-03d6-5bb6-ffffe001fe9bf86f" Title="RK_NAMPELLOS" Cl="0,0,0" Nio="2" WF="16384" ValOT="1" Check="\i;NAMPELLOS=\i\v" Signed="true" Analog="true" SourceValHigh="1" DestValHigh="1" MaxVal="99">
+						<Co K="AQ" U="216cb609-03d6-5bb4-00ff30518fa2f1a2"/>
+						<Co K="Q" U="216cb609-03d6-5bb5-01ff30518fa2f1a2"/>
+						<IoData Cr="216373ab-00cf-42fc-ffffe001fe9bf86f" Pr="216373ab-00ce-42f4-ffffe001fe9bf86f"/>
+						<Display Type="2" Unit="&lt;v.0&gt;" StateOnly="true"/>
+					</C>
+					<C Type="VirtualHttpInCmd" Desc="Raumklima Räume schwül" IName="VCI135" V="178" U="216cb609-03d6-5bba-ffffe001fe9bf86f" Title="RK_NSCHWUEL" Cl="0,0,0" Nio="2" WF="16384" ValOT="1" Check="\i;NSCHWUEL=\i\v" Signed="true" Analog="true" SourceValHigh="1" DestValHigh="1" MaxVal="99">
+						<Co K="AQ" U="216cb609-03d6-5bb8-00ff30518fa2f1a2"/>
+						<Co K="Q" U="216cb609-03d6-5bb9-01ff30518fa2f1a2"/>
+						<IoData Cr="216373ab-00cf-42fc-ffffe001fe9bf86f" Pr="216373ab-00ce-42f4-ffffe001fe9bf86f"/>
+						<Display Type="2" Unit="&lt;v.0&gt;" StateOnly="true"/>
+					</C>
+					<C Type="VirtualHttpInCmd" Desc="Raumklima Räume Zwangslüftung" IName="VCI136" V="178" U="216cb609-03d6-5bbe-ffffe001fe9bf86f" Title="RK_NZWANG" Cl="0,0,0" Nio="2" WF="16384" ValOT="1" Check="\i;NZWANG=\i\v" Signed="true" Analog="true" SourceValHigh="1" DestValHigh="1" MaxVal="99">
+						<Co K="AQ" U="216cb609-03d6-5bbc-00ff30518fa2f1a2"/>
+						<Co K="Q" U="216cb609-03d6-5bbd-01ff30518fa2f1a2"/>
+						<IoData Cr="216373ab-00cf-42fc-ffffe001fe9bf86f" Pr="216373ab-00ce-42f4-ffffe001fe9bf86f"/>
+						<Display Type="2" Unit="&lt;v.0&gt;" StateOnly="true"/>
+					</C>
+					<C Type="VirtualHttpInCmd" Desc="Raumklima Räume gesperrt" IName="VCI137" V="178" U="216cb609-03d6-5bc2-ffffe001fe9bf86f" Title="RK_NSPERRE" Cl="0,0,0" Nio="2" WF="16384" ValOT="1" Check="\i;NSPERRE=\i\v" Signed="true" Analog="true" SourceValHigh="1" DestValHigh="1" MaxVal="99">
+						<Co K="AQ" U="216cb609-03d6-5bc0-00ff30518fa2f1a2"/>
+						<Co K="Q" U="216cb609-03d6-5bc1-01ff30518fa2f1a2"/>
+						<IoData Cr="216373ab-00cf-42fc-ffffe001fe9bf86f" Pr="216373ab-00ce-42f4-ffffe001fe9bf86f"/>
+						<Display Type="2" Unit="&lt;v.0&gt;" StateOnly="true"/>
+					</C>
+					<C Type="VirtualHttpInCmd" Desc="Raumklima Räume Vereisung" IName="VCI138" V="178" U="216cb609-03d6-5bc6-ffffe001fe9bf86f" Title="RK_NVEREIST" Cl="0,0,0" Nio="2" WF="16384" ValOT="1" Check="\i;NVEREIST=\i\v" Signed="true" Analog="true" SourceValHigh="1" DestValHigh="1" MaxVal="99">
+						<Co K="AQ" U="216cb609-03d6-5bc4-00ff30518fa2f1a2"/>
+						<Co K="Q" U="216cb609-03d6-5bc5-01ff30518fa2f1a2"/>
+						<IoData Cr="216373ab-00cf-42fc-ffffe001fe9bf86f" Pr="216373ab-00ce-42f4-ffffe001fe9bf86f"/>
+						<Display Type="2" Unit="&lt;v.0&gt;" StateOnly="true"/>
+					</C>
+					<C Type="VirtualHttpInCmd" Desc="Raumklima Heizfall" IName="VCI139" V="178" U="216cb609-03e0-5bca-ffffe001fe9bf86f" Title="RK_HEIZFALL" Cl="0,0,0" Nio="2" WF="16384" ValOT="1" Check="\i;HEIZFALL=\i\v" Signed="true" Analog="true" SourceValHigh="1" DestValHigh="1" MinVal="-1" MaxVal="1">
+						<Co K="AQ" U="216cb609-03e0-5bc8-00ff30518fa2f1a2"/>
+						<Co K="Q" U="216cb609-03e0-5bc9-01ff30518fa2f1a2"/>
+						<IoData Cr="216373ab-00cf-42fc-ffffe001fe9bf86f" Pr="216373ab-00ce-42f4-ffffe001fe9bf86f"/>
+						<Display Type="2" Unit="&lt;v.0&gt;" StateOnly="true"/>
+					</C>
+					<C Type="VirtualHttpInCmd" Desc="Raumklima Außenmittel" IName="VCI140" V="178" U="216cb609-03e2-5bce-ffffe001fe9bf86f" Title="RK_AMITTEL" Cl="0,0,0" Nio="2" WF="16384" ValOT="1" Check="\i;AMITTEL=\i\v" Signed="true" Analog="true" SourceValHigh="1" DestValHigh="1" MinVal="-60" MaxVal="80">
+						<Co K="AQ" U="216cb609-03e2-5bcc-00ff30518fa2f1a2"/>
+						<Co K="Q" U="216cb609-03e2-5bcd-01ff30518fa2f1a2"/>
+						<IoData Cr="216373ab-00cf-42fc-ffffe001fe9bf86f" Pr="216373ab-00ce-42f4-ffffe001fe9bf86f"/>
+						<Display Type="2" Unit="&lt;v.1&gt; °C" StateOnly="true"/>
+					</C>
+				</C>
 			</C>
 			<C Type="VirtualOutCaption" V="178" U="216373ab-00e8-43c7-ffffe001fe9bf86f" Title="Virtuelle Ausgänge" WF="16384">
 				<C Type="VirtualOut" Desc="Erzeugt vom LoxBerry-Plugin Abfahrts-Assistent, trägt das Merkwort. Loxone Config legt beim Import neu an und überschreibt nichts – zweimal eingelesen ergibt doppelte Bausteine. (02.10.2026)" IName="VQ1" V="178" U="216376a3-0122-573c-ffffe001fe9bf86f" Title="Abfahrts-Assistent Ansage" WF="16384" Address="http://loxberry" CloseAfterSend="true">
@@ -1574,6 +2112,15 @@
 				<C Type="Notification" V="178" U="216c92a4-02b4-6bcf-ffffe001fe9bf86f" Title="Meldung Funkwacht" Cl="238,238,238" WF="16400" Entries="10">
 					<IoData Cr="216373ab-00cf-42fc-ffffe001fe9bf86f"/>
 				</C>
+				<C Type="Notification" V="178" U="216cb251-01b5-bfd4-ffffe001fe9bf86f" Title="Meldung Dashboard gestört" Cl="238,238,238" WF="16400" Entries="10">
+					<IoData Cr="216373ab-00cf-42fc-ffffe001fe9bf86f"/>
+				</C>
+				<C Type="Notification" V="178" U="216cb534-02f8-20f0-ffffe001fe9bf86f" Title="Wetterstation gestört" Cl="238,238,238" WF="16400" Entries="10">
+					<IoData Cr="216373ab-00cf-42fc-ffffe001fe9bf86f"/>
+				</C>
+				<C Type="Notification" V="178" U="216cb78b-0082-ebaf-ffffe001fe9bf86f" Title="Meldung Raumklima" Cl="238,238,238" WF="16400" Entries="10">
+					<IoData Cr="216373ab-00cf-42fc-ffffe001fe9bf86f"/>
+				</C>
 			</C>
 			<C Type="LoxTree" TId="LoxCaption_2" V="178" U="216373ab-00f9-454d-ffffe001fe9bf86f" Title="Tree" WF="16384" CycleUserProt="-1" IntAddr="" Pause="10" RxTimeout="1000" BaseID="-1" IDev="true" Serial="13000001" Installation="" SwitchBoard="" HwVersion="2">
 				<IoData Pr="216373ab-00ce-42f4-ffffe001fe9bf86f"/>
@@ -1654,7 +2201,7 @@
 					<Co K="AQ" U="21637982-00ce-5185-02ff778bd597e3f9"/>
 					<Co K="Q" U="21637982-00ce-5186-03ff778bd597e3f9"/>
 				</C>
-				<C Type="AnalogThresholdTrigger" V="178" U="21637776-019a-7030-ffffe001fe9bf86f" Title="Termin in Reichweite" Px="9504" Py="4896" Px2="10848" Py2="5784" Cl="141,255,112" Nio="8" LtE="560166800" WF="131072">
+				<C Type="AnalogThresholdTrigger" V="178" U="21637776-019a-7030-ffffe001fe9bf86f" Title="Termin in Reichweite" Px="9504" Py="4896" Px2="10848" Py2="5784" Cl="141,255,112" Nio="8" LtE="560166800">
 					<Co K="Input" Nc="1" U="21637776-019a-7028-00ff771caea23bc2">
 						<In Input="2163779e-0250-7e46-02ffc84871afba79"/>
 					</Co>
@@ -1666,7 +2213,7 @@
 					<Co K="RisingEdge" U="21637776-019a-702e-06ff771caea23bc2"/>
 					<Co K="FallingEdge" U="21637776-019a-702f-07ff771caea23bc2"/>
 				</C>
-				<C Type="And" V="178" U="216377c3-001a-86de-ffffe001fe9bf86f" Title="Termin gültig" Px="11808" Py="5760" Px2="13152" Py2="6456" Cl="141,255,112" Nio="3" LtE="560166852">
+				<C Type="And" V="178" U="216377c3-001a-86de-ffffe001fe9bf86f" Title="Termin gültig" Px="11808" Py="5760" Px2="13152" Py2="6456" Cl="141,255,112" Nio="3" LtE="560166852" WF="131072">
 					<Co K="I1" Nc="1" U="216377c3-001a-86db-00ff72bb766f3546">
 						<In Input="21637776-019a-702d-05ff771caea23bc2"/>
 					</Co>
@@ -1687,7 +2234,7 @@
 					<Co K="RisingEdge" U="2163783f-0311-9de9-06ff00e7bf40905b"/>
 					<Co K="FallingEdge" U="2163783f-0311-9dea-07ff00e7bf40905b"/>
 				</C>
-				<C Type="AnalogThresholdTrigger" V="178" U="21637852-00ad-ac6e-ffffe001fe9bf86f" Title="Daten gültig" Px="9600" Py="5952" Px2="10944" Py2="6840" Cl="141,255,112" Nio="8" LtE="560166996" WF="131072">
+				<C Type="AnalogThresholdTrigger" V="178" U="21637852-00ad-ac6e-ffffe001fe9bf86f" Title="Daten gültig" Px="9600" Py="5952" Px2="10944" Py2="6840" Cl="141,255,112" Nio="8" LtE="560166996">
 					<Co K="Input" Nc="1" U="21637852-00ad-ac66-00ff57a3d18660d2">
 						<In Input="21637949-0300-3d71-02ff963c7cd27f96"/>
 					</Co>
@@ -1699,7 +2246,7 @@
 					<Co K="RisingEdge" U="21637852-00ad-ac6c-06ff57a3d18660d2"/>
 					<Co K="FallingEdge" U="21637852-00ad-ac6d-07ff57a3d18660d2"/>
 				</C>
-				<C Type="AnalogThresholdTrigger" V="178" U="2163785a-0153-b832-ffffe001fe9bf86f" Title="Ansage erlaubt" Px="8736" Py="8832" Px2="10080" Py2="9720" Cl="141,255,112" Nio="8" LtE="560167004" WF="131072">
+				<C Type="AnalogThresholdTrigger" V="178" U="2163785a-0153-b832-ffffe001fe9bf86f" Title="Ansage erlaubt" Px="8736" Py="8832" Px2="10080" Py2="9720" Cl="141,255,112" Nio="8" LtE="560167004">
 					<Co K="Input" Nc="1" U="2163785a-0153-b82a-00ffb0704a5d6dd5">
 						<In Input="21637956-013f-40c5-02ff9a7322d330bc"/>
 					</Co>
@@ -1711,7 +2258,7 @@
 					<Co K="RisingEdge" U="2163785a-0153-b830-06ffb0704a5d6dd5"/>
 					<Co K="FallingEdge" U="2163785a-0153-b831-07ffb0704a5d6dd5"/>
 				</C>
-				<C Type="AnalogThresholdTrigger" V="178" U="2163786c-01e8-c70f-ffffe001fe9bf86f" Title="Push erlaubt" Px="8736" Py="10560" Px2="10080" Py2="11448" Cl="141,255,112" Nio="8" LtE="560167022" WF="131072">
+				<C Type="AnalogThresholdTrigger" V="178" U="2163786c-01e8-c70f-ffffe001fe9bf86f" Title="Push erlaubt" Px="8736" Py="10560" Px2="10080" Py2="11448" Cl="141,255,112" Nio="8" LtE="560167022">
 					<Co K="Input" Nc="1" U="2163786c-01e8-c707-00ff07a24bd1ec01">
 						<In Input="21637972-0335-4ace-02ff0869cd3d8496"/>
 					</Co>
@@ -1735,7 +2282,7 @@
 					<Co K="RisingEdge" U="21637874-02cb-d319-06ffc39ac0bc2f8e"/>
 					<Co K="FallingEdge" U="21637874-02cb-d31a-07ffc39ac0bc2f8e"/>
 				</C>
-				<C Type="And" V="178" U="21637887-029d-e54f-ffffe001fe9bf86f" Title="Abfahrt jetzt melden" Px="14688" Py="4608" Px2="16032" Py2="5304" Cl="141,255,112" Nio="3" LtE="560167049">
+				<C Type="And" V="178" U="21637887-029d-e54f-ffffe001fe9bf86f" Title="Abfahrt jetzt melden" Px="14688" Py="4608" Px2="16032" Py2="5304" Cl="141,255,112" Nio="3" LtE="560167049" WF="131072">
 					<Co K="I1" Nc="1" U="21637887-029d-e54c-00ff65ad007307f0">
 						<In Input="2163783f-0311-9de8-05ff00e7bf40905b"/>
 					</Co>
@@ -1803,7 +2350,7 @@
 					<Display Unit="&lt;v.pr&gt;"/>
 					<StateTexts></StateTexts>
 				</C>
-				<C Type="OutputRefLM" V="178" U="2163793a-02ef-3701-ffffe001fe9bf86f" Title="Zeit zum Losfahren" Px="20832" Py="10645" Px2="22944" Py2="10837" Cl="0,0,0" Nio="2" Ref="2163790e-0161-1d78-ffffe001fe9bf86f" WF="131072">
+				<C Type="OutputRefLM" V="178" U="2163793a-02ef-3701-ffffe001fe9bf86f" Title="Zeit zum Losfahren" Px="20832" Py="10656" Px2="22944" Py2="10848" Cl="0,0,0" Nio="2" Ref="2163790e-0161-1d78-ffffe001fe9bf86f" WF="131072">
 					<Co K="AI" Nc="1" U="2163793a-02ef-36ff-00ffc226a21f08a2">
 						<In Input="21637894-0382-f196-02ff854620af611c"/>
 					</Co>
@@ -1899,6 +2446,220 @@
 					<IoData Visu="true" Cr="216373ab-00d5-4360-ffffe001fe9bf86f" Pr="216373ab-00cf-42f8-ffffe001fe9bf86f"/>
 				</C>
 			</C>
+			<C Type="Page" V="178" U="216cb110-02f4-1258-ffffe001fe9bf86f" Title="Dashboard" LtE="560771363" WF="16384">
+				<IoData Cr="216373ab-00cf-42fc-ffffe001fe9bf86f" Pr="216373ab-00cf-42f8-ffffe001fe9bf86f"/>
+				<C Type="InputRef" V="178" U="216cb16e-00fe-26d2-ffffe001fe9bf86f" Title="DASHBOARD_OK" Px="2592" Py="3840" Px2="4704" Py2="4032" Cl="0,0,0" Nio="4" Ref="216cb14d-0358-1c7e-ffffe001fe9bf86f" WF="133120" Analog="true" LinkRefType="87">
+					<Co K="AI" Nc="1" U="216cb16e-00fe-26ce-00ff6b5fb97c72c5">
+						<In Input="216cb14d-0358-1c7c-00ff82be0fffb85f"/>
+					</Co>
+					<Co K="I" Nc="1" U="216cb16e-00fe-26cf-01ff6b5fb97c72c5">
+						<In Input="216cb14d-0358-1c7d-01ff82be0fffb85f"/>
+					</Co>
+					<Co K="AQ" U="216cb16e-00fe-26d0-02ff6b5fb97c72c5"/>
+					<Co K="Q" U="216cb16e-00fe-26d1-03ff6b5fb97c72c5"/>
+				</C>
+				<C Type="InputRef" V="178" U="216cb178-010e-2c0a-ffffe001fe9bf86f" Title="DASHBOARD_BAUSTEINE" Px="3168" Py="8160" Px2="5280" Py2="8352" Cl="0,0,0" Nio="4" Ref="216cb14d-035a-1c82-ffffe001fe9bf86f" WF="133120" Analog="true" LinkRefType="87">
+					<Co K="AI" Nc="1" U="216cb178-010e-2c06-00ff649a6cc9a8d6">
+						<In Input="216cb14d-035a-1c80-00ff82be0fffb85f"/>
+					</Co>
+					<Co K="I" Nc="1" U="216cb178-010e-2c07-01ff649a6cc9a8d6">
+						<In Input="216cb14d-035a-1c81-01ff82be0fffb85f"/>
+					</Co>
+					<Co K="AQ" U="216cb178-010e-2c08-02ff649a6cc9a8d6"/>
+					<Co K="Q" U="216cb178-010e-2c09-03ff649a6cc9a8d6"/>
+				</C>
+				<C Type="InputRef" V="178" U="216cb181-01c3-3149-ffffe001fe9bf86f" Title="DASHBOARD_ALTER" Px="2784" Py="5184" Px2="4896" Py2="5376" Cl="0,0,0" Nio="4" Ref="216cb14d-035a-1c8e-ffffe001fe9bf86f" WF="133120" Analog="true" LinkRefType="87">
+					<Co K="AI" Nc="1" U="216cb181-01c3-3145-00ff9e984426c34e">
+						<In Input="216cb14d-035a-1c8c-00ff82be0fffb85f"/>
+					</Co>
+					<Co K="I" Nc="1" U="216cb181-01c3-3146-01ff9e984426c34e">
+						<In Input="216cb14d-035a-1c8d-01ff82be0fffb85f"/>
+					</Co>
+					<Co K="AQ" U="216cb181-01c3-3147-02ff9e984426c34e"/>
+					<Co K="Q" U="216cb181-01c3-3148-03ff9e984426c34e"/>
+				</C>
+				<C Type="Not" V="178" U="216cb196-021b-3bb3-ffffe001fe9bf86f" Title="Dienst antwortet nicht" Px="5952" Py="3552" Px2="7296" Py2="4056" Cl="141,255,112" Nio="2" LtE="560771492">
+					<Co K="I" Nc="1" U="216cb196-021b-3bb1-00ff055c7f901dab">
+						<In Input="216cb16e-00fe-26d0-02ff6b5fb97c72c5"/>
+					</Co>
+					<Co K="Q" U="216cb196-021b-3bb2-01ff055c7f901dab"/>
+				</C>
+				<C Type="Or" V="178" U="216cb1a7-02e6-461f-ffffe001fe9bf86f" Title="Dienst tot oder Werte alt" Px="9600" Py="3936" Px2="10944" Py2="4632" Cl="141,255,112" Nio="3" LtE="560771508">
+					<Co K="I1" Nc="1" U="216cb1a7-02e6-461c-00ff9356b74768c4">
+						<In Input="216cb196-021b-3bb2-01ff055c7f901dab"/>
+					</Co>
+					<Co K="I2" Nc="1" U="216cb1a7-02e6-461d-01ff9356b74768c4">
+						<In Input="216cb1e9-03ba-755d-05fff5b5fb82174f"/>
+					</Co>
+					<Co K="Q" U="216cb1a7-02e6-461e-02ff9356b74768c4"/>
+				</C>
+				<C Type="Or" V="178" U="216cb1b8-023b-5093-ffffe001fe9bf86f" Title="Dashboard gestört gesammelt" Px="12288" Py="7680" Px2="13632" Py2="8376" Cl="141,255,112" Nio="3" LtE="560771515">
+					<Co K="I1" Nc="1" U="216cb1b8-023b-5090-00ffdb88683fc5bd">
+						<In Input="216cb1a7-02e6-461e-02ff9356b74768c4"/>
+					</Co>
+					<Co K="I2" Nc="1" U="216cb1b8-023b-5091-01ffdb88683fc5bd">
+						<In Input="216cb224-0134-a50f-02ff2ba6af149670"/>
+					</Co>
+					<Co K="Q" U="216cb1b8-023b-5092-02ffdb88683fc5bd"/>
+				</C>
+				<C Type="OnDelay" V="178" U="216cb1ca-0121-604c-ffffe001fe9bf86f" Title="Dashboard gestört bestätigt" Px="15744" Py="7680" Px2="17088" Py2="8376" Cl="141,255,112" Nio="5" LtE="560771545">
+					<Co K="InputTrigger" Nc="1" U="216cb1ca-0121-6047-00ff853646211e6a">
+						<In Input="216cb1b8-023b-5092-02ffdb88683fc5bd"/>
+					</Co>
+					<Co K="Reset" U="216cb1ca-0121-6048-01ff853646211e6a"/>
+					<Co K="Remanence" U="216cb1ca-0121-6049-02ff853646211e6a"/>
+					<Co K="Time" Def="300" U="216cb1ca-0121-604a-03ff853646211e6a"/>
+					<Co K="Q" U="216cb1ca-0121-604b-04ff853646211e6a"/>
+				</C>
+				<C Type="AnalogThresholdTrigger" V="178" U="216cb1e9-03ba-7560-ffffe001fe9bf86f" Title="Werte veraltet" Px="5952" Py="4896" Px2="7296" Py2="5784" Cl="141,255,112" Nio="8" LtE="560771577">
+					<Co K="Input" Nc="1" U="216cb1e9-03ba-7558-00fff5b5fb82174f">
+						<In Input="216cb181-01c3-3147-02ff9e984426c34e"/>
+					</Co>
+					<Co K="On" Def="300" U="216cb1e9-03ba-7559-01fff5b5fb82174f"/>
+					<Co K="Off" Def="120" U="216cb1e9-03ba-755a-02fff5b5fb82174f"/>
+					<Co K="Remanence" U="216cb1e9-03ba-755b-03fff5b5fb82174f"/>
+					<Co K="PulseTime" Def="1" U="216cb1e9-03ba-755c-04fff5b5fb82174f"/>
+					<Co K="Q" U="216cb1e9-03ba-755d-05fff5b5fb82174f"/>
+					<Co K="RisingEdge" U="216cb1e9-03ba-755e-06fff5b5fb82174f"/>
+					<Co K="FallingEdge" U="216cb1e9-03ba-755f-07fff5b5fb82174f"/>
+				</C>
+				<C Type="Equal" V="178" U="216cb224-0134-a510-ffffe001fe9bf86f" Title="Struktur leer" Px="7008" Py="7872" Px2="8352" Py2="8568" Cl="141,255,112" Nio="3" LtE="560771621">
+					<Co K="Input1" Nc="1" U="216cb224-0134-a50d-00ff2ba6af149670">
+						<In Input="216cb178-010e-2c08-02ff649a6cc9a8d6"/>
+					</Co>
+					<Co K="Input2" U="216cb224-0134-a50e-01ff2ba6af149670"/>
+					<Co K="Q" U="216cb224-0134-a50f-02ff2ba6af149670"/>
+				</C>
+				<C Type="State" V="178" U="216cb231-007f-afc6-ffffe001fe9bf86f" Title="Alter der Dashboard-Werte" Px="5952" Py="6336" Px2="8640" Py2="7224" Cl="141,255,112" Nio="11" LtE="560771642">
+					<Co K="I1" Nc="1" U="216cb231-007f-afbb-00ffa60176778791">
+						<In Input="216cb181-01c3-3147-02ff9e984426c34e"/>
+					</Co>
+					<Co K="I2" U="216cb231-007f-afbc-01ffa60176778791"/>
+					<Co K="I3" U="216cb231-007f-afbd-02ffa60176778791"/>
+					<Co K="I4" U="216cb231-007f-afbe-03ffa60176778791"/>
+					<Co K="I5" U="216cb231-007f-afbf-04ffa60176778791"/>
+					<Co K="I6" U="216cb231-007f-afc0-05ffa60176778791"/>
+					<Co K="I7" U="216cb231-007f-afc1-06ffa60176778791"/>
+					<Co K="I8" U="216cb231-007f-afc2-07ffa60176778791"/>
+					<Co K="TQ" U="216cb231-007f-afc3-08ffa60176778791"/>
+					<Co K="AQ" U="216cb231-007f-afc4-09ffa60176778791"/>
+					<Co K="OutputAPI" U="216cb231-007f-afc5-0affa60176778791"/>
+					<IoData Visu="true" Cr="216373ab-00cf-42fc-ffffe001fe9bf86f" Pr="216373ab-00cf-42f8-ffffe001fe9bf86f"/>
+					<Display Unit="&lt;v.pr&gt;"/>
+					<StateTexts></StateTexts>
+				</C>
+				<C Type="OutputRefLM" V="178" U="216cb270-0286-daa4-ffffe001fe9bf86f" Title="Meldung Dashboard gestört" Px="18528" Py="7968" Px2="20640" Py2="8160" Cl="0,0,0" Nio="2" Ref="216cb251-01b5-bfd4-ffffe001fe9bf86f" WF="131072">
+					<Co K="AI" Nc="1" U="216cb270-0286-daa2-00ff81a96b26df28">
+						<In Input="216cb1ca-0121-604b-04ff853646211e6a"/>
+					</Co>
+					<Co K="AQ" U="216cb270-0286-daa3-01ff81a96b26df28"/>
+					<LoggerMailer RefNotification="216cb251-01b5-bfd4-ffffe001fe9bf86f" On="&lt;v&gt;" Off="&lt;v&gt;" MinimumTime="5000" NL="1"/>
+				</C>
+			</C>
+			<C Type="Page" V="178" U="216cb411-0235-4c18-ffffe001fe9bf86f" Title="Ecowitt-Weiche" LtE="560772355" WF="16384">
+				<IoData Cr="216373ab-00cf-42fc-ffffe001fe9bf86f" Pr="216373ab-00cf-42f8-ffffe001fe9bf86f"/>
+				<C Type="InputRef" V="178" U="216cb49e-0222-8dca-ffffe001fe9bf86f" Title="Außentemperatur" Px="5760" Py="5376" Px2="7872" Py2="5568" Cl="0,0,0" Nio="4" Ref="216cb476-015a-6cd0-ffffe001fe9bf86f" WF="2048" Analog="true" LinkRefType="87">
+					<Co K="AI" Nc="1" U="216cb49e-0222-8dc6-00ff00e21d7736c4">
+						<In Input="216cb476-015a-6cce-00ffba5a4e67eed1"/>
+					</Co>
+					<Co K="I" Nc="1" U="216cb49e-0222-8dc7-01ff00e21d7736c4">
+						<In Input="216cb476-015a-6ccf-01ffba5a4e67eed1"/>
+					</Co>
+					<Co K="AQ" U="216cb49e-0222-8dc8-02ff00e21d7736c4"/>
+					<Co K="Q" U="216cb49e-0222-8dc9-03ff00e21d7736c4"/>
+				</C>
+				<C Type="InputRef" V="178" U="216cb4ad-0055-98e8-ffffe001fe9bf86f" Title="Ecowitt-Weiche Quelle" Px="5664" Py="8256" Px2="7776" Py2="8448" Cl="0,0,0" Nio="4" Ref="216cb45f-0341-61d3-ffffe001fe9bf86f" WF="133120" Analog="true" LinkRefType="87">
+					<Co K="AI" Nc="1" U="216cb4ad-0055-98e4-00ff66dc89810eb8">
+						<In Input="216cb45f-0341-61d1-00ffc8900e811197"/>
+					</Co>
+					<Co K="I" Nc="1" U="216cb4ad-0055-98e5-01ff66dc89810eb8">
+						<In Input="216cb45f-0341-61d2-01ffc8900e811197"/>
+					</Co>
+					<Co K="AQ" U="216cb4ad-0055-98e6-02ff66dc89810eb8"/>
+					<Co K="Q" U="216cb4ad-0055-98e7-03ff66dc89810eb8"/>
+				</C>
+				<C Type="InputRef" V="178" U="216cb4bb-03dd-a414-ffffe001fe9bf86f" Title="Ecowitt-Weiche OK" Px="5760" Py="6144" Px2="7872" Py2="6336" Cl="0,0,0" Nio="4" Ref="216cb45f-0331-61cf-ffffe001fe9bf86f" WF="133120" Analog="true" LinkRefType="87">
+					<Co K="AI" Nc="1" U="216cb4bb-03dd-a410-00ffeb4d8b9361b6">
+						<In Input="216cb45f-0331-61cd-00ffc8900e811197"/>
+					</Co>
+					<Co K="I" Nc="1" U="216cb4bb-03dd-a411-01ffeb4d8b9361b6">
+						<In Input="216cb45f-0331-61ce-01ffc8900e811197"/>
+					</Co>
+					<Co K="AQ" U="216cb4bb-03dd-a412-02ffeb4d8b9361b6"/>
+					<Co K="Q" U="216cb4bb-03dd-a413-03ffeb4d8b9361b6"/>
+				</C>
+				<C Type="InputRef" V="178" U="216cb4c5-0179-a9bd-ffffe001fe9bf86f" Title="Ecowitt-Weiche Alter" Px="5760" Py="6912" Px2="7872" Py2="7104" Cl="0,0,0" Nio="4" Ref="216cb45f-0341-61db-ffffe001fe9bf86f" WF="133120" Analog="true" LinkRefType="87">
+					<Co K="AI" Nc="1" U="216cb4c5-0179-a9b9-00ffd05ec87bfb60">
+						<In Input="216cb45f-0341-61d9-00ffc8900e811197"/>
+					</Co>
+					<Co K="I" Nc="1" U="216cb4c5-0179-a9ba-01ffd05ec87bfb60">
+						<In Input="216cb45f-0341-61da-01ffc8900e811197"/>
+					</Co>
+					<Co K="AQ" U="216cb4c5-0179-a9bb-02ffd05ec87bfb60"/>
+					<Co K="Q" U="216cb4c5-0179-a9bc-03ffd05ec87bfb60"/>
+				</C>
+				<C Type="Not" V="178" U="216cb4d5-03bd-b4fb-ffffe001fe9bf86f" Title="Ecowitt-Weiche keine Daten" Px="8832" Py="5856" Px2="10176" Py2="6360" Cl="141,255,112" Nio="2" LtE="560772312">
+					<Co K="I" Nc="1" U="216cb4d5-03bc-b4f9-00ff5fc2297190fe">
+						<In Input="216cb4bb-03dd-a412-02ffeb4d8b9361b6"/>
+					</Co>
+					<Co K="Q" U="216cb4d5-03bc-b4fa-01ff5fc2297190fe"/>
+				</C>
+				<C Type="Or" V="178" U="216cb4dc-024e-c03b-ffffe001fe9bf86f" Title="Ecowitt-Weiche gestört" Px="11136" Py="6144" Px2="12480" Py2="6840" Cl="141,255,112" Nio="3" LtE="560772331">
+					<Co K="I1" Nc="1" U="216cb4dc-024e-c038-00ff081a33e70082">
+						<In Input="216cb4d5-03bc-b4fa-01ff5fc2297190fe"/>
+					</Co>
+					<Co K="I2" Nc="1" U="216cb4dc-024e-c039-01ff081a33e70082">
+						<In Input="216cb4ef-009d-d129-05ffde6018ec6838"/>
+					</Co>
+					<Co K="Q" U="216cb4dc-024e-c03a-02ff081a33e70082"/>
+				</C>
+				<C Type="AnalogThresholdTrigger" V="178" U="216cb4ef-009d-d12c-ffffe001fe9bf86f" Title="Ecowitt-Weiche Daten veraltet" Px="8832" Py="6624" Px2="10176" Py2="7512" Cl="141,255,112" Nio="8" LtE="560772337">
+					<Co K="Input" Nc="1" U="216cb4ef-009d-d124-00ffde6018ec6838">
+						<In Input="216cb4c5-0179-a9bb-02ffd05ec87bfb60"/>
+					</Co>
+					<Co K="On" Def="900" U="216cb4ef-009d-d125-01ffde6018ec6838"/>
+					<Co K="Off" Def="600" U="216cb4ef-009d-d126-02ffde6018ec6838"/>
+					<Co K="Remanence" U="216cb4ef-009d-d127-03ffde6018ec6838"/>
+					<Co K="PulseTime" Def="1" U="216cb4ef-009d-d128-04ffde6018ec6838"/>
+					<Co K="Q" U="216cb4ef-009d-d129-05ffde6018ec6838"/>
+					<Co K="RisingEdge" U="216cb4ef-009d-d12a-06ffde6018ec6838"/>
+					<Co K="FallingEdge" U="216cb4ef-009d-d12b-07ffde6018ec6838"/>
+				</C>
+				<C Type="OnDelay" V="178" U="216cb50c-035a-f8e2-ffffe001fe9bf86f" Title="Ecowitt-Weiche Störung bestätigt" Px="13632" Py="6144" Px2="14976" Py2="6840" Cl="141,255,112" Nio="5" LtE="560772377">
+					<Co K="InputTrigger" Nc="1" U="216cb50c-035a-f8dd-00ff912b0a19d419">
+						<In Input="216cb4dc-024e-c03a-02ff081a33e70082"/>
+					</Co>
+					<Co K="Reset" U="216cb50c-035a-f8de-01ff912b0a19d419"/>
+					<Co K="Remanence" U="216cb50c-035a-f8df-02ff912b0a19d419"/>
+					<Co K="Time" Def="300" U="216cb50c-035a-f8e0-03ff912b0a19d419"/>
+					<Co K="Q" U="216cb50c-035a-f8e1-04ff912b0a19d419"/>
+				</C>
+				<C Type="State" V="178" U="216cb51f-0329-0fb8-ffffe001fe9bf86f" Title="Ecowitt-Weiche" Px="9504" Py="7776" Px2="12192" Py2="8664" Cl="141,255,112" Nio="11" LtE="560772392">
+					<Co K="I1" Nc="1" U="216cb51f-0329-0fad-00ff97834134c7fd">
+						<In Input="216cb4ad-0055-98e6-02ff66dc89810eb8"/>
+					</Co>
+					<Co K="I2" U="216cb51f-0329-0fae-01ff97834134c7fd"/>
+					<Co K="I3" U="216cb51f-0329-0faf-02ff97834134c7fd"/>
+					<Co K="I4" U="216cb51f-0329-0fb0-03ff97834134c7fd"/>
+					<Co K="I5" U="216cb51f-0329-0fb1-04ff97834134c7fd"/>
+					<Co K="I6" U="216cb51f-0329-0fb2-05ff97834134c7fd"/>
+					<Co K="I7" U="216cb51f-0329-0fb3-06ff97834134c7fd"/>
+					<Co K="I8" U="216cb51f-0329-0fb4-07ff97834134c7fd"/>
+					<Co K="TQ" U="216cb51f-0329-0fb5-08ff97834134c7fd"/>
+					<Co K="AQ" U="216cb51f-0329-0fb6-09ff97834134c7fd"/>
+					<Co K="OutputAPI" U="216cb51f-0329-0fb7-0aff97834134c7fd"/>
+					<IoData Visu="true" Cr="216373ab-00cf-42fc-ffffe001fe9bf86f" Pr="216373ab-00cf-42f8-ffffe001fe9bf86f"/>
+					<Display Unit="&lt;v.pr&gt;"/>
+					<StateTexts></StateTexts>
+				</C>
+				<C Type="OutputRefLM" V="178" U="216cb54e-019f-3229-ffffe001fe9bf86f" Title="Wetterstation gestört" Px="15840" Py="6432" Px2="17952" Py2="6624" Cl="0,0,0" Nio="2" Ref="216cb534-02f8-20f0-ffffe001fe9bf86f" WF="131072">
+					<Co K="AI" Nc="1" U="216cb54e-019f-3227-00ff7781b3db1b62">
+						<In Input="216cb50c-035a-f8e1-04ff912b0a19d419"/>
+					</Co>
+					<Co K="AQ" U="216cb54e-019f-3228-01ff7781b3db1b62"/>
+					<LoggerMailer RefNotification="216cb534-02f8-20f0-ffffe001fe9bf86f" On="&lt;v&gt;" Off="&lt;v&gt;" MinimumTime="5000" NL="1"/>
+				</C>
+			</C>
 			<C Type="Page" V="178" U="216c920c-00ea-006d-ffffe001fe9bf86f" Title="Funkwacht" LtE="560763407" WF="16384">
 				<IoData Cr="216373ab-00cf-42fc-ffffe001fe9bf86f" Pr="216373ab-00cf-42f8-ffffe001fe9bf86f"/>
 				<C Type="InputRef" V="178" U="216c9230-025c-133d-ffffe001fe9bf86f" Title="FW_OK" Px="1824" Py="1920" Px2="3936" Py2="2112" Cl="0,0,0" Nio="4" Ref="216c9221-0109-09a5-ffffe001fe9bf86f" WF="133120" Analog="true" LinkRefType="87">
@@ -1986,7 +2747,7 @@
 					<Co K="Off" Def="1" U="216c9273-030f-3f2a-03ffebf3d27a24f3"/>
 					<Co K="Q" U="216c9273-030f-3f2b-04ffebf3d27a24f3"/>
 				</C>
-				<C Type="AnalogComparator" V="178" U="216c9287-01f6-4dfb-ffffe001fe9bf86f" Title="Wächter selbst tot" Px="5952" Py="5856" Px2="7296" Py2="6744" Cl="141,255,112" Nio="5" LtE="560763530" WF="131072">
+				<C Type="AnalogComparator" V="178" U="216c9287-01f6-4dfb-ffffe001fe9bf86f" Title="Wächter selbst tot" Px="5952" Py="5856" Px2="7296" Py2="6744" Cl="141,255,112" Nio="5" LtE="560763530">
 					<Co K="Input1" Nc="1" U="216c9287-01f6-4df6-00ffa49779d52c98">
 						<In Input="216c9240-03a8-1ce2-02ff34c3e3493aac"/>
 					</Co>
@@ -2126,6 +2887,235 @@
 					</Co>
 					<Co K="AQ" U="216c918e-02fc-e093-01ff0e8e089efcef"/>
 					<LoggerMailer RefNotification="216c9180-01f8-d312-ffffe001fe9bf86f" On="&lt;v&gt;" Off="&lt;v&gt;" MinimumTime="5000" NL="1"/>
+				</C>
+			</C>
+			<C Type="Page" V="178" U="216cb5e2-0060-4f02-ffffe001fe9bf86f" Title="Raumklima" LtE="560772581" WF="16384">
+				<IoData Cr="216373ab-00cf-42fc-ffffe001fe9bf86f" Pr="216373ab-00cf-42f8-ffffe001fe9bf86f"/>
+				<C Type="InputRef" V="178" U="216cb626-0137-6fde-ffffe001fe9bf86f" Title="RK_OK" Px="3264" Py="6240" Px2="5376" Py2="6432" Cl="0,0,0" Nio="4" Ref="216cb609-03c3-5b8a-ffffe001fe9bf86f" WF="133120" Analog="true" LinkRefType="87">
+					<Co K="AI" Nc="1" U="216cb626-0137-6fda-00ffecb62cbaedac">
+						<In Input="216cb609-03c1-5b88-00ff30518fa2f1a2"/>
+					</Co>
+					<Co K="I" Nc="1" U="216cb626-0137-6fdb-01ffecb62cbaedac">
+						<In Input="216cb609-03c1-5b89-01ff30518fa2f1a2"/>
+					</Co>
+					<Co K="AQ" U="216cb626-0137-6fdc-02ffecb62cbaedac"/>
+					<Co K="Q" U="216cb626-0137-6fdd-03ffecb62cbaedac"/>
+				</C>
+				<C Type="InputRef" V="178" U="216cb62f-0320-76a7-ffffe001fe9bf86f" Title="RK_ALTER" Px="384" Py="4416" Px2="2496" Py2="4608" Cl="0,0,0" Nio="4" Ref="216cb609-03bf-5b86-ffffe001fe9bf86f" WF="133120" Analog="true" LinkRefType="87">
+					<Co K="AI" Nc="1" U="216cb62f-0320-76a3-00ff7a3f56d0545f">
+						<In Input="216cb609-03bf-5b84-00ff30518fa2f1a2"/>
+					</Co>
+					<Co K="I" Nc="1" U="216cb62f-0320-76a4-01ff7a3f56d0545f">
+						<In Input="216cb609-03bf-5b85-01ff30518fa2f1a2"/>
+					</Co>
+					<Co K="AQ" U="216cb62f-0320-76a5-02ff7a3f56d0545f"/>
+					<Co K="Q" U="216cb62f-0320-76a6-03ff7a3f56d0545f"/>
+				</C>
+				<C Type="InputRef" V="178" U="216cb63f-0039-842f-ffffe001fe9bf86f" Title="RK_WOHNZIMMER_RALTER" Px="288" Py="5568" Px2="2400" Py2="5760" Cl="0,0,0" Nio="4" Ref="216cb609-0382-5ae2-ffffe001fe9bf86f" WF="133120" Analog="true" LinkRefType="87">
+					<Co K="AI" Nc="1" U="216cb63f-0039-842b-00ff4548899ec73e">
+						<In Input="216cb609-0382-5ae0-00ff30518fa2f1a2"/>
+					</Co>
+					<Co K="I" Nc="1" U="216cb63f-0039-842c-01ff4548899ec73e">
+						<In Input="216cb609-0382-5ae1-01ff30518fa2f1a2"/>
+					</Co>
+					<Co K="AQ" U="216cb63f-0039-842d-02ff4548899ec73e"/>
+					<Co K="Q" U="216cb63f-0039-842e-03ff4548899ec73e"/>
+				</C>
+				<C Type="InputRef" V="178" U="216cb649-01ff-8b06-ffffe001fe9bf86f" Title="RK_WOHNZIMMER_SCHIMMEL" Px="6048" Py="6912" Px2="8160" Py2="7104" Cl="0,0,0" Nio="4" Ref="216cb609-0370-5ac6-ffffe001fe9bf86f" WF="133120" Analog="true" LinkRefType="87">
+					<Co K="AI" Nc="1" U="216cb649-01ff-8b02-00ff76500ee3654e">
+						<In Input="216cb609-0370-5ac4-00ff30518fa2f1a2"/>
+					</Co>
+					<Co K="I" Nc="1" U="216cb649-01ff-8b03-01ff76500ee3654e">
+						<In Input="216cb609-0370-5ac5-01ff30518fa2f1a2"/>
+					</Co>
+					<Co K="AQ" U="216cb649-01ff-8b04-02ff76500ee3654e"/>
+					<Co K="Q" U="216cb649-01ff-8b05-03ff76500ee3654e"/>
+				</C>
+				<C Type="InputRef" V="178" U="216cb653-03c3-91e4-ffffe001fe9bf86f" Title="RK_WOHNZIMMER_LUEFTEN" Px="7200" Py="7968" Px2="9312" Py2="8160" Cl="0,0,0" Nio="4" Ref="216cb609-0370-5abe-ffffe001fe9bf86f" WF="133120" Analog="true" LinkRefType="87">
+					<Co K="AI" Nc="1" U="216cb653-03c3-91e0-00ff9dcabce80d94">
+						<In Input="216cb609-0370-5abc-00ff30518fa2f1a2"/>
+					</Co>
+					<Co K="I" Nc="1" U="216cb653-03c3-91e1-01ff9dcabce80d94">
+						<In Input="216cb609-0370-5abd-01ff30518fa2f1a2"/>
+					</Co>
+					<Co K="AQ" U="216cb653-03c3-91e2-02ff9dcabce80d94"/>
+					<Co K="Q" U="216cb653-03c3-91e3-03ff9dcabce80d94"/>
+				</C>
+				<C Type="InputRef" V="178" U="216cb65f-027a-98c9-ffffe001fe9bf86f" Title="RK_WOHNZIMMER_VLMIN" Px="3648" Py="9696" Px2="5760" Py2="9888" Cl="0,0,0" Nio="4" Ref="216cb609-0382-5ade-ffffe001fe9bf86f" WF="133120" Analog="true" LinkRefType="87">
+					<Co K="AI" Nc="1" U="216cb65f-027a-98c5-00fff6707385aa1d">
+						<In Input="216cb609-0382-5adc-00ff30518fa2f1a2"/>
+					</Co>
+					<Co K="I" Nc="1" U="216cb65f-027a-98c6-01fff6707385aa1d">
+						<In Input="216cb609-0382-5add-01ff30518fa2f1a2"/>
+					</Co>
+					<Co K="AQ" U="216cb65f-027a-98c7-02fff6707385aa1d"/>
+					<Co K="Q" U="216cb65f-027a-98c8-03fff6707385aa1d"/>
+				</C>
+				<C Type="InputRef" V="178" U="216cb669-0170-9fb5-ffffe001fe9bf86f" Title="RK_WOHNZIMMER_STEHT" Px="11232" Py="7104" Px2="13344" Py2="7296" Cl="0,0,0" Nio="4" Ref="216cb609-0382-5ae6-ffffe001fe9bf86f" WF="133120" Analog="true" LinkRefType="87">
+					<Co K="AI" Nc="1" U="216cb669-0170-9fb1-00ff1bd3186ea835">
+						<In Input="216cb609-0382-5ae4-00ff30518fa2f1a2"/>
+					</Co>
+					<Co K="I" Nc="1" U="216cb669-0170-9fb2-01ff1bd3186ea835">
+						<In Input="216cb609-0382-5ae5-01ff30518fa2f1a2"/>
+					</Co>
+					<Co K="AQ" U="216cb669-0170-9fb3-02ff1bd3186ea835"/>
+					<Co K="Q" U="216cb669-0170-9fb4-03ff1bd3186ea835"/>
+				</C>
+				<C Type="InputRef" V="178" U="216cb672-03d1-ad83-ffffe001fe9bf86f" Title="RK_WOHNZIMMER_SPERRE" Px="3840" Py="8832" Px2="5952" Py2="9024" Cl="0,0,0" Nio="4" Ref="216cb609-03ad-5b5a-ffffe001fe9bf86f" WF="133120" Analog="true" LinkRefType="87">
+					<Co K="AI" Nc="1" U="216cb672-03d1-ad7f-00ffe8afa3a010b9">
+						<In Input="216cb609-03ad-5b58-00ff30518fa2f1a2"/>
+					</Co>
+					<Co K="I" Nc="1" U="216cb672-03d1-ad80-01ffe8afa3a010b9">
+						<In Input="216cb609-03ad-5b59-01ff30518fa2f1a2"/>
+					</Co>
+					<Co K="AQ" U="216cb672-03d1-ad81-02ffe8afa3a010b9"/>
+					<Co K="Q" U="216cb672-03d1-ad82-03ffe8afa3a010b9"/>
+				</C>
+				<C Type="InputRef" V="178" U="216cb67d-02c5-b47d-ffffe001fe9bf86f" Title="RK_ZAEHLER" Px="3648" Py="10560" Px2="5760" Py2="10752" Cl="0,0,0" Nio="4" Ref="216cb609-03d0-5baa-ffffe001fe9bf86f" WF="133120" Analog="true" LinkRefType="87">
+					<Co K="AI" Nc="1" U="216cb67d-02c5-b479-00ffa13b40e449dc">
+						<In Input="216cb609-03d0-5ba8-00ff30518fa2f1a2"/>
+					</Co>
+					<Co K="I" Nc="1" U="216cb67d-02c5-b47a-01ffa13b40e449dc">
+						<In Input="216cb609-03d0-5ba9-01ff30518fa2f1a2"/>
+					</Co>
+					<Co K="AQ" U="216cb67d-02c5-b47b-02ffa13b40e449dc"/>
+					<Co K="Q" U="216cb67d-02c5-b47c-03ffa13b40e449dc"/>
+				</C>
+				<C Type="InputRef" V="178" U="216cb742-005b-c7a7-ffffe001fe9bf86f" Title="Konstante 1" Px="3648" Py="10752" Px2="5760" Py2="10944" Cl="0,0,0" Nio="4" Ref="216c8f88-0096-1e34-ffffe001fe9bf86f" WF="133120" Analog="true" LinkRefType="17">
+					<Co K="AI" Nc="1" U="216cb742-005b-c7a3-00ffd16d0f3d2601">
+						<In Input="216c8f88-0096-1e33-00ff13c84b8d596b"/>
+					</Co>
+					<Co K="I" U="216cb742-005b-c7a4-01ffd16d0f3d2601"/>
+					<Co K="AQ" U="216cb742-005b-c7a5-02ffd16d0f3d2601"/>
+					<Co K="Q" U="216cb742-005b-c7a6-03ffd16d0f3d2601"/>
+				</C>
+				<C Type="Not" V="178" U="216cb695-0392-c261-ffffe001fe9bf86f" Title="Raumklima ohne Messwerte" Px="5952" Py="5952" Px2="7296" Py2="6456" Cl="141,255,112" Nio="2" LtE="560772760" WF="131072">
+					<Co K="I" Nc="1" U="216cb695-0392-c25f-00ffcfd202350356">
+						<In Input="216cb626-0137-6fdc-02ffecb62cbaedac"/>
+					</Co>
+					<Co K="Q" U="216cb695-0392-c260-01ffcfd202350356"/>
+				</C>
+				<C Type="Not" V="178" U="216cb69c-0229-d041-ffffe001fe9bf86f" Title="Keine Sperre Raum" Px="7200" Py="8544" Px2="8544" Py2="9048" Cl="141,255,112" Nio="2" LtE="560772779" WF="131072">
+					<Co K="I" Nc="1" U="216cb69c-0229-d03f-00ffe9284cebdbd5">
+						<In Input="216cb672-03d1-ad81-02ffe8afa3a010b9"/>
+					</Co>
+					<Co K="Q" U="216cb69c-0229-d040-01ffe9284cebdbd5"/>
+				</C>
+				<C Type="Or" V="178" U="216cb6af-0064-e518-ffffe001fe9bf86f" Title="Störung Raumklima, Teil 1" Px="6816" Py="4608" Px2="8160" Py2="5304" Cl="141,255,112" Nio="3" LtE="560772786">
+					<Co K="I1" Nc="1" U="216cb6af-0064-e515-00fff367f15030c7">
+						<In Input="216cb6e2-00c2-321e-05fffbe0c54a4ff5"/>
+					</Co>
+					<Co K="I2" Nc="1" U="216cb6af-0064-e516-01fff367f15030c7">
+						<In Input="216cb6f8-00df-556e-05ffe7a6e75951b1"/>
+					</Co>
+					<Co K="Q" U="216cb6af-0064-e517-02fff367f15030c7"/>
+				</C>
+				<C Type="Or" V="178" U="216cb6b5-0325-f308-ffffe001fe9bf86f" Title="Störung Raumklima, Teil 2" Px="9216" Py="5760" Px2="10560" Py2="6456" Cl="141,255,112" Nio="3" LtE="560772792" WF="131072">
+					<Co K="I1" Nc="1" U="216cb6b5-0325-f305-00ffbffd22498378">
+						<In Input="216cb6af-0064-e517-02fff367f15030c7"/>
+					</Co>
+					<Co K="I2" Nc="1" U="216cb6b5-0325-f306-01ffbffd22498378">
+						<In Input="216cb695-0392-c260-01ffcfd202350356"/>
+					</Co>
+					<Co K="Q" U="216cb6b5-0325-f307-02ffbffd22498378"/>
+				</C>
+				<C Type="Or" V="178" U="216cb6bc-01ac-0100-ffffe001fe9bf86f" Title="Störung Raumklima, Teil 3" Px="12000" Py="5760" Px2="13344" Py2="6456" Cl="141,255,112" Nio="3" LtE="560772807">
+					<Co K="I1" Nc="1" U="216cb6bc-01ac-00fd-00ff79c0a57a5eb4">
+						<In Input="216cb6b5-0325-f307-02ffbffd22498378"/>
+					</Co>
+					<Co K="I2" Nc="1" U="216cb6bc-01ac-00fe-01ff79c0a57a5eb4">
+						<In Input="216cb700-022c-71d2-04ff55edb8d2822a"/>
+					</Co>
+					<Co K="Q" U="216cb6bc-01ac-00ff-02ff79c0a57a5eb4"/>
+				</C>
+				<C Type="Or" V="178" U="216cb6cb-0292-0f00-ffffe001fe9bf86f" Title="Störung Raumklima" Px="14496" Py="6624" Px2="15840" Py2="7320" Cl="141,255,112" Nio="3" LtE="560772814">
+					<Co K="I1" Nc="1" U="216cb6cb-0292-0efd-00ff853635b3b85b">
+						<In Input="216cb6bc-01ac-00ff-02ff79c0a57a5eb4"/>
+					</Co>
+					<Co K="I2" Nc="1" U="216cb6cb-0292-0efe-01ff853635b3b85b">
+						<In Input="216cb669-0170-9fb3-02ff1bd3186ea835"/>
+					</Co>
+					<Co K="Q" U="216cb6cb-0292-0eff-02ff853635b3b85b"/>
+				</C>
+				<C Type="And" V="178" U="216cb6db-021c-2407-ffffe001fe9bf86f" Title="Fenster auf Raum" Px="10752" Py="8352" Px2="12096" Py2="9048" Cl="141,255,112" Nio="3" LtE="560772830">
+					<Co K="I1" Nc="1" U="216cb6db-021c-2404-00ff2b80158ab9f5">
+						<In Input="216cb653-03c3-91e2-02ff9dcabce80d94"/>
+					</Co>
+					<Co K="I2" Nc="1" U="216cb6db-021c-2405-01ff2b80158ab9f5">
+						<In Input="216cb69c-0229-d040-01ffe9284cebdbd5"/>
+					</Co>
+					<Co K="Q" U="216cb6db-021c-2406-02ff2b80158ab9f5"/>
+				</C>
+				<C Type="AnalogThresholdTrigger" V="178" U="216cb6e2-00c2-3221-ffffe001fe9bf86f" Title="Raumklima antwortet nicht" Px="3840" Py="4128" Px2="5184" Py2="5016" Cl="141,255,112" Nio="8" LtE="560772836" WF="131072">
+					<Co K="Input" Nc="1" U="216cb6e2-00c2-3219-00fffbe0c54a4ff5">
+						<In Input="216cb62f-0320-76a5-02ff7a3f56d0545f"/>
+					</Co>
+					<Co K="On" Def="1800" U="216cb6e2-00c2-321a-01fffbe0c54a4ff5"/>
+					<Co K="Off" Def="900" U="216cb6e2-00c2-321b-02fffbe0c54a4ff5"/>
+					<Co K="Remanence" U="216cb6e2-00c2-321c-03fffbe0c54a4ff5"/>
+					<Co K="PulseTime" Def="1" U="216cb6e2-00c2-321d-04fffbe0c54a4ff5"/>
+					<Co K="Q" U="216cb6e2-00c2-321e-05fffbe0c54a4ff5"/>
+					<Co K="RisingEdge" U="216cb6e2-00c2-321f-06fffbe0c54a4ff5"/>
+					<Co K="FallingEdge" U="216cb6e2-00c2-3220-07fffbe0c54a4ff5"/>
+				</C>
+				<C Type="AnalogThresholdTrigger" V="178" U="216cb6f8-00df-5571-ffffe001fe9bf86f" Title="Raum liefert nichts mehr" Px="3840" Py="5280" Px2="5184" Py2="6168" Cl="141,255,112" Nio="8" LtE="560772858">
+					<Co K="Input" Nc="1" U="216cb6f8-00df-5569-00ffe7a6e75951b1">
+						<In Input="216cb63f-0039-842d-02ff4548899ec73e"/>
+					</Co>
+					<Co K="On" Def="1800" U="216cb6f8-00df-556a-01ffe7a6e75951b1"/>
+					<Co K="Off" Def="900" U="216cb6f8-00df-556b-02ffe7a6e75951b1"/>
+					<Co K="Remanence" U="216cb6f8-00df-556c-03ffe7a6e75951b1"/>
+					<Co K="PulseTime" Def="1" U="216cb6f8-00df-556d-04ffe7a6e75951b1"/>
+					<Co K="Q" U="216cb6f8-00df-556e-05ffe7a6e75951b1"/>
+					<Co K="RisingEdge" U="216cb6f8-00df-556f-06ffe7a6e75951b1"/>
+					<Co K="FallingEdge" U="216cb6f8-00df-5570-07ffe7a6e75951b1"/>
+				</C>
+				<C Type="OnDelay" V="178" U="216cb700-022c-71d3-ffffe001fe9bf86f" Title="Raum: Schimmelgefahr hält an" Px="9216" Py="6624" Px2="10560" Py2="7320" Cl="141,255,112" Nio="5" LtE="560772866" WF="131072">
+					<Co K="InputTrigger" Nc="1" U="216cb700-022c-71ce-00ff55edb8d2822a">
+						<In Input="216cb649-01ff-8b04-02ff76500ee3654e"/>
+					</Co>
+					<Co K="Reset" U="216cb700-022c-71cf-01ff55edb8d2822a"/>
+					<Co K="Remanence" U="216cb700-022c-71d0-02ff55edb8d2822a"/>
+					<Co K="Time" Def="14400" U="216cb700-022c-71d1-03ff55edb8d2822a"/>
+					<Co K="Q" U="216cb700-022c-71d2-04ff55edb8d2822a"/>
+				</C>
+				<C Type="AMinmax" V="178" U="216cb710-0123-8730-ffffe001fe9bf86f" Title="Raum: Kühlung begrenzen" Px="7296" Py="9216" Px2="8640" Py2="10104" Cl="141,255,112" Nio="4" LtE="560772893">
+					<Co K="Input" U="216cb710-0123-872c-00ff7d4f18ef065f"/>
+					<Co K="Min" Nc="1" U="216cb710-0123-872d-01ff7d4f18ef065f">
+						<In Input="216cb65f-027a-98c7-02fff6707385aa1d"/>
+					</Co>
+					<Co K="Max" Def="10" U="216cb710-0123-872e-02ff7d4f18ef065f"/>
+					<Co K="AQ" U="216cb710-0123-872f-03ff7d4f18ef065f"/>
+				</C>
+				<C Type="Validator" V="178" U="216cb721-0348-9ca4-ffffe001fe9bf86f" Title="Abruf steht" Px="7296" Py="10272" Px2="8640" Py2="11160" Cl="141,255,112" Nio="8" LtE="560772908">
+					<Co K="inval" Nc="1" U="216cb721-0348-9c9c-00ff431a16cc1992">
+						<In Input="216cb67d-02c5-b47b-02ffa13b40e449dc"/>
+					</Co>
+					<Co K="enable" Inv="true" Nc="1" U="216cb721-0348-9c9d-01ff431a16cc1992">
+						<In Input="216cb742-005b-c7a5-02ffd16d0f3d2601"/>
+					</Co>
+					<Co K="mintime" Def="900" U="216cb721-0348-9c9e-02ff431a16cc1992"/>
+					<Co K="minval" U="216cb721-0348-9c9f-03ff431a16cc1992"/>
+					<Co K="maxval" Def="999" U="216cb721-0348-9ca0-04ff431a16cc1992"/>
+					<Co K="delay" U="216cb721-0348-9ca1-05ff431a16cc1992"/>
+					<Co K="outval" U="216cb721-0348-9ca2-06ff431a16cc1992"/>
+					<Co K="error" U="216cb721-0348-9ca3-07ff431a16cc1992"/>
+				</C>
+				<C Type="Memory" V="178" U="216cb76d-00f1-d610-ffffe001fe9bf86f" Title="Raum: jetzt lüften" Px="10752" Py="7968" Px2="12864" Py2="8160" Cl="238,238,238" Nio="3" LtE="560772981" Tp="0">
+					<Co K="Input" Nc="1" U="216cb76d-00f1-d60d-00ff494b918d24ec">
+						<In Input="216cb653-03c3-91e2-02ff9dcabce80d94"/>
+					</Co>
+					<Co K="AQ" U="216cb76d-00f1-d60e-01ff494b918d24ec"/>
+					<Co K="Q" U="216cb76d-00f1-d60f-02ff494b918d24ec"/>
+					<IoData Cr="216373ab-00cf-42fc-ffffe001fe9bf86f" Pr="216373ab-00cf-42f8-ffffe001fe9bf86f"/>
+					<Display Unit="&lt;v.1&gt;" StateOnly="true"/>
+				</C>
+				<C Type="OutputRefLM" V="178" U="216cb798-01b4-fa1f-ffffe001fe9bf86f" Title="Meldung Raumklima" Px="17184" Py="6912" Px2="19296" Py2="7104" Cl="0,0,0" Nio="2" Ref="216cb78b-0082-ebaf-ffffe001fe9bf86f" WF="131072">
+					<Co K="AI" Nc="1" U="216cb798-01b4-fa1d-00ffc0e96014dd45">
+						<In Input="216cb6cb-0292-0eff-02ff853635b3b85b"/>
+					</Co>
+					<Co K="AQ" U="216cb798-01b4-fa1e-01ffc0e96014dd45"/>
+					<LoggerMailer RefNotification="216cb78b-0082-ebaf-ffffe001fe9bf86f" On="&lt;v&gt;" Off="&lt;v&gt;" MinimumTime="5000" NL="1"/>
 				</C>
 			</C>
 			<C Type="Page" V="178" U="216c8eab-0188-be05-ffffe001fe9bf86f" Title="Zigbee2MqttNG" LtE="560762556" WF="16384">

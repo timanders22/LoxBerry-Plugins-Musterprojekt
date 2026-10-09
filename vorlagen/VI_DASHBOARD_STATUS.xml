@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<VirtualInHttp HintText="" Title="Dashboard-Designer" Comment="Dashboard-Designer" Address="http://loxberry/plugins/dashboard/index.php?token=DEIN_TOKEN&amp;aktion=status" PollingTime="60">
+	<Info templateType="2" minVersion="17010727"/>
+	<VirtualInHttpCmd Title="DASHBOARD_OK" Comment="1 = verbunden und Werte frisch" Check="\i;OK=\i\v" Signed="false" Analog="true" SourceValLow="0" DestValLow="0" SourceValHigh="1" DestValHigh="1" DefVal="0" MinVal="0" MaxVal="1" Unit="&lt;v&gt;" HintText=""/>
+	<VirtualInHttpCmd Title="DASHBOARD_BAUSTEINE" Comment="Anzahl der Bausteine" Check="\i;BAUSTEINE=\i\v" Signed="false" Analog="true" SourceValLow="0" DestValLow="0" SourceValHigh="1" DestValHigh="1" DefVal="0" MinVal="0" MaxVal="65535" Unit="&lt;v&gt;" HintText=""/>
+	<VirtualInHttpCmd Title="DASHBOARD_SEITEN" Comment="Anzahl der Dashboard-Seiten" Check="\i;SEITEN=\i\v" Signed="false" Analog="true" SourceValLow="0" DestValLow="0" SourceValHigh="1" DestValHigh="1" DefVal="0" MinVal="0" MaxVal="255" Unit="&lt;v&gt;" HintText=""/>
+	<VirtualInHttpCmd Title="DASHBOARD_KACHELN" Comment="Anzahl aller Kacheln" Check="\i;KACHELN=\i\v" Signed="false" Analog="true" SourceValLow="0" DestValLow="0" SourceValHigh="1" DestValHigh="1" DefVal="0" MinVal="0" MaxVal="65535" Unit="&lt;v&gt;" HintText=""/>
+	<VirtualInHttpCmd Title="DASHBOARD_ALTER" Comment="Alter der Werte, -1 = keine" Check="\i;ALTER=\i\v" Signed="true" Analog="true" SourceValLow="0" DestValLow="0" SourceValHigh="1" DestValHigh="1" DefVal="0" MinVal="-1" MaxVal="2147483647" Unit="&lt;v.1&gt; s" HintText=""/>
+</VirtualInHttp>

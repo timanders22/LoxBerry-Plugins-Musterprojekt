@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<VirtualInHttp HintText="" Title="Ecowitt-Weiche Zustand" Comment="Zustand der Ecowitt-Weiche" Address="http://loxberry/plugins/ecowittweiche/live.php?status=1&amp;token=DEIN_TOKEN" PollingTime="60">
+	<Info templateType="2" minVersion="17010727"/>
+	<VirtualInHttpCmd Title="Ecowitt-Weiche OK" Comment="1 = brauchbare Daten" Check="\i;OK=\i\v" Signed="false" Analog="true" SourceValLow="0" DestValLow="0" SourceValHigh="1" DestValHigh="1" DefVal="0" MinVal="0" MaxVal="1" Unit="&lt;v&gt;" HintText=""/>
+	<VirtualInHttpCmd Title="Ecowitt-Weiche Quelle" Comment="1 primär, 2 Ersatz, 0 keine" Check="\i;QUELLE=\i\v" Signed="false" Analog="true" SourceValLow="0" DestValLow="0" SourceValHigh="1" DestValHigh="1" DefVal="0" MinVal="0" MaxVal="2" Unit="&lt;v&gt;" HintText=""/>
+	<VirtualInHttpCmd Title="Ecowitt-Weiche Wechsel" Comment="Anzahl der Quellwechsel" Check="\i;WECHSEL=\i\v" Signed="false" Analog="true" SourceValLow="0" DestValLow="0" SourceValHigh="1" DestValHigh="1" DefVal="0" MinVal="0" MaxVal="100000" Unit="&lt;v&gt;" HintText=""/>
+	<VirtualInHttpCmd Title="Ecowitt-Weiche Alter" Comment="Alter der Daten in s, -1 = keine" Check="\i;ALTER=\i\v" Signed="true" Analog="true" SourceValLow="0" DestValLow="0" SourceValHigh="1" DestValHigh="1" DefVal="0" MinVal="-1" MaxVal="1000000" Unit="&lt;v&gt; s" HintText=""/>
+</VirtualInHttp>
