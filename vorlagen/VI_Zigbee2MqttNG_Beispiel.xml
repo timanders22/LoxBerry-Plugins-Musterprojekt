@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<VirtualInHttp HintText="" Title="Zigbee2MqttNG Beispiel" Comment="Zigbee2MqttNG über das MQTT-Gateway (HTTP-Betrieb)" Address="http://localhost" PollingTime="604800">
+	<Info templateType="2" minVersion="17010727"/>
+	<VirtualInHttpCmd Title="zigbee2mqtt_zigbee2mqttng_zaehler" Comment="Zigbee2MqttNG: Lebenszeichen" Check=" " Signed="false" Analog="true" SourceValLow="0" DestValLow="0" SourceValHigh="100" DestValHigh="100" DefVal="0" MinVal="0" MaxVal="999" Unit="<v>" HintText=""/>
+	<VirtualInHttpCmd Title="zigbee2mqtt_Wohnzimmer_Sensor_erreichbar" Comment="Wohnzimmer_Sensor: erreichbar" Check=" " Signed="false" Analog="true" SourceValLow="0" DestValLow="0" SourceValHigh="100" DestValHigh="100" DefVal="0" MinVal="0" MaxVal="1" Unit="<v>" HintText=""/>
+	<VirtualInHttpCmd Title="zigbee2mqtt_Wohnzimmer_Sensor_temperature" Comment="Wohnzimmer_Sensor: temperature" Check=" " Signed="true" Analog="true" SourceValLow="0" DestValLow="0" SourceValHigh="100" DestValHigh="100" DefVal="0" MinVal="-50" MaxVal="100" Unit="<v.1> °C" HintText=""/>
+</VirtualInHttp>
