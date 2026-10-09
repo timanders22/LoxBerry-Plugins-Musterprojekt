@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ControlList Version="274" LxAV="87" NextObj="55" NextConst="1" NextNote="1" NextMem="1">
-	<C Type="Document" V="17020828" U="216373ab-00cc-41fa-ffffe001fe9bf86f" Title="LoxBerry-Plugins Musterprojekt" WF="16384" ConfigVersion="17020828" PaperFormat="2" SPSfreq="100" OpenIsHigh="false" Date="2026-10-09 09:49:02" CDate="" BDate="" DateS="560764142" Street="" Town="" PostCode="" Ctry="" Latitude="0.000" Longitude="0.000" Timezone="Europe/Vienna" Timeserver="" Logo="" uuidNotifications="216373ab-00cb-41f6-ffffe001fe9bf86f" uuidFavSeq="216373ab-00cb-41f8-ffffe001fe9bf86f" uuidFavCol="216373ab-00cb-41f9-ffffe001fe9bf86f" FC="hsv(25,96,50);hsv(24,95,80);hsv(337,94,50)" uuidTime="216373ab-00cb-41f7-ffffe001fe9bf86f" UnitPrecipitation="1" Currency="€" UpdTime="120" AUE="true" DeviceTelemetry="true" CrashL="true" Geo="0" NumO="444" APPKEY="717BCB5938494F35EA25202FC850B65F" APPID="227A0B">
+	<C Type="Document" V="17020828" U="216373ab-00cc-41fa-ffffe001fe9bf86f" Title="LoxBerry-Plugins Musterprojekt" WF="16384" ConfigVersion="17020828" PaperFormat="2" SPSfreq="100" OpenIsHigh="false" Date="2026-10-09 10:46:06" CDate="" BDate="" DateS="560767566" Street="" Town="" PostCode="" Ctry="" Latitude="0.000" Longitude="0.000" Timezone="Europe/Vienna" Timeserver="" Logo="" uuidNotifications="216373ab-00cb-41f6-ffffe001fe9bf86f" uuidFavSeq="216373ab-00cb-41f8-ffffe001fe9bf86f" uuidFavCol="216373ab-00cb-41f9-ffffe001fe9bf86f" FC="hsv(25,96,50);hsv(24,95,80);hsv(337,94,50)" uuidTime="216373ab-00cb-41f7-ffffe001fe9bf86f" UnitPrecipitation="1" Currency="€" UpdTime="120" AUE="true" DeviceTelemetry="true" CrashL="true" Geo="0" NumO="444" APPKEY="717BCB5938494F35EA25202FC850B65F" APPID="227A0B">
 		<HP H="" Sc="-2" S="WGpiqX5LbyaIrGD1MuWTTyrxvlVqUpqf" Alg="1"/>
 		<C Type="LoxCaption" V="178" U="216373ab-00cd-41fc-ffffe001fe9bf86f" Title="Symbole" Cl="0,0,0" WF="16384" CaptionType="5" SubType="5"/>
 		<C Type="CategoryCaption" V="178" U="216373ab-00cd-41fe-ffffe001fe9bf86f" Title="Kategorien" WF="16384">
@@ -1584,7 +1584,7 @@
 		<C Type="Program" V="178" U="216373ab-0109-4578-ffffe001fe9bf86f" Title="Demo-Miniserver" Ref="216373ab-00db-43b7-ffffe001fe9bf86f" WF="16384">
 			<C Type="Page" V="178" U="216373ab-0109-457a-ffffe001fe9bf86f" Title="Abfahrtsassistent" LtE="560167716" WF="16384">
 				<IoData Cr="216373ab-00cf-42fc-ffffe001fe9bf86f" Pr="216373ab-00cf-42f8-ffffe001fe9bf86f"/>
-				<C Type="InputRef" V="178" U="2163772b-018d-6a88-ffffe001fe9bf86f" Title="ABFAHRT_ABFAHRT_IN" Px="1824" Py="2016" Px2="3936" Py2="2208" Cl="0,0,0" Nio="4" Ref="21637636-03af-4cc3-ffffe001fe9bf86f" WF="133120" Analog="true" LinkRefType="87">
+				<C Type="InputRef" V="178" U="2163772b-018d-6a88-ffffe001fe9bf86f" Title="ABFAHRT_ABFAHRT_IN" Px="96" Py="3648" Px2="2208" Py2="3840" Cl="0,0,0" Nio="4" Ref="21637636-03af-4cc3-ffffe001fe9bf86f" WF="133120" Analog="true" LinkRefType="87">
 					<Co K="AI" Nc="1" U="2163772b-018d-6a84-00fff9a24a5a43aa">
 						<In Input="21637636-03af-4cc1-00ff8e33d37b5ed2"/>
 					</Co>
@@ -1594,7 +1594,7 @@
 					<Co K="AQ" U="2163772b-018d-6a86-02fff9a24a5a43aa"/>
 					<Co K="Q" U="2163772b-018d-6a87-03fff9a24a5a43aa"/>
 				</C>
-				<C Type="InputRef" V="178" U="2163779e-0250-7e48-ffffe001fe9bf86f" Title="ABFAHRT_MINSTART" Px="4992" Py="5184" Px2="7104" Py2="5376" Cl="0,0,0" Nio="4" Ref="21637636-03af-4cbb-ffffe001fe9bf86f" WF="133120" Analog="true" LinkRefType="87">
+				<C Type="InputRef" V="178" U="2163779e-0250-7e48-ffffe001fe9bf86f" Title="ABFAHRT_MINSTART" Px="6432" Py="5184" Px2="8544" Py2="5376" Cl="0,0,0" Nio="4" Ref="21637636-03af-4cbb-ffffe001fe9bf86f" WF="133120" Analog="true" LinkRefType="87">
 					<Co K="AI" Nc="1" U="2163779e-0250-7e44-00ffc84871afba79">
 						<In Input="21637636-03af-4cb9-00ff8e33d37b5ed2"/>
 					</Co>
@@ -1604,7 +1604,7 @@
 					<Co K="AQ" U="2163779e-0250-7e46-02ffc84871afba79"/>
 					<Co K="Q" U="2163779e-0250-7e47-03ffc84871afba79"/>
 				</C>
-				<C Type="InputRef" V="178" U="21637949-0300-3d73-ffffe001fe9bf86f" Title="ABFAHRT_OK" Px="6432" Py="7488" Px2="8544" Py2="7680" Cl="0,0,0" Nio="4" Ref="21637636-03af-4cb7-ffffe001fe9bf86f" WF="133120" LinkRefType="87">
+				<C Type="InputRef" V="178" U="21637949-0300-3d73-ffffe001fe9bf86f" Title="ABFAHRT_OK" Py="6240" Px2="2112" Py2="6432" Cl="0,0,0" Nio="4" Ref="21637636-03af-4cb7-ffffe001fe9bf86f" WF="133120" LinkRefType="87">
 					<Co K="AI" Nc="1" U="21637949-0300-3d6f-00ff963c7cd27f96">
 						<In Input="21637636-03af-4cb5-00ff8e33d37b5ed2"/>
 					</Co>
@@ -1644,7 +1644,7 @@
 					<Co K="AQ" U="21637956-013f-40c5-02ff9a7322d330bc"/>
 					<Co K="Q" U="21637956-013f-40c6-03ff9a7322d330bc"/>
 				</C>
-				<C Type="InputRef" V="178" U="21637982-00ce-5187-ffffe001fe9bf86f" Title="ABFAHRT_FEHLER" Px="11520" Py="14880" Px2="13632" Py2="15072" Cl="0,0,0" Nio="4" Ref="21637636-03af-4cc7-ffffe001fe9bf86f" WF="133120" Analog="true" LinkRefType="87">
+				<C Type="InputRef" V="178" U="21637982-00ce-5187-ffffe001fe9bf86f" Title="ABFAHRT_FEHLER" Py="6720" Px2="2112" Py2="6912" Cl="0,0,0" Nio="4" Ref="21637636-03af-4cc7-ffffe001fe9bf86f" WF="133120" Analog="true" LinkRefType="87">
 					<Co K="AI" Nc="1" U="21637982-00ce-5183-00ff778bd597e3f9">
 						<In Input="21637636-03af-4cc5-00ff8e33d37b5ed2"/>
 					</Co>
@@ -1654,7 +1654,7 @@
 					<Co K="AQ" U="21637982-00ce-5185-02ff778bd597e3f9"/>
 					<Co K="Q" U="21637982-00ce-5186-03ff778bd597e3f9"/>
 				</C>
-				<C Type="AnalogThresholdTrigger" V="178" U="21637776-019a-7030-ffffe001fe9bf86f" Title="Termin in Reichweite" Px="8064" Py="4896" Px2="9408" Py2="5784" Cl="141,255,112" Nio="8" LtE="560166800">
+				<C Type="AnalogThresholdTrigger" V="178" U="21637776-019a-7030-ffffe001fe9bf86f" Title="Termin in Reichweite" Px="9504" Py="4896" Px2="10848" Py2="5784" Cl="141,255,112" Nio="8" LtE="560166800" WF="131072">
 					<Co K="Input" Nc="1" U="21637776-019a-7028-00ff771caea23bc2">
 						<In Input="2163779e-0250-7e46-02ffc84871afba79"/>
 					</Co>
@@ -1666,7 +1666,7 @@
 					<Co K="RisingEdge" U="21637776-019a-702e-06ff771caea23bc2"/>
 					<Co K="FallingEdge" U="21637776-019a-702f-07ff771caea23bc2"/>
 				</C>
-				<C Type="And" V="178" U="216377c3-001a-86de-ffffe001fe9bf86f" Title="Termin gültig" Px="11808" Py="6144" Px2="13152" Py2="6840" Cl="141,255,112" Nio="3" LtE="560166852" WF="131072">
+				<C Type="And" V="178" U="216377c3-001a-86de-ffffe001fe9bf86f" Title="Termin gültig" Px="11808" Py="5760" Px2="13152" Py2="6456" Cl="141,255,112" Nio="3" LtE="560166852">
 					<Co K="I1" Nc="1" U="216377c3-001a-86db-00ff72bb766f3546">
 						<In Input="21637776-019a-702d-05ff771caea23bc2"/>
 					</Co>
@@ -1687,7 +1687,7 @@
 					<Co K="RisingEdge" U="2163783f-0311-9de9-06ff00e7bf40905b"/>
 					<Co K="FallingEdge" U="2163783f-0311-9dea-07ff00e7bf40905b"/>
 				</C>
-				<C Type="AnalogThresholdTrigger" V="178" U="21637852-00ad-ac6e-ffffe001fe9bf86f" Title="Daten gültig" Px="8736" Py="7008" Px2="10080" Py2="7896" Cl="141,255,112" Nio="8" LtE="560166996">
+				<C Type="AnalogThresholdTrigger" V="178" U="21637852-00ad-ac6e-ffffe001fe9bf86f" Title="Daten gültig" Px="9600" Py="5952" Px2="10944" Py2="6840" Cl="141,255,112" Nio="8" LtE="560166996" WF="131072">
 					<Co K="Input" Nc="1" U="21637852-00ad-ac66-00ff57a3d18660d2">
 						<In Input="21637949-0300-3d71-02ff963c7cd27f96"/>
 					</Co>
@@ -1699,7 +1699,7 @@
 					<Co K="RisingEdge" U="21637852-00ad-ac6c-06ff57a3d18660d2"/>
 					<Co K="FallingEdge" U="21637852-00ad-ac6d-07ff57a3d18660d2"/>
 				</C>
-				<C Type="AnalogThresholdTrigger" V="178" U="2163785a-0153-b832-ffffe001fe9bf86f" Title="Ansage erlaubt" Px="8736" Py="8832" Px2="10080" Py2="9720" Cl="141,255,112" Nio="8" LtE="560167004">
+				<C Type="AnalogThresholdTrigger" V="178" U="2163785a-0153-b832-ffffe001fe9bf86f" Title="Ansage erlaubt" Px="8736" Py="8832" Px2="10080" Py2="9720" Cl="141,255,112" Nio="8" LtE="560167004" WF="131072">
 					<Co K="Input" Nc="1" U="2163785a-0153-b82a-00ffb0704a5d6dd5">
 						<In Input="21637956-013f-40c5-02ff9a7322d330bc"/>
 					</Co>
@@ -1711,7 +1711,7 @@
 					<Co K="RisingEdge" U="2163785a-0153-b830-06ffb0704a5d6dd5"/>
 					<Co K="FallingEdge" U="2163785a-0153-b831-07ffb0704a5d6dd5"/>
 				</C>
-				<C Type="AnalogThresholdTrigger" V="178" U="2163786c-01e8-c70f-ffffe001fe9bf86f" Title="Push erlaubt" Px="8736" Py="10560" Px2="10080" Py2="11448" Cl="141,255,112" Nio="8" LtE="560167022">
+				<C Type="AnalogThresholdTrigger" V="178" U="2163786c-01e8-c70f-ffffe001fe9bf86f" Title="Push erlaubt" Px="8736" Py="10560" Px2="10080" Py2="11448" Cl="141,255,112" Nio="8" LtE="560167022" WF="131072">
 					<Co K="Input" Nc="1" U="2163786c-01e8-c707-00ff07a24bd1ec01">
 						<In Input="21637972-0335-4ace-02ff0869cd3d8496"/>
 					</Co>
@@ -1735,7 +1735,7 @@
 					<Co K="RisingEdge" U="21637874-02cb-d319-06ffc39ac0bc2f8e"/>
 					<Co K="FallingEdge" U="21637874-02cb-d31a-07ffc39ac0bc2f8e"/>
 				</C>
-				<C Type="And" V="178" U="21637887-029d-e54f-ffffe001fe9bf86f" Title="Abfahrt jetzt melden" Px="14688" Py="4608" Px2="16032" Py2="5304" Cl="141,255,112" Nio="3" LtE="560167049" WF="131072">
+				<C Type="And" V="178" U="21637887-029d-e54f-ffffe001fe9bf86f" Title="Abfahrt jetzt melden" Px="14688" Py="4608" Px2="16032" Py2="5304" Cl="141,255,112" Nio="3" LtE="560167049">
 					<Co K="I1" Nc="1" U="21637887-029d-e54c-00ff65ad007307f0">
 						<In Input="2163783f-0311-9de8-05ff00e7bf40905b"/>
 					</Co>
@@ -1744,7 +1744,7 @@
 					</Co>
 					<Co K="Q" U="21637887-029d-e54e-02ff65ad007307f0"/>
 				</C>
-				<C Type="And" V="178" U="2163788e-015e-eb6f-ffffe001fe9bf86f" Title="Ansage auslösen" Px="17280" Py="7008" Px2="18624" Py2="7704" Cl="141,255,112" Nio="3" LtE="560167055">
+				<C Type="And" V="178" U="2163788e-015e-eb6f-ffffe001fe9bf86f" Title="Ansage auslösen" Px="18240" Py="6624" Px2="19584" Py2="7320" Cl="141,255,112" Nio="3" LtE="560167055">
 					<Co K="I1" Nc="1" U="2163788e-015e-eb6c-00ff77ac0b23af42">
 						<In Input="21637887-029d-e54e-02ff65ad007307f0"/>
 					</Co>
@@ -1753,7 +1753,7 @@
 					</Co>
 					<Co K="Q" U="2163788e-015e-eb6e-02ff77ac0b23af42"/>
 				</C>
-				<C Type="And" V="178" U="21637894-0382-f197-ffffe001fe9bf86f" Title="Push auslösen" Px="17280" Py="9696" Px2="18624" Py2="10392" Cl="141,255,112" Nio="3" LtE="560167062">
+				<C Type="And" V="178" U="21637894-0382-f197-ffffe001fe9bf86f" Title="Push auslösen" Px="17376" Py="10368" Px2="18720" Py2="11064" Cl="141,255,112" Nio="3" LtE="560167062">
 					<Co K="I1" Nc="1" U="21637894-0382-f194-00ff854620af611c">
 						<In Input="21637887-029d-e54e-02ff65ad007307f0"/>
 					</Co>
@@ -1781,7 +1781,7 @@
 					<Co K="Time" Def="600" U="216378d1-012b-0a6e-03ff6957695131f6"/>
 					<Co K="Q" U="216378d1-012b-0a6f-04ff6957695131f6"/>
 				</C>
-				<C Type="State" V="178" U="216378e4-027d-13ea-ffffe001fe9bf86f" Title="Abfahrts-Assistent" Px="14880" Py="12960" Px2="17568" Py2="14232" Cl="141,255,112" Nio="11" LtE="560167149">
+				<C Type="State" V="178" U="216378e4-027d-13ea-ffffe001fe9bf86f" Title="Abfahrts-Assistent" Px="3360" Py="4800" Px2="6048" Py2="6072" Cl="141,255,112" Nio="11" LtE="560167149">
 					<Co K="I1" Nc="1" U="216378e4-027d-13df-00ffaaff9ed81bf1">
 						<In Input="2163772b-018d-6a86-02fff9a24a5a43aa"/>
 					</Co>
@@ -1803,23 +1803,23 @@
 					<Display Unit="&lt;v.pr&gt;"/>
 					<StateTexts></StateTexts>
 				</C>
-				<C Type="OutputRef" V="178" U="21637996-03e4-5846-ffffe001fe9bf86f" Title="Abfahrt: Ansage" Px="21216" Py="7296" Px2="23328" Py2="7488" Cl="0,0,0" Nio="2" Ref="216376a3-0125-573f-ffffe001fe9bf86f" WF="131072" LinkRefType="74">
-					<Co K="AI" Nc="1" U="21637996-03e4-5844-00ffbad61744dee4">
-						<In Input="2163788e-015e-eb6e-02ff77ac0b23af42"/>
-					</Co>
-					<Co K="AQ" U="21637996-03e4-5845-01ffbad61744dee4"/>
-				</C>
-				<C Type="OutputRefLM" V="178" U="2163793a-02ef-3701-ffffe001fe9bf86f" Title="Zeit zum Losfahren" Px="20736" Py="10176" Px2="22848" Py2="10368" Cl="0,0,0" Nio="2" Ref="2163790e-0161-1d78-ffffe001fe9bf86f" WF="131072">
+				<C Type="OutputRefLM" V="178" U="2163793a-02ef-3701-ffffe001fe9bf86f" Title="Zeit zum Losfahren" Px="20832" Py="10645" Px2="22944" Py2="10837" Cl="0,0,0" Nio="2" Ref="2163790e-0161-1d78-ffffe001fe9bf86f" WF="131072">
 					<Co K="AI" Nc="1" U="2163793a-02ef-36ff-00ffc226a21f08a2">
 						<In Input="21637894-0382-f196-02ff854620af611c"/>
 					</Co>
 					<Co K="AQ" U="2163793a-02ef-3700-01ffc226a21f08a2"/>
 					<LoggerMailer RefNotification="2163790e-0161-1d78-ffffe001fe9bf86f" On="&lt;v&gt;" Off="&lt;v&gt;" MinimumTime="5000" NL="1"/>
 				</C>
+				<C Type="OutputRef" V="178" U="21637996-03e4-5846-ffffe001fe9bf86f" Title="Abfahrt: Ansage" Px="20928" Py="6912" Px2="23040" Py2="7104" Cl="0,0,0" Nio="2" Ref="216376a3-0125-573f-ffffe001fe9bf86f" WF="131072" LinkRefType="74">
+					<Co K="AI" Nc="1" U="21637996-03e4-5844-00ffbad61744dee4">
+						<In Input="2163788e-015e-eb6e-02ff77ac0b23af42"/>
+					</Co>
+					<Co K="AQ" U="21637996-03e4-5845-01ffbad61744dee4"/>
+				</C>
 			</C>
 			<C Type="Page" V="178" U="21637a30-0013-6964-ffffe001fe9bf86f" Title="Alexa NG" LtE="560167480" WF="16384">
 				<IoData Cr="216373ab-00cf-42fc-ffffe001fe9bf86f" Pr="216373ab-00cf-42f8-ffffe001fe9bf86f"/>
-				<C Type="InputRef" V="178" U="21637a4b-02de-6cf1-ffffe001fe9bf86f" Title="Alexa NG OK" Px="2688" Py="2208" Px2="4800" Py2="2400" Cl="0,0,0" Nio="4" Ref="2163766c-0275-51e4-ffffe001fe9bf86f" WF="2048" LinkRefType="87">
+				<C Type="InputRef" V="178" U="21637a4b-02de-6cf1-ffffe001fe9bf86f" Title="Alexa NG OK" Px="13920" Py="5376" Px2="16032" Py2="5568" Cl="0,0,0" Nio="4" Ref="2163766c-0275-51e4-ffffe001fe9bf86f" WF="2048" LinkRefType="87">
 					<Co K="AI" Nc="1" U="21637a4b-02de-6ced-00ffe965d876aa19">
 						<In Input="2163766c-0275-51e2-00ffed69ebf2e5e8"/>
 					</Co>
@@ -1829,31 +1829,31 @@
 					<Co K="AQ" U="21637a4b-02de-6cef-02ffe965d876aa19"/>
 					<Co K="Q" U="21637a4b-02de-6cf0-03ffe965d876aa19"/>
 				</C>
-				<C Type="OutputRef" V="178" U="21637a79-0329-73ea-ffffe001fe9bf86f" Title="Alexa Radio Zone 1 Sender" Px="14784" Py="3072" Px2="16896" Py2="3264" Cl="0,0,0" Nio="2" Ref="216376ba-0105-5ca4-ffffe001fe9bf86f" WF="133120" Analog="true" LinkRefType="74">
+				<C Type="OutputRef" V="178" U="21637a79-0329-73ea-ffffe001fe9bf86f" Title="Alexa Radio Zone 1 Sender" Px="13920" Py="3360" Px2="16032" Py2="3552" Cl="0,0,0" Nio="2" Ref="216376ba-0105-5ca4-ffffe001fe9bf86f" WF="133120" Analog="true" LinkRefType="74">
 					<Co K="AI" Nc="1" U="21637a79-0329-73e8-00ff57aabc954d0c">
 						<In Input="21637ac6-003b-9446-18fff19427ea5b4c"/>
 					</Co>
 					<Co K="AQ" U="21637a79-0329-73e9-01ff57aabc954d0c"/>
 				</C>
-				<C Type="OutputRef" V="178" U="21637a86-0174-7773-ffffe001fe9bf86f" Title="Alexa Radio Zone 1 Stopp" Px="14784" Py="4608" Px2="16896" Py2="4800" Cl="0,0,0" Nio="2" Ref="216376ba-0105-5ca7-ffffe001fe9bf86f" WF="2048" LinkRefType="74">
+				<C Type="OutputRef" V="178" U="21637a86-0174-7773-ffffe001fe9bf86f" Title="Alexa Radio Zone 1 Stopp" Px="13920" Py="3936" Px2="16032" Py2="4128" Cl="0,0,0" Nio="2" Ref="216376ba-0105-5ca7-ffffe001fe9bf86f" WF="2048" LinkRefType="74">
 					<Co K="AI" U="21637a86-0174-7771-00ff16dfb70354b2"/>
 					<Co K="AQ" U="21637a86-0174-7772-01ff16dfb70354b2"/>
 				</C>
-				<C Type="OutputRef" V="178" U="21637a93-00ee-7b00-ffffe001fe9bf86f" Title="Alexa Radio Zone 1 Lautstärke" Px="14784" Py="6144" Px2="16896" Py2="6336" Cl="0,0,0" Nio="2" Ref="216376ba-0105-5caa-ffffe001fe9bf86f" WF="2048" Analog="true" LinkRefType="74">
+				<C Type="OutputRef" V="178" U="21637a93-00ee-7b00-ffffe001fe9bf86f" Title="Alexa Radio Zone 1 Lautstärke" Px="13920" Py="4416" Px2="16032" Py2="4608" Cl="0,0,0" Nio="2" Ref="216376ba-0105-5caa-ffffe001fe9bf86f" WF="2048" Analog="true" LinkRefType="74">
 					<Co K="AI" U="21637a93-00ee-7afe-00fffa85d2920873"/>
 					<Co K="AQ" U="21637a93-00ee-7aff-01fffa85d2920873"/>
 				</C>
-				<C Type="OutputRef" V="178" U="21637a97-003d-7e91-ffffe001fe9bf86f" Title="Alexa Radio alle Zonen Sender" Px="14784" Py="7872" Px2="16896" Py2="8064" Cl="0,0,0" Nio="2" Ref="216376ba-010a-5cb6-ffffe001fe9bf86f" WF="2048" Analog="true" LinkRefType="74">
+				<C Type="OutputRef" V="178" U="21637a97-003d-7e91-ffffe001fe9bf86f" Title="Alexa Radio alle Zonen Sender" Px="13920" Py="4896" Px2="16032" Py2="5088" Cl="0,0,0" Nio="2" Ref="216376ba-010a-5cb6-ffffe001fe9bf86f" WF="2048" Analog="true" LinkRefType="74">
 					<Co K="AI" U="21637a97-003d-7e8f-00ff27671f3c057b"/>
 					<Co K="AQ" U="21637a97-003d-7e90-01ff27671f3c057b"/>
 				</C>
-				<C Type="OutputRef" V="178" U="21637aab-01aa-85a9-ffffe001fe9bf86f" Title="Alexa kueche sprechen" Px="14784" Py="10752" Px2="16896" Py2="10944" Cl="0,0,0" Nio="2" Ref="216376af-00d0-59ef-ffffe001fe9bf86f" WF="133120" Analog="true" Text="true" LinkRefType="74">
+				<C Type="OutputRef" V="178" U="21637aab-01aa-85a9-ffffe001fe9bf86f" Title="Alexa kueche sprechen" Px="13920" Py="6048" Px2="16032" Py2="6240" Cl="0,0,0" Nio="2" Ref="216376af-00d0-59ef-ffffe001fe9bf86f" WF="133120" Analog="true" Text="true" LinkRefType="74">
 					<Co K="AI" Nc="1" U="21637aab-01aa-85a7-00ff483e0ac89da2">
 						<In Input="21637ab1-022b-894c-08ffae4ade57fdc5"/>
 					</Co>
 					<Co K="AQ" U="21637aab-01aa-85a8-01ff483e0ac89da2"/>
 				</C>
-				<C Type="State" V="178" U="21637ab1-022b-894f-ffffe001fe9bf86f" Title="Ansagetext" Px="9312" Py="10848" Px2="12000" Py2="11736" Cl="141,255,112" Nio="11" LtE="560167602">
+				<C Type="State" V="178" U="21637ab1-022b-894f-ffffe001fe9bf86f" Title="Ansagetext" Px="8448" Py="5568" Px2="11136" Py2="6456" Cl="141,255,112" Nio="11" LtE="560167602">
 					<Co K="I1" U="21637ab1-022b-8944-00ffae4ade57fdc5"/>
 					<Co K="I2" U="21637ab1-022b-8945-01ffae4ade57fdc5"/>
 					<Co K="I3" U="21637ab1-022b-8946-02ffae4ade57fdc5"/>
@@ -1869,7 +1869,7 @@
 					<Display Unit="&lt;v.pr&gt;"/>
 					<StateTexts></StateTexts>
 				</C>
-				<C Type="Radio" V="178" U="21637ac6-003b-9448-ffffe001fe9bf86f" Title="Radio Zone 1" Px="9312" Py="3744" Px2="12000" Py2="5016" Cl="141,255,112" Nio="26" LtE="560167636" T9="Alles aus">
+				<C Type="Radio" V="178" U="21637ac6-003b-9448-ffffe001fe9bf86f" Title="Radio Zone 1" Px="8928" Py="2496" Px2="11616" Py2="3768" Cl="141,255,112" Nio="26" LtE="560167636" T9="Alles aus">
 					<Co K="InputTrigger 1" U="21637ac6-003b-942e-00fff19427ea5b4c"/>
 					<Co K="InputTrigger 2" U="21637ac6-003b-942f-01fff19427ea5b4c"/>
 					<Co K="InputTrigger 3" U="21637ac6-003b-9430-02fff19427ea5b4c"/>
@@ -1901,7 +1901,7 @@
 			</C>
 			<C Type="Page" V="178" U="216c920c-00ea-006d-ffffe001fe9bf86f" Title="Funkwacht" LtE="560763407" WF="16384">
 				<IoData Cr="216373ab-00cf-42fc-ffffe001fe9bf86f" Pr="216373ab-00cf-42f8-ffffe001fe9bf86f"/>
-				<C Type="InputRef" V="178" U="216c9230-025c-133d-ffffe001fe9bf86f" Title="FW_OK" Px="1920" Py="1440" Px2="4032" Py2="1632" Cl="0,0,0" Nio="4" Ref="216c9221-0109-09a5-ffffe001fe9bf86f" WF="133120" Analog="true" LinkRefType="87">
+				<C Type="InputRef" V="178" U="216c9230-025c-133d-ffffe001fe9bf86f" Title="FW_OK" Px="1824" Py="1920" Px2="3936" Py2="2112" Cl="0,0,0" Nio="4" Ref="216c9221-0109-09a5-ffffe001fe9bf86f" WF="133120" Analog="true" LinkRefType="87">
 					<Co K="AI" Nc="1" U="216c9230-025c-1339-00ff4ba8632f8155">
 						<In Input="216c9221-0109-09a3-00ff57866765b55a"/>
 					</Co>
@@ -1911,7 +1911,7 @@
 					<Co K="AQ" U="216c9230-025c-133b-02ff4ba8632f8155"/>
 					<Co K="Q" U="216c9230-025c-133c-03ff4ba8632f8155"/>
 				</C>
-				<C Type="InputRef" V="178" U="216c9238-00dd-180d-ffffe001fe9bf86f" Title="FW_KRANK" Px="1920" Py="3552" Px2="4032" Py2="3744" Cl="0,0,0" Nio="4" Ref="216c9221-0110-09a9-ffffe001fe9bf86f" WF="133120" Analog="true" LinkRefType="87">
+				<C Type="InputRef" V="178" U="216c9238-00dd-180d-ffffe001fe9bf86f" Title="FW_KRANK" Px="2976" Py="3936" Px2="5088" Py2="4128" Cl="0,0,0" Nio="4" Ref="216c9221-0110-09a9-ffffe001fe9bf86f" WF="133120" Analog="true" LinkRefType="87">
 					<Co K="AI" Nc="1" U="216c9238-00dd-1809-00ff9994dfbd979c">
 						<In Input="216c9221-0110-09a7-00ff57866765b55a"/>
 					</Co>
@@ -1921,7 +1921,7 @@
 					<Co K="AQ" U="216c9238-00dd-180b-02ff9994dfbd979c"/>
 					<Co K="Q" U="216c9238-00dd-180c-03ff9994dfbd979c"/>
 				</C>
-				<C Type="InputRef" V="178" U="216c9240-03a8-1ce4-ffffe001fe9bf86f" Title="FW_ALTER" Px="1920" Py="7680" Px2="4032" Py2="7872" Cl="0,0,0" Nio="4" Ref="216c9221-0113-09c9-ffffe001fe9bf86f" WF="133120" Analog="true" LinkRefType="87">
+				<C Type="InputRef" V="178" U="216c9240-03a8-1ce4-ffffe001fe9bf86f" Title="FW_ALTER" Px="2592" Py="6144" Px2="4704" Py2="6336" Cl="0,0,0" Nio="4" Ref="216c9221-0113-09c9-ffffe001fe9bf86f" WF="133120" Analog="true" LinkRefType="87">
 					<Co K="AI" Nc="1" U="216c9240-03a8-1ce0-00ff34c3e3493aac">
 						<In Input="216c9221-0113-09c7-00ff57866765b55a"/>
 					</Co>
@@ -1931,7 +1931,7 @@
 					<Co K="AQ" U="216c9240-03a8-1ce2-02ff34c3e3493aac"/>
 					<Co K="Q" U="216c9240-03a8-1ce3-03ff34c3e3493aac"/>
 				</C>
-				<C Type="InputRef" V="178" U="216c924b-0176-21c2-ffffe001fe9bf86f" Title="FW_ALARM" Px="1920" Py="5568" Px2="4032" Py2="5760" Cl="0,0,0" Nio="4" Ref="216c9221-0113-09b9-ffffe001fe9bf86f" WF="133120" Analog="true" LinkRefType="87">
+				<C Type="InputRef" V="178" U="216c924b-0176-21c2-ffffe001fe9bf86f" Title="FW_ALARM" Px="1728" Py="5184" Px2="3840" Py2="5376" Cl="0,0,0" Nio="4" Ref="216c9221-0113-09b9-ffffe001fe9bf86f" WF="133120" Analog="true" LinkRefType="87">
 					<Co K="AI" Nc="1" U="216c924b-0176-21be-00ff5048384f02ee">
 						<In Input="216c9221-0113-09b7-00ff57866765b55a"/>
 					</Co>
@@ -1959,7 +1959,7 @@
 					<Display Unit="&lt;v.pr&gt;"/>
 					<StateTexts></StateTexts>
 				</C>
-				<C Type="State" V="178" U="216c9265-022b-354c-ffffe001fe9bf86f" Title="Funkwacht Alarm" Px="4800" Py="5568" Px2="7488" Py2="6456" Cl="141,255,112" Nio="11" LtE="560763494">
+				<C Type="State" V="178" U="216c9265-022b-354c-ffffe001fe9bf86f" Title="Funkwacht Alarm" Px="4608" Py="4704" Px2="7296" Py2="5592" Cl="141,255,112" Nio="11" LtE="560763494">
 					<Co K="I1" Nc="1" U="216c9265-022b-3541-00ff714e7ade6855">
 						<In Input="216c924b-0176-21c0-02ff5048384f02ee"/>
 					</Co>
@@ -1977,7 +1977,7 @@
 					<Display Unit="&lt;v.pr&gt;"/>
 					<StateTexts></StateTexts>
 				</C>
-				<C Type="AnalogComparator" V="178" U="216c9273-030f-3f2c-ffffe001fe9bf86f" Title="Ein Stick gestört" Px="4800" Py="3552" Px2="6144" Py2="4440" Cl="141,255,112" Nio="5" LtE="560763523">
+				<C Type="AnalogComparator" V="178" U="216c9273-030f-3f2c-ffffe001fe9bf86f" Title="Ein Stick gestört" Px="5952" Py="3648" Px2="7296" Py2="4536" Cl="141,255,112" Nio="5" LtE="560763523">
 					<Co K="Input1" Nc="1" U="216c9273-030f-3f27-00ffebf3d27a24f3">
 						<In Input="216c9238-00dd-180b-02ff9994dfbd979c"/>
 					</Co>
@@ -1986,7 +1986,7 @@
 					<Co K="Off" Def="1" U="216c9273-030f-3f2a-03ffebf3d27a24f3"/>
 					<Co K="Q" U="216c9273-030f-3f2b-04ffebf3d27a24f3"/>
 				</C>
-				<C Type="AnalogComparator" V="178" U="216c9287-01f6-4dfb-ffffe001fe9bf86f" Title="Wächter selbst tot" Px="4800" Py="7680" Px2="6144" Py2="8568" Cl="141,255,112" Nio="5" LtE="560763530">
+				<C Type="AnalogComparator" V="178" U="216c9287-01f6-4dfb-ffffe001fe9bf86f" Title="Wächter selbst tot" Px="5952" Py="5856" Px2="7296" Py2="6744" Cl="141,255,112" Nio="5" LtE="560763530" WF="131072">
 					<Co K="Input1" Nc="1" U="216c9287-01f6-4df6-00ffa49779d52c98">
 						<In Input="216c9240-03a8-1ce2-02ff34c3e3493aac"/>
 					</Co>
@@ -2004,7 +2004,7 @@
 					</Co>
 					<Co K="Q" U="216c928e-00bb-57e6-02ffa30f67f825f1"/>
 				</C>
-				<C Type="Or" V="178" U="216c9294-0368-61db-ffffe001fe9bf86f" Title="Sammelstörung Funkwacht" Px="8352" Py="7008" Px2="9696" Py2="7704" Cl="141,255,112" Nio="3" LtE="560763549">
+				<C Type="Or" V="178" U="216c9294-0368-61db-ffffe001fe9bf86f" Title="Sammelstörung Funkwacht" Px="11808" Py="5664" Px2="13152" Py2="6360" Cl="141,255,112" Nio="3" LtE="560763549">
 					<Co K="I1" Nc="1" U="216c9294-0368-61d8-00ff0617930626cb">
 						<In Input="216c928e-00bb-57e6-02ffa30f67f825f1"/>
 					</Co>
@@ -2013,7 +2013,7 @@
 					</Co>
 					<Co K="Q" U="216c9294-0368-61da-02ff0617930626cb"/>
 				</C>
-				<C Type="OutputRefLM" V="178" U="216c92af-00dc-75cb-ffffe001fe9bf86f" Title="Meldung Funkwacht" Px="9984" Py="8928" Px2="12096" Py2="9120" Cl="0,0,0" Nio="2" Ref="216c92a4-02b4-6bcf-ffffe001fe9bf86f" WF="131072">
+				<C Type="OutputRefLM" V="178" U="216c92af-00dc-75cb-ffffe001fe9bf86f" Title="Meldung Funkwacht" Px="14112" Py="5952" Px2="16224" Py2="6144" Cl="0,0,0" Nio="2" Ref="216c92a4-02b4-6bcf-ffffe001fe9bf86f" WF="131072">
 					<Co K="AI" Nc="1" U="216c92af-00dc-75c9-00ff01f260463204">
 						<In Input="216c9294-0368-61da-02ff0617930626cb"/>
 					</Co>
@@ -2023,7 +2023,7 @@
 			</C>
 			<C Type="Page" V="178" U="216c9048-01df-3dbb-ffffe001fe9bf86f" Title="Pumpenwacht" LtE="560762956" WF="16384">
 				<IoData Cr="216373ab-00cf-42fc-ffffe001fe9bf86f" Pr="216373ab-00cf-42f8-ffffe001fe9bf86f"/>
-				<C Type="InputRef" V="178" U="216c9079-00f9-4eb5-ffffe001fe9bf86f" Title="pumpe_status_zaehler" Px="1920" Py="7392" Px2="4032" Py2="7584" Cl="0,0,0" Nio="4" Ref="216c9066-0371-4619-ffffe001fe9bf86f" WF="133120" Analog="true" LinkRefType="87">
+				<C Type="InputRef" V="178" U="216c9079-00f9-4eb5-ffffe001fe9bf86f" Title="pumpe_status_zaehler" Px="1056" Py="7680" Px2="3168" Py2="7872" Cl="0,0,0" Nio="4" Ref="216c9066-0371-4619-ffffe001fe9bf86f" WF="133120" Analog="true" LinkRefType="87">
 					<Co K="AI" Nc="1" U="216c9079-00f9-4eb1-00ff1cb1c7b35570">
 						<In Input="216c9066-0371-4617-00ff27f06644d7ce"/>
 					</Co>
@@ -2033,7 +2033,7 @@
 					<Co K="AQ" U="216c9079-00f9-4eb3-02ff1cb1c7b35570"/>
 					<Co K="Q" U="216c9079-00f9-4eb4-03ff1cb1c7b35570"/>
 				</C>
-				<C Type="InputRef" V="178" U="216c908c-027d-5bca-ffffe001fe9bf86f" Title="pumpe_sperre" Px="1920" Py="1440" Px2="4032" Py2="1632" Cl="0,0,0" Nio="4" Ref="216c9066-0357-45c9-ffffe001fe9bf86f" WF="133120" Analog="true" LinkRefType="87">
+				<C Type="InputRef" V="178" U="216c908c-027d-5bca-ffffe001fe9bf86f" Title="pumpe_sperre" Px="4224" Py="6720" Px2="6336" Py2="6912" Cl="0,0,0" Nio="4" Ref="216c9066-0357-45c9-ffffe001fe9bf86f" WF="133120" Analog="true" LinkRefType="87">
 					<Co K="AI" Nc="1" U="216c908c-0277-5bc6-00ff20f7e2007750">
 						<In Input="216c9066-0357-45c7-00ff27f06644d7ce"/>
 					</Co>
@@ -2043,7 +2043,7 @@
 					<Co K="AQ" U="216c908c-0277-5bc8-02ff20f7e2007750"/>
 					<Co K="Q" U="216c908c-0277-5bc9-03ff20f7e2007750"/>
 				</C>
-				<C Type="InputRef" V="178" U="216c9093-0147-6033-ffffe001fe9bf86f" Title="pumpe_befund" Px="1920" Py="4608" Px2="4032" Py2="4800" Cl="0,0,0" Nio="4" Ref="216c9066-0357-45c1-ffffe001fe9bf86f" WF="133120" Analog="true" LinkRefType="87">
+				<C Type="InputRef" V="178" U="216c9093-0147-6033-ffffe001fe9bf86f" Title="pumpe_befund" Px="4416" Py="9312" Px2="6528" Py2="9504" Cl="0,0,0" Nio="4" Ref="216c9066-0357-45c1-ffffe001fe9bf86f" WF="133120" Analog="true" LinkRefType="87">
 					<Co K="AI" Nc="1" U="216c9093-0147-602f-00ff2864292150ae">
 						<In Input="216c9066-0357-45bf-00ff27f06644d7ce"/>
 					</Co>
@@ -2053,7 +2053,7 @@
 					<Co K="AQ" U="216c9093-0147-6031-02ff2864292150ae"/>
 					<Co K="Q" U="216c9093-0147-6032-03ff2864292150ae"/>
 				</C>
-				<C Type="InputRef" V="178" U="216c919d-0311-e9a3-ffffe001fe9bf86f" Title="Konstante 1" Px="11136" Py="10656" Px2="13248" Py2="10848" Cl="0,0,0" Nio="4" Ref="216c8f88-0096-1e34-ffffe001fe9bf86f" WF="133120" Analog="true" LinkRefType="17">
+				<C Type="InputRef" V="178" U="216c919d-0311-e9a3-ffffe001fe9bf86f" Title="Konstante 1" Px="1056" Py="7872" Px2="3168" Py2="8064" Cl="0,0,0" Nio="4" Ref="216c8f88-0096-1e34-ffffe001fe9bf86f" WF="133120" Analog="true" LinkRefType="17">
 					<Co K="AI" Nc="1" U="216c919d-0311-e99f-00ff992bd71b286a">
 						<In Input="216c8f88-0096-1e33-00ff13c84b8d596b"/>
 					</Co>
@@ -2061,7 +2061,7 @@
 					<Co K="AQ" U="216c919d-0311-e9a1-02ff992bd71b286a"/>
 					<Co K="Q" U="216c919d-0311-e9a2-03ff992bd71b286a"/>
 				</C>
-				<C Type="AnalogThresholdTrigger" V="178" U="216c90cc-0092-68fd-ffffe001fe9bf86f" Title="Pumpe sperren" Px="4512" Py="1344" Px2="5856" Py2="2232" Cl="141,255,112" Nio="8" LtE="560763107">
+				<C Type="AnalogThresholdTrigger" V="178" U="216c90cc-0092-68fd-ffffe001fe9bf86f" Title="Pumpe sperren" Px="7968" Py="4896" Px2="9312" Py2="5784" Cl="141,255,112" Nio="8" LtE="560763107">
 					<Co K="Input" Nc="1" U="216c90cc-0092-68f5-00ff618fa91b777f">
 						<In Input="216c908c-0277-5bc8-02ff20f7e2007750"/>
 					</Co>
@@ -2087,7 +2087,7 @@
 					<Co K="outval" U="216c9138-038f-993e-06ff26dbf0c20d18"/>
 					<Co K="error" U="216c9138-038f-993f-07ff26dbf0c20d18"/>
 				</C>
-				<C Type="Not" V="178" U="216c915a-007a-b82e-ffffe001fe9bf86f" Title="Steckdose freigeben" Px="8064" Py="1440" Px2="9408" Py2="1944" Cl="141,255,112" Nio="2" LtE="560763227">
+				<C Type="Not" V="178" U="216c915a-007a-b82e-ffffe001fe9bf86f" Title="Steckdose freigeben" Px="10944" Py="4896" Px2="12288" Py2="5400" Cl="141,255,112" Nio="2" LtE="560763227">
 					<Co K="I" Nc="1" U="216c915a-007a-b82c-00fff1b1e61e637a">
 						<In Input="216c90cc-0092-68fa-05ff618fa91b777f"/>
 					</Co>
@@ -2102,7 +2102,7 @@
 					</Co>
 					<Co K="Q" U="216c9160-03bd-c111-02ffa2ce432725dc"/>
 				</C>
-				<C Type="State" V="178" U="216c9170-007f-ca0e-ffffe001fe9bf86f" Title="Befund als Text" Px="4800" Py="4608" Px2="7488" Py2="5496" Cl="141,255,112" Nio="11" LtE="560763254">
+				<C Type="State" V="178" U="216c9170-007f-ca0e-ffffe001fe9bf86f" Title="Befund als Text" Px="7296" Py="8832" Px2="9984" Py2="9720" Cl="141,255,112" Nio="11" LtE="560763254">
 					<Co K="I1" Nc="1" U="216c9170-007f-ca03-00ff9e152cdf900f">
 						<In Input="216c9093-0147-6031-02ff2864292150ae"/>
 					</Co>
@@ -2120,7 +2120,7 @@
 					<Display Unit="&lt;v.pr&gt;"/>
 					<StateTexts></StateTexts>
 				</C>
-				<C Type="OutputRefLM" V="178" U="216c918e-02fc-e094-ffffe001fe9bf86f" Title="Pumpe meldet sich" Px="9600" Py="8640" Px2="11712" Py2="8832" Cl="0,0,0" Nio="2" Ref="216c9180-01f8-d312-ffffe001fe9bf86f" WF="131072">
+				<C Type="OutputRefLM" V="178" U="216c918e-02fc-e094-ffffe001fe9bf86f" Title="Pumpe meldet sich" Px="10752" Py="6720" Px2="12864" Py2="6912" Cl="0,0,0" Nio="2" Ref="216c9180-01f8-d312-ffffe001fe9bf86f" WF="131072">
 					<Co K="AI" Nc="1" U="216c918e-02fc-e092-00ff0e8e089efcef">
 						<In Input="216c9160-03bd-c111-02ffa2ce432725dc"/>
 					</Co>
@@ -2130,7 +2130,7 @@
 			</C>
 			<C Type="Page" V="178" U="216c8eab-0188-be05-ffffe001fe9bf86f" Title="Zigbee2MqttNG" LtE="560762556" WF="16384">
 				<IoData Cr="216373ab-00cf-42fc-ffffe001fe9bf86f" Pr="216373ab-00cf-42f8-ffffe001fe9bf86f"/>
-				<C Type="InputRef" V="178" U="216c8ef9-01a5-cd13-ffffe001fe9bf86f" Title="zigbee2mqtt_zigbee2mqttng_zaehler" Px="1920" Py="1440" Px2="4032" Py2="1632" Cl="0,0,0" Nio="4" Ref="216c8ee6-0120-c57f-ffffe001fe9bf86f" WF="133120" Analog="true" LinkRefType="87">
+				<C Type="InputRef" V="178" U="216c8ef9-01a5-cd13-ffffe001fe9bf86f" Title="zigbee2mqtt_zigbee2mqttng_zaehler" Px="2016" Py="1728" Px2="4128" Py2="1920" Cl="0,0,0" Nio="4" Ref="216c8ee6-0120-c57f-ffffe001fe9bf86f" WF="133120" Analog="true" LinkRefType="87">
 					<Co K="AI" Nc="1" U="216c8ef9-01a5-cd0f-00ff923369eca4a6">
 						<In Input="216c8ee6-0120-c57d-00ff86b051c166cb"/>
 					</Co>
@@ -2140,7 +2140,7 @@
 					<Co K="AQ" U="216c8ef9-01a5-cd11-02ff923369eca4a6"/>
 					<Co K="Q" U="216c8ef9-01a5-cd12-03ff923369eca4a6"/>
 				</C>
-				<C Type="InputRef" V="178" U="216c8efc-0003-d0ef-ffffe001fe9bf86f" Title="zigbee2mqtt_Wohnzimmer_Sensor_erreichbar" Px="1920" Py="4992" Px2="4032" Py2="5184" Cl="0,0,0" Nio="4" Ref="216c8ee6-0120-c583-ffffe001fe9bf86f" WF="133120" Analog="true" LinkRefType="87">
+				<C Type="InputRef" V="178" U="216c8efc-0003-d0ef-ffffe001fe9bf86f" Title="zigbee2mqtt_Wohnzimmer_Sensor_erreichbar" Px="2208" Py="2688" Px2="4320" Py2="2880" Cl="0,0,0" Nio="4" Ref="216c8ee6-0120-c583-ffffe001fe9bf86f" WF="133120" Analog="true" LinkRefType="87">
 					<Co K="AI" Nc="1" U="216c8efc-0003-d0eb-00ffb2f24b616d4b">
 						<In Input="216c8ee6-0120-c581-00ff86b051c166cb"/>
 					</Co>
@@ -2150,7 +2150,7 @@
 					<Co K="AQ" U="216c8efc-0003-d0ed-02ffb2f24b616d4b"/>
 					<Co K="Q" U="216c8efc-0003-d0ee-03ffb2f24b616d4b"/>
 				</C>
-				<C Type="InputRef" V="178" U="216c8f93-0003-29f6-ffffe001fe9bf86f" Title="Konstante 1" Px="9696" Py="8640" Px2="11808" Py2="8832" Cl="0,0,0" Nio="4" Ref="216c8f88-0096-1e34-ffffe001fe9bf86f" WF="133120" Analog="true" LinkRefType="17">
+				<C Type="InputRef" V="178" U="216c8f93-0003-29f6-ffffe001fe9bf86f" Title="Konstante 1" Px="2016" Py="1920" Px2="4128" Py2="2112" Cl="0,0,0" Nio="4" Ref="216c8f88-0096-1e34-ffffe001fe9bf86f" WF="133120" Analog="true" LinkRefType="17">
 					<Co K="AI" Nc="1" U="216c8f93-0003-29f2-00ffe346e9cb347c">
 						<In Input="216c8f88-0096-1e33-00ff13c84b8d596b"/>
 					</Co>
@@ -2158,7 +2158,7 @@
 					<Co K="AQ" U="216c8f93-0003-29f4-02ffe346e9cb347c"/>
 					<Co K="Q" U="216c8f93-0003-29f5-03ffe346e9cb347c"/>
 				</C>
-				<C Type="Validator" V="178" U="216c8f11-01a9-d89f-ffffe001fe9bf86f" Title="Zigbee2MqttNG schweigt" Px="4800" Py="1440" Px2="6144" Py2="2328" Cl="141,255,112" Nio="8" LtE="560762650">
+				<C Type="Validator" V="178" U="216c8f11-01a9-d89f-ffffe001fe9bf86f" Title="Zigbee2MqttNG schweigt" Px="5088" Py="1440" Px2="6432" Py2="2328" Cl="141,255,112" Nio="8" LtE="560762650">
 					<Co K="inval" Nc="1" U="216c8f11-01a9-d897-00ffd8985c36a70a">
 						<In Input="216c8ef9-01a5-cd11-02ff923369eca4a6"/>
 					</Co>
@@ -2172,7 +2172,7 @@
 					<Co K="outval" U="216c8f11-01a9-d89d-06ffd8985c36a70a"/>
 					<Co K="error" U="216c8f11-01a9-d89e-07ffd8985c36a70a"/>
 				</C>
-				<C Type="Not" V="178" U="216c8f2f-00fa-ef9f-ffffe001fe9bf86f" Title="Zigbee-Gerät fehlt" Px="4800" Py="4992" Px2="6144" Py2="5496" Cl="141,255,112" Nio="2" LtE="560762694">
+				<C Type="Not" V="178" U="216c8f2f-00fa-ef9f-ffffe001fe9bf86f" Title="Zigbee-Gerät fehlt" Px="5088" Py="2400" Px2="6432" Py2="2904" Cl="141,255,112" Nio="2" LtE="560762694">
 					<Co K="I" Nc="1" U="216c8f2f-00fa-ef9d-00fff3b389f84c1a">
 						<In Input="216c8efc-0003-d0ed-02ffb2f24b616d4b"/>
 					</Co>
@@ -2187,7 +2187,7 @@
 					</Co>
 					<Co K="Q" U="216c8f35-0362-f37f-02ff435280175c1d"/>
 				</C>
-				<C Type="OnDelay" V="178" U="216c8f4e-0135-02fa-ffffe001fe9bf86f" Title="Zigbee-Störung bestätigt" Px="7584" Py="4992" Px2="8928" Py2="5688" Cl="141,255,112" Nio="5" LtE="560762710">
+				<C Type="OnDelay" V="178" U="216c8f4e-0135-02fa-ffffe001fe9bf86f" Title="Zigbee-Störung bestätigt" Px="10080" Py="2208" Px2="11424" Py2="2904" Cl="141,255,112" Nio="5" LtE="560762710">
 					<Co K="InputTrigger" Nc="1" U="216c8f4e-0135-02f5-00ff5eef23006ec3">
 						<In Input="216c8f35-0362-f37f-02ff435280175c1d"/>
 					</Co>
@@ -2196,7 +2196,7 @@
 					<Co K="Time" Def="300" U="216c8f4e-0135-02f8-03ff5eef23006ec3"/>
 					<Co K="Q" U="216c8f4e-0135-02f9-04ff5eef23006ec3"/>
 				</C>
-				<C Type="OutputRefLM" V="178" U="216c8f7c-0043-1a4c-ffffe001fe9bf86f" Title="Meldung Zigbee gestört" Px="8928" Py="7392" Px2="11040" Py2="7584" Cl="0,0,0" Nio="2" Ref="216c8f71-026b-1280-ffffe001fe9bf86f" WF="131072">
+				<C Type="OutputRefLM" V="178" U="216c8f7c-0043-1a4c-ffffe001fe9bf86f" Title="Meldung Zigbee gestört" Px="12576" Py="2496" Px2="14688" Py2="2688" Cl="0,0,0" Nio="2" Ref="216c8f71-026b-1280-ffffe001fe9bf86f" WF="131072">
 					<Co K="AI" Nc="1" U="216c8f7c-0043-1a4a-00ffdcd4b6615da1">
 						<In Input="216c8f4e-0135-02f9-04ff5eef23006ec3"/>
 					</Co>
