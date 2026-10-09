@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<VirtualInHttp HintText="" Title="Kodi Zustand" Comment="Erzeugt vom LoxBerry-Plugin Kodi NG. Werte kommen vom MQTT-Gateway. Gateway V1: Abo kodi/# eintragen. Gateway V2: in den Abonnements die Datenpunkte anhaken, einzutragen ist nichts. Loxone Config legt beim Import neu an und überschreibt nichts - zweimal eingelesen ergibt doppelte Bausteine." Address="http://localhost" PollingTime="604800">
+	<Info templateType="2" minVersion="17010727"/>
+	<VirtualInHttpCmd Title="kodi_dienst" Comment="Kodi: Dienst läuft" Check=" " Signed="false" Analog="true" SourceValLow="0" DestValLow="0" SourceValHigh="1" DestValHigh="1" DefVal="0" MinVal="0" MaxVal="1" Unit="&lt;v.0&gt;" HintText=""/>
+	<VirtualInHttpCmd Title="kodi_autostart" Comment="Kodi: Autostart ein" Check=" " Signed="false" Analog="true" SourceValLow="0" DestValLow="0" SourceValHigh="1" DestValHigh="1" DefVal="0" MinVal="0" MaxVal="1" Unit="&lt;v.0&gt;" HintText=""/>
+	<VirtualInHttpCmd Title="kodi_zeitstempel" Comment="Kodi: Zeitpunkt der letzten Meldung" Check=" " Signed="false" Analog="true" SourceValLow="0" DestValLow="0" SourceValHigh="1" DestValHigh="1" DefVal="0" MinVal="0" MaxVal="2147483647" Unit="&lt;v.0&gt;" HintText=""/>
+	<VirtualInHttpCmd Title="kodi_herzschlag" Comment="Kodi: Herzschlag des Statussenders" Check=" " Signed="false" Analog="true" SourceValLow="0" DestValLow="0" SourceValHigh="1" DestValHigh="1" DefVal="0" MinVal="0" MaxVal="2147483647" Unit="&lt;v.0&gt;" HintText=""/>
+	<VirtualInHttpCmd Title="kodi_status_ok" Comment="Kodi: Statussender hat gemessen" Check=" " Signed="false" Analog="true" SourceValLow="0" DestValLow="0" SourceValHigh="1" DestValHigh="1" DefVal="0" MinVal="0" MaxVal="1" Unit="&lt;v.0&gt;" HintText=""/>
+</VirtualInHttp>
