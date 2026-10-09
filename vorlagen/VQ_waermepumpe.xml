@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<VirtualOut Title="Wärmepumpe SG Ready" Comment="Erzeugt vom LoxBerry-Plugin Wärmepumpe Cloud. Je Zustand ein Ausgang - immer nur einen gleichzeitig auf 1 setzen." Address="http://loxberry" CloseAfterSend="true" CmdSep="">
+	<VirtualOutCmd Title="WP_SGREADY_1" Comment="Sperre" CmdOnMethod="GET" CmdOffMethod="GET" CmdOn="http://loxberry/plugins/waermepumpe/index.php?token=DEIN_TOKEN&amp;aktion=sgready&amp;stufe=1" CmdOff="" Analog="false"/>
+	<VirtualOutCmd Title="WP_SGREADY_2" Comment="Normalbetrieb" CmdOnMethod="GET" CmdOffMethod="GET" CmdOn="http://loxberry/plugins/waermepumpe/index.php?token=DEIN_TOKEN&amp;aktion=sgready&amp;stufe=2" CmdOff="" Analog="false"/>
+	<VirtualOutCmd Title="WP_SGREADY_3" Comment="Einschaltempfehlung" CmdOnMethod="GET" CmdOffMethod="GET" CmdOn="http://loxberry/plugins/waermepumpe/index.php?token=DEIN_TOKEN&amp;aktion=sgready&amp;stufe=3" CmdOff="" Analog="false"/>
+	<VirtualOutCmd Title="WP_SGREADY_4" Comment="Anlaufbefehl" CmdOnMethod="GET" CmdOffMethod="GET" CmdOn="http://loxberry/plugins/waermepumpe/index.php?token=DEIN_TOKEN&amp;aktion=sgready&amp;stufe=4" CmdOff="" Analog="false"/>
+</VirtualOut>

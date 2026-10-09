@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<ControlList Version="274" LxAV="87" NextObj="128" NextConst="1" NextNote="1" NextMem="3">
-	<C Type="Document" V="17020828" U="216373ab-00cc-41fa-ffffe001fe9bf86f" Title="LoxBerry-Plugins Musterprojekt" ConfigVersion="17020828" PaperFormat="2" SPSfreq="100" OpenIsHigh="false" Date="2026-10-09 15:18:33" CDate="" BDate="" DateS="560783913" Street="" Town="" PostCode="" Ctry="" Latitude="0.000" Longitude="0.000" Timezone="Europe/Vienna" Timeserver="" Logo="" uuidNotifications="216373ab-00cb-41f6-ffffe001fe9bf86f" uuidFavSeq="216373ab-00cb-41f8-ffffe001fe9bf86f" uuidFavCol="216373ab-00cb-41f9-ffffe001fe9bf86f" FC="hsv(25,96,50);hsv(24,95,80);hsv(337,94,50)" uuidTime="216373ab-00cb-41f7-ffffe001fe9bf86f" UnitPrecipitation="1" Currency="€" UpdTime="120" AUE="true" DeviceTelemetry="true" CrashL="true" Geo="0" NumO="681" APPKEY="717BCB5938494F35EA25202FC850B65F" APPID="227A0B">
+<ControlList Version="274" LxAV="87" NextObj="170" NextConst="1" NextNote="1" NextMem="3">
+	<C Type="Document" V="17020828" U="216373ab-00cc-41fa-ffffe001fe9bf86f" Title="LoxBerry-Plugins Musterprojekt" ConfigVersion="17020828" PaperFormat="2" SPSfreq="100" OpenIsHigh="false" Date="2026-10-09 16:26:09" CDate="" BDate="" DateS="560787969" Street="" Town="" PostCode="" Ctry="" Latitude="0.000" Longitude="0.000" Timezone="Europe/Vienna" Timeserver="" Logo="" uuidNotifications="216373ab-00cb-41f6-ffffe001fe9bf86f" uuidFavSeq="216373ab-00cb-41f8-ffffe001fe9bf86f" uuidFavCol="216373ab-00cb-41f9-ffffe001fe9bf86f" FC="hsv(25,96,50);hsv(24,95,80);hsv(337,94,50)" uuidTime="216373ab-00cb-41f7-ffffe001fe9bf86f" UnitPrecipitation="1" Currency="€" UpdTime="120" AUE="true" DeviceTelemetry="true" CrashL="true" Geo="0" NumO="936" APPKEY="717BCB5938494F35EA25202FC850B65F" APPID="227A0B">
 		<HP H="" Sc="-2" S="WGpiqX5LbyaIrGD1MuWTTyrxvlVqUpqf" Alg="1"/>
 		<C Type="LoxCaption" V="178" U="216373ab-00cd-41fc-ffffe001fe9bf86f" Title="Symbole" Cl="0,0,0" WF="16384" CaptionType="5" SubType="5"/>
 		<C Type="CategoryCaption" V="178" U="216373ab-00cd-41fe-ffffe001fe9bf86f" Title="Kategorien" WF="16384">
@@ -1869,6 +1869,933 @@
 						<Display Type="2" Unit="&lt;v.1&gt;" StateOnly="true"/>
 					</C>
 				</C>
+				<C Type="VirtualHttpIn" Desc="EVCC" IName="VHI13" V="178" U="216ceb2c-014b-6e03-ffffe001fe9bf86f" Title="EVCC" Cl="0,0,0" WF="16384" Address="http://loxberry/plugins/evcc/index.php?token=DEIN_TOKEN&amp;aktion=status" Poll="30" Timeout="4000" Allowedtimeouts="10" on="true">
+					<C Type="Online" IName="S0" V="178" U="216ceb2c-015a-6e06-ffffe001fe9bf86f" Title="Onlinestatus Eingang VHI1" Cl="0,0,0" Nio="1" WF="20480" ValOT="1" MinTime="10" NoMsg="true" Idx="-1">
+						<Co K="Q" U="216ceb2c-015a-6e05-00ffd96d0b8e9d97"/>
+						<IoData Cr="216373ab-00d3-432c-ffffe001fe9bf86f" Pr="216373ab-00ce-42f4-ffffe001fe9bf86f" St="2"/>
+						<Display Unit="&lt;v&gt;" StateOnly="true" IxText="8"/>
+					</C>
+					<C Type="VirtualHttpInCmd" Desc="Netzleistung" IName="VCI190" V="178" U="216ceb2c-015c-6e0a-ffffe001fe9bf86f" Title="EVCC_NETZ_KW" Cl="238,238,238" Nio="2" WF="16400" ValOT="1" Check="\i;NETZ_KW=\i\v" Signed="true" Analog="true" SourceValHigh="1" DestValHigh="1" MinVal="-100" MaxVal="100">
+						<Co K="AQ" U="216ceb2c-015c-6e08-00ffd96d0b8e9d97"/>
+						<Co K="Q" U="216ceb2c-015c-6e09-01ffd96d0b8e9d97"/>
+						<IoData Cr="216373ab-00cf-42fc-ffffe001fe9bf86f" Pr="216373ab-00cf-42f8-ffffe001fe9bf86f"/>
+						<Display Type="2" Unit="&lt;v.1&gt; kW" StateOnly="true"/>
+					</C>
+					<C Type="VirtualHttpInCmd" Desc="PV-Erzeugung" IName="VCI191" V="178" U="216ceb2c-015c-6e0e-ffffe001fe9bf86f" Title="EVCC_PV_KW" Cl="238,238,238" Nio="2" WF="16400" ValOT="1" Check="\i;PV_KW=\i\v" Analog="true" SourceValHigh="1" DestValHigh="1" MaxVal="100">
+						<Co K="AQ" U="216ceb2c-015c-6e0c-00ffd96d0b8e9d97"/>
+						<Co K="Q" U="216ceb2c-015c-6e0d-01ffd96d0b8e9d97"/>
+						<IoData Cr="216373ab-00cf-42fc-ffffe001fe9bf86f" Pr="216373ab-00cf-42f8-ffffe001fe9bf86f"/>
+						<Display Type="2" Unit="&lt;v.1&gt; kW" StateOnly="true"/>
+					</C>
+					<C Type="VirtualHttpInCmd" Desc="Speicherleistung" IName="VCI192" V="178" U="216ceb2c-015c-6e12-ffffe001fe9bf86f" Title="EVCC_SPEICHER_KW" Cl="238,238,238" Nio="2" WF="16400" ValOT="1" Check="\i;SPEICHER_KW=\i\v" Signed="true" Analog="true" SourceValHigh="1" DestValHigh="1" MinVal="-100" MaxVal="100">
+						<Co K="AQ" U="216ceb2c-015c-6e10-00ffd96d0b8e9d97"/>
+						<Co K="Q" U="216ceb2c-015c-6e11-01ffd96d0b8e9d97"/>
+						<IoData Cr="216373ab-00cf-42fc-ffffe001fe9bf86f" Pr="216373ab-00cf-42f8-ffffe001fe9bf86f"/>
+						<Display Type="2" Unit="&lt;v.1&gt; kW" StateOnly="true"/>
+					</C>
+					<C Type="VirtualHttpInCmd" Desc="Ladestand des Hausspeichers" IName="VCI193" V="178" U="216ceb2c-015c-6e16-ffffe001fe9bf86f" Title="EVCC_SPEICHER_SOC" Cl="238,238,238" Nio="2" WF="16400" ValOT="1" Check="\i;SPEICHER_SOC=\i\v" Analog="true" SourceValHigh="1" DestValHigh="1" MaxVal="100">
+						<Co K="AQ" U="216ceb2c-015c-6e14-00ffd96d0b8e9d97"/>
+						<Co K="Q" U="216ceb2c-015c-6e15-01ffd96d0b8e9d97"/>
+						<IoData Cr="216373ab-00cf-42fc-ffffe001fe9bf86f" Pr="216373ab-00cf-42f8-ffffe001fe9bf86f"/>
+						<Display Type="2" Unit="&lt;v.1&gt; %" StateOnly="true"/>
+					</C>
+					<C Type="VirtualHttpInCmd" Desc="Hausverbrauch" IName="VCI194" V="178" U="216ceb2c-015c-6e1a-ffffe001fe9bf86f" Title="EVCC_HAUS_KW" Cl="0,0,0" Nio="2" WF="16384" ValOT="1" Check="\i;HAUS_KW=\i\v" Analog="true" SourceValHigh="1" DestValHigh="1" MaxVal="100">
+						<Co K="AQ" U="216ceb2c-015c-6e18-00ffd96d0b8e9d97"/>
+						<Co K="Q" U="216ceb2c-015c-6e19-01ffd96d0b8e9d97"/>
+						<IoData Cr="216373ab-00cf-42fc-ffffe001fe9bf86f" Pr="216373ab-00ce-42f4-ffffe001fe9bf86f"/>
+						<Display Type="2" Unit="&lt;v.1&gt; kW" StateOnly="true"/>
+					</C>
+					<C Type="VirtualHttpInCmd" Desc="Eigenanteil Hausverbrauch" IName="VCI195" V="178" U="216ceb2c-015c-6e1e-ffffe001fe9bf86f" Title="EVCC_GRUEN_HAUS" Cl="0,0,0" Nio="2" WF="16384" ValOT="1" Check="\i;GRUEN_HAUS=\i\v" Analog="true" SourceValHigh="1" DestValHigh="1" MaxVal="100">
+						<Co K="AQ" U="216ceb2c-015c-6e1c-00ffd96d0b8e9d97"/>
+						<Co K="Q" U="216ceb2c-015c-6e1d-01ffd96d0b8e9d97"/>
+						<IoData Cr="216373ab-00cf-42fc-ffffe001fe9bf86f" Pr="216373ab-00ce-42f4-ffffe001fe9bf86f"/>
+						<Display Type="2" Unit="&lt;v.1&gt; %" StateOnly="true"/>
+					</C>
+					<C Type="VirtualHttpInCmd" Desc="Eigenanteil Ladeverbrauch" IName="VCI196" V="178" U="216ceb2c-0167-6e22-ffffe001fe9bf86f" Title="EVCC_GRUEN_LADEN" Cl="0,0,0" Nio="2" WF="16384" ValOT="1" Check="\i;GRUEN_LADEN=\i\v" Analog="true" SourceValHigh="1" DestValHigh="1" MaxVal="100">
+						<Co K="AQ" U="216ceb2c-0167-6e20-00ffd96d0b8e9d97"/>
+						<Co K="Q" U="216ceb2c-0167-6e21-01ffd96d0b8e9d97"/>
+						<IoData Cr="216373ab-00cf-42fc-ffffe001fe9bf86f" Pr="216373ab-00ce-42f4-ffffe001fe9bf86f"/>
+						<Display Type="2" Unit="&lt;v.1&gt; %" StateOnly="true"/>
+					</C>
+					<C Type="VirtualHttpInCmd" Desc="Speicher wird aus dem Netz geladen" IName="VCI197" V="178" U="216ceb2c-016a-6e26-ffffe001fe9bf86f" Title="EVCC_NETZLADEN_AKTIV" Cl="0,0,0" Nio="2" WF="16384" ValOT="1" Check="\i;NETZLADEN_AKTIV=\i\v" SourceValHigh="1" DestValHigh="1" MaxVal="1">
+						<Co K="AQ" U="216ceb2c-016a-6e24-00ffd96d0b8e9d97"/>
+						<Co K="Q" U="216ceb2c-016a-6e25-01ffd96d0b8e9d97"/>
+						<IoData Cr="216373ab-00cf-42fc-ffffe001fe9bf86f" Pr="216373ab-00ce-42f4-ffffe001fe9bf86f"/>
+						<Display Type="2" Unit="&lt;v.1&gt;" StateOnly="true"/>
+					</C>
+					<C Type="VirtualHttpInCmd" Desc="Prioritäts-Ladestand des Speichers" IName="VCI198" V="178" U="216ceb2c-016c-6e2a-ffffe001fe9bf86f" Title="EVCC_PRIORITAETS_SOC" Cl="0,0,0" Nio="2" WF="16384" ValOT="1" Check="\i;PRIORITAETS_SOC=\i\v" Signed="true" Analog="true" SourceValHigh="1" DestValHigh="1" MinVal="-1" MaxVal="100">
+						<Co K="AQ" U="216ceb2c-016c-6e28-00ffd96d0b8e9d97"/>
+						<Co K="Q" U="216ceb2c-016c-6e29-01ffd96d0b8e9d97"/>
+						<IoData Cr="216373ab-00cf-42fc-ffffe001fe9bf86f" Pr="216373ab-00ce-42f4-ffffe001fe9bf86f"/>
+						<Display Type="2" Unit="&lt;v.1&gt; %" StateOnly="true"/>
+					</C>
+					<C Type="VirtualHttpInCmd" Desc="Puffer-Ladestand des Speichers" IName="VCI199" V="178" U="216ceb2c-016d-6e2e-ffffe001fe9bf86f" Title="EVCC_PUFFER_SOC" Cl="0,0,0" Nio="2" WF="16384" ValOT="1" Check="\i;PUFFER_SOC=\i\v" Signed="true" Analog="true" SourceValHigh="1" DestValHigh="1" MinVal="-1" MaxVal="100">
+						<Co K="AQ" U="216ceb2c-016d-6e2c-00ffd96d0b8e9d97"/>
+						<Co K="Q" U="216ceb2c-016d-6e2d-01ffd96d0b8e9d97"/>
+						<IoData Cr="216373ab-00cf-42fc-ffffe001fe9bf86f" Pr="216373ab-00ce-42f4-ffffe001fe9bf86f"/>
+						<Display Type="2" Unit="&lt;v.1&gt; %" StateOnly="true"/>
+					</C>
+					<C Type="VirtualHttpInCmd" Desc="Netztarif" IName="VCI200" V="178" U="216ceb2c-016f-6e32-ffffe001fe9bf86f" Title="EVCC_TARIF_NETZ" Cl="0,0,0" Nio="2" WF="16384" ValOT="1" Check="\i;TARIF_NETZ=\i\v" Signed="true" Analog="true" SourceValHigh="1" DestValHigh="1" MinVal="-10" MaxVal="10">
+						<Co K="AQ" U="216ceb2c-016f-6e30-00ffd96d0b8e9d97"/>
+						<Co K="Q" U="216ceb2c-016f-6e31-01ffd96d0b8e9d97"/>
+						<IoData Cr="216373ab-00cf-42fc-ffffe001fe9bf86f" Pr="216373ab-00ce-42f4-ffffe001fe9bf86f"/>
+						<Display Type="2" Unit="&lt;v.1&gt; /kWh" StateOnly="true"/>
+					</C>
+					<C Type="VirtualHttpInCmd" Desc="Einspeisevergütung" IName="VCI201" V="178" U="216ceb2c-0170-6e36-ffffe001fe9bf86f" Title="EVCC_TARIF_EINSPEISUNG" Cl="0,0,0" Nio="2" WF="16384" ValOT="1" Check="\i;TARIF_EINSPEISUNG=\i\v" Signed="true" Analog="true" SourceValHigh="1" DestValHigh="1" MinVal="-10" MaxVal="10">
+						<Co K="AQ" U="216ceb2c-0170-6e34-00ffd96d0b8e9d97"/>
+						<Co K="Q" U="216ceb2c-0170-6e35-01ffd96d0b8e9d97"/>
+						<IoData Cr="216373ab-00cf-42fc-ffffe001fe9bf86f" Pr="216373ab-00ce-42f4-ffffe001fe9bf86f"/>
+						<Display Type="2" Unit="&lt;v.1&gt; /kWh" StateOnly="true"/>
+					</C>
+					<C Type="VirtualHttpInCmd" Desc="CO₂-Intensität des Strommixes" IName="VCI202" V="178" U="216ceb2c-0172-6e3a-ffffe001fe9bf86f" Title="EVCC_TARIF_CO2" Cl="0,0,0" Nio="2" WF="16384" ValOT="1" Check="\i;TARIF_CO2=\i\v" Analog="true" SourceValHigh="1" DestValHigh="1" MaxVal="1000">
+						<Co K="AQ" U="216ceb2c-0172-6e38-00ffd96d0b8e9d97"/>
+						<Co K="Q" U="216ceb2c-0172-6e39-01ffd96d0b8e9d97"/>
+						<IoData Cr="216373ab-00cf-42fc-ffffe001fe9bf86f" Pr="216373ab-00ce-42f4-ffffe001fe9bf86f"/>
+						<Display Type="2" Unit="&lt;v.1&gt; g/kWh" StateOnly="true"/>
+					</C>
+					<C Type="VirtualHttpInCmd" Desc="Ladepunkt 1: Fahrzeug verbunden" IName="VCI203" V="178" U="216ceb2c-0173-6e3e-ffffe001fe9bf86f" Title="EVCC_LP1_VERBUNDEN" Cl="0,0,0" Nio="2" WF="16384" ValOT="1" Check="\i;LP1_VERBUNDEN=\i\v" SourceValHigh="1" DestValHigh="1" MaxVal="1">
+						<Co K="AQ" U="216ceb2c-0173-6e3c-00ffd96d0b8e9d97"/>
+						<Co K="Q" U="216ceb2c-0173-6e3d-01ffd96d0b8e9d97"/>
+						<IoData Cr="216373ab-00cf-42fc-ffffe001fe9bf86f" Pr="216373ab-00ce-42f4-ffffe001fe9bf86f"/>
+						<Display Type="2" Unit="&lt;v.1&gt;" StateOnly="true"/>
+					</C>
+					<C Type="VirtualHttpInCmd" Desc="Ladepunkt 1: lädt gerade" IName="VCI204" V="178" U="216ceb2c-0175-6e42-ffffe001fe9bf86f" Title="EVCC_LP1_LAEDT" Cl="238,238,238" Nio="2" WF="16400" ValOT="1" Check="\i;LP1_LAEDT=\i\v" SourceValHigh="1" DestValHigh="1" MaxVal="1">
+						<Co K="AQ" U="216ceb2c-0175-6e40-00ffd96d0b8e9d97"/>
+						<Co K="Q" U="216ceb2c-0175-6e41-01ffd96d0b8e9d97"/>
+						<IoData Cr="216373ab-00cf-42fc-ffffe001fe9bf86f" Pr="216373ab-00cf-42f8-ffffe001fe9bf86f"/>
+						<Display Type="2" Unit="&lt;v.1&gt;" StateOnly="true"/>
+					</C>
+					<C Type="VirtualHttpInCmd" Desc="Ladepunkt 1: freigegeben" IName="VCI205" V="178" U="216ceb2c-0178-6e46-ffffe001fe9bf86f" Title="EVCC_LP1_FREIGEGEBEN" Cl="0,0,0" Nio="2" WF="16384" ValOT="1" Check="\i;LP1_FREIGEGEBEN=\i\v" SourceValHigh="1" DestValHigh="1" MaxVal="1">
+						<Co K="AQ" U="216ceb2c-0178-6e44-00ffd96d0b8e9d97"/>
+						<Co K="Q" U="216ceb2c-0178-6e45-01ffd96d0b8e9d97"/>
+						<IoData Cr="216373ab-00cf-42fc-ffffe001fe9bf86f" Pr="216373ab-00ce-42f4-ffffe001fe9bf86f"/>
+						<Display Type="2" Unit="&lt;v.1&gt;" StateOnly="true"/>
+					</C>
+					<C Type="VirtualHttpInCmd" Desc="Ladepunkt 1: Ladeleistung" IName="VCI206" V="178" U="216ceb2c-017b-6e4a-ffffe001fe9bf86f" Title="EVCC_LP1_LEISTUNG_KW" Cl="238,238,238" Nio="2" WF="16400" ValOT="1" Check="\i;LP1_LEISTUNG_KW=\i\v" Analog="true" SourceValHigh="1" DestValHigh="1" MaxVal="50">
+						<Co K="AQ" U="216ceb2c-017b-6e48-00ffd96d0b8e9d97"/>
+						<Co K="Q" U="216ceb2c-017b-6e49-01ffd96d0b8e9d97"/>
+						<IoData Cr="216373ab-00cf-42fc-ffffe001fe9bf86f" Pr="216373ab-00cf-42f8-ffffe001fe9bf86f"/>
+						<Display Type="2" Unit="&lt;v.1&gt; kW" StateOnly="true"/>
+					</C>
+					<C Type="VirtualHttpInCmd" Desc="Ladepunkt 1: geladen in dieser Sitzung" IName="VCI207" V="178" U="216ceb2c-017d-6e4e-ffffe001fe9bf86f" Title="EVCC_LP1_GELADEN_KWH" Cl="0,0,0" Nio="2" WF="16384" ValOT="1" Check="\i;LP1_GELADEN_KWH=\i\v" Analog="true" SourceValHigh="1" DestValHigh="1" MaxVal="1000">
+						<Co K="AQ" U="216ceb2c-017d-6e4c-00ffd96d0b8e9d97"/>
+						<Co K="Q" U="216ceb2c-017d-6e4d-01ffd96d0b8e9d97"/>
+						<IoData Cr="216373ab-00cf-42fc-ffffe001fe9bf86f" Pr="216373ab-00ce-42f4-ffffe001fe9bf86f"/>
+						<Display Type="2" Unit="&lt;v.1&gt; kWh" StateOnly="true"/>
+					</C>
+					<C Type="VirtualHttpInCmd" Desc="Ladepunkt 1: verbleibende Ladedauer" IName="VCI208" V="178" U="216ceb2c-0180-6e52-ffffe001fe9bf86f" Title="EVCC_LP1_RESTZEIT_MIN" Cl="0,0,0" Nio="2" WF="16384" ValOT="1" Check="\i;LP1_RESTZEIT_MIN=\i\v" Analog="true" SourceValHigh="1" DestValHigh="1" MaxVal="6000">
+						<Co K="AQ" U="216ceb2c-0180-6e50-00ffd96d0b8e9d97"/>
+						<Co K="Q" U="216ceb2c-0180-6e51-01ffd96d0b8e9d97"/>
+						<IoData Cr="216373ab-00cf-42fc-ffffe001fe9bf86f" Pr="216373ab-00ce-42f4-ffffe001fe9bf86f"/>
+						<Display Type="2" Unit="&lt;v.1&gt; min" StateOnly="true"/>
+					</C>
+					<C Type="VirtualHttpInCmd" Desc="Ladepunkt 1: aktive Phasen" IName="VCI209" V="178" U="216ceb2c-0181-6e56-ffffe001fe9bf86f" Title="EVCC_LP1_PHASEN" Cl="0,0,0" Nio="2" WF="16384" ValOT="1" Check="\i;LP1_PHASEN=\i\v" Analog="true" SourceValHigh="1" DestValHigh="1" MaxVal="3">
+						<Co K="AQ" U="216ceb2c-0181-6e54-00ffd96d0b8e9d97"/>
+						<Co K="Q" U="216ceb2c-0181-6e55-01ffd96d0b8e9d97"/>
+						<IoData Cr="216373ab-00cf-42fc-ffffe001fe9bf86f" Pr="216373ab-00ce-42f4-ffffe001fe9bf86f"/>
+						<Display Type="2" Unit="&lt;v.1&gt;" StateOnly="true"/>
+					</C>
+					<C Type="VirtualHttpInCmd" Desc="Ladepunkt 1: Ladestand Fahrzeug" IName="VCI210" V="178" U="216ceb2c-0183-6e5a-ffffe001fe9bf86f" Title="EVCC_LP1_FAHRZEUG_SOC" Cl="238,238,238" Nio="2" WF="16400" ValOT="1" Check="\i;LP1_FAHRZEUG_SOC=\i\v" Analog="true" SourceValHigh="1" DestValHigh="1" MaxVal="100">
+						<Co K="AQ" U="216ceb2c-0183-6e58-00ffd96d0b8e9d97"/>
+						<Co K="Q" U="216ceb2c-0183-6e59-01ffd96d0b8e9d97"/>
+						<IoData Cr="216373ab-00cf-42fc-ffffe001fe9bf86f" Pr="216373ab-00cf-42f8-ffffe001fe9bf86f"/>
+						<Display Type="2" Unit="&lt;v.1&gt; %" StateOnly="true"/>
+					</C>
+					<C Type="VirtualHttpInCmd" Desc="Ladepunkt 1: Reichweite des Fahrzeugs" IName="VCI211" V="178" U="216ceb2c-0185-6e5e-ffffe001fe9bf86f" Title="EVCC_LP1_FAHRZEUG_KM" Cl="0,0,0" Nio="2" WF="16384" ValOT="1" Check="\i;LP1_FAHRZEUG_KM=\i\v" Analog="true" SourceValHigh="1" DestValHigh="1" MaxVal="2000">
+						<Co K="AQ" U="216ceb2c-0185-6e5c-00ffd96d0b8e9d97"/>
+						<Co K="Q" U="216ceb2c-0185-6e5d-01ffd96d0b8e9d97"/>
+						<IoData Cr="216373ab-00cf-42fc-ffffe001fe9bf86f" Pr="216373ab-00ce-42f4-ffffe001fe9bf86f"/>
+						<Display Type="2" Unit="&lt;v.1&gt; km" StateOnly="true"/>
+					</C>
+					<C Type="VirtualHttpInCmd" Desc="Ladepunkt 1: Solaranteil dieser Sitzung" IName="VCI212" V="178" U="216ceb2c-0188-6e62-ffffe001fe9bf86f" Title="EVCC_LP1_SOLARANTEIL" Cl="0,0,0" Nio="2" WF="16384" ValOT="1" Check="\i;LP1_SOLARANTEIL=\i\v" Analog="true" SourceValHigh="1" DestValHigh="1" MaxVal="100">
+						<Co K="AQ" U="216ceb2c-0188-6e60-00ffd96d0b8e9d97"/>
+						<Co K="Q" U="216ceb2c-0188-6e61-01ffd96d0b8e9d97"/>
+						<IoData Cr="216373ab-00cf-42fc-ffffe001fe9bf86f" Pr="216373ab-00ce-42f4-ffffe001fe9bf86f"/>
+						<Display Type="2" Unit="&lt;v.1&gt; %" StateOnly="true"/>
+					</C>
+					<C Type="VirtualHttpInCmd" Desc="Ladepunkt 1: Ladeplan aktiv" IName="VCI213" V="178" U="216ceb2c-0188-6e66-ffffe001fe9bf86f" Title="EVCC_LP1_PLAN_AKTIV" Cl="0,0,0" Nio="2" WF="16384" ValOT="1" Check="\i;LP1_PLAN_AKTIV=\i\v" SourceValHigh="1" DestValHigh="1" MaxVal="1">
+						<Co K="AQ" U="216ceb2c-0188-6e64-00ffd96d0b8e9d97"/>
+						<Co K="Q" U="216ceb2c-0188-6e65-01ffd96d0b8e9d97"/>
+						<IoData Cr="216373ab-00cf-42fc-ffffe001fe9bf86f" Pr="216373ab-00ce-42f4-ffffe001fe9bf86f"/>
+						<Display Type="2" Unit="&lt;v.1&gt;" StateOnly="true"/>
+					</C>
+					<C Type="VirtualHttpInCmd" Desc="Ladepunkt 1: günstiger Preis aktiv" IName="VCI214" V="178" U="216ceb2c-018e-6e6a-ffffe001fe9bf86f" Title="EVCC_LP1_SMARTCOST_AKTIV" Cl="0,0,0" Nio="2" WF="16384" ValOT="1" Check="\i;LP1_SMARTCOST_AKTIV=\i\v" SourceValHigh="1" DestValHigh="1" MaxVal="1">
+						<Co K="AQ" U="216ceb2c-018e-6e68-00ffd96d0b8e9d97"/>
+						<Co K="Q" U="216ceb2c-018e-6e69-01ffd96d0b8e9d97"/>
+						<IoData Cr="216373ab-00cf-42fc-ffffe001fe9bf86f" Pr="216373ab-00ce-42f4-ffffe001fe9bf86f"/>
+						<Display Type="2" Unit="&lt;v.1&gt;" StateOnly="true"/>
+					</C>
+					<C Type="VirtualHttpInCmd" Desc="Ladepunkt 1: Lademodus" IName="VCI215" V="178" U="216ceb2c-018e-6e6e-ffffe001fe9bf86f" Title="EVCC_LP1_MODUS_NR" Cl="0,0,0" Nio="2" WF="16384" ValOT="1" Check="\i;LP1_MODUS_NR=\i\v" Signed="true" Analog="true" SourceValHigh="1" DestValHigh="1" MinVal="-1" MaxVal="3">
+						<Co K="AQ" U="216ceb2c-018e-6e6c-00ffd96d0b8e9d97"/>
+						<Co K="Q" U="216ceb2c-018e-6e6d-01ffd96d0b8e9d97"/>
+						<IoData Cr="216373ab-00cf-42fc-ffffe001fe9bf86f" Pr="216373ab-00ce-42f4-ffffe001fe9bf86f"/>
+						<Display Type="2" Unit="&lt;v.1&gt;" StateOnly="true"/>
+					</C>
+					<C Type="VirtualHttpInCmd" Desc="Ladepunkt 1: Limit-Ladestand" IName="VCI216" V="178" U="216ceb2c-018e-6e72-ffffe001fe9bf86f" Title="EVCC_LP1_LIMIT_SOC" Cl="0,0,0" Nio="2" WF="16384" ValOT="1" Check="\i;LP1_LIMIT_SOC=\i\v" Signed="true" Analog="true" SourceValHigh="1" DestValHigh="1" MinVal="-1" MaxVal="100">
+						<Co K="AQ" U="216ceb2c-018e-6e70-00ffd96d0b8e9d97"/>
+						<Co K="Q" U="216ceb2c-018e-6e71-01ffd96d0b8e9d97"/>
+						<IoData Cr="216373ab-00cf-42fc-ffffe001fe9bf86f" Pr="216373ab-00ce-42f4-ffffe001fe9bf86f"/>
+						<Display Type="2" Unit="&lt;v.1&gt; %" StateOnly="true"/>
+					</C>
+					<C Type="VirtualHttpInCmd" Desc="Ladepunkt 1: Priorität" IName="VCI217" V="178" U="216ceb2c-018e-6e76-ffffe001fe9bf86f" Title="EVCC_LP1_PRIORITAET" Cl="0,0,0" Nio="2" WF="16384" ValOT="1" Check="\i;LP1_PRIORITAET=\i\v" Signed="true" Analog="true" SourceValHigh="1" DestValHigh="1" MinVal="-1" MaxVal="10">
+						<Co K="AQ" U="216ceb2c-018e-6e74-00ffd96d0b8e9d97"/>
+						<Co K="Q" U="216ceb2c-018e-6e75-01ffd96d0b8e9d97"/>
+						<IoData Cr="216373ab-00cf-42fc-ffffe001fe9bf86f" Pr="216373ab-00ce-42f4-ffffe001fe9bf86f"/>
+						<Display Type="2" Unit="&lt;v.1&gt;" StateOnly="true"/>
+					</C>
+					<C Type="VirtualHttpInCmd" Desc="Ladepunkt 2: Fahrzeug verbunden" IName="VCI218" V="178" U="216ceb2c-018e-6e7a-ffffe001fe9bf86f" Title="EVCC_LP2_VERBUNDEN" Cl="0,0,0" Nio="2" WF="16384" ValOT="1" Check="\i;LP2_VERBUNDEN=\i\v" SourceValHigh="1" DestValHigh="1" MaxVal="1">
+						<Co K="AQ" U="216ceb2c-018e-6e78-00ffd96d0b8e9d97"/>
+						<Co K="Q" U="216ceb2c-018e-6e79-01ffd96d0b8e9d97"/>
+						<IoData Cr="216373ab-00cf-42fc-ffffe001fe9bf86f" Pr="216373ab-00ce-42f4-ffffe001fe9bf86f"/>
+						<Display Type="2" Unit="&lt;v.1&gt;" StateOnly="true"/>
+					</C>
+					<C Type="VirtualHttpInCmd" Desc="Ladepunkt 2: lädt gerade" IName="VCI219" V="178" U="216ceb2c-0198-6e7e-ffffe001fe9bf86f" Title="EVCC_LP2_LAEDT" Cl="0,0,0" Nio="2" WF="16384" ValOT="1" Check="\i;LP2_LAEDT=\i\v" SourceValHigh="1" DestValHigh="1" MaxVal="1">
+						<Co K="AQ" U="216ceb2c-0198-6e7c-00ffd96d0b8e9d97"/>
+						<Co K="Q" U="216ceb2c-0198-6e7d-01ffd96d0b8e9d97"/>
+						<IoData Cr="216373ab-00cf-42fc-ffffe001fe9bf86f" Pr="216373ab-00ce-42f4-ffffe001fe9bf86f"/>
+						<Display Type="2" Unit="&lt;v.1&gt;" StateOnly="true"/>
+					</C>
+					<C Type="VirtualHttpInCmd" Desc="Ladepunkt 2: freigegeben" IName="VCI220" V="178" U="216ceb2c-019a-6e82-ffffe001fe9bf86f" Title="EVCC_LP2_FREIGEGEBEN" Cl="0,0,0" Nio="2" WF="16384" ValOT="1" Check="\i;LP2_FREIGEGEBEN=\i\v" SourceValHigh="1" DestValHigh="1" MaxVal="1">
+						<Co K="AQ" U="216ceb2c-019a-6e80-00ffd96d0b8e9d97"/>
+						<Co K="Q" U="216ceb2c-019a-6e81-01ffd96d0b8e9d97"/>
+						<IoData Cr="216373ab-00cf-42fc-ffffe001fe9bf86f" Pr="216373ab-00ce-42f4-ffffe001fe9bf86f"/>
+						<Display Type="2" Unit="&lt;v.1&gt;" StateOnly="true"/>
+					</C>
+					<C Type="VirtualHttpInCmd" Desc="Ladepunkt 2: Ladeleistung" IName="VCI221" V="178" U="216ceb2c-019a-6e86-ffffe001fe9bf86f" Title="EVCC_LP2_LEISTUNG_KW" Cl="0,0,0" Nio="2" WF="16384" ValOT="1" Check="\i;LP2_LEISTUNG_KW=\i\v" Analog="true" SourceValHigh="1" DestValHigh="1" MaxVal="50">
+						<Co K="AQ" U="216ceb2c-019a-6e84-00ffd96d0b8e9d97"/>
+						<Co K="Q" U="216ceb2c-019a-6e85-01ffd96d0b8e9d97"/>
+						<IoData Cr="216373ab-00cf-42fc-ffffe001fe9bf86f" Pr="216373ab-00ce-42f4-ffffe001fe9bf86f"/>
+						<Display Type="2" Unit="&lt;v.1&gt; kW" StateOnly="true"/>
+					</C>
+					<C Type="VirtualHttpInCmd" Desc="Ladepunkt 2: geladen in dieser Sitzung" IName="VCI222" V="178" U="216ceb2c-019a-6e8a-ffffe001fe9bf86f" Title="EVCC_LP2_GELADEN_KWH" Cl="0,0,0" Nio="2" WF="16384" ValOT="1" Check="\i;LP2_GELADEN_KWH=\i\v" Analog="true" SourceValHigh="1" DestValHigh="1" MaxVal="1000">
+						<Co K="AQ" U="216ceb2c-019a-6e88-00ffd96d0b8e9d97"/>
+						<Co K="Q" U="216ceb2c-019a-6e89-01ffd96d0b8e9d97"/>
+						<IoData Cr="216373ab-00cf-42fc-ffffe001fe9bf86f" Pr="216373ab-00ce-42f4-ffffe001fe9bf86f"/>
+						<Display Type="2" Unit="&lt;v.1&gt; kWh" StateOnly="true"/>
+					</C>
+					<C Type="VirtualHttpInCmd" Desc="Ladepunkt 2: verbleibende Ladedauer" IName="VCI223" V="178" U="216ceb2c-019a-6e8e-ffffe001fe9bf86f" Title="EVCC_LP2_RESTZEIT_MIN" Cl="0,0,0" Nio="2" WF="16384" ValOT="1" Check="\i;LP2_RESTZEIT_MIN=\i\v" Analog="true" SourceValHigh="1" DestValHigh="1" MaxVal="6000">
+						<Co K="AQ" U="216ceb2c-019a-6e8c-00ffd96d0b8e9d97"/>
+						<Co K="Q" U="216ceb2c-019a-6e8d-01ffd96d0b8e9d97"/>
+						<IoData Cr="216373ab-00cf-42fc-ffffe001fe9bf86f" Pr="216373ab-00ce-42f4-ffffe001fe9bf86f"/>
+						<Display Type="2" Unit="&lt;v.1&gt; min" StateOnly="true"/>
+					</C>
+					<C Type="VirtualHttpInCmd" Desc="Ladepunkt 2: aktive Phasen" IName="VCI224" V="178" U="216ceb2c-019a-6e92-ffffe001fe9bf86f" Title="EVCC_LP2_PHASEN" Cl="0,0,0" Nio="2" WF="16384" ValOT="1" Check="\i;LP2_PHASEN=\i\v" Analog="true" SourceValHigh="1" DestValHigh="1" MaxVal="3">
+						<Co K="AQ" U="216ceb2c-019a-6e90-00ffd96d0b8e9d97"/>
+						<Co K="Q" U="216ceb2c-019a-6e91-01ffd96d0b8e9d97"/>
+						<IoData Cr="216373ab-00cf-42fc-ffffe001fe9bf86f" Pr="216373ab-00ce-42f4-ffffe001fe9bf86f"/>
+						<Display Type="2" Unit="&lt;v.1&gt;" StateOnly="true"/>
+					</C>
+					<C Type="VirtualHttpInCmd" Desc="Ladepunkt 2: Ladestand Fahrzeug" IName="VCI225" V="178" U="216ceb2c-019a-6e96-ffffe001fe9bf86f" Title="EVCC_LP2_FAHRZEUG_SOC" Cl="0,0,0" Nio="2" WF="16384" ValOT="1" Check="\i;LP2_FAHRZEUG_SOC=\i\v" Analog="true" SourceValHigh="1" DestValHigh="1" MaxVal="100">
+						<Co K="AQ" U="216ceb2c-019a-6e94-00ffd96d0b8e9d97"/>
+						<Co K="Q" U="216ceb2c-019a-6e95-01ffd96d0b8e9d97"/>
+						<IoData Cr="216373ab-00cf-42fc-ffffe001fe9bf86f" Pr="216373ab-00ce-42f4-ffffe001fe9bf86f"/>
+						<Display Type="2" Unit="&lt;v.1&gt; %" StateOnly="true"/>
+					</C>
+					<C Type="VirtualHttpInCmd" Desc="Ladepunkt 2: Reichweite des Fahrzeugs" IName="VCI226" V="178" U="216ceb2c-019a-6e9a-ffffe001fe9bf86f" Title="EVCC_LP2_FAHRZEUG_KM" Cl="0,0,0" Nio="2" WF="16384" ValOT="1" Check="\i;LP2_FAHRZEUG_KM=\i\v" Analog="true" SourceValHigh="1" DestValHigh="1" MaxVal="2000">
+						<Co K="AQ" U="216ceb2c-019a-6e98-00ffd96d0b8e9d97"/>
+						<Co K="Q" U="216ceb2c-019a-6e99-01ffd96d0b8e9d97"/>
+						<IoData Cr="216373ab-00cf-42fc-ffffe001fe9bf86f" Pr="216373ab-00ce-42f4-ffffe001fe9bf86f"/>
+						<Display Type="2" Unit="&lt;v.1&gt; km" StateOnly="true"/>
+					</C>
+					<C Type="VirtualHttpInCmd" Desc="Ladepunkt 2: Solaranteil dieser Sitzung" IName="VCI227" V="178" U="216ceb2c-019a-6e9e-ffffe001fe9bf86f" Title="EVCC_LP2_SOLARANTEIL" Cl="0,0,0" Nio="2" WF="16384" ValOT="1" Check="\i;LP2_SOLARANTEIL=\i\v" Analog="true" SourceValHigh="1" DestValHigh="1" MaxVal="100">
+						<Co K="AQ" U="216ceb2c-019a-6e9c-00ffd96d0b8e9d97"/>
+						<Co K="Q" U="216ceb2c-019a-6e9d-01ffd96d0b8e9d97"/>
+						<IoData Cr="216373ab-00cf-42fc-ffffe001fe9bf86f" Pr="216373ab-00ce-42f4-ffffe001fe9bf86f"/>
+						<Display Type="2" Unit="&lt;v.1&gt; %" StateOnly="true"/>
+					</C>
+					<C Type="VirtualHttpInCmd" Desc="Ladepunkt 2: Ladeplan aktiv" IName="VCI228" V="178" U="216ceb2c-01ab-6ea2-ffffe001fe9bf86f" Title="EVCC_LP2_PLAN_AKTIV" Cl="0,0,0" Nio="2" WF="16384" ValOT="1" Check="\i;LP2_PLAN_AKTIV=\i\v" SourceValHigh="1" DestValHigh="1" MaxVal="1">
+						<Co K="AQ" U="216ceb2c-01ab-6ea0-00ffd96d0b8e9d97"/>
+						<Co K="Q" U="216ceb2c-01ab-6ea1-01ffd96d0b8e9d97"/>
+						<IoData Cr="216373ab-00cf-42fc-ffffe001fe9bf86f" Pr="216373ab-00ce-42f4-ffffe001fe9bf86f"/>
+						<Display Type="2" Unit="&lt;v.1&gt;" StateOnly="true"/>
+					</C>
+					<C Type="VirtualHttpInCmd" Desc="Ladepunkt 2: günstiger Preis aktiv" IName="VCI229" V="178" U="216ceb2c-01ae-6ea6-ffffe001fe9bf86f" Title="EVCC_LP2_SMARTCOST_AKTIV" Cl="0,0,0" Nio="2" WF="16384" ValOT="1" Check="\i;LP2_SMARTCOST_AKTIV=\i\v" SourceValHigh="1" DestValHigh="1" MaxVal="1">
+						<Co K="AQ" U="216ceb2c-01ae-6ea4-00ffd96d0b8e9d97"/>
+						<Co K="Q" U="216ceb2c-01ae-6ea5-01ffd96d0b8e9d97"/>
+						<IoData Cr="216373ab-00cf-42fc-ffffe001fe9bf86f" Pr="216373ab-00ce-42f4-ffffe001fe9bf86f"/>
+						<Display Type="2" Unit="&lt;v.1&gt;" StateOnly="true"/>
+					</C>
+					<C Type="VirtualHttpInCmd" Desc="Ladepunkt 2: Lademodus" IName="VCI230" V="178" U="216ceb2c-01b0-6eaa-ffffe001fe9bf86f" Title="EVCC_LP2_MODUS_NR" Cl="0,0,0" Nio="2" WF="16384" ValOT="1" Check="\i;LP2_MODUS_NR=\i\v" Signed="true" Analog="true" SourceValHigh="1" DestValHigh="1" MinVal="-1" MaxVal="3">
+						<Co K="AQ" U="216ceb2c-01b0-6ea8-00ffd96d0b8e9d97"/>
+						<Co K="Q" U="216ceb2c-01b0-6ea9-01ffd96d0b8e9d97"/>
+						<IoData Cr="216373ab-00cf-42fc-ffffe001fe9bf86f" Pr="216373ab-00ce-42f4-ffffe001fe9bf86f"/>
+						<Display Type="2" Unit="&lt;v.1&gt;" StateOnly="true"/>
+					</C>
+					<C Type="VirtualHttpInCmd" Desc="Ladepunkt 2: Limit-Ladestand" IName="VCI231" V="178" U="216ceb2c-01b2-6eae-ffffe001fe9bf86f" Title="EVCC_LP2_LIMIT_SOC" Cl="0,0,0" Nio="2" WF="16384" ValOT="1" Check="\i;LP2_LIMIT_SOC=\i\v" Signed="true" Analog="true" SourceValHigh="1" DestValHigh="1" MinVal="-1" MaxVal="100">
+						<Co K="AQ" U="216ceb2c-01b2-6eac-00ffd96d0b8e9d97"/>
+						<Co K="Q" U="216ceb2c-01b2-6ead-01ffd96d0b8e9d97"/>
+						<IoData Cr="216373ab-00cf-42fc-ffffe001fe9bf86f" Pr="216373ab-00ce-42f4-ffffe001fe9bf86f"/>
+						<Display Type="2" Unit="&lt;v.1&gt; %" StateOnly="true"/>
+					</C>
+					<C Type="VirtualHttpInCmd" Desc="Ladepunkt 2: Priorität" IName="VCI232" V="178" U="216ceb2c-01b4-6eb2-ffffe001fe9bf86f" Title="EVCC_LP2_PRIORITAET" Cl="0,0,0" Nio="2" WF="16384" ValOT="1" Check="\i;LP2_PRIORITAET=\i\v" Signed="true" Analog="true" SourceValHigh="1" DestValHigh="1" MinVal="-1" MaxVal="10">
+						<Co K="AQ" U="216ceb2c-01b4-6eb0-00ffd96d0b8e9d97"/>
+						<Co K="Q" U="216ceb2c-01b4-6eb1-01ffd96d0b8e9d97"/>
+						<IoData Cr="216373ab-00cf-42fc-ffffe001fe9bf86f" Pr="216373ab-00ce-42f4-ffffe001fe9bf86f"/>
+						<Display Type="2" Unit="&lt;v.1&gt;" StateOnly="true"/>
+					</C>
+					<C Type="VirtualHttpInCmd" Desc="Fahrzeug 1: Ladestand" IName="VCI233" V="178" U="216ceb2c-01b6-6eb6-ffffe001fe9bf86f" Title="EVCC_FZ1_SOC" Cl="0,0,0" Nio="2" WF="16384" ValOT="1" Check="\i;FZ1_SOC=\i\v" Analog="true" SourceValHigh="1" DestValHigh="1" MaxVal="100">
+						<Co K="AQ" U="216ceb2c-01b6-6eb4-00ffd96d0b8e9d97"/>
+						<Co K="Q" U="216ceb2c-01b6-6eb5-01ffd96d0b8e9d97"/>
+						<IoData Cr="216373ab-00cf-42fc-ffffe001fe9bf86f" Pr="216373ab-00ce-42f4-ffffe001fe9bf86f"/>
+						<Display Type="2" Unit="&lt;v.1&gt; %" StateOnly="true"/>
+					</C>
+					<C Type="VirtualHttpInCmd" Desc="Fahrzeug 1: Reichweite" IName="VCI234" V="178" U="216ceb2c-01b8-6eba-ffffe001fe9bf86f" Title="EVCC_FZ1_KM" Cl="0,0,0" Nio="2" WF="16384" ValOT="1" Check="\i;FZ1_KM=\i\v" Analog="true" SourceValHigh="1" DestValHigh="1" MaxVal="2000">
+						<Co K="AQ" U="216ceb2c-01b8-6eb8-00ffd96d0b8e9d97"/>
+						<Co K="Q" U="216ceb2c-01b8-6eb9-01ffd96d0b8e9d97"/>
+						<IoData Cr="216373ab-00cf-42fc-ffffe001fe9bf86f" Pr="216373ab-00ce-42f4-ffffe001fe9bf86f"/>
+						<Display Type="2" Unit="&lt;v.1&gt; km" StateOnly="true"/>
+					</C>
+					<C Type="VirtualHttpInCmd" Desc="Fahrzeug 2: Ladestand" IName="VCI235" V="178" U="216ceb2c-01bb-6ebe-ffffe001fe9bf86f" Title="EVCC_FZ2_SOC" Cl="0,0,0" Nio="2" WF="16384" ValOT="1" Check="\i;FZ2_SOC=\i\v" Analog="true" SourceValHigh="1" DestValHigh="1" MaxVal="100">
+						<Co K="AQ" U="216ceb2c-01bb-6ebc-00ffd96d0b8e9d97"/>
+						<Co K="Q" U="216ceb2c-01bb-6ebd-01ffd96d0b8e9d97"/>
+						<IoData Cr="216373ab-00cf-42fc-ffffe001fe9bf86f" Pr="216373ab-00ce-42f4-ffffe001fe9bf86f"/>
+						<Display Type="2" Unit="&lt;v.1&gt; %" StateOnly="true"/>
+					</C>
+					<C Type="VirtualHttpInCmd" Desc="Fahrzeug 2: Reichweite" IName="VCI236" V="178" U="216ceb2c-01be-6ec2-ffffe001fe9bf86f" Title="EVCC_FZ2_KM" Cl="0,0,0" Nio="2" WF="16384" ValOT="1" Check="\i;FZ2_KM=\i\v" Analog="true" SourceValHigh="1" DestValHigh="1" MaxVal="2000">
+						<Co K="AQ" U="216ceb2c-01be-6ec0-00ffd96d0b8e9d97"/>
+						<Co K="Q" U="216ceb2c-01be-6ec1-01ffd96d0b8e9d97"/>
+						<IoData Cr="216373ab-00cf-42fc-ffffe001fe9bf86f" Pr="216373ab-00ce-42f4-ffffe001fe9bf86f"/>
+						<Display Type="2" Unit="&lt;v.1&gt; km" StateOnly="true"/>
+					</C>
+					<C Type="VirtualHttpInCmd" Desc="Werte sind aktuell" IName="VCI237" V="178" U="216ceb2c-01c0-6ec6-ffffe001fe9bf86f" Title="EVCC_OK" Cl="0,0,0" Nio="2" WF="16384" ValOT="1" Check="\i;OK=\i\v" SourceValHigh="1" DestValHigh="1" MaxVal="1">
+						<Co K="AQ" U="216ceb2c-01c0-6ec4-00ffd96d0b8e9d97"/>
+						<Co K="Q" U="216ceb2c-01c0-6ec5-01ffd96d0b8e9d97"/>
+						<IoData Cr="216373ab-00cf-42fc-ffffe001fe9bf86f" Pr="216373ab-00ce-42f4-ffffe001fe9bf86f"/>
+						<Display Type="2" Unit="&lt;v.1&gt;" StateOnly="true"/>
+					</C>
+					<C Type="VirtualHttpInCmd" Desc="Alter des letzten Abrufs" IName="VCI238" V="178" U="216ceb2c-01c3-6eca-ffffe001fe9bf86f" Title="EVCC_ALTER_S" Cl="238,238,238" Nio="2" WF="16400" ValOT="1" Check="\i;ALTER_S=\i\v" Analog="true" SourceValHigh="1" DestValHigh="1" MaxVal="99999">
+						<Co K="AQ" U="216ceb2c-01c3-6ec8-00ffd96d0b8e9d97"/>
+						<Co K="Q" U="216ceb2c-01c3-6ec9-01ffd96d0b8e9d97"/>
+						<IoData Cr="216373ab-00cf-42fc-ffffe001fe9bf86f" Pr="216373ab-00cf-42f8-ffffe001fe9bf86f"/>
+						<Display Type="2" Unit="&lt;v.1&gt; s" StateOnly="true"/>
+					</C>
+					<C Type="VirtualHttpInCmd" Desc="EVCC-Dienst läuft" IName="VCI239" V="178" U="216ceb2c-01c5-6ece-ffffe001fe9bf86f" Title="EVCC_DIENST" Cl="0,0,0" Nio="2" WF="16384" ValOT="1" Check="\i;DIENST=\i\v" SourceValHigh="1" DestValHigh="1" MaxVal="1">
+						<Co K="AQ" U="216ceb2c-01c5-6ecc-00ffd96d0b8e9d97"/>
+						<Co K="Q" U="216ceb2c-01c5-6ecd-01ffd96d0b8e9d97"/>
+						<IoData Cr="216373ab-00cf-42fc-ffffe001fe9bf86f" Pr="216373ab-00ce-42f4-ffffe001fe9bf86f"/>
+						<Display Type="2" Unit="&lt;v.1&gt;" StateOnly="true"/>
+					</C>
+					<C Type="VirtualHttpInCmd" Desc="Betriebsart des Hausspeichers" IName="VCI240" V="178" U="216ceb2c-01c7-6ed2-ffffe001fe9bf86f" Title="EVCC_BATTERIEMODUS_NR" Cl="0,0,0" Nio="2" WF="16384" ValOT="1" Check="\i;BATTERIEMODUS_NR=\i\v" Signed="true" Analog="true" SourceValHigh="1" DestValHigh="1" MinVal="-1" MaxVal="2" NTXT="ungemessen: aus der EVCC-Dokumentation, an keiner Anlage geprüft">
+						<Co K="AQ" U="216ceb2c-01c7-6ed0-00ffd96d0b8e9d97"/>
+						<Co K="Q" U="216ceb2c-01c7-6ed1-01ffd96d0b8e9d97"/>
+						<IoData Cr="216373ab-00cf-42fc-ffffe001fe9bf86f" Pr="216373ab-00ce-42f4-ffffe001fe9bf86f"/>
+						<Display Type="2" Unit="&lt;v.1&gt;" StateOnly="true"/>
+					</C>
+					<C Type="VirtualHttpInCmd" Desc="Residualleistung am Netzanschluss" IName="VCI241" V="178" U="216ceb2c-01c9-6ed6-ffffe001fe9bf86f" Title="EVCC_RESIDUALLEISTUNG_W" Cl="0,0,0" Nio="2" WF="16384" ValOT="1" Check="\i;RESIDUALLEISTUNG_W=\i\v" Signed="true" Analog="true" SourceValHigh="1" DestValHigh="1" MinVal="-10000" MaxVal="10000" NTXT="ungemessen: aus der EVCC-Dokumentation, an keiner Anlage geprüft">
+						<Co K="AQ" U="216ceb2c-01c9-6ed4-00ffd96d0b8e9d97"/>
+						<Co K="Q" U="216ceb2c-01c9-6ed5-01ffd96d0b8e9d97"/>
+						<IoData Cr="216373ab-00cf-42fc-ffffe001fe9bf86f" Pr="216373ab-00ce-42f4-ffffe001fe9bf86f"/>
+						<Display Type="2" Unit="&lt;v.1&gt; W" StateOnly="true"/>
+					</C>
+					<C Type="VirtualHttpInCmd" Desc="Entladeregelung des Speichers aktiv" IName="VCI242" V="178" U="216ceb2c-01cc-6eda-ffffe001fe9bf86f" Title="EVCC_ENTLADEREGELUNG" Cl="0,0,0" Nio="2" WF="16384" ValOT="1" Check="\i;ENTLADEREGELUNG=\i\v" SourceValHigh="1" DestValHigh="1" MaxVal="1" NTXT="ungemessen: aus der EVCC-Dokumentation, an keiner Anlage geprüft">
+						<Co K="AQ" U="216ceb2c-01cc-6ed8-00ffd96d0b8e9d97"/>
+						<Co K="Q" U="216ceb2c-01cc-6ed9-01ffd96d0b8e9d97"/>
+						<IoData Cr="216373ab-00cf-42fc-ffffe001fe9bf86f" Pr="216373ab-00ce-42f4-ffffe001fe9bf86f"/>
+						<Display Type="2" Unit="&lt;v.1&gt;" StateOnly="true"/>
+					</C>
+					<C Type="VirtualHttpInCmd" Desc="Zählerstand Netzbezug" IName="VCI243" V="178" U="216ceb2c-01cf-6ede-ffffe001fe9bf86f" Title="EVCC_NETZ_BEZUG_KWH" Cl="0,0,0" Nio="2" WF="16384" ValOT="1" Check="\i;NETZ_BEZUG_KWH=\i\v" Analog="true" SourceValHigh="1" DestValHigh="1" MaxVal="1000000" NTXT="ungemessen: aus der EVCC-Dokumentation, an keiner Anlage geprüft">
+						<Co K="AQ" U="216ceb2c-01cf-6edc-00ffd96d0b8e9d97"/>
+						<Co K="Q" U="216ceb2c-01cf-6edd-01ffd96d0b8e9d97"/>
+						<IoData Cr="216373ab-00cf-42fc-ffffe001fe9bf86f" Pr="216373ab-00ce-42f4-ffffe001fe9bf86f"/>
+						<Display Type="2" Unit="&lt;v.1&gt; kWh" StateOnly="true"/>
+					</C>
+					<C Type="VirtualHttpInCmd" Desc="Zählerstand PV-Ertrag" IName="VCI244" V="178" U="216ceb2c-01d2-6ee2-ffffe001fe9bf86f" Title="EVCC_PV_ERTRAG_KWH" Cl="0,0,0" Nio="2" WF="16384" ValOT="1" Check="\i;PV_ERTRAG_KWH=\i\v" Analog="true" SourceValHigh="1" DestValHigh="1" MaxVal="1000000" NTXT="ungemessen: aus der EVCC-Dokumentation, an keiner Anlage geprüft">
+						<Co K="AQ" U="216ceb2c-01d2-6ee0-00ffd96d0b8e9d97"/>
+						<Co K="Q" U="216ceb2c-01d2-6ee1-01ffd96d0b8e9d97"/>
+						<IoData Cr="216373ab-00cf-42fc-ffffe001fe9bf86f" Pr="216373ab-00ce-42f4-ffffe001fe9bf86f"/>
+						<Display Type="2" Unit="&lt;v.1&gt; kWh" StateOnly="true"/>
+					</C>
+					<C Type="VirtualHttpInCmd" Desc="Nutzbare Kapazität des Hausspeichers" IName="VCI245" V="178" U="216ceb2c-01d5-6ee6-ffffe001fe9bf86f" Title="EVCC_SPEICHER_KAPAZITAET_KWH" Cl="0,0,0" Nio="2" WF="16384" ValOT="1" Check="\i;SPEICHER_KAPAZITAET_KWH=\i\v" Signed="true" Analog="true" SourceValHigh="1" DestValHigh="1" MinVal="-1" MaxVal="1000" NTXT="ungemessen: aus der EVCC-Dokumentation, an keiner Anlage geprüft">
+						<Co K="AQ" U="216ceb2c-01d5-6ee4-00ffd96d0b8e9d97"/>
+						<Co K="Q" U="216ceb2c-01d5-6ee5-01ffd96d0b8e9d97"/>
+						<IoData Cr="216373ab-00cf-42fc-ffffe001fe9bf86f" Pr="216373ab-00ce-42f4-ffffe001fe9bf86f"/>
+						<Display Type="2" Unit="&lt;v.1&gt; kWh" StateOnly="true"/>
+					</C>
+					<C Type="VirtualHttpInCmd" Desc="Leistung der Zusatzverbraucher" IName="VCI246" V="178" U="216ceb2c-01d7-6eea-ffffe001fe9bf86f" Title="EVCC_ZUSATZ_KW" Cl="0,0,0" Nio="2" WF="16384" ValOT="1" Check="\i;ZUSATZ_KW=\i\v" Signed="true" Analog="true" SourceValHigh="1" DestValHigh="1" MinVal="-100" MaxVal="100" NTXT="ungemessen: aus der EVCC-Dokumentation, an keiner Anlage geprüft">
+						<Co K="AQ" U="216ceb2c-01d7-6ee8-00ffd96d0b8e9d97"/>
+						<Co K="Q" U="216ceb2c-01d7-6ee9-01ffd96d0b8e9d97"/>
+						<IoData Cr="216373ab-00cf-42fc-ffffe001fe9bf86f" Pr="216373ab-00ce-42f4-ffffe001fe9bf86f"/>
+						<Display Type="2" Unit="&lt;v.1&gt; kW" StateOnly="true"/>
+					</C>
+					<C Type="VirtualHttpInCmd" Desc="Solarprognose heute" IName="VCI247" V="178" U="216ceb2c-01d9-6eee-ffffe001fe9bf86f" Title="EVCC_PROGNOSE_HEUTE" Cl="0,0,0" Nio="2" WF="16384" ValOT="1" Check="\i;PROGNOSE_HEUTE=\i\v" Analog="true" SourceValHigh="1" DestValHigh="1" MaxVal="1000000" NTXT="ungemessen: aus der EVCC-Dokumentation, an keiner Anlage geprüft">
+						<Co K="AQ" U="216ceb2c-01d9-6eec-00ffd96d0b8e9d97"/>
+						<Co K="Q" U="216ceb2c-01d9-6eed-01ffd96d0b8e9d97"/>
+						<IoData Cr="216373ab-00cf-42fc-ffffe001fe9bf86f" Pr="216373ab-00ce-42f4-ffffe001fe9bf86f"/>
+						<Display Type="2" Unit="&lt;v.1&gt;" StateOnly="true"/>
+					</C>
+					<C Type="VirtualHttpInCmd" Desc="Solarprognose morgen" IName="VCI248" V="178" U="216ceb2c-01db-6ef2-ffffe001fe9bf86f" Title="EVCC_PROGNOSE_MORGEN" Cl="238,238,238" Nio="2" WF="16400" ValOT="1" Check="\i;PROGNOSE_MORGEN=\i\v" Analog="true" SourceValHigh="1" DestValHigh="1" MaxVal="1000000" NTXT="ungemessen: aus der EVCC-Dokumentation, an keiner Anlage geprüft">
+						<Co K="AQ" U="216ceb2c-01db-6ef0-00ffd96d0b8e9d97"/>
+						<Co K="Q" U="216ceb2c-01db-6ef1-01ffd96d0b8e9d97"/>
+						<IoData Cr="216373ab-00cf-42fc-ffffe001fe9bf86f" Pr="216373ab-00cf-42f8-ffffe001fe9bf86f"/>
+						<Display Type="2" Unit="&lt;v.1&gt;" StateOnly="true"/>
+					</C>
+					<C Type="VirtualHttpInCmd" Desc="Solarprognose übermorgen" IName="VCI249" V="178" U="216ceb2c-01df-6ef6-ffffe001fe9bf86f" Title="EVCC_PROGNOSE_UEBERMORGEN" Cl="0,0,0" Nio="2" WF="16384" ValOT="1" Check="\i;PROGNOSE_UEBERMORGEN=\i\v" Analog="true" SourceValHigh="1" DestValHigh="1" MaxVal="1000000" NTXT="ungemessen: aus der EVCC-Dokumentation, an keiner Anlage geprüft">
+						<Co K="AQ" U="216ceb2c-01df-6ef4-00ffd96d0b8e9d97"/>
+						<Co K="Q" U="216ceb2c-01df-6ef5-01ffd96d0b8e9d97"/>
+						<IoData Cr="216373ab-00cf-42fc-ffffe001fe9bf86f" Pr="216373ab-00ce-42f4-ffffe001fe9bf86f"/>
+						<Display Type="2" Unit="&lt;v.1&gt;" StateOnly="true"/>
+					</C>
+					<C Type="VirtualHttpInCmd" Desc="Niedrigster bekannter Arbeitspreis" IName="VCI250" V="178" U="216ceb2c-01e4-6efa-ffffe001fe9bf86f" Title="EVCC_PREIS_MIN_24H" Cl="0,0,0" Nio="2" WF="16384" ValOT="1" Check="\i;PREIS_MIN_24H=\i\v" Signed="true" Analog="true" SourceValHigh="1" DestValHigh="1" MinVal="-10" MaxVal="10" NTXT="ungemessen: aus der EVCC-Dokumentation, an keiner Anlage geprüft">
+						<Co K="AQ" U="216ceb2c-01e2-6ef8-00ffd96d0b8e9d97"/>
+						<Co K="Q" U="216ceb2c-01e2-6ef9-01ffd96d0b8e9d97"/>
+						<IoData Cr="216373ab-00cf-42fc-ffffe001fe9bf86f" Pr="216373ab-00ce-42f4-ffffe001fe9bf86f"/>
+						<Display Type="2" Unit="&lt;v.1&gt; /kWh" StateOnly="true"/>
+					</C>
+					<C Type="VirtualHttpInCmd" Desc="Höchster bekannter Arbeitspreis" IName="VCI251" V="178" U="216ceb2c-01e6-6efe-ffffe001fe9bf86f" Title="EVCC_PREIS_MAX_24H" Cl="0,0,0" Nio="2" WF="16384" ValOT="1" Check="\i;PREIS_MAX_24H=\i\v" Signed="true" Analog="true" SourceValHigh="1" DestValHigh="1" MinVal="-10" MaxVal="10" NTXT="ungemessen: aus der EVCC-Dokumentation, an keiner Anlage geprüft">
+						<Co K="AQ" U="216ceb2c-01e6-6efc-00ffd96d0b8e9d97"/>
+						<Co K="Q" U="216ceb2c-01e6-6efd-01ffd96d0b8e9d97"/>
+						<IoData Cr="216373ab-00cf-42fc-ffffe001fe9bf86f" Pr="216373ab-00ce-42f4-ffffe001fe9bf86f"/>
+						<Display Type="2" Unit="&lt;v.1&gt; /kWh" StateOnly="true"/>
+					</C>
+					<C Type="VirtualHttpInCmd" Desc="Durchschnitt der bekannten Arbeitspreise" IName="VCI252" V="178" U="216ceb2c-01e8-6f02-ffffe001fe9bf86f" Title="EVCC_PREIS_SCHNITT_24H" Cl="0,0,0" Nio="2" WF="16384" ValOT="1" Check="\i;PREIS_SCHNITT_24H=\i\v" Signed="true" Analog="true" SourceValHigh="1" DestValHigh="1" MinVal="-10" MaxVal="10" NTXT="ungemessen: aus der EVCC-Dokumentation, an keiner Anlage geprüft">
+						<Co K="AQ" U="216ceb2c-01e8-6f00-00ffd96d0b8e9d97"/>
+						<Co K="Q" U="216ceb2c-01e8-6f01-01ffd96d0b8e9d97"/>
+						<IoData Cr="216373ab-00cf-42fc-ffffe001fe9bf86f" Pr="216373ab-00ce-42f4-ffffe001fe9bf86f"/>
+						<Display Type="2" Unit="&lt;v.1&gt; /kWh" StateOnly="true"/>
+					</C>
+					<C Type="VirtualHttpInCmd" Desc="Rang der laufenden Stunde" IName="VCI253" V="178" U="216ceb2c-01ea-6f06-ffffe001fe9bf86f" Title="EVCC_PREIS_RANG" Cl="238,238,238" Nio="2" WF="16400" ValOT="1" Check="\i;PREIS_RANG=\i\v" Signed="true" Analog="true" SourceValHigh="1" DestValHigh="1" MinVal="-1" MaxVal="48" NTXT="ungemessen: aus der EVCC-Dokumentation, an keiner Anlage geprüft">
+						<Co K="AQ" U="216ceb2c-01ea-6f04-00ffd96d0b8e9d97"/>
+						<Co K="Q" U="216ceb2c-01ea-6f05-01ffd96d0b8e9d97"/>
+						<IoData Cr="216373ab-00cf-42fc-ffffe001fe9bf86f" Pr="216373ab-00cf-42f8-ffffe001fe9bf86f"/>
+						<Display Type="2" Unit="&lt;v.1&gt;" StateOnly="true"/>
+					</C>
+					<C Type="VirtualHttpInCmd" Desc="Anzahl der bekannten Preisstunden" IName="VCI254" V="178" U="216ceb2c-01ee-6f0a-ffffe001fe9bf86f" Title="EVCC_PREIS_STUNDEN" Cl="0,0,0" Nio="2" WF="16384" ValOT="1" Check="\i;PREIS_STUNDEN=\i\v" Signed="true" Analog="true" SourceValHigh="1" DestValHigh="1" MinVal="-1" MaxVal="48" NTXT="ungemessen: aus der EVCC-Dokumentation, an keiner Anlage geprüft">
+						<Co K="AQ" U="216ceb2c-01ee-6f08-00ffd96d0b8e9d97"/>
+						<Co K="Q" U="216ceb2c-01ee-6f09-01ffd96d0b8e9d97"/>
+						<IoData Cr="216373ab-00cf-42fc-ffffe001fe9bf86f" Pr="216373ab-00ce-42f4-ffffe001fe9bf86f"/>
+						<Display Type="2" Unit="&lt;v.1&gt;" StateOnly="true"/>
+					</C>
+					<C Type="VirtualHttpInCmd" Desc="Tagesstunde mit dem niedrigsten Preis" IName="VCI255" V="178" U="216ceb2c-01f1-6f0e-ffffe001fe9bf86f" Title="EVCC_PREIS_GUENSTIGSTE_STUNDE" Cl="0,0,0" Nio="2" WF="16384" ValOT="1" Check="\i;PREIS_GUENSTIGSTE_STUNDE=\i\v" Signed="true" Analog="true" SourceValHigh="1" DestValHigh="1" MinVal="-1" MaxVal="23" NTXT="ungemessen: aus der EVCC-Dokumentation, an keiner Anlage geprüft">
+						<Co K="AQ" U="216ceb2c-01f1-6f0c-00ffd96d0b8e9d97"/>
+						<Co K="Q" U="216ceb2c-01f1-6f0d-01ffd96d0b8e9d97"/>
+						<IoData Cr="216373ab-00cf-42fc-ffffe001fe9bf86f" Pr="216373ab-00ce-42f4-ffffe001fe9bf86f"/>
+						<Display Type="2" Unit="&lt;v.1&gt; h" StateOnly="true"/>
+					</C>
+					<C Type="VirtualHttpInCmd" Desc="Ladepunkt 1: Mindest-Ladestand" IName="VCI256" V="178" U="216ceb2c-01f4-6f12-ffffe001fe9bf86f" Title="EVCC_LP1_MIN_SOC" Cl="0,0,0" Nio="2" WF="16384" ValOT="1" Check="\i;LP1_MIN_SOC=\i\v" Signed="true" Analog="true" SourceValHigh="1" DestValHigh="1" MinVal="-1" MaxVal="100" NTXT="ungemessen: aus der EVCC-Dokumentation, an keiner Anlage geprüft">
+						<Co K="AQ" U="216ceb2c-01f4-6f10-00ffd96d0b8e9d97"/>
+						<Co K="Q" U="216ceb2c-01f4-6f11-01ffd96d0b8e9d97"/>
+						<IoData Cr="216373ab-00cf-42fc-ffffe001fe9bf86f" Pr="216373ab-00ce-42f4-ffffe001fe9bf86f"/>
+						<Display Type="2" Unit="&lt;v.1&gt; %" StateOnly="true"/>
+					</C>
+					<C Type="VirtualHttpInCmd" Desc="Ladepunkt 1: kleinster Ladestrom" IName="VCI257" V="178" U="216ceb2c-01f4-6f16-ffffe001fe9bf86f" Title="EVCC_LP1_MINSTROM_A" Cl="0,0,0" Nio="2" WF="16384" ValOT="1" Check="\i;LP1_MINSTROM_A=\i\v" Signed="true" Analog="true" SourceValHigh="1" DestValHigh="1" MinVal="-1" MaxVal="80" NTXT="ungemessen: aus der EVCC-Dokumentation, an keiner Anlage geprüft">
+						<Co K="AQ" U="216ceb2c-01f4-6f14-00ffd96d0b8e9d97"/>
+						<Co K="Q" U="216ceb2c-01f4-6f15-01ffd96d0b8e9d97"/>
+						<IoData Cr="216373ab-00cf-42fc-ffffe001fe9bf86f" Pr="216373ab-00ce-42f4-ffffe001fe9bf86f"/>
+						<Display Type="2" Unit="&lt;v.1&gt; A" StateOnly="true"/>
+					</C>
+					<C Type="VirtualHttpInCmd" Desc="Ladepunkt 1: höchster Ladestrom" IName="VCI258" V="178" U="216ceb2c-01f4-6f1a-ffffe001fe9bf86f" Title="EVCC_LP1_MAXSTROM_A" Cl="0,0,0" Nio="2" WF="16384" ValOT="1" Check="\i;LP1_MAXSTROM_A=\i\v" Signed="true" Analog="true" SourceValHigh="1" DestValHigh="1" MinVal="-1" MaxVal="80" NTXT="ungemessen: aus der EVCC-Dokumentation, an keiner Anlage geprüft">
+						<Co K="AQ" U="216ceb2c-01f4-6f18-00ffd96d0b8e9d97"/>
+						<Co K="Q" U="216ceb2c-01f4-6f19-01ffd96d0b8e9d97"/>
+						<IoData Cr="216373ab-00cf-42fc-ffffe001fe9bf86f" Pr="216373ab-00ce-42f4-ffffe001fe9bf86f"/>
+						<Display Type="2" Unit="&lt;v.1&gt; A" StateOnly="true"/>
+					</C>
+					<C Type="VirtualHttpInCmd" Desc="Ladepunkt 1: Preisschwelle" IName="VCI259" V="178" U="216ceb2c-01fb-6f1e-ffffe001fe9bf86f" Title="EVCC_LP1_SMARTCOST_GRENZE" Cl="0,0,0" Nio="2" WF="16384" ValOT="1" Check="\i;LP1_SMARTCOST_GRENZE=\i\v" Signed="true" Analog="true" SourceValHigh="1" DestValHigh="1" MinVal="-10" MaxVal="10" NTXT="ungemessen: aus der EVCC-Dokumentation, an keiner Anlage geprüft">
+						<Co K="AQ" U="216ceb2c-01fb-6f1c-00ffd96d0b8e9d97"/>
+						<Co K="Q" U="216ceb2c-01fb-6f1d-01ffd96d0b8e9d97"/>
+						<IoData Cr="216373ab-00cf-42fc-ffffe001fe9bf86f" Pr="216373ab-00ce-42f4-ffffe001fe9bf86f"/>
+						<Display Type="2" Unit="&lt;v.1&gt; /kWh" StateOnly="true"/>
+					</C>
+					<C Type="VirtualHttpInCmd" Desc="Ladepunkt 1: Battery Boost aktiv" IName="VCI260" V="178" U="216ceb2c-01ff-6f22-ffffe001fe9bf86f" Title="EVCC_LP1_BATTERIEBOOST" Cl="0,0,0" Nio="2" WF="16384" ValOT="1" Check="\i;LP1_BATTERIEBOOST=\i\v" SourceValHigh="1" DestValHigh="1" MaxVal="1" NTXT="ungemessen: aus der EVCC-Dokumentation, an keiner Anlage geprüft">
+						<Co K="AQ" U="216ceb2c-01ff-6f20-00ffd96d0b8e9d97"/>
+						<Co K="Q" U="216ceb2c-01ff-6f21-01ffd96d0b8e9d97"/>
+						<IoData Cr="216373ab-00cf-42fc-ffffe001fe9bf86f" Pr="216373ab-00ce-42f4-ffffe001fe9bf86f"/>
+						<Display Type="2" Unit="&lt;v.1&gt;" StateOnly="true"/>
+					</C>
+					<C Type="VirtualHttpInCmd" Desc="Ladepunkt 1: eingestellte Phasen" IName="VCI261" V="178" U="216ceb2c-01ff-6f26-ffffe001fe9bf86f" Title="EVCC_LP1_PHASEN_SOLL" Cl="0,0,0" Nio="2" WF="16384" ValOT="1" Check="\i;LP1_PHASEN_SOLL=\i\v" Signed="true" Analog="true" SourceValHigh="1" DestValHigh="1" MinVal="-1" MaxVal="3" NTXT="ungemessen: aus der EVCC-Dokumentation, an keiner Anlage geprüft">
+						<Co K="AQ" U="216ceb2c-01ff-6f24-00ffd96d0b8e9d97"/>
+						<Co K="Q" U="216ceb2c-01ff-6f25-01ffd96d0b8e9d97"/>
+						<IoData Cr="216373ab-00cf-42fc-ffffe001fe9bf86f" Pr="216373ab-00ce-42f4-ffffe001fe9bf86f"/>
+						<Display Type="2" Unit="&lt;v.1&gt;" StateOnly="true"/>
+					</C>
+					<C Type="VirtualHttpInCmd" Desc="Ladepunkt 1: wartet auf PV-Überschuss" IName="VCI262" V="178" U="216ceb2c-01ff-6f2a-ffffe001fe9bf86f" Title="EVCC_LP1_PV_WARTEN_MIN" Cl="0,0,0" Nio="2" WF="16384" ValOT="1" Check="\i;LP1_PV_WARTEN_MIN=\i\v" Analog="true" SourceValHigh="1" DestValHigh="1" MaxVal="600" NTXT="ungemessen: aus der EVCC-Dokumentation, an keiner Anlage geprüft">
+						<Co K="AQ" U="216ceb2c-01ff-6f28-00ffd96d0b8e9d97"/>
+						<Co K="Q" U="216ceb2c-01ff-6f29-01ffd96d0b8e9d97"/>
+						<IoData Cr="216373ab-00cf-42fc-ffffe001fe9bf86f" Pr="216373ab-00ce-42f4-ffffe001fe9bf86f"/>
+						<Display Type="2" Unit="&lt;v.1&gt; min" StateOnly="true"/>
+					</C>
+					<C Type="VirtualHttpInCmd" Desc="Ladepunkt 1: Phasenwartezeit" IName="VCI263" V="178" U="216ceb2c-01ff-6f2e-ffffe001fe9bf86f" Title="EVCC_LP1_PHASEN_WARTEN_MIN" Cl="0,0,0" Nio="2" WF="16384" ValOT="1" Check="\i;LP1_PHASEN_WARTEN_MIN=\i\v" Analog="true" SourceValHigh="1" DestValHigh="1" MaxVal="600" NTXT="ungemessen: aus der EVCC-Dokumentation, an keiner Anlage geprüft">
+						<Co K="AQ" U="216ceb2c-01ff-6f2c-00ffd96d0b8e9d97"/>
+						<Co K="Q" U="216ceb2c-01ff-6f2d-01ffd96d0b8e9d97"/>
+						<IoData Cr="216373ab-00cf-42fc-ffffe001fe9bf86f" Pr="216373ab-00ce-42f4-ffffe001fe9bf86f"/>
+						<Display Type="2" Unit="&lt;v.1&gt; min" StateOnly="true"/>
+					</C>
+					<C Type="VirtualHttpInCmd" Desc="Ladepunkt 1: Zählerstand geladen" IName="VCI264" V="178" U="216ceb2c-01ff-6f32-ffffe001fe9bf86f" Title="EVCC_LP1_GESAMT_KWH" Cl="0,0,0" Nio="2" WF="16384" ValOT="1" Check="\i;LP1_GESAMT_KWH=\i\v" Analog="true" SourceValHigh="1" DestValHigh="1" MaxVal="1000000" NTXT="ungemessen: aus der EVCC-Dokumentation, an keiner Anlage geprüft">
+						<Co K="AQ" U="216ceb2c-01ff-6f30-00ffd96d0b8e9d97"/>
+						<Co K="Q" U="216ceb2c-01ff-6f31-01ffd96d0b8e9d97"/>
+						<IoData Cr="216373ab-00cf-42fc-ffffe001fe9bf86f" Pr="216373ab-00ce-42f4-ffffe001fe9bf86f"/>
+						<Display Type="2" Unit="&lt;v.1&gt; kWh" StateOnly="true"/>
+					</C>
+					<C Type="VirtualHttpInCmd" Desc="Ladepunkt 1: Energie dieser Sitzung" IName="VCI265" V="178" U="216ceb2c-020e-6f36-ffffe001fe9bf86f" Title="EVCC_LP1_SITZUNG_KWH" Cl="0,0,0" Nio="2" WF="16384" ValOT="1" Check="\i;LP1_SITZUNG_KWH=\i\v" Analog="true" SourceValHigh="1" DestValHigh="1" MaxVal="1000" NTXT="ungemessen: aus der EVCC-Dokumentation, an keiner Anlage geprüft">
+						<Co K="AQ" U="216ceb2c-020e-6f34-00ffd96d0b8e9d97"/>
+						<Co K="Q" U="216ceb2c-020e-6f35-01ffd96d0b8e9d97"/>
+						<IoData Cr="216373ab-00cf-42fc-ffffe001fe9bf86f" Pr="216373ab-00ce-42f4-ffffe001fe9bf86f"/>
+						<Display Type="2" Unit="&lt;v.1&gt; kWh" StateOnly="true"/>
+					</C>
+					<C Type="VirtualHttpInCmd" Desc="Ladepunkt 1: Kosten dieser Sitzung" IName="VCI266" V="178" U="216ceb2c-0211-6f3a-ffffe001fe9bf86f" Title="EVCC_LP1_SITZUNG_PREIS" Cl="0,0,0" Nio="2" WF="16384" ValOT="1" Check="\i;LP1_SITZUNG_PREIS=\i\v" Signed="true" Analog="true" SourceValHigh="1" DestValHigh="1" MinVal="-1000" MaxVal="1000" NTXT="ungemessen: aus der EVCC-Dokumentation, an keiner Anlage geprüft">
+						<Co K="AQ" U="216ceb2c-0211-6f38-00ffd96d0b8e9d97"/>
+						<Co K="Q" U="216ceb2c-0211-6f39-01ffd96d0b8e9d97"/>
+						<IoData Cr="216373ab-00cf-42fc-ffffe001fe9bf86f" Pr="216373ab-00ce-42f4-ffffe001fe9bf86f"/>
+						<Display Type="2" Unit="&lt;v.1&gt;" StateOnly="true"/>
+					</C>
+					<C Type="VirtualHttpInCmd" Desc="Ladepunkt 1: Durchschnittspreis" IName="VCI267" V="178" U="216ceb2c-0211-6f3e-ffffe001fe9bf86f" Title="EVCC_LP1_SITZUNG_PREIS_KWH" Cl="0,0,0" Nio="2" WF="16384" ValOT="1" Check="\i;LP1_SITZUNG_PREIS_KWH=\i\v" Signed="true" Analog="true" SourceValHigh="1" DestValHigh="1" MinVal="-10" MaxVal="10" NTXT="ungemessen: aus der EVCC-Dokumentation, an keiner Anlage geprüft">
+						<Co K="AQ" U="216ceb2c-0211-6f3c-00ffd96d0b8e9d97"/>
+						<Co K="Q" U="216ceb2c-0211-6f3d-01ffd96d0b8e9d97"/>
+						<IoData Cr="216373ab-00cf-42fc-ffffe001fe9bf86f" Pr="216373ab-00ce-42f4-ffffe001fe9bf86f"/>
+						<Display Type="2" Unit="&lt;v.1&gt; /kWh" StateOnly="true"/>
+					</C>
+					<C Type="VirtualHttpInCmd" Desc="Ladepunkt 1: CO₂-Intensität" IName="VCI268" V="178" U="216ceb2c-0211-6f42-ffffe001fe9bf86f" Title="EVCC_LP1_SITZUNG_CO2" Cl="0,0,0" Nio="2" WF="16384" ValOT="1" Check="\i;LP1_SITZUNG_CO2=\i\v" Analog="true" SourceValHigh="1" DestValHigh="1" MaxVal="1000" NTXT="ungemessen: aus der EVCC-Dokumentation, an keiner Anlage geprüft">
+						<Co K="AQ" U="216ceb2c-0211-6f40-00ffd96d0b8e9d97"/>
+						<Co K="Q" U="216ceb2c-0211-6f41-01ffd96d0b8e9d97"/>
+						<IoData Cr="216373ab-00cf-42fc-ffffe001fe9bf86f" Pr="216373ab-00ce-42f4-ffffe001fe9bf86f"/>
+						<Display Type="2" Unit="&lt;v.1&gt; g/kWh" StateOnly="true"/>
+					</C>
+					<C Type="VirtualHttpInCmd" Desc="Ladepunkt 1: bisherige Ladedauer" IName="VCI269" V="178" U="216ceb2c-021b-6f46-ffffe001fe9bf86f" Title="EVCC_LP1_LADEDAUER_MIN" Cl="0,0,0" Nio="2" WF="16384" ValOT="1" Check="\i;LP1_LADEDAUER_MIN=\i\v" Analog="true" SourceValHigh="1" DestValHigh="1" MaxVal="6000" NTXT="ungemessen: aus der EVCC-Dokumentation, an keiner Anlage geprüft">
+						<Co K="AQ" U="216ceb2c-021b-6f44-00ffd96d0b8e9d97"/>
+						<Co K="Q" U="216ceb2c-021b-6f45-01ffd96d0b8e9d97"/>
+						<IoData Cr="216373ab-00cf-42fc-ffffe001fe9bf86f" Pr="216373ab-00ce-42f4-ffffe001fe9bf86f"/>
+						<Display Type="2" Unit="&lt;v.1&gt; min" StateOnly="true"/>
+					</C>
+					<C Type="VirtualHttpInCmd" Desc="Ladepunkt 1: noch zu ladende Energie" IName="VCI270" V="178" U="216ceb2c-021f-6f4a-ffffe001fe9bf86f" Title="EVCC_LP1_REST_KWH" Cl="0,0,0" Nio="2" WF="16384" ValOT="1" Check="\i;LP1_REST_KWH=\i\v" Analog="true" SourceValHigh="1" DestValHigh="1" MaxVal="1000" NTXT="ungemessen: aus der EVCC-Dokumentation, an keiner Anlage geprüft">
+						<Co K="AQ" U="216ceb2c-021f-6f48-00ffd96d0b8e9d97"/>
+						<Co K="Q" U="216ceb2c-021f-6f49-01ffd96d0b8e9d97"/>
+						<IoData Cr="216373ab-00cf-42fc-ffffe001fe9bf86f" Pr="216373ab-00ce-42f4-ffffe001fe9bf86f"/>
+						<Display Type="2" Unit="&lt;v.1&gt; kWh" StateOnly="true"/>
+					</C>
+					<C Type="VirtualHttpInCmd" Desc="Ladepunkt 1: Ladestrom je Phase" IName="VCI271" V="178" U="216ceb2c-021f-6f4e-ffffe001fe9bf86f" Title="EVCC_LP1_STROM_A" Cl="0,0,0" Nio="2" WF="16384" ValOT="1" Check="\i;LP1_STROM_A=\i\v" Analog="true" SourceValHigh="1" DestValHigh="1" MaxVal="80" NTXT="ungemessen: aus der EVCC-Dokumentation, an keiner Anlage geprüft">
+						<Co K="AQ" U="216ceb2c-021f-6f4c-00ffd96d0b8e9d97"/>
+						<Co K="Q" U="216ceb2c-021f-6f4d-01ffd96d0b8e9d97"/>
+						<IoData Cr="216373ab-00cf-42fc-ffffe001fe9bf86f" Pr="216373ab-00ce-42f4-ffffe001fe9bf86f"/>
+						<Display Type="2" Unit="&lt;v.1&gt; A" StateOnly="true"/>
+					</C>
+					<C Type="VirtualHttpInCmd" Desc="Ladepunkt 1: Ziel-Ladestand" IName="VCI272" V="178" U="216ceb2c-021f-6f52-ffffe001fe9bf86f" Title="EVCC_LP1_PLAN_SOC" Cl="0,0,0" Nio="2" WF="16384" ValOT="1" Check="\i;LP1_PLAN_SOC=\i\v" Signed="true" Analog="true" SourceValHigh="1" DestValHigh="1" MinVal="-1" MaxVal="100" NTXT="ungemessen: aus der EVCC-Dokumentation, an keiner Anlage geprüft">
+						<Co K="AQ" U="216ceb2c-021f-6f50-00ffd96d0b8e9d97"/>
+						<Co K="Q" U="216ceb2c-021f-6f51-01ffd96d0b8e9d97"/>
+						<IoData Cr="216373ab-00cf-42fc-ffffe001fe9bf86f" Pr="216373ab-00ce-42f4-ffffe001fe9bf86f"/>
+						<Display Type="2" Unit="&lt;v.1&gt; %" StateOnly="true"/>
+					</C>
+					<C Type="VirtualHttpInCmd" Desc="Ladepunkt 1: Zielenergie des Ladeplans" IName="VCI273" V="178" U="216ceb2c-021f-6f56-ffffe001fe9bf86f" Title="EVCC_LP1_PLAN_KWH" Cl="0,0,0" Nio="2" WF="16384" ValOT="1" Check="\i;LP1_PLAN_KWH=\i\v" Signed="true" Analog="true" SourceValHigh="1" DestValHigh="1" MinVal="-1" MaxVal="1000" NTXT="ungemessen: aus der EVCC-Dokumentation, an keiner Anlage geprüft">
+						<Co K="AQ" U="216ceb2c-021f-6f54-00ffd96d0b8e9d97"/>
+						<Co K="Q" U="216ceb2c-021f-6f55-01ffd96d0b8e9d97"/>
+						<IoData Cr="216373ab-00cf-42fc-ffffe001fe9bf86f" Pr="216373ab-00ce-42f4-ffffe001fe9bf86f"/>
+						<Display Type="2" Unit="&lt;v.1&gt; kWh" StateOnly="true"/>
+					</C>
+					<C Type="VirtualHttpInCmd" Desc="Ladepunkt 2: Mindest-Ladestand" IName="VCI274" V="178" U="216ceb2c-021f-6f5a-ffffe001fe9bf86f" Title="EVCC_LP2_MIN_SOC" Cl="0,0,0" Nio="2" WF="16384" ValOT="1" Check="\i;LP2_MIN_SOC=\i\v" Signed="true" Analog="true" SourceValHigh="1" DestValHigh="1" MinVal="-1" MaxVal="100" NTXT="ungemessen: aus der EVCC-Dokumentation, an keiner Anlage geprüft">
+						<Co K="AQ" U="216ceb2c-021f-6f58-00ffd96d0b8e9d97"/>
+						<Co K="Q" U="216ceb2c-021f-6f59-01ffd96d0b8e9d97"/>
+						<IoData Cr="216373ab-00cf-42fc-ffffe001fe9bf86f" Pr="216373ab-00ce-42f4-ffffe001fe9bf86f"/>
+						<Display Type="2" Unit="&lt;v.1&gt; %" StateOnly="true"/>
+					</C>
+					<C Type="VirtualHttpInCmd" Desc="Ladepunkt 2: kleinster Ladestrom" IName="VCI275" V="178" U="216ceb2c-022f-6f5e-ffffe001fe9bf86f" Title="EVCC_LP2_MINSTROM_A" Cl="0,0,0" Nio="2" WF="16384" ValOT="1" Check="\i;LP2_MINSTROM_A=\i\v" Signed="true" Analog="true" SourceValHigh="1" DestValHigh="1" MinVal="-1" MaxVal="80" NTXT="ungemessen: aus der EVCC-Dokumentation, an keiner Anlage geprüft">
+						<Co K="AQ" U="216ceb2c-022f-6f5c-00ffd96d0b8e9d97"/>
+						<Co K="Q" U="216ceb2c-022f-6f5d-01ffd96d0b8e9d97"/>
+						<IoData Cr="216373ab-00cf-42fc-ffffe001fe9bf86f" Pr="216373ab-00ce-42f4-ffffe001fe9bf86f"/>
+						<Display Type="2" Unit="&lt;v.1&gt; A" StateOnly="true"/>
+					</C>
+					<C Type="VirtualHttpInCmd" Desc="Ladepunkt 2: höchster Ladestrom" IName="VCI276" V="178" U="216ceb2c-0231-6f62-ffffe001fe9bf86f" Title="EVCC_LP2_MAXSTROM_A" Cl="0,0,0" Nio="2" WF="16384" ValOT="1" Check="\i;LP2_MAXSTROM_A=\i\v" Signed="true" Analog="true" SourceValHigh="1" DestValHigh="1" MinVal="-1" MaxVal="80" NTXT="ungemessen: aus der EVCC-Dokumentation, an keiner Anlage geprüft">
+						<Co K="AQ" U="216ceb2c-0231-6f60-00ffd96d0b8e9d97"/>
+						<Co K="Q" U="216ceb2c-0231-6f61-01ffd96d0b8e9d97"/>
+						<IoData Cr="216373ab-00cf-42fc-ffffe001fe9bf86f" Pr="216373ab-00ce-42f4-ffffe001fe9bf86f"/>
+						<Display Type="2" Unit="&lt;v.1&gt; A" StateOnly="true"/>
+					</C>
+					<C Type="VirtualHttpInCmd" Desc="Ladepunkt 2: Preisschwelle" IName="VCI277" V="178" U="216ceb2c-0231-6f66-ffffe001fe9bf86f" Title="EVCC_LP2_SMARTCOST_GRENZE" Cl="0,0,0" Nio="2" WF="16384" ValOT="1" Check="\i;LP2_SMARTCOST_GRENZE=\i\v" Signed="true" Analog="true" SourceValHigh="1" DestValHigh="1" MinVal="-10" MaxVal="10" NTXT="ungemessen: aus der EVCC-Dokumentation, an keiner Anlage geprüft">
+						<Co K="AQ" U="216ceb2c-0231-6f64-00ffd96d0b8e9d97"/>
+						<Co K="Q" U="216ceb2c-0231-6f65-01ffd96d0b8e9d97"/>
+						<IoData Cr="216373ab-00cf-42fc-ffffe001fe9bf86f" Pr="216373ab-00ce-42f4-ffffe001fe9bf86f"/>
+						<Display Type="2" Unit="&lt;v.1&gt; /kWh" StateOnly="true"/>
+					</C>
+					<C Type="VirtualHttpInCmd" Desc="Ladepunkt 2: Battery Boost aktiv" IName="VCI278" V="178" U="216ceb2c-0238-6f6a-ffffe001fe9bf86f" Title="EVCC_LP2_BATTERIEBOOST" Cl="0,0,0" Nio="2" WF="16384" ValOT="1" Check="\i;LP2_BATTERIEBOOST=\i\v" SourceValHigh="1" DestValHigh="1" MaxVal="1" NTXT="ungemessen: aus der EVCC-Dokumentation, an keiner Anlage geprüft">
+						<Co K="AQ" U="216ceb2c-0238-6f68-00ffd96d0b8e9d97"/>
+						<Co K="Q" U="216ceb2c-0238-6f69-01ffd96d0b8e9d97"/>
+						<IoData Cr="216373ab-00cf-42fc-ffffe001fe9bf86f" Pr="216373ab-00ce-42f4-ffffe001fe9bf86f"/>
+						<Display Type="2" Unit="&lt;v.1&gt;" StateOnly="true"/>
+					</C>
+					<C Type="VirtualHttpInCmd" Desc="Ladepunkt 2: eingestellte Phasen" IName="VCI279" V="178" U="216ceb2c-0238-6f6e-ffffe001fe9bf86f" Title="EVCC_LP2_PHASEN_SOLL" Cl="0,0,0" Nio="2" WF="16384" ValOT="1" Check="\i;LP2_PHASEN_SOLL=\i\v" Signed="true" Analog="true" SourceValHigh="1" DestValHigh="1" MinVal="-1" MaxVal="3" NTXT="ungemessen: aus der EVCC-Dokumentation, an keiner Anlage geprüft">
+						<Co K="AQ" U="216ceb2c-0238-6f6c-00ffd96d0b8e9d97"/>
+						<Co K="Q" U="216ceb2c-0238-6f6d-01ffd96d0b8e9d97"/>
+						<IoData Cr="216373ab-00cf-42fc-ffffe001fe9bf86f" Pr="216373ab-00ce-42f4-ffffe001fe9bf86f"/>
+						<Display Type="2" Unit="&lt;v.1&gt;" StateOnly="true"/>
+					</C>
+					<C Type="VirtualHttpInCmd" Desc="Ladepunkt 2: wartet auf PV-Überschuss" IName="VCI280" V="178" U="216ceb2c-023f-6f72-ffffe001fe9bf86f" Title="EVCC_LP2_PV_WARTEN_MIN" Cl="0,0,0" Nio="2" WF="16384" ValOT="1" Check="\i;LP2_PV_WARTEN_MIN=\i\v" Analog="true" SourceValHigh="1" DestValHigh="1" MaxVal="600" NTXT="ungemessen: aus der EVCC-Dokumentation, an keiner Anlage geprüft">
+						<Co K="AQ" U="216ceb2c-023f-6f70-00ffd96d0b8e9d97"/>
+						<Co K="Q" U="216ceb2c-023f-6f71-01ffd96d0b8e9d97"/>
+						<IoData Cr="216373ab-00cf-42fc-ffffe001fe9bf86f" Pr="216373ab-00ce-42f4-ffffe001fe9bf86f"/>
+						<Display Type="2" Unit="&lt;v.1&gt; min" StateOnly="true"/>
+					</C>
+					<C Type="VirtualHttpInCmd" Desc="Ladepunkt 2: Phasenwartezeit" IName="VCI281" V="178" U="216ceb2c-0240-6f76-ffffe001fe9bf86f" Title="EVCC_LP2_PHASEN_WARTEN_MIN" Cl="0,0,0" Nio="2" WF="16384" ValOT="1" Check="\i;LP2_PHASEN_WARTEN_MIN=\i\v" Analog="true" SourceValHigh="1" DestValHigh="1" MaxVal="600" NTXT="ungemessen: aus der EVCC-Dokumentation, an keiner Anlage geprüft">
+						<Co K="AQ" U="216ceb2c-0240-6f74-00ffd96d0b8e9d97"/>
+						<Co K="Q" U="216ceb2c-0240-6f75-01ffd96d0b8e9d97"/>
+						<IoData Cr="216373ab-00cf-42fc-ffffe001fe9bf86f" Pr="216373ab-00ce-42f4-ffffe001fe9bf86f"/>
+						<Display Type="2" Unit="&lt;v.1&gt; min" StateOnly="true"/>
+					</C>
+					<C Type="VirtualHttpInCmd" Desc="Ladepunkt 2: Zählerstand geladen" IName="VCI282" V="178" U="216ceb2c-0240-6f7a-ffffe001fe9bf86f" Title="EVCC_LP2_GESAMT_KWH" Cl="0,0,0" Nio="2" WF="16384" ValOT="1" Check="\i;LP2_GESAMT_KWH=\i\v" Analog="true" SourceValHigh="1" DestValHigh="1" MaxVal="1000000" NTXT="ungemessen: aus der EVCC-Dokumentation, an keiner Anlage geprüft">
+						<Co K="AQ" U="216ceb2c-0240-6f78-00ffd96d0b8e9d97"/>
+						<Co K="Q" U="216ceb2c-0240-6f79-01ffd96d0b8e9d97"/>
+						<IoData Cr="216373ab-00cf-42fc-ffffe001fe9bf86f" Pr="216373ab-00ce-42f4-ffffe001fe9bf86f"/>
+						<Display Type="2" Unit="&lt;v.1&gt; kWh" StateOnly="true"/>
+					</C>
+					<C Type="VirtualHttpInCmd" Desc="Ladepunkt 2: Energie dieser Sitzung" IName="VCI283" V="178" U="216ceb2c-0240-6f7e-ffffe001fe9bf86f" Title="EVCC_LP2_SITZUNG_KWH" Cl="0,0,0" Nio="2" WF="16384" ValOT="1" Check="\i;LP2_SITZUNG_KWH=\i\v" Analog="true" SourceValHigh="1" DestValHigh="1" MaxVal="1000" NTXT="ungemessen: aus der EVCC-Dokumentation, an keiner Anlage geprüft">
+						<Co K="AQ" U="216ceb2c-0240-6f7c-00ffd96d0b8e9d97"/>
+						<Co K="Q" U="216ceb2c-0240-6f7d-01ffd96d0b8e9d97"/>
+						<IoData Cr="216373ab-00cf-42fc-ffffe001fe9bf86f" Pr="216373ab-00ce-42f4-ffffe001fe9bf86f"/>
+						<Display Type="2" Unit="&lt;v.1&gt; kWh" StateOnly="true"/>
+					</C>
+					<C Type="VirtualHttpInCmd" Desc="Ladepunkt 2: Kosten dieser Sitzung" IName="VCI284" V="178" U="216ceb2c-0240-6f82-ffffe001fe9bf86f" Title="EVCC_LP2_SITZUNG_PREIS" Cl="0,0,0" Nio="2" WF="16384" ValOT="1" Check="\i;LP2_SITZUNG_PREIS=\i\v" Signed="true" Analog="true" SourceValHigh="1" DestValHigh="1" MinVal="-1000" MaxVal="1000" NTXT="ungemessen: aus der EVCC-Dokumentation, an keiner Anlage geprüft">
+						<Co K="AQ" U="216ceb2c-0240-6f80-00ffd96d0b8e9d97"/>
+						<Co K="Q" U="216ceb2c-0240-6f81-01ffd96d0b8e9d97"/>
+						<IoData Cr="216373ab-00cf-42fc-ffffe001fe9bf86f" Pr="216373ab-00ce-42f4-ffffe001fe9bf86f"/>
+						<Display Type="2" Unit="&lt;v.1&gt;" StateOnly="true"/>
+					</C>
+					<C Type="VirtualHttpInCmd" Desc="Ladepunkt 2: Durchschnittspreis" IName="VCI285" V="178" U="216ceb2c-0251-6f86-ffffe001fe9bf86f" Title="EVCC_LP2_SITZUNG_PREIS_KWH" Cl="0,0,0" Nio="2" WF="16384" ValOT="1" Check="\i;LP2_SITZUNG_PREIS_KWH=\i\v" Signed="true" Analog="true" SourceValHigh="1" DestValHigh="1" MinVal="-10" MaxVal="10" NTXT="ungemessen: aus der EVCC-Dokumentation, an keiner Anlage geprüft">
+						<Co K="AQ" U="216ceb2c-0251-6f84-00ffd96d0b8e9d97"/>
+						<Co K="Q" U="216ceb2c-0251-6f85-01ffd96d0b8e9d97"/>
+						<IoData Cr="216373ab-00cf-42fc-ffffe001fe9bf86f" Pr="216373ab-00ce-42f4-ffffe001fe9bf86f"/>
+						<Display Type="2" Unit="&lt;v.1&gt; /kWh" StateOnly="true"/>
+					</C>
+					<C Type="VirtualHttpInCmd" Desc="Ladepunkt 2: CO₂-Intensität" IName="VCI286" V="178" U="216ceb2c-0251-6f8a-ffffe001fe9bf86f" Title="EVCC_LP2_SITZUNG_CO2" Cl="0,0,0" Nio="2" WF="16384" ValOT="1" Check="\i;LP2_SITZUNG_CO2=\i\v" Analog="true" SourceValHigh="1" DestValHigh="1" MaxVal="1000" NTXT="ungemessen: aus der EVCC-Dokumentation, an keiner Anlage geprüft">
+						<Co K="AQ" U="216ceb2c-0251-6f88-00ffd96d0b8e9d97"/>
+						<Co K="Q" U="216ceb2c-0251-6f89-01ffd96d0b8e9d97"/>
+						<IoData Cr="216373ab-00cf-42fc-ffffe001fe9bf86f" Pr="216373ab-00ce-42f4-ffffe001fe9bf86f"/>
+						<Display Type="2" Unit="&lt;v.1&gt; g/kWh" StateOnly="true"/>
+					</C>
+					<C Type="VirtualHttpInCmd" Desc="Ladepunkt 2: bisherige Ladedauer" IName="VCI287" V="178" U="216ceb2c-0251-6f8e-ffffe001fe9bf86f" Title="EVCC_LP2_LADEDAUER_MIN" Cl="0,0,0" Nio="2" WF="16384" ValOT="1" Check="\i;LP2_LADEDAUER_MIN=\i\v" Analog="true" SourceValHigh="1" DestValHigh="1" MaxVal="6000" NTXT="ungemessen: aus der EVCC-Dokumentation, an keiner Anlage geprüft">
+						<Co K="AQ" U="216ceb2c-0251-6f8c-00ffd96d0b8e9d97"/>
+						<Co K="Q" U="216ceb2c-0251-6f8d-01ffd96d0b8e9d97"/>
+						<IoData Cr="216373ab-00cf-42fc-ffffe001fe9bf86f" Pr="216373ab-00ce-42f4-ffffe001fe9bf86f"/>
+						<Display Type="2" Unit="&lt;v.1&gt; min" StateOnly="true"/>
+					</C>
+					<C Type="VirtualHttpInCmd" Desc="Ladepunkt 2: noch zu ladende Energie" IName="VCI288" V="178" U="216ceb2c-0251-6f92-ffffe001fe9bf86f" Title="EVCC_LP2_REST_KWH" Cl="0,0,0" Nio="2" WF="16384" ValOT="1" Check="\i;LP2_REST_KWH=\i\v" Analog="true" SourceValHigh="1" DestValHigh="1" MaxVal="1000" NTXT="ungemessen: aus der EVCC-Dokumentation, an keiner Anlage geprüft">
+						<Co K="AQ" U="216ceb2c-0251-6f90-00ffd96d0b8e9d97"/>
+						<Co K="Q" U="216ceb2c-0251-6f91-01ffd96d0b8e9d97"/>
+						<IoData Cr="216373ab-00cf-42fc-ffffe001fe9bf86f" Pr="216373ab-00ce-42f4-ffffe001fe9bf86f"/>
+						<Display Type="2" Unit="&lt;v.1&gt; kWh" StateOnly="true"/>
+					</C>
+					<C Type="VirtualHttpInCmd" Desc="Ladepunkt 2: Ladestrom je Phase" IName="VCI289" V="178" U="216ceb2c-025c-6f96-ffffe001fe9bf86f" Title="EVCC_LP2_STROM_A" Cl="0,0,0" Nio="2" WF="16384" ValOT="1" Check="\i;LP2_STROM_A=\i\v" Analog="true" SourceValHigh="1" DestValHigh="1" MaxVal="80" NTXT="ungemessen: aus der EVCC-Dokumentation, an keiner Anlage geprüft">
+						<Co K="AQ" U="216ceb2c-025c-6f94-00ffd96d0b8e9d97"/>
+						<Co K="Q" U="216ceb2c-025c-6f95-01ffd96d0b8e9d97"/>
+						<IoData Cr="216373ab-00cf-42fc-ffffe001fe9bf86f" Pr="216373ab-00ce-42f4-ffffe001fe9bf86f"/>
+						<Display Type="2" Unit="&lt;v.1&gt; A" StateOnly="true"/>
+					</C>
+					<C Type="VirtualHttpInCmd" Desc="Ladepunkt 2: Ziel-Ladestand" IName="VCI290" V="178" U="216ceb2c-0260-6f9a-ffffe001fe9bf86f" Title="EVCC_LP2_PLAN_SOC" Cl="0,0,0" Nio="2" WF="16384" ValOT="1" Check="\i;LP2_PLAN_SOC=\i\v" Signed="true" Analog="true" SourceValHigh="1" DestValHigh="1" MinVal="-1" MaxVal="100" NTXT="ungemessen: aus der EVCC-Dokumentation, an keiner Anlage geprüft">
+						<Co K="AQ" U="216ceb2c-0260-6f98-00ffd96d0b8e9d97"/>
+						<Co K="Q" U="216ceb2c-0260-6f99-01ffd96d0b8e9d97"/>
+						<IoData Cr="216373ab-00cf-42fc-ffffe001fe9bf86f" Pr="216373ab-00ce-42f4-ffffe001fe9bf86f"/>
+						<Display Type="2" Unit="&lt;v.1&gt; %" StateOnly="true"/>
+					</C>
+					<C Type="VirtualHttpInCmd" Desc="Ladepunkt 2: Zielenergie des Ladeplans" IName="VCI291" V="178" U="216ceb2c-0266-6f9e-ffffe001fe9bf86f" Title="EVCC_LP2_PLAN_KWH" Cl="0,0,0" Nio="2" WF="16384" ValOT="1" Check="\i;LP2_PLAN_KWH=\i\v" Signed="true" Analog="true" SourceValHigh="1" DestValHigh="1" MinVal="-1" MaxVal="1000" NTXT="ungemessen: aus der EVCC-Dokumentation, an keiner Anlage geprüft">
+						<Co K="AQ" U="216ceb2c-0266-6f9c-00ffd96d0b8e9d97"/>
+						<Co K="Q" U="216ceb2c-0266-6f9d-01ffd96d0b8e9d97"/>
+						<IoData Cr="216373ab-00cf-42fc-ffffe001fe9bf86f" Pr="216373ab-00ce-42f4-ffffe001fe9bf86f"/>
+						<Display Type="2" Unit="&lt;v.1&gt; kWh" StateOnly="true"/>
+					</C>
+					<C Type="VirtualHttpInCmd" Desc="Fahrzeug 1: Limit-Ladestand" IName="VCI292" V="178" U="216ceb2c-0266-6fa2-ffffe001fe9bf86f" Title="EVCC_FZ1_LIMIT_SOC" Cl="0,0,0" Nio="2" WF="16384" ValOT="1" Check="\i;FZ1_LIMIT_SOC=\i\v" Signed="true" Analog="true" SourceValHigh="1" DestValHigh="1" MinVal="-1" MaxVal="100">
+						<Co K="AQ" U="216ceb2c-0266-6fa0-00ffd96d0b8e9d97"/>
+						<Co K="Q" U="216ceb2c-0266-6fa1-01ffd96d0b8e9d97"/>
+						<IoData Cr="216373ab-00cf-42fc-ffffe001fe9bf86f" Pr="216373ab-00ce-42f4-ffffe001fe9bf86f"/>
+						<Display Type="2" Unit="&lt;v.1&gt; %" StateOnly="true"/>
+					</C>
+					<C Type="VirtualHttpInCmd" Desc="Fahrzeug 2: Limit-Ladestand" IName="VCI293" V="178" U="216ceb2c-0266-6fa6-ffffe001fe9bf86f" Title="EVCC_FZ2_LIMIT_SOC" Cl="0,0,0" Nio="2" WF="16384" ValOT="1" Check="\i;FZ2_LIMIT_SOC=\i\v" Signed="true" Analog="true" SourceValHigh="1" DestValHigh="1" MinVal="-1" MaxVal="100">
+						<Co K="AQ" U="216ceb2c-0266-6fa4-00ffd96d0b8e9d97"/>
+						<Co K="Q" U="216ceb2c-0266-6fa5-01ffd96d0b8e9d97"/>
+						<IoData Cr="216373ab-00cf-42fc-ffffe001fe9bf86f" Pr="216373ab-00ce-42f4-ffffe001fe9bf86f"/>
+						<Display Type="2" Unit="&lt;v.1&gt; %" StateOnly="true"/>
+					</C>
+					<C Type="VirtualHttpInCmd" Desc="Fehlerart" IName="VCI294" V="178" U="216ceb2c-0266-6faa-ffffe001fe9bf86f" Title="EVCC_FEHLER_NR" Cl="238,238,238" Nio="2" WF="16400" ValOT="1" Check="\i;FEHLER_NR=\i\v" Analog="true" SourceValHigh="1" DestValHigh="1" MaxVal="9">
+						<Co K="AQ" U="216ceb2c-0266-6fa8-00ffd96d0b8e9d97"/>
+						<Co K="Q" U="216ceb2c-0266-6fa9-01ffd96d0b8e9d97"/>
+						<IoData Cr="216373ab-00cf-42fc-ffffe001fe9bf86f" Pr="216373ab-00cf-42f8-ffffe001fe9bf86f"/>
+						<Display Type="2" Unit="&lt;v.1&gt;" StateOnly="true"/>
+					</C>
+					<C Type="VirtualHttpInCmd" Desc="EVCC ist betriebsbereit" IName="VCI295" V="178" U="216ceb2c-0266-6fae-ffffe001fe9bf86f" Title="EVCC_BETRIEBSBEREIT" Cl="0,0,0" Nio="2" WF="16384" ValOT="1" Check="\i;BETRIEBSBEREIT=\i\v" SourceValHigh="1" DestValHigh="1" MaxVal="1">
+						<Co K="AQ" U="216ceb2c-0266-6fac-00ffd96d0b8e9d97"/>
+						<Co K="Q" U="216ceb2c-0266-6fad-01ffd96d0b8e9d97"/>
+						<IoData Cr="216373ab-00cf-42fc-ffffe001fe9bf86f" Pr="216373ab-00ce-42f4-ffffe001fe9bf86f"/>
+						<Display Type="2" Unit="&lt;v.1&gt;" StateOnly="true"/>
+					</C>
+					<C Type="VirtualHttpInCmd" Desc="Preisvorschau gültig" IName="VCI296" V="178" U="216ceb2c-0272-6fb2-ffffe001fe9bf86f" Title="EVCC_PREIS_OK" Cl="238,238,238" Nio="2" WF="16400" ValOT="1" Check="\i;PREIS_OK=\i\v" SourceValHigh="1" DestValHigh="1" MaxVal="1">
+						<Co K="AQ" U="216ceb2c-0272-6fb0-00ffd96d0b8e9d97"/>
+						<Co K="Q" U="216ceb2c-0272-6fb1-01ffd96d0b8e9d97"/>
+						<IoData Cr="216373ab-00cf-42fc-ffffe001fe9bf86f" Pr="216373ab-00cf-42f8-ffffe001fe9bf86f"/>
+						<Display Type="2" Unit="&lt;v.1&gt;" StateOnly="true"/>
+					</C>
+				</C>
+				<C Type="VirtualHttpIn" Desc="Wärmepumpe Cloud" IName="VHI14" V="178" U="216cedb1-0096-0f7b-ffffe001fe9bf86f" Title="Wärmepumpe Cloud" Cl="0,0,0" WF="16384" Address="http://loxberry/plugins/waermepumpe/index.php?token=DEIN_TOKEN&amp;aktion=status" Poll="300" Timeout="4000" Allowedtimeouts="10" on="true">
+					<C Type="Online" IName="S0" V="178" U="216cedb1-00a0-0f7e-ffffe001fe9bf86f" Title="Onlinestatus Eingang VHI1" Cl="0,0,0" Nio="1" WF="20480" ValOT="1" MinTime="10" NoMsg="true" Idx="-1">
+						<Co K="Q" U="216cedb1-00a0-0f7d-00ff8ccbc0797342"/>
+						<IoData Cr="216373ab-00d3-432c-ffffe001fe9bf86f" Pr="216373ab-00ce-42f4-ffffe001fe9bf86f" St="2"/>
+						<Display Unit="&lt;v&gt;" StateOnly="true" IxText="8"/>
+					</C>
+					<C Type="VirtualHttpInCmd" Desc="Letzter Abruf gelungen" IName="VCI297" V="178" U="216cedb1-00a3-0f82-ffffe001fe9bf86f" Title="WP_OK" Cl="0,0,0" Nio="2" WF="16384" ValOT="1" Check="\i;OK=\i\v" SourceValHigh="1" DestValHigh="1" MaxVal="1">
+						<Co K="AQ" U="216cedb1-00a3-0f80-00ff8ccbc0797342"/>
+						<Co K="Q" U="216cedb1-00a3-0f81-01ff8ccbc0797342"/>
+						<IoData Cr="216373ab-00cf-42fc-ffffe001fe9bf86f" Pr="216373ab-00ce-42f4-ffffe001fe9bf86f"/>
+						<Display Type="2" Unit="&lt;v&gt;" StateOnly="true"/>
+					</C>
+					<C Type="VirtualHttpInCmd" Desc="SG-Ready-Zustand" IName="VCI298" V="178" U="216cedb1-00a7-0f86-ffffe001fe9bf86f" Title="WP_STUFE" Cl="238,238,238" Nio="2" WF="16400" ValOT="1" Check="\i;STUFE=\i\v" Analog="true" SourceValHigh="1" DestValHigh="1" MinVal="1" MaxVal="4">
+						<Co K="AQ" U="216cedb1-00a7-0f84-00ff8ccbc0797342"/>
+						<Co K="Q" U="216cedb1-00a7-0f85-01ff8ccbc0797342"/>
+						<IoData Cr="216373ab-00cf-42fc-ffffe001fe9bf86f" Pr="216373ab-00cf-42f8-ffffe001fe9bf86f"/>
+						<Display Type="2" Unit="&lt;v&gt;" StateOnly="true"/>
+					</C>
+					<C Type="VirtualHttpInCmd" Desc="Alter der Daten" IName="VCI299" V="178" U="216cedb1-00a7-0f8a-ffffe001fe9bf86f" Title="WP_ALTER" Cl="238,238,238" Nio="2" WF="16400" ValOT="1" Check="\i;ALTER=\i\v" Analog="true" SourceValHigh="1" DestValHigh="1" MaxVal="86400">
+						<Co K="AQ" U="216cedb1-00a7-0f88-00ff8ccbc0797342"/>
+						<Co K="Q" U="216cedb1-00a7-0f89-01ff8ccbc0797342"/>
+						<IoData Cr="216373ab-00cf-42fc-ffffe001fe9bf86f" Pr="216373ab-00cf-42f8-ffffe001fe9bf86f"/>
+						<Display Type="2" Unit="&lt;v&gt; s" StateOnly="true"/>
+					</C>
+					<C Type="VirtualHttpInCmd" Desc="Cloud-Aufrufe heute übrig" IName="VCI300" V="178" U="216cedb1-00a7-0f8e-ffffe001fe9bf86f" Title="WP_BUDGET" Cl="0,0,0" Nio="2" WF="16384" ValOT="1" Check="\i;BUDGET=\i\v" Signed="true" Analog="true" SourceValHigh="1" DestValHigh="1" MinVal="-1" MaxVal="1000">
+						<Co K="AQ" U="216cedb1-00a7-0f8c-00ff8ccbc0797342"/>
+						<Co K="Q" U="216cedb1-00a7-0f8d-01ff8ccbc0797342"/>
+						<IoData Cr="216373ab-00cf-42fc-ffffe001fe9bf86f" Pr="216373ab-00ce-42f4-ffffe001fe9bf86f"/>
+						<Display Type="2" Unit="&lt;v&gt;" StateOnly="true"/>
+					</C>
+					<C Type="VirtualHttpInCmd" Desc="Fehlabrufe in Folge" IName="VCI301" V="178" U="216cedb1-00b1-0f92-ffffe001fe9bf86f" Title="WP_STOERUNG" Cl="0,0,0" Nio="2" WF="16384" ValOT="1" Check="\i;STOERUNG=\i\v" Analog="true" SourceValHigh="1" DestValHigh="1" MaxVal="9999">
+						<Co K="AQ" U="216cedb1-00b1-0f90-00ff8ccbc0797342"/>
+						<Co K="Q" U="216cedb1-00b1-0f91-01ff8ccbc0797342"/>
+						<IoData Cr="216373ab-00cf-42fc-ffffe001fe9bf86f" Pr="216373ab-00ce-42f4-ffffe001fe9bf86f"/>
+						<Display Type="2" Unit="&lt;v&gt;" StateOnly="true"/>
+					</C>
+					<C Type="VirtualHttpInCmd" Desc="Außentemperatur" IName="VCI302" V="178" U="216cedb1-00b5-0f96-ffffe001fe9bf86f" Title="WP_AUSSEN" Cl="0,0,0" Nio="2" WF="16384" ValOT="1" Check="\i;AUSSEN=\i\v" Signed="true" Analog="true" SourceValHigh="1" DestValHigh="1" MinVal="-50" MaxVal="50">
+						<Co K="AQ" U="216cedb1-00b5-0f94-00ff8ccbc0797342"/>
+						<Co K="Q" U="216cedb1-00b5-0f95-01ff8ccbc0797342"/>
+						<IoData Cr="216373ab-00cf-42fc-ffffe001fe9bf86f" Pr="216373ab-00ce-42f4-ffffe001fe9bf86f"/>
+						<Display Type="2" Unit="&lt;v.1&gt; °C" StateOnly="true"/>
+					</C>
+					<C Type="VirtualHttpInCmd" Desc="Vorlauftemperatur" IName="VCI303" V="178" U="216cedb1-00b7-0f9a-ffffe001fe9bf86f" Title="WP_VORLAUF" Cl="0,0,0" Nio="2" WF="16384" ValOT="1" Check="\i;VORLAUF=\i\v" Signed="true" Analog="true" SourceValHigh="1" DestValHigh="1" MinVal="-20" MaxVal="100">
+						<Co K="AQ" U="216cedb1-00b7-0f98-00ff8ccbc0797342"/>
+						<Co K="Q" U="216cedb1-00b7-0f99-01ff8ccbc0797342"/>
+						<IoData Cr="216373ab-00cf-42fc-ffffe001fe9bf86f" Pr="216373ab-00ce-42f4-ffffe001fe9bf86f"/>
+						<Display Type="2" Unit="&lt;v.1&gt; °C" StateOnly="true"/>
+					</C>
+					<C Type="VirtualHttpInCmd" Desc="Vorlauf-Sollwert" IName="VCI304" V="178" U="216cedb1-00b7-0f9e-ffffe001fe9bf86f" Title="WP_VLSOLL" Cl="0,0,0" Nio="2" WF="16384" ValOT="1" Check="\i;VLSOLL=\i\v" Signed="true" Analog="true" SourceValHigh="1" DestValHigh="1" MinVal="-20" MaxVal="100">
+						<Co K="AQ" U="216cedb1-00b7-0f9c-00ff8ccbc0797342"/>
+						<Co K="Q" U="216cedb1-00b7-0f9d-01ff8ccbc0797342"/>
+						<IoData Cr="216373ab-00cf-42fc-ffffe001fe9bf86f" Pr="216373ab-00ce-42f4-ffffe001fe9bf86f"/>
+						<Display Type="2" Unit="&lt;v.1&gt; °C" StateOnly="true"/>
+					</C>
+					<C Type="VirtualHttpInCmd" Desc="Heizkurve" IName="VCI305" V="178" U="216cedb1-00bc-0fa2-ffffe001fe9bf86f" Title="WP_HEIZKURVE" Cl="0,0,0" Nio="2" WF="16384" ValOT="1" Check="\i;HEIZKURVE=\i\v" Analog="true" SourceValHigh="1" DestValHigh="1" MaxVal="5">
+						<Co K="AQ" U="216cedb1-00bc-0fa0-00ff8ccbc0797342"/>
+						<Co K="Q" U="216cedb1-00bc-0fa1-01ff8ccbc0797342"/>
+						<IoData Cr="216373ab-00cf-42fc-ffffe001fe9bf86f" Pr="216373ab-00ce-42f4-ffffe001fe9bf86f"/>
+						<Display Type="2" Unit="&lt;v.2&gt;" StateOnly="true"/>
+					</C>
+					<C Type="VirtualHttpInCmd" Desc="Rücklauftemperatur" IName="VCI306" V="178" U="216cedb1-00bc-0fa6-ffffe001fe9bf86f" Title="WP_RUECKLAUF" Cl="0,0,0" Nio="2" WF="16384" ValOT="1" Check="\i;RUECKLAUF=\i\v" Signed="true" Analog="true" SourceValHigh="1" DestValHigh="1" MinVal="-20" MaxVal="100">
+						<Co K="AQ" U="216cedb1-00bc-0fa4-00ff8ccbc0797342"/>
+						<Co K="Q" U="216cedb1-00bc-0fa5-01ff8ccbc0797342"/>
+						<IoData Cr="216373ab-00cf-42fc-ffffe001fe9bf86f" Pr="216373ab-00ce-42f4-ffffe001fe9bf86f"/>
+						<Display Type="2" Unit="&lt;v.1&gt; °C" StateOnly="true"/>
+					</C>
+					<C Type="VirtualHttpInCmd" Desc="Raumtemperatur" IName="VCI307" V="178" U="216cedb1-00c3-0faa-ffffe001fe9bf86f" Title="WP_RAUM" Cl="0,0,0" Nio="2" WF="16384" ValOT="1" Check="\i;RAUM=\i\v" Signed="true" Analog="true" SourceValHigh="1" DestValHigh="1" MinVal="-20" MaxVal="60">
+						<Co K="AQ" U="216cedb1-00c3-0fa8-00ff8ccbc0797342"/>
+						<Co K="Q" U="216cedb1-00c3-0fa9-01ff8ccbc0797342"/>
+						<IoData Cr="216373ab-00cf-42fc-ffffe001fe9bf86f" Pr="216373ab-00ce-42f4-ffffe001fe9bf86f"/>
+						<Display Type="2" Unit="&lt;v.1&gt; °C" StateOnly="true"/>
+					</C>
+					<C Type="VirtualHttpInCmd" Desc="Raum-Sollwert" IName="VCI308" V="178" U="216cedb1-00c5-0fae-ffffe001fe9bf86f" Title="WP_SOLL" Cl="0,0,0" Nio="2" WF="16384" ValOT="1" Check="\i;SOLL=\i\v" Signed="true" Analog="true" SourceValHigh="1" DestValHigh="1" MinVal="-20" MaxVal="60">
+						<Co K="AQ" U="216cedb1-00c5-0fac-00ff8ccbc0797342"/>
+						<Co K="Q" U="216cedb1-00c5-0fad-01ff8ccbc0797342"/>
+						<IoData Cr="216373ab-00cf-42fc-ffffe001fe9bf86f" Pr="216373ab-00ce-42f4-ffffe001fe9bf86f"/>
+						<Display Type="2" Unit="&lt;v.1&gt; °C" StateOnly="true"/>
+					</C>
+					<C Type="VirtualHttpInCmd" Desc="Warmwassertemperatur" IName="VCI309" V="178" U="216cedb1-00c5-0fb2-ffffe001fe9bf86f" Title="WP_WW" Cl="0,0,0" Nio="2" WF="16384" ValOT="1" Check="\i;WW=\i\v" Analog="true" SourceValHigh="1" DestValHigh="1" MaxVal="100">
+						<Co K="AQ" U="216cedb1-00c5-0fb0-00ff8ccbc0797342"/>
+						<Co K="Q" U="216cedb1-00c5-0fb1-01ff8ccbc0797342"/>
+						<IoData Cr="216373ab-00cf-42fc-ffffe001fe9bf86f" Pr="216373ab-00ce-42f4-ffffe001fe9bf86f"/>
+						<Display Type="2" Unit="&lt;v.1&gt; °C" StateOnly="true"/>
+					</C>
+					<C Type="VirtualHttpInCmd" Desc="Warmwasser-Sollwert" IName="VCI310" V="178" U="216cedb1-00cd-0fb6-ffffe001fe9bf86f" Title="WP_WWSOLL" Cl="0,0,0" Nio="2" WF="16384" ValOT="1" Check="\i;WWSOLL=\i\v" Analog="true" SourceValHigh="1" DestValHigh="1" MaxVal="100">
+						<Co K="AQ" U="216cedb1-00cd-0fb4-00ff8ccbc0797342"/>
+						<Co K="Q" U="216cedb1-00cd-0fb5-01ff8ccbc0797342"/>
+						<IoData Cr="216373ab-00cf-42fc-ffffe001fe9bf86f" Pr="216373ab-00ce-42f4-ffffe001fe9bf86f"/>
+						<Display Type="2" Unit="&lt;v.1&gt; °C" StateOnly="true"/>
+					</C>
+					<C Type="VirtualHttpInCmd" Desc="Leistungsaufnahme" IName="VCI311" V="178" U="216cedb1-00cd-0fba-ffffe001fe9bf86f" Title="WP_LEISTUNG" Cl="0,0,0" Nio="2" WF="16384" ValOT="1" Check="\i;LEISTUNG=\i\v" Analog="true" SourceValHigh="1" DestValHigh="1" MaxVal="30000">
+						<Co K="AQ" U="216cedb1-00cd-0fb8-00ff8ccbc0797342"/>
+						<Co K="Q" U="216cedb1-00cd-0fb9-01ff8ccbc0797342"/>
+						<IoData Cr="216373ab-00cf-42fc-ffffe001fe9bf86f" Pr="216373ab-00ce-42f4-ffffe001fe9bf86f"/>
+						<Display Type="2" Unit="&lt;v&gt; W" StateOnly="true"/>
+					</C>
+					<C Type="VirtualHttpInCmd" Desc="Verdichter läuft" IName="VCI312" V="178" U="216cedb1-00d2-0fbe-ffffe001fe9bf86f" Title="WP_KOMPRESSOR" Cl="0,0,0" Nio="2" WF="16384" ValOT="1" Check="\i;KOMPRESSOR=\i\v" SourceValHigh="1" DestValHigh="1" MaxVal="1">
+						<Co K="AQ" U="216cedb1-00d2-0fbc-00ff8ccbc0797342"/>
+						<Co K="Q" U="216cedb1-00d2-0fbd-01ff8ccbc0797342"/>
+						<IoData Cr="216373ab-00cf-42fc-ffffe001fe9bf86f" Pr="216373ab-00ce-42f4-ffffe001fe9bf86f"/>
+						<Display Type="2" Unit="&lt;v&gt;" StateOnly="true"/>
+					</C>
+					<C Type="VirtualHttpInCmd" Desc="Warmwasser-Zwang aktiv" IName="VCI313" V="178" U="216cedb1-00d5-0fc2-ffffe001fe9bf86f" Title="WP_WWZWANG" Cl="0,0,0" Nio="2" WF="16384" ValOT="1" Check="\i;WWZWANG=\i\v" SourceValHigh="1" DestValHigh="1" MaxVal="1">
+						<Co K="AQ" U="216cedb1-00d5-0fc0-00ff8ccbc0797342"/>
+						<Co K="Q" U="216cedb1-00d5-0fc1-01ff8ccbc0797342"/>
+						<IoData Cr="216373ab-00cf-42fc-ffffe001fe9bf86f" Pr="216373ab-00ce-42f4-ffffe001fe9bf86f"/>
+						<Display Type="2" Unit="&lt;v&gt;" StateOnly="true"/>
+					</C>
+					<C Type="VirtualHttpInCmd" Desc="Gerät eingeschaltet" IName="VCI314" V="178" U="216cedb1-00d5-0fc6-ffffe001fe9bf86f" Title="WP_EIN" Cl="0,0,0" Nio="2" WF="16384" ValOT="1" Check="\i;EIN=\i\v" SourceValHigh="1" DestValHigh="1" MaxVal="1">
+						<Co K="AQ" U="216cedb1-00d5-0fc4-00ff8ccbc0797342"/>
+						<Co K="Q" U="216cedb1-00d5-0fc5-01ff8ccbc0797342"/>
+						<IoData Cr="216373ab-00cf-42fc-ffffe001fe9bf86f" Pr="216373ab-00ce-42f4-ffffe001fe9bf86f"/>
+						<Display Type="2" Unit="&lt;v&gt;" StateOnly="true"/>
+					</C>
+					<C Type="VirtualHttpInCmd" Desc="Arbeitszahl" IName="VCI315" V="178" U="216cedb1-00d5-0fca-ffffe001fe9bf86f" Title="WP_COP" Cl="0,0,0" Nio="2" WF="16384" ValOT="1" Check="\i;COP=\i\v" Analog="true" SourceValHigh="1" DestValHigh="1" MaxVal="10">
+						<Co K="AQ" U="216cedb1-00d5-0fc8-00ff8ccbc0797342"/>
+						<Co K="Q" U="216cedb1-00d5-0fc9-01ff8ccbc0797342"/>
+						<IoData Cr="216373ab-00cf-42fc-ffffe001fe9bf86f" Pr="216373ab-00ce-42f4-ffffe001fe9bf86f"/>
+						<Display Type="2" Unit="&lt;v.2&gt;" StateOnly="true"/>
+					</C>
+					<C Type="VirtualHttpInCmd" Desc="Strom im Zeitraum" IName="VCI316" V="178" U="216cedb1-00d5-0fce-ffffe001fe9bf86f" Title="WP_STROM" Cl="0,0,0" Nio="2" WF="16384" ValOT="1" Check="\i;STROM=\i\v" Analog="true" SourceValHigh="1" DestValHigh="1" MaxVal="100000">
+						<Co K="AQ" U="216cedb1-00d5-0fcc-00ff8ccbc0797342"/>
+						<Co K="Q" U="216cedb1-00d5-0fcd-01ff8ccbc0797342"/>
+						<IoData Cr="216373ab-00cf-42fc-ffffe001fe9bf86f" Pr="216373ab-00ce-42f4-ffffe001fe9bf86f"/>
+						<Display Type="2" Unit="&lt;v.1&gt; kWh" StateOnly="true"/>
+					</C>
+					<C Type="VirtualHttpInCmd" Desc="Wärme im Zeitraum" IName="VCI317" V="178" U="216cedb1-00e6-0fd2-ffffe001fe9bf86f" Title="WP_WAERME" Cl="0,0,0" Nio="2" WF="16384" ValOT="1" Check="\i;WAERME=\i\v" Analog="true" SourceValHigh="1" DestValHigh="1" MaxVal="400000">
+						<Co K="AQ" U="216cedb1-00e5-0fd0-00ff8ccbc0797342"/>
+						<Co K="Q" U="216cedb1-00e5-0fd1-01ff8ccbc0797342"/>
+						<IoData Cr="216373ab-00cf-42fc-ffffe001fe9bf86f" Pr="216373ab-00ce-42f4-ffffe001fe9bf86f"/>
+						<Display Type="2" Unit="&lt;v.1&gt; kWh" StateOnly="true"/>
+					</C>
+					<C Type="VirtualHttpInCmd" Desc="Spreizung Vorlauf/Rücklauf" IName="VCI318" V="178" U="216cedb1-00e6-0fd6-ffffe001fe9bf86f" Title="WP_SPREIZUNG" Cl="0,0,0" Nio="2" WF="16384" ValOT="1" Check="\i;SPREIZUNG=\i\v" Signed="true" Analog="true" SourceValHigh="1" DestValHigh="1" MinVal="-20" MaxVal="30">
+						<Co K="AQ" U="216cedb1-00e6-0fd4-00ff8ccbc0797342"/>
+						<Co K="Q" U="216cedb1-00e6-0fd5-01ff8ccbc0797342"/>
+						<IoData Cr="216373ab-00cf-42fc-ffffe001fe9bf86f" Pr="216373ab-00ce-42f4-ffffe001fe9bf86f"/>
+						<Display Type="2" Unit="&lt;v.1&gt; K" StateOnly="true"/>
+					</C>
+					<C Type="VirtualHttpInCmd" Desc="Verdichterstarts heute" IName="VCI319" V="178" U="216cedb1-00e6-0fda-ffffe001fe9bf86f" Title="WP_TAKTE" Cl="0,0,0" Nio="2" WF="16384" ValOT="1" Check="\i;TAKTE=\i\v" Analog="true" SourceValHigh="1" DestValHigh="1" MaxVal="200">
+						<Co K="AQ" U="216cedb1-00e6-0fd8-00ff8ccbc0797342"/>
+						<Co K="Q" U="216cedb1-00e6-0fd9-01ff8ccbc0797342"/>
+						<IoData Cr="216373ab-00cf-42fc-ffffe001fe9bf86f" Pr="216373ab-00ce-42f4-ffffe001fe9bf86f"/>
+						<Display Type="2" Unit="&lt;v&gt;" StateOnly="true"/>
+					</C>
+					<C Type="VirtualHttpInCmd" Desc="Laufzeit je Start" IName="VCI320" V="178" U="216cedb1-00e6-0fde-ffffe001fe9bf86f" Title="WP_LAUFZEIT" Cl="0,0,0" Nio="2" WF="16384" ValOT="1" Check="\i;LAUFZEIT=\i\v" Analog="true" SourceValHigh="1" DestValHigh="1" MaxVal="1440">
+						<Co K="AQ" U="216cedb1-00e6-0fdc-00ff8ccbc0797342"/>
+						<Co K="Q" U="216cedb1-00e6-0fdd-01ff8ccbc0797342"/>
+						<IoData Cr="216373ab-00cf-42fc-ffffe001fe9bf86f" Pr="216373ab-00ce-42f4-ffffe001fe9bf86f"/>
+						<Display Type="2" Unit="&lt;v.1&gt; min" StateOnly="true"/>
+					</C>
+					<C Type="VirtualHttpInCmd" Desc="Laufanteil heute" IName="VCI321" V="178" U="216cedb1-00f5-0fe2-ffffe001fe9bf86f" Title="WP_LAUFANTEIL" Cl="0,0,0" Nio="2" WF="16384" ValOT="1" Check="\i;LAUFANTEIL=\i\v" Analog="true" SourceValHigh="1" DestValHigh="1" MaxVal="100">
+						<Co K="AQ" U="216cedb1-00f5-0fe0-00ff8ccbc0797342"/>
+						<Co K="Q" U="216cedb1-00f5-0fe1-01ff8ccbc0797342"/>
+						<IoData Cr="216373ab-00cf-42fc-ffffe001fe9bf86f" Pr="216373ab-00ce-42f4-ffffe001fe9bf86f"/>
+						<Display Type="2" Unit="&lt;v&gt; %" StateOnly="true"/>
+					</C>
+				</C>
+				<C Type="VirtualHttpIn" Desc="Fensterbilanz" IName="VHI15" V="178" U="216ceefc-029b-b77b-ffffe001fe9bf86f" Title="Fensterbilanz" Cl="0,0,0" WF="16384" Address="http://loxberry/plugins/fensterbilanz/index.php?token=DEIN_TOKEN&amp;aktion=status" Poll="60" Timeout="4000" Allowedtimeouts="10" on="true">
+					<C Type="Online" IName="S0" V="178" U="216ceefc-02b2-b77e-ffffe001fe9bf86f" Title="Onlinestatus Eingang VHI1" Cl="0,0,0" Nio="1" WF="20480" ValOT="1" MinTime="10" NoMsg="true" Idx="-1">
+						<Co K="Q" U="216ceefc-02b1-b77d-00ffe79761a65f49"/>
+						<IoData Cr="216373ab-00d3-432c-ffffe001fe9bf86f" Pr="216373ab-00ce-42f4-ffffe001fe9bf86f" St="2"/>
+						<Display Unit="&lt;v&gt;" StateOnly="true" IxText="8"/>
+					</C>
+					<C Type="VirtualHttpInCmd" Desc="Fensterbilanz gültig" IName="VCI322" V="178" U="216ceefc-02b3-b782-ffffe001fe9bf86f" Title="FB_OK" Cl="238,238,238" Nio="2" WF="16400" ValOT="1" Check="\i;OK=\i\v" Signed="true" Analog="true" SourceValHigh="1" DestValHigh="1" MaxVal="1">
+						<Co K="AQ" U="216ceefc-02b3-b780-00ffe79761a65f49"/>
+						<Co K="Q" U="216ceefc-02b3-b781-01ffe79761a65f49"/>
+						<IoData Cr="216373ab-00cf-42fc-ffffe001fe9bf86f" Pr="216373ab-00cf-42f8-ffffe001fe9bf86f"/>
+						<Display Type="2" Unit="&lt;v.0&gt;" StateOnly="true"/>
+					</C>
+					<C Type="VirtualHttpInCmd" Desc="Fensterbilanz Minuten seit Lauf" IName="VCI323" V="178" U="216ceefc-02b3-b786-ffffe001fe9bf86f" Title="FB_HERZ" Cl="238,238,238" Nio="2" WF="16400" ValOT="1" Check="\i;HERZ=\i\v" Signed="true" Analog="true" SourceValHigh="1" DestValHigh="1" MinVal="-1" MaxVal="43200">
+						<Co K="AQ" U="216ceefc-02b3-b784-00ffe79761a65f49"/>
+						<Co K="Q" U="216ceefc-02b3-b785-01ffe79761a65f49"/>
+						<IoData Cr="216373ab-00cf-42fc-ffffe001fe9bf86f" Pr="216373ab-00cf-42f8-ffffe001fe9bf86f"/>
+						<Display Type="2" Unit="&lt;v.0&gt; min" StateOnly="true"/>
+					</C>
+					<C Type="VirtualHttpInCmd" Desc="Fensterbilanz Fenster" IName="VCI324" V="178" U="216ceefc-02ba-b78a-ffffe001fe9bf86f" Title="FB_FENSTER" Cl="0,0,0" Nio="2" WF="16384" ValOT="1" Check="\i;FENSTER=\i\v" Signed="true" Analog="true" SourceValHigh="1" DestValHigh="1" MaxVal="99">
+						<Co K="AQ" U="216ceefc-02ba-b788-00ffe79761a65f49"/>
+						<Co K="Q" U="216ceefc-02ba-b789-01ffe79761a65f49"/>
+						<IoData Cr="216373ab-00cf-42fc-ffffe001fe9bf86f" Pr="216373ab-00ce-42f4-ffffe001fe9bf86f"/>
+						<Display Type="2" Unit="&lt;v.0&gt;" StateOnly="true"/>
+					</C>
+					<C Type="VirtualHttpInCmd" Desc="Fenster mit Beschattung" IName="VCI325" V="178" U="216ceefc-02bf-b78e-ffffe001fe9bf86f" Title="FB_BESCHATTEN" Cl="0,0,0" Nio="2" WF="16384" ValOT="1" Check="\i;BESCHATTEN=\i\v" Signed="true" Analog="true" SourceValHigh="1" DestValHigh="1" MaxVal="99">
+						<Co K="AQ" U="216ceefc-02bf-b78c-00ffe79761a65f49"/>
+						<Co K="Q" U="216ceefc-02bf-b78d-01ffe79761a65f49"/>
+						<IoData Cr="216373ab-00cf-42fc-ffffe001fe9bf86f" Pr="216373ab-00ce-42f4-ffffe001fe9bf86f"/>
+						<Display Type="2" Unit="&lt;v.0&gt;" StateOnly="true"/>
+					</C>
+					<C Type="VirtualHttpInCmd" Desc="Sonnenhöhe" IName="VCI326" V="178" U="216ceefc-02c4-b792-ffffe001fe9bf86f" Title="FB_SONNE_H" Cl="0,0,0" Nio="2" WF="16384" ValOT="1" Check="\i;SONNE_H=\i\v" Signed="true" Analog="true" SourceValHigh="1" DestValHigh="1" MinVal="-90" MaxVal="90">
+						<Co K="AQ" U="216ceefc-02c4-b790-00ffe79761a65f49"/>
+						<Co K="Q" U="216ceefc-02c4-b791-01ffe79761a65f49"/>
+						<IoData Cr="216373ab-00cf-42fc-ffffe001fe9bf86f" Pr="216373ab-00ce-42f4-ffffe001fe9bf86f"/>
+						<Display Type="2" Unit="&lt;v.0&gt; °" StateOnly="true"/>
+					</C>
+					<C Type="VirtualHttpInCmd" Desc="Sonnenazimut" IName="VCI327" V="178" U="216ceefc-02c6-b796-ffffe001fe9bf86f" Title="FB_SONNE_AZ" Cl="0,0,0" Nio="2" WF="16384" ValOT="1" Check="\i;SONNE_AZ=\i\v" Signed="true" Analog="true" SourceValHigh="1" DestValHigh="1" MaxVal="360">
+						<Co K="AQ" U="216ceefc-02c6-b794-00ffe79761a65f49"/>
+						<Co K="Q" U="216ceefc-02c6-b795-01ffe79761a65f49"/>
+						<IoData Cr="216373ab-00cf-42fc-ffffe001fe9bf86f" Pr="216373ab-00ce-42f4-ffffe001fe9bf86f"/>
+						<Display Type="2" Unit="&lt;v.0&gt; °" StateOnly="true"/>
+					</C>
+					<C Type="VirtualHttpInCmd" Desc="Wärmebedarf des Tages" IName="VCI328" V="178" U="216ceefc-02ca-b79a-ffffe001fe9bf86f" Title="FB_SAISON" Cl="0,0,0" Nio="2" WF="16384" ValOT="1" Check="\i;SAISON=\i\v" Signed="true" Analog="true" SourceValHigh="1" DestValHigh="1" MinVal="-100" MaxVal="100">
+						<Co K="AQ" U="216ceefc-02ca-b798-00ffe79761a65f49"/>
+						<Co K="Q" U="216ceefc-02ca-b799-01ffe79761a65f49"/>
+						<IoData Cr="216373ab-00cf-42fc-ffffe001fe9bf86f" Pr="216373ab-00ce-42f4-ffffe001fe9bf86f"/>
+						<Display Type="2" Unit="&lt;v.0&gt;" StateOnly="true"/>
+					</C>
+					<C Type="VirtualHttpInCmd" Desc="Globalstrahlung" IName="VCI329" V="178" U="216ceefc-02d1-b79e-ffffe001fe9bf86f" Title="FB_STRAHLUNG" Cl="0,0,0" Nio="2" WF="16384" ValOT="1" Check="\i;STRAHLUNG=\i\v" Signed="true" Analog="true" SourceValHigh="1" DestValHigh="1" MinVal="-1" MaxVal="1600">
+						<Co K="AQ" U="216ceefc-02d1-b79c-00ffe79761a65f49"/>
+						<Co K="Q" U="216ceefc-02d1-b79d-01ffe79761a65f49"/>
+						<IoData Cr="216373ab-00cf-42fc-ffffe001fe9bf86f" Pr="216373ab-00ce-42f4-ffffe001fe9bf86f"/>
+						<Display Type="2" Unit="&lt;v.0&gt; W/m2" StateOnly="true"/>
+					</C>
+					<C Type="VirtualHttpInCmd" Desc="Fensterbilanz letzter Lauf" IName="VCI330" V="178" U="216ceefc-02d3-b7a2-ffffe001fe9bf86f" Title="FB_TS" Cl="238,238,238" Nio="2" WF="16384" ValOT="1" Check="\i;TS=\i\v" Signed="true" Analog="true" SourceValHigh="1" DestValHigh="1" MaxVal="4102444800">
+						<Co K="AQ" U="216ceefc-02d3-b7a0-00ffe79761a65f49"/>
+						<Co K="Q" U="216ceefc-02d3-b7a1-01ffe79761a65f49"/>
+						<IoData Cr="216373ab-00cf-42fc-ffffe001fe9bf86f" Pr="216373ab-00cf-42f8-ffffe001fe9bf86f"/>
+						<Display Type="2" Unit="&lt;v.0&gt;" StateOnly="true"/>
+					</C>
+					<C Type="VirtualHttpInCmd" Desc="Wärme heute, alle Fenster" IName="VCI331" V="178" U="216ceefc-02d9-b7a6-ffffe001fe9bf86f" Title="FB_WH_TAG" Cl="0,0,0" Nio="2" WF="16384" ValOT="1" Check="\i;WH_TAG=\i\v" Signed="true" Analog="true" SourceValHigh="1" DestValHigh="1" MaxVal="999999">
+						<Co K="AQ" U="216ceefc-02d9-b7a4-00ffe79761a65f49"/>
+						<Co K="Q" U="216ceefc-02d9-b7a5-01ffe79761a65f49"/>
+						<IoData Cr="216373ab-00cf-42fc-ffffe001fe9bf86f" Pr="216373ab-00ce-42f4-ffffe001fe9bf86f"/>
+						<Display Type="2" Unit="&lt;v.0&gt; Wh" StateOnly="true"/>
+					</C>
+					<C Type="VirtualHttpInCmd" Desc="Fenster Beschattung Vorausschau" IName="VCI332" V="178" U="216ceefc-02dc-b7aa-ffffe001fe9bf86f" Title="FB_BESCHATTEN30" Cl="0,0,0" Nio="2" WF="16384" ValOT="1" Check="\i;BESCHATTEN30=\i\v" Signed="true" Analog="true" SourceValHigh="1" DestValHigh="1" MaxVal="99">
+						<Co K="AQ" U="216ceefc-02dc-b7a8-00ffe79761a65f49"/>
+						<Co K="Q" U="216ceefc-02dc-b7a9-01ffe79761a65f49"/>
+						<IoData Cr="216373ab-00cf-42fc-ffffe001fe9bf86f" Pr="216373ab-00ce-42f4-ffffe001fe9bf86f"/>
+						<Display Type="2" Unit="&lt;v.0&gt;" StateOnly="true"/>
+					</C>
+					<C Type="VirtualHttpInCmd" Desc="Wohnzimmer Urteil" IName="VCI333" V="178" U="216ceefc-02dd-b7ae-ffffe001fe9bf86f" Title="FB_WZ_URTEIL" Cl="0,0,0" Nio="2" WF="16384" ValOT="1" Check="\i;WZURTEIL=\i\v" Signed="true" Analog="true" SourceValHigh="1" DestValHigh="1" MinVal="-100" MaxVal="100">
+						<Co K="AQ" U="216ceefc-02dd-b7ac-00ffe79761a65f49"/>
+						<Co K="Q" U="216ceefc-02dd-b7ad-01ffe79761a65f49"/>
+						<IoData Cr="216373ab-00cf-42fc-ffffe001fe9bf86f" Pr="216373ab-00ce-42f4-ffffe001fe9bf86f"/>
+						<Display Type="2" Unit="&lt;v.0&gt;" StateOnly="true"/>
+					</C>
+					<C Type="VirtualHttpInCmd" Desc="Wohnzimmer Beschatten" IName="VCI334" V="178" U="216ceefc-02e4-b7b2-ffffe001fe9bf86f" Title="FB_WZ_BESCHATTEN" Cl="238,238,238" Nio="2" WF="16400" ValOT="1" Check="\i;WZBESCHATTEN=\i\v" Signed="true" Analog="true" SourceValHigh="1" DestValHigh="1" MaxVal="1">
+						<Co K="AQ" U="216ceefc-02e4-b7b0-00ffe79761a65f49"/>
+						<Co K="Q" U="216ceefc-02e4-b7b1-01ffe79761a65f49"/>
+						<IoData Cr="216373ab-00cf-42fc-ffffe001fe9bf86f" Pr="216373ab-00cf-42f8-ffffe001fe9bf86f"/>
+						<Display Type="2" Unit="&lt;v.0&gt;" StateOnly="true"/>
+					</C>
+					<C Type="VirtualHttpInCmd" Desc="Wohnzimmer Grund" IName="VCI335" V="178" U="216ceefc-02e7-b7b6-ffffe001fe9bf86f" Title="FB_WZ_GRUND" Cl="238,238,238" Nio="2" WF="16400" ValOT="1" Check="\i;WZGRUND=\i\v" Signed="true" Analog="true" SourceValHigh="1" DestValHigh="1" MaxVal="11">
+						<Co K="AQ" U="216ceefc-02e7-b7b4-00ffe79761a65f49"/>
+						<Co K="Q" U="216ceefc-02e7-b7b5-01ffe79761a65f49"/>
+						<IoData Cr="216373ab-00cf-42fc-ffffe001fe9bf86f" Pr="216373ab-00cf-42f8-ffffe001fe9bf86f"/>
+						<Display Type="2" Unit="&lt;v.0&gt;" StateOnly="true"/>
+					</C>
+					<C Type="VirtualHttpInCmd" Desc="Wohnzimmer Wärmeeintrag" IName="VCI336" V="178" U="216ceefc-02ed-b7ba-ffffe001fe9bf86f" Title="FB_WZ_WATT" Cl="0,0,0" Nio="2" WF="16384" ValOT="1" Check="\i;WZWATT=\i\v" Signed="true" Analog="true" SourceValHigh="1" DestValHigh="1" MaxVal="45000">
+						<Co K="AQ" U="216ceefc-02ed-b7b8-00ffe79761a65f49"/>
+						<Co K="Q" U="216ceefc-02ed-b7b9-01ffe79761a65f49"/>
+						<IoData Cr="216373ab-00cf-42fc-ffffe001fe9bf86f" Pr="216373ab-00ce-42f4-ffffe001fe9bf86f"/>
+						<Display Type="2" Unit="&lt;v.0&gt; W" StateOnly="true"/>
+					</C>
+					<C Type="VirtualHttpInCmd" Desc="Wohnzimmer Wärme heute" IName="VCI337" V="178" U="216ceefc-02f3-b7be-ffffe001fe9bf86f" Title="FB_WZ_WH" Cl="0,0,0" Nio="2" WF="16384" ValOT="1" Check="\i;WZWH=\i\v" Signed="true" Analog="true" SourceValHigh="1" DestValHigh="1" MaxVal="500000">
+						<Co K="AQ" U="216ceefc-02f3-b7bc-00ffe79761a65f49"/>
+						<Co K="Q" U="216ceefc-02f3-b7bd-01ffe79761a65f49"/>
+						<IoData Cr="216373ab-00cf-42fc-ffffe001fe9bf86f" Pr="216373ab-00ce-42f4-ffffe001fe9bf86f"/>
+						<Display Type="2" Unit="&lt;v.0&gt; Wh" StateOnly="true"/>
+					</C>
+					<C Type="VirtualHttpInCmd" Desc="Wohnzimmer Strahlung am Glas" IName="VCI338" V="178" U="216ceefc-02f7-b7c2-ffffe001fe9bf86f" Title="FB_WZ_GLAS" Cl="0,0,0" Nio="2" WF="16384" ValOT="1" Check="\i;WZGLAS=\i\v" Signed="true" Analog="true" SourceValHigh="1" DestValHigh="1" MaxVal="1600">
+						<Co K="AQ" U="216ceefc-02f7-b7c0-00ffe79761a65f49"/>
+						<Co K="Q" U="216ceefc-02f7-b7c1-01ffe79761a65f49"/>
+						<IoData Cr="216373ab-00cf-42fc-ffffe001fe9bf86f" Pr="216373ab-00ce-42f4-ffffe001fe9bf86f"/>
+						<Display Type="2" Unit="&lt;v.0&gt; W/m2" StateOnly="true"/>
+					</C>
+					<C Type="VirtualHttpInCmd" Desc="Wohnzimmer Urteil Vorausschau" IName="VCI339" V="178" U="216ceefc-02f7-b7c6-ffffe001fe9bf86f" Title="FB_WZ_URTEIL30" Cl="0,0,0" Nio="2" WF="16384" ValOT="1" Check="\i;WZURTEIL30=\i\v" Signed="true" Analog="true" SourceValHigh="1" DestValHigh="1" MinVal="-100" MaxVal="100">
+						<Co K="AQ" U="216ceefc-02f7-b7c4-00ffe79761a65f49"/>
+						<Co K="Q" U="216ceefc-02f7-b7c5-01ffe79761a65f49"/>
+						<IoData Cr="216373ab-00cf-42fc-ffffe001fe9bf86f" Pr="216373ab-00ce-42f4-ffffe001fe9bf86f"/>
+						<Display Type="2" Unit="&lt;v.0&gt;" StateOnly="true"/>
+					</C>
+					<C Type="VirtualHttpInCmd" Desc="Wohnzimmer Beschatten Vorausschau" IName="VCI340" V="178" U="216ceefc-02f7-b7ca-ffffe001fe9bf86f" Title="FB_WZ_BESCHATTEN30" Cl="0,0,0" Nio="2" WF="16384" ValOT="1" Check="\i;WZBESCHATTEN30=\i\v" Signed="true" Analog="true" SourceValHigh="1" DestValHigh="1" MaxVal="1">
+						<Co K="AQ" U="216ceefc-02f7-b7c8-00ffe79761a65f49"/>
+						<Co K="Q" U="216ceefc-02f7-b7c9-01ffe79761a65f49"/>
+						<IoData Cr="216373ab-00cf-42fc-ffffe001fe9bf86f" Pr="216373ab-00ce-42f4-ffffe001fe9bf86f"/>
+						<Display Type="2" Unit="&lt;v.0&gt;" StateOnly="true"/>
+					</C>
+				</C>
 			</C>
 			<C Type="VirtualOutCaption" V="178" U="216373ab-00e8-43c7-ffffe001fe9bf86f" Title="Virtuelle Ausgänge" WF="16384">
 				<C Type="VirtualOut" Desc="Erzeugt vom LoxBerry-Plugin Abfahrts-Assistent, trägt das Merkwort. Loxone Config legt beim Import neu an und überschreibt nichts – zweimal eingelesen ergibt doppelte Bausteine. (02.10.2026)" IName="VQ1" V="178" U="216376a3-0122-573c-ffffe001fe9bf86f" Title="Abfahrts-Assistent Ansage" WF="16384" Address="http://loxberry" CloseAfterSend="true">
@@ -1964,6 +2891,225 @@
 					<C Type="VirtualOutCmd" IName="VQC15" V="178" U="216376ba-010a-5cbc-ffffe001fe9bf86f" Title="Alexa Radio alle Zonen Lautstärke" Nio="1" WF="16384" Analog="true" Comment="Radio alle Zonen %" CmdOn="/plugins/alexang/?token=DEIN_AKTIONSTOKEN&amp;aktion=radio_laut&amp;zone=alle&amp;wert=&lt;v&gt;" SourceValHigh="10" DestValHigh="10" Tx="false">
 						<Co K="I" U="216376ba-010a-5cbb-00ff2f51acc5b234"/>
 						<IoData Cr="216373ab-00cf-42fc-ffffe001fe9bf86f" Pr="216373ab-00ce-42f4-ffffe001fe9bf86f" St="2"/>
+						<Display Unit="&lt;v.1&gt;" StateOnly="true"/>
+					</C>
+				</C>
+				<C Type="VirtualOut" Desc="EVCC Befehle" IName="VQ4" V="178" U="216cebfe-02f8-28cc-ffffe001fe9bf86f" Title="EVCC Befehle" WF="16384" Address="http://loxberry/plugins/evcc">
+					<IoData Pr="216373ab-00ce-42f4-ffffe001fe9bf86f"/>
+					<C Type="VirtualOutCmd" IName="VQC16" V="178" U="216cebfe-02fe-28cf-ffffe001fe9bf86f" Title="EVCC_SET_MODUS_LP1" Cl="238,238,238" Nio="1" WF="16400" Analog="true" Comment="Lademodus setzen" CmdOn="/index.php?token=DEIN_TOKEN&amp;aktion=modus&amp;lp=1&amp;von=loxone&amp;wert=&lt;v.0&gt;" Tx="false">
+						<Co K="I" Nc="1" U="216cebfe-02fe-28ce-00ff6b8735d8de2e">
+							<In Input="216cec17-0007-3ea5-01ff7d6577572462"/>
+						</Co>
+						<IoData Cr="216373ab-00cf-42fc-ffffe001fe9bf86f" Pr="216373ab-00cf-42f8-ffffe001fe9bf86f" St="2"/>
+						<Display Unit="&lt;v.1&gt;" StateOnly="true"/>
+					</C>
+					<C Type="VirtualOutCmd" IName="VQC17" V="178" U="216cebfe-02fe-28d2-ffffe001fe9bf86f" Title="EVCC_SET_MODUS_LP2" Nio="1" WF="16384" Analog="true" Comment="Lademodus setzen" CmdOn="/index.php?token=DEIN_TOKEN&amp;aktion=modus&amp;lp=2&amp;von=loxone&amp;wert=&lt;v.0&gt;" Tx="false">
+						<Co K="I" U="216cebfe-02fe-28d1-00ff6b8735d8de2e"/>
+						<IoData Cr="216373ab-00cf-42fc-ffffe001fe9bf86f" Pr="216373ab-00ce-42f4-ffffe001fe9bf86f" St="2"/>
+						<Display Unit="&lt;v.1&gt;" StateOnly="true"/>
+					</C>
+					<C Type="VirtualOutCmd" IName="VQC18" V="178" U="216cebfe-02fe-28d5-ffffe001fe9bf86f" Title="EVCC_SET_LIMITSOC_LP1" Nio="1" WF="16384" Analog="true" Comment="Limit-Ladestand setzen" CmdOn="/index.php?token=DEIN_TOKEN&amp;aktion=limitsoc&amp;lp=1&amp;von=loxone&amp;wert=&lt;v.0&gt;" Tx="false">
+						<Co K="I" U="216cebfe-02fe-28d4-00ff6b8735d8de2e"/>
+						<IoData Cr="216373ab-00cf-42fc-ffffe001fe9bf86f" Pr="216373ab-00ce-42f4-ffffe001fe9bf86f" St="2"/>
+						<Display Unit="&lt;v.1&gt;" StateOnly="true"/>
+					</C>
+					<C Type="VirtualOutCmd" IName="VQC19" V="178" U="216cebfe-02fe-28d8-ffffe001fe9bf86f" Title="EVCC_SET_LIMITSOC_LP2" Nio="1" WF="16384" Analog="true" Comment="Limit-Ladestand setzen" CmdOn="/index.php?token=DEIN_TOKEN&amp;aktion=limitsoc&amp;lp=2&amp;von=loxone&amp;wert=&lt;v.0&gt;" Tx="false">
+						<Co K="I" U="216cebfe-02fe-28d7-00ff6b8735d8de2e"/>
+						<IoData Cr="216373ab-00cf-42fc-ffffe001fe9bf86f" Pr="216373ab-00ce-42f4-ffffe001fe9bf86f" St="2"/>
+						<Display Unit="&lt;v.1&gt;" StateOnly="true"/>
+					</C>
+					<C Type="VirtualOutCmd" IName="VQC20" V="178" U="216cebfe-0308-28db-ffffe001fe9bf86f" Title="EVCC_SET_MINSOC_LP1" Nio="1" WF="16384" Analog="true" Comment="Mindest-Ladestand setzen" CmdOn="/index.php?token=DEIN_TOKEN&amp;aktion=minsoc&amp;lp=1&amp;von=loxone&amp;wert=&lt;v.0&gt;" Tx="false">
+						<Co K="I" U="216cebfe-0308-28da-00ff6b8735d8de2e"/>
+						<IoData Cr="216373ab-00cf-42fc-ffffe001fe9bf86f" Pr="216373ab-00ce-42f4-ffffe001fe9bf86f" St="2"/>
+						<Display Unit="&lt;v.1&gt;" StateOnly="true"/>
+					</C>
+					<C Type="VirtualOutCmd" IName="VQC21" V="178" U="216cebfe-030a-28de-ffffe001fe9bf86f" Title="EVCC_SET_MINSOC_LP2" Nio="1" WF="16384" Analog="true" Comment="Mindest-Ladestand setzen" CmdOn="/index.php?token=DEIN_TOKEN&amp;aktion=minsoc&amp;lp=2&amp;von=loxone&amp;wert=&lt;v.0&gt;" Tx="false">
+						<Co K="I" U="216cebfe-030a-28dd-00ff6b8735d8de2e"/>
+						<IoData Cr="216373ab-00cf-42fc-ffffe001fe9bf86f" Pr="216373ab-00ce-42f4-ffffe001fe9bf86f" St="2"/>
+						<Display Unit="&lt;v.1&gt;" StateOnly="true"/>
+					</C>
+					<C Type="VirtualOutCmd" IName="VQC22" V="178" U="216cebfe-030a-28e1-ffffe001fe9bf86f" Title="EVCC_SET_PHASEN_LP1" Nio="1" WF="16384" Analog="true" Comment="Phasen setzen" CmdOn="/index.php?token=DEIN_TOKEN&amp;aktion=phasen&amp;lp=1&amp;von=loxone&amp;wert=&lt;v.0&gt;" Tx="false">
+						<Co K="I" U="216cebfe-030a-28e0-00ff6b8735d8de2e"/>
+						<IoData Cr="216373ab-00cf-42fc-ffffe001fe9bf86f" Pr="216373ab-00ce-42f4-ffffe001fe9bf86f" St="2"/>
+						<Display Unit="&lt;v.1&gt;" StateOnly="true"/>
+					</C>
+					<C Type="VirtualOutCmd" IName="VQC23" V="178" U="216cebfe-030a-28e4-ffffe001fe9bf86f" Title="EVCC_SET_PHASEN_LP2" Nio="1" WF="16384" Analog="true" Comment="Phasen setzen" CmdOn="/index.php?token=DEIN_TOKEN&amp;aktion=phasen&amp;lp=2&amp;von=loxone&amp;wert=&lt;v.0&gt;" Tx="false">
+						<Co K="I" U="216cebfe-030a-28e3-00ff6b8735d8de2e"/>
+						<IoData Cr="216373ab-00cf-42fc-ffffe001fe9bf86f" Pr="216373ab-00ce-42f4-ffffe001fe9bf86f" St="2"/>
+						<Display Unit="&lt;v.1&gt;" StateOnly="true"/>
+					</C>
+					<C Type="VirtualOutCmd" IName="VQC24" V="178" U="216cebfe-030a-28e7-ffffe001fe9bf86f" Title="EVCC_SET_MINSTROM_LP1" Nio="1" WF="16384" Analog="true" Comment="Kleinsten Ladestrom setzen" CmdOn="/index.php?token=DEIN_TOKEN&amp;aktion=minstrom&amp;lp=1&amp;von=loxone&amp;wert=&lt;v.0&gt;" Tx="false">
+						<Co K="I" U="216cebfe-030a-28e6-00ff6b8735d8de2e"/>
+						<IoData Cr="216373ab-00cf-42fc-ffffe001fe9bf86f" Pr="216373ab-00ce-42f4-ffffe001fe9bf86f" St="2"/>
+						<Display Unit="&lt;v.1&gt;" StateOnly="true"/>
+					</C>
+					<C Type="VirtualOutCmd" IName="VQC25" V="178" U="216cebfe-030a-28ea-ffffe001fe9bf86f" Title="EVCC_SET_MINSTROM_LP2" Nio="1" WF="16384" Analog="true" Comment="Kleinsten Ladestrom setzen" CmdOn="/index.php?token=DEIN_TOKEN&amp;aktion=minstrom&amp;lp=2&amp;von=loxone&amp;wert=&lt;v.0&gt;" Tx="false">
+						<Co K="I" U="216cebfe-030a-28e9-00ff6b8735d8de2e"/>
+						<IoData Cr="216373ab-00cf-42fc-ffffe001fe9bf86f" Pr="216373ab-00ce-42f4-ffffe001fe9bf86f" St="2"/>
+						<Display Unit="&lt;v.1&gt;" StateOnly="true"/>
+					</C>
+					<C Type="VirtualOutCmd" IName="VQC26" V="178" U="216cebfe-030a-28ed-ffffe001fe9bf86f" Title="EVCC_SET_MAXSTROM_LP1" Nio="1" WF="16384" Analog="true" Comment="Höchsten Ladestrom setzen" CmdOn="/index.php?token=DEIN_TOKEN&amp;aktion=maxstrom&amp;lp=1&amp;von=loxone&amp;wert=&lt;v.0&gt;" Tx="false">
+						<Co K="I" U="216cebfe-030a-28ec-00ff6b8735d8de2e"/>
+						<IoData Cr="216373ab-00cf-42fc-ffffe001fe9bf86f" Pr="216373ab-00ce-42f4-ffffe001fe9bf86f" St="2"/>
+						<Display Unit="&lt;v.1&gt;" StateOnly="true"/>
+					</C>
+					<C Type="VirtualOutCmd" IName="VQC27" V="178" U="216cebfe-030a-28f0-ffffe001fe9bf86f" Title="EVCC_SET_MAXSTROM_LP2" Nio="1" WF="16384" Analog="true" Comment="Höchsten Ladestrom setzen" CmdOn="/index.php?token=DEIN_TOKEN&amp;aktion=maxstrom&amp;lp=2&amp;von=loxone&amp;wert=&lt;v.0&gt;" Tx="false">
+						<Co K="I" U="216cebfe-030a-28ef-00ff6b8735d8de2e"/>
+						<IoData Cr="216373ab-00cf-42fc-ffffe001fe9bf86f" Pr="216373ab-00ce-42f4-ffffe001fe9bf86f" St="2"/>
+						<Display Unit="&lt;v.1&gt;" StateOnly="true"/>
+					</C>
+					<C Type="VirtualOutCmd" IName="VQC28" V="178" U="216cebfe-030a-28f3-ffffe001fe9bf86f" Title="EVCC_SET_PRIORITAET_LP1" Nio="1" WF="16384" Analog="true" Comment="Priorität des Ladepunkts setzen" CmdOn="/index.php?token=DEIN_TOKEN&amp;aktion=prioritaet&amp;lp=1&amp;von=loxone&amp;wert=&lt;v.0&gt;" Tx="false">
+						<Co K="I" U="216cebfe-030a-28f2-00ff6b8735d8de2e"/>
+						<IoData Cr="216373ab-00cf-42fc-ffffe001fe9bf86f" Pr="216373ab-00ce-42f4-ffffe001fe9bf86f" St="2"/>
+						<Display Unit="&lt;v.1&gt;" StateOnly="true"/>
+					</C>
+					<C Type="VirtualOutCmd" IName="VQC29" V="178" U="216cebfe-030a-28f6-ffffe001fe9bf86f" Title="EVCC_SET_PRIORITAET_LP2" Nio="1" WF="16384" Analog="true" Comment="Priorität des Ladepunkts setzen" CmdOn="/index.php?token=DEIN_TOKEN&amp;aktion=prioritaet&amp;lp=2&amp;von=loxone&amp;wert=&lt;v.0&gt;" Tx="false">
+						<Co K="I" U="216cebfe-030a-28f5-00ff6b8735d8de2e"/>
+						<IoData Cr="216373ab-00cf-42fc-ffffe001fe9bf86f" Pr="216373ab-00ce-42f4-ffffe001fe9bf86f" St="2"/>
+						<Display Unit="&lt;v.1&gt;" StateOnly="true"/>
+					</C>
+					<C Type="VirtualOutCmd" IName="VQC30" V="178" U="216cebfe-030a-28f9-ffffe001fe9bf86f" Title="EVCC_SET_SMARTCOSTLIMIT_LP1" Nio="1" WF="16384" Analog="true" Comment="Preisschwelle günstiges Laden" CmdOn="/index.php?token=DEIN_TOKEN&amp;aktion=smartcostlimit&amp;lp=1&amp;von=loxone&amp;wert=&lt;v.0&gt;" Tx="false">
+						<Co K="I" U="216cebfe-030a-28f8-00ff6b8735d8de2e"/>
+						<IoData Cr="216373ab-00cf-42fc-ffffe001fe9bf86f" Pr="216373ab-00ce-42f4-ffffe001fe9bf86f" St="2"/>
+						<Display Unit="&lt;v.1&gt;" StateOnly="true"/>
+					</C>
+					<C Type="VirtualOutCmd" IName="VQC31" V="178" U="216cebfe-030a-28fc-ffffe001fe9bf86f" Title="EVCC_SET_SMARTCOSTLIMIT_LP2" Nio="1" WF="16384" Analog="true" Comment="Preisschwelle günstiges Laden" CmdOn="/index.php?token=DEIN_TOKEN&amp;aktion=smartcostlimit&amp;lp=2&amp;von=loxone&amp;wert=&lt;v.0&gt;" Tx="false">
+						<Co K="I" U="216cebfe-030a-28fb-00ff6b8735d8de2e"/>
+						<IoData Cr="216373ab-00cf-42fc-ffffe001fe9bf86f" Pr="216373ab-00ce-42f4-ffffe001fe9bf86f" St="2"/>
+						<Display Unit="&lt;v.1&gt;" StateOnly="true"/>
+					</C>
+					<C Type="VirtualOutCmd" IName="VQC32" V="178" U="216cebfe-030a-28ff-ffffe001fe9bf86f" Title="EVCC_SET_BATTERIEBOOST_LP1" Nio="1" WF="16384" Comment="Battery Boost ein- und ausschalten" CmdOn="/index.php?token=DEIN_TOKEN&amp;aktion=batterieboost&amp;lp=1&amp;von=loxone&amp;wert=1" CmdOff="/index.php?token=DEIN_TOKEN&amp;aktion=batterieboost&amp;lp=1&amp;von=loxone&amp;wert=0" SourceValHigh="10" DestValHigh="10" Tx="false">
+						<Co K="I" U="216cebfe-030a-28fe-00ff6b8735d8de2e"/>
+						<IoData Cr="216373ab-00cf-42fc-ffffe001fe9bf86f" Pr="216373ab-00ce-42f4-ffffe001fe9bf86f" St="2"/>
+						<Display Unit="&lt;v.1&gt;" StateOnly="true"/>
+					</C>
+					<C Type="VirtualOutCmd" IName="VQC33" V="178" U="216cebfe-030a-2902-ffffe001fe9bf86f" Title="EVCC_SET_BATTERIEBOOST_LP2" Nio="1" WF="16384" Comment="Battery Boost ein- und ausschalten" CmdOn="/index.php?token=DEIN_TOKEN&amp;aktion=batterieboost&amp;lp=2&amp;von=loxone&amp;wert=1" CmdOff="/index.php?token=DEIN_TOKEN&amp;aktion=batterieboost&amp;lp=2&amp;von=loxone&amp;wert=0" SourceValHigh="10" DestValHigh="10" Tx="false">
+						<Co K="I" U="216cebfe-030a-2901-00ff6b8735d8de2e"/>
+						<IoData Cr="216373ab-00cf-42fc-ffffe001fe9bf86f" Pr="216373ab-00ce-42f4-ffffe001fe9bf86f" St="2"/>
+						<Display Unit="&lt;v.1&gt;" StateOnly="true"/>
+					</C>
+					<C Type="VirtualOutCmd" IName="VQC34" V="178" U="216cebfe-030a-2905-ffffe001fe9bf86f" Title="EVCC_SET_PLANSOC_ZIEL_LP1" Nio="1" WF="16384" Analog="true" Comment="Ladeplan: Ziel-Ladestand setzen" CmdOn="/index.php?token=DEIN_TOKEN&amp;aktion=plansoc_ziel&amp;lp=1&amp;von=loxone&amp;wert=&lt;v&gt;" Tx="false" NTXT="ungemessen: aus der EVCC-Dokumentation, an keiner Anlage geprüft">
+						<Co K="I" U="216cebfe-030a-2904-00ff6b8735d8de2e"/>
+						<IoData Cr="216373ab-00cf-42fc-ffffe001fe9bf86f" Pr="216373ab-00ce-42f4-ffffe001fe9bf86f" St="2"/>
+						<Display Unit="&lt;v.1&gt;" StateOnly="true"/>
+					</C>
+					<C Type="VirtualOutCmd" IName="VQC35" V="178" U="216cebfe-0315-2908-ffffe001fe9bf86f" Title="EVCC_SET_PLANSOC_ZIEL_LP2" Nio="1" WF="16384" Analog="true" Comment="Ladeplan: Ziel-Ladestand setzen" CmdOn="/index.php?token=DEIN_TOKEN&amp;aktion=plansoc_ziel&amp;lp=2&amp;von=loxone&amp;wert=&lt;v&gt;" Tx="false" NTXT="ungemessen: aus der EVCC-Dokumentation, an keiner Anlage geprüft">
+						<Co K="I" U="216cebfe-0315-2907-00ff6b8735d8de2e"/>
+						<IoData Cr="216373ab-00cf-42fc-ffffe001fe9bf86f" Pr="216373ab-00ce-42f4-ffffe001fe9bf86f" St="2"/>
+						<Display Unit="&lt;v.1&gt;" StateOnly="true"/>
+					</C>
+					<C Type="VirtualOutCmd" IName="VQC36" V="178" U="216cebfe-0315-290b-ffffe001fe9bf86f" Title="EVCC_SET_PLANSOC_STUNDEN_LP1" Nio="1" WF="16384" Analog="true" Comment="Ladeplan: Vorlauf in Stunden setzen" CmdOn="/index.php?token=DEIN_TOKEN&amp;aktion=plansoc_stunden&amp;lp=1&amp;von=loxone&amp;wert=&lt;v&gt;" Tx="false" NTXT="ungemessen: aus der EVCC-Dokumentation, an keiner Anlage geprüft">
+						<Co K="I" U="216cebfe-0315-290a-00ff6b8735d8de2e"/>
+						<IoData Cr="216373ab-00cf-42fc-ffffe001fe9bf86f" Pr="216373ab-00ce-42f4-ffffe001fe9bf86f" St="2"/>
+						<Display Unit="&lt;v.1&gt;" StateOnly="true"/>
+					</C>
+					<C Type="VirtualOutCmd" IName="VQC37" V="178" U="216cebfe-0317-290e-ffffe001fe9bf86f" Title="EVCC_SET_PLANSOC_STUNDEN_LP2" Nio="1" WF="16384" Analog="true" Comment="Ladeplan: Vorlauf in Stunden setzen" CmdOn="/index.php?token=DEIN_TOKEN&amp;aktion=plansoc_stunden&amp;lp=2&amp;von=loxone&amp;wert=&lt;v&gt;" Tx="false" NTXT="ungemessen: aus der EVCC-Dokumentation, an keiner Anlage geprüft">
+						<Co K="I" U="216cebfe-0317-290d-00ff6b8735d8de2e"/>
+						<IoData Cr="216373ab-00cf-42fc-ffffe001fe9bf86f" Pr="216373ab-00ce-42f4-ffffe001fe9bf86f" St="2"/>
+						<Display Unit="&lt;v.1&gt;" StateOnly="true"/>
+					</C>
+					<C Type="VirtualOutCmd" IName="VQC38" V="178" U="216cebfe-0317-2911-ffffe001fe9bf86f" Title="EVCC_SET_PLANAUS_LP1" Nio="1" WF="16384" Comment="Ladeplan löschen" CmdOn="/index.php?token=DEIN_TOKEN&amp;aktion=planaus&amp;lp=1&amp;von=loxone" SourceValHigh="10" DestValHigh="10" Tx="false" NTXT="ungemessen: aus der EVCC-Dokumentation, an keiner Anlage geprüft">
+						<Co K="I" U="216cebfe-0317-2910-00ff6b8735d8de2e"/>
+						<IoData Cr="216373ab-00cf-42fc-ffffe001fe9bf86f" Pr="216373ab-00ce-42f4-ffffe001fe9bf86f" St="2"/>
+						<Display Unit="&lt;v.1&gt;" StateOnly="true"/>
+					</C>
+					<C Type="VirtualOutCmd" IName="VQC39" V="178" U="216cebfe-0317-2914-ffffe001fe9bf86f" Title="EVCC_SET_PLANAUS_LP2" Nio="1" WF="16384" Comment="Ladeplan löschen" CmdOn="/index.php?token=DEIN_TOKEN&amp;aktion=planaus&amp;lp=2&amp;von=loxone" SourceValHigh="10" DestValHigh="10" Tx="false" NTXT="ungemessen: aus der EVCC-Dokumentation, an keiner Anlage geprüft">
+						<Co K="I" U="216cebfe-0317-2913-00ff6b8735d8de2e"/>
+						<IoData Cr="216373ab-00cf-42fc-ffffe001fe9bf86f" Pr="216373ab-00ce-42f4-ffffe001fe9bf86f" St="2"/>
+						<Display Unit="&lt;v.1&gt;" StateOnly="true"/>
+					</C>
+					<C Type="VirtualOutCmd" IName="VQC40" V="178" U="216cebfe-0317-2917-ffffe001fe9bf86f" Title="EVCC_SET_LIMITENERGIE_LP1" Nio="1" WF="16384" Analog="true" Comment="Ladeziel in kWh setzen" CmdOn="/index.php?token=DEIN_TOKEN&amp;aktion=limitenergie&amp;lp=1&amp;von=loxone&amp;wert=&lt;v.0&gt;" Tx="false" NTXT="ungemessen: aus der EVCC-Dokumentation, an keiner Anlage geprüft">
+						<Co K="I" U="216cebfe-0317-2916-00ff6b8735d8de2e"/>
+						<IoData Cr="216373ab-00cf-42fc-ffffe001fe9bf86f" Pr="216373ab-00ce-42f4-ffffe001fe9bf86f" St="2"/>
+						<Display Unit="&lt;v.1&gt;" StateOnly="true"/>
+					</C>
+					<C Type="VirtualOutCmd" IName="VQC41" V="178" U="216cebfe-0317-291a-ffffe001fe9bf86f" Title="EVCC_SET_LIMITENERGIE_LP2" Nio="1" WF="16384" Analog="true" Comment="Ladeziel in kWh setzen" CmdOn="/index.php?token=DEIN_TOKEN&amp;aktion=limitenergie&amp;lp=2&amp;von=loxone&amp;wert=&lt;v.0&gt;" Tx="false" NTXT="ungemessen: aus der EVCC-Dokumentation, an keiner Anlage geprüft">
+						<Co K="I" U="216cebfe-0317-2919-00ff6b8735d8de2e"/>
+						<IoData Cr="216373ab-00cf-42fc-ffffe001fe9bf86f" Pr="216373ab-00ce-42f4-ffffe001fe9bf86f" St="2"/>
+						<Display Unit="&lt;v.1&gt;" StateOnly="true"/>
+					</C>
+					<C Type="VirtualOutCmd" IName="VQC42" V="178" U="216cebfe-0317-291d-ffffe001fe9bf86f" Title="EVCC_SET_FAHRZEUG_LP1" Nio="1" WF="16384" Comment="Fahrzeug dem Ladepunkt zuordnen" CmdOn="/index.php?token=DEIN_TOKEN&amp;aktion=fahrzeug&amp;lp=1&amp;von=loxone&amp;wert=&lt;v.0&gt;" SourceValHigh="10" DestValHigh="10" Tx="false" NTXT="ungemessen: aus der EVCC-Dokumentation, an keiner Anlage geprüft">
+						<Co K="I" U="216cebfe-0317-291c-00ff6b8735d8de2e"/>
+						<IoData Cr="216373ab-00cf-42fc-ffffe001fe9bf86f" Pr="216373ab-00ce-42f4-ffffe001fe9bf86f" St="2"/>
+						<Display Unit="&lt;v.1&gt;" StateOnly="true"/>
+					</C>
+					<C Type="VirtualOutCmd" IName="VQC43" V="178" U="216cebfe-0317-2920-ffffe001fe9bf86f" Title="EVCC_SET_FAHRZEUG_LP2" Nio="1" WF="16384" Comment="Fahrzeug dem Ladepunkt zuordnen" CmdOn="/index.php?token=DEIN_TOKEN&amp;aktion=fahrzeug&amp;lp=2&amp;von=loxone&amp;wert=&lt;v.0&gt;" SourceValHigh="10" DestValHigh="10" Tx="false" NTXT="ungemessen: aus der EVCC-Dokumentation, an keiner Anlage geprüft">
+						<Co K="I" U="216cebfe-0317-291f-00ff6b8735d8de2e"/>
+						<IoData Cr="216373ab-00cf-42fc-ffffe001fe9bf86f" Pr="216373ab-00ce-42f4-ffffe001fe9bf86f" St="2"/>
+						<Display Unit="&lt;v.1&gt;" StateOnly="true"/>
+					</C>
+					<C Type="VirtualOutCmd" IName="VQC44" V="178" U="216cebfe-0317-2923-ffffe001fe9bf86f" Title="EVCC_SET_FAHRZEUGAUS_LP1" Nio="1" WF="16384" Comment="Zuordnung des Fahrzeugs lösen" CmdOn="/index.php?token=DEIN_TOKEN&amp;aktion=fahrzeugaus&amp;lp=1&amp;von=loxone" SourceValHigh="10" DestValHigh="10" Tx="false" NTXT="ungemessen: aus der EVCC-Dokumentation, an keiner Anlage geprüft">
+						<Co K="I" U="216cebfe-0317-2922-00ff6b8735d8de2e"/>
+						<IoData Cr="216373ab-00cf-42fc-ffffe001fe9bf86f" Pr="216373ab-00ce-42f4-ffffe001fe9bf86f" St="2"/>
+						<Display Unit="&lt;v.1&gt;" StateOnly="true"/>
+					</C>
+					<C Type="VirtualOutCmd" IName="VQC45" V="178" U="216cebfe-0317-2926-ffffe001fe9bf86f" Title="EVCC_SET_FAHRZEUGAUS_LP2" Nio="1" WF="16384" Comment="Zuordnung des Fahrzeugs lösen" CmdOn="/index.php?token=DEIN_TOKEN&amp;aktion=fahrzeugaus&amp;lp=2&amp;von=loxone" SourceValHigh="10" DestValHigh="10" Tx="false" NTXT="ungemessen: aus der EVCC-Dokumentation, an keiner Anlage geprüft">
+						<Co K="I" U="216cebfe-0317-2925-00ff6b8735d8de2e"/>
+						<IoData Cr="216373ab-00cf-42fc-ffffe001fe9bf86f" Pr="216373ab-00ce-42f4-ffffe001fe9bf86f" St="2"/>
+						<Display Unit="&lt;v.1&gt;" StateOnly="true"/>
+					</C>
+					<C Type="VirtualOutCmd" IName="VQC46" V="178" U="216cebfe-0317-2929-ffffe001fe9bf86f" Title="EVCC_SET_BATTERIEMODUS" Nio="1" WF="16384" Analog="true" Comment="Batteriemodus setzen" CmdOn="/index.php?token=DEIN_TOKEN&amp;aktion=batteriemodus&amp;von=loxone&amp;wert=&lt;v.0&gt;" Tx="false">
+						<Co K="I" U="216cebfe-0317-2928-00ff6b8735d8de2e"/>
+						<IoData Cr="216373ab-00cf-42fc-ffffe001fe9bf86f" Pr="216373ab-00ce-42f4-ffffe001fe9bf86f" St="2"/>
+						<Display Unit="&lt;v.1&gt;" StateOnly="true"/>
+					</C>
+					<C Type="VirtualOutCmd" IName="VQC47" V="178" U="216cebfe-0317-292c-ffffe001fe9bf86f" Title="EVCC_SET_PRIORITAETSSOC" Nio="1" WF="16384" Analog="true" Comment="Prioritäts-Ladestand Speicher setzen" CmdOn="/index.php?token=DEIN_TOKEN&amp;aktion=prioritaetssoc&amp;von=loxone&amp;wert=&lt;v.0&gt;" Tx="false">
+						<Co K="I" U="216cebfe-0317-292b-00ff6b8735d8de2e"/>
+						<IoData Cr="216373ab-00cf-42fc-ffffe001fe9bf86f" Pr="216373ab-00ce-42f4-ffffe001fe9bf86f" St="2"/>
+						<Display Unit="&lt;v.1&gt;" StateOnly="true"/>
+					</C>
+					<C Type="VirtualOutCmd" IName="VQC48" V="178" U="216cebfe-0317-292f-ffffe001fe9bf86f" Title="EVCC_SET_PUFFERSOC" Nio="1" WF="16384" Analog="true" Comment="Puffer-Ladestand Speicher setzen" CmdOn="/index.php?token=DEIN_TOKEN&amp;aktion=puffersoc&amp;von=loxone&amp;wert=&lt;v.0&gt;" Tx="false">
+						<Co K="I" U="216cebfe-0317-292e-00ff6b8735d8de2e"/>
+						<IoData Cr="216373ab-00cf-42fc-ffffe001fe9bf86f" Pr="216373ab-00ce-42f4-ffffe001fe9bf86f" St="2"/>
+						<Display Unit="&lt;v.1&gt;" StateOnly="true"/>
+					</C>
+					<C Type="VirtualOutCmd" IName="VQC49" V="178" U="216cebfe-0317-2932-ffffe001fe9bf86f" Title="EVCC_SET_RESIDUALLEISTUNG" Nio="1" WF="16384" Analog="true" Comment="Residualleistung setzen (W)" CmdOn="/index.php?token=DEIN_TOKEN&amp;aktion=residualleistung&amp;von=loxone&amp;wert=&lt;v.0&gt;" Tx="false">
+						<Co K="I" U="216cebfe-0317-2931-00ff6b8735d8de2e"/>
+						<IoData Cr="216373ab-00cf-42fc-ffffe001fe9bf86f" Pr="216373ab-00ce-42f4-ffffe001fe9bf86f" St="2"/>
+						<Display Unit="&lt;v.1&gt;" StateOnly="true"/>
+					</C>
+					<C Type="VirtualOutCmd" IName="VQC50" V="178" U="216cebfe-0317-2935-ffffe001fe9bf86f" Title="EVCC_SET_ENTLADEREGELUNG" Nio="1" WF="16384" Comment="Entladeregelung Speicher ein/aus" CmdOn="/index.php?token=DEIN_TOKEN&amp;aktion=entladeregelung&amp;von=loxone&amp;wert=1" CmdOff="/index.php?token=DEIN_TOKEN&amp;aktion=entladeregelung&amp;von=loxone&amp;wert=0" SourceValHigh="10" DestValHigh="10" Tx="false">
+						<Co K="I" U="216cebfe-0317-2934-00ff6b8735d8de2e"/>
+						<IoData Cr="216373ab-00cf-42fc-ffffe001fe9bf86f" Pr="216373ab-00ce-42f4-ffffe001fe9bf86f" St="2"/>
+						<Display Unit="&lt;v.1&gt;" StateOnly="true"/>
+					</C>
+					<C Type="VirtualOutCmd" IName="VQC51" V="178" U="216cebfe-0317-2938-ffffe001fe9bf86f" Title="EVCC_SET_NETZLADEGRENZE" Nio="1" WF="16384" Analog="true" Comment="Preisgrenze Netzladen Hausspeicher" CmdOn="/index.php?token=DEIN_TOKEN&amp;aktion=netzladegrenze&amp;von=loxone&amp;wert=&lt;v.0&gt;" Tx="false" NTXT="ungemessen: aus der EVCC-Dokumentation, an keiner Anlage geprüft">
+						<Co K="I" U="216cebfe-0317-2937-00ff6b8735d8de2e"/>
+						<IoData Cr="216373ab-00cf-42fc-ffffe001fe9bf86f" Pr="216373ab-00ce-42f4-ffffe001fe9bf86f" St="2"/>
+						<Display Unit="&lt;v.1&gt;" StateOnly="true"/>
+					</C>
+					<C Type="VirtualOutCmd" IName="VQC52" V="178" U="216cebfe-0317-293b-ffffe001fe9bf86f" Title="EVCC_SET_NETZLADENAUS" Nio="1" WF="16384" Comment="Netzladen Hausspeicher abschalten" CmdOn="/index.php?token=DEIN_TOKEN&amp;aktion=netzladenaus&amp;von=loxone" SourceValHigh="10" DestValHigh="10" Tx="false" NTXT="ungemessen: aus der EVCC-Dokumentation, an keiner Anlage geprüft">
+						<Co K="I" U="216cebfe-0317-293a-00ff6b8735d8de2e"/>
+						<IoData Cr="216373ab-00cf-42fc-ffffe001fe9bf86f" Pr="216373ab-00ce-42f4-ffffe001fe9bf86f" St="2"/>
+						<Display Unit="&lt;v.1&gt;" StateOnly="true"/>
+					</C>
+				</C>
+				<C Type="VirtualOut" Desc="Wärmepumpe SG Ready" IName="VQ5" V="178" U="216cedd7-0274-3234-ffffe001fe9bf86f" Title="Wärmepumpe SG Ready" WF="16384" Address="http://loxberry" CloseAfterSend="true">
+					<IoData Pr="216373ab-00ce-42f4-ffffe001fe9bf86f"/>
+					<C Type="VirtualOutCmd" IName="VQC53" V="178" U="216cedd7-0280-3237-ffffe001fe9bf86f" Title="WP_SGREADY_1" Cl="238,238,238" Nio="1" WF="16400" Comment="Sperre" CmdOn="http://loxberry/plugins/waermepumpe/index.php?token=DEIN_TOKEN&amp;aktion=sgready&amp;stufe=1" SourceValHigh="10" DestValHigh="10" Tx="false">
+						<Co K="I" Nc="1" U="216cedd7-0280-3236-00ffbfaa5158bfc4">
+							<In Input="216cee13-02fa-775a-01fffa1fdec78ee2"/>
+						</Co>
+						<IoData Cr="216373ab-00cf-42fc-ffffe001fe9bf86f" Pr="216373ab-00cf-42f8-ffffe001fe9bf86f" St="2"/>
+						<Display Unit="&lt;v.1&gt;" StateOnly="true"/>
+					</C>
+					<C Type="VirtualOutCmd" IName="VQC54" V="178" U="216cedd7-0280-323a-ffffe001fe9bf86f" Title="WP_SGREADY_2" Cl="238,238,238" Nio="1" WF="16400" Comment="Normalbetrieb" CmdOn="http://loxberry/plugins/waermepumpe/index.php?token=DEIN_TOKEN&amp;aktion=sgready&amp;stufe=2" SourceValHigh="10" DestValHigh="10" Tx="false">
+						<Co K="I" Nc="1" U="216cedd7-0280-3239-00ffbfaa5158bfc4">
+							<In Input="216cee06-0382-6bc7-01ff3d826981ff9d"/>
+						</Co>
+						<IoData Cr="216373ab-00cf-42fc-ffffe001fe9bf86f" Pr="216373ab-00cf-42f8-ffffe001fe9bf86f" St="2"/>
+						<Display Unit="&lt;v.1&gt;" StateOnly="true"/>
+					</C>
+					<C Type="VirtualOutCmd" IName="VQC55" V="178" U="216cedd7-0283-323d-ffffe001fe9bf86f" Title="WP_SGREADY_3" Nio="1" WF="16384" Comment="Einschaltempfehlung" CmdOn="http://loxberry/plugins/waermepumpe/index.php?token=DEIN_TOKEN&amp;aktion=sgready&amp;stufe=3" SourceValHigh="10" DestValHigh="10" Tx="false">
+						<Co K="I" U="216cedd7-0283-323c-00ffbfaa5158bfc4"/>
+						<IoData Cr="216373ab-00cf-42fc-ffffe001fe9bf86f" Pr="216373ab-00ce-42f4-ffffe001fe9bf86f" St="2"/>
+						<Display Unit="&lt;v.1&gt;" StateOnly="true"/>
+					</C>
+					<C Type="VirtualOutCmd" IName="VQC56" V="178" U="216cedd7-0285-3240-ffffe001fe9bf86f" Title="WP_SGREADY_4" Cl="238,238,238" Nio="1" WF="16400" Comment="Anlaufbefehl" CmdOn="http://loxberry/plugins/waermepumpe/index.php?token=DEIN_TOKEN&amp;aktion=sgready&amp;stufe=4" SourceValHigh="10" DestValHigh="10" Tx="false">
+						<Co K="I" Nc="1" U="216cedd7-0285-323f-00ffbfaa5158bfc4">
+							<In Input="216cedf7-0360-54ba-01ff1ebba790fcb3"/>
+						</Co>
+						<IoData Cr="216373ab-00cf-42fc-ffffe001fe9bf86f" Pr="216373ab-00cf-42f8-ffffe001fe9bf86f" St="2"/>
 						<Display Unit="&lt;v.1&gt;" StateOnly="true"/>
 					</C>
 				</C>
@@ -2445,6 +3591,18 @@
 				<C Type="Notification" V="178" U="216ce067-00c9-8893-ffffe001fe9bf86f" Title="USV-Meldung" Cl="238,238,238" WF="16400" Entries="10">
 					<IoData Cr="216373ab-00cf-42fc-ffffe001fe9bf86f"/>
 				</C>
+				<C Type="Notification" V="178" U="216cecdc-01d6-7ec4-ffffe001fe9bf86f" Title="Ladung fertig" Cl="238,238,238" WF="16400" Entries="10">
+					<IoData Cr="216373ab-00cf-42fc-ffffe001fe9bf86f"/>
+				</C>
+				<C Type="Notification" V="178" U="216cecf0-0011-a014-ffffe001fe9bf86f" Title="EVCC Meldung" Cl="238,238,238" WF="16400" Entries="10">
+					<IoData Cr="216373ab-00cf-42fc-ffffe001fe9bf86f"/>
+				</C>
+				<C Type="Notification" V="178" U="216cee95-002d-6fd6-ffffe001fe9bf86f" Title="WP Meldung" Cl="238,238,238" WF="16400" Entries="10">
+					<IoData Cr="216373ab-00cf-42fc-ffffe001fe9bf86f"/>
+				</C>
+				<C Type="Notification" V="178" U="216cf01b-00de-5d95-ffffe001fe9bf86f" Title="Meldung Fensterbilanz" Cl="238,238,238" WF="16400" Entries="10">
+					<IoData Cr="216373ab-00cf-42fc-ffffe001fe9bf86f"/>
+				</C>
 			</C>
 			<C Type="LoxTree" TId="LoxCaption_2" V="178" U="216373ab-00f9-454d-ffffe001fe9bf86f" Title="Tree" WF="16384" CycleUserProt="-1" IntAddr="" Pause="10" RxTimeout="1000" BaseID="-1" IDev="true" Serial="13000001" Installation="" SwitchBoard="" HwVersion="2">
 				<IoData Pr="216373ab-00ce-42f4-ffffe001fe9bf86f"/>
@@ -2674,18 +3832,18 @@
 					<Display Unit="&lt;v.pr&gt;"/>
 					<StateTexts></StateTexts>
 				</C>
-				<C Type="OutputRef" V="178" U="21637996-03e4-5846-ffffe001fe9bf86f" Title="Abfahrt: Ansage" Px="20928" Py="6912" Px2="23040" Py2="7104" Cl="0,0,0" Nio="2" Ref="216376a3-0125-573f-ffffe001fe9bf86f" WF="131072" LinkRefType="74">
-					<Co K="AI" Nc="1" U="21637996-03e4-5844-00ffbad61744dee4">
-						<In Input="2163788e-015e-eb6e-02ff77ac0b23af42"/>
-					</Co>
-					<Co K="AQ" U="21637996-03e4-5845-01ffbad61744dee4"/>
-				</C>
 				<C Type="OutputRefLM" V="178" U="2163793a-02ef-3701-ffffe001fe9bf86f" Title="Zeit zum Losfahren" Px="20832" Py="10656" Px2="22944" Py2="10848" Cl="0,0,0" Nio="2" Ref="2163790e-0161-1d78-ffffe001fe9bf86f" WF="131072">
 					<Co K="AI" Nc="1" U="2163793a-02ef-36ff-00ffc226a21f08a2">
 						<In Input="21637894-0382-f196-02ff854620af611c"/>
 					</Co>
 					<Co K="AQ" U="2163793a-02ef-3700-01ffc226a21f08a2"/>
 					<LoggerMailer RefNotification="2163790e-0161-1d78-ffffe001fe9bf86f" On="&lt;v&gt;" Off="&lt;v&gt;" MinimumTime="5000" NL="1"/>
+				</C>
+				<C Type="OutputRef" V="178" U="21637996-03e4-5846-ffffe001fe9bf86f" Title="Abfahrt: Ansage" Px="20928" Py="6912" Px2="23040" Py2="7104" Cl="0,0,0" Nio="2" Ref="216376a3-0125-573f-ffffe001fe9bf86f" WF="131072" LinkRefType="74">
+					<Co K="AI" Nc="1" U="21637996-03e4-5844-00ffbad61744dee4">
+						<In Input="2163788e-015e-eb6e-02ff77ac0b23af42"/>
+					</Co>
+					<Co K="AQ" U="21637996-03e4-5845-01ffbad61744dee4"/>
 				</C>
 			</C>
 			<C Type="Page" V="178" U="21637a30-0013-6964-ffffe001fe9bf86f" Title="Alexa NG" LtE="560167480" WF="16384">
@@ -2772,7 +3930,7 @@
 			</C>
 			<C Type="Page" V="178" U="216cdf9a-0160-8f84-ffffe001fe9bf86f" Title="APC-UPS NG" LtE="560783268" WF="16384">
 				<IoData Cr="216373ab-00cf-42fc-ffffe001fe9bf86f" Pr="216373ab-00cf-42f8-ffffe001fe9bf86f"/>
-				<C Type="InputRef" V="178" U="216cdfd0-0212-b108-ffffe001fe9bf86f" Title="apcups_time_left" Px="7584" Py="9792" Px2="9696" Py2="9984" Cl="0,0,0" Nio="4" Ref="216cdfba-012e-9fd8-ffffe001fe9bf86f" WF="133120" Analog="true" LinkRefType="87">
+				<C Type="InputRef" V="178" U="216cdfd0-0212-b108-ffffe001fe9bf86f" Title="apcups_time_left" Px="7584" Py="9792" Px2="9696" Py2="9984" Cl="0,0,0" Nio="4" Ref="216cdfba-012e-9fd8-ffffe001fe9bf86f" WF="149504" Analog="true" LinkRefType="87">
 					<Co K="AI" Nc="1" U="216cdfd0-0212-b104-00ff07ea4d2cec45">
 						<In Input="216cdfba-012e-9fd6-00ff7c6e54a132c6"/>
 					</Co>
@@ -2782,7 +3940,7 @@
 					<Co K="AQ" U="216cdfd0-0212-b106-02ff07ea4d2cec45"/>
 					<Co K="Q" U="216cdfd0-0212-b107-03ff07ea4d2cec45"/>
 				</C>
-				<C Type="InputRef" V="178" U="216cdfda-02df-b98e-ffffe001fe9bf86f" Title="apcups_replace_battery" Px="7200" Py="5472" Px2="9312" Py2="5664" Cl="0,0,0" Nio="4" Ref="216cdfba-0146-a000-ffffe001fe9bf86f" WF="133120" Analog="true" LinkRefType="87">
+				<C Type="InputRef" V="178" U="216cdfda-02df-b98e-ffffe001fe9bf86f" Title="apcups_replace_battery" Px="7200" Py="5472" Px2="9312" Py2="5664" Cl="0,0,0" Nio="4" Ref="216cdfba-0146-a000-ffffe001fe9bf86f" WF="149504" Analog="true" LinkRefType="87">
 					<Co K="AI" Nc="1" U="216cdfda-02df-b98a-00ff5c4af05cefdd">
 						<In Input="216cdfba-0146-9ffe-00ff7c6e54a132c6"/>
 					</Co>
@@ -2792,7 +3950,7 @@
 					<Co K="AQ" U="216cdfda-02df-b98c-02ff5c4af05cefdd"/>
 					<Co K="Q" U="216cdfda-02df-b98d-03ff5c4af05cefdd"/>
 				</C>
-				<C Type="InputRef" V="178" U="216cdfe4-023d-c21b-ffffe001fe9bf86f" Title="apcups_on_battery" Px="5088" Py="4608" Px2="7200" Py2="4800" Cl="0,0,0" Nio="4" Ref="216cdfba-0125-9fc8-ffffe001fe9bf86f" WF="133120" Analog="true" LinkRefType="87">
+				<C Type="InputRef" V="178" U="216cdfe4-023d-c21b-ffffe001fe9bf86f" Title="apcups_on_battery" Px="5088" Py="4608" Px2="7200" Py2="4800" Cl="0,0,0" Nio="4" Ref="216cdfba-0125-9fc8-ffffe001fe9bf86f" WF="149504" Analog="true" LinkRefType="87">
 					<Co K="AI" Nc="1" U="216cdfe4-023d-c217-00ff9f2424680562">
 						<In Input="216cdfba-0125-9fc6-00ff7c6e54a132c6"/>
 					</Co>
@@ -2802,7 +3960,7 @@
 					<Co K="AQ" U="216cdfe4-023d-c219-02ff9f2424680562"/>
 					<Co K="Q" U="216cdfe4-023d-c21a-03ff9f2424680562"/>
 				</C>
-				<C Type="InputRef" V="178" U="216cdfed-0325-d32b-ffffe001fe9bf86f" Title="apcups_data_valid" Px="8256" Py="7104" Px2="10368" Py2="7296" Cl="0,0,0" Nio="4" Ref="216cdfba-011a-9fbc-ffffe001fe9bf86f" WF="133120" Analog="true" LinkRefType="87">
+				<C Type="InputRef" V="178" U="216cdfed-0325-d32b-ffffe001fe9bf86f" Title="apcups_data_valid" Px="8256" Py="7104" Px2="10368" Py2="7296" Cl="0,0,0" Nio="4" Ref="216cdfba-011a-9fbc-ffffe001fe9bf86f" WF="149504" Analog="true" LinkRefType="87">
 					<Co K="AI" Nc="1" U="216cdfed-0325-d327-00ff2efa8d1ff778">
 						<In Input="216cdfba-011a-9fba-00ff7c6e54a132c6"/>
 					</Co>
@@ -2812,7 +3970,7 @@
 					<Co K="AQ" U="216cdfed-0325-d329-02ff2efa8d1ff778"/>
 					<Co K="Q" U="216cdfed-0325-d32a-03ff2efa8d1ff778"/>
 				</C>
-				<C Type="InputRef" V="178" U="216cdff7-00ad-dbc6-ffffe001fe9bf86f" Title="apcups_alarm_level" Px="7488" Py="9024" Px2="9600" Py2="9216" Cl="0,0,0" Nio="4" Ref="216cdfba-0128-9fcc-ffffe001fe9bf86f" WF="133120" Analog="true" LinkRefType="87">
+				<C Type="InputRef" V="178" U="216cdff7-00ad-dbc6-ffffe001fe9bf86f" Title="apcups_alarm_level" Px="7488" Py="9024" Px2="9600" Py2="9216" Cl="0,0,0" Nio="4" Ref="216cdfba-0128-9fcc-ffffe001fe9bf86f" WF="149504" Analog="true" LinkRefType="87">
 					<Co K="AI" Nc="1" U="216cdff7-00ad-dbc2-00ff11250b23f0fa">
 						<In Input="216cdfba-0128-9fca-00ff7c6e54a132c6"/>
 					</Co>
@@ -2822,7 +3980,7 @@
 					<Co K="AQ" U="216cdff7-00ad-dbc4-02ff11250b23f0fa"/>
 					<Co K="Q" U="216cdff7-00ad-dbc5-03ff11250b23f0fa"/>
 				</C>
-				<C Type="OnDelay" V="178" U="216ce008-00ca-ecee-ffffe001fe9bf86f" Title="Netzausfall entprellt" Px="8736" Py="4320" Px2="10080" Py2="5016" Cl="141,255,112" Nio="5" LtE="560783370" WF="131072">
+				<C Type="OnDelay" V="178" U="216ce008-00ca-ecee-ffffe001fe9bf86f" Title="Netzausfall entprellt" Px="8736" Py="4320" Px2="10080" Py2="5016" Cl="141,255,112" Nio="5" LtE="560783370" WF="147456">
 					<Co K="InputTrigger" Nc="1" U="216ce008-00ca-ece9-00ff52621e51f40d">
 						<In Input="216cdfe4-023d-c219-02ff9f2424680562"/>
 					</Co>
@@ -2831,13 +3989,13 @@
 					<Co K="Time" Def="10" U="216ce008-00ca-ecec-03ff52621e51f40d"/>
 					<Co K="Q" U="216ce008-00ca-eced-04ff52621e51f40d"/>
 				</C>
-				<C Type="Not" V="178" U="216ce010-01ab-06a6-ffffe001fe9bf86f" Title="Keine Verbindung zur USV" Px="11424" Py="6816" Px2="12768" Py2="7320" Cl="141,255,112" Nio="2" LtE="560783391">
+				<C Type="Not" V="178" U="216ce010-01ab-06a6-ffffe001fe9bf86f" Title="Keine Verbindung zur USV" Px="11424" Py="6816" Px2="12768" Py2="7320" Cl="141,255,112" Nio="2" LtE="560783391" WF="147456">
 					<Co K="I" Nc="1" U="216ce010-01ab-06a4-00fff25d56f1fded">
 						<In Input="216cdfed-0325-d329-02ff2efa8d1ff778"/>
 					</Co>
 					<Co K="Q" U="216ce010-01ab-06a5-01fff25d56f1fded"/>
 				</C>
-				<C Type="Or" V="178" U="216ce023-00c6-2069-ffffe001fe9bf86f" Title="Sammelstörung, erste Stufe" Px="11616" Py="4992" Px2="12960" Py2="5688" Cl="141,255,112" Nio="3" LtE="560783398">
+				<C Type="Or" V="178" U="216ce023-00c6-2069-ffffe001fe9bf86f" Title="Sammelstörung, erste Stufe" Px="11616" Py="4992" Px2="12960" Py2="5688" Cl="141,255,112" Nio="3" LtE="560783398" WF="147456">
 					<Co K="I1" Nc="1" U="216ce023-00c6-2066-00ff57cfb01fcf3b">
 						<In Input="216ce008-00ca-eced-04ff52621e51f40d"/>
 					</Co>
@@ -2846,7 +4004,7 @@
 					</Co>
 					<Co K="Q" U="216ce023-00c6-2068-02ff57cfb01fcf3b"/>
 				</C>
-				<C Type="Or" V="178" U="216ce029-0381-31a1-ffffe001fe9bf86f" Title="Sammelstörung USV" Px="14112" Py="6624" Px2="15456" Py2="7320" Cl="141,255,112" Nio="3" LtE="560783404">
+				<C Type="Or" V="178" U="216ce029-0381-31a1-ffffe001fe9bf86f" Title="Sammelstörung USV" Px="14112" Py="6624" Px2="15456" Py2="7320" Cl="141,255,112" Nio="3" LtE="560783404" WF="16384">
 					<Co K="I1" Nc="1" U="216ce029-0381-319e-00ff9afb0a34e6b1">
 						<In Input="216ce023-00c6-2068-02ff57cfb01fcf3b"/>
 					</Co>
@@ -2855,7 +4013,7 @@
 					</Co>
 					<Co K="Q" U="216ce029-0381-31a0-02ff9afb0a34e6b1"/>
 				</C>
-				<C Type="State" V="178" U="216ce030-0292-42f1-ffffe001fe9bf86f" Title="USV-Zustand" Px="12768" Py="9120" Px2="15456" Py2="10200" Cl="141,255,112" Nio="11" LtE="560783410">
+				<C Type="State" V="178" U="216ce030-0292-42f1-ffffe001fe9bf86f" Title="USV-Zustand" Px="12768" Py="9120" Px2="15456" Py2="10200" Cl="141,255,112" Nio="11" LtE="560783410" WF="16384">
 					<Co K="I1" Nc="1" U="216ce030-0292-42e6-00ff73825c2964bd">
 						<In Input="216cdff7-00ad-dbc4-02ff11250b23f0fa"/>
 					</Co>
@@ -2875,7 +4033,7 @@
 					<Display Unit="&lt;v.pr&gt;"/>
 					<StateTexts></StateTexts>
 				</C>
-				<C Type="AnalogThresholdTrigger" V="178" U="216ce040-00a6-545b-ffffe001fe9bf86f" Title="Lastabwurf ab Vorwarnung" Px="12768" Py="8160" Px2="14112" Py2="9048" Cl="141,255,112" Nio="8" LtE="560783426">
+				<C Type="AnalogThresholdTrigger" V="178" U="216ce040-00a6-545b-ffffe001fe9bf86f" Title="Lastabwurf ab Vorwarnung" Px="12768" Py="8160" Px2="14112" Py2="9048" Cl="141,255,112" Nio="8" LtE="560783426" WF="16384">
 					<Co K="Input" Nc="1" U="216ce040-00a6-5453-00ff83023099b7bf">
 						<In Input="216cdff7-00ad-dbc4-02ff11250b23f0fa"/>
 					</Co>
@@ -2887,7 +4045,7 @@
 					<Co K="RisingEdge" U="216ce040-00a6-5459-06ff83023099b7bf"/>
 					<Co K="FallingEdge" U="216ce040-00a6-545a-07ff83023099b7bf"/>
 				</C>
-				<C Type="Memory" V="178" U="216ce050-0118-7725-ffffe001fe9bf86f" Title="Stromsparen aktiv" Px="16512" Py="8448" Px2="18624" Py2="8640" Cl="238,238,238" Nio="3" LtE="560783455" WF="131072" Tp="0">
+				<C Type="Memory" V="178" U="216ce050-0118-7725-ffffe001fe9bf86f" Title="Stromsparen aktiv" Px="16512" Py="8448" Px2="18624" Py2="8640" Cl="238,238,238" Nio="3" LtE="560783455" WF="147456" Tp="0">
 					<Co K="Input" Nc="1" U="216ce050-0118-7722-00ff103f1908b862">
 						<In Input="216ce040-00a6-5458-05ff83023099b7bf"/>
 					</Co>
@@ -2896,7 +4054,7 @@
 					<IoData Cr="216373ab-00cf-42fc-ffffe001fe9bf86f" Pr="216373ab-00cf-42f8-ffffe001fe9bf86f"/>
 					<Display Unit="&lt;v.1&gt;" StateOnly="true"/>
 				</C>
-				<C Type="OutputRefLM" V="178" U="216ce073-034c-9a05-ffffe001fe9bf86f" Title="USV-Meldung" Px="16512" Py="6912" Px2="18624" Py2="7104" Cl="0,0,0" Nio="2" Ref="216ce067-00c9-8893-ffffe001fe9bf86f" WF="131072">
+				<C Type="OutputRefLM" V="178" U="216ce073-034c-9a05-ffffe001fe9bf86f" Title="USV-Meldung" Px="16512" Py="6912" Px2="18624" Py2="7104" Cl="0,0,0" Nio="2" Ref="216ce067-00c9-8893-ffffe001fe9bf86f" WF="147456">
 					<Co K="AI" Nc="1" U="216ce073-034c-9a03-00ff48bfb81fa4dc">
 						<In Input="216ce029-0381-31a0-02ff9afb0a34e6b1"/>
 					</Co>
@@ -3016,7 +4174,7 @@
 			</C>
 			<C Type="Page" V="178" U="216cdd41-00bb-5f59-ffffe001fe9bf86f" Title="Docker NG" LtE="560782667" WF="16384">
 				<IoData Cr="216373ab-00cf-42fc-ffffe001fe9bf86f" Pr="216373ab-00cf-42f8-ffffe001fe9bf86f"/>
-				<C Type="InputRef" V="178" U="216cdda0-017f-8c23-ffffe001fe9bf86f" Title="DOCKERNG_ZAEHLER" Px="3456" Py="7680" Px2="5568" Py2="7872" Cl="0,0,0" Nio="4" Ref="216cdd82-030f-6e31-ffffe001fe9bf86f" WF="133120" Analog="true" LinkRefType="87">
+				<C Type="InputRef" V="178" U="216cdda0-017f-8c23-ffffe001fe9bf86f" Title="DOCKERNG_ZAEHLER" Px="3456" Py="7680" Px2="5568" Py2="7872" Cl="0,0,0" Nio="4" Ref="216cdd82-030f-6e31-ffffe001fe9bf86f" WF="149504" Analog="true" LinkRefType="87">
 					<Co K="AI" Nc="1" U="216cdda0-017f-8c1f-00ff2918f5d48572">
 						<In Input="216cdd82-030f-6e2f-00ff158a2bfd5af7"/>
 					</Co>
@@ -3026,7 +4184,7 @@
 					<Co K="AQ" U="216cdda0-017f-8c21-02ff2918f5d48572"/>
 					<Co K="Q" U="216cdda0-017f-8c22-03ff2918f5d48572"/>
 				</C>
-				<C Type="InputRef" V="178" U="216cddaa-01a1-93b8-ffffe001fe9bf86f" Title="DOCKERNG_FEHLT" Px="1248" Py="6816" Px2="3360" Py2="7008" Cl="0,0,0" Nio="4" Ref="216cdd82-0300-6e25-ffffe001fe9bf86f" WF="133120" Analog="true" LinkRefType="87">
+				<C Type="InputRef" V="178" U="216cddaa-01a1-93b8-ffffe001fe9bf86f" Title="DOCKERNG_FEHLT" Px="1248" Py="6816" Px2="3360" Py2="7008" Cl="0,0,0" Nio="4" Ref="216cdd82-0300-6e25-ffffe001fe9bf86f" WF="149504" Analog="true" LinkRefType="87">
 					<Co K="AI" Nc="1" U="216cddaa-01a1-93b4-00ff2b6ec2590b00">
 						<In Input="216cdd82-0300-6e23-00ff158a2bfd5af7"/>
 					</Co>
@@ -3036,7 +4194,7 @@
 					<Co K="AQ" U="216cddaa-01a1-93b6-02ff2b6ec2590b00"/>
 					<Co K="Q" U="216cddaa-01a1-93b7-03ff2b6ec2590b00"/>
 				</C>
-				<C Type="InputRef" V="178" U="216cddb3-01c9-9b54-ffffe001fe9bf86f" Title="DOCKERNG_AUSFALL" Px="1152" Py="5760" Px2="3264" Py2="5952" Cl="0,0,0" Nio="4" Ref="216cdd82-0300-6e19-ffffe001fe9bf86f" WF="133120" Analog="true" LinkRefType="87">
+				<C Type="InputRef" V="178" U="216cddb3-01c9-9b54-ffffe001fe9bf86f" Title="DOCKERNG_AUSFALL" Px="1152" Py="5760" Px2="3264" Py2="5952" Cl="0,0,0" Nio="4" Ref="216cdd82-0300-6e19-ffffe001fe9bf86f" WF="149504" Analog="true" LinkRefType="87">
 					<Co K="AI" Nc="1" U="216cddb3-01c9-9b50-00ff5f740ab891ca">
 						<In Input="216cdd82-0300-6e17-00ff158a2bfd5af7"/>
 					</Co>
@@ -3046,7 +4204,7 @@
 					<Co K="AQ" U="216cddb3-01c9-9b52-02ff5f740ab891ca"/>
 					<Co K="Q" U="216cddb3-01c9-9b53-03ff5f740ab891ca"/>
 				</C>
-				<C Type="InputRef" V="178" U="216cde51-0385-69cb-ffffe001fe9bf86f" Title="Konstante 1" Px="3360" Py="8832" Px2="5472" Py2="9024" Cl="0,0,0" Nio="4" Ref="216c8f88-0096-1e34-ffffe001fe9bf86f" WF="133120" Analog="true" LinkRefType="17">
+				<C Type="InputRef" V="178" U="216cde51-0385-69cb-ffffe001fe9bf86f" Title="Konstante 1" Px="3360" Py="8832" Px2="5472" Py2="9024" Cl="0,0,0" Nio="4" Ref="216c8f88-0096-1e34-ffffe001fe9bf86f" WF="149504" Analog="true" LinkRefType="17">
 					<Co K="AI" Nc="1" U="216cde51-0385-69c7-00ff018fb1dbddc4">
 						<In Input="216c8f88-0096-1e33-00ff13c84b8d596b"/>
 					</Co>
@@ -3054,7 +4212,7 @@
 					<Co K="AQ" U="216cde51-0385-69c9-02ff018fb1dbddc4"/>
 					<Co K="Q" U="216cde51-0385-69ca-03ff018fb1dbddc4"/>
 				</C>
-				<C Type="AnalogThresholdTrigger" V="178" U="216cddc6-019f-aa84-ffffe001fe9bf86f" Title="Container gestört" Px="4512" Py="5472" Px2="5856" Py2="6360" Cl="141,255,112" Nio="8" LtE="560782792" WF="131072">
+				<C Type="AnalogThresholdTrigger" V="178" U="216cddc6-019f-aa84-ffffe001fe9bf86f" Title="Container gestört" Px="4512" Py="5472" Px2="5856" Py2="6360" Cl="141,255,112" Nio="8" LtE="560782792" WF="147456">
 					<Co K="Input" Nc="1" U="216cddc6-019f-aa7c-00ffb9945ee0e992">
 						<In Input="216cddb3-01c9-9b52-02ff5f740ab891ca"/>
 					</Co>
@@ -3066,7 +4224,7 @@
 					<Co K="RisingEdge" U="216cddc6-019f-aa82-06ffb9945ee0e992"/>
 					<Co K="FallingEdge" U="216cddc6-019f-aa83-07ffb9945ee0e992"/>
 				</C>
-				<C Type="AnalogThresholdTrigger" V="178" U="216cdde8-01d4-dfa8-ffffe001fe9bf86f" Title="Container fehlt" Px="4512" Py="6528" Px2="5856" Py2="7416" Cl="141,255,112" Nio="8" LtE="560782826" WF="131072">
+				<C Type="AnalogThresholdTrigger" V="178" U="216cdde8-01d4-dfa8-ffffe001fe9bf86f" Title="Container fehlt" Px="4512" Py="6528" Px2="5856" Py2="7416" Cl="141,255,112" Nio="8" LtE="560782826" WF="147456">
 					<Co K="Input" Nc="1" U="216cdde8-01d4-dfa0-00ffca5d849d141e">
 						<In Input="216cddaa-01a1-93b6-02ff2b6ec2590b00"/>
 					</Co>
@@ -3078,7 +4236,7 @@
 					<Co K="RisingEdge" U="216cdde8-01d4-dfa6-06ffca5d849d141e"/>
 					<Co K="FallingEdge" U="216cdde8-01d4-dfa7-07ffca5d849d141e"/>
 				</C>
-				<C Type="Validator" V="178" U="216cde0f-00b0-fe34-ffffe001fe9bf86f" Title="Docker oder LoxBerry schweigt" Px="7392" Py="7872" Px2="8736" Py2="8760" Cl="141,255,112" Nio="8" LtE="560782872">
+				<C Type="Validator" V="178" U="216cde0f-00b0-fe34-ffffe001fe9bf86f" Title="Docker oder LoxBerry schweigt" Px="7392" Py="7872" Px2="8736" Py2="8760" Cl="141,255,112" Nio="8" LtE="560782872" WF="147456">
 					<Co K="inval" Nc="1" U="216cde0f-00b0-fe2c-00ffebbe7a1976a1">
 						<In Input="216cdda0-017f-8c21-02ff2918f5d48572"/>
 					</Co>
@@ -3092,7 +4250,7 @@
 					<Co K="outval" U="216cde0f-00b0-fe32-06ffebbe7a1976a1"/>
 					<Co K="error" U="216cde0f-00b0-fe33-07ffebbe7a1976a1"/>
 				</C>
-				<C Type="Or" V="178" U="216cde25-01a6-247c-ffffe001fe9bf86f" Title="Container-Störung" Px="7296" Py="5952" Px2="8640" Py2="6648" Cl="141,255,112" Nio="3" LtE="560782899" WF="131072">
+				<C Type="Or" V="178" U="216cde25-01a6-247c-ffffe001fe9bf86f" Title="Container-Störung" Px="7296" Py="5952" Px2="8640" Py2="6648" Cl="141,255,112" Nio="3" LtE="560782899" WF="147456">
 					<Co K="I1" Nc="1" U="216cde25-01a6-2479-00ff5ae37c8798bb">
 						<In Input="216cddc6-019f-aa81-05ffb9945ee0e992"/>
 					</Co>
@@ -3101,7 +4259,7 @@
 					</Co>
 					<Co K="Q" U="216cde25-01a6-247b-02ff5ae37c8798bb"/>
 				</C>
-				<C Type="Or" V="178" U="216cde36-0314-3b84-ffffe001fe9bf86f" Title="Sammelstörung Docker" Px="10176" Py="7104" Px2="11520" Py2="7800" Cl="141,255,112" Nio="3" LtE="560782905" WF="131072">
+				<C Type="Or" V="178" U="216cde36-0314-3b84-ffffe001fe9bf86f" Title="Sammelstörung Docker" Px="10176" Py="7104" Px2="11520" Py2="7800" Cl="141,255,112" Nio="3" LtE="560782905" WF="147456">
 					<Co K="I1" Nc="1" U="216cde36-0314-3b81-00ff130a9222aa59">
 						<In Input="216cde25-01a6-247b-02ff5ae37c8798bb"/>
 					</Co>
@@ -3110,7 +4268,7 @@
 					</Co>
 					<Co K="Q" U="216cde36-0314-3b83-02ff130a9222aa59"/>
 				</C>
-				<C Type="OnDelay" V="178" U="216cde3d-020b-4aee-ffffe001fe9bf86f" Title="Meldung verzögern" Px="12576" Py="7104" Px2="13920" Py2="7800" Cl="141,255,112" Nio="5" LtE="560782911">
+				<C Type="OnDelay" V="178" U="216cde3d-020b-4aee-ffffe001fe9bf86f" Title="Meldung verzögern" Px="12576" Py="7104" Px2="13920" Py2="7800" Cl="141,255,112" Nio="5" LtE="560782911" WF="16384">
 					<Co K="InputTrigger" Nc="1" U="216cde3d-020b-4ae9-00ff8404de2dd58e">
 						<In Input="216cde36-0314-3b83-02ff130a9222aa59"/>
 					</Co>
@@ -3119,7 +4277,7 @@
 					<Co K="Time" Def="300" U="216cde3d-020b-4aec-03ff8404de2dd58e"/>
 					<Co K="Q" U="216cde3d-020b-4aed-04ff8404de2dd58e"/>
 				</C>
-				<C Type="OutputRefLM" V="178" U="216cde74-00fd-907f-ffffe001fe9bf86f" Title="Docker-Störung" Px="15168" Py="7392" Px2="17280" Py2="7584" Cl="0,0,0" Nio="2" Ref="216cde60-010b-7942-ffffe001fe9bf86f" WF="131072">
+				<C Type="OutputRefLM" V="178" U="216cde74-00fd-907f-ffffe001fe9bf86f" Title="Docker-Störung" Px="15168" Py="7392" Px2="17280" Py2="7584" Cl="0,0,0" Nio="2" Ref="216cde60-010b-7942-ffffe001fe9bf86f" WF="147456">
 					<Co K="AI" Nc="1" U="216cde74-00f5-907d-00ffb5e2bbc5d83b">
 						<In Input="216cde3d-020b-4aed-04ff8404de2dd58e"/>
 					</Co>
@@ -3229,6 +4387,474 @@
 					</Co>
 					<Co K="AQ" U="216cb54e-019f-3228-01ff7781b3db1b62"/>
 					<LoggerMailer RefNotification="216cb534-02f8-20f0-ffffe001fe9bf86f" On="&lt;v&gt;" Off="&lt;v&gt;" MinimumTime="5000" NL="1"/>
+				</C>
+			</C>
+			<C Type="Page" V="178" U="216ceab8-0166-5c58-ffffe001fe9bf86f" Title="EVCC" LtE="560786117" WF="16384">
+				<IoData Cr="216373ab-00cf-42fc-ffffe001fe9bf86f" Pr="216373ab-00cf-42f8-ffffe001fe9bf86f"/>
+				<C Type="InputRef" V="178" U="216ceb47-0105-83e2-ffffe001fe9bf86f" Title="EVCC_LP1_LEISTUNG_KW" Px="3936" Py="4224" Px2="6048" Py2="4416" Cl="0,0,0" Nio="4" Ref="216ceb2c-017b-6e4a-ffffe001fe9bf86f" WF="133120" Analog="true" LinkRefType="87">
+					<Co K="AI" Nc="1" U="216ceb47-0105-83de-00ff0c47c2c0a7b9">
+						<In Input="216ceb2c-017b-6e48-00ffd96d0b8e9d97"/>
+					</Co>
+					<Co K="I" Nc="1" U="216ceb47-0105-83df-01ff0c47c2c0a7b9">
+						<In Input="216ceb2c-017b-6e49-01ffd96d0b8e9d97"/>
+					</Co>
+					<Co K="AQ" U="216ceb47-0105-83e0-02ff0c47c2c0a7b9"/>
+					<Co K="Q" U="216ceb47-0105-83e1-03ff0c47c2c0a7b9"/>
+				</C>
+				<C Type="InputRef" V="178" U="216ceb51-0214-8e10-ffffe001fe9bf86f" Title="EVCC_LP1_LAEDT" Px="3936" Py="4032" Px2="6048" Py2="4224" Cl="0,0,0" Nio="4" Ref="216ceb2c-0175-6e42-ffffe001fe9bf86f" WF="133120" LinkRefType="87">
+					<Co K="AI" Nc="1" U="216ceb51-0214-8e0c-00ff9db2b78674cc">
+						<In Input="216ceb2c-0175-6e40-00ffd96d0b8e9d97"/>
+					</Co>
+					<Co K="I" Nc="1" U="216ceb51-0214-8e0d-01ff9db2b78674cc">
+						<In Input="216ceb2c-0175-6e41-01ffd96d0b8e9d97"/>
+					</Co>
+					<Co K="AQ" U="216ceb51-0214-8e0e-02ff9db2b78674cc"/>
+					<Co K="Q" U="216ceb51-0214-8e0f-03ff9db2b78674cc"/>
+				</C>
+				<C Type="InputRef" V="178" U="216ceb5c-0075-a262-ffffe001fe9bf86f" Title="EVCC_LP1_FAHRZEUG_SOC" Px="3936" Py="4416" Px2="6048" Py2="4608" Cl="0,0,0" Nio="4" Ref="216ceb2c-0183-6e5a-ffffe001fe9bf86f" WF="133120" Analog="true" LinkRefType="87">
+					<Co K="AI" Nc="1" U="216ceb5c-0075-a25e-00ffba03cf21f83f">
+						<In Input="216ceb2c-0183-6e58-00ffd96d0b8e9d97"/>
+					</Co>
+					<Co K="I" Nc="1" U="216ceb5c-0075-a25f-01ffba03cf21f83f">
+						<In Input="216ceb2c-0183-6e59-01ffd96d0b8e9d97"/>
+					</Co>
+					<Co K="AQ" U="216ceb5c-0075-a260-02ffba03cf21f83f"/>
+					<Co K="Q" U="216ceb5c-0075-a261-03ffba03cf21f83f"/>
+				</C>
+				<C Type="InputRef" V="178" U="216ceb6a-006d-ac9e-ffffe001fe9bf86f" Title="EVCC_FEHLER_NR" Px="1920" Py="7200" Px2="4032" Py2="7392" Cl="0,0,0" Nio="4" Ref="216ceb2c-0266-6faa-ffffe001fe9bf86f" WF="133120" Analog="true" LinkRefType="87">
+					<Co K="AI" Nc="1" U="216ceb6a-006d-ac9a-00ff05cfb4a98f7f">
+						<In Input="216ceb2c-0266-6fa8-00ffd96d0b8e9d97"/>
+					</Co>
+					<Co K="I" Nc="1" U="216ceb6a-006d-ac9b-01ff05cfb4a98f7f">
+						<In Input="216ceb2c-0266-6fa9-01ffd96d0b8e9d97"/>
+					</Co>
+					<Co K="AQ" U="216ceb6a-006d-ac9c-02ff05cfb4a98f7f"/>
+					<Co K="Q" U="216ceb6a-006d-ac9d-03ff05cfb4a98f7f"/>
+				</C>
+				<C Type="InputRef" V="178" U="216ceb73-02d3-b6e1-ffffe001fe9bf86f" Title="EVCC_ALTER_S" Px="1920" Py="7968" Px2="4032" Py2="8160" Cl="0,0,0" Nio="4" Ref="216ceb2c-01c3-6eca-ffffe001fe9bf86f" WF="133120" Analog="true" LinkRefType="87">
+					<Co K="AI" Nc="1" U="216ceb73-02d3-b6dd-00ff86e640b5fca5">
+						<In Input="216ceb2c-01c3-6ec8-00ffd96d0b8e9d97"/>
+					</Co>
+					<Co K="I" Nc="1" U="216ceb73-02d3-b6de-01ff86e640b5fca5">
+						<In Input="216ceb2c-01c3-6ec9-01ffd96d0b8e9d97"/>
+					</Co>
+					<Co K="AQ" U="216ceb73-02d3-b6df-02ff86e640b5fca5"/>
+					<Co K="Q" U="216ceb73-02d3-b6e0-03ff86e640b5fca5"/>
+				</C>
+				<C Type="InputRef" V="178" U="216ceb86-0344-cb5d-ffffe001fe9bf86f" Title="EVCC_NETZ_KW" Px="2880" Py="9600" Px2="4992" Py2="9792" Cl="0,0,0" Nio="4" Ref="216ceb2c-015c-6e0a-ffffe001fe9bf86f" WF="133120" Analog="true" LinkRefType="87">
+					<Co K="AI" Nc="1" U="216ceb86-0344-cb59-00ffd229ce93125c">
+						<In Input="216ceb2c-015c-6e08-00ffd96d0b8e9d97"/>
+					</Co>
+					<Co K="I" Nc="1" U="216ceb86-0344-cb5a-01ffd229ce93125c">
+						<In Input="216ceb2c-015c-6e09-01ffd96d0b8e9d97"/>
+					</Co>
+					<Co K="AQ" U="216ceb86-0344-cb5b-02ffd229ce93125c"/>
+					<Co K="Q" U="216ceb86-0344-cb5c-03ffd229ce93125c"/>
+				</C>
+				<C Type="InputRef" V="178" U="216ceb92-009a-d5ae-ffffe001fe9bf86f" Title="EVCC_SPEICHER_KW" Px="2880" Py="9984" Px2="4992" Py2="10176" Cl="0,0,0" Nio="4" Ref="216ceb2c-015c-6e12-ffffe001fe9bf86f" WF="133120" Analog="true" LinkRefType="87">
+					<Co K="AI" Nc="1" U="216ceb92-009a-d5aa-00ff642b5068b96d">
+						<In Input="216ceb2c-015c-6e10-00ffd96d0b8e9d97"/>
+					</Co>
+					<Co K="I" Nc="1" U="216ceb92-009a-d5ab-01ff642b5068b96d">
+						<In Input="216ceb2c-015c-6e11-01ffd96d0b8e9d97"/>
+					</Co>
+					<Co K="AQ" U="216ceb92-009a-d5ac-02ff642b5068b96d"/>
+					<Co K="Q" U="216ceb92-009a-d5ad-03ff642b5068b96d"/>
+				</C>
+				<C Type="InputRef" V="178" U="216ceb9e-0173-e006-ffffe001fe9bf86f" Title="EVCC_SPEICHER_SOC" Px="2880" Py="10176" Px2="4992" Py2="10368" Cl="0,0,0" Nio="4" Ref="216ceb2c-015c-6e16-ffffe001fe9bf86f" WF="133120" Analog="true" LinkRefType="87">
+					<Co K="AI" Nc="1" U="216ceb9e-0173-e002-00ffcf0a3789b9a6">
+						<In Input="216ceb2c-015c-6e14-00ffd96d0b8e9d97"/>
+					</Co>
+					<Co K="I" Nc="1" U="216ceb9e-0173-e003-01ffcf0a3789b9a6">
+						<In Input="216ceb2c-015c-6e15-01ffd96d0b8e9d97"/>
+					</Co>
+					<Co K="AQ" U="216ceb9e-0173-e004-02ffcf0a3789b9a6"/>
+					<Co K="Q" U="216ceb9e-0173-e005-03ffcf0a3789b9a6"/>
+				</C>
+				<C Type="InputRef" V="178" U="216ceba9-01e5-ea65-ffffe001fe9bf86f" Title="EVCC_PV_KW" Px="2880" Py="9792" Px2="4992" Py2="9984" Cl="0,0,0" Nio="4" Ref="216ceb2c-015c-6e0e-ffffe001fe9bf86f" WF="133120" Analog="true" LinkRefType="87">
+					<Co K="AI" Nc="1" U="216ceba9-01e5-ea61-00ff881558c02297">
+						<In Input="216ceb2c-015c-6e0c-00ffd96d0b8e9d97"/>
+					</Co>
+					<Co K="I" Nc="1" U="216ceba9-01e5-ea62-01ff881558c02297">
+						<In Input="216ceb2c-015c-6e0d-01ffd96d0b8e9d97"/>
+					</Co>
+					<Co K="AQ" U="216ceba9-01e5-ea63-02ff881558c02297"/>
+					<Co K="Q" U="216ceba9-01e5-ea64-03ff881558c02297"/>
+				</C>
+				<C Type="InputRef" V="178" U="216cebb5-0042-ff19-ffffe001fe9bf86f" Title="EVCC_PROGNOSE_MORGEN" Px="3840" Py="11232" Px2="5952" Py2="11424" Cl="0,0,0" Nio="4" Ref="216ceb2c-01db-6ef2-ffffe001fe9bf86f" WF="133120" Analog="true" LinkRefType="87">
+					<Co K="AI" Nc="1" U="216cebb5-0042-ff15-00ffdaf5c2b0d1df">
+						<In Input="216ceb2c-01db-6ef0-00ffd96d0b8e9d97"/>
+					</Co>
+					<Co K="I" Nc="1" U="216cebb5-0042-ff16-01ffdaf5c2b0d1df">
+						<In Input="216ceb2c-01db-6ef1-01ffd96d0b8e9d97"/>
+					</Co>
+					<Co K="AQ" U="216cebb5-0042-ff17-02ffdaf5c2b0d1df"/>
+					<Co K="Q" U="216cebb5-0042-ff18-03ffdaf5c2b0d1df"/>
+				</C>
+				<C Type="InputRef" V="178" U="216cebbf-0370-0986-ffffe001fe9bf86f" Title="EVCC_PREIS_RANG" Px="2496" Py="5760" Px2="4608" Py2="5952" Cl="0,0,0" Nio="4" Ref="216ceb2c-01ea-6f06-ffffe001fe9bf86f" WF="133120" Analog="true" LinkRefType="87">
+					<Co K="AI" Nc="1" U="216cebbf-0370-0982-00ff54793f7b9393">
+						<In Input="216ceb2c-01ea-6f04-00ffd96d0b8e9d97"/>
+					</Co>
+					<Co K="I" Nc="1" U="216cebbf-0370-0983-01ff54793f7b9393">
+						<In Input="216ceb2c-01ea-6f05-01ffd96d0b8e9d97"/>
+					</Co>
+					<Co K="AQ" U="216cebbf-0370-0984-02ff54793f7b9393"/>
+					<Co K="Q" U="216cebbf-0370-0985-03ff54793f7b9393"/>
+				</C>
+				<C Type="InputRef" V="178" U="216cebc8-03bc-13fa-ffffe001fe9bf86f" Title="EVCC_PREIS_OK" Px="7200" Py="5952" Px2="9312" Py2="6144" Cl="0,0,0" Nio="4" Ref="216ceb2c-0272-6fb2-ffffe001fe9bf86f" WF="133120" LinkRefType="87">
+					<Co K="AI" Nc="1" U="216cebc8-03bc-13f6-00ff4cf4b0521e13">
+						<In Input="216ceb2c-0272-6fb0-00ffd96d0b8e9d97"/>
+					</Co>
+					<Co K="I" Nc="1" U="216cebc8-03bc-13f7-01ff4cf4b0521e13">
+						<In Input="216ceb2c-0272-6fb1-01ffd96d0b8e9d97"/>
+					</Co>
+					<Co K="AQ" U="216cebc8-03bc-13f8-02ff4cf4b0521e13"/>
+					<Co K="Q" U="216cebc8-03bc-13f9-03ff4cf4b0521e13"/>
+				</C>
+				<C Type="OutputRef" V="178" U="216cec17-0007-3ea6-ffffe001fe9bf86f" Title="EVCC_SET_MODUS_LP1" Px="12864" Py="5760" Px2="14976" Py2="5952" Cl="0,0,0" Nio="2" Ref="216cebfe-02fe-28cf-ffffe001fe9bf86f" WF="133120" Analog="true" LinkRefType="74">
+					<Co K="AI" Nc="1" U="216cec17-0007-3ea4-00ff7d6577572462">
+						<In Input="216cec9d-00f7-3110-02fffc9bfd897ec1"/>
+					</Co>
+					<Co K="AQ" U="216cec17-0007-3ea5-01ff7d6577572462"/>
+				</C>
+				<C Type="EnergyManager2" V="178" U="216cec27-02bb-5477-ffffe001fe9bf86f" Title="Energiemanager" Px="7104" Py="9120" Px2="9792" Py2="10584" Cl="15,164,255" Nio="37" SpStates="216cec27-02bb-5451-ffffdbccd905b480">
+					<Co K="Gpwr" Nc="1" U="216cec27-02bb-5452-00ffdbccd905b480">
+						<In Input="216ceb86-0344-cb5b-02ffd229ce93125c"/>
+					</Co>
+					<Co K="Ppwr" Nc="1" U="216cec27-02bb-5453-01ffdbccd905b480">
+						<In Input="216ceba9-01e5-ea63-02ff881558c02297"/>
+					</Co>
+					<Co K="Spwr" Nc="1" U="216cec27-02bb-5454-02ffdbccd905b480">
+						<In Input="216ceb92-009a-d5ac-02ff642b5068b96d"/>
+					</Co>
+					<Co K="Soc" Nc="1" U="216cec27-02bb-5455-03ffdbccd905b480">
+						<In Input="216ceb9e-0173-e004-02ffcf0a3789b9a6"/>
+					</Co>
+					<Co K="Prio" U="216cec27-02bb-5456-04ffdbccd905b480"/>
+					<Co K="Recalc" U="216cec27-02bb-5457-05ffdbccd905b480"/>
+					<Co K="IL1" U="216cec27-02bb-5458-06ffdbccd905b480"/>
+					<Co K="IL2" U="216cec27-02bb-5459-07ffdbccd905b480"/>
+					<Co K="IL3" U="216cec27-02bb-545a-08ffdbccd905b480"/>
+					<Co K="IL4" U="216cec27-02bb-545b-09ffdbccd905b480"/>
+					<Co K="IL5" U="216cec27-02bb-545c-0affdbccd905b480"/>
+					<Co K="IL6" U="216cec27-02bb-545d-0bffdbccd905b480"/>
+					<Co K="IL7" U="216cec27-02bb-545e-0cffdbccd905b480"/>
+					<Co K="IL8" U="216cec27-02bb-545f-0dffdbccd905b480"/>
+					<Co K="IL9" U="216cec27-02bb-5460-0effdbccd905b480"/>
+					<Co K="IL10" U="216cec27-02bb-5461-0fffdbccd905b480"/>
+					<Co K="IL11" U="216cec27-02bb-5462-10ffdbccd905b480"/>
+					<Co K="IL12" U="216cec27-02bb-5463-11ffdbccd905b480"/>
+					<Co K="Reset" U="216cec27-02bb-5464-12ffdbccd905b480"/>
+					<Co K="O" U="216cec27-02bb-5465-13ffdbccd905b480"/>
+					<Co K="MinSoc" U="216cec27-02bb-5466-14ffdbccd905b480"/>
+					<Co K="MaxSpwr" U="216cec27-02bb-5467-15ffdbccd905b480"/>
+					<Co K="OL1" U="216cec27-02bb-5468-16ffdbccd905b480"/>
+					<Co K="OL2" U="216cec27-02bb-5469-17ffdbccd905b480"/>
+					<Co K="OL3" U="216cec27-02bb-546a-18ffdbccd905b480"/>
+					<Co K="OL4" U="216cec27-02bb-546b-19ffdbccd905b480"/>
+					<Co K="OL5" U="216cec27-02bb-546c-1affdbccd905b480"/>
+					<Co K="OL6" U="216cec27-02bb-546d-1bffdbccd905b480"/>
+					<Co K="OL7" U="216cec27-02bb-546e-1cffdbccd905b480"/>
+					<Co K="OL8" U="216cec27-02bb-546f-1dffdbccd905b480"/>
+					<Co K="OL9" U="216cec27-02bb-5470-1effdbccd905b480"/>
+					<Co K="OL10" U="216cec27-02bb-5471-1fffdbccd905b480"/>
+					<Co K="OL11" U="216cec27-02bb-5472-20ffdbccd905b480"/>
+					<Co K="OL12" U="216cec27-02bb-5473-21ffdbccd905b480"/>
+					<Co K="ONext" U="216cec27-02bb-5474-22ffdbccd905b480"/>
+					<Co K="OMinSoc" U="216cec27-02bb-5475-23ffdbccd905b480"/>
+					<Co K="API" U="216cec27-02bb-5476-24ffdbccd905b480"/>
+					<IoData Visu="true" Cr="216373ab-00d5-4358-ffffe001fe9bf86f" Pr="216373ab-00cf-42f8-ffffe001fe9bf86f" UseInFav="true"/>
+					<Load Id="216cec27-02bb-5445-ffffdbccd905b480" Na="" OIdx="0" RT="60"/>
+					<Load Id="216cec27-02bb-5446-ffffdbccd905b480" Na="" OIdx="1" RT="60"/>
+					<Load Id="216cec27-02bb-5447-ffffdbccd905b480" Na="" OIdx="2" RT="60"/>
+					<Load Id="216cec27-02bb-5448-ffffdbccd905b480" Na="" OIdx="3" RT="60"/>
+					<Load Id="216cec27-02bb-5449-ffffdbccd905b480" Na="" OIdx="4" RT="60"/>
+					<Load Id="216cec27-02bb-544a-ffffdbccd905b480" Na="" OIdx="5" RT="60"/>
+					<Load Id="216cec27-02bb-544b-ffffdbccd905b480" Na="" OIdx="6" RT="60"/>
+					<Load Id="216cec27-02bb-544c-ffffdbccd905b480" Na="" OIdx="7" RT="60"/>
+					<Load Id="216cec27-02bb-544d-ffffdbccd905b480" Na="" OIdx="8" RT="60"/>
+					<Load Id="216cec27-02bb-544e-ffffdbccd905b480" Na="" OIdx="9" RT="60"/>
+					<Load Id="216cec27-02bb-544f-ffffdbccd905b480" Na="" OIdx="10" RT="60"/>
+					<Load Id="216cec27-02bb-5450-ffffdbccd905b480" Na="" OIdx="11" RT="60"/>
+				</C>
+				<C Type="State" V="178" U="216cec41-033f-6a6b-ffffe001fe9bf86f" Title="Wallbox Status" Px="8064" Py="3552" Px2="10752" Py2="4824" Cl="141,255,112" Nio="11" LtE="560786506">
+					<Co K="I1" Nc="1" U="216cec41-033f-6a60-00ff7b9fa0058c02">
+						<In Input="216ceb51-0214-8e0e-02ff9db2b78674cc"/>
+					</Co>
+					<Co K="I2" Nc="1" U="216cec41-033f-6a61-01ff7b9fa0058c02">
+						<In Input="216ceb47-0105-83e0-02ff0c47c2c0a7b9"/>
+					</Co>
+					<Co K="I3" Nc="1" U="216cec41-033f-6a62-02ff7b9fa0058c02">
+						<In Input="216ceb5c-0075-a260-02ffba03cf21f83f"/>
+					</Co>
+					<Co K="I4" U="216cec41-033f-6a63-03ff7b9fa0058c02"/>
+					<Co K="I5" U="216cec41-033f-6a64-04ff7b9fa0058c02"/>
+					<Co K="I6" U="216cec41-033f-6a65-05ff7b9fa0058c02"/>
+					<Co K="I7" U="216cec41-033f-6a66-06ff7b9fa0058c02"/>
+					<Co K="I8" U="216cec41-033f-6a67-07ff7b9fa0058c02"/>
+					<Co K="TQ" U="216cec41-033f-6a68-08ff7b9fa0058c02"/>
+					<Co K="AQ" U="216cec41-033f-6a69-09ff7b9fa0058c02"/>
+					<Co K="OutputAPI" U="216cec41-033f-6a6a-0aff7b9fa0058c02"/>
+					<IoData Visu="true" Cr="216373ab-00cf-42fc-ffffe001fe9bf86f" Pr="216373ab-00cf-42f8-ffffe001fe9bf86f"/>
+					<Display Unit="&lt;v.pr&gt;"/>
+					<StateTexts></StateTexts>
+				</C>
+				<C Type="EdgeDetection" V="178" U="216cec4f-0200-8063-ffffe001fe9bf86f" Title="Ladung beendet" Px="8064" Py="2400" Px2="9408" Py2="3288" Cl="141,255,112" Nio="5" LtE="560786520">
+					<Co K="Input" Nc="1" U="216cec4f-0200-805e-00ff2a3f732fe04c">
+						<In Input="216ceb51-0214-8e0e-02ff9db2b78674cc"/>
+					</Co>
+					<Co K="PulseTime" Def="1" U="216cec4f-0200-805f-01ff2a3f732fe04c"/>
+					<Co K="Edge" U="216cec4f-0200-8060-02ff2a3f732fe04c"/>
+					<Co K="RisingEdge" U="216cec4f-0200-8061-03ff2a3f732fe04c"/>
+					<Co K="FallingEdge" U="216cec4f-0200-8062-04ff2a3f732fe04c"/>
+				</C>
+				<C Type="AnalogThresholdTrigger" V="178" U="216cec5e-0016-9665-ffffe001fe9bf86f" Title="EVCC stumm" Px="5280" Py="7680" Px2="6624" Py2="8568" Cl="141,255,112" Nio="8" LtE="560786539" WF="131072">
+					<Co K="Input" Nc="1" U="216cec5e-0016-965d-00ff4fce7be870dc">
+						<In Input="216ceb73-02d3-b6df-02ff86e640b5fca5"/>
+					</Co>
+					<Co K="On" Def="300" U="216cec5e-0016-965e-01ff4fce7be870dc"/>
+					<Co K="Off" Def="120" U="216cec5e-0016-965f-02ff4fce7be870dc"/>
+					<Co K="Remanence" U="216cec5e-0016-9660-03ff4fce7be870dc"/>
+					<Co K="PulseTime" Def="1" U="216cec5e-0016-9661-04ff4fce7be870dc"/>
+					<Co K="Q" U="216cec5e-0016-9662-05ff4fce7be870dc"/>
+					<Co K="RisingEdge" U="216cec5e-0016-9663-06ff4fce7be870dc"/>
+					<Co K="FallingEdge" U="216cec5e-0016-9664-07ff4fce7be870dc"/>
+				</C>
+				<C Type="AnalogThresholdTrigger" V="178" U="216cec71-01d8-c279-ffffe001fe9bf86f" Title="Solarprognose hoch" Px="7296" Py="10944" Px2="8640" Py2="11832" Cl="141,255,112" Nio="8" LtE="560786547">
+					<Co K="Input" Nc="1" U="216cec71-01d8-c271-00ff3385fef7d21f">
+						<In Input="216cebb5-0042-ff17-02ffdaf5c2b0d1df"/>
+					</Co>
+					<Co K="On" Def="20" U="216cec71-01d8-c272-01ff3385fef7d21f"/>
+					<Co K="Off" Def="15" U="216cec71-01d8-c273-02ff3385fef7d21f"/>
+					<Co K="Remanence" U="216cec71-01d8-c274-03ff3385fef7d21f"/>
+					<Co K="PulseTime" Def="1" U="216cec71-01d8-c275-04ff3385fef7d21f"/>
+					<Co K="Q" U="216cec71-01d8-c276-05ff3385fef7d21f"/>
+					<Co K="RisingEdge" U="216cec71-01d8-c277-06ff3385fef7d21f"/>
+					<Co K="FallingEdge" U="216cec71-01d8-c278-07ff3385fef7d21f"/>
+				</C>
+				<C Type="NotEqual" V="178" U="216cec82-033f-f9b0-ffffe001fe9bf86f" Title="EVCC Störung" Px="5280" Py="6912" Px2="6624" Py2="7608" Cl="141,255,112" Nio="3" LtE="560786564" WF="131072">
+					<Co K="Input1" Nc="1" U="216cec82-033f-f9ad-00ff6b01aae05c7f">
+						<In Input="216ceb6a-006d-ac9c-02ff05cfb4a98f7f"/>
+					</Co>
+					<Co K="Input2" U="216cec82-033f-f9ae-01ff6b01aae05c7f"/>
+					<Co K="Q" U="216cec82-033f-f9af-02ff6b01aae05c7f"/>
+				</C>
+				<C Type="LessEqual" V="178" U="216cec89-019c-0fd4-ffffe001fe9bf86f" Title="Günstige Stunde" Px="5376" Py="5472" Px2="6720" Py2="6168" Cl="141,255,112" Nio="3" LtE="560786583" WF="131072">
+					<Co K="Input1" Nc="1" U="216cec89-019c-0fd1-00ff89ce523ad6f8">
+						<In Input="216cebbf-0370-0984-02ff54793f7b9393"/>
+					</Co>
+					<Co K="Input2" Def="6" U="216cec89-019c-0fd2-01ff89ce523ad6f8"/>
+					<Co K="Q" U="216cec89-019c-0fd3-02ff89ce523ad6f8"/>
+				</C>
+				<C Type="And" V="178" U="216cec9d-00f7-3111-ffffe001fe9bf86f" Title="Günstig und Preis gültig" Px="10368" Py="5472" Px2="11712" Py2="6168" Cl="141,255,112" Nio="3" LtE="560786592">
+					<Co K="I1" Nc="1" U="216cec9d-00f7-310e-00fffc9bfd897ec1">
+						<In Input="216cec89-019c-0fd3-02ff89ce523ad6f8"/>
+					</Co>
+					<Co K="I2" Nc="1" U="216cec9d-00f7-310f-01fffc9bfd897ec1">
+						<In Input="216cebc8-03bc-13f8-02ff4cf4b0521e13"/>
+					</Co>
+					<Co K="Q" U="216cec9d-00f7-3110-02fffc9bfd897ec1"/>
+				</C>
+				<C Type="Or" V="178" U="216ceca3-03cb-4745-ffffe001fe9bf86f" Title="EVCC gestört gesammelt" Px="9216" Py="6912" Px2="10560" Py2="7608" Cl="141,255,112" Nio="3" LtE="560786768">
+					<Co K="I1" Nc="1" U="216ceca3-03cb-4742-00ffac18fbce156b">
+						<In Input="216cec82-033f-f9af-02ff6b01aae05c7f"/>
+					</Co>
+					<Co K="I2" Nc="1" U="216ceca3-03cb-4743-01ffac18fbce156b">
+						<In Input="216cec5e-0016-9662-05ff4fce7be870dc"/>
+					</Co>
+					<Co K="Q" U="216ceca3-03cb-4744-02ffac18fbce156b"/>
+				</C>
+				<C Type="OutputRefLM" V="178" U="216cecfd-02b5-b652-ffffe001fe9bf86f" Title="Ladung fertig" Px="10176" Py="3072" Px2="12288" Py2="3264" Cl="0,0,0" Nio="2" Ref="216cecdc-01d6-7ec4-ffffe001fe9bf86f" WF="131072">
+					<Co K="AI" Nc="1" U="216cecfd-02b5-b650-00ffee70ca4d7c79">
+						<In Input="216cec4f-0200-8062-04ff2a3f732fe04c"/>
+					</Co>
+					<Co K="AQ" U="216cecfd-02b5-b651-01ffee70ca4d7c79"/>
+					<LoggerMailer RefNotification="216cecdc-01d6-7ec4-ffffe001fe9bf86f" On="&lt;v&gt;" Off="&lt;v&gt;" MinimumTime="5000" NL="1"/>
+				</C>
+				<C Type="OutputRefLM" V="178" U="216ced07-000f-c178-ffffe001fe9bf86f" Title="EVCC Meldung" Px="12288" Py="7200" Px2="14400" Py2="7392" Cl="0,0,0" Nio="2" Ref="216cecf0-0011-a014-ffffe001fe9bf86f" WF="131072">
+					<Co K="AI" Nc="1" U="216ced07-000f-c176-00ffe9ca159f3292">
+						<In Input="216ceca3-03cb-4744-02ffac18fbce156b"/>
+					</Co>
+					<Co K="AQ" U="216ced07-000f-c177-01ffe9ca159f3292"/>
+					<LoggerMailer RefNotification="216cecf0-0011-a014-ffffe001fe9bf86f" On="&lt;v&gt;" Off="&lt;v&gt;" MinimumTime="5000" NL="1"/>
+				</C>
+			</C>
+			<C Type="Page" V="178" U="216ceed7-01cc-9f8e-ffffe001fe9bf86f" Title="Fensterbilanz" LtE="560787169" WF="16384">
+				<IoData Cr="216373ab-00cf-42fc-ffffe001fe9bf86f" Pr="216373ab-00cf-42f8-ffffe001fe9bf86f"/>
+				<C Type="InputRef" V="178" U="216cef12-005d-d030-ffffe001fe9bf86f" Title="FB_WZ_GRUND" Px="4224" Py="10752" Px2="6336" Py2="10944" Cl="0,0,0" Nio="4" Ref="216ceefc-02e7-b7b6-ffffe001fe9bf86f" WF="133120" Analog="true" LinkRefType="87">
+					<Co K="AI" Nc="1" U="216cef12-005d-d02c-00ffd386f34ade09">
+						<In Input="216ceefc-02e7-b7b4-00ffe79761a65f49"/>
+					</Co>
+					<Co K="I" Nc="1" U="216cef12-005d-d02d-01ffd386f34ade09">
+						<In Input="216ceefc-02e7-b7b5-01ffe79761a65f49"/>
+					</Co>
+					<Co K="AQ" U="216cef12-005d-d02e-02ffd386f34ade09"/>
+					<Co K="Q" U="216cef12-005d-d02f-03ffd386f34ade09"/>
+				</C>
+				<C Type="InputRef" V="178" U="216cef21-0195-e8aa-ffffe001fe9bf86f" Title="FB_WZ_BESCHATTEN" Px="6528" Py="6336" Px2="8640" Py2="6528" Cl="0,0,0" Nio="4" Ref="216ceefc-02e4-b7b2-ffffe001fe9bf86f" WF="133120" Analog="true" LinkRefType="87">
+					<Co K="AI" Nc="1" U="216cef21-0195-e8a6-00ffbb24ea8a03f6">
+						<In Input="216ceefc-02e4-b7b0-00ffe79761a65f49"/>
+					</Co>
+					<Co K="I" Nc="1" U="216cef21-0195-e8a7-01ffbb24ea8a03f6">
+						<In Input="216ceefc-02e4-b7b1-01ffe79761a65f49"/>
+					</Co>
+					<Co K="AQ" U="216cef21-0195-e8a8-02ffbb24ea8a03f6"/>
+					<Co K="Q" U="216cef21-0195-e8a9-03ffbb24ea8a03f6"/>
+				</C>
+				<C Type="InputRef" V="178" U="216cef35-0118-0151-ffffe001fe9bf86f" Title="FB_OK" Px="3072" Py="8160" Px2="5184" Py2="8352" Cl="0,0,0" Nio="4" Ref="216ceefc-02b3-b782-ffffe001fe9bf86f" WF="133120" Analog="true" LinkRefType="87">
+					<Co K="AI" Nc="1" U="216cef35-0118-014d-00ff5d08d33d0e18">
+						<In Input="216ceefc-02b3-b780-00ffe79761a65f49"/>
+					</Co>
+					<Co K="I" Nc="1" U="216cef35-0118-014e-01ff5d08d33d0e18">
+						<In Input="216ceefc-02b3-b781-01ffe79761a65f49"/>
+					</Co>
+					<Co K="AQ" U="216cef35-0118-014f-02ff5d08d33d0e18"/>
+					<Co K="Q" U="216cef35-0118-0150-03ff5d08d33d0e18"/>
+				</C>
+				<C Type="InputRef" V="178" U="216cef6c-03d0-3277-ffffe001fe9bf86f" Title="FB_HERZ" Px="1824" Py="7296" Px2="3936" Py2="7488" Cl="0,0,0" Nio="4" Ref="216ceefc-02b3-b786-ffffe001fe9bf86f" WF="133120" Analog="true" LinkRefType="87">
+					<Co K="AI" Nc="1" U="216cef6c-03d0-3273-00ff0cf5ebe49b06">
+						<In Input="216ceefc-02b3-b784-00ffe79761a65f49"/>
+					</Co>
+					<Co K="I" Nc="1" U="216cef6c-03d0-3274-01ff0cf5ebe49b06">
+						<In Input="216ceefc-02b3-b785-01ffe79761a65f49"/>
+					</Co>
+					<Co K="AQ" U="216cef6c-03d0-3275-02ff0cf5ebe49b06"/>
+					<Co K="Q" U="216cef6c-03d0-3276-03ff0cf5ebe49b06"/>
+				</C>
+				<C Type="State" V="178" U="216cef81-0303-5769-ffffe001fe9bf86f" Title="Fensterbilanz gültig" Px="5952" Py="8640" Px2="8640" Py2="9528" Cl="141,255,112" Nio="11" LtE="560787331">
+					<Co K="I1" Nc="1" U="216cef81-0303-575e-00ffd9636188e1da">
+						<In Input="216cef35-0118-014f-02ff5d08d33d0e18"/>
+					</Co>
+					<Co K="I2" U="216cef81-0303-575f-01ffd9636188e1da"/>
+					<Co K="I3" U="216cef81-0303-5760-02ffd9636188e1da"/>
+					<Co K="I4" U="216cef81-0303-5761-03ffd9636188e1da"/>
+					<Co K="I5" U="216cef81-0303-5762-04ffd9636188e1da"/>
+					<Co K="I6" U="216cef81-0303-5763-05ffd9636188e1da"/>
+					<Co K="I7" U="216cef81-0303-5764-06ffd9636188e1da"/>
+					<Co K="I8" U="216cef81-0303-5765-07ffd9636188e1da"/>
+					<Co K="TQ" U="216cef81-0303-5766-08ffd9636188e1da"/>
+					<Co K="AQ" U="216cef81-0303-5767-09ffd9636188e1da"/>
+					<Co K="OutputAPI" U="216cef81-0303-5768-0affd9636188e1da"/>
+					<IoData Visu="true" Cr="216373ab-00cf-42fc-ffffe001fe9bf86f" Pr="216373ab-00cf-42f8-ffffe001fe9bf86f"/>
+					<Display Unit="&lt;v.pr&gt;"/>
+					<StateTexts></StateTexts>
+				</C>
+				<C Type="State" V="178" U="216cef88-0221-702f-ffffe001fe9bf86f" Title="Warum beschattet, Wohnzimmer" Px="7488" Py="10272" Px2="10176" Py2="11160" Cl="141,255,112" Nio="11" LtE="560787369">
+					<Co K="I1" Nc="1" U="216cef88-0221-7024-00ffc56d2e6e1132">
+						<In Input="216cef12-005d-d02e-02ffd386f34ade09"/>
+					</Co>
+					<Co K="I2" U="216cef88-0221-7025-01ffc56d2e6e1132"/>
+					<Co K="I3" U="216cef88-0221-7026-02ffc56d2e6e1132"/>
+					<Co K="I4" U="216cef88-0221-7027-03ffc56d2e6e1132"/>
+					<Co K="I5" U="216cef88-0221-7028-04ffc56d2e6e1132"/>
+					<Co K="I6" U="216cef88-0221-7029-05ffc56d2e6e1132"/>
+					<Co K="I7" U="216cef88-0221-702a-06ffc56d2e6e1132"/>
+					<Co K="I8" U="216cef88-0221-702b-07ffc56d2e6e1132"/>
+					<Co K="TQ" U="216cef88-0221-702c-08ffc56d2e6e1132"/>
+					<Co K="AQ" U="216cef88-0221-702d-09ffc56d2e6e1132"/>
+					<Co K="OutputAPI" U="216cef88-0221-702e-0affc56d2e6e1132"/>
+					<IoData Visu="true" Cr="216373ab-00cf-42fc-ffffe001fe9bf86f" Pr="216373ab-00cf-42f8-ffffe001fe9bf86f"/>
+					<Display Unit="&lt;v.pr&gt;"/>
+					<StateTexts></StateTexts>
+				</C>
+				<C Type="AnalogThresholdTrigger" V="178" U="216cef8f-014f-8907-ffffe001fe9bf86f" Title="Fensterbilanz steht" Px="4896" Py="7008" Px2="6240" Py2="7896" Cl="141,255,112" Nio="8" LtE="560787358" WF="131072">
+					<Co K="Input" Nc="1" U="216cef8f-014f-88ff-00ff6f0e8b3833ec">
+						<In Input="216cef6c-03d0-3275-02ff0cf5ebe49b06"/>
+					</Co>
+					<Co K="On" Def="15" U="216cef8f-014f-8900-01ff6f0e8b3833ec"/>
+					<Co K="Off" Def="10" U="216cef8f-014f-8901-02ff6f0e8b3833ec"/>
+					<Co K="Remanence" U="216cef8f-014f-8902-03ff6f0e8b3833ec"/>
+					<Co K="PulseTime" Def="1" U="216cef8f-014f-8903-04ff6f0e8b3833ec"/>
+					<Co K="Q" U="216cef8f-014f-8904-05ff6f0e8b3833ec"/>
+					<Co K="RisingEdge" U="216cef8f-014f-8905-06ff6f0e8b3833ec"/>
+					<Co K="FallingEdge" U="216cef8f-014f-8906-07ff6f0e8b3833ec"/>
+				</C>
+				<C Type="Or" V="178" U="216cefce-02e6-dfee-ffffe001fe9bf86f" Title="Fensterbilanz unbrauchbar" Px="7296" Py="7008" Px2="8640" Py2="7704" Cl="141,255,112" Nio="3" LtE="560787408">
+					<Co K="I1" Nc="1" U="216cefce-02e6-dfeb-00ff6f0b9edea666">
+						<In Input="216cef8f-014f-8904-05ff6f0e8b3833ec"/>
+					</Co>
+					<Co K="I2" Inv="true" Nc="1" U="216cefce-02e6-dfec-01ff6f0b9edea666">
+						<In Input="216cef35-0118-014f-02ff5d08d33d0e18"/>
+					</Co>
+					<Co K="Q" U="216cefce-02e6-dfed-02ff6f0b9edea666"/>
+				</C>
+				<C Type="And" V="178" U="216cefd6-01fe-f8ce-ffffe001fe9bf86f" Title="Beschattung laut Fensterbilanz, Wohnzimmer" Px="9600" Py="6048" Px2="10944" Py2="6744" Cl="141,255,112" Nio="3" LtE="560787416" WF="131072">
+					<Co K="I1" Nc="1" U="216cefd6-01fe-f8cb-00ffa5525eee5163">
+						<In Input="216cef21-0195-e8a8-02ffbb24ea8a03f6"/>
+					</Co>
+					<Co K="I2" Inv="true" Nc="1" U="216cefd6-01fe-f8cc-01ffa5525eee5163">
+						<In Input="216cefce-02e6-dfed-02ff6f0b9edea666"/>
+					</Co>
+					<Co K="Q" U="216cefd6-01fe-f8cd-02ffa5525eee5163"/>
+				</C>
+				<C Type="Or" V="178" U="216cefde-0053-11b6-ffffe001fe9bf86f" Title="Freigabe Beschattung, Wohnzimmer" Px="11904" Py="6048" Px2="13248" Py2="6744" Cl="141,255,112" Nio="3" LtE="560787423" WF="131072">
+					<Co K="I1" Nc="1" U="216cefde-0053-11b3-00ff61ab6e2e079c">
+						<In Input="216cefd6-01fe-f8cd-02ffa5525eee5163"/>
+					</Co>
+					<Co K="I2" U="216cefde-0053-11b4-01ff61ab6e2e079c"/>
+					<Co K="Q" U="216cefde-0053-11b5-02ff61ab6e2e079c"/>
+				</C>
+				<C Type="AutoJalousie" V="178" U="216cefef-034e-3783-ffffe001fe9bf86f" Title="Jalousie Wohnzimmer" Px="14400" Py="5472" Px2="17088" Py2="6936" Cl="115,224,255" Nio="49" LtE="560787448" WF="16384" Sun="true" SpStates="216cefef-034e-374b-ffff5946c1b713f5,216cefef-034e-374c-ffff5946c1b713f5,216cefef-034e-374d-ffff5946c1b713f5,216cefef-034e-374e-ffff5946c1b713f5,216cefef-034e-374f-ffff5946c1b713f5,216cefef-034e-3750-ffff5946c1b713f5,216cefef-034e-3751-ffff5946c1b713f5">
+					<Co K="InputTrigger" U="216cefef-034e-3752-00ff5946c1b713f5"/>
+					<Co K="InputTriggerUp" U="216cefef-034e-3753-01ff5946c1b713f5"/>
+					<Co K="InputTriggerDown" U="216cefef-034e-3754-02ff5946c1b713f5"/>
+					<Co K="EndUp" U="216cefef-034e-3755-03ff5946c1b713f5"/>
+					<Co K="EndDown" U="216cefef-034e-3756-04ff5946c1b713f5"/>
+					<Co K="Shade" U="216cefef-034e-3757-05ff5946c1b713f5"/>
+					<Co K="AutoShade" Nc="1" U="216cefef-034e-3758-06ff5946c1b713f5">
+						<In Input="216cefde-0053-11b5-02ff61ab6e2e079c"/>
+					</Co>
+					<Co K="EnAutoShade" U="216cefef-034e-3759-07ff5946c1b713f5"/>
+					<Co K="ReactAutoShade" U="216cefef-034e-375a-08ff5946c1b713f5"/>
+					<Co K="Safety" U="216cefef-034e-375b-09ff5946c1b713f5"/>
+					<Co K="Window" U="216cefef-034e-375c-0aff5946c1b713f5"/>
+					<Co K="Stop" U="216cefef-034e-375d-0bff5946c1b713f5"/>
+					<Co K="ManualPosition" U="216cefef-034e-375e-0cff5946c1b713f5"/>
+					<Co K="ManualLamelle" U="216cefef-034e-375f-0dff5946c1b713f5"/>
+					<Co K="Gesture" U="216cefef-034e-3760-0eff5946c1b713f5"/>
+					<Co K="InputDisable" U="216cefef-034e-3761-0fff5946c1b713f5"/>
+					<Co K="Type" U="216cefef-034e-3762-10ff5946c1b713f5"/>
+					<Co K="Dir" Def="-1" U="216cefef-034e-3763-11ff5946c1b713f5"/>
+					<Co K="TimeEnd" Def="75" U="216cefef-034e-3764-12ff5946c1b713f5"/>
+					<Co K="TimeEndDown" Def="70" U="216cefef-034e-3765-13ff5946c1b713f5"/>
+					<Co K="SO" U="216cefef-034e-3766-14ff5946c1b713f5"/>
+					<Co K="WP" U="216cefef-034e-3767-15ff5946c1b713f5"/>
+					<Co K="AutoShadeEnd" Def="1" U="216cefef-034e-3768-16ff5946c1b713f5"/>
+					<Co K="AutMode" Def="1" U="216cefef-034e-3769-17ff5946c1b713f5"/>
+					<Co K="MinPulse" Def="3" U="216cefef-034e-376a-18ff5946c1b713f5"/>
+					<Co K="DblClk" Def="0.3" U="216cefef-034e-376b-19ff5946c1b713f5"/>
+					<Co K="DirTol" Def="85" U="216cefef-034e-376c-1aff5946c1b713f5"/>
+					<Co K="DirTol2" Def="85" U="216cefef-034e-376d-1bff5946c1b713f5"/>
+					<Co K="AutoShadeTime" Def="120" U="216cefef-034e-376e-1cff5946c1b713f5"/>
+					<Co K="SRoff" Def="30" U="216cefef-034e-376f-1dff5946c1b713f5"/>
+					<Co K="SSoff" Def="-30" U="216cefef-034e-3770-1eff5946c1b713f5"/>
+					<Co K="Width" Def="70" U="216cefef-034e-3771-1fff5946c1b713f5"/>
+					<Co K="Space" Def="60" U="216cefef-034e-3772-20ff5946c1b713f5"/>
+					<Co K="Rdd" U="216cefef-034e-3773-21ff5946c1b713f5"/>
+					<Co K="TimeBlock" Def="0.5" U="216cefef-034e-3774-22ff5946c1b713f5"/>
+					<Co K="TurnOffset" Def="0.15" U="216cefef-034e-3775-23ff5946c1b713f5"/>
+					<Co K="Deadtime" U="216cefef-034e-3776-24ff5946c1b713f5"/>
+					<Co K="MinMove" Def="0.4" U="216cefef-034e-3777-25ff5946c1b713f5"/>
+					<Co K="Back" Def="0.8" U="216cefef-034e-3778-26ff5946c1b713f5"/>
+					<Co K="OutputUp" U="216cefef-034e-3779-27ff5946c1b713f5"/>
+					<Co K="OutputDown" U="216cefef-034e-377a-28ff5946c1b713f5"/>
+					<Co K="OutputPos" U="216cefef-034e-377b-29ff5946c1b713f5"/>
+					<Co K="OutputLPos" U="216cefef-034e-377c-2aff5946c1b713f5"/>
+					<Co K="OutputAutoShade" U="216cefef-034e-377d-2bff5946c1b713f5"/>
+					<Co K="OutputSafety" U="216cefef-034e-377e-2cff5946c1b713f5"/>
+					<Co K="OutputLock" U="216cefef-034e-377f-2dff5946c1b713f5"/>
+					<Co K="OutputCombined" U="216cefef-034e-3780-2eff5946c1b713f5"/>
+					<Co K="TargetPos" U="216cefef-034e-3781-2fff5946c1b713f5"/>
+					<Co K="OutputAPI" U="216cefef-034e-3782-30ff5946c1b713f5"/>
+					<IoData Visu="true" Cr="216373ab-00d0-4304-ffffe001fe9bf86f" Pr="216373ab-00cf-42f8-ffffe001fe9bf86f"/>
+					<COHist TRK_NE="20" TRK_MAX="100"/>
+				</C>
+				<C Type="OutputRefLM" V="178" U="216cf029-01cb-76f7-ffffe001fe9bf86f" Title="Meldung Fensterbilanz" Px="9696" Py="7296" Px2="11808" Py2="7488" Cl="0,0,0" Nio="2" Ref="216cf01b-00de-5d95-ffffe001fe9bf86f" WF="131072">
+					<Co K="AI" Nc="1" U="216cf029-01cb-76f5-00ff3e5124f747ed">
+						<In Input="216cefce-02e6-dfed-02ff6f0b9edea666"/>
+					</Co>
+					<Co K="AQ" U="216cf029-01cb-76f6-01ff3e5124f747ed"/>
+					<LoggerMailer RefNotification="216cf01b-00de-5d95-ffffe001fe9bf86f" On="&lt;v&gt;" Off="&lt;v&gt;" MinimumTime="5000" NL="1"/>
 				</C>
 			</C>
 			<C Type="Page" V="178" U="216c920c-00ea-006d-ffffe001fe9bf86f" Title="Funkwacht" LtE="560763407" WF="16384">
@@ -3689,6 +5315,159 @@
 					<LoggerMailer RefNotification="216cb78b-0082-ebaf-ffffe001fe9bf86f" On="&lt;v&gt;" Off="&lt;v&gt;" MinimumTime="5000" NL="1"/>
 				</C>
 			</C>
+			<C Type="Page" V="178" U="216ced7c-019d-0448-ffffe001fe9bf86f" Title="WaermepumpeCloud" LtE="560786822" WF="16384">
+				<IoData Cr="216373ab-00cf-42fc-ffffe001fe9bf86f" Pr="216373ab-00cf-42f8-ffffe001fe9bf86f"/>
+				<C Type="OutputRef" V="178" U="216cedf7-0360-54bb-ffffe001fe9bf86f" Title="WP_SGREADY_4" Px="9312" Py="3264" Px2="11424" Py2="3456" Cl="0,0,0" Nio="2" Ref="216cedd7-0285-3240-ffffe001fe9bf86f" WF="133120" LinkRefType="74">
+					<Co K="AI" Nc="1" U="216cedf7-0360-54b9-00ff1ebba790fcb3">
+						<In Input="216cee5a-0329-e11a-02ff5527f1c1f8ca"/>
+					</Co>
+					<Co K="AQ" U="216cedf7-0360-54ba-01ff1ebba790fcb3"/>
+				</C>
+				<C Type="OutputRef" V="178" U="216cee06-0382-6bc8-ffffe001fe9bf86f" Title="WP_SGREADY_2" Px="12000" Py="4320" Px2="14112" Py2="4512" Cl="0,0,0" Nio="2" Ref="216cedd7-0280-323a-ffffe001fe9bf86f" WF="133120" LinkRefType="74">
+					<Co K="AI" Nc="1" U="216cee06-0382-6bc6-00ff3d826981ff9d">
+						<In Input="216cee61-01a7-f8d0-02ff673c57258865"/>
+					</Co>
+					<Co K="AQ" U="216cee06-0382-6bc7-01ff3d826981ff9d"/>
+				</C>
+				<C Type="OutputRef" V="178" U="216cee13-02fa-775b-ffffe001fe9bf86f" Title="WP_SGREADY_1" Px="9408" Py="5952" Px2="11520" Py2="6144" Cl="0,0,0" Nio="2" Ref="216cedd7-0280-3237-ffffe001fe9bf86f" WF="133120" LinkRefType="74">
+					<Co K="AI" Nc="1" U="216cee13-02fa-7759-00fffa1fdec78ee2">
+						<In Input="216cee6e-01dc-1092-04ff81af89791d07"/>
+					</Co>
+					<Co K="AQ" U="216cee13-02fa-775a-01fffa1fdec78ee2"/>
+				</C>
+				<C Type="InputRef" V="178" U="216cee1e-02ca-82f7-ffffe001fe9bf86f" Title="WP_STUFE" Px="3072" Py="1824" Px2="5184" Py2="2016" Cl="0,0,0" Nio="4" Ref="216cedb1-00a7-0f86-ffffe001fe9bf86f" WF="133120" Analog="true" LinkRefType="87">
+					<Co K="AI" Nc="1" U="216cee1e-02ca-82f3-00ff3c1453ef0340">
+						<In Input="216cedb1-00a7-0f84-00ff8ccbc0797342"/>
+					</Co>
+					<Co K="I" Nc="1" U="216cee1e-02ca-82f4-01ff3c1453ef0340">
+						<In Input="216cedb1-00a7-0f85-01ff8ccbc0797342"/>
+					</Co>
+					<Co K="AQ" U="216cee1e-02ca-82f5-02ff3c1453ef0340"/>
+					<Co K="Q" U="216cee1e-02ca-82f6-03ff3c1453ef0340"/>
+				</C>
+				<C Type="InputRef" V="178" U="216cee27-0294-8e9b-ffffe001fe9bf86f" Title="WP_ALTER" Px="3648" Py="7872" Px2="5760" Py2="8064" Cl="0,0,0" Nio="4" Ref="216cedb1-00a7-0f8a-ffffe001fe9bf86f" WF="133120" Analog="true" LinkRefType="87">
+					<Co K="AI" Nc="1" U="216cee27-0294-8e97-00ffc6092fdda73b">
+						<In Input="216cedb1-00a7-0f88-00ff8ccbc0797342"/>
+					</Co>
+					<Co K="I" Nc="1" U="216cee27-0294-8e98-01ffc6092fdda73b">
+						<In Input="216cedb1-00a7-0f89-01ff8ccbc0797342"/>
+					</Co>
+					<Co K="AQ" U="216cee27-0294-8e99-02ffc6092fdda73b"/>
+					<Co K="Q" U="216cee27-0294-8e9a-03ffc6092fdda73b"/>
+				</C>
+				<C Type="State" V="178" U="216cee38-0377-a5e1-ffffe001fe9bf86f" Title="WP Betriebszustand" Px="6624" Py="1344" Px2="9312" Py2="2232" Cl="141,255,112" Nio="11" LtE="560787003">
+					<Co K="I1" Nc="1" U="216cee38-0377-a5d6-00ff6940f3e7d7d1">
+						<In Input="216cee1e-02ca-82f5-02ff3c1453ef0340"/>
+					</Co>
+					<Co K="I2" U="216cee38-0377-a5d7-01ff6940f3e7d7d1"/>
+					<Co K="I3" U="216cee38-0377-a5d8-02ff6940f3e7d7d1"/>
+					<Co K="I4" U="216cee38-0377-a5d9-03ff6940f3e7d7d1"/>
+					<Co K="I5" U="216cee38-0377-a5da-04ff6940f3e7d7d1"/>
+					<Co K="I6" U="216cee38-0377-a5db-05ff6940f3e7d7d1"/>
+					<Co K="I7" U="216cee38-0377-a5dc-06ff6940f3e7d7d1"/>
+					<Co K="I8" U="216cee38-0377-a5dd-07ff6940f3e7d7d1"/>
+					<Co K="TQ" U="216cee38-0377-a5de-08ff6940f3e7d7d1"/>
+					<Co K="AQ" U="216cee38-0377-a5df-09ff6940f3e7d7d1"/>
+					<Co K="OutputAPI" U="216cee38-0377-a5e0-0aff6940f3e7d7d1"/>
+					<IoData Visu="true" Cr="216373ab-00cf-42fc-ffffe001fe9bf86f" Pr="216373ab-00cf-42f8-ffffe001fe9bf86f"/>
+					<Display Unit="&lt;v.pr&gt;"/>
+					<StateTexts></StateTexts>
+				</C>
+				<C Type="EnergyManager2" V="178" U="216cee3f-026e-bd8b-ffffe001fe9bf86f" Title="Energiemanager" Px="3072" Py="3264" Px2="5760" Py2="4536" Cl="15,164,255" Nio="37" WF="131072" SpStates="216cee3f-026e-bd65-fffffa49543d93d5">
+					<Co K="Gpwr" U="216cee3f-026e-bd66-00fffa49543d93d5"/>
+					<Co K="Ppwr" U="216cee3f-026e-bd67-01fffa49543d93d5"/>
+					<Co K="Spwr" U="216cee3f-026e-bd68-02fffa49543d93d5"/>
+					<Co K="Soc" U="216cee3f-026e-bd69-03fffa49543d93d5"/>
+					<Co K="Prio" U="216cee3f-026e-bd6a-04fffa49543d93d5"/>
+					<Co K="Recalc" U="216cee3f-026e-bd6b-05fffa49543d93d5"/>
+					<Co K="IL1" U="216cee3f-026e-bd6c-06fffa49543d93d5"/>
+					<Co K="IL2" U="216cee3f-026e-bd6d-07fffa49543d93d5"/>
+					<Co K="IL3" U="216cee3f-026e-bd6e-08fffa49543d93d5"/>
+					<Co K="IL4" U="216cee3f-026e-bd6f-09fffa49543d93d5"/>
+					<Co K="IL5" U="216cee3f-026e-bd70-0afffa49543d93d5"/>
+					<Co K="IL6" U="216cee3f-026e-bd71-0bfffa49543d93d5"/>
+					<Co K="IL7" U="216cee3f-026e-bd72-0cfffa49543d93d5"/>
+					<Co K="IL8" U="216cee3f-026e-bd73-0dfffa49543d93d5"/>
+					<Co K="IL9" U="216cee3f-026e-bd74-0efffa49543d93d5"/>
+					<Co K="IL10" U="216cee3f-026e-bd75-0ffffa49543d93d5"/>
+					<Co K="IL11" U="216cee3f-026e-bd76-10fffa49543d93d5"/>
+					<Co K="IL12" U="216cee3f-026e-bd77-11fffa49543d93d5"/>
+					<Co K="Reset" U="216cee3f-026e-bd78-12fffa49543d93d5"/>
+					<Co K="O" U="216cee3f-026e-bd79-13fffa49543d93d5"/>
+					<Co K="MinSoc" U="216cee3f-026e-bd7a-14fffa49543d93d5"/>
+					<Co K="MaxSpwr" U="216cee3f-026e-bd7b-15fffa49543d93d5"/>
+					<Co K="OL1" U="216cee3f-026e-bd7c-16fffa49543d93d5"/>
+					<Co K="OL2" U="216cee3f-026e-bd7d-17fffa49543d93d5"/>
+					<Co K="OL3" U="216cee3f-026e-bd7e-18fffa49543d93d5"/>
+					<Co K="OL4" U="216cee3f-026e-bd7f-19fffa49543d93d5"/>
+					<Co K="OL5" U="216cee3f-026e-bd80-1afffa49543d93d5"/>
+					<Co K="OL6" U="216cee3f-026e-bd81-1bfffa49543d93d5"/>
+					<Co K="OL7" U="216cee3f-026e-bd82-1cfffa49543d93d5"/>
+					<Co K="OL8" U="216cee3f-026e-bd83-1dfffa49543d93d5"/>
+					<Co K="OL9" U="216cee3f-026e-bd84-1efffa49543d93d5"/>
+					<Co K="OL10" U="216cee3f-026e-bd85-1ffffa49543d93d5"/>
+					<Co K="OL11" U="216cee3f-026e-bd86-20fffa49543d93d5"/>
+					<Co K="OL12" U="216cee3f-026e-bd87-21fffa49543d93d5"/>
+					<Co K="ONext" U="216cee3f-026e-bd88-22fffa49543d93d5"/>
+					<Co K="OMinSoc" U="216cee3f-026e-bd89-23fffa49543d93d5"/>
+					<Co K="API" U="216cee3f-026e-bd8a-24fffa49543d93d5"/>
+					<IoData Visu="true" Cr="216373ab-00d5-4358-ffffe001fe9bf86f" Pr="216373ab-00cf-42f8-ffffe001fe9bf86f" UseInFav="true"/>
+					<Load Id="216cee3f-026e-bd59-fffffa49543d93d5" Na="Wärmepumpe" Ncu="true" OIdx="0" RT="60"/>
+					<Load Id="216cee3f-026e-bd5a-fffffa49543d93d5" Na="" OIdx="1" RT="60"/>
+					<Load Id="216cee3f-026e-bd5b-fffffa49543d93d5" Na="" OIdx="2" RT="60"/>
+					<Load Id="216cee3f-026e-bd5c-fffffa49543d93d5" Na="" OIdx="3" RT="60"/>
+					<Load Id="216cee3f-026e-bd5d-fffffa49543d93d5" Na="" OIdx="4" RT="60"/>
+					<Load Id="216cee3f-026e-bd5e-fffffa49543d93d5" Na="" OIdx="5" RT="60"/>
+					<Load Id="216cee3f-026e-bd5f-fffffa49543d93d5" Na="" OIdx="6" RT="60"/>
+					<Load Id="216cee3f-026e-bd60-fffffa49543d93d5" Na="" OIdx="7" RT="60"/>
+					<Load Id="216cee3f-026e-bd61-fffffa49543d93d5" Na="" OIdx="8" RT="60"/>
+					<Load Id="216cee3f-026e-bd62-fffffa49543d93d5" Na="" OIdx="9" RT="60"/>
+					<Load Id="216cee3f-026e-bd63-fffffa49543d93d5" Na="" OIdx="10" RT="60"/>
+					<Load Id="216cee3f-026e-bd64-fffffa49543d93d5" Na="" OIdx="11" RT="60"/>
+				</C>
+				<C Type="Or" V="178" U="216cee5a-0329-e11b-ffffe001fe9bf86f" Title="WP Anlauf" Px="7008" Py="3456" Px2="8352" Py2="4152" Cl="141,255,112" Nio="3" LtE="560787036" WF="131072">
+					<Co K="I1" Nc="1" U="216cee5a-0329-e118-00ff5527f1c1f8ca">
+						<In Input="216cee3f-026e-bd7c-16fffa49543d93d5"/>
+					</Co>
+					<Co K="I2" U="216cee5a-0329-e119-01ff5527f1c1f8ca"/>
+					<Co K="Q" U="216cee5a-0329-e11a-02ff5527f1c1f8ca"/>
+				</C>
+				<C Type="And" V="178" U="216cee61-01a7-f8d1-ffffe001fe9bf86f" Title="WP Normalbetrieb" Px="9408" Py="4032" Px2="10752" Py2="4728" Cl="141,255,112" Nio="3" LtE="560787042">
+					<Co K="I1" Inv="true" Nc="1" U="216cee61-01a7-f8ce-00ff673c57258865">
+						<In Input="216cee5a-0329-e11a-02ff5527f1c1f8ca"/>
+					</Co>
+					<Co K="I2" Inv="true" Nc="1" U="216cee61-01a7-f8cf-01ff673c57258865">
+						<In Input="216cee6e-01dc-1092-04ff81af89791d07"/>
+					</Co>
+					<Co K="Q" U="216cee61-01a7-f8d0-02ff673c57258865"/>
+				</C>
+				<C Type="Monoflop" V="178" U="216cee6e-01dc-1093-ffffe001fe9bf86f" Title="WP Sperre Begrenzung" Px="7200" Py="5088" Px2="8544" Py2="5784" Cl="141,255,112" Nio="5" LtE="560787066">
+					<Co K="InputTrigger" U="216cee6e-01dc-108e-00ff81af89791d07"/>
+					<Co K="Reset" U="216cee6e-01dc-108f-01ff81af89791d07"/>
+					<Co K="Remanence" U="216cee6e-01dc-1090-02ff81af89791d07"/>
+					<Co K="Time" Def="7200" U="216cee6e-01dc-1091-03ff81af89791d07"/>
+					<Co K="Q" U="216cee6e-01dc-1092-04ff81af89791d07"/>
+				</C>
+				<C Type="AnalogThresholdTrigger" V="178" U="216cee80-0124-3447-ffffe001fe9bf86f" Title="WP Ausfall" Px="6912" Py="7584" Px2="8256" Py2="8472" Cl="141,255,112" Nio="8" LtE="560787074">
+					<Co K="Input" Nc="1" U="216cee80-0124-343f-00ffffb5f2cb7ee0">
+						<In Input="216cee27-0294-8e99-02ffc6092fdda73b"/>
+					</Co>
+					<Co K="On" Def="900" U="216cee80-0124-3440-01ffffb5f2cb7ee0"/>
+					<Co K="Off" Def="600" U="216cee80-0124-3441-02ffffb5f2cb7ee0"/>
+					<Co K="Remanence" U="216cee80-0124-3442-03ffffb5f2cb7ee0"/>
+					<Co K="PulseTime" Def="1" U="216cee80-0124-3443-04ffffb5f2cb7ee0"/>
+					<Co K="Q" U="216cee80-0124-3444-05ffffb5f2cb7ee0"/>
+					<Co K="RisingEdge" U="216cee80-0124-3445-06ffffb5f2cb7ee0"/>
+					<Co K="FallingEdge" U="216cee80-0124-3446-07ffffb5f2cb7ee0"/>
+				</C>
+				<C Type="OutputRefLM" V="178" U="216ceea2-03c1-87b2-ffffe001fe9bf86f" Title="WP Meldung" Px="9600" Py="7872" Px2="11712" Py2="8064" Cl="0,0,0" Nio="2" Ref="216cee95-002d-6fd6-ffffe001fe9bf86f" WF="131072">
+					<Co K="AI" Nc="1" U="216ceea2-03c1-87b0-00ff40a874b9ddc8">
+						<In Input="216cee80-0124-3444-05ffffb5f2cb7ee0"/>
+					</Co>
+					<Co K="AQ" U="216ceea2-03c1-87b1-01ff40a874b9ddc8"/>
+					<LoggerMailer RefNotification="216cee95-002d-6fd6-ffffe001fe9bf86f" On="&lt;v&gt;" Off="&lt;v&gt;" MinimumTime="5000" NL="1"/>
+				</C>
+			</C>
 			<C Type="Page" V="178" U="216cdebd-03de-b761-ffffe001fe9bf86f" Title="WiFi-Scanner-NG" LtE="560783048" WF="16384">
 				<IoData Cr="216373ab-00cf-42fc-ffffe001fe9bf86f" Pr="216373ab-00cf-42f8-ffffe001fe9bf86f"/>
 				<C Type="InputRef" V="178" U="216cdf0c-0026-dee5-ffffe001fe9bf86f" Title="wifi_ng_status_ok" Px="7488" Py="7584" Px2="9600" Py2="7776" Cl="0,0,0" Nio="4" Ref="216cdef7-006a-c71b-ffffe001fe9bf86f" WF="133120" Analog="true" LinkRefType="87">
@@ -3711,7 +5490,7 @@
 					<Co K="AQ" U="216cdf16-0096-e6e6-02ff82c20bc2ddfc"/>
 					<Co K="Q" U="216cdf16-0096-e6e7-03ff82c20bc2ddfc"/>
 				</C>
-				<C Type="OffDelay" V="178" U="216cdf23-02cf-eeee-ffffe001fe9bf86f" Title="Jemand zu Hause" Px="8064" Py="6144" Px2="9408" Py2="6840" Cl="141,255,112" Nio="5" LtE="560783149" WF="131072">
+				<C Type="OffDelay" V="178" U="216cdf23-02cf-eeee-ffffe001fe9bf86f" Title="Jemand zu Hause" Px="8064" Py="6144" Px2="9408" Py2="6840" Cl="141,255,112" Nio="5" LtE="560783149">
 					<Co K="InputTrigger" Nc="1" U="216cdf23-02cf-eee9-00ffe5a0cc1ae9c1">
 						<In Input="216cdf16-0096-e6e6-02ff82c20bc2ddfc"/>
 					</Co>
@@ -3738,7 +5517,7 @@
 					</Co>
 					<Co K="Q" U="216cdf4d-0022-36f7-01ff843f5c892bb5"/>
 				</C>
-				<C Type="Not" V="178" U="216cdf53-02f0-4708-ffffe001fe9bf86f" Title="WLAN-Suche gestört" Px="13248" Py="7296" Px2="14592" Py2="7800" Cl="141,255,112" Nio="2" LtE="560783190">
+				<C Type="Not" V="178" U="216cdf53-02f0-4708-ffffe001fe9bf86f" Title="WLAN-Suche gestört" Px="13248" Py="7680" Px2="14592" Py2="8184" Cl="141,255,112" Nio="2" LtE="560783190">
 					<Co K="I" Nc="1" U="216cdf53-02f0-4706-00ff39bbd034cf9b">
 						<In Input="216cdf33-010c-06e7-05ffe3e771000065"/>
 					</Co>
@@ -3753,7 +5532,7 @@
 					</Co>
 					<Co K="Q" U="216cdf5a-0210-571f-02ff97cb6c433bc7"/>
 				</C>
-				<C Type="OutputRefLM" V="178" U="216cdf7c-0123-7f64-ffffe001fe9bf86f" Title="WLAN-Anwesenheit gestört" Px="15744" Py="7584" Px2="17856" Py2="7776" Cl="0,0,0" Nio="2" Ref="216cdf6f-007b-6738-ffffe001fe9bf86f" WF="131072">
+				<C Type="OutputRefLM" V="178" U="216cdf7c-0123-7f64-ffffe001fe9bf86f" Title="WLAN-Anwesenheit gestört" Px="15744" Py="7968" Px2="17856" Py2="8160" Cl="0,0,0" Nio="2" Ref="216cdf6f-007b-6738-ffffe001fe9bf86f" WF="131072">
 					<Co K="AI" Nc="1" U="216cdf7c-0123-7f62-00ff7a0564742ef3">
 						<In Input="216cdf53-02f0-4707-01ff39bbd034cf9b"/>
 					</Co>
