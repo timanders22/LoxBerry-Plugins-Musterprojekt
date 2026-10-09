@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<ControlList Version="274" LxAV="87" NextObj="98" NextConst="1" NextNote="1" NextMem="2">
-	<C Type="Document" V="17020828" U="216373ab-00cc-41fa-ffffe001fe9bf86f" Title="LoxBerry-Plugins Musterprojekt" ConfigVersion="17020828" PaperFormat="2" SPSfreq="100" OpenIsHigh="false" Date="2026-10-09 12:25:29" CDate="" BDate="" DateS="560773529" Street="" Town="" PostCode="" Ctry="" Latitude="0.000" Longitude="0.000" Timezone="Europe/Vienna" Timeserver="" Logo="" uuidNotifications="216373ab-00cb-41f6-ffffe001fe9bf86f" uuidFavSeq="216373ab-00cb-41f8-ffffe001fe9bf86f" uuidFavCol="216373ab-00cb-41f9-ffffe001fe9bf86f" FC="hsv(25,96,50);hsv(24,95,80);hsv(337,94,50)" uuidTime="216373ab-00cb-41f7-ffffe001fe9bf86f" UnitPrecipitation="1" Currency="€" UpdTime="120" AUE="true" DeviceTelemetry="true" CrashL="true" Geo="0" NumO="588" APPKEY="717BCB5938494F35EA25202FC850B65F" APPID="227A0B">
+<ControlList Version="274" LxAV="87" NextObj="128" NextConst="1" NextNote="1" NextMem="3">
+	<C Type="Document" V="17020828" U="216373ab-00cc-41fa-ffffe001fe9bf86f" Title="LoxBerry-Plugins Musterprojekt" ConfigVersion="17020828" PaperFormat="2" SPSfreq="100" OpenIsHigh="false" Date="2026-10-09 15:18:33" CDate="" BDate="" DateS="560783913" Street="" Town="" PostCode="" Ctry="" Latitude="0.000" Longitude="0.000" Timezone="Europe/Vienna" Timeserver="" Logo="" uuidNotifications="216373ab-00cb-41f6-ffffe001fe9bf86f" uuidFavSeq="216373ab-00cb-41f8-ffffe001fe9bf86f" uuidFavCol="216373ab-00cb-41f9-ffffe001fe9bf86f" FC="hsv(25,96,50);hsv(24,95,80);hsv(337,94,50)" uuidTime="216373ab-00cb-41f7-ffffe001fe9bf86f" UnitPrecipitation="1" Currency="€" UpdTime="120" AUE="true" DeviceTelemetry="true" CrashL="true" Geo="0" NumO="681" APPKEY="717BCB5938494F35EA25202FC850B65F" APPID="227A0B">
 		<HP H="" Sc="-2" S="WGpiqX5LbyaIrGD1MuWTTyrxvlVqUpqf" Alg="1"/>
 		<C Type="LoxCaption" V="178" U="216373ab-00cd-41fc-ffffe001fe9bf86f" Title="Symbole" Cl="0,0,0" WF="16384" CaptionType="5" SubType="5"/>
 		<C Type="CategoryCaption" V="178" U="216373ab-00cd-41fe-ffffe001fe9bf86f" Title="Kategorien" WF="16384">
@@ -1554,6 +1554,321 @@
 						<Display Type="2" Unit="&lt;v.1&gt; °C" StateOnly="true"/>
 					</C>
 				</C>
+				<C Type="VirtualHttpIn" Desc="Docker NG" IName="VHI10" V="178" U="216cdd82-02df-6e02-ffffe001fe9bf86f" Title="Docker NG" Cl="0,0,0" WF="16384" Address="http://loxberry/plugins/dockerng/index.php?token=DEIN_TOKEN&amp;aktion=status" Poll="60" Timeout="4000" Allowedtimeouts="10" on="true">
+					<C Type="Online" IName="S0" V="178" U="216cdd82-02f2-6e05-ffffe001fe9bf86f" Title="Onlinestatus Eingang VHI1" Cl="0,0,0" Nio="1" WF="20480" ValOT="1" MinTime="10" NoMsg="true" Idx="-1">
+						<Co K="Q" U="216cdd82-02f2-6e04-00ff158a2bfd5af7"/>
+						<IoData Cr="216373ab-00d3-432c-ffffe001fe9bf86f" Pr="216373ab-00ce-42f4-ffffe001fe9bf86f" St="2"/>
+						<Display Unit="&lt;v&gt;" StateOnly="true" IxText="8"/>
+					</C>
+					<C Type="VirtualHttpInCmd" Desc="1 = Docker antwortet" IName="VCI141" V="178" U="216cdd82-02f2-6e09-ffffe001fe9bf86f" Title="DOCKERNG_OK" Cl="0,0,0" Nio="2" WF="16384" ValOT="1" Check="OK=\v" Signed="true" Analog="true" SourceValHigh="100" DestValHigh="100" MaxVal="1">
+						<Co K="AQ" U="216cdd82-02f2-6e07-00ff158a2bfd5af7"/>
+						<Co K="Q" U="216cdd82-02f2-6e08-01ff158a2bfd5af7"/>
+						<IoData Cr="216373ab-00cf-42fc-ffffe001fe9bf86f" Pr="216373ab-00ce-42f4-ffffe001fe9bf86f"/>
+						<Display Type="2" Unit="&lt;v&gt;" StateOnly="true"/>
+					</C>
+					<C Type="VirtualHttpInCmd" Desc="eingerichtete Container" IName="VCI142" V="178" U="216cdd82-02f8-6e0d-ffffe001fe9bf86f" Title="DOCKERNG_GESAMT" Cl="0,0,0" Nio="2" WF="16384" ValOT="1" Check="GESAMT=\v" Signed="true" Analog="true" SourceValHigh="100" DestValHigh="100" MaxVal="999">
+						<Co K="AQ" U="216cdd82-02f8-6e0b-00ff158a2bfd5af7"/>
+						<Co K="Q" U="216cdd82-02f8-6e0c-01ff158a2bfd5af7"/>
+						<IoData Cr="216373ab-00cf-42fc-ffffe001fe9bf86f" Pr="216373ab-00ce-42f4-ffffe001fe9bf86f"/>
+						<Display Type="2" Unit="&lt;v&gt;" StateOnly="true"/>
+					</C>
+					<C Type="VirtualHttpInCmd" Desc="davon aktiv" IName="VCI143" V="178" U="216cdd82-02f8-6e11-ffffe001fe9bf86f" Title="DOCKERNG_LAEUFT" Cl="0,0,0" Nio="2" WF="16384" ValOT="1" Check="LAEUFT=\v" Signed="true" Analog="true" SourceValHigh="100" DestValHigh="100" MaxVal="999">
+						<Co K="AQ" U="216cdd82-02f8-6e0f-00ff158a2bfd5af7"/>
+						<Co K="Q" U="216cdd82-02f8-6e10-01ff158a2bfd5af7"/>
+						<IoData Cr="216373ab-00cf-42fc-ffffe001fe9bf86f" Pr="216373ab-00ce-42f4-ffffe001fe9bf86f"/>
+						<Display Type="2" Unit="&lt;v&gt;" StateOnly="true"/>
+					</C>
+					<C Type="VirtualHttpInCmd" Desc="alle nicht laufenden – nicht melden" IName="VCI144" V="178" U="216cdd82-02fe-6e15-ffffe001fe9bf86f" Title="DOCKERNG_GESTOPPT" Cl="0,0,0" Nio="2" WF="16384" ValOT="1" Check="GESTOPPT=\v" Signed="true" Analog="true" SourceValHigh="100" DestValHigh="100" MaxVal="999">
+						<Co K="AQ" U="216cdd82-02fe-6e13-00ff158a2bfd5af7"/>
+						<Co K="Q" U="216cdd82-02fe-6e14-01ff158a2bfd5af7"/>
+						<IoData Cr="216373ab-00cf-42fc-ffffe001fe9bf86f" Pr="216373ab-00ce-42f4-ffffe001fe9bf86f"/>
+						<Display Type="2" Unit="&lt;v&gt;" StateOnly="true"/>
+					</C>
+					<C Type="VirtualHttpInCmd" Desc="Meldung, wenn größer als 0" IName="VCI145" V="178" U="216cdd82-0300-6e19-ffffe001fe9bf86f" Title="DOCKERNG_AUSFALL" Cl="238,238,238" Nio="2" WF="16400" ValOT="1" Check="AUSFALL=\v" Signed="true" Analog="true" SourceValHigh="100" DestValHigh="100" MaxVal="999">
+						<Co K="AQ" U="216cdd82-0300-6e17-00ff158a2bfd5af7"/>
+						<Co K="Q" U="216cdd82-0300-6e18-01ff158a2bfd5af7"/>
+						<IoData Cr="216373ab-00cf-42fc-ffffe001fe9bf86f" Pr="216373ab-00cf-42f8-ffffe001fe9bf86f"/>
+						<Display Type="2" Unit="&lt;v&gt;" StateOnly="true"/>
+					</C>
+					<C Type="VirtualHttpInCmd" Desc="angehaltene Container" IName="VCI146" V="178" U="216cdd82-0300-6e1d-ffffe001fe9bf86f" Title="DOCKERNG_PAUSIERT" Cl="0,0,0" Nio="2" WF="16384" ValOT="1" Check="PAUSIERT=\v" Signed="true" Analog="true" SourceValHigh="100" DestValHigh="100" MaxVal="999">
+						<Co K="AQ" U="216cdd82-0300-6e1b-00ff158a2bfd5af7"/>
+						<Co K="Q" U="216cdd82-0300-6e1c-01ff158a2bfd5af7"/>
+						<IoData Cr="216373ab-00cf-42fc-ffffe001fe9bf86f" Pr="216373ab-00ce-42f4-ffffe001fe9bf86f"/>
+						<Display Type="2" Unit="&lt;v&gt;" StateOnly="true"/>
+					</C>
+					<C Type="VirtualHttpInCmd" Desc="Container mit Healthcheck-Fehler" IName="VCI147" V="178" U="216cdd82-0300-6e21-ffffe001fe9bf86f" Title="DOCKERNG_UNGESUND" Cl="0,0,0" Nio="2" WF="16384" ValOT="1" Check="UNGESUND=\v" Signed="true" Analog="true" SourceValHigh="100" DestValHigh="100" MaxVal="999">
+						<Co K="AQ" U="216cdd82-0300-6e1f-00ff158a2bfd5af7"/>
+						<Co K="Q" U="216cdd82-0300-6e20-01ff158a2bfd5af7"/>
+						<IoData Cr="216373ab-00cf-42fc-ffffe001fe9bf86f" Pr="216373ab-00ce-42f4-ffffe001fe9bf86f"/>
+						<Display Type="2" Unit="&lt;v&gt;" StateOnly="true"/>
+					</C>
+					<C Type="VirtualHttpInCmd" Desc="überwachte Container, die es nicht gibt" IName="VCI148" V="178" U="216cdd82-0300-6e25-ffffe001fe9bf86f" Title="DOCKERNG_FEHLT" Cl="238,238,238" Nio="2" WF="16400" ValOT="1" Check="FEHLT=\v" Signed="true" Analog="true" SourceValHigh="100" DestValHigh="100" MaxVal="999">
+						<Co K="AQ" U="216cdd82-0300-6e23-00ff158a2bfd5af7"/>
+						<Co K="Q" U="216cdd82-0300-6e24-01ff158a2bfd5af7"/>
+						<IoData Cr="216373ab-00cf-42fc-ffffe001fe9bf86f" Pr="216373ab-00cf-42f8-ffffe001fe9bf86f"/>
+						<Display Type="2" Unit="&lt;v&gt;" StateOnly="true"/>
+					</C>
+					<C Type="VirtualHttpInCmd" Desc="Neustartschleifen, -1 = Takt steht" IName="VCI149" V="178" U="216cdd82-0300-6e29-ffffe001fe9bf86f" Title="DOCKERNG_SCHLEIFE" Cl="0,0,0" Nio="2" WF="16384" ValOT="1" Check="SCHLEIFE=\v" Signed="true" Analog="true" SourceValHigh="100" DestValHigh="100" MinVal="-1" MaxVal="999">
+						<Co K="AQ" U="216cdd82-0300-6e27-00ff158a2bfd5af7"/>
+						<Co K="Q" U="216cdd82-0300-6e28-01ff158a2bfd5af7"/>
+						<IoData Cr="216373ab-00cf-42fc-ffffe001fe9bf86f" Pr="216373ab-00ce-42f4-ffffe001fe9bf86f"/>
+						<Display Type="2" Unit="&lt;v&gt;" StateOnly="true"/>
+					</C>
+					<C Type="VirtualHttpInCmd" Desc="1 = eigener Portainer läuft" IName="VCI150" V="178" U="216cdd82-030c-6e2d-ffffe001fe9bf86f" Title="DOCKERNG_PORTAINER" Cl="0,0,0" Nio="2" WF="16384" ValOT="1" Check="PORTAINER=\v" Signed="true" Analog="true" SourceValHigh="100" DestValHigh="100" MaxVal="1">
+						<Co K="AQ" U="216cdd82-030c-6e2b-00ff158a2bfd5af7"/>
+						<Co K="Q" U="216cdd82-030c-6e2c-01ff158a2bfd5af7"/>
+						<IoData Cr="216373ab-00cf-42fc-ffffe001fe9bf86f" Pr="216373ab-00ce-42f4-ffffe001fe9bf86f"/>
+						<Display Type="2" Unit="&lt;v&gt;" StateOnly="true"/>
+					</C>
+					<C Type="VirtualHttpInCmd" Desc="Herzschlag, -1 = Minutentakt steht" IName="VCI151" V="178" U="216cdd82-030f-6e31-ffffe001fe9bf86f" Title="DOCKERNG_ZAEHLER" Cl="238,238,238" Nio="2" WF="16400" ValOT="1" Check="ZAEHLER=\v" Signed="true" Analog="true" SourceValHigh="100" DestValHigh="100" MinVal="-1" MaxVal="999">
+						<Co K="AQ" U="216cdd82-030f-6e2f-00ff158a2bfd5af7"/>
+						<Co K="Q" U="216cdd82-030f-6e30-01ff158a2bfd5af7"/>
+						<IoData Cr="216373ab-00cf-42fc-ffffe001fe9bf86f" Pr="216373ab-00cf-42f8-ffffe001fe9bf86f"/>
+						<Display Type="2" Unit="&lt;v&gt;" StateOnly="true"/>
+					</C>
+					<C Type="VirtualHttpInCmd" Desc="freier Platz in MB, -1 unbekannt" IName="VCI152" V="178" U="216cdd82-030f-6e35-ffffe001fe9bf86f" Title="DOCKERNG_PLATZFREI" Cl="0,0,0" Nio="2" WF="16384" ValOT="1" Check="PLATZFREI=\v" Signed="true" Analog="true" SourceValHigh="100" DestValHigh="100" MinVal="-1" MaxVal="999999">
+						<Co K="AQ" U="216cdd82-030f-6e33-00ff158a2bfd5af7"/>
+						<Co K="Q" U="216cdd82-030f-6e34-01ff158a2bfd5af7"/>
+						<IoData Cr="216373ab-00cf-42fc-ffffe001fe9bf86f" Pr="216373ab-00ce-42f4-ffffe001fe9bf86f"/>
+						<Display Type="2" Unit="&lt;v&gt; MB" StateOnly="true"/>
+					</C>
+					<C Type="VirtualHttpInCmd" Desc="Alter des Minutentakts, -1 = nie" IName="VCI153" V="178" U="216cdd82-030f-6e39-ffffe001fe9bf86f" Title="DOCKERNG_TAKTALTER" Cl="0,0,0" Nio="2" WF="16384" ValOT="1" Check="TAKTALTER=\v" Signed="true" Analog="true" SourceValHigh="100" DestValHigh="100" MinVal="-1" MaxVal="99999999">
+						<Co K="AQ" U="216cdd82-030f-6e37-00ff158a2bfd5af7"/>
+						<Co K="Q" U="216cdd82-030f-6e38-01ff158a2bfd5af7"/>
+						<IoData Cr="216373ab-00cf-42fc-ffffe001fe9bf86f" Pr="216373ab-00ce-42f4-ffffe001fe9bf86f"/>
+						<Display Type="2" Unit="&lt;v&gt; s" StateOnly="true"/>
+					</C>
+				</C>
+				<C Type="VirtualHttpIn" Desc="WifiScanner Anwesenheit" IName="VHI11" V="178" U="216cdef7-003e-c704-ffffe001fe9bf86f" Title="WifiScanner Anwesenheit" Cl="0,0,0" WF="16384" Address="http://localhost" Poll="604800" Timeout="4000" Allowedtimeouts="10" on="true">
+					<C Type="Online" IName="S0" V="178" U="216cdef7-005b-c707-ffffe001fe9bf86f" Title="Onlinestatus Eingang VHI1" Cl="0,0,0" Nio="1" WF="20480" ValOT="1" MinTime="10" NoMsg="true" Idx="-1">
+						<Co K="Q" U="216cdef7-005b-c706-00ff878e77ef612c"/>
+						<IoData Cr="216373ab-00d3-432c-ffffe001fe9bf86f" Pr="216373ab-00ce-42f4-ffffe001fe9bf86f" St="2"/>
+						<Display Unit="&lt;v&gt;" StateOnly="true" IxText="8"/>
+					</C>
+					<C Type="VirtualHttpInCmd" Desc="Anwesenheit Beispiel (1 = da)" IName="VCI154" V="178" U="216cdef7-005b-c70b-ffffe001fe9bf86f" Title="wifi_ng_Beispiel" Cl="238,238,238" Nio="2" WF="16400" ValOT="1" Check=" " Analog="true" SourceValHigh="1" DestValHigh="1" MaxVal="1">
+						<Co K="AQ" U="216cdef7-005b-c709-00ff878e77ef612c"/>
+						<Co K="Q" U="216cdef7-005b-c70a-01ff878e77ef612c"/>
+						<IoData Cr="216373ab-00cf-42fc-ffffe001fe9bf86f" Pr="216373ab-00cf-42f8-ffffe001fe9bf86f"/>
+						<Display Type="2" Unit="&lt;v&gt;" StateOnly="true"/>
+					</C>
+					<C Type="VirtualHttpInCmd" Desc="-1 aus, 0 beides, 1 Fritz!Box, 2 Scan" IName="VCI155" V="178" U="216cdef7-006a-c70f-ffffe001fe9bf86f" Title="wifi_ng_status_mode" Cl="0,0,0" Nio="2" WF="16384" ValOT="1" Check=" " Signed="true" Analog="true" SourceValHigh="1" DestValHigh="1" MinVal="-1" MaxVal="2">
+						<Co K="AQ" U="216cdef7-006a-c70d-00ff878e77ef612c"/>
+						<Co K="Q" U="216cdef7-006a-c70e-01ff878e77ef612c"/>
+						<IoData Cr="216373ab-00cf-42fc-ffffe001fe9bf86f" Pr="216373ab-00ce-42f4-ffffe001fe9bf86f"/>
+						<Display Type="2" Unit="&lt;v&gt;" StateOnly="true"/>
+					</C>
+					<C Type="VirtualHttpInCmd" Desc="Scan-Intervall in Minuten" IName="VCI156" V="178" U="216cdef7-006a-c713-ffffe001fe9bf86f" Title="wifi_ng_status_interval" Cl="0,0,0" Nio="2" WF="16384" ValOT="1" Check=" " Analog="true" SourceValHigh="1" DestValHigh="1" MaxVal="60">
+						<Co K="AQ" U="216cdef7-006a-c711-00ff878e77ef612c"/>
+						<Co K="Q" U="216cdef7-006a-c712-01ff878e77ef612c"/>
+						<IoData Cr="216373ab-00cf-42fc-ffffe001fe9bf86f" Pr="216373ab-00ce-42f4-ffffe001fe9bf86f"/>
+						<Display Type="2" Unit="&lt;v&gt;" StateOnly="true"/>
+					</C>
+					<C Type="VirtualHttpInCmd" Desc="Periodischer Scan: 1 = ein" IName="VCI157" V="178" U="216cdef7-006a-c717-ffffe001fe9bf86f" Title="wifi_ng_status_enabled" Cl="0,0,0" Nio="2" WF="16384" ValOT="1" Check=" " Analog="true" SourceValHigh="1" DestValHigh="1" MaxVal="1">
+						<Co K="AQ" U="216cdef7-006a-c715-00ff878e77ef612c"/>
+						<Co K="Q" U="216cdef7-006a-c716-01ff878e77ef612c"/>
+						<IoData Cr="216373ab-00cf-42fc-ffffe001fe9bf86f" Pr="216373ab-00ce-42f4-ffffe001fe9bf86f"/>
+						<Display Type="2" Unit="&lt;v&gt;" StateOnly="true"/>
+					</C>
+					<C Type="VirtualHttpInCmd" Desc="1 gemessen, 0 Störung, -1 noch keiner" IName="VCI158" V="178" U="216cdef7-006a-c71b-ffffe001fe9bf86f" Title="wifi_ng_status_ok" Cl="238,238,238" Nio="2" WF="16400" ValOT="1" Check=" " Signed="true" Analog="true" SourceValHigh="1" DestValHigh="1" MinVal="-1" MaxVal="1">
+						<Co K="AQ" U="216cdef7-006a-c719-00ff878e77ef612c"/>
+						<Co K="Q" U="216cdef7-006a-c71a-01ff878e77ef612c"/>
+						<IoData Cr="216373ab-00cf-42fc-ffffe001fe9bf86f" Pr="216373ab-00cf-42f8-ffffe001fe9bf86f"/>
+						<Display Type="2" Unit="&lt;v&gt;" StateOnly="true"/>
+					</C>
+					<C Type="VirtualHttpInCmd" Desc="Zeitstempel letzter Lauf (Unix-s)" IName="VCI159" V="178" U="216cdef7-006a-c71f-ffffe001fe9bf86f" Title="wifi_ng_status_ts" Cl="0,0,0" Nio="2" WF="16384" ValOT="1" Check=" " Analog="true" SourceValHigh="1" DestValHigh="1" MaxVal="2147483647">
+						<Co K="AQ" U="216cdef7-006a-c71d-00ff878e77ef612c"/>
+						<Co K="Q" U="216cdef7-006a-c71e-01ff878e77ef612c"/>
+						<IoData Cr="216373ab-00cf-42fc-ffffe001fe9bf86f" Pr="216373ab-00ce-42f4-ffffe001fe9bf86f"/>
+						<Display Type="2" Unit="&lt;v&gt;" StateOnly="true"/>
+					</C>
+					<C Type="VirtualHttpInCmd" Desc="Laufzähler 0 bis 999" IName="VCI160" V="178" U="216cdef7-006a-c723-ffffe001fe9bf86f" Title="wifi_ng_status_zaehler" Cl="0,0,0" Nio="2" WF="16384" ValOT="1" Check=" " Analog="true" SourceValHigh="1" DestValHigh="1" MaxVal="999">
+						<Co K="AQ" U="216cdef7-006a-c721-00ff878e77ef612c"/>
+						<Co K="Q" U="216cdef7-006a-c722-01ff878e77ef612c"/>
+						<IoData Cr="216373ab-00cf-42fc-ffffe001fe9bf86f" Pr="216373ab-00ce-42f4-ffffe001fe9bf86f"/>
+						<Display Type="2" Unit="&lt;v&gt;" StateOnly="true"/>
+					</C>
+					<C Type="VirtualHttpInCmd" Desc="1 = Listener verbunden, 0 = nicht" IName="VCI161" V="178" U="216cdef7-007a-c727-ffffe001fe9bf86f" Title="wifi_ng_status_listener" Cl="0,0,0" Nio="2" WF="16384" ValOT="1" Check=" " Analog="true" SourceValHigh="1" DestValHigh="1" MaxVal="1">
+						<Co K="AQ" U="216cdef7-007a-c725-00ff878e77ef612c"/>
+						<Co K="Q" U="216cdef7-007a-c726-01ff878e77ef612c"/>
+						<IoData Cr="216373ab-00cf-42fc-ffffe001fe9bf86f" Pr="216373ab-00ce-42f4-ffffe001fe9bf86f"/>
+						<Display Type="2" Unit="&lt;v&gt;" StateOnly="true"/>
+					</C>
+				</C>
+				<C Type="VirtualHttpIn" Desc="APC-UPS NG" IName="VHI12" V="178" U="216cdfba-010a-9fb5-ffffe001fe9bf86f" Title="APC-UPS NG" Cl="0,0,0" WF="16384" Address="http://localhost" Poll="604800" Timeout="4000" Allowedtimeouts="10" on="true" NDOC="Die Werte kommen vom MQTT-Gateway, nicht von dieser Adresse.">
+					<C Type="Online" IName="S0" V="178" U="216cdfba-0119-9fb8-ffffe001fe9bf86f" Title="Onlinestatus Eingang VHI1" Cl="0,0,0" Nio="1" WF="20480" ValOT="1" MinTime="10" NoMsg="true" Idx="-1">
+						<Co K="Q" U="216cdfba-0119-9fb7-00ff7c6e54a132c6"/>
+						<IoData Cr="216373ab-00d3-432c-ffffe001fe9bf86f" Pr="216373ab-00ce-42f4-ffffe001fe9bf86f" St="2"/>
+						<Display Unit="&lt;v&gt;" StateOnly="true" IxText="8"/>
+					</C>
+					<C Type="VirtualHttpInCmd" Desc="Werte brauchbar" IName="VCI162" V="178" U="216cdfba-011a-9fbc-ffffe001fe9bf86f" Title="apcups_data_valid" Cl="238,238,238" Nio="2" WF="16400" ValOT="1" Check=" " Signed="true" Analog="true" SourceValHigh="100" DestValHigh="100" MaxVal="1">
+						<Co K="AQ" U="216cdfba-011a-9fba-00ff7c6e54a132c6"/>
+						<Co K="Q" U="216cdfba-011a-9fbb-01ff7c6e54a132c6"/>
+						<IoData Cr="216373ab-00cf-42fc-ffffe001fe9bf86f" Pr="216373ab-00cf-42f8-ffffe001fe9bf86f"/>
+						<Display Type="2" Unit="&lt;v.1&gt;" StateOnly="true"/>
+					</C>
+					<C Type="VirtualHttpInCmd" Desc="Verbindung abgerissen" IName="VCI163" V="178" U="216cdfba-011c-9fc0-ffffe001fe9bf86f" Title="apcups_comm_lost" Cl="0,0,0" Nio="2" WF="16384" ValOT="1" Check=" " Signed="true" Analog="true" SourceValHigh="100" DestValHigh="100" MaxVal="1">
+						<Co K="AQ" U="216cdfba-011c-9fbe-00ff7c6e54a132c6"/>
+						<Co K="Q" U="216cdfba-011c-9fbf-01ff7c6e54a132c6"/>
+						<IoData Cr="216373ab-00cf-42fc-ffffe001fe9bf86f" Pr="216373ab-00ce-42f4-ffffe001fe9bf86f"/>
+						<Display Type="2" Unit="&lt;v.1&gt;" StateOnly="true"/>
+					</C>
+					<C Type="VirtualHttpInCmd" Desc="Netzbetrieb" IName="VCI164" V="178" U="216cdfba-011f-9fc4-ffffe001fe9bf86f" Title="apcups_on_line" Cl="0,0,0" Nio="2" WF="16384" ValOT="1" Check=" " Signed="true" Analog="true" SourceValHigh="100" DestValHigh="100" MaxVal="1">
+						<Co K="AQ" U="216cdfba-011f-9fc2-00ff7c6e54a132c6"/>
+						<Co K="Q" U="216cdfba-011f-9fc3-01ff7c6e54a132c6"/>
+						<IoData Cr="216373ab-00cf-42fc-ffffe001fe9bf86f" Pr="216373ab-00ce-42f4-ffffe001fe9bf86f"/>
+						<Display Type="2" Unit="&lt;v.1&gt;" StateOnly="true"/>
+					</C>
+					<C Type="VirtualHttpInCmd" Desc="Akkubetrieb" IName="VCI165" V="178" U="216cdfba-0125-9fc8-ffffe001fe9bf86f" Title="apcups_on_battery" Cl="238,238,238" Nio="2" WF="16400" ValOT="1" Check=" " Signed="true" Analog="true" SourceValHigh="100" DestValHigh="100" MaxVal="1">
+						<Co K="AQ" U="216cdfba-0125-9fc6-00ff7c6e54a132c6"/>
+						<Co K="Q" U="216cdfba-0125-9fc7-01ff7c6e54a132c6"/>
+						<IoData Cr="216373ab-00cf-42fc-ffffe001fe9bf86f" Pr="216373ab-00cf-42f8-ffffe001fe9bf86f"/>
+						<Display Type="2" Unit="&lt;v.1&gt;" StateOnly="true"/>
+					</C>
+					<C Type="VirtualHttpInCmd" Desc="Alarmstufe 0-3" IName="VCI166" V="178" U="216cdfba-0128-9fcc-ffffe001fe9bf86f" Title="apcups_alarm_level" Cl="238,238,238" Nio="2" WF="16400" ValOT="1" Check=" " Signed="true" Analog="true" SourceValHigh="100" DestValHigh="100" MaxVal="3">
+						<Co K="AQ" U="216cdfba-0128-9fca-00ff7c6e54a132c6"/>
+						<Co K="Q" U="216cdfba-0128-9fcb-01ff7c6e54a132c6"/>
+						<IoData Cr="216373ab-00cf-42fc-ffffe001fe9bf86f" Pr="216373ab-00cf-42f8-ffffe001fe9bf86f"/>
+						<Display Type="2" Unit="&lt;v.1&gt;" StateOnly="true"/>
+					</C>
+					<C Type="VirtualHttpInCmd" Desc="Abschaltung steht bevor" IName="VCI167" V="178" U="216cdfba-012a-9fd0-ffffe001fe9bf86f" Title="apcups_shutdown_pending" Cl="0,0,0" Nio="2" WF="16384" ValOT="1" Check=" " Signed="true" Analog="true" SourceValHigh="100" DestValHigh="100" MaxVal="1">
+						<Co K="AQ" U="216cdfba-012a-9fce-00ff7c6e54a132c6"/>
+						<Co K="Q" U="216cdfba-012a-9fcf-01ff7c6e54a132c6"/>
+						<IoData Cr="216373ab-00cf-42fc-ffffe001fe9bf86f" Pr="216373ab-00ce-42f4-ffffe001fe9bf86f"/>
+						<Display Type="2" Unit="&lt;v.1&gt;" StateOnly="true"/>
+					</C>
+					<C Type="VirtualHttpInCmd" Desc="Akkuladung" IName="VCI168" V="178" U="216cdfba-012c-9fd4-ffffe001fe9bf86f" Title="apcups_battery_charge" Cl="0,0,0" Nio="2" WF="16384" ValOT="1" Check=" " Signed="true" Analog="true" SourceValHigh="100" DestValHigh="100" MaxVal="100">
+						<Co K="AQ" U="216cdfba-012c-9fd2-00ff7c6e54a132c6"/>
+						<Co K="Q" U="216cdfba-012c-9fd3-01ff7c6e54a132c6"/>
+						<IoData Cr="216373ab-00cf-42fc-ffffe001fe9bf86f" Pr="216373ab-00ce-42f4-ffffe001fe9bf86f"/>
+						<Display Type="2" Unit="&lt;v.1&gt; %" StateOnly="true"/>
+					</C>
+					<C Type="VirtualHttpInCmd" Desc="Restlaufzeit" IName="VCI169" V="178" U="216cdfba-012e-9fd8-ffffe001fe9bf86f" Title="apcups_time_left" Cl="238,238,238" Nio="2" WF="16400" ValOT="1" Check=" " Signed="true" Analog="true" SourceValHigh="100" DestValHigh="100" MaxVal="9999">
+						<Co K="AQ" U="216cdfba-012e-9fd6-00ff7c6e54a132c6"/>
+						<Co K="Q" U="216cdfba-012e-9fd7-01ff7c6e54a132c6"/>
+						<IoData Cr="216373ab-00cf-42fc-ffffe001fe9bf86f" Pr="216373ab-00cf-42f8-ffffe001fe9bf86f"/>
+						<Display Type="2" Unit="&lt;v.1&gt; min" StateOnly="true"/>
+					</C>
+					<C Type="VirtualHttpInCmd" Desc="Netzspannung" IName="VCI170" V="178" U="216cdfba-0132-9fdc-ffffe001fe9bf86f" Title="apcups_line_voltage" Cl="0,0,0" Nio="2" WF="16384" ValOT="1" Check=" " Signed="true" Analog="true" SourceValHigh="100" DestValHigh="100" MaxVal="300">
+						<Co K="AQ" U="216cdfba-0132-9fda-00ff7c6e54a132c6"/>
+						<Co K="Q" U="216cdfba-0132-9fdb-01ff7c6e54a132c6"/>
+						<IoData Cr="216373ab-00cf-42fc-ffffe001fe9bf86f" Pr="216373ab-00ce-42f4-ffffe001fe9bf86f"/>
+						<Display Type="2" Unit="&lt;v.1&gt; V" StateOnly="true"/>
+					</C>
+					<C Type="VirtualHttpInCmd" Desc="Ausgangsspannung" IName="VCI171" V="178" U="216cdfba-0135-9fe0-ffffe001fe9bf86f" Title="apcups_output_voltage" Cl="0,0,0" Nio="2" WF="16384" ValOT="1" Check=" " Signed="true" Analog="true" SourceValHigh="100" DestValHigh="100" MaxVal="300">
+						<Co K="AQ" U="216cdfba-0135-9fde-00ff7c6e54a132c6"/>
+						<Co K="Q" U="216cdfba-0135-9fdf-01ff7c6e54a132c6"/>
+						<IoData Cr="216373ab-00cf-42fc-ffffe001fe9bf86f" Pr="216373ab-00ce-42f4-ffffe001fe9bf86f"/>
+						<Display Type="2" Unit="&lt;v.1&gt; V" StateOnly="true"/>
+					</C>
+					<C Type="VirtualHttpInCmd" Desc="Netzfrequenz" IName="VCI172" V="178" U="216cdfba-0137-9fe4-ffffe001fe9bf86f" Title="apcups_line_frequency" Cl="0,0,0" Nio="2" WF="16384" ValOT="1" Check=" " Signed="true" Analog="true" SourceValHigh="100" DestValHigh="100" MaxVal="100">
+						<Co K="AQ" U="216cdfba-0137-9fe2-00ff7c6e54a132c6"/>
+						<Co K="Q" U="216cdfba-0137-9fe3-01ff7c6e54a132c6"/>
+						<IoData Cr="216373ab-00cf-42fc-ffffe001fe9bf86f" Pr="216373ab-00ce-42f4-ffffe001fe9bf86f"/>
+						<Display Type="2" Unit="&lt;v.1&gt; Hz" StateOnly="true"/>
+					</C>
+					<C Type="VirtualHttpInCmd" Desc="Auslastung" IName="VCI173" V="178" U="216cdfba-013a-9fe8-ffffe001fe9bf86f" Title="apcups_load_percent" Cl="0,0,0" Nio="2" WF="16384" ValOT="1" Check=" " Signed="true" Analog="true" SourceValHigh="100" DestValHigh="100" MaxVal="100">
+						<Co K="AQ" U="216cdfba-013a-9fe6-00ff7c6e54a132c6"/>
+						<Co K="Q" U="216cdfba-013a-9fe7-01ff7c6e54a132c6"/>
+						<IoData Cr="216373ab-00cf-42fc-ffffe001fe9bf86f" Pr="216373ab-00ce-42f4-ffffe001fe9bf86f"/>
+						<Display Type="2" Unit="&lt;v.1&gt; %" StateOnly="true"/>
+					</C>
+					<C Type="VirtualHttpInCmd" Desc="Last geschätzt" IName="VCI174" V="178" U="216cdfba-013c-9fec-ffffe001fe9bf86f" Title="apcups_load_watt" Cl="0,0,0" Nio="2" WF="16384" ValOT="1" Check=" " Signed="true" Analog="true" SourceValHigh="100" DestValHigh="100" MaxVal="20000">
+						<Co K="AQ" U="216cdfba-013c-9fea-00ff7c6e54a132c6"/>
+						<Co K="Q" U="216cdfba-013c-9feb-01ff7c6e54a132c6"/>
+						<IoData Cr="216373ab-00cf-42fc-ffffe001fe9bf86f" Pr="216373ab-00ce-42f4-ffffe001fe9bf86f"/>
+						<Display Type="2" Unit="&lt;v.1&gt; W" StateOnly="true"/>
+					</C>
+					<C Type="VirtualHttpInCmd" Desc="Nennleistung" IName="VCI175" V="178" U="216cdfba-013e-9ff0-ffffe001fe9bf86f" Title="apcups_nominal_power" Cl="0,0,0" Nio="2" WF="16384" ValOT="1" Check=" " Signed="true" Analog="true" SourceValHigh="100" DestValHigh="100" MaxVal="20000">
+						<Co K="AQ" U="216cdfba-013e-9fee-00ff7c6e54a132c6"/>
+						<Co K="Q" U="216cdfba-013e-9fef-01ff7c6e54a132c6"/>
+						<IoData Cr="216373ab-00cf-42fc-ffffe001fe9bf86f" Pr="216373ab-00ce-42f4-ffffe001fe9bf86f"/>
+						<Display Type="2" Unit="&lt;v.1&gt; W" StateOnly="true"/>
+					</C>
+					<C Type="VirtualHttpInCmd" Desc="Akkuspannung" IName="VCI176" V="178" U="216cdfba-0141-9ff4-ffffe001fe9bf86f" Title="apcups_battery_voltage" Cl="0,0,0" Nio="2" WF="16384" ValOT="1" Check=" " Signed="true" Analog="true" SourceValHigh="100" DestValHigh="100" MaxVal="300">
+						<Co K="AQ" U="216cdfba-0141-9ff2-00ff7c6e54a132c6"/>
+						<Co K="Q" U="216cdfba-0141-9ff3-01ff7c6e54a132c6"/>
+						<IoData Cr="216373ab-00cf-42fc-ffffe001fe9bf86f" Pr="216373ab-00ce-42f4-ffffe001fe9bf86f"/>
+						<Display Type="2" Unit="&lt;v.1&gt; V" StateOnly="true"/>
+					</C>
+					<C Type="VirtualHttpInCmd" Desc="Akku-Nennspannung" IName="VCI177" V="178" U="216cdfba-0142-9ff8-ffffe001fe9bf86f" Title="apcups_nominal_battery_volt" Cl="0,0,0" Nio="2" WF="16384" ValOT="1" Check=" " Signed="true" Analog="true" SourceValHigh="100" DestValHigh="100" MaxVal="300">
+						<Co K="AQ" U="216cdfba-0142-9ff6-00ff7c6e54a132c6"/>
+						<Co K="Q" U="216cdfba-0142-9ff7-01ff7c6e54a132c6"/>
+						<IoData Cr="216373ab-00cf-42fc-ffffe001fe9bf86f" Pr="216373ab-00ce-42f4-ffffe001fe9bf86f"/>
+						<Display Type="2" Unit="&lt;v.1&gt; V" StateOnly="true"/>
+					</C>
+					<C Type="VirtualHttpInCmd" Desc="Innentemperatur" IName="VCI178" V="178" U="216cdfba-0146-9ffc-ffffe001fe9bf86f" Title="apcups_internal_temp" Cl="0,0,0" Nio="2" WF="16384" ValOT="1" Check=" " Signed="true" Analog="true" SourceValHigh="100" DestValHigh="100" MinVal="-20" MaxVal="100">
+						<Co K="AQ" U="216cdfba-0146-9ffa-00ff7c6e54a132c6"/>
+						<Co K="Q" U="216cdfba-0146-9ffb-01ff7c6e54a132c6"/>
+						<IoData Cr="216373ab-00cf-42fc-ffffe001fe9bf86f" Pr="216373ab-00ce-42f4-ffffe001fe9bf86f"/>
+						<Display Type="2" Unit="&lt;v.1&gt; °C" StateOnly="true"/>
+					</C>
+					<C Type="VirtualHttpInCmd" Desc="Akkutausch fällig" IName="VCI179" V="178" U="216cdfba-0146-a000-ffffe001fe9bf86f" Title="apcups_replace_battery" Cl="238,238,238" Nio="2" WF="16400" ValOT="1" Check=" " Signed="true" Analog="true" SourceValHigh="100" DestValHigh="100" MaxVal="1">
+						<Co K="AQ" U="216cdfba-0146-9ffe-00ff7c6e54a132c6"/>
+						<Co K="Q" U="216cdfba-0146-9fff-01ff7c6e54a132c6"/>
+						<IoData Cr="216373ab-00cf-42fc-ffffe001fe9bf86f" Pr="216373ab-00cf-42f8-ffffe001fe9bf86f"/>
+						<Display Type="2" Unit="&lt;v.1&gt;" StateOnly="true"/>
+					</C>
+					<C Type="VirtualHttpInCmd" Desc="Akkualter" IName="VCI180" V="178" U="216cdfba-0146-a004-ffffe001fe9bf86f" Title="apcups_battery_age_months" Cl="0,0,0" Nio="2" WF="16384" ValOT="1" Check=" " Signed="true" Analog="true" SourceValHigh="100" DestValHigh="100" MaxVal="600">
+						<Co K="AQ" U="216cdfba-0146-a002-00ff7c6e54a132c6"/>
+						<Co K="Q" U="216cdfba-0146-a003-01ff7c6e54a132c6"/>
+						<IoData Cr="216373ab-00cf-42fc-ffffe001fe9bf86f" Pr="216373ab-00ce-42f4-ffffe001fe9bf86f"/>
+						<Display Type="2" Unit="&lt;v.1&gt; Mon" StateOnly="true"/>
+					</C>
+					<C Type="VirtualHttpInCmd" Desc="Zeit im Akkubetrieb" IName="VCI181" V="178" U="216cdfba-0146-a008-ffffe001fe9bf86f" Title="apcups_time_on_battery" Cl="0,0,0" Nio="2" WF="16384" ValOT="1" Check=" " Signed="true" Analog="true" SourceValHigh="100" DestValHigh="100" MaxVal="86400">
+						<Co K="AQ" U="216cdfba-0146-a006-00ff7c6e54a132c6"/>
+						<Co K="Q" U="216cdfba-0146-a007-01ff7c6e54a132c6"/>
+						<IoData Cr="216373ab-00cf-42fc-ffffe001fe9bf86f" Pr="216373ab-00ce-42f4-ffffe001fe9bf86f"/>
+						<Display Type="2" Unit="&lt;v.1&gt; s" StateOnly="true"/>
+					</C>
+					<C Type="VirtualHttpInCmd" Desc="Akkubetrieb insgesamt" IName="VCI182" V="178" U="216cdfba-0152-a00c-ffffe001fe9bf86f" Title="apcups_cumulative_on_battery" Cl="0,0,0" Nio="2" WF="16384" ValOT="1" Check=" " Signed="true" Analog="true" SourceValHigh="100" DestValHigh="100" MaxVal="99999999">
+						<Co K="AQ" U="216cdfba-0152-a00a-00ff7c6e54a132c6"/>
+						<Co K="Q" U="216cdfba-0152-a00b-01ff7c6e54a132c6"/>
+						<IoData Cr="216373ab-00cf-42fc-ffffe001fe9bf86f" Pr="216373ab-00ce-42f4-ffffe001fe9bf86f"/>
+						<Display Type="2" Unit="&lt;v.1&gt; s" StateOnly="true"/>
+					</C>
+					<C Type="VirtualHttpInCmd" Desc="Umschaltungen" IName="VCI183" V="178" U="216cdfba-0155-a010-ffffe001fe9bf86f" Title="apcups_transfers" Cl="0,0,0" Nio="2" WF="16384" ValOT="1" Check=" " Signed="true" Analog="true" SourceValHigh="100" DestValHigh="100" MaxVal="999999">
+						<Co K="AQ" U="216cdfba-0155-a00e-00ff7c6e54a132c6"/>
+						<Co K="Q" U="216cdfba-0155-a00f-01ff7c6e54a132c6"/>
+						<IoData Cr="216373ab-00cf-42fc-ffffe001fe9bf86f" Pr="216373ab-00ce-42f4-ffffe001fe9bf86f"/>
+						<Display Type="2" Unit="&lt;v.1&gt;" StateOnly="true"/>
+					</C>
+					<C Type="VirtualHttpInCmd" Desc="Abschaltschwelle Ladung" IName="VCI184" V="178" U="216cdfba-0155-a014-ffffe001fe9bf86f" Title="apcups_shutdown_charge" Cl="0,0,0" Nio="2" WF="16384" ValOT="1" Check=" " Signed="true" Analog="true" SourceValHigh="100" DestValHigh="100" MaxVal="100">
+						<Co K="AQ" U="216cdfba-0155-a012-00ff7c6e54a132c6"/>
+						<Co K="Q" U="216cdfba-0155-a013-01ff7c6e54a132c6"/>
+						<IoData Cr="216373ab-00cf-42fc-ffffe001fe9bf86f" Pr="216373ab-00ce-42f4-ffffe001fe9bf86f"/>
+						<Display Type="2" Unit="&lt;v.1&gt; %" StateOnly="true"/>
+					</C>
+					<C Type="VirtualHttpInCmd" Desc="Abschaltschwelle Restzeit" IName="VCI185" V="178" U="216cdfba-0155-a018-ffffe001fe9bf86f" Title="apcups_shutdown_minutes" Cl="0,0,0" Nio="2" WF="16384" ValOT="1" Check=" " Signed="true" Analog="true" SourceValHigh="100" DestValHigh="100" MaxVal="999">
+						<Co K="AQ" U="216cdfba-0155-a016-00ff7c6e54a132c6"/>
+						<Co K="Q" U="216cdfba-0155-a017-01ff7c6e54a132c6"/>
+						<IoData Cr="216373ab-00cf-42fc-ffffe001fe9bf86f" Pr="216373ab-00ce-42f4-ffffe001fe9bf86f"/>
+						<Display Type="2" Unit="&lt;v.1&gt; min" StateOnly="true"/>
+					</C>
+					<C Type="VirtualHttpInCmd" Desc="Abschaltschwelle Zeitlimit" IName="VCI186" V="178" U="216cdfba-0155-a01c-ffffe001fe9bf86f" Title="apcups_shutdown_timeout" Cl="0,0,0" Nio="2" WF="16384" ValOT="1" Check=" " Signed="true" Analog="true" SourceValHigh="100" DestValHigh="100" MaxVal="99999">
+						<Co K="AQ" U="216cdfba-0155-a01a-00ff7c6e54a132c6"/>
+						<Co K="Q" U="216cdfba-0155-a01b-01ff7c6e54a132c6"/>
+						<IoData Cr="216373ab-00cf-42fc-ffffe001fe9bf86f" Pr="216373ab-00ce-42f4-ffffe001fe9bf86f"/>
+						<Display Type="2" Unit="&lt;v.1&gt; s" StateOnly="true"/>
+					</C>
+					<C Type="VirtualHttpInCmd" Desc="Zeitpunkt der Messung" IName="VCI187" V="178" U="216cdfba-0155-a020-ffffe001fe9bf86f" Title="apcups_timestamp" Cl="0,0,0" Nio="2" WF="16384" ValOT="1" Check=" " Signed="true" Analog="true" SourceValHigh="100" DestValHigh="100" MaxVal="4102444800">
+						<Co K="AQ" U="216cdfba-0155-a01e-00ff7c6e54a132c6"/>
+						<Co K="Q" U="216cdfba-0155-a01f-01ff7c6e54a132c6"/>
+						<IoData Cr="216373ab-00cf-42fc-ffffe001fe9bf86f" Pr="216373ab-00ce-42f4-ffffe001fe9bf86f"/>
+						<Display Type="2" Unit="&lt;v.1&gt; s" StateOnly="true"/>
+					</C>
+					<C Type="VirtualHttpInCmd" Desc="Letzte Abfrage brauchbar" IName="VCI188" V="178" U="216cdfba-0163-a024-ffffe001fe9bf86f" Title="apcups_valid" Cl="0,0,0" Nio="2" WF="16384" ValOT="1" Check=" " Signed="true" Analog="true" SourceValHigh="100" DestValHigh="100" MaxVal="1">
+						<Co K="AQ" U="216cdfba-0163-a022-00ff7c6e54a132c6"/>
+						<Co K="Q" U="216cdfba-0163-a023-01ff7c6e54a132c6"/>
+						<IoData Cr="216373ab-00cf-42fc-ffffe001fe9bf86f" Pr="216373ab-00ce-42f4-ffffe001fe9bf86f"/>
+						<Display Type="2" Unit="&lt;v.1&gt;" StateOnly="true"/>
+					</C>
+					<C Type="VirtualHttpInCmd" Desc="Dienst läuft" IName="VCI189" V="178" U="216cdfba-0167-a028-ffffe001fe9bf86f" Title="apcups_service_online" Cl="0,0,0" Nio="2" WF="16384" ValOT="1" Check=" " Signed="true" Analog="true" SourceValHigh="100" DestValHigh="100" MaxVal="1">
+						<Co K="AQ" U="216cdfba-0167-a026-00ff7c6e54a132c6"/>
+						<Co K="Q" U="216cdfba-0167-a027-01ff7c6e54a132c6"/>
+						<IoData Cr="216373ab-00cf-42fc-ffffe001fe9bf86f" Pr="216373ab-00ce-42f4-ffffe001fe9bf86f"/>
+						<Display Type="2" Unit="&lt;v.1&gt;" StateOnly="true"/>
+					</C>
+				</C>
 			</C>
 			<C Type="VirtualOutCaption" V="178" U="216373ab-00e8-43c7-ffffe001fe9bf86f" Title="Virtuelle Ausgänge" WF="16384">
 				<C Type="VirtualOut" Desc="Erzeugt vom LoxBerry-Plugin Abfahrts-Assistent, trägt das Merkwort. Loxone Config legt beim Import neu an und überschreibt nichts – zweimal eingelesen ergibt doppelte Bausteine. (02.10.2026)" IName="VQ1" V="178" U="216376a3-0122-573c-ffffe001fe9bf86f" Title="Abfahrts-Assistent Ansage" WF="16384" Address="http://loxberry" CloseAfterSend="true">
@@ -2121,6 +2436,15 @@
 				<C Type="Notification" V="178" U="216cb78b-0082-ebaf-ffffe001fe9bf86f" Title="Meldung Raumklima" Cl="238,238,238" WF="16400" Entries="10">
 					<IoData Cr="216373ab-00cf-42fc-ffffe001fe9bf86f"/>
 				</C>
+				<C Type="Notification" V="178" U="216cde60-010b-7942-ffffe001fe9bf86f" Title="Docker-Störung" Cl="238,238,238" WF="16400" Entries="10">
+					<IoData Cr="216373ab-00cf-42fc-ffffe001fe9bf86f"/>
+				</C>
+				<C Type="Notification" V="178" U="216cdf6f-007b-6738-ffffe001fe9bf86f" Title="WLAN-Anwesenheit gestört" Cl="238,238,238" WF="16400" Entries="10">
+					<IoData Cr="216373ab-00cf-42fc-ffffe001fe9bf86f"/>
+				</C>
+				<C Type="Notification" V="178" U="216ce067-00c9-8893-ffffe001fe9bf86f" Title="USV-Meldung" Cl="238,238,238" WF="16400" Entries="10">
+					<IoData Cr="216373ab-00cf-42fc-ffffe001fe9bf86f"/>
+				</C>
 			</C>
 			<C Type="LoxTree" TId="LoxCaption_2" V="178" U="216373ab-00f9-454d-ffffe001fe9bf86f" Title="Tree" WF="16384" CycleUserProt="-1" IntAddr="" Pause="10" RxTimeout="1000" BaseID="-1" IDev="true" Serial="13000001" Installation="" SwitchBoard="" HwVersion="2">
 				<IoData Pr="216373ab-00ce-42f4-ffffe001fe9bf86f"/>
@@ -2350,6 +2674,12 @@
 					<Display Unit="&lt;v.pr&gt;"/>
 					<StateTexts></StateTexts>
 				</C>
+				<C Type="OutputRef" V="178" U="21637996-03e4-5846-ffffe001fe9bf86f" Title="Abfahrt: Ansage" Px="20928" Py="6912" Px2="23040" Py2="7104" Cl="0,0,0" Nio="2" Ref="216376a3-0125-573f-ffffe001fe9bf86f" WF="131072" LinkRefType="74">
+					<Co K="AI" Nc="1" U="21637996-03e4-5844-00ffbad61744dee4">
+						<In Input="2163788e-015e-eb6e-02ff77ac0b23af42"/>
+					</Co>
+					<Co K="AQ" U="21637996-03e4-5845-01ffbad61744dee4"/>
+				</C>
 				<C Type="OutputRefLM" V="178" U="2163793a-02ef-3701-ffffe001fe9bf86f" Title="Zeit zum Losfahren" Px="20832" Py="10656" Px2="22944" Py2="10848" Cl="0,0,0" Nio="2" Ref="2163790e-0161-1d78-ffffe001fe9bf86f" WF="131072">
 					<Co K="AI" Nc="1" U="2163793a-02ef-36ff-00ffc226a21f08a2">
 						<In Input="21637894-0382-f196-02ff854620af611c"/>
@@ -2357,16 +2687,10 @@
 					<Co K="AQ" U="2163793a-02ef-3700-01ffc226a21f08a2"/>
 					<LoggerMailer RefNotification="2163790e-0161-1d78-ffffe001fe9bf86f" On="&lt;v&gt;" Off="&lt;v&gt;" MinimumTime="5000" NL="1"/>
 				</C>
-				<C Type="OutputRef" V="178" U="21637996-03e4-5846-ffffe001fe9bf86f" Title="Abfahrt: Ansage" Px="20928" Py="6912" Px2="23040" Py2="7104" Cl="0,0,0" Nio="2" Ref="216376a3-0125-573f-ffffe001fe9bf86f" WF="131072" LinkRefType="74">
-					<Co K="AI" Nc="1" U="21637996-03e4-5844-00ffbad61744dee4">
-						<In Input="2163788e-015e-eb6e-02ff77ac0b23af42"/>
-					</Co>
-					<Co K="AQ" U="21637996-03e4-5845-01ffbad61744dee4"/>
-				</C>
 			</C>
 			<C Type="Page" V="178" U="21637a30-0013-6964-ffffe001fe9bf86f" Title="Alexa NG" LtE="560167480" WF="16384">
 				<IoData Cr="216373ab-00cf-42fc-ffffe001fe9bf86f" Pr="216373ab-00cf-42f8-ffffe001fe9bf86f"/>
-				<C Type="InputRef" V="178" U="21637a4b-02de-6cf1-ffffe001fe9bf86f" Title="Alexa NG OK" Px="13920" Py="5376" Px2="16032" Py2="5568" Cl="0,0,0" Nio="4" Ref="2163766c-0275-51e4-ffffe001fe9bf86f" WF="2048" LinkRefType="87">
+				<C Type="InputRef" V="178" U="21637a4b-02de-6cf1-ffffe001fe9bf86f" Title="Alexa NG OK" Px="13920" Py="5376" Px2="16032" Py2="5568" Cl="0,0,0" Nio="4" Ref="2163766c-0275-51e4-ffffe001fe9bf86f" WF="18432" LinkRefType="87">
 					<Co K="AI" Nc="1" U="21637a4b-02de-6ced-00ffe965d876aa19">
 						<In Input="2163766c-0275-51e2-00ffed69ebf2e5e8"/>
 					</Co>
@@ -2376,31 +2700,31 @@
 					<Co K="AQ" U="21637a4b-02de-6cef-02ffe965d876aa19"/>
 					<Co K="Q" U="21637a4b-02de-6cf0-03ffe965d876aa19"/>
 				</C>
-				<C Type="OutputRef" V="178" U="21637a79-0329-73ea-ffffe001fe9bf86f" Title="Alexa Radio Zone 1 Sender" Px="13920" Py="3360" Px2="16032" Py2="3552" Cl="0,0,0" Nio="2" Ref="216376ba-0105-5ca4-ffffe001fe9bf86f" WF="133120" Analog="true" LinkRefType="74">
+				<C Type="OutputRef" V="178" U="21637a79-0329-73ea-ffffe001fe9bf86f" Title="Alexa Radio Zone 1 Sender" Px="13920" Py="3360" Px2="16032" Py2="3552" Cl="0,0,0" Nio="2" Ref="216376ba-0105-5ca4-ffffe001fe9bf86f" WF="149504" Analog="true" LinkRefType="74">
 					<Co K="AI" Nc="1" U="21637a79-0329-73e8-00ff57aabc954d0c">
 						<In Input="21637ac6-003b-9446-18fff19427ea5b4c"/>
 					</Co>
 					<Co K="AQ" U="21637a79-0329-73e9-01ff57aabc954d0c"/>
 				</C>
-				<C Type="OutputRef" V="178" U="21637a86-0174-7773-ffffe001fe9bf86f" Title="Alexa Radio Zone 1 Stopp" Px="13920" Py="3936" Px2="16032" Py2="4128" Cl="0,0,0" Nio="2" Ref="216376ba-0105-5ca7-ffffe001fe9bf86f" WF="2048" LinkRefType="74">
+				<C Type="OutputRef" V="178" U="21637a86-0174-7773-ffffe001fe9bf86f" Title="Alexa Radio Zone 1 Stopp" Px="13920" Py="3936" Px2="16032" Py2="4128" Cl="0,0,0" Nio="2" Ref="216376ba-0105-5ca7-ffffe001fe9bf86f" WF="18432" LinkRefType="74">
 					<Co K="AI" U="21637a86-0174-7771-00ff16dfb70354b2"/>
 					<Co K="AQ" U="21637a86-0174-7772-01ff16dfb70354b2"/>
 				</C>
-				<C Type="OutputRef" V="178" U="21637a93-00ee-7b00-ffffe001fe9bf86f" Title="Alexa Radio Zone 1 Lautstärke" Px="13920" Py="4416" Px2="16032" Py2="4608" Cl="0,0,0" Nio="2" Ref="216376ba-0105-5caa-ffffe001fe9bf86f" WF="2048" Analog="true" LinkRefType="74">
+				<C Type="OutputRef" V="178" U="21637a93-00ee-7b00-ffffe001fe9bf86f" Title="Alexa Radio Zone 1 Lautstärke" Px="13920" Py="4416" Px2="16032" Py2="4608" Cl="0,0,0" Nio="2" Ref="216376ba-0105-5caa-ffffe001fe9bf86f" WF="18432" Analog="true" LinkRefType="74">
 					<Co K="AI" U="21637a93-00ee-7afe-00fffa85d2920873"/>
 					<Co K="AQ" U="21637a93-00ee-7aff-01fffa85d2920873"/>
 				</C>
-				<C Type="OutputRef" V="178" U="21637a97-003d-7e91-ffffe001fe9bf86f" Title="Alexa Radio alle Zonen Sender" Px="13920" Py="4896" Px2="16032" Py2="5088" Cl="0,0,0" Nio="2" Ref="216376ba-010a-5cb6-ffffe001fe9bf86f" WF="2048" Analog="true" LinkRefType="74">
+				<C Type="OutputRef" V="178" U="21637a97-003d-7e91-ffffe001fe9bf86f" Title="Alexa Radio alle Zonen Sender" Px="13920" Py="4896" Px2="16032" Py2="5088" Cl="0,0,0" Nio="2" Ref="216376ba-010a-5cb6-ffffe001fe9bf86f" WF="18432" Analog="true" LinkRefType="74">
 					<Co K="AI" U="21637a97-003d-7e8f-00ff27671f3c057b"/>
 					<Co K="AQ" U="21637a97-003d-7e90-01ff27671f3c057b"/>
 				</C>
-				<C Type="OutputRef" V="178" U="21637aab-01aa-85a9-ffffe001fe9bf86f" Title="Alexa kueche sprechen" Px="13920" Py="6048" Px2="16032" Py2="6240" Cl="0,0,0" Nio="2" Ref="216376af-00d0-59ef-ffffe001fe9bf86f" WF="133120" Analog="true" Text="true" LinkRefType="74">
+				<C Type="OutputRef" V="178" U="21637aab-01aa-85a9-ffffe001fe9bf86f" Title="Alexa kueche sprechen" Px="13920" Py="6048" Px2="16032" Py2="6240" Cl="0,0,0" Nio="2" Ref="216376af-00d0-59ef-ffffe001fe9bf86f" WF="149504" Analog="true" Text="true" LinkRefType="74">
 					<Co K="AI" Nc="1" U="21637aab-01aa-85a7-00ff483e0ac89da2">
 						<In Input="21637ab1-022b-894c-08ffae4ade57fdc5"/>
 					</Co>
 					<Co K="AQ" U="21637aab-01aa-85a8-01ff483e0ac89da2"/>
 				</C>
-				<C Type="State" V="178" U="21637ab1-022b-894f-ffffe001fe9bf86f" Title="Ansagetext" Px="8448" Py="5568" Px2="11136" Py2="6456" Cl="141,255,112" Nio="11" LtE="560167602">
+				<C Type="State" V="178" U="21637ab1-022b-894f-ffffe001fe9bf86f" Title="Ansagetext" Px="8448" Py="5568" Px2="11136" Py2="6456" Cl="141,255,112" Nio="11" LtE="560167602" WF="16384">
 					<Co K="I1" U="21637ab1-022b-8944-00ffae4ade57fdc5"/>
 					<Co K="I2" U="21637ab1-022b-8945-01ffae4ade57fdc5"/>
 					<Co K="I3" U="21637ab1-022b-8946-02ffae4ade57fdc5"/>
@@ -2416,7 +2740,7 @@
 					<Display Unit="&lt;v.pr&gt;"/>
 					<StateTexts></StateTexts>
 				</C>
-				<C Type="Radio" V="178" U="21637ac6-003b-9448-ffffe001fe9bf86f" Title="Radio Zone 1" Px="8928" Py="2496" Px2="11616" Py2="3768" Cl="141,255,112" Nio="26" LtE="560167636" T9="Alles aus">
+				<C Type="Radio" V="178" U="21637ac6-003b-9448-ffffe001fe9bf86f" Title="Radio Zone 1" Px="8928" Py="2496" Px2="11616" Py2="3768" Cl="141,255,112" Nio="26" LtE="560167636" WF="16384" T9="Alles aus">
 					<Co K="InputTrigger 1" U="21637ac6-003b-942e-00fff19427ea5b4c"/>
 					<Co K="InputTrigger 2" U="21637ac6-003b-942f-01fff19427ea5b4c"/>
 					<Co K="InputTrigger 3" U="21637ac6-003b-9430-02fff19427ea5b4c"/>
@@ -2446,9 +2770,143 @@
 					<IoData Visu="true" Cr="216373ab-00d5-4360-ffffe001fe9bf86f" Pr="216373ab-00cf-42f8-ffffe001fe9bf86f"/>
 				</C>
 			</C>
+			<C Type="Page" V="178" U="216cdf9a-0160-8f84-ffffe001fe9bf86f" Title="APC-UPS NG" LtE="560783268" WF="16384">
+				<IoData Cr="216373ab-00cf-42fc-ffffe001fe9bf86f" Pr="216373ab-00cf-42f8-ffffe001fe9bf86f"/>
+				<C Type="InputRef" V="178" U="216cdfd0-0212-b108-ffffe001fe9bf86f" Title="apcups_time_left" Px="7584" Py="9792" Px2="9696" Py2="9984" Cl="0,0,0" Nio="4" Ref="216cdfba-012e-9fd8-ffffe001fe9bf86f" WF="133120" Analog="true" LinkRefType="87">
+					<Co K="AI" Nc="1" U="216cdfd0-0212-b104-00ff07ea4d2cec45">
+						<In Input="216cdfba-012e-9fd6-00ff7c6e54a132c6"/>
+					</Co>
+					<Co K="I" Nc="1" U="216cdfd0-0212-b105-01ff07ea4d2cec45">
+						<In Input="216cdfba-012e-9fd7-01ff7c6e54a132c6"/>
+					</Co>
+					<Co K="AQ" U="216cdfd0-0212-b106-02ff07ea4d2cec45"/>
+					<Co K="Q" U="216cdfd0-0212-b107-03ff07ea4d2cec45"/>
+				</C>
+				<C Type="InputRef" V="178" U="216cdfda-02df-b98e-ffffe001fe9bf86f" Title="apcups_replace_battery" Px="7200" Py="5472" Px2="9312" Py2="5664" Cl="0,0,0" Nio="4" Ref="216cdfba-0146-a000-ffffe001fe9bf86f" WF="133120" Analog="true" LinkRefType="87">
+					<Co K="AI" Nc="1" U="216cdfda-02df-b98a-00ff5c4af05cefdd">
+						<In Input="216cdfba-0146-9ffe-00ff7c6e54a132c6"/>
+					</Co>
+					<Co K="I" Nc="1" U="216cdfda-02df-b98b-01ff5c4af05cefdd">
+						<In Input="216cdfba-0146-9fff-01ff7c6e54a132c6"/>
+					</Co>
+					<Co K="AQ" U="216cdfda-02df-b98c-02ff5c4af05cefdd"/>
+					<Co K="Q" U="216cdfda-02df-b98d-03ff5c4af05cefdd"/>
+				</C>
+				<C Type="InputRef" V="178" U="216cdfe4-023d-c21b-ffffe001fe9bf86f" Title="apcups_on_battery" Px="5088" Py="4608" Px2="7200" Py2="4800" Cl="0,0,0" Nio="4" Ref="216cdfba-0125-9fc8-ffffe001fe9bf86f" WF="133120" Analog="true" LinkRefType="87">
+					<Co K="AI" Nc="1" U="216cdfe4-023d-c217-00ff9f2424680562">
+						<In Input="216cdfba-0125-9fc6-00ff7c6e54a132c6"/>
+					</Co>
+					<Co K="I" Nc="1" U="216cdfe4-023d-c218-01ff9f2424680562">
+						<In Input="216cdfba-0125-9fc7-01ff7c6e54a132c6"/>
+					</Co>
+					<Co K="AQ" U="216cdfe4-023d-c219-02ff9f2424680562"/>
+					<Co K="Q" U="216cdfe4-023d-c21a-03ff9f2424680562"/>
+				</C>
+				<C Type="InputRef" V="178" U="216cdfed-0325-d32b-ffffe001fe9bf86f" Title="apcups_data_valid" Px="8256" Py="7104" Px2="10368" Py2="7296" Cl="0,0,0" Nio="4" Ref="216cdfba-011a-9fbc-ffffe001fe9bf86f" WF="133120" Analog="true" LinkRefType="87">
+					<Co K="AI" Nc="1" U="216cdfed-0325-d327-00ff2efa8d1ff778">
+						<In Input="216cdfba-011a-9fba-00ff7c6e54a132c6"/>
+					</Co>
+					<Co K="I" Nc="1" U="216cdfed-0325-d328-01ff2efa8d1ff778">
+						<In Input="216cdfba-011a-9fbb-01ff7c6e54a132c6"/>
+					</Co>
+					<Co K="AQ" U="216cdfed-0325-d329-02ff2efa8d1ff778"/>
+					<Co K="Q" U="216cdfed-0325-d32a-03ff2efa8d1ff778"/>
+				</C>
+				<C Type="InputRef" V="178" U="216cdff7-00ad-dbc6-ffffe001fe9bf86f" Title="apcups_alarm_level" Px="7488" Py="9024" Px2="9600" Py2="9216" Cl="0,0,0" Nio="4" Ref="216cdfba-0128-9fcc-ffffe001fe9bf86f" WF="133120" Analog="true" LinkRefType="87">
+					<Co K="AI" Nc="1" U="216cdff7-00ad-dbc2-00ff11250b23f0fa">
+						<In Input="216cdfba-0128-9fca-00ff7c6e54a132c6"/>
+					</Co>
+					<Co K="I" Nc="1" U="216cdff7-00ad-dbc3-01ff11250b23f0fa">
+						<In Input="216cdfba-0128-9fcb-01ff7c6e54a132c6"/>
+					</Co>
+					<Co K="AQ" U="216cdff7-00ad-dbc4-02ff11250b23f0fa"/>
+					<Co K="Q" U="216cdff7-00ad-dbc5-03ff11250b23f0fa"/>
+				</C>
+				<C Type="OnDelay" V="178" U="216ce008-00ca-ecee-ffffe001fe9bf86f" Title="Netzausfall entprellt" Px="8736" Py="4320" Px2="10080" Py2="5016" Cl="141,255,112" Nio="5" LtE="560783370" WF="131072">
+					<Co K="InputTrigger" Nc="1" U="216ce008-00ca-ece9-00ff52621e51f40d">
+						<In Input="216cdfe4-023d-c219-02ff9f2424680562"/>
+					</Co>
+					<Co K="Reset" U="216ce008-00ca-ecea-01ff52621e51f40d"/>
+					<Co K="Remanence" U="216ce008-00ca-eceb-02ff52621e51f40d"/>
+					<Co K="Time" Def="10" U="216ce008-00ca-ecec-03ff52621e51f40d"/>
+					<Co K="Q" U="216ce008-00ca-eced-04ff52621e51f40d"/>
+				</C>
+				<C Type="Not" V="178" U="216ce010-01ab-06a6-ffffe001fe9bf86f" Title="Keine Verbindung zur USV" Px="11424" Py="6816" Px2="12768" Py2="7320" Cl="141,255,112" Nio="2" LtE="560783391">
+					<Co K="I" Nc="1" U="216ce010-01ab-06a4-00fff25d56f1fded">
+						<In Input="216cdfed-0325-d329-02ff2efa8d1ff778"/>
+					</Co>
+					<Co K="Q" U="216ce010-01ab-06a5-01fff25d56f1fded"/>
+				</C>
+				<C Type="Or" V="178" U="216ce023-00c6-2069-ffffe001fe9bf86f" Title="Sammelstörung, erste Stufe" Px="11616" Py="4992" Px2="12960" Py2="5688" Cl="141,255,112" Nio="3" LtE="560783398">
+					<Co K="I1" Nc="1" U="216ce023-00c6-2066-00ff57cfb01fcf3b">
+						<In Input="216ce008-00ca-eced-04ff52621e51f40d"/>
+					</Co>
+					<Co K="I2" Nc="1" U="216ce023-00c6-2067-01ff57cfb01fcf3b">
+						<In Input="216cdfda-02df-b98c-02ff5c4af05cefdd"/>
+					</Co>
+					<Co K="Q" U="216ce023-00c6-2068-02ff57cfb01fcf3b"/>
+				</C>
+				<C Type="Or" V="178" U="216ce029-0381-31a1-ffffe001fe9bf86f" Title="Sammelstörung USV" Px="14112" Py="6624" Px2="15456" Py2="7320" Cl="141,255,112" Nio="3" LtE="560783404">
+					<Co K="I1" Nc="1" U="216ce029-0381-319e-00ff9afb0a34e6b1">
+						<In Input="216ce023-00c6-2068-02ff57cfb01fcf3b"/>
+					</Co>
+					<Co K="I2" Nc="1" U="216ce029-0381-319f-01ff9afb0a34e6b1">
+						<In Input="216ce010-01ab-06a5-01fff25d56f1fded"/>
+					</Co>
+					<Co K="Q" U="216ce029-0381-31a0-02ff9afb0a34e6b1"/>
+				</C>
+				<C Type="State" V="178" U="216ce030-0292-42f1-ffffe001fe9bf86f" Title="USV-Zustand" Px="12768" Py="9120" Px2="15456" Py2="10200" Cl="141,255,112" Nio="11" LtE="560783410">
+					<Co K="I1" Nc="1" U="216ce030-0292-42e6-00ff73825c2964bd">
+						<In Input="216cdff7-00ad-dbc4-02ff11250b23f0fa"/>
+					</Co>
+					<Co K="I2" Nc="1" U="216ce030-0292-42e7-01ff73825c2964bd">
+						<In Input="216cdfd0-0212-b106-02ff07ea4d2cec45"/>
+					</Co>
+					<Co K="I3" U="216ce030-0292-42e8-02ff73825c2964bd"/>
+					<Co K="I4" U="216ce030-0292-42e9-03ff73825c2964bd"/>
+					<Co K="I5" U="216ce030-0292-42ea-04ff73825c2964bd"/>
+					<Co K="I6" U="216ce030-0292-42eb-05ff73825c2964bd"/>
+					<Co K="I7" U="216ce030-0292-42ec-06ff73825c2964bd"/>
+					<Co K="I8" U="216ce030-0292-42ed-07ff73825c2964bd"/>
+					<Co K="TQ" U="216ce030-0292-42ee-08ff73825c2964bd"/>
+					<Co K="AQ" U="216ce030-0292-42ef-09ff73825c2964bd"/>
+					<Co K="OutputAPI" U="216ce030-0292-42f0-0aff73825c2964bd"/>
+					<IoData Visu="true" Cr="216373ab-00cf-42fc-ffffe001fe9bf86f" Pr="216373ab-00cf-42f8-ffffe001fe9bf86f"/>
+					<Display Unit="&lt;v.pr&gt;"/>
+					<StateTexts></StateTexts>
+				</C>
+				<C Type="AnalogThresholdTrigger" V="178" U="216ce040-00a6-545b-ffffe001fe9bf86f" Title="Lastabwurf ab Vorwarnung" Px="12768" Py="8160" Px2="14112" Py2="9048" Cl="141,255,112" Nio="8" LtE="560783426">
+					<Co K="Input" Nc="1" U="216ce040-00a6-5453-00ff83023099b7bf">
+						<In Input="216cdff7-00ad-dbc4-02ff11250b23f0fa"/>
+					</Co>
+					<Co K="On" Def="2" U="216ce040-00a6-5454-01ff83023099b7bf"/>
+					<Co K="Off" Def="1" U="216ce040-00a6-5455-02ff83023099b7bf"/>
+					<Co K="Remanence" U="216ce040-00a6-5456-03ff83023099b7bf"/>
+					<Co K="PulseTime" Def="1" U="216ce040-00a6-5457-04ff83023099b7bf"/>
+					<Co K="Q" U="216ce040-00a6-5458-05ff83023099b7bf"/>
+					<Co K="RisingEdge" U="216ce040-00a6-5459-06ff83023099b7bf"/>
+					<Co K="FallingEdge" U="216ce040-00a6-545a-07ff83023099b7bf"/>
+				</C>
+				<C Type="Memory" V="178" U="216ce050-0118-7725-ffffe001fe9bf86f" Title="Stromsparen aktiv" Px="16512" Py="8448" Px2="18624" Py2="8640" Cl="238,238,238" Nio="3" LtE="560783455" WF="131072" Tp="0">
+					<Co K="Input" Nc="1" U="216ce050-0118-7722-00ff103f1908b862">
+						<In Input="216ce040-00a6-5458-05ff83023099b7bf"/>
+					</Co>
+					<Co K="AQ" U="216ce050-0118-7723-01ff103f1908b862"/>
+					<Co K="Q" U="216ce050-0118-7724-02ff103f1908b862"/>
+					<IoData Cr="216373ab-00cf-42fc-ffffe001fe9bf86f" Pr="216373ab-00cf-42f8-ffffe001fe9bf86f"/>
+					<Display Unit="&lt;v.1&gt;" StateOnly="true"/>
+				</C>
+				<C Type="OutputRefLM" V="178" U="216ce073-034c-9a05-ffffe001fe9bf86f" Title="USV-Meldung" Px="16512" Py="6912" Px2="18624" Py2="7104" Cl="0,0,0" Nio="2" Ref="216ce067-00c9-8893-ffffe001fe9bf86f" WF="131072">
+					<Co K="AI" Nc="1" U="216ce073-034c-9a03-00ff48bfb81fa4dc">
+						<In Input="216ce029-0381-31a0-02ff9afb0a34e6b1"/>
+					</Co>
+					<Co K="AQ" U="216ce073-034c-9a04-01ff48bfb81fa4dc"/>
+					<LoggerMailer RefNotification="216ce067-00c9-8893-ffffe001fe9bf86f" On="&lt;v&gt;" Off="&lt;v&gt;" MinimumTime="5000" NL="1"/>
+				</C>
+			</C>
 			<C Type="Page" V="178" U="216cb110-02f4-1258-ffffe001fe9bf86f" Title="Dashboard" LtE="560771363" WF="16384">
 				<IoData Cr="216373ab-00cf-42fc-ffffe001fe9bf86f" Pr="216373ab-00cf-42f8-ffffe001fe9bf86f"/>
-				<C Type="InputRef" V="178" U="216cb16e-00fe-26d2-ffffe001fe9bf86f" Title="DASHBOARD_OK" Px="2592" Py="3840" Px2="4704" Py2="4032" Cl="0,0,0" Nio="4" Ref="216cb14d-0358-1c7e-ffffe001fe9bf86f" WF="133120" Analog="true" LinkRefType="87">
+				<C Type="InputRef" V="178" U="216cb16e-00fe-26d2-ffffe001fe9bf86f" Title="DASHBOARD_OK" Px="2592" Py="3840" Px2="4704" Py2="4032" Cl="0,0,0" Nio="4" Ref="216cb14d-0358-1c7e-ffffe001fe9bf86f" WF="149504" Analog="true" LinkRefType="87">
 					<Co K="AI" Nc="1" U="216cb16e-00fe-26ce-00ff6b5fb97c72c5">
 						<In Input="216cb14d-0358-1c7c-00ff82be0fffb85f"/>
 					</Co>
@@ -2458,7 +2916,7 @@
 					<Co K="AQ" U="216cb16e-00fe-26d0-02ff6b5fb97c72c5"/>
 					<Co K="Q" U="216cb16e-00fe-26d1-03ff6b5fb97c72c5"/>
 				</C>
-				<C Type="InputRef" V="178" U="216cb178-010e-2c0a-ffffe001fe9bf86f" Title="DASHBOARD_BAUSTEINE" Px="3168" Py="8160" Px2="5280" Py2="8352" Cl="0,0,0" Nio="4" Ref="216cb14d-035a-1c82-ffffe001fe9bf86f" WF="133120" Analog="true" LinkRefType="87">
+				<C Type="InputRef" V="178" U="216cb178-010e-2c0a-ffffe001fe9bf86f" Title="DASHBOARD_BAUSTEINE" Px="3168" Py="8160" Px2="5280" Py2="8352" Cl="0,0,0" Nio="4" Ref="216cb14d-035a-1c82-ffffe001fe9bf86f" WF="149504" Analog="true" LinkRefType="87">
 					<Co K="AI" Nc="1" U="216cb178-010e-2c06-00ff649a6cc9a8d6">
 						<In Input="216cb14d-035a-1c80-00ff82be0fffb85f"/>
 					</Co>
@@ -2468,7 +2926,7 @@
 					<Co K="AQ" U="216cb178-010e-2c08-02ff649a6cc9a8d6"/>
 					<Co K="Q" U="216cb178-010e-2c09-03ff649a6cc9a8d6"/>
 				</C>
-				<C Type="InputRef" V="178" U="216cb181-01c3-3149-ffffe001fe9bf86f" Title="DASHBOARD_ALTER" Px="2784" Py="5184" Px2="4896" Py2="5376" Cl="0,0,0" Nio="4" Ref="216cb14d-035a-1c8e-ffffe001fe9bf86f" WF="133120" Analog="true" LinkRefType="87">
+				<C Type="InputRef" V="178" U="216cb181-01c3-3149-ffffe001fe9bf86f" Title="DASHBOARD_ALTER" Px="2784" Py="5184" Px2="4896" Py2="5376" Cl="0,0,0" Nio="4" Ref="216cb14d-035a-1c8e-ffffe001fe9bf86f" WF="149504" Analog="true" LinkRefType="87">
 					<Co K="AI" Nc="1" U="216cb181-01c3-3145-00ff9e984426c34e">
 						<In Input="216cb14d-035a-1c8c-00ff82be0fffb85f"/>
 					</Co>
@@ -2478,13 +2936,13 @@
 					<Co K="AQ" U="216cb181-01c3-3147-02ff9e984426c34e"/>
 					<Co K="Q" U="216cb181-01c3-3148-03ff9e984426c34e"/>
 				</C>
-				<C Type="Not" V="178" U="216cb196-021b-3bb3-ffffe001fe9bf86f" Title="Dienst antwortet nicht" Px="5952" Py="3552" Px2="7296" Py2="4056" Cl="141,255,112" Nio="2" LtE="560771492">
+				<C Type="Not" V="178" U="216cb196-021b-3bb3-ffffe001fe9bf86f" Title="Dienst antwortet nicht" Px="5952" Py="3552" Px2="7296" Py2="4056" Cl="141,255,112" Nio="2" LtE="560771492" WF="147456">
 					<Co K="I" Nc="1" U="216cb196-021b-3bb1-00ff055c7f901dab">
 						<In Input="216cb16e-00fe-26d0-02ff6b5fb97c72c5"/>
 					</Co>
 					<Co K="Q" U="216cb196-021b-3bb2-01ff055c7f901dab"/>
 				</C>
-				<C Type="Or" V="178" U="216cb1a7-02e6-461f-ffffe001fe9bf86f" Title="Dienst tot oder Werte alt" Px="9600" Py="3936" Px2="10944" Py2="4632" Cl="141,255,112" Nio="3" LtE="560771508">
+				<C Type="Or" V="178" U="216cb1a7-02e6-461f-ffffe001fe9bf86f" Title="Dienst tot oder Werte alt" Px="9600" Py="3936" Px2="10944" Py2="4632" Cl="141,255,112" Nio="3" LtE="560771508" WF="16384">
 					<Co K="I1" Nc="1" U="216cb1a7-02e6-461c-00ff9356b74768c4">
 						<In Input="216cb196-021b-3bb2-01ff055c7f901dab"/>
 					</Co>
@@ -2493,7 +2951,7 @@
 					</Co>
 					<Co K="Q" U="216cb1a7-02e6-461e-02ff9356b74768c4"/>
 				</C>
-				<C Type="Or" V="178" U="216cb1b8-023b-5093-ffffe001fe9bf86f" Title="Dashboard gestört gesammelt" Px="12288" Py="7680" Px2="13632" Py2="8376" Cl="141,255,112" Nio="3" LtE="560771515">
+				<C Type="Or" V="178" U="216cb1b8-023b-5093-ffffe001fe9bf86f" Title="Dashboard gestört gesammelt" Px="12288" Py="7680" Px2="13632" Py2="8376" Cl="141,255,112" Nio="3" LtE="560771515" WF="16384">
 					<Co K="I1" Nc="1" U="216cb1b8-023b-5090-00ffdb88683fc5bd">
 						<In Input="216cb1a7-02e6-461e-02ff9356b74768c4"/>
 					</Co>
@@ -2502,7 +2960,7 @@
 					</Co>
 					<Co K="Q" U="216cb1b8-023b-5092-02ffdb88683fc5bd"/>
 				</C>
-				<C Type="OnDelay" V="178" U="216cb1ca-0121-604c-ffffe001fe9bf86f" Title="Dashboard gestört bestätigt" Px="15744" Py="7680" Px2="17088" Py2="8376" Cl="141,255,112" Nio="5" LtE="560771545">
+				<C Type="OnDelay" V="178" U="216cb1ca-0121-604c-ffffe001fe9bf86f" Title="Dashboard gestört bestätigt" Px="15744" Py="7680" Px2="17088" Py2="8376" Cl="141,255,112" Nio="5" LtE="560771545" WF="16384">
 					<Co K="InputTrigger" Nc="1" U="216cb1ca-0121-6047-00ff853646211e6a">
 						<In Input="216cb1b8-023b-5092-02ffdb88683fc5bd"/>
 					</Co>
@@ -2511,7 +2969,7 @@
 					<Co K="Time" Def="300" U="216cb1ca-0121-604a-03ff853646211e6a"/>
 					<Co K="Q" U="216cb1ca-0121-604b-04ff853646211e6a"/>
 				</C>
-				<C Type="AnalogThresholdTrigger" V="178" U="216cb1e9-03ba-7560-ffffe001fe9bf86f" Title="Werte veraltet" Px="5952" Py="4896" Px2="7296" Py2="5784" Cl="141,255,112" Nio="8" LtE="560771577">
+				<C Type="AnalogThresholdTrigger" V="178" U="216cb1e9-03ba-7560-ffffe001fe9bf86f" Title="Werte veraltet" Px="5952" Py="4896" Px2="7296" Py2="5784" Cl="141,255,112" Nio="8" LtE="560771577" WF="147456">
 					<Co K="Input" Nc="1" U="216cb1e9-03ba-7558-00fff5b5fb82174f">
 						<In Input="216cb181-01c3-3147-02ff9e984426c34e"/>
 					</Co>
@@ -2523,14 +2981,14 @@
 					<Co K="RisingEdge" U="216cb1e9-03ba-755e-06fff5b5fb82174f"/>
 					<Co K="FallingEdge" U="216cb1e9-03ba-755f-07fff5b5fb82174f"/>
 				</C>
-				<C Type="Equal" V="178" U="216cb224-0134-a510-ffffe001fe9bf86f" Title="Struktur leer" Px="7008" Py="7872" Px2="8352" Py2="8568" Cl="141,255,112" Nio="3" LtE="560771621">
+				<C Type="Equal" V="178" U="216cb224-0134-a510-ffffe001fe9bf86f" Title="Struktur leer" Px="7008" Py="7872" Px2="8352" Py2="8568" Cl="141,255,112" Nio="3" LtE="560771621" WF="147456">
 					<Co K="Input1" Nc="1" U="216cb224-0134-a50d-00ff2ba6af149670">
 						<In Input="216cb178-010e-2c08-02ff649a6cc9a8d6"/>
 					</Co>
 					<Co K="Input2" U="216cb224-0134-a50e-01ff2ba6af149670"/>
 					<Co K="Q" U="216cb224-0134-a50f-02ff2ba6af149670"/>
 				</C>
-				<C Type="State" V="178" U="216cb231-007f-afc6-ffffe001fe9bf86f" Title="Alter der Dashboard-Werte" Px="5952" Py="6336" Px2="8640" Py2="7224" Cl="141,255,112" Nio="11" LtE="560771642">
+				<C Type="State" V="178" U="216cb231-007f-afc6-ffffe001fe9bf86f" Title="Alter der Dashboard-Werte" Px="5952" Py="6336" Px2="8640" Py2="7224" Cl="141,255,112" Nio="11" LtE="560771642" WF="16384">
 					<Co K="I1" Nc="1" U="216cb231-007f-afbb-00ffa60176778791">
 						<In Input="216cb181-01c3-3147-02ff9e984426c34e"/>
 					</Co>
@@ -2548,12 +3006,125 @@
 					<Display Unit="&lt;v.pr&gt;"/>
 					<StateTexts></StateTexts>
 				</C>
-				<C Type="OutputRefLM" V="178" U="216cb270-0286-daa4-ffffe001fe9bf86f" Title="Meldung Dashboard gestört" Px="18528" Py="7968" Px2="20640" Py2="8160" Cl="0,0,0" Nio="2" Ref="216cb251-01b5-bfd4-ffffe001fe9bf86f" WF="131072">
+				<C Type="OutputRefLM" V="178" U="216cb270-0286-daa4-ffffe001fe9bf86f" Title="Meldung Dashboard gestört" Px="18528" Py="7968" Px2="20640" Py2="8160" Cl="0,0,0" Nio="2" Ref="216cb251-01b5-bfd4-ffffe001fe9bf86f" WF="147456">
 					<Co K="AI" Nc="1" U="216cb270-0286-daa2-00ff81a96b26df28">
 						<In Input="216cb1ca-0121-604b-04ff853646211e6a"/>
 					</Co>
 					<Co K="AQ" U="216cb270-0286-daa3-01ff81a96b26df28"/>
 					<LoggerMailer RefNotification="216cb251-01b5-bfd4-ffffe001fe9bf86f" On="&lt;v&gt;" Off="&lt;v&gt;" MinimumTime="5000" NL="1"/>
+				</C>
+			</C>
+			<C Type="Page" V="178" U="216cdd41-00bb-5f59-ffffe001fe9bf86f" Title="Docker NG" LtE="560782667" WF="16384">
+				<IoData Cr="216373ab-00cf-42fc-ffffe001fe9bf86f" Pr="216373ab-00cf-42f8-ffffe001fe9bf86f"/>
+				<C Type="InputRef" V="178" U="216cdda0-017f-8c23-ffffe001fe9bf86f" Title="DOCKERNG_ZAEHLER" Px="3456" Py="7680" Px2="5568" Py2="7872" Cl="0,0,0" Nio="4" Ref="216cdd82-030f-6e31-ffffe001fe9bf86f" WF="133120" Analog="true" LinkRefType="87">
+					<Co K="AI" Nc="1" U="216cdda0-017f-8c1f-00ff2918f5d48572">
+						<In Input="216cdd82-030f-6e2f-00ff158a2bfd5af7"/>
+					</Co>
+					<Co K="I" Nc="1" U="216cdda0-017f-8c20-01ff2918f5d48572">
+						<In Input="216cdd82-030f-6e30-01ff158a2bfd5af7"/>
+					</Co>
+					<Co K="AQ" U="216cdda0-017f-8c21-02ff2918f5d48572"/>
+					<Co K="Q" U="216cdda0-017f-8c22-03ff2918f5d48572"/>
+				</C>
+				<C Type="InputRef" V="178" U="216cddaa-01a1-93b8-ffffe001fe9bf86f" Title="DOCKERNG_FEHLT" Px="1248" Py="6816" Px2="3360" Py2="7008" Cl="0,0,0" Nio="4" Ref="216cdd82-0300-6e25-ffffe001fe9bf86f" WF="133120" Analog="true" LinkRefType="87">
+					<Co K="AI" Nc="1" U="216cddaa-01a1-93b4-00ff2b6ec2590b00">
+						<In Input="216cdd82-0300-6e23-00ff158a2bfd5af7"/>
+					</Co>
+					<Co K="I" Nc="1" U="216cddaa-01a1-93b5-01ff2b6ec2590b00">
+						<In Input="216cdd82-0300-6e24-01ff158a2bfd5af7"/>
+					</Co>
+					<Co K="AQ" U="216cddaa-01a1-93b6-02ff2b6ec2590b00"/>
+					<Co K="Q" U="216cddaa-01a1-93b7-03ff2b6ec2590b00"/>
+				</C>
+				<C Type="InputRef" V="178" U="216cddb3-01c9-9b54-ffffe001fe9bf86f" Title="DOCKERNG_AUSFALL" Px="1152" Py="5760" Px2="3264" Py2="5952" Cl="0,0,0" Nio="4" Ref="216cdd82-0300-6e19-ffffe001fe9bf86f" WF="133120" Analog="true" LinkRefType="87">
+					<Co K="AI" Nc="1" U="216cddb3-01c9-9b50-00ff5f740ab891ca">
+						<In Input="216cdd82-0300-6e17-00ff158a2bfd5af7"/>
+					</Co>
+					<Co K="I" Nc="1" U="216cddb3-01c9-9b51-01ff5f740ab891ca">
+						<In Input="216cdd82-0300-6e18-01ff158a2bfd5af7"/>
+					</Co>
+					<Co K="AQ" U="216cddb3-01c9-9b52-02ff5f740ab891ca"/>
+					<Co K="Q" U="216cddb3-01c9-9b53-03ff5f740ab891ca"/>
+				</C>
+				<C Type="InputRef" V="178" U="216cde51-0385-69cb-ffffe001fe9bf86f" Title="Konstante 1" Px="3360" Py="8832" Px2="5472" Py2="9024" Cl="0,0,0" Nio="4" Ref="216c8f88-0096-1e34-ffffe001fe9bf86f" WF="133120" Analog="true" LinkRefType="17">
+					<Co K="AI" Nc="1" U="216cde51-0385-69c7-00ff018fb1dbddc4">
+						<In Input="216c8f88-0096-1e33-00ff13c84b8d596b"/>
+					</Co>
+					<Co K="I" U="216cde51-0385-69c8-01ff018fb1dbddc4"/>
+					<Co K="AQ" U="216cde51-0385-69c9-02ff018fb1dbddc4"/>
+					<Co K="Q" U="216cde51-0385-69ca-03ff018fb1dbddc4"/>
+				</C>
+				<C Type="AnalogThresholdTrigger" V="178" U="216cddc6-019f-aa84-ffffe001fe9bf86f" Title="Container gestört" Px="4512" Py="5472" Px2="5856" Py2="6360" Cl="141,255,112" Nio="8" LtE="560782792" WF="131072">
+					<Co K="Input" Nc="1" U="216cddc6-019f-aa7c-00ffb9945ee0e992">
+						<In Input="216cddb3-01c9-9b52-02ff5f740ab891ca"/>
+					</Co>
+					<Co K="On" Def="1" U="216cddc6-019f-aa7d-01ffb9945ee0e992"/>
+					<Co K="Off" Def="1" U="216cddc6-019f-aa7e-02ffb9945ee0e992"/>
+					<Co K="Remanence" U="216cddc6-019f-aa7f-03ffb9945ee0e992"/>
+					<Co K="PulseTime" Def="1" U="216cddc6-019f-aa80-04ffb9945ee0e992"/>
+					<Co K="Q" U="216cddc6-019f-aa81-05ffb9945ee0e992"/>
+					<Co K="RisingEdge" U="216cddc6-019f-aa82-06ffb9945ee0e992"/>
+					<Co K="FallingEdge" U="216cddc6-019f-aa83-07ffb9945ee0e992"/>
+				</C>
+				<C Type="AnalogThresholdTrigger" V="178" U="216cdde8-01d4-dfa8-ffffe001fe9bf86f" Title="Container fehlt" Px="4512" Py="6528" Px2="5856" Py2="7416" Cl="141,255,112" Nio="8" LtE="560782826" WF="131072">
+					<Co K="Input" Nc="1" U="216cdde8-01d4-dfa0-00ffca5d849d141e">
+						<In Input="216cddaa-01a1-93b6-02ff2b6ec2590b00"/>
+					</Co>
+					<Co K="On" Def="1" U="216cdde8-01d4-dfa1-01ffca5d849d141e"/>
+					<Co K="Off" Def="1" U="216cdde8-01d4-dfa2-02ffca5d849d141e"/>
+					<Co K="Remanence" U="216cdde8-01d4-dfa3-03ffca5d849d141e"/>
+					<Co K="PulseTime" Def="1" U="216cdde8-01d4-dfa4-04ffca5d849d141e"/>
+					<Co K="Q" U="216cdde8-01d4-dfa5-05ffca5d849d141e"/>
+					<Co K="RisingEdge" U="216cdde8-01d4-dfa6-06ffca5d849d141e"/>
+					<Co K="FallingEdge" U="216cdde8-01d4-dfa7-07ffca5d849d141e"/>
+				</C>
+				<C Type="Validator" V="178" U="216cde0f-00b0-fe34-ffffe001fe9bf86f" Title="Docker oder LoxBerry schweigt" Px="7392" Py="7872" Px2="8736" Py2="8760" Cl="141,255,112" Nio="8" LtE="560782872">
+					<Co K="inval" Nc="1" U="216cde0f-00b0-fe2c-00ffebbe7a1976a1">
+						<In Input="216cdda0-017f-8c21-02ff2918f5d48572"/>
+					</Co>
+					<Co K="enable" Inv="true" Nc="1" U="216cde0f-00b0-fe2d-01ffebbe7a1976a1">
+						<In Input="216cde51-0385-69c9-02ff018fb1dbddc4"/>
+					</Co>
+					<Co K="mintime" Def="300" U="216cde0f-00b0-fe2e-02ffebbe7a1976a1"/>
+					<Co K="minval" U="216cde0f-00b0-fe2f-03ffebbe7a1976a1"/>
+					<Co K="maxval" Def="999" U="216cde0f-00b0-fe30-04ffebbe7a1976a1"/>
+					<Co K="delay" U="216cde0f-00b0-fe31-05ffebbe7a1976a1"/>
+					<Co K="outval" U="216cde0f-00b0-fe32-06ffebbe7a1976a1"/>
+					<Co K="error" U="216cde0f-00b0-fe33-07ffebbe7a1976a1"/>
+				</C>
+				<C Type="Or" V="178" U="216cde25-01a6-247c-ffffe001fe9bf86f" Title="Container-Störung" Px="7296" Py="5952" Px2="8640" Py2="6648" Cl="141,255,112" Nio="3" LtE="560782899" WF="131072">
+					<Co K="I1" Nc="1" U="216cde25-01a6-2479-00ff5ae37c8798bb">
+						<In Input="216cddc6-019f-aa81-05ffb9945ee0e992"/>
+					</Co>
+					<Co K="I2" Nc="1" U="216cde25-01a6-247a-01ff5ae37c8798bb">
+						<In Input="216cdde8-01d4-dfa5-05ffca5d849d141e"/>
+					</Co>
+					<Co K="Q" U="216cde25-01a6-247b-02ff5ae37c8798bb"/>
+				</C>
+				<C Type="Or" V="178" U="216cde36-0314-3b84-ffffe001fe9bf86f" Title="Sammelstörung Docker" Px="10176" Py="7104" Px2="11520" Py2="7800" Cl="141,255,112" Nio="3" LtE="560782905" WF="131072">
+					<Co K="I1" Nc="1" U="216cde36-0314-3b81-00ff130a9222aa59">
+						<In Input="216cde25-01a6-247b-02ff5ae37c8798bb"/>
+					</Co>
+					<Co K="I2" Nc="1" U="216cde36-0314-3b82-01ff130a9222aa59">
+						<In Input="216cde0f-00b0-fe33-07ffebbe7a1976a1"/>
+					</Co>
+					<Co K="Q" U="216cde36-0314-3b83-02ff130a9222aa59"/>
+				</C>
+				<C Type="OnDelay" V="178" U="216cde3d-020b-4aee-ffffe001fe9bf86f" Title="Meldung verzögern" Px="12576" Py="7104" Px2="13920" Py2="7800" Cl="141,255,112" Nio="5" LtE="560782911">
+					<Co K="InputTrigger" Nc="1" U="216cde3d-020b-4ae9-00ff8404de2dd58e">
+						<In Input="216cde36-0314-3b83-02ff130a9222aa59"/>
+					</Co>
+					<Co K="Reset" U="216cde3d-020b-4aea-01ff8404de2dd58e"/>
+					<Co K="Remanence" U="216cde3d-020b-4aeb-02ff8404de2dd58e"/>
+					<Co K="Time" Def="300" U="216cde3d-020b-4aec-03ff8404de2dd58e"/>
+					<Co K="Q" U="216cde3d-020b-4aed-04ff8404de2dd58e"/>
+				</C>
+				<C Type="OutputRefLM" V="178" U="216cde74-00fd-907f-ffffe001fe9bf86f" Title="Docker-Störung" Px="15168" Py="7392" Px2="17280" Py2="7584" Cl="0,0,0" Nio="2" Ref="216cde60-010b-7942-ffffe001fe9bf86f" WF="131072">
+					<Co K="AI" Nc="1" U="216cde74-00f5-907d-00ffb5e2bbc5d83b">
+						<In Input="216cde3d-020b-4aed-04ff8404de2dd58e"/>
+					</Co>
+					<Co K="AQ" U="216cde74-00f5-907e-01ffb5e2bbc5d83b"/>
+					<LoggerMailer RefNotification="216cde60-010b-7942-ffffe001fe9bf86f" On="&lt;v&gt;" Off="&lt;v&gt;" MinimumTime="5000" NL="1"/>
 				</C>
 			</C>
 			<C Type="Page" V="178" U="216cb411-0235-4c18-ffffe001fe9bf86f" Title="Ecowitt-Weiche" LtE="560772355" WF="16384">
@@ -2604,7 +3175,7 @@
 					</Co>
 					<Co K="Q" U="216cb4d5-03bc-b4fa-01ff5fc2297190fe"/>
 				</C>
-				<C Type="Or" V="178" U="216cb4dc-024e-c03b-ffffe001fe9bf86f" Title="Ecowitt-Weiche gestört" Px="11136" Py="6144" Px2="12480" Py2="6840" Cl="141,255,112" Nio="3" LtE="560772331">
+				<C Type="Or" V="178" U="216cb4dc-024e-c03b-ffffe001fe9bf86f" Title="Ecowitt-Weiche gestört" Px="11136" Py="6144" Px2="12480" Py2="6840" Cl="141,255,112" Nio="3" LtE="560772331" WF="131072">
 					<Co K="I1" Nc="1" U="216cb4dc-024e-c038-00ff081a33e70082">
 						<In Input="216cb4d5-03bc-b4fa-01ff5fc2297190fe"/>
 					</Co>
@@ -2931,7 +3502,7 @@
 					<Co K="AQ" U="216cb649-01ff-8b04-02ff76500ee3654e"/>
 					<Co K="Q" U="216cb649-01ff-8b05-03ff76500ee3654e"/>
 				</C>
-				<C Type="InputRef" V="178" U="216cb653-03c3-91e4-ffffe001fe9bf86f" Title="RK_WOHNZIMMER_LUEFTEN" Px="7200" Py="7968" Px2="9312" Py2="8160" Cl="0,0,0" Nio="4" Ref="216cb609-0370-5abe-ffffe001fe9bf86f" WF="133120" Analog="true" LinkRefType="87">
+				<C Type="InputRef" V="178" U="216cb653-03c3-91e4-ffffe001fe9bf86f" Title="RK_WOHNZIMMER_LUEFTEN" Px="7200" Py="7968" Px2="9312" Py2="8160" Cl="0,0,0" Nio="4" Ref="216cb609-0370-5abe-ffffe001fe9bf86f" WF="2048" Analog="true" LinkRefType="87">
 					<Co K="AI" Nc="1" U="216cb653-03c3-91e0-00ff9dcabce80d94">
 						<In Input="216cb609-0370-5abc-00ff30518fa2f1a2"/>
 					</Co>
@@ -2989,13 +3560,13 @@
 					<Co K="AQ" U="216cb742-005b-c7a5-02ffd16d0f3d2601"/>
 					<Co K="Q" U="216cb742-005b-c7a6-03ffd16d0f3d2601"/>
 				</C>
-				<C Type="Not" V="178" U="216cb695-0392-c261-ffffe001fe9bf86f" Title="Raumklima ohne Messwerte" Px="5952" Py="5952" Px2="7296" Py2="6456" Cl="141,255,112" Nio="2" LtE="560772760" WF="131072">
+				<C Type="Not" V="178" U="216cb695-0392-c261-ffffe001fe9bf86f" Title="Raumklima ohne Messwerte" Px="5952" Py="5952" Px2="7296" Py2="6456" Cl="141,255,112" Nio="2" LtE="560772760">
 					<Co K="I" Nc="1" U="216cb695-0392-c25f-00ffcfd202350356">
 						<In Input="216cb626-0137-6fdc-02ffecb62cbaedac"/>
 					</Co>
 					<Co K="Q" U="216cb695-0392-c260-01ffcfd202350356"/>
 				</C>
-				<C Type="Not" V="178" U="216cb69c-0229-d041-ffffe001fe9bf86f" Title="Keine Sperre Raum" Px="7200" Py="8544" Px2="8544" Py2="9048" Cl="141,255,112" Nio="2" LtE="560772779" WF="131072">
+				<C Type="Not" V="178" U="216cb69c-0229-d041-ffffe001fe9bf86f" Title="Keine Sperre Raum" Px="7200" Py="8544" Px2="8544" Py2="9048" Cl="141,255,112" Nio="2" LtE="560772779">
 					<Co K="I" Nc="1" U="216cb69c-0229-d03f-00ffe9284cebdbd5">
 						<In Input="216cb672-03d1-ad81-02ffe8afa3a010b9"/>
 					</Co>
@@ -3046,7 +3617,7 @@
 					</Co>
 					<Co K="Q" U="216cb6db-021c-2406-02ff2b80158ab9f5"/>
 				</C>
-				<C Type="AnalogThresholdTrigger" V="178" U="216cb6e2-00c2-3221-ffffe001fe9bf86f" Title="Raumklima antwortet nicht" Px="3840" Py="4128" Px2="5184" Py2="5016" Cl="141,255,112" Nio="8" LtE="560772836" WF="131072">
+				<C Type="AnalogThresholdTrigger" V="178" U="216cb6e2-00c2-3221-ffffe001fe9bf86f" Title="Raumklima antwortet nicht" Px="3840" Py="4128" Px2="5184" Py2="5016" Cl="141,255,112" Nio="8" LtE="560772836">
 					<Co K="Input" Nc="1" U="216cb6e2-00c2-3219-00fffbe0c54a4ff5">
 						<In Input="216cb62f-0320-76a5-02ff7a3f56d0545f"/>
 					</Co>
@@ -3070,7 +3641,7 @@
 					<Co K="RisingEdge" U="216cb6f8-00df-556f-06ffe7a6e75951b1"/>
 					<Co K="FallingEdge" U="216cb6f8-00df-5570-07ffe7a6e75951b1"/>
 				</C>
-				<C Type="OnDelay" V="178" U="216cb700-022c-71d3-ffffe001fe9bf86f" Title="Raum: Schimmelgefahr hält an" Px="9216" Py="6624" Px2="10560" Py2="7320" Cl="141,255,112" Nio="5" LtE="560772866" WF="131072">
+				<C Type="OnDelay" V="178" U="216cb700-022c-71d3-ffffe001fe9bf86f" Title="Raum: Schimmelgefahr hält an" Px="9216" Py="6624" Px2="10560" Py2="7320" Cl="141,255,112" Nio="5" LtE="560772866">
 					<Co K="InputTrigger" Nc="1" U="216cb700-022c-71ce-00ff55edb8d2822a">
 						<In Input="216cb649-01ff-8b04-02ff76500ee3654e"/>
 					</Co>
@@ -3116,6 +3687,78 @@
 					</Co>
 					<Co K="AQ" U="216cb798-01b4-fa1e-01ffc0e96014dd45"/>
 					<LoggerMailer RefNotification="216cb78b-0082-ebaf-ffffe001fe9bf86f" On="&lt;v&gt;" Off="&lt;v&gt;" MinimumTime="5000" NL="1"/>
+				</C>
+			</C>
+			<C Type="Page" V="178" U="216cdebd-03de-b761-ffffe001fe9bf86f" Title="WiFi-Scanner-NG" LtE="560783048" WF="16384">
+				<IoData Cr="216373ab-00cf-42fc-ffffe001fe9bf86f" Pr="216373ab-00cf-42f8-ffffe001fe9bf86f"/>
+				<C Type="InputRef" V="178" U="216cdf0c-0026-dee5-ffffe001fe9bf86f" Title="wifi_ng_status_ok" Px="7488" Py="7584" Px2="9600" Py2="7776" Cl="0,0,0" Nio="4" Ref="216cdef7-006a-c71b-ffffe001fe9bf86f" WF="133120" Analog="true" LinkRefType="87">
+					<Co K="AI" Nc="1" U="216cdf0c-0026-dee1-00ff7c252fb61f19">
+						<In Input="216cdef7-006a-c719-00ff878e77ef612c"/>
+					</Co>
+					<Co K="I" Nc="1" U="216cdf0c-0026-dee2-01ff7c252fb61f19">
+						<In Input="216cdef7-006a-c71a-01ff878e77ef612c"/>
+					</Co>
+					<Co K="AQ" U="216cdf0c-0026-dee3-02ff7c252fb61f19"/>
+					<Co K="Q" U="216cdf0c-0026-dee4-03ff7c252fb61f19"/>
+				</C>
+				<C Type="InputRef" V="178" U="216cdf16-0096-e6e8-ffffe001fe9bf86f" Title="wifi_ng_Beispiel" Px="5280" Py="6432" Px2="7392" Py2="6624" Cl="0,0,0" Nio="4" Ref="216cdef7-005b-c70b-ffffe001fe9bf86f" WF="133120" Analog="true" LinkRefType="87">
+					<Co K="AI" Nc="1" U="216cdf16-0096-e6e4-00ff82c20bc2ddfc">
+						<In Input="216cdef7-005b-c709-00ff878e77ef612c"/>
+					</Co>
+					<Co K="I" Nc="1" U="216cdf16-0096-e6e5-01ff82c20bc2ddfc">
+						<In Input="216cdef7-005b-c70a-01ff878e77ef612c"/>
+					</Co>
+					<Co K="AQ" U="216cdf16-0096-e6e6-02ff82c20bc2ddfc"/>
+					<Co K="Q" U="216cdf16-0096-e6e7-03ff82c20bc2ddfc"/>
+				</C>
+				<C Type="OffDelay" V="178" U="216cdf23-02cf-eeee-ffffe001fe9bf86f" Title="Jemand zu Hause" Px="8064" Py="6144" Px2="9408" Py2="6840" Cl="141,255,112" Nio="5" LtE="560783149" WF="131072">
+					<Co K="InputTrigger" Nc="1" U="216cdf23-02cf-eee9-00ffe5a0cc1ae9c1">
+						<In Input="216cdf16-0096-e6e6-02ff82c20bc2ddfc"/>
+					</Co>
+					<Co K="Reset" U="216cdf23-02cf-eeea-01ffe5a0cc1ae9c1"/>
+					<Co K="Remanence" U="216cdf23-02cf-eeeb-02ffe5a0cc1ae9c1"/>
+					<Co K="Time" Def="900" U="216cdf23-02cf-eeec-03ffe5a0cc1ae9c1"/>
+					<Co K="Q" U="216cdf23-02cf-eeed-04ffe5a0cc1ae9c1"/>
+				</C>
+				<C Type="AnalogThresholdTrigger" V="178" U="216cdf33-010c-06ea-ffffe001fe9bf86f" Title="WLAN-Suche misst" Px="10368" Py="7296" Px2="11712" Py2="8184" Cl="141,255,112" Nio="8" LtE="560783163" WF="131072">
+					<Co K="Input" Nc="1" U="216cdf33-010c-06e2-00ffe3e771000065">
+						<In Input="216cdf0c-0026-dee3-02ff7c252fb61f19"/>
+					</Co>
+					<Co K="On" Def="0.9" U="216cdf33-010c-06e3-01ffe3e771000065"/>
+					<Co K="Off" Def="0.1" U="216cdf33-010c-06e4-02ffe3e771000065"/>
+					<Co K="Remanence" U="216cdf33-010c-06e5-03ffe3e771000065"/>
+					<Co K="PulseTime" Def="1" U="216cdf33-010c-06e6-04ffe3e771000065"/>
+					<Co K="Q" U="216cdf33-010c-06e7-05ffe3e771000065"/>
+					<Co K="RisingEdge" U="216cdf33-010c-06e8-06ffe3e771000065"/>
+					<Co K="FallingEdge" U="216cdf33-010c-06e9-07ffe3e771000065"/>
+				</C>
+				<C Type="Not" V="178" U="216cdf4d-0022-36f8-ffffe001fe9bf86f" Title="Niemand zu Hause" Px="10368" Py="6144" Px2="11712" Py2="6648" Cl="141,255,112" Nio="2" LtE="560783184" WF="131072">
+					<Co K="I" Nc="1" U="216cdf4d-0022-36f6-00ff843f5c892bb5">
+						<In Input="216cdf23-02cf-eeed-04ffe5a0cc1ae9c1"/>
+					</Co>
+					<Co K="Q" U="216cdf4d-0022-36f7-01ff843f5c892bb5"/>
+				</C>
+				<C Type="Not" V="178" U="216cdf53-02f0-4708-ffffe001fe9bf86f" Title="WLAN-Suche gestört" Px="13248" Py="7296" Px2="14592" Py2="7800" Cl="141,255,112" Nio="2" LtE="560783190">
+					<Co K="I" Nc="1" U="216cdf53-02f0-4706-00ff39bbd034cf9b">
+						<In Input="216cdf33-010c-06e7-05ffe3e771000065"/>
+					</Co>
+					<Co K="Q" U="216cdf53-02f0-4707-01ff39bbd034cf9b"/>
+				</C>
+				<C Type="And" V="178" U="216cdf5a-0210-5720-ffffe001fe9bf86f" Title="Alle weg (gemessen)" Px="13248" Py="6528" Px2="14592" Py2="7224" Cl="141,255,112" Nio="3" LtE="560783208">
+					<Co K="I1" Nc="1" U="216cdf5a-0210-571d-00ff97cb6c433bc7">
+						<In Input="216cdf4d-0022-36f7-01ff843f5c892bb5"/>
+					</Co>
+					<Co K="I2" Nc="1" U="216cdf5a-0210-571e-01ff97cb6c433bc7">
+						<In Input="216cdf33-010c-06e7-05ffe3e771000065"/>
+					</Co>
+					<Co K="Q" U="216cdf5a-0210-571f-02ff97cb6c433bc7"/>
+				</C>
+				<C Type="OutputRefLM" V="178" U="216cdf7c-0123-7f64-ffffe001fe9bf86f" Title="WLAN-Anwesenheit gestört" Px="15744" Py="7584" Px2="17856" Py2="7776" Cl="0,0,0" Nio="2" Ref="216cdf6f-007b-6738-ffffe001fe9bf86f" WF="131072">
+					<Co K="AI" Nc="1" U="216cdf7c-0123-7f62-00ff7a0564742ef3">
+						<In Input="216cdf53-02f0-4707-01ff39bbd034cf9b"/>
+					</Co>
+					<Co K="AQ" U="216cdf7c-0123-7f63-01ff7a0564742ef3"/>
+					<LoggerMailer RefNotification="216cdf6f-007b-6738-ffffe001fe9bf86f" On="&lt;v&gt;" Off="&lt;v&gt;" MinimumTime="5000" NL="1"/>
 				</C>
 			</C>
 			<C Type="Page" V="178" U="216c8eab-0188-be05-ffffe001fe9bf86f" Title="Zigbee2MqttNG" LtE="560762556" WF="16384">
