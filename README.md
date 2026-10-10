@@ -23,6 +23,7 @@ Eine gemeinsame Loxone-Config-Projektdatei mit je einer Seite pro LoxBerry-Plugi
 | Dashboard | [LoxBerry-Plugin-Dashboard](https://github.com/timanders22/LoxBerry-Plugin-Dashboard) |
 | Docker NG | [LoxBerry-Plugin-Docker-NG](https://github.com/timanders22/LoxBerry-Plugin-Docker-NG) |
 | Ecowitt-Weiche | [LoxBerry-Plugin-Ecowitt-Weiche](https://github.com/timanders22/LoxBerry-Plugin-Ecowitt-Weiche) |
+| Einspeisebremse | [LoxBerry-Plugin-Einspeisebremse](https://github.com/timanders22/LoxBerry-Plugin-Einspeisebremse) |
 | EVCC | [LoxBerry-Plugin-EVCC](https://github.com/timanders22/LoxBerry-Plugin-EVCC) |
 | Fensterbilanz | [LoxBerry-Plugin-Beschattung_Fensterbilanz](https://github.com/timanders22/LoxBerry-Plugin-Beschattung_Fensterbilanz) |
 | Funkwacht | [LoxBerry-Plugin-Funkwacht](https://github.com/timanders22/LoxBerry-Plugin-Funkwacht) |
@@ -30,6 +31,8 @@ Eine gemeinsame Loxone-Config-Projektdatei mit je einer Seite pro LoxBerry-Plugi
 | Kodi-NG | [LoxBerry-Plugin-KODI-NG](https://github.com/timanders22/LoxBerry-Plugin-KODI-NG) |
 | Pumpenwacht | [LoxBerry-Plugin-Pumpenwacht](https://github.com/timanders22/LoxBerry-Plugin-Pumpenwacht) |
 | Raumklima | [LoxBerry-Plugin-Raumklima](https://github.com/timanders22/LoxBerry-Plugin-Raumklima) |
+| Robonect | [LoxBerry-Plugin-Robonect](https://github.com/timanders22/LoxBerry-Plugin-Robonect) |
+| Saugroboter | [LoxBerry-Plugin-Saugroboter-Valetudo](https://github.com/timanders22/LoxBerry-Plugin-Saugroboter-Valetudo) |
 | Smartmeter klassisch | [LoxBerry-Plugin-Smartmeter-classic](https://github.com/timanders22/LoxBerry-Plugin-Smartmeter-classic) |
 | Smartmeter vzLogger | [LoxBerry-Plugin-Smartmeter-classic](https://github.com/timanders22/LoxBerry-Plugin-Smartmeter-classic) |
 | Ultraschall | [LoxBerry-Plugin-Ultraschall](https://github.com/timanders22/LoxBerry-Plugin-Ultraschall) |
@@ -43,12 +46,12 @@ Weitere Plugins folgen.
 
 1. Projektdatei in Loxone Config öffnen. Der Miniserver darin ist ein Platzhalter („Demo-Miniserver“) – die Datei nie unverändert auf den eigenen Miniserver laden.
 2. Die gewünschte Seite ansehen und die Bausteine in das eigene Projekt kopieren (markieren, Strg+C, im eigenen Projekt Strg+V).
-3. Die passende Vorlage importieren: Peripherie → Virtuelle Eingänge → „Vordefinierte HTTP-Geräte“ → „Vorlage importieren“. Steht in der Adresse `loxberry` und `DEIN_TOKEN` (Beschattungswächter, Bewässerung, Dashboard, Docker NG, Ecowitt-Weiche, EVCC, Fensterbilanz, Funkwacht, Heimkino, Raumklima, WaermepumpeCloud), beides durch die Adresse des eigenen LoxBerry und den Schlüssel aus dem Plugin ersetzen; bei Kodi NG (`tcp://loxberry:9090`) und Chromecast4lox (`/dev/udp/loxberry/11884`, UDP-Eingang des MQTT-Gateways – Port aus den MQTT-Einstellungen des LoxBerry) nur die Adresse. Vorlagen mit `http://localhost` bleiben, wie sie sind. Bei Smartmeter steht `0001` für die Zählernummer aus den Einstellungen des Plugins – die Vorlage am besten im Plugin selbst erzeugen lassen. Ausgangs-Vorlagen (`VQ_…`) kommen genauso unter Virtuelle Ausgänge → „Vordefinierte Geräte“. Die Plugins bringen ihre Vorlage zum Teil auch selbst mit.
+3. Die passende Vorlage importieren: Peripherie → Virtuelle Eingänge → „Vordefinierte HTTP-Geräte“ → „Vorlage importieren“. Steht in der Adresse `loxberry` und `DEIN_TOKEN` (Beschattungswächter, Bewässerung, Dashboard, Docker NG, Ecowitt-Weiche, Einspeisebremse, EVCC, Fensterbilanz, Funkwacht, Heimkino, Raumklima, WaermepumpeCloud), beides durch die Adresse des eigenen LoxBerry und den Schlüssel aus dem Plugin ersetzen; bei Kodi NG (`tcp://loxberry:9090`) und Chromecast4lox (`/dev/udp/loxberry/11884`, UDP-Eingang des MQTT-Gateways – Port aus den MQTT-Einstellungen des LoxBerry) nur die Adresse. Bei Robonect und Saugroboter steht im Eingang nur `loxberry`, in der Ausgangs-Vorlage auch `DEIN_TOKEN`. Vorlagen mit `http://localhost` bleiben, wie sie sind. Bei Smartmeter steht `0001` für die Zählernummer aus den Einstellungen des Plugins – die Vorlage am besten im Plugin selbst erzeugen lassen. Ausgangs-Vorlagen (`VQ_…`) kommen genauso unter Virtuelle Ausgänge → „Vordefinierte Geräte“. Die Plugins bringen ihre Vorlage zum Teil auch selbst mit.
 4. Die Tabelle im Reiter „Einbindung in Loxone“ des Plugins nennt jeden Baustein mit vollem Namen. Config kürzt lange Namen auf schmalen Bausteinen ab – in den Bildern stehen deshalb nur Anfänge.
 
 ## English
 
-A shared Loxone Config project with one page per LoxBerry plugin, showing the blocks from each plugin's "Loxone integration" tab, already wired. Open the file in Loxone Config, copy the blocks of the page you need into your own project, and import the matching template from `vorlagen/` (Virtual Inputs → Predefined HTTP devices → Import template). Where the address contains `loxberry` and `DEIN_TOKEN` (Beschattungswächter, Bewässerung, Dashboard, Docker NG, Ecowitt-Weiche, EVCC, Fensterbilanz, Funkwacht, Heimkino, Raumklima, WaermepumpeCloud), replace them with your LoxBerry's address and the plugin's key; for Kodi NG (`tcp://loxberry:9090`) and Chromecast4lox (`/dev/udp/loxberry/11884`, the MQTT gateway's UDP input – port from the LoxBerry MQTT settings) only the address; templates with `http://localhost` stay as they are. Do not upload the project unchanged to your own Miniserver.
+A shared Loxone Config project with one page per LoxBerry plugin, showing the blocks from each plugin's "Loxone integration" tab, already wired. Open the file in Loxone Config, copy the blocks of the page you need into your own project, and import the matching template from `vorlagen/` (Virtual Inputs → Predefined HTTP devices → Import template). Where the address contains `loxberry` and `DEIN_TOKEN` (Beschattungswächter, Bewässerung, Dashboard, Docker NG, Ecowitt-Weiche, Einspeisebremse, EVCC, Fensterbilanz, Funkwacht, Heimkino, Raumklima, WaermepumpeCloud), replace them with your LoxBerry's address and the plugin's key; for Kodi NG (`tcp://loxberry:9090`) and Chromecast4lox (`/dev/udp/loxberry/11884`, the MQTT gateway's UDP input – port from the LoxBerry MQTT settings) only the address; for Robonect and Saugroboter the input has only `loxberry`, the output template also `DEIN_TOKEN`; templates with `http://localhost` stay as they are. Do not upload the project unchanged to your own Miniserver.
 
 ## Lizenz
 
