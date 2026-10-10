@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<ControlList Version="274" LxAV="87" NextObj="254" NextConst="1" NextNote="1" NextMem="4">
-	<C Type="Document" V="17020828" U="216373ab-00cc-41fa-ffffe001fe9bf86f" Title="LoxBerry-Plugins Musterprojekt" ConfigVersion="17020828" PaperFormat="2" SPSfreq="100" OpenIsHigh="false" Date="2026-10-10 15:55:42" CDate="" BDate="" DateS="560872542" Street="" Town="" PostCode="" Ctry="" Latitude="0.000" Longitude="0.000" Timezone="Europe/Vienna" Timeserver="" Logo="" uuidNotifications="216373ab-00cb-41f6-ffffe001fe9bf86f" uuidFavSeq="216373ab-00cb-41f8-ffffe001fe9bf86f" uuidFavCol="216373ab-00cb-41f9-ffffe001fe9bf86f" FC="hsv(25,96,50);hsv(24,95,80);hsv(337,94,50)" uuidTime="216373ab-00cb-41f7-ffffe001fe9bf86f" UnitPrecipitation="1" Currency="€" UpdTime="120" AUE="true" DeviceTelemetry="true" CrashL="true" Geo="0" NumO="1189" APPKEY="717BCB5938494F35EA25202FC850B65F" APPID="227A0B">
+<ControlList Version="274" LxAV="87" NextObj="278" NextConst="1" NextNote="1" NextMem="4">
+	<C Type="Document" V="17020828" U="216373ab-00cc-41fa-ffffe001fe9bf86f" Title="LoxBerry-Plugins Musterprojekt" ConfigVersion="17020828" PaperFormat="2" SPSfreq="100" OpenIsHigh="false" Date="2026-10-10 21:30:56" CDate="" BDate="" DateS="560892656" Street="" Town="" PostCode="" Ctry="" Latitude="0.000" Longitude="0.000" Timezone="Europe/Vienna" Timeserver="" Logo="" uuidNotifications="216373ab-00cb-41f6-ffffe001fe9bf86f" uuidFavSeq="216373ab-00cb-41f8-ffffe001fe9bf86f" uuidFavCol="216373ab-00cb-41f9-ffffe001fe9bf86f" FC="hsv(25,96,50);hsv(24,95,80);hsv(337,94,50)" uuidTime="216373ab-00cb-41f7-ffffe001fe9bf86f" UnitPrecipitation="1" Currency="€" UpdTime="120" AUE="true" DeviceTelemetry="true" CrashL="true" Geo="0" NumO="1244" APPKEY="717BCB5938494F35EA25202FC850B65F" APPID="227A0B">
 		<HP H="" Sc="-2" S="WGpiqX5LbyaIrGD1MuWTTyrxvlVqUpqf" Alg="1"/>
 		<C Type="LoxCaption" V="178" U="216373ab-00cd-41fc-ffffe001fe9bf86f" Title="Symbole" Cl="0,0,0" WF="16384" CaptionType="5" SubType="5"/>
 		<C Type="CategoryCaption" V="178" U="216373ab-00cd-41fe-ffffe001fe9bf86f" Title="Kategorien" WF="16384">
@@ -3276,6 +3276,140 @@
 					<IoData Visu="true" Cr="216373ab-00cf-42fc-ffffe001fe9bf86f" Pr="216373ab-00cf-42f8-ffffe001fe9bf86f"/>
 					<Display Unit="&lt;v.1&gt;"/>
 				</C>
+				<C Type="VirtualHttpIn" Desc="Smartmeter (klassisch)" IName="VHI22" V="178" U="216e8110-039b-95e1-ffffe001fe9bf86f" Title="Smartmeter (klassisch)" Cl="0,0,0" WF="16384" Address="http://localhost" Poll="604800" Timeout="4000" Allowedtimeouts="10" on="true">
+					<C Type="Online" IName="S0" V="178" U="216e8110-03ad-95e4-ffffe001fe9bf86f" Title="Onlinestatus Eingang VHI1" Cl="0,0,0" Nio="1" WF="20480" ValOT="1" MinTime="10" NoMsg="true" Idx="-1">
+						<Co K="Q" U="216e8110-03ac-95e3-00ff64b89525ef4d"/>
+						<IoData Cr="216373ab-00d3-432c-ffffe001fe9bf86f" Pr="216373ab-00ce-42f4-ffffe001fe9bf86f" St="2"/>
+						<Display Unit="&lt;v&gt;" StateOnly="true" IxText="8"/>
+					</C>
+					<C Type="VirtualHttpInCmd" Desc="Zählerstand Bezug, rechnerisch" IName="VCI408" V="178" U="216e8110-03b2-95e8-ffffe001fe9bf86f" Title="smartmeter_0001_Consumption_CalculatedPower_OBIS_1.99.0" Cl="0,0,0" Nio="2" WF="16384" ValOT="1" Check=" " Analog="true" SourceValHigh="1" DestValHigh="1" MaxVal="100000">
+						<Co K="AQ" U="216e8110-03b2-95e6-00ff64b89525ef4d"/>
+						<Co K="Q" U="216e8110-03b2-95e7-01ff64b89525ef4d"/>
+						<IoData Cr="216373ab-00cf-42fc-ffffe001fe9bf86f" Pr="216373ab-00ce-42f4-ffffe001fe9bf86f"/>
+						<Display Type="2" Unit="&lt;v.4&gt; kW" StateOnly="true"/>
+					</C>
+					<C Type="VirtualHttpInCmd" Desc="Zählerstand Bezug, gesamt" IName="VCI409" V="178" U="216e8110-03b5-95ec-ffffe001fe9bf86f" Title="smartmeter_0001_Consumption_Total_OBIS_1.8.0" Cl="238,238,238" Nio="2" WF="16400" ValOT="1" Check=" " Analog="true" SourceValHigh="1" DestValHigh="1" MaxVal="1000000">
+						<Co K="AQ" U="216e8110-03b5-95ea-00ff64b89525ef4d"/>
+						<Co K="Q" U="216e8110-03b5-95eb-01ff64b89525ef4d"/>
+						<IoData Cr="216373ab-00cf-42fc-ffffe001fe9bf86f" Pr="216373ab-00cf-42f8-ffffe001fe9bf86f"/>
+						<Display Type="2" Unit="&lt;v.3&gt; kWh" StateOnly="true"/>
+					</C>
+					<C Type="VirtualHttpInCmd" Desc="Zählerstand Einspeisung, rechnerisch" IName="VCI410" V="178" U="216e8110-03ba-95f0-ffffe001fe9bf86f" Title="smartmeter_0001_Delivery_CalculatedPower_OBIS_2.99.0" Cl="0,0,0" Nio="2" WF="16384" ValOT="1" Check=" " Analog="true" SourceValHigh="1" DestValHigh="1" MaxVal="100000">
+						<Co K="AQ" U="216e8110-03ba-95ee-00ff64b89525ef4d"/>
+						<Co K="Q" U="216e8110-03ba-95ef-01ff64b89525ef4d"/>
+						<IoData Cr="216373ab-00cf-42fc-ffffe001fe9bf86f" Pr="216373ab-00ce-42f4-ffffe001fe9bf86f"/>
+						<Display Type="2" Unit="&lt;v.4&gt; kW" StateOnly="true"/>
+					</C>
+					<C Type="VirtualHttpInCmd" Desc="Zählerstand Einspeisung, gesamt" IName="VCI411" V="178" U="216e8110-03bf-95f4-ffffe001fe9bf86f" Title="smartmeter_0001_Delivery_Total_OBIS_2.8.0" Cl="0,0,0" Nio="2" WF="16384" ValOT="1" Check=" " Analog="true" SourceValHigh="1" DestValHigh="1" MaxVal="1000000">
+						<Co K="AQ" U="216e8110-03bf-95f2-00ff64b89525ef4d"/>
+						<Co K="Q" U="216e8110-03bf-95f3-01ff64b89525ef4d"/>
+						<IoData Cr="216373ab-00cf-42fc-ffffe001fe9bf86f" Pr="216373ab-00ce-42f4-ffffe001fe9bf86f"/>
+						<Display Type="2" Unit="&lt;v.3&gt; kWh" StateOnly="true"/>
+					</C>
+					<C Type="VirtualHttpInCmd" Desc="Ablesezeit, Loxone-Zeitrechnung" IName="VCI412" V="178" U="216e8110-03c1-95f8-ffffe001fe9bf86f" Title="smartmeter_0001_Last_UpdateLoxEpoche" Cl="0,0,0" Nio="2" WF="16384" ValOT="1" Check=" " Analog="true" SourceValHigh="1" DestValHigh="1" MaxVal="2147483647">
+						<Co K="AQ" U="216e8110-03c1-95f6-00ff64b89525ef4d"/>
+						<Co K="Q" U="216e8110-03c1-95f7-01ff64b89525ef4d"/>
+						<IoData Cr="216373ab-00cf-42fc-ffffe001fe9bf86f" Pr="216373ab-00ce-42f4-ffffe001fe9bf86f"/>
+						<Display Type="2" Unit="&lt;v.0&gt; s" StateOnly="true"/>
+					</C>
+					<C Type="VirtualHttpInCmd" Desc="Zeit der letzten Messung, Unix" IName="VCI413" V="178" U="216e8110-03c1-95fc-ffffe001fe9bf86f" Title="smartmeter_0001_Last_UpdateUnix" Cl="0,0,0" Nio="2" WF="16384" ValOT="1" Check=" " Analog="true" SourceValHigh="1" DestValHigh="1" MaxVal="2147483647">
+						<Co K="AQ" U="216e8110-03c1-95fa-00ff64b89525ef4d"/>
+						<Co K="Q" U="216e8110-03c1-95fb-01ff64b89525ef4d"/>
+						<IoData Cr="216373ab-00cf-42fc-ffffe001fe9bf86f" Pr="216373ab-00ce-42f4-ffffe001fe9bf86f"/>
+						<Display Type="2" Unit="&lt;v.0&gt; s" StateOnly="true"/>
+					</C>
+					<C Type="VirtualHttpInCmd" Desc="aktuelle Wirkleistung" IName="VCI414" V="178" U="216e8110-03c1-9600-ffffe001fe9bf86f" Title="smartmeter_0001_Total_Power_OBIS_16.7.0" Cl="238,238,238" Nio="2" WF="16400" ValOT="1" Check=" " Signed="true" Analog="true" SourceValHigh="1" DestValHigh="1" MinVal="-100000" MaxVal="100000">
+						<Co K="AQ" U="216e8110-03c1-95fe-00ff64b89525ef4d"/>
+						<Co K="Q" U="216e8110-03c1-95ff-01ff64b89525ef4d"/>
+						<IoData Cr="216373ab-00cf-42fc-ffffe001fe9bf86f" Pr="216373ab-00cf-42f8-ffffe001fe9bf86f"/>
+						<Display Type="2" Unit="&lt;v.3&gt; kW" StateOnly="true"/>
+					</C>
+					<C Type="VirtualHttpInCmd" Desc="Lebenszeichen ok (1/0)" IName="VCI415" V="178" U="216e8110-03cd-9604-ffffe001fe9bf86f" Title="smartmeter_status_ok" Cl="238,238,238" Nio="2" WF="16400" ValOT="1" Check=" " Signed="true" Analog="true" SourceValHigh="1" DestValHigh="1" MinVal="-1000000000" MaxVal="1000000000">
+						<Co K="AQ" U="216e8110-03cd-9602-00ff64b89525ef4d"/>
+						<Co K="Q" U="216e8110-03cd-9603-01ff64b89525ef4d"/>
+						<IoData Cr="216373ab-00cf-42fc-ffffe001fe9bf86f" Pr="216373ab-00cf-42f8-ffffe001fe9bf86f"/>
+						<Display Type="2" Unit="&lt;v&gt;" StateOnly="true"/>
+					</C>
+					<C Type="VirtualHttpInCmd" Desc="Lebenszeichen Zeit" IName="VCI416" V="178" U="216e8110-03cf-9608-ffffe001fe9bf86f" Title="smartmeter_status_ts" Cl="0,0,0" Nio="2" WF="16384" ValOT="1" Check=" " Signed="true" Analog="true" SourceValHigh="1" DestValHigh="1" MinVal="-1000000000" MaxVal="1000000000">
+						<Co K="AQ" U="216e8110-03cf-9606-00ff64b89525ef4d"/>
+						<Co K="Q" U="216e8110-03cf-9607-01ff64b89525ef4d"/>
+						<IoData Cr="216373ab-00cf-42fc-ffffe001fe9bf86f" Pr="216373ab-00ce-42f4-ffffe001fe9bf86f"/>
+						<Display Type="2" Unit="&lt;v&gt;" StateOnly="true"/>
+					</C>
+					<C Type="VirtualHttpInCmd" Desc="Lebenszeichen Zähler" IName="VCI417" V="178" U="216e8110-03cf-960c-ffffe001fe9bf86f" Title="smartmeter_status_zaehler" Cl="238,238,238" Nio="2" WF="16400" ValOT="1" Check=" " Signed="true" Analog="true" SourceValHigh="1" DestValHigh="1" MinVal="-1000000000" MaxVal="1000000000">
+						<Co K="AQ" U="216e8110-03cf-960a-00ff64b89525ef4d"/>
+						<Co K="Q" U="216e8110-03cf-960b-01ff64b89525ef4d"/>
+						<IoData Cr="216373ab-00cf-42fc-ffffe001fe9bf86f" Pr="216373ab-00cf-42f8-ffffe001fe9bf86f"/>
+						<Display Type="2" Unit="&lt;v&gt;" StateOnly="true"/>
+					</C>
+				</C>
+				<C Type="VirtualHttpIn" Desc="Smartmeter (vzLogger)" IName="VHI23" V="178" U="216e82fc-014f-aa35-ffffe001fe9bf86f" Title="Smartmeter (vzLogger)" Cl="0,0,0" WF="16384" Address="http://localhost" Poll="604800" Timeout="4000" Allowedtimeouts="10" on="true">
+					<C Type="Online" IName="S0" V="178" U="216e82fc-0161-aa38-ffffe001fe9bf86f" Title="Onlinestatus Eingang VHI1" Cl="0,0,0" Nio="1" WF="20480" ValOT="1" MinTime="10" NoMsg="true" Idx="-1">
+						<Co K="Q" U="216e82fc-0161-aa37-00ff5fbd10bfe741"/>
+						<IoData Cr="216373ab-00d3-432c-ffffe001fe9bf86f" Pr="216373ab-00ce-42f4-ffffe001fe9bf86f" St="2"/>
+						<Display Unit="&lt;v&gt;" StateOnly="true" IxText="8"/>
+					</C>
+					<C Type="VirtualHttpInCmd" Desc="Zählerstand Bezug, gesamt" IName="VCI418" V="178" U="216e82fc-016c-aa3c-ffffe001fe9bf86f" Title="smartmeter_0001_Consumption_Total_OBIS_1.8.0" Cl="238,238,238" Nio="2" WF="16400" ValOT="1" Check=" " Analog="true" SourceValHigh="1" DestValHigh="1" MaxVal="1000000000">
+						<Co K="AQ" U="216e82fc-016c-aa3a-00ff5fbd10bfe741"/>
+						<Co K="Q" U="216e82fc-016c-aa3b-01ff5fbd10bfe741"/>
+						<IoData Cr="216373ab-00cf-42fc-ffffe001fe9bf86f" Pr="216373ab-00cf-42f8-ffffe001fe9bf86f"/>
+						<Display Type="2" Unit="&lt;v.0&gt; Wh" StateOnly="true"/>
+					</C>
+					<C Type="VirtualHttpInCmd" Desc="Zählerstand Einspeisung, gesamt" IName="VCI419" V="178" U="216e82fc-0172-aa40-ffffe001fe9bf86f" Title="smartmeter_0001_Delivery_Total_OBIS_2.8.0" Cl="0,0,0" Nio="2" WF="16384" ValOT="1" Check=" " Analog="true" SourceValHigh="1" DestValHigh="1" MaxVal="1000000000">
+						<Co K="AQ" U="216e82fc-0171-aa3e-00ff5fbd10bfe741"/>
+						<Co K="Q" U="216e82fc-0171-aa3f-01ff5fbd10bfe741"/>
+						<IoData Cr="216373ab-00cf-42fc-ffffe001fe9bf86f" Pr="216373ab-00ce-42f4-ffffe001fe9bf86f"/>
+						<Display Type="2" Unit="&lt;v.0&gt; Wh" StateOnly="true"/>
+					</C>
+					<C Type="VirtualHttpInCmd" Desc="aktuelle Wirkleistung" IName="VCI420" V="178" U="216e82fc-0176-aa44-ffffe001fe9bf86f" Title="smartmeter_0001_Total_Power_OBIS_16.7.0" Cl="238,238,238" Nio="2" WF="16400" ValOT="1" Check=" " Signed="true" Analog="true" SourceValHigh="1" DestValHigh="1" MinVal="-100000000" MaxVal="100000000">
+						<Co K="AQ" U="216e82fc-0176-aa42-00ff5fbd10bfe741"/>
+						<Co K="Q" U="216e82fc-0176-aa43-01ff5fbd10bfe741"/>
+						<IoData Cr="216373ab-00cf-42fc-ffffe001fe9bf86f" Pr="216373ab-00cf-42f8-ffffe001fe9bf86f"/>
+						<Display Type="2" Unit="&lt;v.0&gt; W" StateOnly="true"/>
+					</C>
+					<C Type="VirtualHttpInCmd" Desc="Zeit der letzten Messung, Unix" IName="VCI421" V="178" U="216e82fc-0179-aa48-ffffe001fe9bf86f" Title="smartmeter_0001_Last_UpdateUnix" Cl="0,0,0" Nio="2" WF="16384" ValOT="1" Check=" " Analog="true" SourceValHigh="1" DestValHigh="1" MaxVal="2147483647">
+						<Co K="AQ" U="216e82fc-0179-aa46-00ff5fbd10bfe741"/>
+						<Co K="Q" U="216e82fc-0179-aa47-01ff5fbd10bfe741"/>
+						<IoData Cr="216373ab-00cf-42fc-ffffe001fe9bf86f" Pr="216373ab-00ce-42f4-ffffe001fe9bf86f"/>
+						<Display Type="2" Unit="&lt;v.0&gt; s" StateOnly="true"/>
+					</C>
+					<C Type="VirtualHttpInCmd" Desc="Ablesezeit, Loxone-Zeitrechnung" IName="VCI422" V="178" U="216e82fc-017b-aa4c-ffffe001fe9bf86f" Title="smartmeter_0001_Last_UpdateLoxEpoche" Cl="0,0,0" Nio="2" WF="16384" ValOT="1" Check=" " Analog="true" SourceValHigh="1" DestValHigh="1" MaxVal="2147483647">
+						<Co K="AQ" U="216e82fc-017b-aa4a-00ff5fbd10bfe741"/>
+						<Co K="Q" U="216e82fc-017b-aa4b-01ff5fbd10bfe741"/>
+						<IoData Cr="216373ab-00cf-42fc-ffffe001fe9bf86f" Pr="216373ab-00ce-42f4-ffffe001fe9bf86f"/>
+						<Display Type="2" Unit="&lt;v.0&gt; s" StateOnly="true"/>
+					</C>
+					<C Type="VirtualHttpInCmd" Desc="Zählerstand Bezug, rechnerisch" IName="VCI423" V="178" U="216e82fc-017f-aa50-ffffe001fe9bf86f" Title="smartmeter_0001_Consumption_CalculatedPower_OBIS_1.99.0" Cl="0,0,0" Nio="2" WF="16384" ValOT="1" Check=" " Analog="true" SourceValHigh="1" DestValHigh="1" MaxVal="100000000">
+						<Co K="AQ" U="216e82fc-017f-aa4e-00ff5fbd10bfe741"/>
+						<Co K="Q" U="216e82fc-017f-aa4f-01ff5fbd10bfe741"/>
+						<IoData Cr="216373ab-00cf-42fc-ffffe001fe9bf86f" Pr="216373ab-00ce-42f4-ffffe001fe9bf86f"/>
+						<Display Type="2" Unit="&lt;v.1&gt; W" StateOnly="true"/>
+					</C>
+					<C Type="VirtualHttpInCmd" Desc="Zählerstand Einspeisung, rechnerisch" IName="VCI424" V="178" U="216e82fc-0182-aa54-ffffe001fe9bf86f" Title="smartmeter_0001_Delivery_CalculatedPower_OBIS_2.99.0" Cl="0,0,0" Nio="2" WF="16384" ValOT="1" Check=" " Analog="true" SourceValHigh="1" DestValHigh="1" MaxVal="100000000">
+						<Co K="AQ" U="216e82fc-0182-aa52-00ff5fbd10bfe741"/>
+						<Co K="Q" U="216e82fc-0182-aa53-01ff5fbd10bfe741"/>
+						<IoData Cr="216373ab-00cf-42fc-ffffe001fe9bf86f" Pr="216373ab-00ce-42f4-ffffe001fe9bf86f"/>
+						<Display Type="2" Unit="&lt;v.1&gt; W" StateOnly="true"/>
+					</C>
+					<C Type="VirtualHttpInCmd" Desc="Lebenszeichen ok (1/0)" IName="VCI425" V="178" U="216e82fc-0189-aa58-ffffe001fe9bf86f" Title="smartmeter_status_ok" Cl="238,238,238" Nio="2" WF="16400" ValOT="1" Check=" " Signed="true" Analog="true" SourceValHigh="1" DestValHigh="1" MinVal="-1000000000" MaxVal="1000000000">
+						<Co K="AQ" U="216e82fc-0189-aa56-00ff5fbd10bfe741"/>
+						<Co K="Q" U="216e82fc-0189-aa57-01ff5fbd10bfe741"/>
+						<IoData Cr="216373ab-00cf-42fc-ffffe001fe9bf86f" Pr="216373ab-00cf-42f8-ffffe001fe9bf86f"/>
+						<Display Type="2" Unit="&lt;v&gt;" StateOnly="true"/>
+					</C>
+					<C Type="VirtualHttpInCmd" Desc="Lebenszeichen Zeit" IName="VCI426" V="178" U="216e82fc-018f-aa5c-ffffe001fe9bf86f" Title="smartmeter_status_ts" Cl="0,0,0" Nio="2" WF="16384" ValOT="1" Check=" " Signed="true" Analog="true" SourceValHigh="1" DestValHigh="1" MinVal="-1000000000" MaxVal="1000000000">
+						<Co K="AQ" U="216e82fc-018f-aa5a-00ff5fbd10bfe741"/>
+						<Co K="Q" U="216e82fc-018f-aa5b-01ff5fbd10bfe741"/>
+						<IoData Cr="216373ab-00cf-42fc-ffffe001fe9bf86f" Pr="216373ab-00ce-42f4-ffffe001fe9bf86f"/>
+						<Display Type="2" Unit="&lt;v&gt;" StateOnly="true"/>
+					</C>
+					<C Type="VirtualHttpInCmd" Desc="Lebenszeichen Zähler" IName="VCI427" V="178" U="216e82fc-0192-aa60-ffffe001fe9bf86f" Title="smartmeter_status_zaehler" Cl="238,238,238" Nio="2" WF="16400" ValOT="1" Check=" " Signed="true" Analog="true" SourceValHigh="1" DestValHigh="1" MinVal="-1000000000" MaxVal="1000000000">
+						<Co K="AQ" U="216e82fc-0192-aa5e-00ff5fbd10bfe741"/>
+						<Co K="Q" U="216e82fc-0192-aa5f-01ff5fbd10bfe741"/>
+						<IoData Cr="216373ab-00cf-42fc-ffffe001fe9bf86f" Pr="216373ab-00cf-42f8-ffffe001fe9bf86f"/>
+						<Display Type="2" Unit="&lt;v&gt;" StateOnly="true"/>
+					</C>
+				</C>
 			</C>
 			<C Type="VirtualOutCaption" V="178" U="216373ab-00e8-43c7-ffffe001fe9bf86f" Title="Virtuelle Ausgänge" WF="16384">
 				<C Type="VirtualOut" Desc="Erzeugt vom LoxBerry-Plugin Abfahrts-Assistent, trägt das Merkwort. Loxone Config legt beim Import neu an und überschreibt nichts – zweimal eingelesen ergibt doppelte Bausteine. (02.10.2026)" IName="VQ1" V="178" U="216376a3-0122-573c-ffffe001fe9bf86f" Title="Abfahrts-Assistent Ansage" WF="16384" Address="http://loxberry" CloseAfterSend="true">
@@ -4460,6 +4594,9 @@
 				<C Type="Notification" V="178" U="216d7a64-0277-e4b4-ffffe001fe9bf86f" Title="Chromecast Meldung" Cl="238,238,238" WF="16400" Entries="10">
 					<IoData Cr="216373ab-00cf-42fc-ffffe001fe9bf86f"/>
 				</C>
+				<C Type="Notification" V="178" U="216e82bc-0072-3153-ffffe001fe9bf86f" Title="Stromzähler prüfen" Cl="238,238,238" WF="16400" Entries="10">
+					<IoData Cr="216373ab-00cf-42fc-ffffe001fe9bf86f"/>
+				</C>
 			</C>
 			<C Type="LoxTree" TId="LoxCaption_2" V="178" U="216373ab-00f9-454d-ffffe001fe9bf86f" Title="Tree" WF="16384" CycleUserProt="-1" IntAddr="" Pause="10" RxTimeout="1000" BaseID="-1" IDev="true" Serial="13000001" Installation="" SwitchBoard="" HwVersion="2">
 				<IoData Pr="216373ab-00ce-42f4-ffffe001fe9bf86f"/>
@@ -4689,18 +4826,18 @@
 					<Display Unit="&lt;v.pr&gt;"/>
 					<StateTexts></StateTexts>
 				</C>
+				<C Type="OutputRef" V="178" U="21637996-03e4-5846-ffffe001fe9bf86f" Title="Abfahrt: Ansage" Px="20736" Py="8928" Px2="22848" Py2="9120" Cl="0,0,0" Nio="2" Ref="216376a3-0125-573f-ffffe001fe9bf86f" WF="131072" LinkRefType="74">
+					<Co K="AI" Nc="1" U="21637996-03e4-5844-00ffbad61744dee4">
+						<In Input="2163788e-015e-eb6e-02ff77ac0b23af42"/>
+					</Co>
+					<Co K="AQ" U="21637996-03e4-5845-01ffbad61744dee4"/>
+				</C>
 				<C Type="OutputRefLM" V="178" U="2163793a-02ef-3701-ffffe001fe9bf86f" Title="Zeit zum Losfahren" Px="20832" Py="10656" Px2="22944" Py2="10848" Cl="0,0,0" Nio="2" Ref="2163790e-0161-1d78-ffffe001fe9bf86f" WF="131072">
 					<Co K="AI" Nc="1" U="2163793a-02ef-36ff-00ffc226a21f08a2">
 						<In Input="21637894-0382-f196-02ff854620af611c"/>
 					</Co>
 					<Co K="AQ" U="2163793a-02ef-3700-01ffc226a21f08a2"/>
 					<LoggerMailer RefNotification="2163790e-0161-1d78-ffffe001fe9bf86f" On="&lt;v&gt;" Off="&lt;v&gt;" MinimumTime="5000" NL="1"/>
-				</C>
-				<C Type="OutputRef" V="178" U="21637996-03e4-5846-ffffe001fe9bf86f" Title="Abfahrt: Ansage" Px="20736" Py="8928" Px2="22848" Py2="9120" Cl="0,0,0" Nio="2" Ref="216376a3-0125-573f-ffffe001fe9bf86f" WF="131072" LinkRefType="74">
-					<Co K="AI" Nc="1" U="21637996-03e4-5844-00ffbad61744dee4">
-						<In Input="2163788e-015e-eb6e-02ff77ac0b23af42"/>
-					</Co>
-					<Co K="AQ" U="21637996-03e4-5845-01ffbad61744dee4"/>
 				</C>
 			</C>
 			<C Type="Page" V="178" U="21637a30-0013-6964-ffffe001fe9bf86f" Title="Alexa NG" LtE="560167480" WF="16384">
@@ -5195,7 +5332,7 @@
 			</C>
 			<C Type="Page" V="178" U="216d789a-02d8-646f-ffffe001fe9bf86f" Title="Chromecast4lox" LtE="560822435" WF="16384">
 				<IoData Cr="216373ab-00cf-42fc-ffffe001fe9bf86f" Pr="216373ab-00cf-42f8-ffffe001fe9bf86f"/>
-				<C Type="InputRef" V="178" U="216d78e2-0342-d3e0-ffffe001fe9bf86f" Title="chromecast4lox_Wohnzimmer_volume" Px="8544" Py="8544" Px2="10656" Py2="8736" Cl="0,0,0" Nio="4" Ref="216d78b0-00fd-841f-ffffe001fe9bf86f" WF="133120" Analog="true" LinkRefType="87">
+				<C Type="InputRef" V="178" U="216d78e2-0342-d3e0-ffffe001fe9bf86f" Title="chromecast4lox_Wohnzimmer_volume" Px="8544" Py="8544" Px2="10656" Py2="8736" Cl="0,0,0" Nio="4" Ref="216d78b0-00fd-841f-ffffe001fe9bf86f" WF="149504" Analog="true" LinkRefType="87">
 					<Co K="AI" Nc="1" U="216d78e2-0342-d3dc-00ff733bf92f2e7d">
 						<In Input="216d78b0-00fd-841d-00ffb836fd5108bc"/>
 					</Co>
@@ -5205,7 +5342,7 @@
 					<Co K="AQ" U="216d78e2-0342-d3de-02ff733bf92f2e7d"/>
 					<Co K="Q" U="216d78e2-0342-d3df-03ff733bf92f2e7d"/>
 				</C>
-				<C Type="InputRef" V="178" U="216d78f0-016d-e3ea-ffffe001fe9bf86f" Title="chromecast4lox_Wohnzimmer_playing" Px="8544" Py="8352" Px2="10656" Py2="8544" Cl="0,0,0" Nio="4" Ref="216d78b0-00fa-841b-ffffe001fe9bf86f" WF="133120" LinkRefType="87">
+				<C Type="InputRef" V="178" U="216d78f0-016d-e3ea-ffffe001fe9bf86f" Title="chromecast4lox_Wohnzimmer_playing" Px="8544" Py="8352" Px2="10656" Py2="8544" Cl="0,0,0" Nio="4" Ref="216d78b0-00fa-841b-ffffe001fe9bf86f" WF="149504" LinkRefType="87">
 					<Co K="AI" Nc="1" U="216d78f0-016d-e3e6-00ffa59f3361c9a9">
 						<In Input="216d78b0-00fa-8419-00ffb836fd5108bc"/>
 					</Co>
@@ -5215,7 +5352,7 @@
 					<Co K="AQ" U="216d78f0-016d-e3e8-02ffa59f3361c9a9"/>
 					<Co K="Q" U="216d78f0-016d-e3e9-03ffa59f3361c9a9"/>
 				</C>
-				<C Type="InputRef" V="178" U="216d78fc-01ef-f3fb-ffffe001fe9bf86f" Title="chromecast4lox_server_zaehler" Px="5856" Py="5376" Px2="7968" Py2="5568" Cl="0,0,0" Nio="4" Ref="216d78b0-00eb-840b-ffffe001fe9bf86f" WF="133120" Analog="true" LinkRefType="87">
+				<C Type="InputRef" V="178" U="216d78fc-01ef-f3fb-ffffe001fe9bf86f" Title="chromecast4lox_server_zaehler" Px="5856" Py="5376" Px2="7968" Py2="5568" Cl="0,0,0" Nio="4" Ref="216d78b0-00eb-840b-ffffe001fe9bf86f" WF="149504" Analog="true" LinkRefType="87">
 					<Co K="AI" Nc="1" U="216d78fc-01ef-f3f7-00ffbc734abdad75">
 						<In Input="216d78b0-00ea-8409-00ffb836fd5108bc"/>
 					</Co>
@@ -5225,7 +5362,7 @@
 					<Co K="AQ" U="216d78fc-01ef-f3f9-02ffbc734abdad75"/>
 					<Co K="Q" U="216d78fc-01ef-f3fa-03ffbc734abdad75"/>
 				</C>
-				<C Type="InputRef" V="178" U="216d7905-03c5-0413-ffffe001fe9bf86f" Title="chromecast4lox_server_online" Px="2592" Py="4608" Px2="4704" Py2="4800" Cl="0,0,0" Nio="4" Ref="216d78b0-00d9-8403-ffffe001fe9bf86f" WF="133120" LinkRefType="87">
+				<C Type="InputRef" V="178" U="216d7905-03c5-0413-ffffe001fe9bf86f" Title="chromecast4lox_server_online" Px="2592" Py="4608" Px2="4704" Py2="4800" Cl="0,0,0" Nio="4" Ref="216d78b0-00d9-8403-ffffe001fe9bf86f" WF="149504" LinkRefType="87">
 					<Co K="AI" Nc="1" U="216d7905-03c5-040f-00ff2a4d00c35aa2">
 						<In Input="216d78b0-00d9-8401-00ffb836fd5108bc"/>
 					</Co>
@@ -5235,7 +5372,7 @@
 					<Co K="AQ" U="216d7905-03c5-0411-02ff2a4d00c35aa2"/>
 					<Co K="Q" U="216d7905-03c5-0412-03ff2a4d00c35aa2"/>
 				</C>
-				<C Type="InputRef" V="178" U="216d793f-0372-b4e0-ffffe001fe9bf86f" Title="Musik Wohnzimmer" Px="8640" Py="6624" Px2="10752" Py2="6816" Cl="0,0,0" Nio="4" Ref="216d7911-017a-242b-ffffe001fe9bf86f" WF="133120" LinkRefType="71">
+				<C Type="InputRef" V="178" U="216d793f-0372-b4e0-ffffe001fe9bf86f" Title="Musik Wohnzimmer" Px="8640" Py="6624" Px2="10752" Py2="6816" Cl="0,0,0" Nio="4" Ref="216d7911-017a-242b-ffffe001fe9bf86f" WF="149504" LinkRefType="71">
 					<Co K="AI" Nc="1" U="216d793f-0372-b4dc-00ff069ee221b2c9">
 						<In Input="216d7911-0178-2429-00ffdcdc20bb24ec"/>
 					</Co>
@@ -5245,7 +5382,7 @@
 					<Co K="AQ" U="216d793f-0372-b4de-02ff069ee221b2c9"/>
 					<Co K="Q" U="216d793f-0372-b4df-03ff069ee221b2c9"/>
 				</C>
-				<C Type="InputRef" V="178" U="216d7949-01cb-d526-ffffe001fe9bf86f" Title="Leiser" Px="8928" Py="9984" Px2="11040" Py2="10176" Cl="0,0,0" Nio="4" Ref="216d792e-00f4-7482-ffffe001fe9bf86f" WF="2048" LinkRefType="71">
+				<C Type="InputRef" V="178" U="216d7949-01cb-d526-ffffe001fe9bf86f" Title="Leiser" Px="8928" Py="9984" Px2="11040" Py2="10176" Cl="0,0,0" Nio="4" Ref="216d792e-00f4-7482-ffffe001fe9bf86f" WF="18432" LinkRefType="71">
 					<Co K="AI" Nc="1" U="216d7949-01cb-d522-00ff2bcf3dd2a7d8">
 						<In Input="216d792e-00f4-7480-00ff80254c450204"/>
 					</Co>
@@ -5255,7 +5392,7 @@
 					<Co K="AQ" U="216d7949-01cb-d524-02ff2bcf3dd2a7d8"/>
 					<Co K="Q" U="216d7949-01cb-d525-03ff2bcf3dd2a7d8"/>
 				</C>
-				<C Type="InputRef" V="178" U="216d7950-0375-e55c-ffffe001fe9bf86f" Title="Lauter" Px="9024" Py="9408" Px2="11136" Py2="9600" Cl="0,0,0" Nio="4" Ref="216d791e-03ad-444b-ffffe001fe9bf86f" WF="2048" LinkRefType="71">
+				<C Type="InputRef" V="178" U="216d7950-0375-e55c-ffffe001fe9bf86f" Title="Lauter" Px="9024" Py="9408" Px2="11136" Py2="9600" Cl="0,0,0" Nio="4" Ref="216d791e-03ad-444b-ffffe001fe9bf86f" WF="18432" LinkRefType="71">
 					<Co K="AI" Nc="1" U="216d7950-0375-e558-00ff864b3f0774cf">
 						<In Input="216d791e-03ad-4449-00ffdfed436e578c"/>
 					</Co>
@@ -5265,7 +5402,7 @@
 					<Co K="AQ" U="216d7950-0375-e55a-02ff864b3f0774cf"/>
 					<Co K="Q" U="216d7950-0375-e55b-03ff864b3f0774cf"/>
 				</C>
-				<C Type="InputRef" V="178" U="216d7a9d-00f8-37c2-ffffe001fe9bf86f" Title="Konstante 1" Px="5856" Py="5568" Px2="7968" Py2="5760" Cl="0,0,0" Nio="4" Ref="216c8f88-0096-1e34-ffffe001fe9bf86f" WF="133120" Analog="true" LinkRefType="17">
+				<C Type="InputRef" V="178" U="216d7a9d-00f8-37c2-ffffe001fe9bf86f" Title="Konstante 1" Px="5856" Py="5568" Px2="7968" Py2="5760" Cl="0,0,0" Nio="4" Ref="216c8f88-0096-1e34-ffffe001fe9bf86f" WF="149504" Analog="true" LinkRefType="17">
 					<Co K="AI" Nc="1" U="216d7a9d-00f7-37be-00ff17a72dafdc69">
 						<In Input="216c8f88-0096-1e33-00ff13c84b8d596b"/>
 					</Co>
@@ -5273,7 +5410,7 @@
 					<Co K="AQ" U="216d7a9d-00f7-37c0-02ff17a72dafdc69"/>
 					<Co K="Q" U="216d7a9d-00f7-37c1-03ff17a72dafdc69"/>
 				</C>
-				<C Type="EdgeDetection" V="178" U="216d79b2-01c1-898e-ffffe001fe9bf86f" Title="Musik an/aus" Px="12000" Py="6336" Px2="13344" Py2="7224" Cl="141,255,112" Nio="5" LtE="560822707">
+				<C Type="EdgeDetection" V="178" U="216d79b2-01c1-898e-ffffe001fe9bf86f" Title="Musik an/aus" Px="12000" Py="6336" Px2="13344" Py2="7224" Cl="141,255,112" Nio="5" LtE="560822707" WF="16384">
 					<Co K="Input" Nc="1" U="216d79b2-01c1-8989-00ffbe4d1c2ead7f">
 						<In Input="216d793f-0372-b4de-02ff069ee221b2c9"/>
 					</Co>
@@ -5282,13 +5419,13 @@
 					<Co K="RisingEdge" U="216d79b2-01c1-898c-03ffbe4d1c2ead7f"/>
 					<Co K="FallingEdge" U="216d79b2-01c1-898d-04ffbe4d1c2ead7f"/>
 				</C>
-				<C Type="Not" V="178" U="216d79bb-008d-aa7e-ffffe001fe9bf86f" Title="Dienst meldet sich nicht" Px="5952" Py="4320" Px2="7296" Py2="4824" Cl="141,255,112" Nio="2" LtE="560822716">
+				<C Type="Not" V="178" U="216d79bb-008d-aa7e-ffffe001fe9bf86f" Title="Dienst meldet sich nicht" Px="5952" Py="4320" Px2="7296" Py2="4824" Cl="141,255,112" Nio="2" LtE="560822716" WF="147456">
 					<Co K="I" Nc="1" U="216d79bb-008d-aa7c-00ff5edc3175d077">
 						<In Input="216d7905-03c5-0411-02ff2a4d00c35aa2"/>
 					</Co>
 					<Co K="Q" U="216d79bb-008d-aa7d-01ff5edc3175d077"/>
 				</C>
-				<C Type="OnDelay" V="178" U="216d79cc-0214-dbf1-ffffe001fe9bf86f" Title="Ausfall bestätigt" Px="9216" Py="4320" Px2="10560" Py2="5016" Cl="141,255,112" Nio="5" LtE="560822740" WF="131072">
+				<C Type="OnDelay" V="178" U="216d79cc-0214-dbf1-ffffe001fe9bf86f" Title="Ausfall bestätigt" Px="9216" Py="4320" Px2="10560" Py2="5016" Cl="141,255,112" Nio="5" LtE="560822740" WF="147456">
 					<Co K="InputTrigger" Nc="1" U="216d79cc-0214-dbec-00ff5ca3584e17e9">
 						<In Input="216d79bb-008d-aa7d-01ff5edc3175d077"/>
 					</Co>
@@ -5297,7 +5434,7 @@
 					<Co K="Time" Def="120" U="216d79cc-0214-dbef-03ff5ca3584e17e9"/>
 					<Co K="Q" U="216d79cc-0214-dbf0-04ff5ca3584e17e9"/>
 				</C>
-				<C Type="Validator" V="178" U="216d79e2-02c3-0d7c-ffffe001fe9bf86f" Title="Dienst zählt nicht mehr" Px="9216" Py="5088" Px2="10560" Py2="5976" Cl="141,255,112" Nio="8" LtE="560822809" WF="131072">
+				<C Type="Validator" V="178" U="216d79e2-02c3-0d7c-ffffe001fe9bf86f" Title="Dienst zählt nicht mehr" Px="9216" Py="5088" Px2="10560" Py2="5976" Cl="141,255,112" Nio="8" LtE="560822809" WF="147456">
 					<Co K="inval" Nc="1" U="216d79e2-02c3-0d74-00ffe431f84c4b8b">
 						<In Input="216d78fc-01ef-f3f9-02ffbc734abdad75"/>
 					</Co>
@@ -5311,7 +5448,7 @@
 					<Co K="outval" U="216d79e2-02c3-0d7a-06ffe431f84c4b8b"/>
 					<Co K="error" U="216d79e2-02c3-0d7b-07ffe431f84c4b8b"/>
 				</C>
-				<C Type="Or" V="178" U="216d7a2e-031c-8130-ffffe001fe9bf86f" Title="Chromecast gestört" Px="12480" Py="4320" Px2="13824" Py2="5016" Cl="141,255,112" Nio="3" LtE="560822833">
+				<C Type="Or" V="178" U="216d7a2e-031c-8130-ffffe001fe9bf86f" Title="Chromecast gestört" Px="12480" Py="4320" Px2="13824" Py2="5016" Cl="141,255,112" Nio="3" LtE="560822833" WF="16384">
 					<Co K="I1" Nc="1" U="216d7a2e-031c-812d-00fff0904651dda3">
 						<In Input="216d79cc-0214-dbf0-04ff5ca3584e17e9"/>
 					</Co>
@@ -5320,7 +5457,7 @@
 					</Co>
 					<Co K="Q" U="216d7a2e-031c-812f-02fff0904651dda3"/>
 				</C>
-				<C Type="State" V="178" U="216d7a42-02f8-b2e8-ffffe001fe9bf86f" Title="Status Musik Wohnzimmer" Px="11808" Py="7872" Px2="14496" Py2="8952" Cl="141,255,112" Nio="11" LtE="560822862">
+				<C Type="State" V="178" U="216d7a42-02f8-b2e8-ffffe001fe9bf86f" Title="Status Musik Wohnzimmer" Px="11808" Py="7872" Px2="14496" Py2="8952" Cl="141,255,112" Nio="11" LtE="560822862" WF="16384">
 					<Co K="I1" Nc="1" U="216d7a42-02f8-b2dd-00ff922110e04970">
 						<In Input="216d78f0-016d-e3e8-02ffa59f3361c9a9"/>
 					</Co>
@@ -5340,36 +5477,36 @@
 					<Display Unit="&lt;v.pr&gt;"/>
 					<StateTexts></StateTexts>
 				</C>
-				<C Type="OutputRef" V="178" U="216e38e7-00fe-0e08-ffffe001fe9bf86f" Title="chromecast4lox_Wohnzimmer_play" Px="14304" Py="6816" Px2="16416" Py2="7008" Cl="0,0,0" Nio="2" Ref="216e38b9-01cc-cacc-ffffe001fe9bf86f" WF="131072" LinkRefType="74">
-					<Co K="AI" Nc="1" U="216e38e7-00fe-0e06-00ff962e7d3d256b">
-						<In Input="216d79b2-01c1-898c-03ffbe4d1c2ead7f"/>
-					</Co>
-					<Co K="AQ" U="216e38e7-00fe-0e07-01ff962e7d3d256b"/>
-				</C>
-				<C Type="OutputRefLM" V="178" U="216d7a78-0084-1681-ffffe001fe9bf86f" Title="Chromecast Meldung" Px="14784" Py="4608" Px2="16896" Py2="4800" Cl="0,0,0" Nio="2" Ref="216d7a64-0277-e4b4-ffffe001fe9bf86f" WF="131072">
-					<Co K="AI" Nc="1" U="216d7a78-0084-167f-00ff85c587ac2e42">
-						<In Input="216d7a2e-031c-812f-02fff0904651dda3"/>
-					</Co>
-					<Co K="AQ" U="216d7a78-0084-1680-01ff85c587ac2e42"/>
-					<LoggerMailer RefNotification="216d7a64-0277-e4b4-ffffe001fe9bf86f" On="&lt;v&gt;" Off="&lt;v&gt;" MinimumTime="5000" NL="1"/>
-				</C>
-				<C Type="OutputRef" V="178" U="216e390f-0133-515a-ffffe001fe9bf86f" Title="chromecast4lox_Wohnzimmer_volume_up" Px="12960" Py="9408" Px2="15072" Py2="9600" Cl="0,0,0" Nio="2" Ref="216e38b9-01cc-cade-ffffe001fe9bf86f" LinkRefType="74">
+				<C Type="OutputRef" V="178" U="216e390f-0133-515a-ffffe001fe9bf86f" Title="chromecast4lox_Wohnzimmer_volume_up" Px="12960" Py="9408" Px2="15072" Py2="9600" Cl="0,0,0" Nio="2" Ref="216e38b9-01cc-cade-ffffe001fe9bf86f" WF="16384" LinkRefType="74">
 					<Co K="AI" Nc="1" U="216e390f-0133-5158-00ff5125fee877d5">
 						<In Input="216d7950-0375-e55a-02ff864b3f0774cf"/>
 					</Co>
 					<Co K="AQ" U="216e390f-0133-5159-01ff5125fee877d5"/>
 				</C>
-				<C Type="OutputRef" V="178" U="216e3901-029a-407c-ffffe001fe9bf86f" Title="chromecast4lox_Wohnzimmer_volume_down" Px="12960" Py="9984" Px2="15072" Py2="10176" Cl="0,0,0" Nio="2" Ref="216e38b9-01cc-cae1-ffffe001fe9bf86f" LinkRefType="74">
+				<C Type="OutputRef" V="178" U="216e3901-029a-407c-ffffe001fe9bf86f" Title="chromecast4lox_Wohnzimmer_volume_down" Px="12960" Py="9984" Px2="15072" Py2="10176" Cl="0,0,0" Nio="2" Ref="216e38b9-01cc-cae1-ffffe001fe9bf86f" WF="16384" LinkRefType="74">
 					<Co K="AI" Nc="1" U="216e3901-029a-407a-00ff64a96d133f96">
 						<In Input="216d7949-01cb-d524-02ff2bcf3dd2a7d8"/>
 					</Co>
 					<Co K="AQ" U="216e3901-029a-407b-01ff64a96d133f96"/>
 				</C>
-				<C Type="OutputRef" V="178" U="216e38f6-014d-2fa2-ffffe001fe9bf86f" Title="chromecast4lox_Wohnzimmer_stop" Px="14304" Py="7008" Px2="16416" Py2="7200" Cl="0,0,0" Nio="2" Ref="216e38b9-01cc-cad2-ffffe001fe9bf86f" WF="131072" LinkRefType="74">
+				<C Type="OutputRef" V="178" U="216e38f6-014d-2fa2-ffffe001fe9bf86f" Title="chromecast4lox_Wohnzimmer_stop" Px="14304" Py="7008" Px2="16416" Py2="7200" Cl="0,0,0" Nio="2" Ref="216e38b9-01cc-cad2-ffffe001fe9bf86f" WF="147456" LinkRefType="74">
 					<Co K="AI" Nc="1" U="216e38f6-014d-2fa0-00ffade3b3e0aeb0">
 						<In Input="216d79b2-01c1-898d-04ffbe4d1c2ead7f"/>
 					</Co>
 					<Co K="AQ" U="216e38f6-014d-2fa1-01ffade3b3e0aeb0"/>
+				</C>
+				<C Type="OutputRef" V="178" U="216e38e7-00fe-0e08-ffffe001fe9bf86f" Title="chromecast4lox_Wohnzimmer_play" Px="14304" Py="6816" Px2="16416" Py2="7008" Cl="0,0,0" Nio="2" Ref="216e38b9-01cc-cacc-ffffe001fe9bf86f" WF="147456" LinkRefType="74">
+					<Co K="AI" Nc="1" U="216e38e7-00fe-0e06-00ff962e7d3d256b">
+						<In Input="216d79b2-01c1-898c-03ffbe4d1c2ead7f"/>
+					</Co>
+					<Co K="AQ" U="216e38e7-00fe-0e07-01ff962e7d3d256b"/>
+				</C>
+				<C Type="OutputRefLM" V="178" U="216d7a78-0084-1681-ffffe001fe9bf86f" Title="Chromecast Meldung" Px="14784" Py="4608" Px2="16896" Py2="4800" Cl="0,0,0" Nio="2" Ref="216d7a64-0277-e4b4-ffffe001fe9bf86f" WF="147456">
+					<Co K="AI" Nc="1" U="216d7a78-0084-167f-00ff85c587ac2e42">
+						<In Input="216d7a2e-031c-812f-02fff0904651dda3"/>
+					</Co>
+					<Co K="AQ" U="216d7a78-0084-1680-01ff85c587ac2e42"/>
+					<LoggerMailer RefNotification="216d7a64-0277-e4b4-ffffe001fe9bf86f" On="&lt;v&gt;" Off="&lt;v&gt;" MinimumTime="5000" NL="1"/>
 				</C>
 			</C>
 			<C Type="Page" V="178" U="216cb110-02f4-1258-ffffe001fe9bf86f" Title="Dashboard" LtE="560771363" WF="16384">
@@ -5974,19 +6111,19 @@
 					</Co>
 					<Co K="Q" U="216ceca3-03cb-4744-02ffac18fbce156b"/>
 				</C>
-				<C Type="OutputRefLM" V="178" U="216cecfd-02b5-b652-ffffe001fe9bf86f" Title="Ladung fertig" Px="10176" Py="3072" Px2="12288" Py2="3264" Cl="0,0,0" Nio="2" Ref="216cecdc-01d6-7ec4-ffffe001fe9bf86f" WF="147456">
-					<Co K="AI" Nc="1" U="216cecfd-02b5-b650-00ffee70ca4d7c79">
-						<In Input="216cec4f-0200-8062-04ff2a3f732fe04c"/>
-					</Co>
-					<Co K="AQ" U="216cecfd-02b5-b651-01ffee70ca4d7c79"/>
-					<LoggerMailer RefNotification="216cecdc-01d6-7ec4-ffffe001fe9bf86f" On="&lt;v&gt;" Off="&lt;v&gt;" MinimumTime="5000" NL="1"/>
-				</C>
 				<C Type="OutputRefLM" V="178" U="216ced07-000f-c178-ffffe001fe9bf86f" Title="EVCC Meldung" Px="12288" Py="7200" Px2="14400" Py2="7392" Cl="0,0,0" Nio="2" Ref="216cecf0-0011-a014-ffffe001fe9bf86f" WF="147456">
 					<Co K="AI" Nc="1" U="216ced07-000f-c176-00ffe9ca159f3292">
 						<In Input="216ceca3-03cb-4744-02ffac18fbce156b"/>
 					</Co>
 					<Co K="AQ" U="216ced07-000f-c177-01ffe9ca159f3292"/>
 					<LoggerMailer RefNotification="216cecf0-0011-a014-ffffe001fe9bf86f" On="&lt;v&gt;" Off="&lt;v&gt;" MinimumTime="5000" NL="1"/>
+				</C>
+				<C Type="OutputRefLM" V="178" U="216cecfd-02b5-b652-ffffe001fe9bf86f" Title="Ladung fertig" Px="10176" Py="3072" Px2="12288" Py2="3264" Cl="0,0,0" Nio="2" Ref="216cecdc-01d6-7ec4-ffffe001fe9bf86f" WF="147456">
+					<Co K="AI" Nc="1" U="216cecfd-02b5-b650-00ffee70ca4d7c79">
+						<In Input="216cec4f-0200-8062-04ff2a3f732fe04c"/>
+					</Co>
+					<Co K="AQ" U="216cecfd-02b5-b651-01ffee70ca4d7c79"/>
+					<LoggerMailer RefNotification="216cecdc-01d6-7ec4-ffffe001fe9bf86f" On="&lt;v&gt;" Off="&lt;v&gt;" MinimumTime="5000" NL="1"/>
 				</C>
 			</C>
 			<C Type="Page" V="178" U="216ceed7-01cc-9f8e-ffffe001fe9bf86f" Title="Fensterbilanz" LtE="560787169" WF="16384">
@@ -6402,19 +6539,19 @@
 					<Display Unit="&lt;v.pr&gt;"/>
 					<StateTexts></StateTexts>
 				</C>
-				<C Type="OutputRefLM" V="178" U="216d2eeb-036d-7937-ffffe001fe9bf86f" Title="Xbox-Geheimnis erneuern" Px="11232" Py="10176" Px2="13344" Py2="10368" Cl="0,0,0" Nio="2" Ref="216d2eda-027f-4f6b-ffffe001fe9bf86f" WF="147456">
-					<Co K="AI" Nc="1" U="216d2eeb-036d-7935-00ff716ddc19b70c">
-						<In Input="216d2e9a-0219-d236-05ffa0cea108640d"/>
-					</Co>
-					<Co K="AQ" U="216d2eeb-036d-7936-01ff716ddc19b70c"/>
-					<LoggerMailer RefNotification="216d2eda-027f-4f6b-ffffe001fe9bf86f" On="&lt;v&gt;" Off="&lt;v&gt;" MinimumTime="5000" NL="1"/>
-				</C>
 				<C Type="OutputRefLM" V="178" U="216d2ef9-0170-872e-ffffe001fe9bf86f" Title="Beamer startet nicht" Px="13536" Py="7008" Px2="15648" Py2="7200" Cl="0,0,0" Nio="2" Ref="216d2ecd-03db-3393-ffffe001fe9bf86f" WF="147456">
 					<Co K="AI" Nc="1" U="216d2ef9-0170-872c-00ffa2b71a0247f0">
 						<In Input="216d2e85-0142-9ad0-04fffa4cdb499b08"/>
 					</Co>
 					<Co K="AQ" U="216d2ef9-0170-872d-01ffa2b71a0247f0"/>
 					<LoggerMailer RefNotification="216d2ecd-03db-3393-ffffe001fe9bf86f" On="&lt;v&gt;" Off="&lt;v&gt;" MinimumTime="5000" NL="1"/>
+				</C>
+				<C Type="OutputRefLM" V="178" U="216d2eeb-036d-7937-ffffe001fe9bf86f" Title="Xbox-Geheimnis erneuern" Px="11232" Py="10176" Px2="13344" Py2="10368" Cl="0,0,0" Nio="2" Ref="216d2eda-027f-4f6b-ffffe001fe9bf86f" WF="147456">
+					<Co K="AI" Nc="1" U="216d2eeb-036d-7935-00ff716ddc19b70c">
+						<In Input="216d2e9a-0219-d236-05ffa0cea108640d"/>
+					</Co>
+					<Co K="AQ" U="216d2eeb-036d-7936-01ff716ddc19b70c"/>
+					<LoggerMailer RefNotification="216d2eda-027f-4f6b-ffffe001fe9bf86f" On="&lt;v&gt;" Off="&lt;v&gt;" MinimumTime="5000" NL="1"/>
 				</C>
 			</C>
 			<C Type="Page" V="178" U="216d2f4e-03bd-b106-ffffe001fe9bf86f" Title="Kodi-NG" LtE="560803670" WF="16384">
@@ -6885,6 +7022,296 @@
 					<LoggerMailer RefNotification="216cb78b-0082-ebaf-ffffe001fe9bf86f" On="&lt;v&gt;" Off="&lt;v&gt;" MinimumTime="5000" NL="1"/>
 				</C>
 			</C>
+			<C Type="Page" V="178" U="216e80d1-03d3-7446-ffffe001fe9bf86f" Title="Smartmeter klassisch" LtE="560890082" WF="16384">
+				<IoData Cr="216373ab-00cf-42fc-ffffe001fe9bf86f" Pr="216373ab-00cf-42f8-ffffe001fe9bf86f"/>
+				<C Type="InputRef" V="178" U="216e8127-0167-c8d0-ffffe001fe9bf86f" Title="smartmeter_status_zaehler" Px="6912" Py="10368" Px2="9024" Py2="10560" Cl="0,0,0" Nio="4" Ref="216e8110-03cf-960c-ffffe001fe9bf86f" WF="133120" Analog="true" LinkRefType="87">
+					<Co K="AI" Nc="1" U="216e8127-0167-c8cc-00ff7248e2b5879c">
+						<In Input="216e8110-03cf-960a-00ff64b89525ef4d"/>
+					</Co>
+					<Co K="I" Nc="1" U="216e8127-0167-c8cd-01ff7248e2b5879c">
+						<In Input="216e8110-03cf-960b-01ff64b89525ef4d"/>
+					</Co>
+					<Co K="AQ" U="216e8127-0167-c8ce-02ff7248e2b5879c"/>
+					<Co K="Q" U="216e8127-0167-c8cf-03ff7248e2b5879c"/>
+				</C>
+				<C Type="InputRef" V="178" U="216e8130-01c8-d9d5-ffffe001fe9bf86f" Title="smartmeter_status_ok" Px="7872" Py="9120" Px2="9984" Py2="9312" Cl="0,0,0" Nio="4" Ref="216e8110-03cd-9604-ffffe001fe9bf86f" WF="133120" Analog="true" LinkRefType="87">
+					<Co K="AI" Nc="1" U="216e8130-01c8-d9d1-00ff67ae88578133">
+						<In Input="216e8110-03cd-9602-00ff64b89525ef4d"/>
+					</Co>
+					<Co K="I" Nc="1" U="216e8130-01c8-d9d2-01ff67ae88578133">
+						<In Input="216e8110-03cd-9603-01ff64b89525ef4d"/>
+					</Co>
+					<Co K="AQ" U="216e8130-01c8-d9d3-02ff67ae88578133"/>
+					<Co K="Q" U="216e8130-01c8-d9d4-03ff67ae88578133"/>
+				</C>
+				<C Type="InputRef" V="178" U="216e813a-02b5-eae1-ffffe001fe9bf86f" Title="smartmeter_0001_Total_Power_OBIS_16.7.0" Px="6816" Py="2592" Px2="8928" Py2="2784" Cl="0,0,0" Nio="4" Ref="216e8110-03c1-9600-ffffe001fe9bf86f" WF="133120" Analog="true" LinkRefType="87">
+					<Co K="AI" Nc="1" U="216e813a-02b5-eadd-00ff730143aa1e3a">
+						<In Input="216e8110-03c1-95fe-00ff64b89525ef4d"/>
+					</Co>
+					<Co K="I" Nc="1" U="216e813a-02b5-eade-01ff730143aa1e3a">
+						<In Input="216e8110-03c1-95ff-01ff64b89525ef4d"/>
+					</Co>
+					<Co K="AQ" U="216e813a-02b5-eadf-02ff730143aa1e3a"/>
+					<Co K="Q" U="216e813a-02b5-eae0-03ff730143aa1e3a"/>
+				</C>
+				<C Type="InputRef" V="178" U="216e8142-01e8-0cef-ffffe001fe9bf86f" Title="smartmeter_0001_Consumption_Total_OBIS_1.8.0" Px="7008" Py="5760" Px2="9120" Py2="5952" Cl="0,0,0" Nio="4" Ref="216e8110-03b5-95ec-ffffe001fe9bf86f" WF="133120" Analog="true" LinkRefType="87">
+					<Co K="AI" Nc="1" U="216e8142-01e8-0ceb-00ff512e4b470c80">
+						<In Input="216e8110-03b5-95ea-00ff64b89525ef4d"/>
+					</Co>
+					<Co K="I" Nc="1" U="216e8142-01e8-0cec-01ff512e4b470c80">
+						<In Input="216e8110-03b5-95eb-01ff64b89525ef4d"/>
+					</Co>
+					<Co K="AQ" U="216e8142-01e8-0ced-02ff512e4b470c80"/>
+					<Co K="Q" U="216e8142-01e8-0cee-03ff512e4b470c80"/>
+				</C>
+				<C Type="InputRef" V="178" U="216e82a4-023b-0ed4-ffffe001fe9bf86f" Title="Konstante 1" Px="6912" Py="10560" Px2="9024" Py2="10752" Cl="0,0,0" Nio="4" Ref="216c8f88-0096-1e34-ffffe001fe9bf86f" WF="133120" Analog="true" LinkRefType="17">
+					<Co K="AI" Nc="1" U="216e82a4-023b-0ed0-00ffdfbbd3b307e1">
+						<In Input="216c8f88-0096-1e33-00ff13c84b8d596b"/>
+					</Co>
+					<Co K="I" U="216e82a4-023b-0ed1-01ffdfbbd3b307e1"/>
+					<Co K="AQ" U="216e82a4-023b-0ed2-02ffdfbbd3b307e1"/>
+					<Co K="Q" U="216e82a4-023b-0ed3-03ffdfbbd3b307e1"/>
+				</C>
+				<C Type="PulseAt" V="178" U="216e815c-03d7-2f0d-ffffe001fe9bf86f" Title="Tagesbeginn 0:00" Px="7008" Py="6816" Px2="9696" Py2="7704" Cl="141,255,112" Nio="5" LtE="560890264" WF="131072" Sec="0" SpStates="216e815c-03d7-2f05-ffffea37d84c1d94,216e815c-03d7-2f06-ffffea37d84c1d94,216e815c-03d7-2f07-ffffea37d84c1d94" Typ="0">
+					<Co K="InputDisable" U="216e815c-03d7-2f08-00ffea37d84c1d94"/>
+					<Co K="Remanence" U="216e815c-03d7-2f09-01ffea37d84c1d94"/>
+					<Co K="Time" Def="1" U="216e815c-03d7-2f0a-02ffea37d84c1d94"/>
+					<Co K="Q" U="216e815c-03d7-2f0b-03ffea37d84c1d94"/>
+					<Co K="OutputAPI" U="216e815c-03d7-2f0c-04ffea37d84c1d94"/>
+					<IoData Visu="true" Cr="216373ab-00cf-42fc-ffffe001fe9bf86f" Pr="216373ab-00cf-42f8-ffffe001fe9bf86f"/>
+				</C>
+				<C Type="Validator" V="178" U="216e817a-00ae-7359-ffffe001fe9bf86f" Title="Lesekopf zählt nicht mehr" Px="10560" Py="10080" Px2="11904" Py2="10968" Cl="141,255,112" Nio="8" LtE="560890254" WF="131072">
+					<Co K="inval" Nc="1" U="216e817a-00ae-7351-00ff4935c603ad02">
+						<In Input="216e8127-0167-c8ce-02ff7248e2b5879c"/>
+					</Co>
+					<Co K="enable" Inv="true" Nc="1" U="216e817a-00ae-7352-01ff4935c603ad02">
+						<In Input="216e82a4-023b-0ed2-02ffdfbbd3b307e1"/>
+					</Co>
+					<Co K="mintime" Def="1800" U="216e817a-00ae-7353-02ff4935c603ad02"/>
+					<Co K="minval" U="216e817a-00ae-7354-03ff4935c603ad02"/>
+					<Co K="maxval" Def="999" U="216e817a-00ae-7355-04ff4935c603ad02"/>
+					<Co K="delay" U="216e817a-00ae-7356-05ff4935c603ad02"/>
+					<Co K="outval" U="216e817a-00ae-7357-06ff4935c603ad02"/>
+					<Co K="error" U="216e817a-00ae-7358-07ff4935c603ad02"/>
+				</C>
+				<C Type="AMemory" V="178" U="216e8230-018b-0d23-ffffe001fe9bf86f" Title="Stand bei Tagesbeginn (kWh)" Px="11808" Py="6816" Px2="13152" Py2="7704" Cl="141,255,112" Nio="5" LtE="560890426" WF="131072">
+					<Co K="Input" Nc="1" U="216e8230-018b-0d1e-00ff5ccc305991c7">
+						<In Input="216e8142-01e8-0ced-02ff512e4b470c80"/>
+					</Co>
+					<Co K="Trigger" Nc="1" U="216e8230-018b-0d1f-01ff5ccc305991c7">
+						<In Input="216e815c-03d7-2f0b-03ffea37d84c1d94"/>
+					</Co>
+					<Co K="Reset" U="216e8230-018b-0d20-02ff5ccc305991c7"/>
+					<Co K="Remanence" Inv="true" U="216e8230-018b-0d21-03ff5ccc305991c7"/>
+					<Co K="AQ" U="216e8230-018b-0d22-04ff5ccc305991c7"/>
+				</C>
+				<C Type="Formula" V="178" U="216e8244-033c-2f67-ffffe001fe9bf86f" Title="Verbrauch heute (kWh)" Px="14592" Py="5472" Px2="15936" Py2="6360" Cl="141,255,112" Nio="6" LtE="560890449" Formula="I1-I2" Valid="true">
+					<Co K="Input1" Nc="1" U="216e8244-033c-2f61-00ffe498a1858b52">
+						<In Input="216e8142-01e8-0ced-02ff512e4b470c80"/>
+					</Co>
+					<Co K="Input2" Nc="1" U="216e8244-033c-2f62-01ffe498a1858b52">
+						<In Input="216e8230-018b-0d22-04ff5ccc305991c7"/>
+					</Co>
+					<Co K="Input3" U="216e8244-033c-2f63-02ffe498a1858b52"/>
+					<Co K="Input4" U="216e8244-033c-2f64-03ffe498a1858b52"/>
+					<Co K="AQ" U="216e8244-033c-2f65-04ffe498a1858b52"/>
+					<Co K="TQ" U="216e8244-033c-2f66-05ffe498a1858b52"/>
+				</C>
+				<C Type="Less" V="178" U="216e825f-008c-62d4-ffffe001fe9bf86f" Title="Einspeisung aktiv" Px="9888" Py="3264" Px2="11232" Py2="3960" Cl="141,255,112" Nio="3" LtE="560890471">
+					<Co K="Input1" Nc="1" U="216e825f-008c-62d1-00ff9a94991e8559">
+						<In Input="216e813a-02b5-eadf-02ff730143aa1e3a"/>
+					</Co>
+					<Co K="Input2" U="216e825f-008c-62d2-01ff9a94991e8559"/>
+					<Co K="Q" U="216e825f-008c-62d3-02ff9a94991e8559"/>
+				</C>
+				<C Type="Not" V="178" U="216e8273-023f-964b-ffffe001fe9bf86f" Title="Lesekopf meldet Fehler" Px="10656" Py="8832" Px2="12000" Py2="9336" Cl="141,255,112" Nio="2" LtE="560890486" WF="131072">
+					<Co K="I" Nc="1" U="216e8273-023f-9649-00ff2b88a6a0e002">
+						<In Input="216e8130-01c8-d9d3-02ff67ae88578133"/>
+					</Co>
+					<Co K="Q" U="216e8273-023f-964a-01ff2b88a6a0e002"/>
+				</C>
+				<C Type="Or" V="178" U="216e827b-0330-b8a5-ffffe001fe9bf86f" Title="Stromzähler gestört" Px="13248" Py="9408" Px2="14592" Py2="10104" Cl="141,255,112" Nio="3" LtE="560890500">
+					<Co K="I1" Nc="1" U="216e827b-0330-b8a2-00ff16d61e586347">
+						<In Input="216e8273-023f-964a-01ff2b88a6a0e002"/>
+					</Co>
+					<Co K="I2" Nc="1" U="216e827b-0330-b8a3-01ff16d61e586347">
+						<In Input="216e817a-00ae-7358-07ff4935c603ad02"/>
+					</Co>
+					<Co K="Q" U="216e827b-0330-b8a4-02ff16d61e586347"/>
+				</C>
+				<C Type="State" V="178" U="216e828f-01e5-db17-ffffe001fe9bf86f" Title="Strom aktuell" Px="14112" Py="2112" Px2="16800" Py2="3192" Cl="141,255,112" Nio="11" LtE="560890513">
+					<Co K="I1" Nc="1" U="216e828f-01e5-db0c-00ff071e270f7b39">
+						<In Input="216e813a-02b5-eadf-02ff730143aa1e3a"/>
+					</Co>
+					<Co K="I2" Nc="1" U="216e828f-01e5-db0d-01ff071e270f7b39">
+						<In Input="216e8142-01e8-0ced-02ff512e4b470c80"/>
+					</Co>
+					<Co K="I3" U="216e828f-01e5-db0e-02ff071e270f7b39"/>
+					<Co K="I4" U="216e828f-01e5-db0f-03ff071e270f7b39"/>
+					<Co K="I5" U="216e828f-01e5-db10-04ff071e270f7b39"/>
+					<Co K="I6" U="216e828f-01e5-db11-05ff071e270f7b39"/>
+					<Co K="I7" U="216e828f-01e5-db12-06ff071e270f7b39"/>
+					<Co K="I8" U="216e828f-01e5-db13-07ff071e270f7b39"/>
+					<Co K="TQ" U="216e828f-01e5-db14-08ff071e270f7b39"/>
+					<Co K="AQ" U="216e828f-01e5-db15-09ff071e270f7b39"/>
+					<Co K="OutputAPI" U="216e828f-01e5-db16-0aff071e270f7b39"/>
+					<IoData Visu="true" Cr="216373ab-00cf-42fc-ffffe001fe9bf86f" Pr="216373ab-00cf-42f8-ffffe001fe9bf86f"/>
+					<Display Unit="&lt;v.pr&gt;"/>
+					<StateTexts></StateTexts>
+				</C>
+				<C Type="OutputRefLM" V="178" U="216e82ce-02ef-6518-ffffe001fe9bf86f" Title="Stromzähler prüfen" Px="15552" Py="9696" Px2="17664" Py2="9888" Cl="0,0,0" Nio="2" Ref="216e82bc-0072-3153-ffffe001fe9bf86f" WF="131072">
+					<Co K="AI" Nc="1" U="216e82ce-02ef-6516-00ff62cf27b20a03">
+						<In Input="216e827b-0330-b8a4-02ff16d61e586347"/>
+					</Co>
+					<Co K="AQ" U="216e82ce-02ef-6517-01ff62cf27b20a03"/>
+					<LoggerMailer RefNotification="216e82bc-0072-3153-ffffe001fe9bf86f" On="&lt;v&gt;" Off="&lt;v&gt;" MinimumTime="5000" NL="1"/>
+				</C>
+			</C>
+			<C Type="Page" V="178" U="216e82de-00ae-879e-ffffe001fe9bf86f" Title="Smartmeter vzLogger" LtE="560890600" WF="16384">
+				<IoData Cr="216373ab-00cf-42fc-ffffe001fe9bf86f" Pr="216373ab-00cf-42f8-ffffe001fe9bf86f"/>
+				<C Type="InputRef" V="178" U="216e8312-0218-f002-ffffe001fe9bf86f" Title="smartmeter_status_zaehler" Px="3936" Py="9984" Px2="6048" Py2="10176" Cl="0,0,0" Nio="4" Ref="216e82fc-0192-aa60-ffffe001fe9bf86f" WF="133120" Analog="true" LinkRefType="87">
+					<Co K="AI" Nc="1" U="216e8312-0218-effe-00ffd36f80d3b820">
+						<In Input="216e82fc-0192-aa5e-00ff5fbd10bfe741"/>
+					</Co>
+					<Co K="I" Nc="1" U="216e8312-0218-efff-01ffd36f80d3b820">
+						<In Input="216e82fc-0192-aa5f-01ff5fbd10bfe741"/>
+					</Co>
+					<Co K="AQ" U="216e8312-0218-f000-02ffd36f80d3b820"/>
+					<Co K="Q" U="216e8312-0218-f001-03ffd36f80d3b820"/>
+				</C>
+				<C Type="InputRef" V="178" U="216e8319-01af-0185-ffffe001fe9bf86f" Title="smartmeter_status_ok" Px="4704" Py="9216" Px2="6816" Py2="9408" Cl="0,0,0" Nio="4" Ref="216e82fc-0189-aa58-ffffe001fe9bf86f" WF="133120" Analog="true" LinkRefType="87">
+					<Co K="AI" Nc="1" U="216e8319-01af-0181-00ff5759644219ec">
+						<In Input="216e82fc-0189-aa56-00ff5fbd10bfe741"/>
+					</Co>
+					<Co K="I" Nc="1" U="216e8319-01af-0182-01ff5759644219ec">
+						<In Input="216e82fc-0189-aa57-01ff5fbd10bfe741"/>
+					</Co>
+					<Co K="AQ" U="216e8319-01af-0183-02ff5759644219ec"/>
+					<Co K="Q" U="216e8319-01af-0184-03ff5759644219ec"/>
+				</C>
+				<C Type="InputRef" V="178" U="216e8322-02be-130f-ffffe001fe9bf86f" Title="smartmeter_0001_Total_Power_OBIS_16.7.0" Px="8160" Py="3456" Px2="10272" Py2="3648" Cl="0,0,0" Nio="4" Ref="216e82fc-0176-aa44-ffffe001fe9bf86f" WF="133120" Analog="true" LinkRefType="87">
+					<Co K="AI" Nc="1" U="216e8322-02be-130b-00ffcbe163c06ec7">
+						<In Input="216e82fc-0176-aa42-00ff5fbd10bfe741"/>
+					</Co>
+					<Co K="I" Nc="1" U="216e8322-02be-130c-01ffcbe163c06ec7">
+						<In Input="216e82fc-0176-aa43-01ff5fbd10bfe741"/>
+					</Co>
+					<Co K="AQ" U="216e8322-02be-130d-02ffcbe163c06ec7"/>
+					<Co K="Q" U="216e8322-02be-130e-03ffcbe163c06ec7"/>
+				</C>
+				<C Type="InputRef" V="178" U="216e832c-02cb-3619-ffffe001fe9bf86f" Title="smartmeter_0001_Consumption_Total_OBIS_1.8.0" Px="4416" Py="5376" Px2="6528" Py2="5568" Cl="0,0,0" Nio="4" Ref="216e82fc-016c-aa3c-ffffe001fe9bf86f" WF="133120" Analog="true" LinkRefType="87">
+					<Co K="AI" Nc="1" U="216e832c-02cb-3615-00ff4ab67cfa3daa">
+						<In Input="216e82fc-016c-aa3a-00ff5fbd10bfe741"/>
+					</Co>
+					<Co K="I" Nc="1" U="216e832c-02cb-3616-01ff4ab67cfa3daa">
+						<In Input="216e82fc-016c-aa3b-01ff5fbd10bfe741"/>
+					</Co>
+					<Co K="AQ" U="216e832c-02cb-3617-02ff4ab67cfa3daa"/>
+					<Co K="Q" U="216e832c-02cb-3618-03ff4ab67cfa3daa"/>
+				</C>
+				<C Type="InputRef" V="178" U="216e83ac-002f-dd75-ffffe001fe9bf86f" Title="Konstante 1" Px="3936" Py="10176" Px2="6048" Py2="10368" Cl="0,0,0" Nio="4" Ref="216c8f88-0096-1e34-ffffe001fe9bf86f" WF="133120" Analog="true" LinkRefType="17">
+					<Co K="AI" Nc="1" U="216e83ac-002f-dd71-00ff5881ad610e5c">
+						<In Input="216c8f88-0096-1e33-00ff13c84b8d596b"/>
+					</Co>
+					<Co K="I" U="216e83ac-002f-dd72-01ff5881ad610e5c"/>
+					<Co K="AQ" U="216e83ac-002f-dd73-02ff5881ad610e5c"/>
+					<Co K="Q" U="216e83ac-002f-dd74-03ff5881ad610e5c"/>
+				</C>
+				<C Type="PulseAt" V="178" U="216e8332-036c-47b3-ffffe001fe9bf86f" Title="Tagesbeginn 0:00" Px="7200" Py="6720" Px2="9888" Py2="7608" Cl="141,255,112" Nio="5" LtE="560890684" WF="131072" Sec="0" SpStates="216e8332-036c-47ab-ffff137f3511b1a8,216e8332-036c-47ac-ffff137f3511b1a8,216e8332-036c-47ad-ffff137f3511b1a8" Typ="0">
+					<Co K="InputDisable" U="216e8332-0366-47ae-00ff137f3511b1a8"/>
+					<Co K="Remanence" U="216e8332-0366-47af-01ff137f3511b1a8"/>
+					<Co K="Time" Def="1" U="216e8332-0366-47b0-02ff137f3511b1a8"/>
+					<Co K="Q" U="216e8332-0366-47b1-03ff137f3511b1a8"/>
+					<Co K="OutputAPI" U="216e8332-0366-47b2-04ff137f3511b1a8"/>
+					<IoData Visu="true" Cr="216373ab-00cf-42fc-ffffe001fe9bf86f" Pr="216373ab-00cf-42f8-ffffe001fe9bf86f"/>
+				</C>
+				<C Type="AMemory" V="178" U="216e8343-01ef-7c64-ffffe001fe9bf86f" Title="Stand bei Tagesbeginn (Wh)" Px="11520" Py="5856" Px2="12864" Py2="6744" Cl="141,255,112" Nio="5" LtE="560890693" WF="131072">
+					<Co K="Input" Nc="1" U="216e8343-01ef-7c5f-00ff6f3129f90b43">
+						<In Input="216e832c-02cb-3617-02ff4ab67cfa3daa"/>
+					</Co>
+					<Co K="Trigger" Nc="1" U="216e8343-01ef-7c60-01ff6f3129f90b43">
+						<In Input="216e8332-0366-47b1-03ff137f3511b1a8"/>
+					</Co>
+					<Co K="Reset" U="216e8343-01ef-7c61-02ff6f3129f90b43"/>
+					<Co K="Remanence" Inv="true" U="216e8343-01ef-7c62-03ff6f3129f90b43"/>
+					<Co K="AQ" U="216e8343-01ef-7c63-04ff6f3129f90b43"/>
+				</C>
+				<C Type="Formula" V="178" U="216e8353-0078-9f92-ffffe001fe9bf86f" Title="Verbrauch heute (Wh)" Px="14208" Py="5088" Px2="15552" Py2="5976" Cl="141,255,112" Nio="6" LtE="560890711" Formula="I1-I2" Valid="true">
+					<Co K="Input1" Nc="1" U="216e8353-0078-9f8c-00fff97631d712cc">
+						<In Input="216e832c-02cb-3617-02ff4ab67cfa3daa"/>
+					</Co>
+					<Co K="Input2" Nc="1" U="216e8353-0078-9f8d-01fff97631d712cc">
+						<In Input="216e8343-01ef-7c63-04ff6f3129f90b43"/>
+					</Co>
+					<Co K="Input3" U="216e8353-0078-9f8e-02fff97631d712cc"/>
+					<Co K="Input4" U="216e8353-0078-9f8f-03fff97631d712cc"/>
+					<Co K="AQ" U="216e8353-0078-9f90-04fff97631d712cc"/>
+					<Co K="TQ" U="216e8353-0078-9f91-05fff97631d712cc"/>
+				</C>
+				<C Type="Validator" V="178" U="216e8361-031d-d468-ffffe001fe9bf86f" Title="Lesekopf zählt nicht mehr" Px="7584" Py="9696" Px2="8928" Py2="10584" Cl="141,255,112" Nio="8" LtE="560890731">
+					<Co K="inval" Nc="1" U="216e8361-031d-d460-00ffb1c504c63247">
+						<In Input="216e8312-0218-f000-02ffd36f80d3b820"/>
+					</Co>
+					<Co K="enable" Inv="true" Nc="1" U="216e8361-031d-d461-01ffb1c504c63247">
+						<In Input="216e83ac-002f-dd73-02ff5881ad610e5c"/>
+					</Co>
+					<Co K="mintime" Def="1800" U="216e8361-031d-d462-02ffb1c504c63247"/>
+					<Co K="minval" U="216e8361-031d-d463-03ffb1c504c63247"/>
+					<Co K="maxval" Def="999" U="216e8361-031d-d464-04ffb1c504c63247"/>
+					<Co K="delay" U="216e8361-031d-d465-05ffb1c504c63247"/>
+					<Co K="outval" U="216e8361-031d-d466-06ffb1c504c63247"/>
+					<Co K="error" U="216e8361-031d-d467-07ffb1c504c63247"/>
+				</C>
+				<C Type="Less" V="178" U="216e8379-0207-3e2c-ffffe001fe9bf86f" Title="Einspeisung aktiv" Px="11399" Py="2592" Px2="12743" Py2="3288" Cl="141,255,112" Nio="3" LtE="560890748">
+					<Co K="Input1" Nc="1" U="216e8379-0207-3e29-00ffb120be94b652">
+						<In Input="216e8322-02be-130d-02ffcbe163c06ec7"/>
+					</Co>
+					<Co K="Input2" U="216e8379-0207-3e2a-01ffb120be94b652"/>
+					<Co K="Q" U="216e8379-0207-3e2b-02ffb120be94b652"/>
+				</C>
+				<C Type="Not" V="178" U="216e8381-035c-617a-ffffe001fe9bf86f" Title="Lesekopf meldet Fehler" Px="7584" Py="8928" Px2="8928" Py2="9432" Cl="141,255,112" Nio="2" LtE="560890756">
+					<Co K="I" Nc="1" U="216e8381-035c-6178-00ff1620100505d5">
+						<In Input="216e8319-01af-0183-02ff5759644219ec"/>
+					</Co>
+					<Co K="Q" U="216e8381-035c-6179-01ff1620100505d5"/>
+				</C>
+				<C Type="Or" V="178" U="216e8392-026a-84d0-ffffe001fe9bf86f" Title="Stromzähler gestört" Px="10272" Py="9312" Px2="11616" Py2="10008" Cl="141,255,112" Nio="3" LtE="560890773">
+					<Co K="I1" Nc="1" U="216e8392-026a-84cd-00ffd6c12eccf364">
+						<In Input="216e8381-035c-6179-01ff1620100505d5"/>
+					</Co>
+					<Co K="I2" Nc="1" U="216e8392-026a-84ce-01ffd6c12eccf364">
+						<In Input="216e8361-031d-d467-07ffb1c504c63247"/>
+					</Co>
+					<Co K="Q" U="216e8392-026a-84cf-02ffd6c12eccf364"/>
+				</C>
+				<C Type="State" V="178" U="216e839a-03ca-a83e-ffffe001fe9bf86f" Title="Strom aktuell" Px="11520" Py="3648" Px2="14208" Py2="4728" Cl="141,255,112" Nio="11" LtE="560890781">
+					<Co K="I1" Nc="1" U="216e839a-03ca-a833-00ff56cf2bee8bb2">
+						<In Input="216e8322-02be-130d-02ffcbe163c06ec7"/>
+					</Co>
+					<Co K="I2" Nc="1" U="216e839a-03ca-a834-01ff56cf2bee8bb2">
+						<In Input="216e832c-02cb-3617-02ff4ab67cfa3daa"/>
+					</Co>
+					<Co K="I3" U="216e839a-03ca-a835-02ff56cf2bee8bb2"/>
+					<Co K="I4" U="216e839a-03ca-a836-03ff56cf2bee8bb2"/>
+					<Co K="I5" U="216e839a-03ca-a837-04ff56cf2bee8bb2"/>
+					<Co K="I6" U="216e839a-03ca-a838-05ff56cf2bee8bb2"/>
+					<Co K="I7" U="216e839a-03ca-a839-06ff56cf2bee8bb2"/>
+					<Co K="I8" U="216e839a-03ca-a83a-07ff56cf2bee8bb2"/>
+					<Co K="TQ" U="216e839a-03ca-a83b-08ff56cf2bee8bb2"/>
+					<Co K="AQ" U="216e839a-03ca-a83c-09ff56cf2bee8bb2"/>
+					<Co K="OutputAPI" U="216e839a-03ca-a83d-0aff56cf2bee8bb2"/>
+					<IoData Visu="true" Cr="216373ab-00cf-42fc-ffffe001fe9bf86f" Pr="216373ab-00cf-42f8-ffffe001fe9bf86f"/>
+					<Display Unit="&lt;v.pr&gt;"/>
+					<StateTexts></StateTexts>
+				</C>
+				<C Type="OutputRefLM" V="178" U="216e83bf-018f-00f6-ffffe001fe9bf86f" Title="Stromzähler prüfen" Px="12480" Py="9600" Px2="14592" Py2="9792" Cl="0,0,0" Nio="2" Ref="216e82bc-0072-3153-ffffe001fe9bf86f" WF="131072">
+					<Co K="AI" Nc="1" U="216e83bf-018f-00f4-00ff6d7e800a2657">
+						<In Input="216e8392-026a-84cf-02ffd6c12eccf364"/>
+					</Co>
+					<Co K="AQ" U="216e83bf-018f-00f5-01ff6d7e800a2657"/>
+					<LoggerMailer RefNotification="216e82bc-0072-3153-ffffe001fe9bf86f" On="&lt;v&gt;" Off="&lt;v&gt;" MinimumTime="5000" NL="1"/>
+				</C>
+			</C>
 			<C Type="Page" V="178" U="216d297c-00e2-3afc-ffffe001fe9bf86f" Title="Ultraschall" LtE="560802182" WF="16384">
 				<IoData Cr="216373ab-00cf-42fc-ffffe001fe9bf86f" Pr="216373ab-00cf-42f8-ffffe001fe9bf86f"/>
 				<C Type="InputRef" V="178" U="216d29cb-02cd-8890-ffffe001fe9bf86f" Title="ultraschall_valid" Px="9504" Py="4032" Px2="11616" Py2="4224" Cl="0,0,0" Nio="4" Ref="216d29ad-02d1-61a5-ffffe001fe9bf86f" WF="149504" LinkRefType="87">
@@ -7023,19 +7450,19 @@
 					<Co K="OutputAPI" U="216d382b-0110-d411-04ff141b014e96a4"/>
 					<IoData Visu="true" Cr="216373ab-00cf-42fc-ffffe001fe9bf86f" Pr="216373ab-00cf-42f8-ffffe001fe9bf86f"/>
 				</C>
-				<C Type="OutputRefLM" V="178" U="216d2be8-030a-ccc9-ffffe001fe9bf86f" Title="Füllstand niedrig" Px="16416" Py="3840" Px2="18528" Py2="4032" Cl="0,0,0" Nio="2" Ref="216d2b10-028d-2d6d-ffffe001fe9bf86f" WF="147456">
-					<Co K="AI" Nc="1" U="216d2be8-030a-ccc7-00ffa8031f31fefa">
-						<In Input="216d2ae0-034d-b654-04ff168081f0bdb3"/>
-					</Co>
-					<Co K="AQ" U="216d2be8-030a-ccc8-01ffa8031f31fefa"/>
-					<LoggerMailer RefNotification="216d2b10-028d-2d6d-ffffe001fe9bf86f" On="&lt;v&gt;" Off="&lt;v&gt;" MinimumTime="5000" NL="1"/>
-				</C>
 				<C Type="OutputRefLM" V="178" U="216d2b90-02e4-6fc3-ffffe001fe9bf86f" Title="Ultraschall ausgefallen" Px="12384" Py="9312" Px2="14496" Py2="9504" Cl="0,0,0" Nio="2" Ref="216d2b16-0278-47f1-ffffe001fe9bf86f" WF="147456">
 					<Co K="AI" Nc="1" U="216d2b90-02e4-6fc1-00ff28999b8b081a">
 						<In Input="216d2ae9-000f-ddec-04ffeb8e7b28fb61"/>
 					</Co>
 					<Co K="AQ" U="216d2b90-02e4-6fc2-01ff28999b8b081a"/>
 					<LoggerMailer RefNotification="216d2b16-0278-47f1-ffffe001fe9bf86f" On="&lt;v&gt;" Off="&lt;v&gt;" MinimumTime="5000" NL="1"/>
+				</C>
+				<C Type="OutputRefLM" V="178" U="216d2be8-030a-ccc9-ffffe001fe9bf86f" Title="Füllstand niedrig" Px="16416" Py="3840" Px2="18528" Py2="4032" Cl="0,0,0" Nio="2" Ref="216d2b10-028d-2d6d-ffffe001fe9bf86f" WF="147456">
+					<Co K="AI" Nc="1" U="216d2be8-030a-ccc7-00ffa8031f31fefa">
+						<In Input="216d2ae0-034d-b654-04ff168081f0bdb3"/>
+					</Co>
+					<Co K="AQ" U="216d2be8-030a-ccc8-01ffa8031f31fefa"/>
+					<LoggerMailer RefNotification="216d2b10-028d-2d6d-ffffe001fe9bf86f" On="&lt;v&gt;" Off="&lt;v&gt;" MinimumTime="5000" NL="1"/>
 				</C>
 			</C>
 			<C Type="Page" V="178" U="216ced7c-019d-0448-ffffe001fe9bf86f" Title="WaermepumpeCloud" LtE="560786822" WF="16384">
