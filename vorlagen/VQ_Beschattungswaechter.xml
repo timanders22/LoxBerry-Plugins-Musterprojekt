@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<VirtualOut HintText="Erzeugt vom LoxBerry-Plugin Beschattungswächter. Die Adressen tragen das Merkwort dieser Installation - nach einem neuen Merkwort neu einlesen. Befehl sofort senden: ohne Rücksicht auf Zeitfenster und Abstand. Automatiken zählen: fragt je Jalousie mehrere Zustände ab – nicht öfter als alle 15 Minuten aufrufen." Title="Beschattungswächter Befehle" Comment="Beschattungswächter (LoxBerry-Plugin)" Address="http://loxberry" CmdInit="" CloseAfterSend="true" CmdSep="">
+	<Info templateType="3" minVersion="17010727"/>
+	<VirtualOutCmd Title="BW Befehl jetzt senden" Comment="Befehl sofort senden" CmdOnMethod="GET" CmdOffMethod="GET" CmdOn="/plugins/beschattungswaechter/index.php?token=DEIN_TOKEN&amp;aktion=jetzt" CmdOnHTTP="" CmdOnPost="" CmdOff="" CmdOffHTTP="" CmdOffPost="" CmdAnswer="" Analog="false" Repeat="0" RepeatRate="0" HintText=""/>
+</VirtualOut>

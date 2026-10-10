@@ -17,6 +17,9 @@ Eine gemeinsame Loxone-Config-Projektdatei mit je einer Seite pro LoxBerry-Plugi
 | Abfahrtsassistent | [LoxBerry-Plugin-Abfahrtsassistent](https://github.com/timanders22/LoxBerry-Plugin-Abfahrtsassistent) |
 | Alexa NG | [LoxBerry-Plugin-Alexa-NG](https://github.com/timanders22/LoxBerry-Plugin-Alexa-NG) |
 | APC-UPS NG | [LoxBerry-Plugin-APC-UPS](https://github.com/timanders22/LoxBerry-Plugin-APC-UPS) |
+| Beschattungswächter | [LoxBerry-Plugin-Beschattungswaechter](https://github.com/timanders22/LoxBerry-Plugin-Beschattungswaechter) |
+| Bewässerung | [LoxBerry-Plugin-Bewaesserung](https://github.com/timanders22/LoxBerry-Plugin-Bewaesserung) |
+| Chromecast4lox | [LoxBerry-Plugin-Chromecast4lox](https://github.com/timanders22/LoxBerry-Plugin-Chromecast4lox) |
 | Dashboard | [LoxBerry-Plugin-Dashboard](https://github.com/timanders22/LoxBerry-Plugin-Dashboard) |
 | Docker NG | [LoxBerry-Plugin-Docker-NG](https://github.com/timanders22/LoxBerry-Plugin-Docker-NG) |
 | Ecowitt-Weiche | [LoxBerry-Plugin-Ecowitt-Weiche](https://github.com/timanders22/LoxBerry-Plugin-Ecowitt-Weiche) |
@@ -38,12 +41,12 @@ Weitere Plugins folgen.
 
 1. Projektdatei in Loxone Config öffnen. Der Miniserver darin ist ein Platzhalter („Demo-Miniserver“) – die Datei nie unverändert auf den eigenen Miniserver laden.
 2. Die gewünschte Seite ansehen und die Bausteine in das eigene Projekt kopieren (markieren, Strg+C, im eigenen Projekt Strg+V).
-3. Die passende Vorlage importieren: Peripherie → Virtuelle Eingänge → „Vordefinierte HTTP-Geräte“ → „Vorlage importieren“. Steht in der Adresse `loxberry` und `DEIN_TOKEN` (Dashboard, Docker NG, Ecowitt-Weiche, EVCC, Fensterbilanz, Funkwacht, Heimkino, Raumklima, WaermepumpeCloud), beides durch die Adresse des eigenen LoxBerry und den Schlüssel aus dem Plugin ersetzen; bei Kodi NG (`tcp://loxberry:9090`) nur die Adresse. Vorlagen mit `http://localhost` bleiben, wie sie sind. Ausgangs-Vorlagen (`VQ_…`) kommen genauso unter Virtuelle Ausgänge → „Vordefinierte Geräte“. Die Plugins bringen ihre Vorlage zum Teil auch selbst mit.
+3. Die passende Vorlage importieren: Peripherie → Virtuelle Eingänge → „Vordefinierte HTTP-Geräte“ → „Vorlage importieren“. Steht in der Adresse `loxberry` und `DEIN_TOKEN` (Beschattungswächter, Bewässerung, Dashboard, Docker NG, Ecowitt-Weiche, EVCC, Fensterbilanz, Funkwacht, Heimkino, Raumklima, WaermepumpeCloud), beides durch die Adresse des eigenen LoxBerry und den Schlüssel aus dem Plugin ersetzen; bei Kodi NG (`tcp://loxberry:9090`) und Chromecast4lox (`/dev/udp/loxberry/7090`) nur die Adresse. Vorlagen mit `http://localhost` bleiben, wie sie sind. Ausgangs-Vorlagen (`VQ_…`) kommen genauso unter Virtuelle Ausgänge → „Vordefinierte Geräte“. Die Plugins bringen ihre Vorlage zum Teil auch selbst mit.
 4. Die Tabelle im Reiter „Einbindung in Loxone“ des Plugins nennt jeden Baustein mit vollem Namen. Config kürzt lange Namen auf schmalen Bausteinen ab – in den Bildern stehen deshalb nur Anfänge.
 
 ## English
 
-A shared Loxone Config project with one page per LoxBerry plugin, showing the blocks from each plugin's "Loxone integration" tab, already wired. Open the file in Loxone Config, copy the blocks of the page you need into your own project, and import the matching template from `vorlagen/` (Virtual Inputs → Predefined HTTP devices → Import template). Where the address contains `loxberry` and `DEIN_TOKEN` (Dashboard, Docker NG, Ecowitt-Weiche, EVCC, Fensterbilanz, Funkwacht, Heimkino, Raumklima, WaermepumpeCloud), replace them with your LoxBerry's address and the plugin's key; for Kodi NG (`tcp://loxberry:9090`) only the address; templates with `http://localhost` stay as they are. Do not upload the project unchanged to your own Miniserver.
+A shared Loxone Config project with one page per LoxBerry plugin, showing the blocks from each plugin's "Loxone integration" tab, already wired. Open the file in Loxone Config, copy the blocks of the page you need into your own project, and import the matching template from `vorlagen/` (Virtual Inputs → Predefined HTTP devices → Import template). Where the address contains `loxberry` and `DEIN_TOKEN` (Beschattungswächter, Bewässerung, Dashboard, Docker NG, Ecowitt-Weiche, EVCC, Fensterbilanz, Funkwacht, Heimkino, Raumklima, WaermepumpeCloud), replace them with your LoxBerry's address and the plugin's key; for Kodi NG (`tcp://loxberry:9090`) and Chromecast4lox (`/dev/udp/loxberry/7090`) only the address; templates with `http://localhost` stay as they are. Do not upload the project unchanged to your own Miniserver.
 
 ## Lizenz
 
