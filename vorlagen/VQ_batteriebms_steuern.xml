@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<VirtualOut HintText="" Title="BMS 1 Speicher 1 Steuerung" Comment="LoxBerry-Plugin BMS" Address="http://loxberry" CmdInit="" CloseAfterSend="true" CmdSep="">
+	<Info templateType="3" minVersion="17010727"/>
+	<VirtualOutCmd Title="Laden erzwingen (W)" Comment="Watt, 0 gibt die Regie zurück" CmdOnMethod="GET" CmdOn="/plugins/batteriebms/index.php?token=DEIN_TOKEN&amp;aktion=laden&amp;geraet=1&amp;watt=&lt;v.0&gt;&amp;von=loxone" CmdOffMethod="GET" CmdOff="" Analog="true" Repeat="0" RepeatRate="0" HintText=""/>
+	<VirtualOutCmd Title="Entladen erzwingen (W)" Comment="Watt, 0 gibt die Regie zurück" CmdOnMethod="GET" CmdOn="/plugins/batteriebms/index.php?token=DEIN_TOKEN&amp;aktion=entladen&amp;geraet=1&amp;watt=&lt;v.0&gt;&amp;von=loxone" CmdOffMethod="GET" CmdOff="" Analog="true" Repeat="0" RepeatRate="0" HintText=""/>
+	<VirtualOutCmd Title="Automatik" Comment="Beendet den Zwang sofort" CmdOnMethod="GET" CmdOn="/plugins/batteriebms/index.php?token=DEIN_TOKEN&amp;aktion=automatik&amp;geraet=1&amp;von=loxone" CmdOffMethod="GET" CmdOff="" Analog="false" Repeat="0" RepeatRate="0" HintText=""/>
+	<VirtualOutCmd Title="Lebenszeichen" Comment="Hält den Zwang, sonst Totmann" CmdOnMethod="GET" CmdOn="/plugins/batteriebms/index.php?token=DEIN_TOKEN&amp;aktion=lebenszeichen&amp;geraet=1&amp;von=loxone" CmdOffMethod="GET" CmdOff="" Analog="false" Repeat="0" RepeatRate="0" HintText=""/>
+</VirtualOut>
