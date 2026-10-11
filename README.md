@@ -17,8 +17,10 @@ Eine gemeinsame Loxone-Config-Projektdatei mit je einer Seite pro LoxBerry-Plugi
 | Abfahrtsassistent | [LoxBerry-Plugin-Abfahrtsassistent](https://github.com/timanders22/LoxBerry-Plugin-Abfahrtsassistent) |
 | Alexa NG | [LoxBerry-Plugin-Alexa-NG](https://github.com/timanders22/LoxBerry-Plugin-Alexa-NG) |
 | AnkerSolix | [LoxBerry-Plugin-AnkerSolix](https://github.com/timanders22/LoxBerry-Plugin-AnkerSolix) |
+| AnkerSolix Steuerung | [LoxBerry-Plugin-AnkerSolix](https://github.com/timanders22/LoxBerry-Plugin-AnkerSolix) |
 | APC-UPS NG | [LoxBerry-Plugin-APC-UPS](https://github.com/timanders22/LoxBerry-Plugin-APC-UPS) |
 | BatterieBMS | [LoxBerry-Plugin-BatterieBMS](https://github.com/timanders22/LoxBerry-Plugin-BatterieBMS) |
+| BatterieBMS Spotpreis-Laden | [LoxBerry-Plugin-BatterieBMS](https://github.com/timanders22/LoxBerry-Plugin-BatterieBMS) |
 | Beschattungswächter | [LoxBerry-Plugin-Beschattungswaechter](https://github.com/timanders22/LoxBerry-Plugin-Beschattungswaechter) |
 | Bewässerung | [LoxBerry-Plugin-Bewaesserung](https://github.com/timanders22/LoxBerry-Plugin-Bewaesserung) |
 | Chromecast4lox | [LoxBerry-Plugin-Chromecast4lox](https://github.com/timanders22/LoxBerry-Plugin-Chromecast4lox) |
@@ -41,6 +43,7 @@ Eine gemeinsame Loxone-Config-Projektdatei mit je einer Seite pro LoxBerry-Plugi
 | WaermepumpeCloud | [LoxBerry-Plugin-WaermepumpeCloud](https://github.com/timanders22/LoxBerry-Plugin-WaermepumpeCloud) |
 | WiFi-Scanner-NG | [LoxBerry-Plugin-WiFi-Scanner-NG](https://github.com/timanders22/LoxBerry-Plugin-WiFi-Scanner-NG) |
 | Zendure SolarFlow | [LoxBerry-Plugin-ZendureSolarFlow](https://github.com/timanders22/LoxBerry-Plugin-ZendureSolarFlow) |
+| Zendure SolarFlow Steuerung | [LoxBerry-Plugin-ZendureSolarFlow](https://github.com/timanders22/LoxBerry-Plugin-ZendureSolarFlow) |
 | Zigbee2MqttNG | [LoxBerry-Plugin-Zigbee2MqttNG](https://github.com/timanders22/LoxBerry-Plugin-Zigbee2MqttNG) |
 
 Weitere Plugins folgen.
@@ -49,7 +52,7 @@ Weitere Plugins folgen.
 
 1. Projektdatei in Loxone Config öffnen. Der Miniserver darin ist ein Platzhalter („Demo-Miniserver“) – die Datei nie unverändert auf den eigenen Miniserver laden.
 2. Die gewünschte Seite ansehen und die Bausteine in das eigene Projekt kopieren (markieren, Strg+C, im eigenen Projekt Strg+V).
-3. Die passende Vorlage importieren: Peripherie → Virtuelle Eingänge → „Vordefinierte HTTP-Geräte“ → „Vorlage importieren“. Steht in der Adresse `loxberry` und `DEIN_TOKEN` (AnkerSolix, BatterieBMS, Beschattungswächter, Bewässerung, Dashboard, Docker NG, Ecowitt-Weiche, Einspeisebremse, EVCC, Fensterbilanz, Funkwacht, Heimkino, Raumklima, WaermepumpeCloud, Zendure SolarFlow), beides durch die Adresse des eigenen LoxBerry und den Schlüssel aus dem Plugin ersetzen; bei Kodi NG (`tcp://loxberry:9090`) und Chromecast4lox (`/dev/udp/loxberry/11884`, UDP-Eingang des MQTT-Gateways – Port aus den MQTT-Einstellungen des LoxBerry) nur die Adresse. Bei Robonect und Saugroboter steht im Eingang nur `loxberry`, in der Ausgangs-Vorlage auch `DEIN_TOKEN`. Vorlagen mit `http://localhost` bleiben, wie sie sind. Bei Smartmeter steht `0001` für die Zählernummer aus den Einstellungen des Plugins – die Vorlage am besten im Plugin selbst erzeugen lassen. Ausgangs-Vorlagen (`VQ_…`) kommen genauso unter Virtuelle Ausgänge → „Vordefinierte Geräte“. Die Plugins bringen ihre Vorlage zum Teil auch selbst mit.
+3. Die passende Vorlage importieren: Peripherie → Virtuelle Eingänge → „Vordefinierte HTTP-Geräte“ → „Vorlage importieren“. Steht in der Adresse `loxberry` und `DEIN_TOKEN` (AnkerSolix, BatterieBMS, Beschattungswächter, Bewässerung, Dashboard, Docker NG, Ecowitt-Weiche, Einspeisebremse, EVCC, Fensterbilanz, Funkwacht, Heimkino, Raumklima, WaermepumpeCloud, Zendure SolarFlow), beides durch die Adresse des eigenen LoxBerry und den Schlüssel aus dem Plugin ersetzen; bei Kodi NG (`tcp://loxberry:9090`) und Chromecast4lox (`/dev/udp/loxberry/11884`, UDP-Eingang des MQTT-Gateways – Port aus den MQTT-Einstellungen des LoxBerry) nur die Adresse. Bei Robonect und Saugroboter steht im Eingang nur `loxberry`, in der Ausgangs-Vorlage auch `DEIN_TOKEN`. Vorlagen mit `http://localhost` bleiben, wie sie sind. „Netzleistung (eigene Quelle)“ auf den Steuerungsseiten ist ein Virtueller Eingang für den eigenen Stromzähler (plus = Bezug, minus = Einspeisung); die Seite „BatterieBMS Spotpreis-Laden“ braucht zusätzlich die Vorlage `VI_spotpreis_awattar.xml`. Bei Smartmeter steht `0001` für die Zählernummer aus den Einstellungen des Plugins – die Vorlage am besten im Plugin selbst erzeugen lassen. Ausgangs-Vorlagen (`VQ_…`) kommen genauso unter Virtuelle Ausgänge → „Vordefinierte Geräte“. Die Plugins bringen ihre Vorlage zum Teil auch selbst mit.
 4. Die Tabelle im Reiter „Einbindung in Loxone“ des Plugins nennt jeden Baustein mit vollem Namen. Config kürzt lange Namen auf schmalen Bausteinen ab – in den Bildern stehen deshalb nur Anfänge.
 
 ## English
