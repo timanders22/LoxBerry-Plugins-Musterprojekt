@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<VirtualOut HintText="" Title="LoxBerry MQTT Haus" Comment="UDP-Eingang des MQTT-Gateways auf dem LoxBerry" Address="/dev/udp/loxberry/11884" CmdInit="" CloseAfterSend="true" CmdSep="">
+	<Info templateType="3" minVersion="17010727"/>
+	<VirtualOutCmd Title="Speicher-Aufnahme senden" Comment="Restaufnahme aller Speicher in W, nie retain" CmdOnMethod="GET" CmdOffMethod="GET" CmdOn="publish haus/energie/aufnahme_w &lt;v.0&gt;" CmdOnHTTP="" CmdOnPost="" CmdOff="" CmdOffHTTP="" CmdOffPost="" CmdAnswer="" Analog="true" Repeat="0" RepeatRate="0" HintText=""/>
+	<VirtualOutCmd Title="Zeitstempel senden" Comment="Unix-Zeit des Werts in s" CmdOnMethod="GET" CmdOffMethod="GET" CmdOn="publish haus/energie/aufnahme_ts &lt;v.0&gt;" CmdOnHTTP="" CmdOnPost="" CmdOff="" CmdOffHTTP="" CmdOffPost="" CmdAnswer="" Analog="true" Repeat="0" RepeatRate="0" HintText=""/>
+</VirtualOut>
