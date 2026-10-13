@@ -6807,16 +6807,6 @@
 						<IoData Cr="216373ab-00cf-42fc-ffffe001fe9bf86f" Pr="216373ab-00ce-42f4-ffffe001fe9bf86f" St="2"/>
 						<Display Unit="&lt;v.1&gt;" StateOnly="true"/>
 					</C>
-					<C Type="VirtualOutCmd" IName="VQC42" V="178" U="216cebfe-0317-291d-ffffe001fe9bf86f" Title="EVCC_SET_FAHRZEUG_LP1" Nio="1" WF="16384" Comment="Fahrzeug dem Ladepunkt zuordnen" CmdOn="/index.php?token=DEIN_TOKEN&amp;aktion=fahrzeug&amp;lp=1&amp;von=loxone&amp;wert=&lt;v.0&gt;" SourceValHigh="10" DestValHigh="10" Tx="false" NTXT="ungemessen: aus der EVCC-Dokumentation, an keiner Anlage geprüft">
-						<Co K="I" U="216cebfe-0317-291c-00ff6b8735d8de2e"/>
-						<IoData Cr="216373ab-00cf-42fc-ffffe001fe9bf86f" Pr="216373ab-00ce-42f4-ffffe001fe9bf86f" St="2"/>
-						<Display Unit="&lt;v.1&gt;" StateOnly="true"/>
-					</C>
-					<C Type="VirtualOutCmd" IName="VQC43" V="178" U="216cebfe-0317-2920-ffffe001fe9bf86f" Title="EVCC_SET_FAHRZEUG_LP2" Nio="1" WF="16384" Comment="Fahrzeug dem Ladepunkt zuordnen" CmdOn="/index.php?token=DEIN_TOKEN&amp;aktion=fahrzeug&amp;lp=2&amp;von=loxone&amp;wert=&lt;v.0&gt;" SourceValHigh="10" DestValHigh="10" Tx="false" NTXT="ungemessen: aus der EVCC-Dokumentation, an keiner Anlage geprüft">
-						<Co K="I" U="216cebfe-0317-291f-00ff6b8735d8de2e"/>
-						<IoData Cr="216373ab-00cf-42fc-ffffe001fe9bf86f" Pr="216373ab-00ce-42f4-ffffe001fe9bf86f" St="2"/>
-						<Display Unit="&lt;v.1&gt;" StateOnly="true"/>
-					</C>
 					<C Type="VirtualOutCmd" IName="VQC44" V="178" U="216cebfe-0317-2923-ffffe001fe9bf86f" Title="EVCC_SET_FAHRZEUGAUS_LP1" Cl="238,238,238" Nio="1" WF="16400" Comment="Zuordnung des Fahrzeugs lösen" CmdOn="/index.php?token=DEIN_TOKEN&amp;aktion=fahrzeugaus&amp;lp=1&amp;von=loxone" SourceValHigh="10" DestValHigh="10" Tx="false" NTXT="ungemessen: aus der EVCC-Dokumentation, an keiner Anlage geprüft">
 						<Co K="I" Nc="1" U="216cebfe-0317-2922-00ff6b8735d8de2e">
 							<In Input="21722c8f-02f7-d3ff-01ffc524624b97ce"/>
