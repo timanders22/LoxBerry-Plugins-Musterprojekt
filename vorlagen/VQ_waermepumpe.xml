@@ -4,4 +4,5 @@
 	<VirtualOutCmd Title="WP_SGREADY_2" Comment="Normalbetrieb" CmdOnMethod="GET" CmdOffMethod="GET" CmdOn="http://loxberry/plugins/waermepumpe/index.php?token=DEIN_TOKEN&amp;aktion=sgready&amp;stufe=2" CmdOff="" Analog="false"/>
 	<VirtualOutCmd Title="WP_SGREADY_3" Comment="Einschaltempfehlung" CmdOnMethod="GET" CmdOffMethod="GET" CmdOn="http://loxberry/plugins/waermepumpe/index.php?token=DEIN_TOKEN&amp;aktion=sgready&amp;stufe=3" CmdOff="" Analog="false"/>
 	<VirtualOutCmd Title="WP_SGREADY_4" Comment="Anlaufbefehl" CmdOnMethod="GET" CmdOffMethod="GET" CmdOn="http://loxberry/plugins/waermepumpe/index.php?token=DEIN_TOKEN&amp;aktion=sgready&amp;stufe=4" CmdOff="" Analog="false"/>
+	<VirtualOutCmd Title="WP_WW_BOOST" Comment="Warmwasser-Zwangsladung ein/aus — unabhängig von SG Ready" CmdOnMethod="GET" CmdOffMethod="GET" CmdOn="http://loxberry/plugins/waermepumpe/index.php?token=DEIN_TOKEN&amp;aktion=ww_boost&amp;ein=1" CmdOff="http://loxberry/plugins/waermepumpe/index.php?token=DEIN_TOKEN&amp;aktion=ww_boost&amp;ein=0" Analog="false"/>
 </VirtualOut>
