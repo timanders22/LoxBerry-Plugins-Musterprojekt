@@ -57,6 +57,7 @@ Eine gemeinsame Loxone-Config-Projektdatei mit je einer Seite pro LoxBerry-Plugi
 | Smartmeter vzLogger | [LoxBerry-Plugin-Smartmeter-classic](https://github.com/timanders22/LoxBerry-Plugin-Smartmeter-classic) |
 | Ultraschall | [LoxBerry-Plugin-Ultraschall](https://github.com/timanders22/LoxBerry-Plugin-Ultraschall) |
 | WaermepumpeCloud | [LoxBerry-Plugin-WaermepumpeCloud](https://github.com/timanders22/LoxBerry-Plugin-WaermepumpeCloud) |
+| WaermepumpeCloud Ausfall | [LoxBerry-Plugin-WaermepumpeCloud](https://github.com/timanders22/LoxBerry-Plugin-WaermepumpeCloud) |
 | WaermepumpeCloud Werte | [LoxBerry-Plugin-WaermepumpeCloud](https://github.com/timanders22/LoxBerry-Plugin-WaermepumpeCloud) |
 | WiFi-Scanner-NG | [LoxBerry-Plugin-WiFi-Scanner-NG](https://github.com/timanders22/LoxBerry-Plugin-WiFi-Scanner-NG) |
 | Zendure SolarFlow | [LoxBerry-Plugin-ZendureSolarFlow](https://github.com/timanders22/LoxBerry-Plugin-ZendureSolarFlow) |
