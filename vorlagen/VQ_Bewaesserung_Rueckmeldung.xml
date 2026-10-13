@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<VirtualOut HintText="" Title="Bewässerung Rückmeldung" Comment="UDP-Eingang des MQTT-Gateways auf dem LoxBerry" Address="/dev/udp/loxberry/11884" CmdInit="" CloseAfterSend="true" CmdSep="">
+	<Info templateType="3" minVersion="17010727"/>
+	<VirtualOutCmd Title="Rasen Rückmeldung senden" Comment="fertige Durchläufe Zone rasen" CmdOnMethod="GET" CmdOffMethod="GET" CmdOn="publish loxone/bewaesserung/rasen &lt;v.0&gt;" CmdOnHTTP="" CmdOnPost="" CmdOff="" CmdOffHTTP="" CmdOffPost="" CmdAnswer="" Analog="true" Repeat="0" RepeatRate="0" HintText=""/>
+	<VirtualOutCmd Title="Beet Rückmeldung senden" Comment="fertige Durchläufe Zone beet" CmdOnMethod="GET" CmdOffMethod="GET" CmdOn="publish loxone/bewaesserung/beet &lt;v.0&gt;" CmdOnHTTP="" CmdOnPost="" CmdOff="" CmdOffHTTP="" CmdOffPost="" CmdAnswer="" Analog="true" Repeat="0" RepeatRate="0" HintText=""/>
+</VirtualOut>
