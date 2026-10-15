@@ -1786,7 +1786,7 @@
 						<IoData Cr="216373ab-00cf-42fc-ffffe001fe9bf86f" Pr="216373ab-00cf-42f8-ffffe001fe9bf86f"/>
 						<Display Type="2" Unit="&lt;v&gt;" StateOnly="true"/>
 					</C>
-					<C Type="VirtualHttpInCmd" Desc="freier Platz in MB, -1 unbekannt" IName="VCI152" V="178" U="216cdd82-030f-6e35-ffffe001fe9bf86f" Title="DOCKERNG_PLATZFREI" Cl="0,0,0" Nio="2" WF="16400" ValOT="1" Check="PLATZFREI=\v" Signed="true" Analog="true" SourceValHigh="100" DestValHigh="100" MinVal="-1" MaxVal="999999">
+					<C Type="VirtualHttpInCmd" Desc="freier Platz in MB, -1 unbekannt" IName="VCI152" V="178" U="216cdd82-030f-6e35-ffffe001fe9bf86f" Title="DOCKERNG_PLATZFREI" Cl="0,0,0" Nio="2" WF="16400" ValOT="1" Check="PLATZFREI=\v" Signed="true" Analog="true" SourceValHigh="100" DestValHigh="100" MinVal="-1" MaxVal="99999999">
 						<Co K="AQ" U="216cdd82-030f-6e33-00ff158a2bfd5af7"/>
 						<Co K="Q" U="216cdd82-030f-6e34-01ff158a2bfd5af7"/>
 						<IoData Cr="216373ab-00cf-42fc-ffffe001fe9bf86f" Pr="216373ab-00ce-42f4-ffffe001fe9bf86f"/>

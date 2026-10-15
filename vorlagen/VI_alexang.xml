@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<VirtualInHttp HintText="" Title="Alexa NG" Comment="Alexa NG Status (15.10.2026)" Address="http://loxberry/plugins/alexang/?aktion=status" PollingTime="300">
+	<Info templateType="2" minVersion="17010727"/>
+	<VirtualInHttpCmd Title="Alexa NG OK" Comment="Alexa: in Ordnung" Check="\i;OK=\i\v" Signed="false" Analog="false" SourceValLow="0" DestValLow="0" SourceValHigh="1" DestValHigh="1" DefVal="0" MinVal="0" MaxVal="1" Unit="&lt;v.0&gt;" HintText=""/>
+	<VirtualInHttpCmd Title="Alexa NG ANMELDUNG" Comment="Alexa: Anmeldung" Check="\i;ANMELDUNG=\i\v" Signed="false" Analog="false" SourceValLow="0" DestValLow="0" SourceValHigh="1" DestValHigh="1" DefVal="0" MinVal="0" MaxVal="1" Unit="&lt;v.0&gt;" HintText=""/>
+	<VirtualInHttpCmd Title="Alexa NG GERAETE" Comment="Alexa: Geräte" Check="\i;GERAETE=\i\v" Signed="false" Analog="true" SourceValLow="0" DestValLow="0" SourceValHigh="1" DestValHigh="1" DefVal="0" MinVal="0" MaxVal="999" Unit="&lt;v.0&gt;" HintText=""/>
+	<VirtualInHttpCmd Title="Alexa NG ONLINE" Comment="Alexa: Geräte online" Check="\i;ONLINE=\i\v" Signed="false" Analog="true" SourceValLow="0" DestValLow="0" SourceValHigh="1" DestValHigh="1" DefVal="0" MinVal="0" MaxVal="999" Unit="&lt;v.0&gt;" HintText=""/>
+	<VirtualInHttpCmd Title="Alexa NG ALTER" Comment="Alexa: Alter Takt" Check="\i;ALTER=\i\v" Signed="true" Analog="true" SourceValLow="0" DestValLow="0" SourceValHigh="1" DestValHigh="1" DefVal="0" MinVal="-1" MaxVal="99999999" Unit="&lt;v.0&gt; s" HintText=""/>
+	<VirtualInHttpCmd Title="Alexa NG ZAEHLER" Comment="Alexa: Zähler" Check="\i;ZAEHLER=\i\v" Signed="true" Analog="true" SourceValLow="0" DestValLow="0" SourceValHigh="1" DestValHigh="1" DefVal="0" MinVal="-1" MaxVal="999" Unit="&lt;v.0&gt;" HintText=""/>
+	<VirtualInHttpCmd Title="Alexa NG LETZTE_OK" Comment="Alexa: letzte Ansage gelungen" Check="\i;LETZTE_OK=\i\v" Signed="true" Analog="true" SourceValLow="0" DestValLow="0" SourceValHigh="1" DestValHigh="1" DefVal="0" MinVal="-1" MaxVal="1" Unit="&lt;v.0&gt;" HintText=""/>
+	<VirtualInHttpCmd Title="Alexa NG LETZTE_ALTER" Comment="Alexa: Alter letzte Ansage" Check="\i;LETZTE_ALTER=\i\v" Signed="true" Analog="true" SourceValLow="0" DestValLow="0" SourceValHigh="1" DestValHigh="1" DefVal="0" MinVal="-1" MaxVal="99999999" Unit="&lt;v.0&gt; s" HintText=""/>
+</VirtualInHttp>

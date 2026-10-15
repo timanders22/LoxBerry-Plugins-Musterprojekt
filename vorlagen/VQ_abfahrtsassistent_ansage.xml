@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<VirtualOut HintText="" Title="Abfahrts-Assistent Ansage" Comment="Erzeugt vom LoxBerry-Plugin Abfahrts-Assistent, trägt das Merkwort. Loxone Config legt beim Import neu an und überschreibt nichts – zweimal eingelesen ergibt doppelte Bausteine. (15.10.2026)" Address="http://loxberry" CmdInit="" CloseAfterSend="true" CmdSep="">
+	<Info templateType="3" minVersion="17010727"/>
+	<VirtualOutCmd Title="Abfahrt: Ansage" Comment="Spricht die Abfahrtsansage" CmdOnMethod="GET" CmdOffMethod="GET" CmdOn="/plugins/abfahrtsassistent/termin_say.php?token=DEIN_AKTIONSTOKEN" CmdOnHTTP="" CmdOnPost="" CmdOff="" CmdOffHTTP="" CmdOffPost="" CmdAnswer="" Analog="false" Repeat="0" RepeatRate="0" HintText=""/>
+</VirtualOut>
