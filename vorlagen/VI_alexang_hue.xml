@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<VirtualInHttp HintText="" Title="Alexa NG Lampen" Comment="Alexa NG Lampen: Eingänge des MQTT-Gateways (15.10.2026)" Address="http://localhost" PollingTime="604800">
+	<Info templateType="2" minVersion="17010727"/>
+	<VirtualInHttpCmd Title="alexang_hue_kaffeemaschine_ein" Comment="Alexa Kaffeemaschine ein" Check=" " Signed="false" Analog="false" SourceValLow="0" DestValLow="0" SourceValHigh="1" DestValHigh="1" DefVal="0" MinVal="0" MaxVal="1" Unit="&lt;v&gt;" HintText=""/>
+	<VirtualInHttpCmd Title="alexang_hue_stehlampe_ein" Comment="Alexa Stehlampe ein" Check=" " Signed="false" Analog="false" SourceValLow="0" DestValLow="0" SourceValHigh="1" DestValHigh="1" DefVal="0" MinVal="0" MaxVal="1" Unit="&lt;v&gt;" HintText=""/>
+	<VirtualInHttpCmd Title="alexang_hue_esstisch_ein" Comment="Alexa Esstisch ein" Check=" " Signed="false" Analog="false" SourceValLow="0" DestValLow="0" SourceValHigh="1" DestValHigh="1" DefVal="0" MinVal="0" MaxVal="1" Unit="&lt;v&gt;" HintText=""/>
+	<VirtualInHttpCmd Title="alexang_hue_esstisch_helligkeit" Comment="Alexa Esstisch Helligkeit" Check=" " Signed="false" Analog="true" SourceValLow="0" DestValLow="0" SourceValHigh="1" DestValHigh="1" DefVal="0" MinVal="0" MaxVal="100" Unit="&lt;v&gt; %" HintText=""/>
+</VirtualInHttp>

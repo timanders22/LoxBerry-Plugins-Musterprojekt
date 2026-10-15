@@ -16,6 +16,8 @@ Eine gemeinsame Loxone-Config-Projektdatei mit je einer Seite pro LoxBerry-Plugi
 |---|---|
 | Abfahrtsassistent | [LoxBerry-Plugin-Abfahrtsassistent](https://github.com/timanders22/LoxBerry-Plugin-Abfahrtsassistent) |
 | Alexa NG | [LoxBerry-Plugin-Alexa-NG](https://github.com/timanders22/LoxBerry-Plugin-Alexa-NG) |
+| Alexa NG Radio | [LoxBerry-Plugin-Alexa-NG](https://github.com/timanders22/LoxBerry-Plugin-Alexa-NG) |
+| Alexa NG Lampen | [LoxBerry-Plugin-Alexa-NG](https://github.com/timanders22/LoxBerry-Plugin-Alexa-NG) |
 | AnkerSolix | [LoxBerry-Plugin-AnkerSolix](https://github.com/timanders22/LoxBerry-Plugin-AnkerSolix) |
 | AnkerSolix Steuerung | [LoxBerry-Plugin-AnkerSolix](https://github.com/timanders22/LoxBerry-Plugin-AnkerSolix) |
 | APC-UPS NG | [LoxBerry-Plugin-APC-UPS](https://github.com/timanders22/LoxBerry-Plugin-APC-UPS) |
@@ -28,8 +30,10 @@ Eine gemeinsame Loxone-Config-Projektdatei mit je einer Seite pro LoxBerry-Plugi
 | Chromecast4lox | [LoxBerry-Plugin-Chromecast4lox](https://github.com/timanders22/LoxBerry-Plugin-Chromecast4lox) |
 | Chromecast4lox Steuerung | [LoxBerry-Plugin-Chromecast4lox](https://github.com/timanders22/LoxBerry-Plugin-Chromecast4lox) |
 | Dashboard | [LoxBerry-Plugin-Dashboard](https://github.com/timanders22/LoxBerry-Plugin-Dashboard) |
+| Dashboard Steuerung | [LoxBerry-Plugin-Dashboard](https://github.com/timanders22/LoxBerry-Plugin-Dashboard) |
 | Docker NG | [LoxBerry-Plugin-Docker-NG](https://github.com/timanders22/LoxBerry-Plugin-Docker-NG) |
 | Ecowitt-Weiche | [LoxBerry-Plugin-Ecowitt-Weiche](https://github.com/timanders22/LoxBerry-Plugin-Ecowitt-Weiche) |
+| Ecowitt-Weiche Wetterwerte | [LoxBerry-Plugin-Ecowitt-Weiche](https://github.com/timanders22/LoxBerry-Plugin-Ecowitt-Weiche) |
 | Einspeisebremse | [LoxBerry-Plugin-Einspeisebremse](https://github.com/timanders22/LoxBerry-Plugin-Einspeisebremse) |
 | Einspeisebremse Speicher | [LoxBerry-Plugin-Einspeisebremse](https://github.com/timanders22/LoxBerry-Plugin-Einspeisebremse) |
 | EVCC | [LoxBerry-Plugin-EVCC](https://github.com/timanders22/LoxBerry-Plugin-EVCC) |
