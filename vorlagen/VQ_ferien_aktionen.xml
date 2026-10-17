@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<VirtualOut HintText="" Title="Ferien und Feiertage Aktionen" Comment="Erzeugt vom LoxBerry-Plugin Ferien und Feiertage. ACHTUNG: die Adressen enthalten das Aktionstoken. Wird in der Plugin-Oberfläche ein neues Token erzeugt, muss diese Vorlage neu eingelesen oder das Token in den Befehlen ausgetauscht werden." Address="http://loxberry" CmdInit="" CloseAfterSend="true" CmdSep="">
+	<Info templateType="3" minVersion="17010727"/>
+	<VirtualOutCmd Title="Ansage jetzt sprechen" Comment="Spricht die Vorabend-Ansage sofort" CmdOnMethod="GET" CmdOffMethod="GET" CmdOn="/plugins/ferien/ferien.php?say=1&amp;token=DEIN_TOKEN" CmdOnHTTP="" CmdOnPost="" CmdOff="" CmdOffHTTP="" CmdOffPost="" CmdAnswer="" Analog="false" Repeat="0" RepeatRate="0" HintText=""/>
+	<VirtualOutCmd Title="Test-Push auslösen" Comment="Setzt PTEST für fünf Minuten" CmdOnMethod="GET" CmdOffMethod="GET" CmdOn="/plugins/ferien/ferien.php?ptest=1&amp;token=DEIN_TOKEN" CmdOnHTTP="" CmdOnPost="" CmdOff="" CmdOffHTTP="" CmdOffPost="" CmdAnswer="" Analog="false" Repeat="0" RepeatRate="0" HintText=""/>
+</VirtualOut>
