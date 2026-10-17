@@ -2188,7 +2188,7 @@
 						<IoData Cr="216373ab-00d3-432c-ffffe001fe9bf86f" Pr="216373ab-00ce-42f4-ffffe001fe9bf86f" St="2"/>
 						<Display Unit="&lt;v&gt;" StateOnly="true" IxText="8"/>
 					</C>
-					<C Type="VirtualHttpInCmd" Desc="Lebenszeichen" IName="VCI1440" V="178" U="a7ce37fc-3920-7ff1-e1abc12bfb9180d9" Title="intercom_status_ok" Cl="238,238,238" Nio="2" WF="16400" ValOT="1" Check=" " Signed="true" Analog="true" SourceValHigh="1" DestValHigh="1" MaxVal="1">
+					<C Type="VirtualHttpInCmd" Desc="Türstation antwortet" IName="VCI1440" V="178" U="a7ce37fc-3920-7ff1-e1abc12bfb9180d9" Title="intercom_status_ok" Cl="238,238,238" Nio="2" WF="16400" ValOT="1" Check=" " Signed="true" Analog="true" SourceValHigh="1" DestValHigh="1" MaxVal="1">
 						<Co K="AQ" U="7c3ec1d0-0991-cb29-538d87e2f8ea825f"/>
 						<Co K="Q" U="1db0b895-2d48-e17b-1c89ec36168d1aee"/>
 						<IoData Cr="216373ab-00cf-42fc-ffffe001fe9bf86f" Pr="216373ab-00cf-42f8-ffffe001fe9bf86f"/>
@@ -2200,7 +2200,7 @@
 						<IoData Cr="216373ab-00cf-42fc-ffffe001fe9bf86f" Pr="216373ab-00cf-42f8-ffffe001fe9bf86f"/>
 						<Display Type="2" Unit="&lt;v.0&gt; s" StateOnly="true"/>
 					</C>
-					<C Type="VirtualHttpInCmd" Desc="Laufzähler 0-999" IName="VCI1442" V="178" U="4a3be9bd-85fb-824f-0c42ba5bd969f590" Title="intercom_status_zaehler" Cl="238,238,238" Nio="2" WF="16400" ValOT="1" Check=" " Signed="true" Analog="true" SourceValHigh="1" DestValHigh="1" MinVal="-1" MaxVal="999">
+					<C Type="VirtualHttpInCmd" Desc="Lebenszeichen 0-999" IName="VCI1442" V="178" U="4a3be9bd-85fb-824f-0c42ba5bd969f590" Title="intercom_status_zaehler" Cl="238,238,238" Nio="2" WF="16400" ValOT="1" Check=" " Signed="true" Analog="true" SourceValHigh="1" DestValHigh="1" MinVal="-1" MaxVal="999">
 						<Co K="AQ" U="03417d73-e239-f1ed-61159ee9ae675368"/>
 						<Co K="Q" U="47f8bd9b-1602-a536-cbb8b13632c5ce67"/>
 						<IoData Cr="216373ab-00cf-42fc-ffffe001fe9bf86f" Pr="216373ab-00cf-42f8-ffffe001fe9bf86f"/>
@@ -15572,13 +15572,6 @@
 					<Display Unit="&lt;v.pr&gt;"/>
 					<StateTexts></StateTexts>
 				</C>
-				<C Type="OutputRefLM" V="178" U="aa343374-2c57-d435-c496d0cfe68a654f" Title="Abfahrtsassistent gestört" Px="17856" Py="11424" Px2="19968" Py2="11616" Cl="0,0,0" Nio="2" Ref="a4c2d7da-198c-8633-5b5632d108ad95a7" WF="131072">
-					<Co K="AI" Nc="1" U="70628bf7-c982-5545-f59d5e2ad0187352">
-						<In Input="77c54482-717d-9831-40eba295a86718ba"/>
-					</Co>
-					<Co K="AQ" U="a656bc9e-635b-5245-1ba2e7dfa09b447f"/>
-					<LoggerMailer RefNotification="a4c2d7da-198c-8633-5b5632d108ad95a7" On="&lt;v&gt;" Off="&lt;v&gt;" MinimumTime="5000" NL="1"/>
-				</C>
 				<C Type="OutputRef" V="178" U="21637996-03e4-5846-ffffe001fe9bf86f" Title="Abfahrt: Ansage" Px="21504" Py="480" Px2="23616" Py2="672" Cl="0,0,0" Nio="2" Ref="216376a3-0125-573f-ffffe001fe9bf86f" WF="131072" LinkRefType="74">
 					<Co K="AI" Nc="1" U="21637996-03e4-5844-00ffbad61744dee4">
 						<In Input="2163788e-015e-eb6e-02ff77ac0b23af42"/>
@@ -15591,6 +15584,13 @@
 					</Co>
 					<Co K="AQ" U="2163793a-02ef-3700-01ffc226a21f08a2"/>
 					<LoggerMailer RefNotification="2163790e-0161-1d78-ffffe001fe9bf86f" On="&lt;v&gt;" Off="&lt;v&gt;" MinimumTime="5000" NL="1"/>
+				</C>
+				<C Type="OutputRefLM" V="178" U="aa343374-2c57-d435-c496d0cfe68a654f" Title="Abfahrtsassistent gestört" Px="17856" Py="11424" Px2="19968" Py2="11616" Cl="0,0,0" Nio="2" Ref="a4c2d7da-198c-8633-5b5632d108ad95a7" WF="131072">
+					<Co K="AI" Nc="1" U="70628bf7-c982-5545-f59d5e2ad0187352">
+						<In Input="77c54482-717d-9831-40eba295a86718ba"/>
+					</Co>
+					<Co K="AQ" U="a656bc9e-635b-5245-1ba2e7dfa09b447f"/>
+					<LoggerMailer RefNotification="a4c2d7da-198c-8633-5b5632d108ad95a7" On="&lt;v&gt;" Off="&lt;v&gt;" MinimumTime="5000" NL="1"/>
 				</C>
 			</C>
 			<C Type="Page" V="178" U="65d4ca11-983f-4b02-4062512ba666204f" Title="Abfuhrkalender" LtE="560167716" WF="16384">
@@ -15781,13 +15781,6 @@
 					<Display Unit="&lt;v.pr&gt;"/>
 					<StateTexts></StateTexts>
 				</C>
-				<C Type="OutputRefLM" V="178" U="23b338fd-6b88-aa4b-586c804bc20baedb" Title="Meldung Plugin gestört (Abfuhr)" Px="15744" Py="864" Px2="17856" Py2="1056" Cl="0,0,0" Nio="2" Ref="7ae5c632-a7d0-8e43-80e4277bcda3c835" WF="147456">
-					<Co K="AI" Nc="1" U="50878be1-352b-bdc9-193e91e648698e41">
-						<In Input="f0171712-0fe7-f55f-bb269a6da4625b52"/>
-					</Co>
-					<Co K="AQ" U="c5491d8d-3fed-dcae-ace258a91bfc2a61"/>
-					<LoggerMailer RefNotification="7ae5c632-a7d0-8e43-80e4277bcda3c835" On="&lt;v&gt;" Off="&lt;v&gt;" MinimumTime="5000" NL="1"/>
-				</C>
 				<C Type="OutputRefLM" V="178" U="0ff19480-aeee-7448-12cad5ecb1512c19" Title="Meldung Kalender läuft aus (Abfuhr)" Px="7488" Py="4416" Px2="9600" Py2="4608" Cl="0,0,0" Nio="2" Ref="3f30da96-f024-5957-cd37e32890677678" WF="16384">
 					<Co K="AI" Nc="1" U="87631a7e-479b-f1b5-3632b21b79c63cd3">
 						<In Input="46d89996-7038-abbb-4330de76dd3ede80"/>
@@ -15800,6 +15793,13 @@
 						<In Input="f3cf5a93-5357-9338-c1877d31b844689d"/>
 					</Co>
 					<Co K="AQ" U="7327864b-0a12-4d4a-070252b9d235e208"/>
+				</C>
+				<C Type="OutputRefLM" V="178" U="23b338fd-6b88-aa4b-586c804bc20baedb" Title="Meldung Plugin gestört (Abfuhr)" Px="15744" Py="864" Px2="17856" Py2="1056" Cl="0,0,0" Nio="2" Ref="7ae5c632-a7d0-8e43-80e4277bcda3c835" WF="147456">
+					<Co K="AI" Nc="1" U="50878be1-352b-bdc9-193e91e648698e41">
+						<In Input="f0171712-0fe7-f55f-bb269a6da4625b52"/>
+					</Co>
+					<Co K="AQ" U="c5491d8d-3fed-dcae-ace258a91bfc2a61"/>
+					<LoggerMailer RefNotification="7ae5c632-a7d0-8e43-80e4277bcda3c835" On="&lt;v&gt;" Off="&lt;v&gt;" MinimumTime="5000" NL="1"/>
 				</C>
 			</C>
 			<C Type="Page" V="178" U="7442dad6-277f-ad46-7492e9c1b67865be" Title="Abfuhrkalender Erinnerung und Ansage" LtE="560167716" WF="16384">
@@ -16132,12 +16132,6 @@
 					<Display Unit="&lt;v.pr&gt;"/>
 					<StateTexts></StateTexts>
 				</C>
-				<C Type="OutputRef" V="178" U="32828310-a4d6-0c65-5d9acde697e9dd5b" Title="Ansage jetzt" Px="9600" Py="6528" Px2="11712" Py2="6720" Cl="0,0,0" Nio="2" Ref="5315e199-8e65-8656-0c18dd6a0e9a668d" WF="147456" LinkRefType="74">
-					<Co K="AI" Nc="1" U="6c573834-6fbe-8c99-8c1de017d9457501">
-						<In Input="27306919-eee3-9e3c-eb29a0230c794519"/>
-					</Co>
-					<Co K="AQ" U="1f8872fd-a9a8-c26a-5ccbf6d84d7d9376"/>
-				</C>
 				<C Type="OutputRefLM" V="178" U="fe94c11f-1f87-fe08-1a7d7a15d31c8d19" Title="Meldung Tonne rausstellen (Abfuhr)" Px="7488" Py="5760" Px2="9600" Py2="5952" Cl="0,0,0" Nio="2" Ref="58a84d97-91f5-4ebd-58413e15b8bf71d1" WF="147456">
 					<Co K="AI" Nc="1" U="2c9630fb-a235-b311-c5dd3ed617c4ad20">
 						<In Input="63a826e3-bb70-2efc-2a5502becedb63b0"/>
@@ -16163,6 +16157,12 @@
 					</Co>
 					<Co K="AQ" U="28884343-9c5e-ebfa-b0d47639cb75aa0c"/>
 					<LoggerMailer RefNotification="52cb3ea1-b554-31fd-6bba7ef1b5d23ad8" On="&lt;v&gt;" Off="&lt;v&gt;" MinimumTime="5000" NL="1"/>
+				</C>
+				<C Type="OutputRef" V="178" U="32828310-a4d6-0c65-5d9acde697e9dd5b" Title="Ansage jetzt" Px="9600" Py="6528" Px2="11712" Py2="6720" Cl="0,0,0" Nio="2" Ref="5315e199-8e65-8656-0c18dd6a0e9a668d" WF="147456" LinkRefType="74">
+					<Co K="AI" Nc="1" U="6c573834-6fbe-8c99-8c1de017d9457501">
+						<In Input="27306919-eee3-9e3c-eb29a0230c794519"/>
+					</Co>
+					<Co K="AQ" U="1f8872fd-a9a8-c26a-5ccbf6d84d7d9376"/>
 				</C>
 			</C>
 			<C Type="Page" V="178" U="52e770a9-63b8-3873-1538b2314247560f" Title="Abfuhrkalender Tonnen" LtE="560167716" WF="16384">
@@ -16861,13 +16861,6 @@
 					<Display Unit="&lt;v.pr&gt;"/>
 					<StateTexts></StateTexts>
 				</C>
-				<C Type="OutputRefLM" V="178" U="5c625c30-6edc-29ed-c47bf8e22a4017f0" Title="Alexa NG gestört" Px="16896" Py="1056" Px2="19008" Py2="1248" Cl="0,0,0" Nio="2" Ref="cbcc668b-ae0d-a49d-da2edb93d2e637c6" WF="147456">
-					<Co K="AI" Nc="1" U="8057cb6c-c793-768c-f9b534929ffca49b">
-						<In Input="b2bc23d2-4458-5afe-7baab3921af97ea0"/>
-					</Co>
-					<Co K="AQ" U="5ac6aa9f-cc1e-3df6-26d0e1725dc1738d"/>
-					<LoggerMailer RefNotification="cbcc668b-ae0d-a49d-da2edb93d2e637c6" On="&lt;v&gt;" Off="&lt;v&gt;" MinimumTime="5000" NL="1"/>
-				</C>
 				<C Type="OutputRefLM" V="178" U="9939f15e-0881-b8e8-31458b9973d8733f" Title="Alexa-Ansage misslungen" Px="10848" Py="1728" Px2="12960" Py2="1920" Cl="0,0,0" Nio="2" Ref="47e124a7-d803-af7c-9eb97ac381b3c5ed" WF="147456">
 					<Co K="AI" Nc="1" U="ca5e6d44-3c45-0d47-9fef5e1ac94c956b">
 						<In Input="7e6438d9-212c-5b00-0bb220809a6aa86d"/>
@@ -16904,6 +16897,13 @@
 						<In Input="4af322ea-bd2c-da08-7027bad956fcc9d9"/>
 					</Co>
 					<Co K="AQ" U="88082d8e-7c62-1ea8-c2fbb0e5761f5ec3"/>
+				</C>
+				<C Type="OutputRefLM" V="178" U="5c625c30-6edc-29ed-c47bf8e22a4017f0" Title="Alexa NG gestört" Px="16896" Py="1056" Px2="19008" Py2="1248" Cl="0,0,0" Nio="2" Ref="cbcc668b-ae0d-a49d-da2edb93d2e637c6" WF="147456">
+					<Co K="AI" Nc="1" U="8057cb6c-c793-768c-f9b534929ffca49b">
+						<In Input="b2bc23d2-4458-5afe-7baab3921af97ea0"/>
+					</Co>
+					<Co K="AQ" U="5ac6aa9f-cc1e-3df6-26d0e1725dc1738d"/>
+					<LoggerMailer RefNotification="cbcc668b-ae0d-a49d-da2edb93d2e637c6" On="&lt;v&gt;" Off="&lt;v&gt;" MinimumTime="5000" NL="1"/>
 				</C>
 			</C>
 			<C Type="Page" V="178" U="23589001-13c0-c4ea-65466d24af99c022" Title="Alexa NG Lampen" LtE="560167480" WF="16384">
@@ -17053,12 +17053,6 @@
 					<IoData Visu="true" Cr="216373ab-00d5-4360-ffffe001fe9bf86f" Pr="216373ab-00cf-42f8-ffffe001fe9bf86f"/>
 					<PSD As="-2" Ae="1380" Amin="1" Amax="4" Dmin="30" Dmax="180" V="20"/>
 				</C>
-				<C Type="OutputRef" V="178" U="28803499-ba09-9dac-922c80458a2a0656" Title="Alexa Esstisch Rückmeldung Helligkeit" Px="19776" Py="2592" Px2="21888" Py2="2784" Cl="0,0,0" Nio="2" Ref="337789e7-2b84-57f5-8bd9ebc07635f4de" WF="147456" Analog="true" LinkRefType="74">
-					<Co K="AI" Nc="1" U="15e9279a-c66d-4fa1-62039f8259802c1b">
-						<In Input="21742e2e-0048-492c-0eff1d5928632a21"/>
-					</Co>
-					<Co K="AQ" U="4ca5bae2-22ba-12ae-365d84d1aed30d07"/>
-				</C>
 				<C Type="OutputRef" V="178" U="cfbf90dd-50ac-f543-77b408a96766ec5a" Title="Alexa Kaffeemaschine Rückmeldung" Px="14496" Py="5664" Px2="16608" Py2="5856" Cl="0,0,0" Nio="2" Ref="c81ac276-93f7-6aac-037e49c624501d87" WF="147456" LinkRefType="74">
 					<Co K="AI" Nc="1" U="f8fd1629-7095-4d4f-3d4c37e14b3dc5ac">
 						<In Input="21742ddb-03ba-c2ba-05fff9c921b64fec"/>
@@ -17076,6 +17070,12 @@
 						<In Input="21742e2e-0048-492d-0fff1d5928632a21"/>
 					</Co>
 					<Co K="AQ" U="88528e4e-64e7-d6c2-9c9dde2653a61806"/>
+				</C>
+				<C Type="OutputRef" V="178" U="28803499-ba09-9dac-922c80458a2a0656" Title="Alexa Esstisch Rückmeldung Helligkeit" Px="19776" Py="2592" Px2="21888" Py2="2784" Cl="0,0,0" Nio="2" Ref="337789e7-2b84-57f5-8bd9ebc07635f4de" WF="147456" Analog="true" LinkRefType="74">
+					<Co K="AI" Nc="1" U="15e9279a-c66d-4fa1-62039f8259802c1b">
+						<In Input="21742e2e-0048-492c-0eff1d5928632a21"/>
+					</Co>
+					<Co K="AQ" U="4ca5bae2-22ba-12ae-365d84d1aed30d07"/>
 				</C>
 			</C>
 			<C Type="Page" V="178" U="d7e0bfeb-d74a-4e8d-924934004f958cf2" Title="Alexa NG Radio" LtE="560167480" WF="16384">
@@ -17252,12 +17252,6 @@
 					</Co>
 					<Co K="Q" U="df102085-56f5-d75a-5ccc8f01ca0a7af7"/>
 				</C>
-				<C Type="OutputRef" V="178" U="21637a93-00ee-7b00-ffffe001fe9bf86f" Title="Alexa Radio Zone 1 Lautstärke" Px="5952" Py="6528" Px2="8064" Py2="6720" Cl="0,0,0" Nio="2" Ref="216376ba-0105-5caa-ffffe001fe9bf86f" WF="16384" Analog="true" LinkRefType="74">
-					<Co K="AI" Nc="1" U="21637a93-00ee-7afe-00fffa85d2920873">
-						<In Input="d311f6d4-3eb7-7f2d-2e3235b866f73bff"/>
-					</Co>
-					<Co K="AQ" U="21637a93-00ee-7aff-01fffa85d2920873"/>
-				</C>
 				<C Type="OutputRef" V="178" U="21637a97-003d-7e91-ffffe001fe9bf86f" Title="Alexa Radio alle Zonen Sender" Px="10368" Py="1440" Px2="12480" Py2="1632" Cl="0,0,0" Nio="2" Ref="216376ba-010a-5cb6-ffffe001fe9bf86f" WF="147456" Analog="true" LinkRefType="74">
 					<Co K="AI" Nc="1" U="21637a97-003d-7e8f-00ff27671f3c057b">
 						<In Input="b30ed406-b69f-73fc-fc9257301332e83e"/>
@@ -17305,6 +17299,12 @@
 						<In Input="57f47a19-110b-5825-50f24ee03f04ab04"/>
 					</Co>
 					<Co K="AQ" U="21637a86-0174-7772-01ff16dfb70354b2"/>
+				</C>
+				<C Type="OutputRef" V="178" U="21637a93-00ee-7b00-ffffe001fe9bf86f" Title="Alexa Radio Zone 1 Lautstärke" Px="5952" Py="6528" Px2="8064" Py2="6720" Cl="0,0,0" Nio="2" Ref="216376ba-0105-5caa-ffffe001fe9bf86f" WF="16384" Analog="true" LinkRefType="74">
+					<Co K="AI" Nc="1" U="21637a93-00ee-7afe-00fffa85d2920873">
+						<In Input="d311f6d4-3eb7-7f2d-2e3235b866f73bff"/>
+					</Co>
+					<Co K="AQ" U="21637a93-00ee-7aff-01fffa85d2920873"/>
 				</C>
 			</C>
 			<C Type="Page" V="178" U="216f2e11-038c-7f21-ffffe001fe9bf86f" Title="AnkerSolix" LtE="560934445" WF="16384">
@@ -17825,13 +17825,6 @@
 					<statGrp id="2" m="11" acc="true"/>
 					<statGrp id="3" m="11"/>
 				</C>
-				<C Type="OutputRefLM" V="178" U="216f3064-00e4-c235-ffffe001fe9bf86f" Title="Meldung Anker gestört" Px="15168" Py="8256" Px2="17280" Py2="8448" Cl="0,0,0" Nio="2" Ref="216f3057-01f0-961f-ffffe001fe9bf86f" WF="147456">
-					<Co K="AI" Nc="1" U="216f3064-00e4-c233-00ffe26abbbec2bb">
-						<In Input="216f302b-0089-e5fb-04ff9ae42a9a6dbb"/>
-					</Co>
-					<Co K="AQ" U="216f3064-00e4-c234-01ffe26abbbec2bb"/>
-					<LoggerMailer RefNotification="216f3057-01f0-961f-ffffe001fe9bf86f" On="&lt;v&gt;" Off="&lt;v&gt;" MinimumTime="5000" NL="1"/>
-				</C>
 				<C Type="OutputRefLM" V="178" U="216f3054-00ac-8017-ffffe001fe9bf86f" Title="Meldung Speicher leer" Px="13536" Py="3552" Px2="15648" Py2="3744" Cl="0,0,0" Nio="2" Ref="216f303e-031b-3e06-ffffe001fe9bf86f" WF="147456">
 					<Co K="AI" Nc="1" U="216f3054-00ac-8015-00ffb7fd187020d8">
 						<In Input="216f2fed-03c7-b275-05ffc8d8d310bbc2"/>
@@ -17844,6 +17837,13 @@
 						<In Input="216f44a7-02e7-c8f3-02ffad01afd92c70"/>
 					</Co>
 					<Co K="AQ" U="216f44e2-00ff-fbe6-01ffc9d730ca7d92"/>
+				</C>
+				<C Type="OutputRefLM" V="178" U="216f3064-00e4-c235-ffffe001fe9bf86f" Title="Meldung Anker gestört" Px="15168" Py="8256" Px2="17280" Py2="8448" Cl="0,0,0" Nio="2" Ref="216f3057-01f0-961f-ffffe001fe9bf86f" WF="147456">
+					<Co K="AI" Nc="1" U="216f3064-00e4-c233-00ffe26abbbec2bb">
+						<In Input="216f302b-0089-e5fb-04ff9ae42a9a6dbb"/>
+					</Co>
+					<Co K="AQ" U="216f3064-00e4-c234-01ffe26abbbec2bb"/>
+					<LoggerMailer RefNotification="216f3057-01f0-961f-ffffe001fe9bf86f" On="&lt;v&gt;" Off="&lt;v&gt;" MinimumTime="5000" NL="1"/>
 				</C>
 			</C>
 			<C Type="Page" V="178" U="216f45d0-03c5-3159-ffffe001fe9bf86f" Title="AnkerSolix Steuerung" LtE="560940500" WF="16384">
@@ -18437,13 +18437,6 @@
 					<Display Unit="&lt;v.pr&gt;"/>
 					<StateTexts></StateTexts>
 				</C>
-				<C Type="OutputRefLM" V="178" U="217258a9-01b6-7030-ffffe001fe9bf86f" Title="USV Akku tauschen" Px="11712" Py="10944" Px2="13824" Py2="11136" Cl="0,0,0" Nio="2" Ref="2172589d-0375-0330-ffffe001fe9bf86f" WF="16384">
-					<Co K="AI" Nc="1" U="217258a9-01b6-702e-00ff14efccd508f8">
-						<In Input="216cdfda-02df-b98c-02ff5c4af05cefdd"/>
-					</Co>
-					<Co K="AQ" U="217258a9-01b6-702f-01ff14efccd508f8"/>
-					<LoggerMailer RefNotification="2172589d-0375-0330-ffffe001fe9bf86f" On="&lt;v&gt;" Off="&lt;v&gt;" MinimumTime="5000" NL="1"/>
-				</C>
 				<C Type="OutputRefLM" V="178" U="217258bf-0157-4a38-ffffe001fe9bf86f" Title="USV Netz wieder da" Px="21408" Py="4608" Px2="23520" Py2="4800" Cl="0,0,0" Nio="2" Ref="217258b3-0323-dd30-ffffe001fe9bf86f" WF="147456">
 					<Co K="AI" Nc="1" U="217258bf-0157-4a36-00ff3aa452f6b372">
 						<In Input="21725871-01d5-f2b4-04ff1e65962681fe"/>
@@ -18471,6 +18464,13 @@
 					</Co>
 					<Co K="AQ" U="216ce073-034c-9a04-01ff48bfb81fa4dc"/>
 					<LoggerMailer RefNotification="216ce067-00c9-8893-ffffe001fe9bf86f" On="&lt;v&gt;" Off="&lt;v&gt;" MinimumTime="5000" NL="1"/>
+				</C>
+				<C Type="OutputRefLM" V="178" U="217258a9-01b6-7030-ffffe001fe9bf86f" Title="USV Akku tauschen" Px="11712" Py="10944" Px2="13824" Py2="11136" Cl="0,0,0" Nio="2" Ref="2172589d-0375-0330-ffffe001fe9bf86f" WF="16384">
+					<Co K="AI" Nc="1" U="217258a9-01b6-702e-00ff14efccd508f8">
+						<In Input="216cdfda-02df-b98c-02ff5c4af05cefdd"/>
+					</Co>
+					<Co K="AQ" U="217258a9-01b6-702f-01ff14efccd508f8"/>
+					<LoggerMailer RefNotification="2172589d-0375-0330-ffffe001fe9bf86f" On="&lt;v&gt;" Off="&lt;v&gt;" MinimumTime="5000" NL="1"/>
 				</C>
 			</C>
 			<C Type="Page" V="178" U="2172591a-016b-0f29-ffffe001fe9bf86f" Title="APC-UPS NG Akku und Netz" LtE="561142046" WF="16384">
@@ -18910,13 +18910,6 @@
 					<Display Unit="&lt;v.pr&gt;"/>
 					<StateTexts></StateTexts>
 				</C>
-				<C Type="OutputRefLM" V="178" U="21725ca8-00a9-f8c9-ffffe001fe9bf86f" Title="USV Netz unruhig" Px="14208" Py="864" Px2="16320" Py2="1056" Cl="0,0,0" Nio="2" Ref="21725c9c-0366-894b-ffffe001fe9bf86f" WF="147456">
-					<Co K="AI" Nc="1" U="21725ca8-00a9-f8c7-00ff0151a5cd1b4f">
-						<In Input="21725b6a-03a6-c476-05ff02a514f63282"/>
-					</Co>
-					<Co K="AQ" U="21725ca8-00a9-f8c8-01ff0151a5cd1b4f"/>
-					<LoggerMailer RefNotification="21725c9c-0366-894b-ffffe001fe9bf86f" On="&lt;v&gt;" Off="&lt;v&gt;" MinimumTime="5000" NL="1"/>
-				</C>
 				<C Type="OutputRefLM" V="178" U="21725c92-01fa-e21b-ffffe001fe9bf86f" Title="USV Akku lädt nicht" Px="16032" Py="5568" Px2="18144" Py2="5760" Cl="0,0,0" Nio="2" Ref="21725c87-0031-72a5-ffffe001fe9bf86f" WF="147456">
 					<Co K="AI" Nc="1" U="21725c92-01fa-e219-00ff32effcf9c299">
 						<In Input="21725bad-02cb-ee84-04ff34f205157c31"/>
@@ -18937,6 +18930,13 @@
 					</Co>
 					<Co K="AQ" U="21725c66-02a7-2462-01ff8758662bba69"/>
 					<LoggerMailer RefNotification="21725c41-0088-7d4e-ffffe001fe9bf86f" On="&lt;v&gt;" Off="&lt;v&gt;" MinimumTime="5000" NL="1"/>
+				</C>
+				<C Type="OutputRefLM" V="178" U="21725ca8-00a9-f8c9-ffffe001fe9bf86f" Title="USV Netz unruhig" Px="14208" Py="864" Px2="16320" Py2="1056" Cl="0,0,0" Nio="2" Ref="21725c9c-0366-894b-ffffe001fe9bf86f" WF="147456">
+					<Co K="AI" Nc="1" U="21725ca8-00a9-f8c7-00ff0151a5cd1b4f">
+						<In Input="21725b6a-03a6-c476-05ff02a514f63282"/>
+					</Co>
+					<Co K="AQ" U="21725ca8-00a9-f8c8-01ff0151a5cd1b4f"/>
+					<LoggerMailer RefNotification="21725c9c-0366-894b-ffffe001fe9bf86f" On="&lt;v&gt;" Off="&lt;v&gt;" MinimumTime="5000" NL="1"/>
 				</C>
 			</C>
 			<C Type="Page" V="178" U="4a002599-ff36-f204-5ad2e7ae4fadbfbb" Title="AudiConnect" LtE="561142046" WF="16384">
@@ -19280,13 +19280,6 @@
 					<Co K="RisingEdge" U="4ea413e4-ceda-318c-99ee4167e91c00e0"/>
 					<Co K="FallingEdge" U="928914b8-72a5-5135-9d6ab6ef0b33b2ba"/>
 				</C>
-				<C Type="OutputRefLM" V="178" U="e38ec867-468f-9abd-7dc39c8f6648627e" Title="Meldung Ladung beendet (Audi)" Px="20832" Py="10848" Px2="22944" Py2="11040" Cl="0,0,0" Nio="2" Ref="13e6af07-14d0-e9c2-4d1f32c1314c5769" WF="147456">
-					<Co K="AI" Nc="1" U="600a300e-0ca5-945f-d97603a16d502da2">
-						<In Input="928914b8-72a5-5135-9d6ab6ef0b33b2ba"/>
-					</Co>
-					<Co K="AQ" U="2548894f-3d55-7a8d-9be1137f8d697a43"/>
-					<LoggerMailer RefNotification="13e6af07-14d0-e9c2-4d1f32c1314c5769" On="&lt;v&gt;" Off="&lt;v&gt;" MinimumTime="5000" NL="1"/>
-				</C>
 				<C Type="OutputRefLM" V="178" U="fdc2bce9-a3d3-3709-c38f80dc7586bfe3" Title="Meldung Auto gestört (Audi)" Px="15264" Py="864" Px2="17376" Py2="1056" Cl="0,0,0" Nio="2" Ref="41e0742b-b772-6b25-1fd3627445181d0d" WF="147456">
 					<Co K="AI" Nc="1" U="24a6ab6b-28ca-9692-9c8395bf65eb2a1b">
 						<In Input="63fdc9ba-fb69-08b6-f32d659c5a5dbaac"/>
@@ -19300,6 +19293,13 @@
 					</Co>
 					<Co K="AQ" U="8b35c49b-1849-dc35-504ac33956358b95"/>
 					<LoggerMailer RefNotification="5286b456-668a-f4b3-9880fba395e95b81" On="&lt;v&gt;" Off="&lt;v&gt;" MinimumTime="5000" NL="1"/>
+				</C>
+				<C Type="OutputRefLM" V="178" U="e38ec867-468f-9abd-7dc39c8f6648627e" Title="Meldung Ladung beendet (Audi)" Px="20832" Py="10848" Px2="22944" Py2="11040" Cl="0,0,0" Nio="2" Ref="13e6af07-14d0-e9c2-4d1f32c1314c5769" WF="147456">
+					<Co K="AI" Nc="1" U="600a300e-0ca5-945f-d97603a16d502da2">
+						<In Input="928914b8-72a5-5135-9d6ab6ef0b33b2ba"/>
+					</Co>
+					<Co K="AQ" U="2548894f-3d55-7a8d-9be1137f8d697a43"/>
+					<LoggerMailer RefNotification="13e6af07-14d0-e9c2-4d1f32c1314c5769" On="&lt;v&gt;" Off="&lt;v&gt;" MinimumTime="5000" NL="1"/>
 				</C>
 			</C>
 			<C Type="Page" V="178" U="e7fca552-d3be-5a8f-0e5dc234f5ca2e24" Title="AudiConnect Fahrzeug" LtE="561142046" WF="16384">
@@ -19690,19 +19690,19 @@
 					<Display Unit="&lt;v.pr&gt;"/>
 					<StateTexts></StateTexts>
 				</C>
-				<C Type="OutputRefLM" V="178" U="f6b13a8e-84d5-0aa6-8fa44d21deaef3cc" Title="Meldung Fahrzeug offen (Audi)" Px="15072" Py="7488" Px2="17184" Py2="7680" Cl="0,0,0" Nio="2" Ref="3089ecb8-8c80-5405-6a4ae1c964da9ce5" WF="147456">
-					<Co K="AI" Nc="1" U="c99b7a6e-1700-9ad7-e045f8f18bea1dc1">
-						<In Input="2a5714cb-7947-57b5-bd0c9adb79afacd0"/>
-					</Co>
-					<Co K="AQ" U="30bf261d-0b76-b521-18d632de97830779"/>
-					<LoggerMailer RefNotification="3089ecb8-8c80-5405-6a4ae1c964da9ce5" On="&lt;v&gt;" Off="&lt;v&gt;" MinimumTime="5000" NL="1"/>
-				</C>
 				<C Type="OutputRefLM" V="178" U="fe39d49d-cefc-c850-f09d2485cc1166b0" Title="Meldung Service fällig (Audi)" Px="16704" Py="2016" Px2="18816" Py2="2208" Cl="0,0,0" Nio="2" Ref="84364a9c-d536-19b3-dbf995f214bce7c9" WF="147456">
 					<Co K="AI" Nc="1" U="f91c4349-eee9-2ddc-96aba095de90f141">
 						<In Input="51fa05ba-c3a1-ce02-d9a4c7c3777efc75"/>
 					</Co>
 					<Co K="AQ" U="e10cfa3e-5028-06da-42e1770d831fe23a"/>
 					<LoggerMailer RefNotification="84364a9c-d536-19b3-dbf995f214bce7c9" On="&lt;v&gt;" Off="&lt;v&gt;" MinimumTime="5000" NL="1"/>
+				</C>
+				<C Type="OutputRefLM" V="178" U="f6b13a8e-84d5-0aa6-8fa44d21deaef3cc" Title="Meldung Fahrzeug offen (Audi)" Px="15072" Py="7488" Px2="17184" Py2="7680" Cl="0,0,0" Nio="2" Ref="3089ecb8-8c80-5405-6a4ae1c964da9ce5" WF="147456">
+					<Co K="AI" Nc="1" U="c99b7a6e-1700-9ad7-e045f8f18bea1dc1">
+						<In Input="2a5714cb-7947-57b5-bd0c9adb79afacd0"/>
+					</Co>
+					<Co K="AQ" U="30bf261d-0b76-b521-18d632de97830779"/>
+					<LoggerMailer RefNotification="3089ecb8-8c80-5405-6a4ae1c964da9ce5" On="&lt;v&gt;" Off="&lt;v&gt;" MinimumTime="5000" NL="1"/>
 				</C>
 			</C>
 			<C Type="Page" V="178" U="93ddb865-c5d1-cf59-d4c9692e860535e8" Title="AudiConnect Klima und Befehle" LtE="561142046" WF="16384">
@@ -19981,12 +19981,6 @@
 					<Co K="AQ" U="71d6f281-ca52-ed5a-d3e4915e7d6aaf28"/>
 					<Co K="TQ" U="3061abe0-c76b-09f9-8526d4b274851c8f"/>
 				</C>
-				<C Type="OutputRef" V="178" U="9371cf88-f588-4cda-e2311f99b6cdf27c" Title="AUDI 1 Scheibenheizung bei jeder Klimatisierung" Px="5952" Py="5472" Px2="8064" Py2="5664" Cl="0,0,0" Nio="2" Ref="751ed212-e0a4-9f48-bf1405f7ef6533da" WF="16384" LinkRefType="74">
-					<Co K="AI" Nc="1" U="104b53e0-78c7-caea-1916fc5241eef5f4">
-						<In Input="50a2fbae-449d-485f-5d91fcca679f6eac"/>
-					</Co>
-					<Co K="AQ" U="247be7e6-91d9-9ab0-f6b5766ef5900005"/>
-				</C>
 				<C Type="OutputRef" V="178" U="8e5e47e4-863e-8f5a-d47ee3dcc1086840" Title="AUDI 1 Klimatisieren ohne Netzanschluss erlauben" Px="5952" Py="5088" Px2="8064" Py2="5280" Cl="0,0,0" Nio="2" Ref="e83c1316-98c0-03f4-5088526603acde07" WF="16384" LinkRefType="74">
 					<Co K="AI" Nc="1" U="d4a722ea-d6e1-f53f-5ba53924e28a0a6a">
 						<In Input="3e3c477a-0e8c-7219-0cfd2f064d8cb098"/>
@@ -20034,6 +20028,12 @@
 						<In Input="a2baba2f-9763-5c27-ab84eff2a2399c61"/>
 					</Co>
 					<Co K="AQ" U="693c6444-aabd-e11a-232ecc4e750d6d4e"/>
+				</C>
+				<C Type="OutputRef" V="178" U="9371cf88-f588-4cda-e2311f99b6cdf27c" Title="AUDI 1 Scheibenheizung bei jeder Klimatisierung" Px="5952" Py="5472" Px2="8064" Py2="5664" Cl="0,0,0" Nio="2" Ref="751ed212-e0a4-9f48-bf1405f7ef6533da" WF="16384" LinkRefType="74">
+					<Co K="AI" Nc="1" U="104b53e0-78c7-caea-1916fc5241eef5f4">
+						<In Input="50a2fbae-449d-485f-5d91fcca679f6eac"/>
+					</Co>
+					<Co K="AQ" U="247be7e6-91d9-9ab0-f6b5766ef5900005"/>
 				</C>
 			</C>
 			<C Type="Page" V="178" U="a3df96f3-2609-549d-85b8dca724384ae7" Title="AudiConnect Laden" LtE="561142046" WF="16384">
@@ -20404,12 +20404,6 @@
 					</Co>
 					<Co K="Q" U="0e16e6fd-ce94-2db5-10c5e2e75ff25cda"/>
 				</C>
-				<C Type="OutputRef" V="178" U="b85a85e7-03fb-0c6a-a2f6c616867186fd" Title="AUDI 1 Ladestrom" Px="5952" Py="8832" Px2="8064" Py2="9024" Cl="0,0,0" Nio="2" Ref="849afa31-544f-076d-0187a81d5cd3974e" WF="16384" Analog="true" LinkRefType="74">
-					<Co K="AI" Nc="1" U="02615176-2ca8-e0a1-6ce1278f258dbd62">
-						<In Input="bf29a250-9c46-7b4d-cb66dc29e46100b6"/>
-					</Co>
-					<Co K="AQ" U="600aee95-2485-ff28-567d4511e178c082"/>
-				</C>
 				<C Type="OutputRef" V="178" U="527d834e-abd9-db76-4d55ef4c5f06ddff" Title="AUDI 1 Laden" Px="15744" Py="864" Px2="17856" Py2="1056" Cl="0,0,0" Nio="2" Ref="ca13a51d-c93b-6b95-d4b945d5b86c9280" WF="147456" LinkRefType="74">
 					<Co K="AI" Nc="1" U="5465f618-9152-766d-c4814a7088e7e803">
 						<In Input="0e16e6fd-ce94-2db5-10c5e2e75ff25cda"/>
@@ -20428,6 +20422,12 @@
 						<In Input="c4cbf8a0-684d-361f-cea5ee5e332bc71e"/>
 					</Co>
 					<Co K="AQ" U="5975eb98-7f40-6c05-fdda016d0aa3ff4f"/>
+				</C>
+				<C Type="OutputRef" V="178" U="b85a85e7-03fb-0c6a-a2f6c616867186fd" Title="AUDI 1 Ladestrom" Px="5952" Py="8832" Px2="8064" Py2="9024" Cl="0,0,0" Nio="2" Ref="849afa31-544f-076d-0187a81d5cd3974e" WF="16384" Analog="true" LinkRefType="74">
+					<Co K="AI" Nc="1" U="02615176-2ca8-e0a1-6ce1278f258dbd62">
+						<In Input="bf29a250-9c46-7b4d-cb66dc29e46100b6"/>
+					</Co>
+					<Co K="AQ" U="600aee95-2485-ff28-567d4511e178c082"/>
 				</C>
 			</C>
 			<C Type="Page" V="178" U="216f31e3-0213-eed3-ffffe001fe9bf86f" Title="BatterieBMS" LtE="560935406" WF="16384">
@@ -20994,17 +20994,17 @@
 					<Display Unit="&lt;v.pr&gt;"/>
 					<StateTexts></StateTexts>
 				</C>
-				<C Type="OutputRef" V="178" U="216f54a3-0198-9b7b-ffffe001fe9bf86f" Title="Laden erzwingen (W)" Px="19776" Py="7968" Px2="21888" Py2="8160" Cl="0,0,0" Nio="2" Ref="216f2f0e-022f-931b-ffffe001fe9bf86f" WF="147456" Analog="true" LinkRefType="74">
-					<Co K="AI" Nc="1" U="216f54a3-0198-9b79-00ff85edfb6ef1c6">
-						<In Input="216f5251-003b-84fb-04ff0d5120548579"/>
-					</Co>
-					<Co K="AQ" U="216f54a3-0198-9b7a-01ff85edfb6ef1c6"/>
-				</C>
 				<C Type="OutputRef" V="178" U="216f5489-009c-6169-ffffe001fe9bf86f" Title="Lebenszeichen" Px="21408" Py="1920" Px2="23520" Py2="2112" Cl="0,0,0" Nio="2" Ref="216f2f0e-022f-9324-ffffe001fe9bf86f" WF="147456" LinkRefType="74">
 					<Co K="AI" Nc="1" U="216f5489-009c-6167-00ff4fb6afaab783">
 						<In Input="216f5238-0329-2f06-02ff5a84340c7c35"/>
 					</Co>
 					<Co K="AQ" U="216f5489-009c-6168-01ff4fb6afaab783"/>
+				</C>
+				<C Type="OutputRef" V="178" U="216f54a3-0198-9b7b-ffffe001fe9bf86f" Title="Laden erzwingen (W)" Px="19776" Py="7968" Px2="21888" Py2="8160" Cl="0,0,0" Nio="2" Ref="216f2f0e-022f-931b-ffffe001fe9bf86f" WF="147456" Analog="true" LinkRefType="74">
+					<Co K="AI" Nc="1" U="216f54a3-0198-9b79-00ff85edfb6ef1c6">
+						<In Input="216f5251-003b-84fb-04ff0d5120548579"/>
+					</Co>
+					<Co K="AQ" U="216f54a3-0198-9b7a-01ff85edfb6ef1c6"/>
 				</C>
 			</C>
 			<C Type="Page" V="178" U="216d7409-0336-2096-ffffe001fe9bf86f" Title="Beschattungswächter" LtE="560821275" WF="16384">
@@ -21331,13 +21331,6 @@
 					<Co K="Input2" U="21715016-0100-61b9-01ff532a14798e6e"/>
 					<Co K="Q" U="21715016-0100-61ba-02ff532a14798e6e"/>
 				</C>
-				<C Type="OutputRefLM" V="178" U="21714f50-03c5-8493-ffffe001fe9bf86f" Title="BW ohne Ziel" Px="15552" Py="6912" Px2="17664" Py2="7104" Cl="0,0,0" Nio="2" Ref="21714f00-03c2-f2cf-ffffe001fe9bf86f" WF="147456">
-					<Co K="AI" Nc="1" U="21714f50-03c5-8491-00ffaf52514b691b">
-						<In Input="21714fdd-0100-1766-04ff9c4b4b5781c5"/>
-					</Co>
-					<Co K="AQ" U="21714f50-03c5-8492-01ffaf52514b691b"/>
-					<LoggerMailer RefNotification="21714f00-03c2-f2cf-ffffe001fe9bf86f" On="&lt;v&gt;" Off="&lt;v&gt;" MinimumTime="5000" NL="1"/>
-				</C>
 				<C Type="OutputRefLM" V="178" U="216d75f1-0035-b6ed-ffffe001fe9bf86f" Title="BW Meldung" Px="17184" Py="1248" Px2="19296" Py2="1440" Cl="0,0,0" Nio="2" Ref="216d75de-025c-8967-ffffe001fe9bf86f" WF="147456">
 					<Co K="AI" Nc="1" U="216d75f1-0035-b6eb-00ffe0f72085287e">
 						<In Input="216d75c5-0347-5be9-02ffeec859f623bf"/>
@@ -21350,6 +21343,13 @@
 						<In Input="21714ef6-0078-ce57-02ffe10d921aa935"/>
 					</Co>
 					<Co K="AQ" U="21714eae-011a-ab0b-01ffc0ffaf01d629"/>
+				</C>
+				<C Type="OutputRefLM" V="178" U="21714f50-03c5-8493-ffffe001fe9bf86f" Title="BW ohne Ziel" Px="15552" Py="6912" Px2="17664" Py2="7104" Cl="0,0,0" Nio="2" Ref="21714f00-03c2-f2cf-ffffe001fe9bf86f" WF="147456">
+					<Co K="AI" Nc="1" U="21714f50-03c5-8491-00ffaf52514b691b">
+						<In Input="21714fdd-0100-1766-04ff9c4b4b5781c5"/>
+					</Co>
+					<Co K="AQ" U="21714f50-03c5-8492-01ffaf52514b691b"/>
+					<LoggerMailer RefNotification="21714f00-03c2-f2cf-ffffe001fe9bf86f" On="&lt;v&gt;" Off="&lt;v&gt;" MinimumTime="5000" NL="1"/>
 				</C>
 			</C>
 			<C Type="Page" V="178" U="216d7698-01c3-d549-ffffe001fe9bf86f" Title="Bewässerung" LtE="560821927" WF="16384">
@@ -21838,13 +21838,6 @@
 					<Co K="Q" U="21715538-018b-fc45-05ffd92123c06c8e"/>
 					<Co K="AQ" U="21715538-018b-fc46-06ffd92123c06c8e"/>
 				</C>
-				<C Type="OutputRefLM" V="178" U="21715588-0281-8758-ffffe001fe9bf86f" Title="Bewässerung Plan gekürzt" Px="21408" Py="13632" Px2="23520" Py2="13824" Cl="0,0,0" Nio="2" Ref="21715571-011b-10c2-ffffe001fe9bf86f" WF="147456">
-					<Co K="AI" Nc="1" U="21715588-0281-8756-00ffee1a0ff07ef1">
-						<In Input="217154bd-0022-d62c-02ff8b928298daf6"/>
-					</Co>
-					<Co K="AQ" U="21715588-0281-8757-01ffee1a0ff07ef1"/>
-					<LoggerMailer RefNotification="21715571-011b-10c2-ffffe001fe9bf86f" On="&lt;v&gt;" Off="&lt;v&gt;" MinimumTime="5000" NL="1"/>
-				</C>
 				<C Type="OutputRefLM" V="178" U="216d7829-01aa-44f3-ffffe001fe9bf86f" Title="Meldung Bewässerung reicht nicht" Px="21312" Py="6336" Px2="23424" Py2="6528" Cl="0,0,0" Nio="2" Ref="216d7819-0281-2577-ffffe001fe9bf86f" WF="147456">
 					<Co K="AI" Nc="1" U="216d7829-01aa-44f1-00ff6e23a821ccf7">
 						<In Input="216d77aa-0106-fb89-05ff612240351a11"/>
@@ -21870,6 +21863,13 @@
 					</Co>
 					<Co K="AQ" U="2171557e-0143-5fcb-01ff56ebc0b2fe64"/>
 					<LoggerMailer RefNotification="2171556d-0084-c1c0-ffffe001fe9bf86f" On="&lt;v&gt;" Off="&lt;v&gt;" MinimumTime="5000" NL="1"/>
+				</C>
+				<C Type="OutputRefLM" V="178" U="21715588-0281-8758-ffffe001fe9bf86f" Title="Bewässerung Plan gekürzt" Px="21408" Py="13632" Px2="23520" Py2="13824" Cl="0,0,0" Nio="2" Ref="21715571-011b-10c2-ffffe001fe9bf86f" WF="147456">
+					<Co K="AI" Nc="1" U="21715588-0281-8756-00ffee1a0ff07ef1">
+						<In Input="217154bd-0022-d62c-02ff8b928298daf6"/>
+					</Co>
+					<Co K="AQ" U="21715588-0281-8757-01ffee1a0ff07ef1"/>
+					<LoggerMailer RefNotification="21715571-011b-10c2-ffffe001fe9bf86f" On="&lt;v&gt;" Off="&lt;v&gt;" MinimumTime="5000" NL="1"/>
 				</C>
 			</C>
 			<C Type="Page" V="178" U="21715596-0168-aee1-ffffe001fe9bf86f" Title="Bewässerung Zonen" LtE="561075614" WF="16384">
@@ -22404,13 +22404,6 @@
 					<Co K="RisingEdge" U="a45a4609-4ac6-3230-2f8992735a6d2de9"/>
 					<Co K="FallingEdge" U="b5965024-8879-742a-7def6357af4dc570"/>
 				</C>
-				<C Type="OutputRefLM" V="178" U="71720d8e-13d5-e6cb-21a572e6d61226d4" Title="Meldung Ladung beendet (BYD)" Px="17472" Py="10560" Px2="19584" Py2="10752" Cl="0,0,0" Nio="2" Ref="a32ab35d-8371-e864-34406b63f29dc1b0" WF="147456">
-					<Co K="AI" Nc="1" U="acb3ef91-d6b5-f16a-7eca441f924fbab9">
-						<In Input="b5965024-8879-742a-7def6357af4dc570"/>
-					</Co>
-					<Co K="AQ" U="d4023b04-fbf9-a2c0-112de61aebb2331f"/>
-					<LoggerMailer RefNotification="a32ab35d-8371-e864-34406b63f29dc1b0" On="&lt;v&gt;" Off="&lt;v&gt;" MinimumTime="5000" NL="1"/>
-				</C>
 				<C Type="OutputRefLM" V="178" U="a6a15f56-5db6-1ac3-a0b0d6b9a77ca4e1" Title="Meldung Auto gestört (BYD)" Px="12672" Py="864" Px2="14784" Py2="1056" Cl="0,0,0" Nio="2" Ref="0bb5dd07-af2e-4233-9ccb38e3c56d36ab" WF="147456">
 					<Co K="AI" Nc="1" U="9d8027aa-a41d-1d96-5d28ff7bd15fa5ef">
 						<In Input="c14d48ef-91c6-2dc1-2cdb5bc4b56c0443"/>
@@ -22424,6 +22417,13 @@
 					</Co>
 					<Co K="AQ" U="175aa2ee-5274-937b-efb79a8b34ae20d9"/>
 					<LoggerMailer RefNotification="8dbb26ab-8ef9-203a-1fa410403ee82976" On="&lt;v&gt;" Off="&lt;v&gt;" MinimumTime="5000" NL="1"/>
+				</C>
+				<C Type="OutputRefLM" V="178" U="71720d8e-13d5-e6cb-21a572e6d61226d4" Title="Meldung Ladung beendet (BYD)" Px="17472" Py="10560" Px2="19584" Py2="10752" Cl="0,0,0" Nio="2" Ref="a32ab35d-8371-e864-34406b63f29dc1b0" WF="147456">
+					<Co K="AI" Nc="1" U="acb3ef91-d6b5-f16a-7eca441f924fbab9">
+						<In Input="b5965024-8879-742a-7def6357af4dc570"/>
+					</Co>
+					<Co K="AQ" U="d4023b04-fbf9-a2c0-112de61aebb2331f"/>
+					<LoggerMailer RefNotification="a32ab35d-8371-e864-34406b63f29dc1b0" On="&lt;v&gt;" Off="&lt;v&gt;" MinimumTime="5000" NL="1"/>
 				</C>
 			</C>
 			<C Type="Page" V="178" U="88e31535-5ebd-1dd1-708d020ccc1441fd" Title="BYD Autos Fahrzeug" LtE="561075614" WF="16384">
@@ -22728,18 +22728,18 @@
 					<Display Unit="&lt;v.pr&gt;"/>
 					<StateTexts></StateTexts>
 				</C>
+				<C Type="OutputRef" V="178" U="24b48081-b9f9-58eb-7f0a8ba199ca15a0" Title="BYD_1_FENSTER_ZU" Px="9600" Py="6336" Px2="11712" Py2="6528" Cl="0,0,0" Nio="2" Ref="42315a66-6efd-4828-bfcb8cc07832394c" WF="147456" LinkRefType="74">
+					<Co K="AI" Nc="1" U="ee0a880a-02fe-27af-e4933a9078e1e88e">
+						<In Input="a90e10d1-9258-8483-17bbf49086cbc02e"/>
+					</Co>
+					<Co K="AQ" U="bb1457b4-b864-ab5d-35f9947a8e9d0ec6"/>
+				</C>
 				<C Type="OutputRefLM" V="178" U="b82db60f-e183-2377-6d4c5dd6a9cf6514" Title="Meldung Fahrzeug offen (BYD)" Px="12672" Py="2688" Px2="14784" Py2="2880" Cl="0,0,0" Nio="2" Ref="730d2eef-6e05-7e10-3c9425100bd0715b" WF="147456">
 					<Co K="AI" Nc="1" U="7e7e4f22-d363-3e7c-6d9ae256ecb8c964">
 						<In Input="fbb2f838-7f98-20f8-ff93543f363878d5"/>
 					</Co>
 					<Co K="AQ" U="5952b995-af47-1be1-2ef7b9553d74b673"/>
 					<LoggerMailer RefNotification="730d2eef-6e05-7e10-3c9425100bd0715b" On="&lt;v&gt;" Off="&lt;v&gt;" MinimumTime="5000" NL="1"/>
-				</C>
-				<C Type="OutputRef" V="178" U="24b48081-b9f9-58eb-7f0a8ba199ca15a0" Title="BYD_1_FENSTER_ZU" Px="9600" Py="6336" Px2="11712" Py2="6528" Cl="0,0,0" Nio="2" Ref="42315a66-6efd-4828-bfcb8cc07832394c" WF="147456" LinkRefType="74">
-					<Co K="AI" Nc="1" U="ee0a880a-02fe-27af-e4933a9078e1e88e">
-						<In Input="a90e10d1-9258-8483-17bbf49086cbc02e"/>
-					</Co>
-					<Co K="AQ" U="bb1457b4-b864-ab5d-35f9947a8e9d0ec6"/>
 				</C>
 			</C>
 			<C Type="Page" V="178" U="179cd1f6-a37d-1d87-05c279c1dec838f5" Title="BYD Autos Laden und Klima" LtE="561075614" WF="16384">
@@ -23079,12 +23079,6 @@
 					<Display Unit="&lt;v.pr&gt;"/>
 					<StateTexts></StateTexts>
 				</C>
-				<C Type="OutputRef" V="178" U="755a807d-c213-8945-bc2fcb60ced64d46" Title="BYD_1_ABRUF" Px="7104" Py="8928" Px2="9216" Py2="9120" Cl="0,0,0" Nio="2" Ref="db98b010-1c26-0f3a-3eeff08fb5fa9339" WF="16384" LinkRefType="74">
-					<Co K="AI" Nc="1" U="e43c820c-a96a-8ea6-f61b5673691e0cdb">
-						<In Input="edbe3f81-8ab2-a509-ac2c11738f69a159"/>
-					</Co>
-					<Co K="AQ" U="da654f36-4b70-6316-88c231c160777619"/>
-				</C>
 				<C Type="OutputRef" V="178" U="b0a06ded-d25e-8da4-e2385e18dc835261" Title="BYD_1_KLIMA" Px="14592" Py="1632" Px2="16704" Py2="1824" Cl="0,0,0" Nio="2" Ref="ec785c0f-efbd-c02a-abfbef7de7ab5f5e" WF="147456" Analog="true" LinkRefType="74">
 					<Co K="AI" Nc="1" U="d1814605-45d5-d718-542bcc15bc115d2e">
 						<In Input="89ffa83b-24c5-8f06-27d79304329b2598"/>
@@ -23108,6 +23102,12 @@
 						<In Input="7ce8e4a8-cf0b-fb69-dc8916c77531ebda"/>
 					</Co>
 					<Co K="AQ" U="7dac9ab3-e1ad-34d0-e92e85ad6f019486"/>
+				</C>
+				<C Type="OutputRef" V="178" U="755a807d-c213-8945-bc2fcb60ced64d46" Title="BYD_1_ABRUF" Px="7104" Py="8928" Px2="9216" Py2="9120" Cl="0,0,0" Nio="2" Ref="db98b010-1c26-0f3a-3eeff08fb5fa9339" WF="16384" LinkRefType="74">
+					<Co K="AI" Nc="1" U="e43c820c-a96a-8ea6-f61b5673691e0cdb">
+						<In Input="edbe3f81-8ab2-a509-ac2c11738f69a159"/>
+					</Co>
+					<Co K="AQ" U="da654f36-4b70-6316-88c231c160777619"/>
 				</C>
 			</C>
 			<C Type="Page" V="178" U="4902f7e5-a6e7-5e37-126a09f3808ab934" Title="BYD Autos Werte" LtE="561075614" WF="16384">
@@ -23794,12 +23794,6 @@
 					</Co>
 					<Co K="Q" U="2171577f-022a-1fb9-02ffbe2f78fcc909"/>
 				</C>
-				<C Type="OutputRef" V="178" U="2171564a-02b7-93f5-ffffe001fe9bf86f" Title="chromecast4lox_Wohnzimmer_pause" Px="9792" Py="13440" Px2="11904" Py2="13632" Cl="0,0,0" Nio="2" Ref="216e38b9-01cc-cacf-ffffe001fe9bf86f" WF="16384" LinkRefType="74">
-					<Co K="AI" Nc="1" U="2171564a-02b7-93f3-00ff299ede73285a">
-						<In Input="2171572c-01c3-0de3-02ff2531b2f3d37f"/>
-					</Co>
-					<Co K="AQ" U="2171564a-02b7-93f4-01ff299ede73285a"/>
-				</C>
 				<C Type="OutputRefLM" V="178" U="2171579d-0175-ebd1-ffffe001fe9bf86f" Title="Chromecast MQTT-Verluste" Px="8352" Py="4416" Px2="10464" Py2="4608" Cl="0,0,0" Nio="2" Ref="21715791-036b-9a29-ffffe001fe9bf86f" WF="147456">
 					<Co K="AI" Nc="1" U="2171579d-0175-ebcf-00ffa1db79ed19ac">
 						<In Input="21715777-01a9-ce19-02ff29429c8ee7c0"/>
@@ -23837,6 +23831,12 @@
 						<In Input="216d7950-0375-e55a-02ff864b3f0774cf"/>
 					</Co>
 					<Co K="AQ" U="216e390f-0133-5159-01ff5125fee877d5"/>
+				</C>
+				<C Type="OutputRef" V="178" U="2171564a-02b7-93f5-ffffe001fe9bf86f" Title="chromecast4lox_Wohnzimmer_pause" Px="9792" Py="13440" Px2="11904" Py2="13632" Cl="0,0,0" Nio="2" Ref="216e38b9-01cc-cacf-ffffe001fe9bf86f" WF="16384" LinkRefType="74">
+					<Co K="AI" Nc="1" U="2171564a-02b7-93f3-00ff299ede73285a">
+						<In Input="2171572c-01c3-0de3-02ff2531b2f3d37f"/>
+					</Co>
+					<Co K="AQ" U="2171564a-02b7-93f4-01ff299ede73285a"/>
 				</C>
 			</C>
 			<C Type="Page" V="178" U="217157ad-00d1-3d79-ffffe001fe9bf86f" Title="Chromecast4lox Steuerung" LtE="561076144" WF="16384">
@@ -24450,12 +24450,6 @@
 					</Co>
 					<Co K="Q" U="70799b64-f665-fd76-9044b31173c48180"/>
 				</C>
-				<C Type="OutputRef" V="178" U="a423a557-bbe6-34bf-d33c9f1f09331033" Title="DASHBOARD_WECKEN" Px="17376" Py="2112" Px2="19488" Py2="2304" Cl="0,0,0" Nio="2" Ref="bcedc759-92d8-c25d-dd1544089432c1dc" WF="147456" LinkRefType="74">
-					<Co K="AI" Nc="1" U="cc20651d-2ee9-fd00-d0d338ae26b39bda">
-						<In Input="70799b64-f665-fd76-9044b31173c48180"/>
-					</Co>
-					<Co K="AQ" U="9b7f4e63-563e-357e-de26d0090e332bb2"/>
-				</C>
 				<C Type="OutputRef" V="178" U="78f8dab5-5120-8594-18acc4fea8415668" Title="DASHBOARD_RUHEBILD" Px="3840" Py="2208" Px2="5952" Py2="2400" Cl="0,0,0" Nio="2" Ref="d1990a19-12df-1b75-8dad56b7697ecb69" WF="16384" LinkRefType="74">
 					<Co K="AI" Nc="1" U="f64618dc-bd72-bc34-5186e8a2f033dbd1">
 						<In Input="9a328c78-6b86-497e-2f0b5e5d30d913fb"/>
@@ -24479,6 +24473,12 @@
 						<In Input="7a94befa-254f-4eff-310a4f9238832989"/>
 					</Co>
 					<Co K="AQ" U="4f89d425-9e17-5e75-751ec838f227ae80"/>
+				</C>
+				<C Type="OutputRef" V="178" U="a423a557-bbe6-34bf-d33c9f1f09331033" Title="DASHBOARD_WECKEN" Px="17376" Py="2112" Px2="19488" Py2="2304" Cl="0,0,0" Nio="2" Ref="bcedc759-92d8-c25d-dd1544089432c1dc" WF="147456" LinkRefType="74">
+					<Co K="AI" Nc="1" U="cc20651d-2ee9-fd00-d0d338ae26b39bda">
+						<In Input="70799b64-f665-fd76-9044b31173c48180"/>
+					</Co>
+					<Co K="AQ" U="9b7f4e63-563e-357e-de26d0090e332bb2"/>
 				</C>
 			</C>
 			<C Type="Page" V="178" U="216cdd41-00bb-5f59-ffffe001fe9bf86f" Title="Docker NG" LtE="560782667" WF="16384">
@@ -24868,13 +24868,6 @@
 					<Display Unit="&lt;v.pr&gt;"/>
 					<StateTexts></StateTexts>
 				</C>
-				<C Type="OutputRefLM" V="178" U="793da860-8389-a0f3-0f4e3597bf94d31e" Title="Docker Container portainer steht" Px="10368" Py="7680" Px2="12480" Py2="7872" Cl="0,0,0" Nio="2" Ref="f13dae00-f4ab-5305-dba4f0dc0dd451d0" WF="147456">
-					<Co K="AI" Nc="1" U="1ca0fa24-c3ac-f42b-15fb00a65b76b8f7">
-						<In Input="4e6926ec-68ce-d2c8-c0c83842b93732bb"/>
-					</Co>
-					<Co K="AQ" U="1e920592-c1ad-307a-3bbf33efea3e1128"/>
-					<LoggerMailer RefNotification="f13dae00-f4ab-5305-dba4f0dc0dd451d0" On="&lt;v&gt;" Off="&lt;v&gt;" MinimumTime="5000" NL="1"/>
-				</C>
 				<C Type="OutputRefLM" V="178" U="216cde74-00fd-907f-ffffe001fe9bf86f" Title="Docker-Störung" Px="16320" Py="1440" Px2="18432" Py2="1632" Cl="0,0,0" Nio="2" Ref="216cde60-010b-7942-ffffe001fe9bf86f" WF="147456">
 					<Co K="AI" Nc="1" U="216cde74-00f5-907d-00ffb5e2bbc5d83b">
 						<In Input="216cde3d-020b-4aed-04ff8404de2dd58e"/>
@@ -24895,6 +24888,13 @@
 					</Co>
 					<Co K="AQ" U="32c61fbd-05aa-6db6-ced57774e6200563"/>
 					<LoggerMailer RefNotification="c53959d9-3734-ad53-a31945736cf1198f" On="&lt;v&gt;" Off="&lt;v&gt;" MinimumTime="5000" NL="1"/>
+				</C>
+				<C Type="OutputRefLM" V="178" U="793da860-8389-a0f3-0f4e3597bf94d31e" Title="Docker Container portainer steht" Px="10368" Py="7680" Px2="12480" Py2="7872" Cl="0,0,0" Nio="2" Ref="f13dae00-f4ab-5305-dba4f0dc0dd451d0" WF="147456">
+					<Co K="AI" Nc="1" U="1ca0fa24-c3ac-f42b-15fb00a65b76b8f7">
+						<In Input="4e6926ec-68ce-d2c8-c0c83842b93732bb"/>
+					</Co>
+					<Co K="AQ" U="1e920592-c1ad-307a-3bbf33efea3e1128"/>
+					<LoggerMailer RefNotification="f13dae00-f4ab-5305-dba4f0dc0dd451d0" On="&lt;v&gt;" Off="&lt;v&gt;" MinimumTime="5000" NL="1"/>
 				</C>
 			</C>
 			<C Type="Page" V="178" U="216cb411-0235-4c18-ffffe001fe9bf86f" Title="Ecowitt-Weiche" LtE="560772355" WF="16384">
@@ -25093,13 +25093,6 @@
 					<Co K="Time" Def="5" U="31a05a61-a382-018f-c5c133e2e997cfbb"/>
 					<Co K="Q" U="84e107b6-9753-c204-a041df5d1c196d79"/>
 				</C>
-				<C Type="OutputRefLM" V="178" U="69379c7d-17fb-a020-d585738b92bc2323" Title="Wetterstation Weiche pendelt" Px="18624" Py="2976" Px2="20736" Py2="3168" Cl="0,0,0" Nio="2" Ref="7c8a37e0-2229-5550-b28891bdd54c0d57" WF="147456">
-					<Co K="AI" Nc="1" U="d3053739-1d7a-2873-a004c300e140f651">
-						<In Input="84e107b6-9753-c204-a041df5d1c196d79"/>
-					</Co>
-					<Co K="AQ" U="7094d643-f9a4-e21f-484590873ae0a8ea"/>
-					<LoggerMailer RefNotification="7c8a37e0-2229-5550-b28891bdd54c0d57" On="&lt;v&gt;" Off="&lt;v&gt;" MinimumTime="5000" NL="1"/>
-				</C>
 				<C Type="OutputRefLM" V="178" U="216cb54e-019f-3229-ffffe001fe9bf86f" Title="Wetterstation gestört" Px="21312" Py="3744" Px2="23424" Py2="3936" Cl="0,0,0" Nio="2" Ref="216cb534-02f8-20f0-ffffe001fe9bf86f" WF="147456">
 					<Co K="AI" Nc="1" U="216cb54e-019f-3227-00ff7781b3db1b62">
 						<In Input="216cb50c-035a-f8e1-04ff912b0a19d419"/>
@@ -25113,6 +25106,13 @@
 					</Co>
 					<Co K="AQ" U="83bf9529-3e4d-54e2-53f99c8e7ec03abe"/>
 					<LoggerMailer RefNotification="6d112430-0913-389f-79587996cd080b45" On="&lt;v&gt;" Off="&lt;v&gt;" MinimumTime="5000" NL="1"/>
+				</C>
+				<C Type="OutputRefLM" V="178" U="69379c7d-17fb-a020-d585738b92bc2323" Title="Wetterstation Weiche pendelt" Px="18624" Py="2976" Px2="20736" Py2="3168" Cl="0,0,0" Nio="2" Ref="7c8a37e0-2229-5550-b28891bdd54c0d57" WF="147456">
+					<Co K="AI" Nc="1" U="d3053739-1d7a-2873-a004c300e140f651">
+						<In Input="84e107b6-9753-c204-a041df5d1c196d79"/>
+					</Co>
+					<Co K="AQ" U="7094d643-f9a4-e21f-484590873ae0a8ea"/>
+					<LoggerMailer RefNotification="7c8a37e0-2229-5550-b28891bdd54c0d57" On="&lt;v&gt;" Off="&lt;v&gt;" MinimumTime="5000" NL="1"/>
 				</C>
 			</C>
 			<C Type="Page" V="178" U="d2401282-cd5d-f8ae-5e823127a186a110" Title="Ecowitt-Weiche Wetterwerte" LtE="560772355" WF="16384">
@@ -25475,19 +25475,19 @@
 					<Co K="Time" Def="600" U="3cd9f54d-eee2-4c4a-ecd121eecb697c01"/>
 					<Co K="Q" U="a41c8d9b-5b0d-43dd-030d63cf3c87e82a"/>
 				</C>
-				<C Type="OutputRefLM" V="178" U="c5cab58b-7667-5f59-e3b2d913ffef3e1d" Title="Wetterstation Frost" Px="10176" Py="2592" Px2="12288" Py2="2784" Cl="0,0,0" Nio="2" Ref="1110f38f-95f6-fbc6-e99123a897e2c3ec" WF="147456">
-					<Co K="AI" Nc="1" U="f275d20d-c4cc-59f2-f1ada27c92f54342">
-						<In Input="a41c8d9b-5b0d-43dd-030d63cf3c87e82a"/>
-					</Co>
-					<Co K="AQ" U="663c14cd-a0f2-d2b4-ed7c279c3790868e"/>
-					<LoggerMailer RefNotification="1110f38f-95f6-fbc6-e99123a897e2c3ec" On="&lt;v&gt;" Off="&lt;v&gt;" MinimumTime="5000" NL="1"/>
-				</C>
 				<C Type="OutputRefLM" V="178" U="bb78bfb6-d909-d293-829753f94da00ae2" Title="Wetterstation Sturm" Px="10176" Py="5184" Px2="12288" Py2="5376" Cl="0,0,0" Nio="2" Ref="37e98f7a-cee9-1dd0-5cde5f57894dac42" WF="147456">
 					<Co K="AI" Nc="1" U="21d04d1a-f4d5-88d2-da40b3d5c35003c8">
 						<In Input="ed86fd57-0082-87d5-d4827cec4d198bba"/>
 					</Co>
 					<Co K="AQ" U="f1e52d38-070f-8b50-df250001882223a0"/>
 					<LoggerMailer RefNotification="37e98f7a-cee9-1dd0-5cde5f57894dac42" On="&lt;v&gt;" Off="&lt;v&gt;" MinimumTime="5000" NL="1"/>
+				</C>
+				<C Type="OutputRefLM" V="178" U="c5cab58b-7667-5f59-e3b2d913ffef3e1d" Title="Wetterstation Frost" Px="10176" Py="2592" Px2="12288" Py2="2784" Cl="0,0,0" Nio="2" Ref="1110f38f-95f6-fbc6-e99123a897e2c3ec" WF="147456">
+					<Co K="AI" Nc="1" U="f275d20d-c4cc-59f2-f1ada27c92f54342">
+						<In Input="a41c8d9b-5b0d-43dd-030d63cf3c87e82a"/>
+					</Co>
+					<Co K="AQ" U="663c14cd-a0f2-d2b4-ed7c279c3790868e"/>
+					<LoggerMailer RefNotification="1110f38f-95f6-fbc6-e99123a897e2c3ec" On="&lt;v&gt;" Off="&lt;v&gt;" MinimumTime="5000" NL="1"/>
 				</C>
 			</C>
 			<C Type="Page" V="178" U="216eb199-02db-3f03-ffffe001fe9bf86f" Title="Einspeisebremse" LtE="560902572" WF="16384">
@@ -25905,12 +25905,6 @@
 					</Co>
 					<Co K="Q" U="2170073f-003b-12ef-02ff25891925ffe6"/>
 				</C>
-				<C Type="OutputRef" V="178" U="2170065f-036f-2b64-ffffe001fe9bf86f" Title="Regelung ausschalten" Px="20064" Py="12576" Px2="22176" Py2="12768" Cl="0,0,0" Nio="2" Ref="21700535-03ac-aa7c-ffffe001fe9bf86f" WF="16384" LinkRefType="74">
-					<Co K="AI" Nc="1" U="2170065f-036f-2b62-00fff8d196ca5142">
-						<In Input="217006ce-024f-9d1e-02ff58a3ee7ab9c6"/>
-					</Co>
-					<Co K="AQ" U="2170065f-036f-2b63-01fff8d196ca5142"/>
-				</C>
 				<C Type="OutputRef" V="178" U="21700658-02cd-08a9-ffffe001fe9bf86f" Title="Regelung einschalten" Px="20064" Py="12960" Px2="22176" Py2="13152" Cl="0,0,0" Nio="2" Ref="21700535-03ac-aa79-ffffe001fe9bf86f" WF="16384" LinkRefType="74">
 					<Co K="AI" Nc="1" U="21700658-02cd-08a7-00ff679fbef8b89e">
 						<In Input="217006ca-028f-7a3a-02fff81221115ae5"/>
@@ -25936,6 +25930,12 @@
 						<In Input="217006c6-02c5-575d-02ffaaba832a5eb6"/>
 					</Co>
 					<Co K="AQ" U="21700666-03d2-4e22-01ff5e3d0b9587ad"/>
+				</C>
+				<C Type="OutputRef" V="178" U="2170065f-036f-2b64-ffffe001fe9bf86f" Title="Regelung ausschalten" Px="20064" Py="12576" Px2="22176" Py2="12768" Cl="0,0,0" Nio="2" Ref="21700535-03ac-aa7c-ffffe001fe9bf86f" WF="16384" LinkRefType="74">
+					<Co K="AI" Nc="1" U="2170065f-036f-2b62-00fff8d196ca5142">
+						<In Input="217006ce-024f-9d1e-02ff58a3ee7ab9c6"/>
+					</Co>
+					<Co K="AQ" U="2170065f-036f-2b63-01fff8d196ca5142"/>
 				</C>
 			</C>
 			<C Type="Page" V="178" U="217007a9-005a-94b0-ffffe001fe9bf86f" Title="Einspeisebremse Speicher" LtE="560990150" WF="16384">
@@ -26745,19 +26745,19 @@
 					<Display Unit="&lt;v.pr&gt;"/>
 					<StateTexts></StateTexts>
 				</C>
-				<C Type="OutputRefLM" V="178" U="216cecfd-02b5-b652-ffffe001fe9bf86f" Title="Ladung fertig" Px="21312" Py="5568" Px2="23424" Py2="5760" Cl="0,0,0" Nio="2" Ref="216cecdc-01d6-7ec4-ffffe001fe9bf86f" WF="147456">
-					<Co K="AI" Nc="1" U="216cecfd-02b5-b650-00ffee70ca4d7c79">
-						<In Input="21722712-0377-8d1d-02ff8b00ff99f981"/>
-					</Co>
-					<Co K="AQ" U="216cecfd-02b5-b651-01ffee70ca4d7c79"/>
-					<LoggerMailer RefNotification="216cecdc-01d6-7ec4-ffffe001fe9bf86f" On="&lt;v&gt;" Off="&lt;v&gt;" MinimumTime="5000" NL="1"/>
-				</C>
 				<C Type="OutputRefLM" V="178" U="216ced07-000f-c178-ffffe001fe9bf86f" Title="EVCC Meldung" Px="21504" Py="2880" Px2="23616" Py2="3072" Cl="0,0,0" Nio="2" Ref="216cecf0-0011-a014-ffffe001fe9bf86f" WF="147456">
 					<Co K="AI" Nc="1" U="216ced07-000f-c176-00ffe9ca159f3292">
 						<In Input="217226eb-0245-68c3-04ff7b6530e576e3"/>
 					</Co>
 					<Co K="AQ" U="216ced07-000f-c177-01ffe9ca159f3292"/>
 					<LoggerMailer RefNotification="216cecf0-0011-a014-ffffe001fe9bf86f" On="&lt;v&gt;" Off="&lt;v&gt;" MinimumTime="5000" NL="1"/>
+				</C>
+				<C Type="OutputRefLM" V="178" U="216cecfd-02b5-b652-ffffe001fe9bf86f" Title="Ladung fertig" Px="21312" Py="5568" Px2="23424" Py2="5760" Cl="0,0,0" Nio="2" Ref="216cecdc-01d6-7ec4-ffffe001fe9bf86f" WF="147456">
+					<Co K="AI" Nc="1" U="216cecfd-02b5-b650-00ffee70ca4d7c79">
+						<In Input="21722712-0377-8d1d-02ff8b00ff99f981"/>
+					</Co>
+					<Co K="AQ" U="216cecfd-02b5-b651-01ffee70ca4d7c79"/>
+					<LoggerMailer RefNotification="216cecdc-01d6-7ec4-ffffe001fe9bf86f" On="&lt;v&gt;" Off="&lt;v&gt;" MinimumTime="5000" NL="1"/>
 				</C>
 			</C>
 			<C Type="Page" V="178" U="21722cf0-000a-039c-ffffe001fe9bf86f" Title="EVCC Hausspeicher und Tarif" LtE="561130745" WF="16384">
@@ -27091,12 +27091,6 @@
 					<Display Unit="&lt;v.pr&gt;"/>
 					<StateTexts></StateTexts>
 				</C>
-				<C Type="OutputRef" V="178" U="21722e47-01ed-9aed-ffffe001fe9bf86f" Title="EVCC_SET_NETZLADENAUS" Px="5952" Py="7776" Px2="8064" Py2="7968" Cl="0,0,0" Nio="2" Ref="216cebfe-0317-293b-ffffe001fe9bf86f" WF="16384" LinkRefType="74">
-					<Co K="AI" Nc="1" U="21722e47-01ed-9aeb-00ffeea1f0bc5fd4">
-						<In Input="21722dd3-034d-99d8-02ff8bc555dad9a3"/>
-					</Co>
-					<Co K="AQ" U="21722e47-01ed-9aec-01ffeea1f0bc5fd4"/>
-				</C>
 				<C Type="OutputRef" V="178" U="21722e3c-0009-678b-ffffe001fe9bf86f" Title="EVCC_SET_NETZLADEGRENZE" Px="5952" Py="8160" Px2="8064" Py2="8352" Cl="0,0,0" Nio="2" Ref="216cebfe-0317-2938-ffffe001fe9bf86f" WF="16384" Analog="true" LinkRefType="74">
 					<Co K="AI" Nc="1" U="21722e3c-0009-6789-00ff270d295e5327">
 						<In Input="21722dbd-00b5-99c2-02ff66f58f9ecf51"/>
@@ -27132,6 +27126,12 @@
 						<In Input="21722d0d-00d0-69a3-18ffee5158a4c8b2"/>
 					</Co>
 					<Co K="AQ" U="21722df3-00b2-3394-01fffb8f57a24774"/>
+				</C>
+				<C Type="OutputRef" V="178" U="21722e47-01ed-9aed-ffffe001fe9bf86f" Title="EVCC_SET_NETZLADENAUS" Px="5952" Py="7776" Px2="8064" Py2="7968" Cl="0,0,0" Nio="2" Ref="216cebfe-0317-293b-ffffe001fe9bf86f" WF="16384" LinkRefType="74">
+					<Co K="AI" Nc="1" U="21722e47-01ed-9aeb-00ffeea1f0bc5fd4">
+						<In Input="21722dd3-034d-99d8-02ff8bc555dad9a3"/>
+					</Co>
+					<Co K="AQ" U="21722e47-01ed-9aec-01ffeea1f0bc5fd4"/>
 				</C>
 			</C>
 			<C Type="Page" V="178" U="217227bb-01b3-f3d1-ffffe001fe9bf86f" Title="EVCC Ladepunkt 1" LtE="561129406" WF="16384">
@@ -28155,12 +28155,6 @@
 					<Display Unit="&lt;v.pr&gt;"/>
 					<StateTexts></StateTexts>
 				</C>
-				<C Type="OutputRef" V="178" U="2172bd93-0021-609d-ffffe001fe9bf86f" Title="FB_SET_STELLUNG_WZ" Px="10176" Py="672" Px2="12288" Py2="864" Cl="0,0,0" Nio="2" Ref="2172b9a7-00c5-ed4a-ffffe001fe9bf86f" WF="147456" Analog="true" LinkRefType="74">
-					<Co K="AI" Nc="1" U="2172bd93-0021-609b-00ff4b2964a0d181">
-						<In Input="2172bc1d-03d7-9e94-04fffafff08e154c"/>
-					</Co>
-					<Co K="AQ" U="2172bd93-0021-609c-01ff4b2964a0d181"/>
-				</C>
 				<C Type="OutputRefLM" V="178" U="216cf029-01cb-76f7-ffffe001fe9bf86f" Title="Meldung Fensterbilanz" Px="7680" Py="4032" Px2="9792" Py2="4224" Cl="0,0,0" Nio="2" Ref="216cf01b-00de-5d95-ffffe001fe9bf86f" WF="147456">
 					<Co K="AI" Nc="1" U="216cf029-01cb-76f5-00ff3e5124f747ed">
 						<In Input="216cefce-02e6-dfed-02ff6f0b9edea666"/>
@@ -28174,6 +28168,12 @@
 					</Co>
 					<Co K="AQ" U="2172bdc3-0158-bb79-01ff77478f417efd"/>
 					<LoggerMailer RefNotification="2172baed-0257-c486-ffffe001fe9bf86f" On="&lt;v&gt;" Off="&lt;v&gt;" MinimumTime="5000" NL="1"/>
+				</C>
+				<C Type="OutputRef" V="178" U="2172bd93-0021-609d-ffffe001fe9bf86f" Title="FB_SET_STELLUNG_WZ" Px="10176" Py="672" Px2="12288" Py2="864" Cl="0,0,0" Nio="2" Ref="2172b9a7-00c5-ed4a-ffffe001fe9bf86f" WF="147456" Analog="true" LinkRefType="74">
+					<Co K="AI" Nc="1" U="2172bd93-0021-609b-00ff4b2964a0d181">
+						<In Input="2172bc1d-03d7-9e94-04fffafff08e154c"/>
+					</Co>
+					<Co K="AQ" U="2172bd93-0021-609c-01ff4b2964a0d181"/>
 				</C>
 			</C>
 			<C Type="Page" V="178" U="2172bdf4-004a-6903-ffffe001fe9bf86f" Title="Fensterbilanz Messwerte" LtE="561167875" WF="16384">
@@ -28368,12 +28368,6 @@
 					<Display Unit="&lt;v.pr&gt;"/>
 					<StateTexts></StateTexts>
 				</C>
-				<C Type="OutputRef" V="178" U="2172bf75-008a-a841-ffffe001fe9bf86f" Title="FB_SET_STRAHLUNG" Px="8256" Py="864" Px2="10368" Py2="1056" Cl="0,0,0" Nio="2" Ref="2172b9a7-0094-ed3b-ffffe001fe9bf86f" WF="147456" Analog="true" LinkRefType="74">
-					<Co K="AI" Nc="1" U="2172bf75-008a-a83f-00fff3c758ad04a9">
-						<In Input="2172be33-0351-fe18-04ffdbefe7d63870"/>
-					</Co>
-					<Co K="AQ" U="2172bf75-008a-a840-01fff3c758ad04a9"/>
-				</C>
 				<C Type="OutputRef" V="178" U="2172bf86-03b6-1ce7-ffffe001fe9bf86f" Title="FB_SET_PV_PROGNOSE" Px="10272" Py="6816" Px2="12384" Py2="7008" Cl="0,0,0" Nio="2" Ref="2172b9a7-00bb-ed47-ffffe001fe9bf86f" WF="147456" Analog="true" LinkRefType="74">
 					<Co K="AI" Nc="1" U="2172bf86-03b6-1ce5-00ffc48e43582f55">
 						<In Input="2172be86-0344-2932-04ff5f1d43e53067"/>
@@ -28409,6 +28403,12 @@
 						<In Input="2172be68-03a3-414e-04ffc175e0bbc40b"/>
 					</Co>
 					<Co K="AQ" U="2172bfbe-0095-9eef-01ffa55f1244ff4e"/>
+				</C>
+				<C Type="OutputRef" V="178" U="2172bf75-008a-a841-ffffe001fe9bf86f" Title="FB_SET_STRAHLUNG" Px="8256" Py="864" Px2="10368" Py2="1056" Cl="0,0,0" Nio="2" Ref="2172b9a7-0094-ed3b-ffffe001fe9bf86f" WF="147456" Analog="true" LinkRefType="74">
+					<Co K="AI" Nc="1" U="2172bf75-008a-a83f-00fff3c758ad04a9">
+						<In Input="2172be33-0351-fe18-04ffdbefe7d63870"/>
+					</Co>
+					<Co K="AQ" U="2172bf75-008a-a840-01fff3c758ad04a9"/>
 				</C>
 			</C>
 			<C Type="Page" V="178" U="2172bfcc-02d5-13bf-ffffe001fe9bf86f" Title="Fensterbilanz Werte" LtE="561168340" WF="16384">
@@ -28711,7 +28711,7 @@
 			</C>
 			<C Type="Page" V="178" U="f951c4b7-9b68-de70-a9f317a0b1886726" Title="Ferien und Feiertage" LtE="561168340" WF="16384">
 				<IoData Cr="216373ab-00cf-42fc-ffffe001fe9bf86f" Pr="216373ab-00cf-42f8-ffffe001fe9bf86f"/>
-				<C Type="InputRef" V="178" U="3436a667-cb1d-1eb0-41f0c113c2e914a8" Title="FERIEN_OK" Px="4416" Py="576" Px2="6528" Py2="768" Cl="0,0,0" Nio="4" Ref="39ff8417-51ae-6267-1bdff1e6654bf66c" WF="133120" LinkRefType="87">
+				<C Type="InputRef" V="178" U="3436a667-cb1d-1eb0-41f0c113c2e914a8" Title="FERIEN_OK" Px="4416" Py="576" Px2="6528" Py2="768" Cl="0,0,0" Nio="4" Ref="39ff8417-51ae-6267-1bdff1e6654bf66c" WF="149504" LinkRefType="87">
 					<Co K="AI" Nc="1" U="8cc48e6d-c373-c829-fe64ff325037381e">
 						<In Input="26ca5311-3f53-55c8-b2b7e999adc7c1fd"/>
 					</Co>
@@ -28721,7 +28721,7 @@
 					<Co K="AQ" U="1ec20f65-25cb-b185-c872e816c0915405"/>
 					<Co K="Q" U="ce06b729-7d9a-dcf4-ccc98a386d2769cb"/>
 				</C>
-				<C Type="InputRef" V="178" U="f3c0bfb4-a383-6bd8-88edca8a0298ad39" Title="FERIEN_ZAEHLER" Px="1344" Py="1056" Px2="3456" Py2="1248" Cl="0,0,0" Nio="4" Ref="6e5e2be7-83d3-9010-001a077b9037af24" WF="133120" Analog="true" LinkRefType="87">
+				<C Type="InputRef" V="178" U="f3c0bfb4-a383-6bd8-88edca8a0298ad39" Title="FERIEN_ZAEHLER" Px="1344" Py="1056" Px2="3456" Py2="1248" Cl="0,0,0" Nio="4" Ref="6e5e2be7-83d3-9010-001a077b9037af24" WF="149504" Analog="true" LinkRefType="87">
 					<Co K="AI" Nc="1" U="7332af93-0388-3f6d-9103b8a00f9dd61b">
 						<In Input="759c4992-7c9b-ac14-cb77774ea8948c7d"/>
 					</Co>
@@ -28731,7 +28731,7 @@
 					<Co K="AQ" U="820ab876-1c06-754b-aebe96d24fe2b453"/>
 					<Co K="Q" U="82b8014f-1b60-641b-8c5ba0f0d11c1e16"/>
 				</C>
-				<C Type="InputRef" V="178" U="a273cd9c-f5b9-3c57-0027f3fe5e8b4541" Title="FERIEN_WARN" Px="4416" Py="2208" Px2="6528" Py2="2400" Cl="0,0,0" Nio="4" Ref="76097b32-c8e5-c555-89b8aca0aa50acf4" WF="133120" LinkRefType="87">
+				<C Type="InputRef" V="178" U="a273cd9c-f5b9-3c57-0027f3fe5e8b4541" Title="FERIEN_WARN" Px="4416" Py="2208" Px2="6528" Py2="2400" Cl="0,0,0" Nio="4" Ref="76097b32-c8e5-c555-89b8aca0aa50acf4" WF="149504" LinkRefType="87">
 					<Co K="AI" Nc="1" U="072fcfff-beb5-edcb-f6b3e805a6b7cb03">
 						<In Input="d87cc658-45e8-1783-3edd9595f8c5edfd"/>
 					</Co>
@@ -28741,7 +28741,7 @@
 					<Co K="AQ" U="c987eb49-7393-7acc-5655d162a2c2e7d0"/>
 					<Co K="Q" U="a3347bed-95d0-7787-d7549c0cd806a8a1"/>
 				</C>
-				<C Type="InputRef" V="178" U="8e29f3e2-9ee6-f47b-f7a2c2c68ed62aeb" Title="FERIEN_ALTER_TAGE" Px="4416" Py="2400" Px2="6528" Py2="2592" Cl="0,0,0" Nio="4" Ref="809a56de-fede-e78d-4f658ff5e238b2af" WF="133120" Analog="true" LinkRefType="87">
+				<C Type="InputRef" V="178" U="8e29f3e2-9ee6-f47b-f7a2c2c68ed62aeb" Title="FERIEN_ALTER_TAGE" Px="4416" Py="2400" Px2="6528" Py2="2592" Cl="0,0,0" Nio="4" Ref="809a56de-fede-e78d-4f658ff5e238b2af" WF="149504" Analog="true" LinkRefType="87">
 					<Co K="AI" Nc="1" U="f45598a7-3ee6-6605-e22dd2ec98163082">
 						<In Input="3ad09b3f-8554-374a-19321ad3927a9b32"/>
 					</Co>
@@ -28751,7 +28751,7 @@
 					<Co K="AQ" U="f6caa066-e731-d129-93550f86377fc7d4"/>
 					<Co K="Q" U="9ffb2283-0854-9af3-4dd7f43913663727"/>
 				</C>
-				<C Type="InputRef" V="178" U="9e209128-6a98-a502-184d4d857ffb976d" Title="FERIEN_FERIEN" Px="12576" Py="1632" Px2="14688" Py2="1824" Cl="0,0,0" Nio="4" Ref="082dd709-84e8-c807-7ae89f563733f47f" WF="133120" LinkRefType="87">
+				<C Type="InputRef" V="178" U="9e209128-6a98-a502-184d4d857ffb976d" Title="FERIEN_FERIEN" Px="12576" Py="1632" Px2="14688" Py2="1824" Cl="0,0,0" Nio="4" Ref="082dd709-84e8-c807-7ae89f563733f47f" WF="149504" LinkRefType="87">
 					<Co K="AI" Nc="1" U="8b7e40f3-4fc2-84e7-35f0fd723deb3988">
 						<In Input="9827a6ce-01cc-77a8-5e7434b44eb15ff2"/>
 					</Co>
@@ -28761,7 +28761,7 @@
 					<Co K="AQ" U="9f145813-b209-c781-a4dab7aa518cecab"/>
 					<Co K="Q" U="e4d37789-13ca-c26d-21e42e9a299e3644"/>
 				</C>
-				<C Type="InputRef" V="178" U="314a8c92-8dd4-b969-ac8c6fdb75e44ed1" Title="FERIEN_FEIERTAG" Px="14304" Py="192" Px2="16416" Py2="384" Cl="0,0,0" Nio="4" Ref="741b338b-2a97-a0a8-5a0c7c9e2f6c2329" WF="133120" LinkRefType="87">
+				<C Type="InputRef" V="178" U="314a8c92-8dd4-b969-ac8c6fdb75e44ed1" Title="FERIEN_FEIERTAG" Px="14304" Py="192" Px2="16416" Py2="384" Cl="0,0,0" Nio="4" Ref="741b338b-2a97-a0a8-5a0c7c9e2f6c2329" WF="149504" LinkRefType="87">
 					<Co K="AI" Nc="1" U="6583312c-b635-fc50-105c676a6a13b62f">
 						<In Input="ee9a1772-295c-d171-2dd9ed932e5779a8"/>
 					</Co>
@@ -28771,7 +28771,7 @@
 					<Co K="AQ" U="e76b947c-34d1-0fce-35d08dd8e8d83bca"/>
 					<Co K="Q" U="b9375bc4-2c98-ae84-554bd7803121a4e8"/>
 				</C>
-				<C Type="InputRef" V="178" U="e9ecd756-7061-3b48-52dfaa2a2a6f160c" Title="FERIEN_HALBTAG" Px="12576" Py="2784" Px2="14688" Py2="2976" Cl="0,0,0" Nio="4" Ref="b0cdf450-83d4-dba4-00e239f85160c048" WF="133120" LinkRefType="87">
+				<C Type="InputRef" V="178" U="e9ecd756-7061-3b48-52dfaa2a2a6f160c" Title="FERIEN_HALBTAG" Px="12576" Py="2784" Px2="14688" Py2="2976" Cl="0,0,0" Nio="4" Ref="b0cdf450-83d4-dba4-00e239f85160c048" WF="149504" LinkRefType="87">
 					<Co K="AI" Nc="1" U="fc8570fb-8c35-caad-9ab00ece78af4c7e">
 						<In Input="3315da41-3116-590c-ceb7b0f8f9dc4537"/>
 					</Co>
@@ -28781,7 +28781,7 @@
 					<Co K="AQ" U="5c0e4ccd-1502-b253-7408473b4845ab54"/>
 					<Co K="Q" U="aabfe215-7cf5-0d77-fdea7e167f0fa7cb"/>
 				</C>
-				<C Type="InputRef" V="178" U="d0ab52e4-cb77-25fc-2c225c3fe5c5f627" Title="FERIEN_WOCHENENDE" Px="12576" Py="3552" Px2="14688" Py2="3744" Cl="0,0,0" Nio="4" Ref="97cefcd7-b334-a5f3-7b1bc48ec108116f" WF="133120" LinkRefType="87">
+				<C Type="InputRef" V="178" U="d0ab52e4-cb77-25fc-2c225c3fe5c5f627" Title="FERIEN_WOCHENENDE" Px="12576" Py="3552" Px2="14688" Py2="3744" Cl="0,0,0" Nio="4" Ref="97cefcd7-b334-a5f3-7b1bc48ec108116f" WF="149504" LinkRefType="87">
 					<Co K="AI" Nc="1" U="c1dcb5d5-8b18-3465-0853456de2f1fd82">
 						<In Input="3517bf55-5d04-25e6-8013c6ef28ee56f0"/>
 					</Co>
@@ -28791,7 +28791,7 @@
 					<Co K="AQ" U="2a15a605-de67-ac1a-9f9d3393fc4d3001"/>
 					<Co K="Q" U="2d95eef8-9034-594a-cc83297883268239"/>
 				</C>
-				<C Type="InputRef" V="178" U="7066c2da-fa59-2fc8-3a5b2f4276eee921" Title="FERIEN_BRUECKE" Px="12576" Py="3168" Px2="14688" Py2="3360" Cl="0,0,0" Nio="4" Ref="53496618-a29e-f66d-da622422ed20f05e" WF="133120" LinkRefType="87">
+				<C Type="InputRef" V="178" U="7066c2da-fa59-2fc8-3a5b2f4276eee921" Title="FERIEN_BRUECKE" Px="12576" Py="3168" Px2="14688" Py2="3360" Cl="0,0,0" Nio="4" Ref="53496618-a29e-f66d-da622422ed20f05e" WF="149504" LinkRefType="87">
 					<Co K="AI" Nc="1" U="02efa37e-bbc2-7e06-09ee0772e7e0e8fd">
 						<In Input="e023627e-d2a8-3d58-0e92712b6d9caf4d"/>
 					</Co>
@@ -28801,7 +28801,7 @@
 					<Co K="AQ" U="a924f95d-9566-3693-24428986f7cdf9d3"/>
 					<Co K="Q" U="9c67b63e-b07c-71a7-a11e1cf8af72b1dd"/>
 				</C>
-				<C Type="InputRef" V="178" U="f28764e0-04e7-f763-24a6b47b8784cf7f" Title="FERIEN_URLAUB" Px="12576" Py="3360" Px2="14688" Py2="3552" Cl="0,0,0" Nio="4" Ref="c76fb653-e2db-94a9-0897db021e522d63" WF="133120" LinkRefType="87">
+				<C Type="InputRef" V="178" U="f28764e0-04e7-f763-24a6b47b8784cf7f" Title="FERIEN_URLAUB" Px="12576" Py="3360" Px2="14688" Py2="3552" Cl="0,0,0" Nio="4" Ref="c76fb653-e2db-94a9-0897db021e522d63" WF="149504" LinkRefType="87">
 					<Co K="AI" Nc="1" U="06155ece-5222-43ca-2f8c935e1545ecb8">
 						<In Input="74fe61df-5f71-6e1b-16809602e534ce33"/>
 					</Co>
@@ -28811,7 +28811,7 @@
 					<Co K="AQ" U="66b3a361-192a-2c79-0f87e4de2245d585"/>
 					<Co K="Q" U="4ca4b16a-9dbf-4106-ad1e2c9c419ffe35"/>
 				</C>
-				<C Type="InputRef" V="178" U="206ad256-ce6d-270b-62b6f1933504daa0" Title="FERIEN_SCHULTAG" Px="12576" Py="3744" Px2="14688" Py2="3936" Cl="0,0,0" Nio="4" Ref="0ddf900e-f798-b4a3-25b021717194eb2d" WF="133120" LinkRefType="87">
+				<C Type="InputRef" V="178" U="206ad256-ce6d-270b-62b6f1933504daa0" Title="FERIEN_SCHULTAG" Px="12576" Py="3744" Px2="14688" Py2="3936" Cl="0,0,0" Nio="4" Ref="0ddf900e-f798-b4a3-25b021717194eb2d" WF="149504" LinkRefType="87">
 					<Co K="AI" Nc="1" U="4c69fb7b-1001-d7d0-691b10a1fcecff4c">
 						<In Input="12fff299-e7e6-b3aa-a3368754731c41a9"/>
 					</Co>
@@ -28821,7 +28821,7 @@
 					<Co K="AQ" U="1ad79b01-2610-ad85-3f7dc2eda4b8c108"/>
 					<Co K="Q" U="ac58cb15-36f4-ebf5-43cf5977edce6711"/>
 				</C>
-				<C Type="InputRef" V="178" U="34508d57-d432-338e-b2bd21c5b061d1f1" Title="FERIEN_FREITAGE" Px="12576" Py="3936" Px2="14688" Py2="4128" Cl="0,0,0" Nio="4" Ref="afc85b78-39b0-e93e-4734767f63a82916" WF="133120" Analog="true" LinkRefType="87">
+				<C Type="InputRef" V="178" U="34508d57-d432-338e-b2bd21c5b061d1f1" Title="FERIEN_FREITAGE" Px="12576" Py="3936" Px2="14688" Py2="4128" Cl="0,0,0" Nio="4" Ref="afc85b78-39b0-e93e-4734767f63a82916" WF="149504" Analog="true" LinkRefType="87">
 					<Co K="AI" Nc="1" U="120e8cee-d1c0-8b98-b8d95cfc1ba0bfd2">
 						<In Input="8fc0d583-3769-0cc6-a40e4ad2c4aa5765"/>
 					</Co>
@@ -28831,7 +28831,7 @@
 					<Co K="AQ" U="a43308ee-3255-9e5e-d6b23798d3f96063"/>
 					<Co K="Q" U="ea8bd7e1-ae1c-0da6-ebe6c8a79547559f"/>
 				</C>
-				<C Type="InputRef" V="178" U="1ecef9c7-50c5-7249-d9cd829b780863f5" Title="FERIEN_MFERIEN" Px="2880" Py="5856" Px2="4992" Py2="6048" Cl="0,0,0" Nio="4" Ref="dfa3acc6-5d65-b7ee-c808d3e7784e4274" WF="133120" LinkRefType="87">
+				<C Type="InputRef" V="178" U="1ecef9c7-50c5-7249-d9cd829b780863f5" Title="FERIEN_MFERIEN" Px="2880" Py="5856" Px2="4992" Py2="6048" Cl="0,0,0" Nio="4" Ref="dfa3acc6-5d65-b7ee-c808d3e7784e4274" WF="149504" LinkRefType="87">
 					<Co K="AI" Nc="1" U="51a988f3-99ff-59a3-e79143b0b70c51d3">
 						<In Input="e9d4f8c3-be1b-5369-e0d3574967e857cc"/>
 					</Co>
@@ -28841,7 +28841,7 @@
 					<Co K="AQ" U="3fc8726a-7b93-6876-19763b80cb76114e"/>
 					<Co K="Q" U="080d7e0c-b902-6406-270dd537c97d09bb"/>
 				</C>
-				<C Type="InputRef" V="178" U="f6b33cd3-5792-c15f-10e7e6f98c72269b" Title="FERIEN_MFEIERTAG" Px="2880" Py="5472" Px2="4992" Py2="5664" Cl="0,0,0" Nio="4" Ref="6b9a418f-36fc-b8c3-54340fd6dfc2b2d0" WF="133120" LinkRefType="87">
+				<C Type="InputRef" V="178" U="f6b33cd3-5792-c15f-10e7e6f98c72269b" Title="FERIEN_MFEIERTAG" Px="2880" Py="5472" Px2="4992" Py2="5664" Cl="0,0,0" Nio="4" Ref="6b9a418f-36fc-b8c3-54340fd6dfc2b2d0" WF="149504" LinkRefType="87">
 					<Co K="AI" Nc="1" U="a475f9f0-20ff-2a8c-be0d3c4decfa4a05">
 						<In Input="428cb9c1-4685-9103-6657910992534f1a"/>
 					</Co>
@@ -28851,7 +28851,7 @@
 					<Co K="AQ" U="16ff4b94-c345-f8ff-1c472ea696203c78"/>
 					<Co K="Q" U="6d19db66-6197-d1fb-7647a0c10642313c"/>
 				</C>
-				<C Type="InputRef" V="178" U="5a5e0ca9-2039-54b8-bb4ad462a5a1aefb" Title="FERIEN_MHALBTAG" Px="2880" Py="5664" Px2="4992" Py2="5856" Cl="0,0,0" Nio="4" Ref="9c2cb181-153e-21be-701b3a540aa975ab" WF="133120" LinkRefType="87">
+				<C Type="InputRef" V="178" U="5a5e0ca9-2039-54b8-bb4ad462a5a1aefb" Title="FERIEN_MHALBTAG" Px="2880" Py="5664" Px2="4992" Py2="5856" Cl="0,0,0" Nio="4" Ref="9c2cb181-153e-21be-701b3a540aa975ab" WF="149504" LinkRefType="87">
 					<Co K="AI" Nc="1" U="84520a9f-d0d4-ac5c-7201150fbfc7cd3e">
 						<In Input="4e057883-8c72-4cba-cfc6d5718352a5d7"/>
 					</Co>
@@ -28861,7 +28861,7 @@
 					<Co K="AQ" U="194dddee-b636-3c12-8d83c0504039e3ef"/>
 					<Co K="Q" U="49ec8294-a21e-b483-52fe645362864698"/>
 				</C>
-				<C Type="InputRef" V="178" U="446e6bde-c98d-9a5e-0e81544878c7b3a1" Title="FERIEN_MBRUECKE" Px="2880" Py="6048" Px2="4992" Py2="6240" Cl="0,0,0" Nio="4" Ref="fe830573-986b-faa7-e20db96958efdc6f" WF="133120" LinkRefType="87">
+				<C Type="InputRef" V="178" U="446e6bde-c98d-9a5e-0e81544878c7b3a1" Title="FERIEN_MBRUECKE" Px="2880" Py="6048" Px2="4992" Py2="6240" Cl="0,0,0" Nio="4" Ref="fe830573-986b-faa7-e20db96958efdc6f" WF="149504" LinkRefType="87">
 					<Co K="AI" Nc="1" U="893d6889-ccd4-50ed-9f40c29eadeb6f14">
 						<In Input="57c6b85d-9e29-d0e6-c92900f5d8edaa1c"/>
 					</Co>
@@ -28871,7 +28871,7 @@
 					<Co K="AQ" U="6b34db8c-96b9-5dcd-cd375c402db24a47"/>
 					<Co K="Q" U="c22f7947-fb16-0c78-cc0e9f5712190846"/>
 				</C>
-				<C Type="InputRef" V="178" U="fca98151-642e-69f7-887df8079d6e5060" Title="FERIEN_MURLAUB" Px="2880" Py="6240" Px2="4992" Py2="6432" Cl="0,0,0" Nio="4" Ref="aeb9ba9d-a4ad-3f25-af17f4c72d7b92c3" WF="133120" LinkRefType="87">
+				<C Type="InputRef" V="178" U="fca98151-642e-69f7-887df8079d6e5060" Title="FERIEN_MURLAUB" Px="2880" Py="6240" Px2="4992" Py2="6432" Cl="0,0,0" Nio="4" Ref="aeb9ba9d-a4ad-3f25-af17f4c72d7b92c3" WF="149504" LinkRefType="87">
 					<Co K="AI" Nc="1" U="dd12633e-1a28-bd76-133b0af49a8e94b6">
 						<In Input="f5bc0a32-d276-b8b7-f9e1d08e3d21bf8a"/>
 					</Co>
@@ -28881,7 +28881,7 @@
 					<Co K="AQ" U="0d422e51-32e9-3043-0f396f2f51a14c0d"/>
 					<Co K="Q" U="df526208-bf41-db89-64a4794275c06973"/>
 				</C>
-				<C Type="InputRef" V="178" U="cacd064b-4ffd-d13a-77c12b7e649e105d" Title="FERIEN_MSCHULTAG" Px="2880" Py="6432" Px2="4992" Py2="6624" Cl="0,0,0" Nio="4" Ref="e7144cd7-b854-73ac-8294c433d3752ef7" WF="133120" LinkRefType="87">
+				<C Type="InputRef" V="178" U="cacd064b-4ffd-d13a-77c12b7e649e105d" Title="FERIEN_MSCHULTAG" Px="2880" Py="6432" Px2="4992" Py2="6624" Cl="0,0,0" Nio="4" Ref="e7144cd7-b854-73ac-8294c433d3752ef7" WF="149504" LinkRefType="87">
 					<Co K="AI" Nc="1" U="fe7dd4ba-ad77-b4f2-f21cdd8eee6f91c7">
 						<In Input="41b54cb0-30fd-dc40-5ca088b90ac68b76"/>
 					</Co>
@@ -28891,7 +28891,7 @@
 					<Co K="AQ" U="7163cdf0-8325-466b-61ed03901cd59934"/>
 					<Co K="Q" U="725bdba0-9d63-ef55-c61b7106be6a7b77"/>
 				</C>
-				<C Type="InputRef" V="178" U="98e0f717-9798-292a-f15a8a5337694960" Title="FERIEN_MFREITAGE" Px="2880" Py="6624" Px2="4992" Py2="6816" Cl="0,0,0" Nio="4" Ref="08e9599c-17c2-b677-e6402a4273ba7e47" WF="133120" Analog="true" LinkRefType="87">
+				<C Type="InputRef" V="178" U="98e0f717-9798-292a-f15a8a5337694960" Title="FERIEN_MFREITAGE" Px="2880" Py="6624" Px2="4992" Py2="6816" Cl="0,0,0" Nio="4" Ref="08e9599c-17c2-b677-e6402a4273ba7e47" WF="149504" Analog="true" LinkRefType="87">
 					<Co K="AI" Nc="1" U="129fe86f-c2e2-67c7-6e92c4de4fc9b875">
 						<In Input="e68eec56-15e0-b9a9-41d43744e3877c44"/>
 					</Co>
@@ -28901,7 +28901,7 @@
 					<Co K="AQ" U="15ad07fb-8a71-1ee3-db6659bc3ec80122"/>
 					<Co K="Q" U="9fadecc7-5bf2-fa20-e011a7193abffdbb"/>
 				</C>
-				<C Type="InputRef" V="178" U="9f451cad-363c-fc56-918f226a2970cfe6" Title="Konstante 1" Px="1344" Py="1248" Px2="3456" Py2="1440" Cl="0,0,0" Nio="4" Ref="216c8f88-0096-1e34-ffffe001fe9bf86f" WF="133120" Analog="true" LinkRefType="17">
+				<C Type="InputRef" V="178" U="9f451cad-363c-fc56-918f226a2970cfe6" Title="Konstante 1" Px="1344" Py="1248" Px2="3456" Py2="1440" Cl="0,0,0" Nio="4" Ref="216c8f88-0096-1e34-ffffe001fe9bf86f" WF="149504" Analog="true" LinkRefType="17">
 					<Co K="AI" Nc="1" U="3db99bb7-024a-267b-824aeb0b15d516d3">
 						<In Input="216c8f88-0096-1e33-00ff13c84b8d596b"/>
 					</Co>
@@ -28909,7 +28909,7 @@
 					<Co K="AQ" U="74101c7e-c495-a83f-8d5a260f316182b2"/>
 					<Co K="Q" U="69d2d11f-e0b7-2a3b-71e7e1e34267c524"/>
 				</C>
-				<C Type="InputRef" V="178" U="04e83ef3-2541-6547-097e774e5453495b" Title="Schulferien als freie Tage (Ferien)" Px="19392" Py="1824" Px2="21504" Py2="2016" Cl="0,0,0" Nio="4" Ref="7dce9f42-2459-46f7-2fa80e6af6a6e626" WF="133120" LinkRefType="71">
+				<C Type="InputRef" V="178" U="04e83ef3-2541-6547-097e774e5453495b" Title="Schulferien als freie Tage (Ferien)" Px="19392" Py="1824" Px2="21504" Py2="2016" Cl="0,0,0" Nio="4" Ref="7dce9f42-2459-46f7-2fa80e6af6a6e626" WF="149504" LinkRefType="71">
 					<Co K="AI" Nc="1" U="1a31aced-506c-799e-860b98f9beb990ba">
 						<In Input="4d26480f-306e-59b2-f271805e7f2039cc"/>
 					</Co>
@@ -28919,7 +28919,7 @@
 					<Co K="AQ" U="04ead721-aab9-8de8-454b3fac2bca347c"/>
 					<Co K="Q" U="e5fe2961-a394-0c58-f781b7d761df7456"/>
 				</C>
-				<C Type="Validator" V="178" U="5e76801a-9997-a1fc-3eba640ceb13f7a1" Title="Lebenszeichen fehlt (Ferien)" Px="4416" Py="768" Px2="5760" Py2="1656" Cl="141,255,112" Nio="8" LtE="560782872">
+				<C Type="Validator" V="178" U="5e76801a-9997-a1fc-3eba640ceb13f7a1" Title="Lebenszeichen fehlt (Ferien)" Px="4416" Py="768" Px2="5760" Py2="1656" Cl="141,255,112" Nio="8" LtE="560782872" WF="147456">
 					<Co K="inval" Nc="1" U="dce85d4d-004c-fe94-940c7a5e8b7c91d2">
 						<In Input="820ab876-1c06-754b-aebe96d24fe2b453"/>
 					</Co>
@@ -28933,13 +28933,13 @@
 					<Co K="outval" U="b19bd6a8-cf2b-a579-e1b7de5a819f4471"/>
 					<Co K="error" U="c1e509c5-42d3-a4a6-a4ca49dcb724e14e"/>
 				</C>
-				<C Type="Not" V="178" U="4e47b76a-4be2-dcc4-8aa53178f45f8271" Title="Keine frischen Daten (Ferien)" Px="7488" Py="768" Px2="8832" Py2="1272" Cl="141,255,112" Nio="2" LtE="560934942">
+				<C Type="Not" V="178" U="4e47b76a-4be2-dcc4-8aa53178f45f8271" Title="Keine frischen Daten (Ferien)" Px="7488" Py="768" Px2="8832" Py2="1272" Cl="141,255,112" Nio="2" LtE="560934942" WF="147456">
 					<Co K="I" Nc="1" U="db046441-9a8e-c94f-ffddf644a3c52b89">
 						<In Input="1ec20f65-25cb-b185-c872e816c0915405"/>
 					</Co>
 					<Co K="Q" U="387fcb20-bade-ec29-d924d25b52ccb4e5"/>
 				</C>
-				<C Type="Or" V="178" U="fb1d62d8-11b3-d9ae-6a0a3d3a1a34934a" Title="Störung (Ferien)" Px="11136" Py="768" Px2="12480" Py2="1464" Cl="141,255,112" Nio="3" LtE="560934948" WF="131072">
+				<C Type="Or" V="178" U="fb1d62d8-11b3-d9ae-6a0a3d3a1a34934a" Title="Störung (Ferien)" Px="11136" Py="768" Px2="12480" Py2="1464" Cl="141,255,112" Nio="3" LtE="560934948" WF="147456">
 					<Co K="I1" Nc="1" U="e1c9d047-6dd1-dfe3-84f02a78f8e68a7c">
 						<In Input="387fcb20-bade-ec29-d924d25b52ccb4e5"/>
 					</Co>
@@ -28948,7 +28948,7 @@
 					</Co>
 					<Co K="Q" U="d3989f58-b99f-b8dc-924e51e20402b2ca"/>
 				</C>
-				<C Type="OnDelay" V="178" U="bdf611fd-7904-ff28-9d2dd5718a136cc0" Title="Störung bestätigt (Ferien)" Px="14208" Py="768" Px2="15552" Py2="1464" Cl="141,255,112" Nio="5" LtE="560167128">
+				<C Type="OnDelay" V="178" U="bdf611fd-7904-ff28-9d2dd5718a136cc0" Title="Störung bestätigt (Ferien)" Px="14208" Py="768" Px2="15552" Py2="1464" Cl="141,255,112" Nio="5" LtE="560167128" WF="16384">
 					<Co K="InputTrigger" Nc="1" U="6846a1b6-3fa3-2a27-15771bb46d8a00b8">
 						<In Input="d3989f58-b99f-b8dc-924e51e20402b2ca"/>
 					</Co>
@@ -28957,7 +28957,7 @@
 					<Co K="Time" Def="600" U="a5d066ba-70c8-07d5-59ed23cbb99a5656"/>
 					<Co K="Q" U="8785f5a1-8c34-42fb-f68cfe16c92a694a"/>
 				</C>
-				<C Type="State" V="178" U="7a015865-4ba1-7130-079637e051630c19" Title="Zustand (Ferien)" Px="7488" Py="1344" Px2="10176" Py2="2808" Cl="141,255,112" Nio="11" LtE="560167149">
+				<C Type="State" V="178" U="7a015865-4ba1-7130-079637e051630c19" Title="Zustand (Ferien)" Px="7488" Py="1344" Px2="10176" Py2="2808" Cl="141,255,112" Nio="11" LtE="560167149" WF="16384">
 					<Co K="I1" Nc="1" U="fb61eeb5-aeb0-8eef-957e46847a7ae657">
 						<In Input="c1e509c5-42d3-a4a6-a4ca49dcb724e14e"/>
 					</Co>
@@ -28981,7 +28981,7 @@
 					<Display Unit="&lt;v.pr&gt;"/>
 					<StateTexts></StateTexts>
 				</C>
-				<C Type="OnDelay" V="178" U="aa1197bd-1fd2-e4f7-b1b500131c2fc973" Title="Daten veralten bestätigt (Ferien)" Px="7488" Py="2880" Px2="8832" Py2="3576" Cl="141,255,112" Nio="5" LtE="560167128">
+				<C Type="OnDelay" V="178" U="aa1197bd-1fd2-e4f7-b1b500131c2fc973" Title="Daten veralten bestätigt (Ferien)" Px="7488" Py="2880" Px2="8832" Py2="3576" Cl="141,255,112" Nio="5" LtE="560167128" WF="16384">
 					<Co K="InputTrigger" Nc="1" U="d7e9440b-78ba-594d-690867212af3ce92">
 						<In Input="c987eb49-7393-7acc-5655d162a2c2e7d0"/>
 					</Co>
@@ -28990,7 +28990,7 @@
 					<Co K="Time" Def="3600" U="28b2e054-4a6d-58c4-0dba892fed6d1b4f"/>
 					<Co K="Q" U="3ef3c016-355a-5441-5b614cdc5d9290cd"/>
 				</C>
-				<C Type="State" V="178" U="178a54a6-20bb-b3fe-df0357b343f8611b" Title="Heute (Ferien)" Px="17280" Py="2112" Px2="19968" Py2="4344" Cl="141,255,112" Nio="11" LtE="560167149">
+				<C Type="State" V="178" U="178a54a6-20bb-b3fe-df0357b343f8611b" Title="Heute (Ferien)" Px="17280" Py="2112" Px2="19968" Py2="4344" Cl="141,255,112" Nio="11" LtE="560167149" WF="16384">
 					<Co K="I1" Nc="1" U="c95055ee-15e1-ba10-5f6cdd728a0590e4">
 						<In Input="e76b947c-34d1-0fce-35d08dd8e8d83bca"/>
 					</Co>
@@ -29022,7 +29022,7 @@
 					<Display Unit="&lt;v.pr&gt;"/>
 					<StateTexts></StateTexts>
 				</C>
-				<C Type="State" V="178" U="9aaf054c-068c-cbc3-a8456ab17f4809e0" Title="Morgen (Ferien)" Px="5952" Py="4992" Px2="8640" Py2="7032" Cl="141,255,112" Nio="11" LtE="560167149">
+				<C Type="State" V="178" U="9aaf054c-068c-cbc3-a8456ab17f4809e0" Title="Morgen (Ferien)" Px="5952" Py="4992" Px2="8640" Py2="7032" Cl="141,255,112" Nio="11" LtE="560167149" WF="16384">
 					<Co K="I1" Nc="1" U="16b422af-0842-457d-13acdfd7b1a0f547">
 						<In Input="16ff4b94-c345-f8ff-1c472ea696203c78"/>
 					</Co>
@@ -29052,7 +29052,7 @@
 					<Display Unit="&lt;v.pr&gt;"/>
 					<StateTexts></StateTexts>
 				</C>
-				<C Type="And" V="178" U="9aedd0c7-ba15-b223-4bdb912b77e12d09" Title="Feiertag mit gültigen Daten (Ferien)" Px="19488" Py="576" Px2="20832" Py2="1272" Cl="141,255,112" Nio="3" LtE="560166852">
+				<C Type="And" V="178" U="9aedd0c7-ba15-b223-4bdb912b77e12d09" Title="Feiertag mit gültigen Daten (Ferien)" Px="19488" Py="576" Px2="20832" Py2="1272" Cl="141,255,112" Nio="3" LtE="560166852" WF="16384">
 					<Co K="I1" Nc="1" U="b7637846-3e26-0737-f2f5e2e1fa91f7cb">
 						<In Input="e76b947c-34d1-0fce-35d08dd8e8d83bca"/>
 					</Co>
@@ -29061,7 +29061,7 @@
 					</Co>
 					<Co K="Q" U="b9493077-ff68-1615-14d9875c80a42d0f"/>
 				</C>
-				<C Type="And" V="178" U="3ba10ddc-f1e5-aca1-aed4a4e20b2548ab" Title="Ferien mit gültigen Daten (Ferien)" Px="17280" Py="1344" Px2="18624" Py2="2040" Cl="141,255,112" Nio="3" LtE="560166852">
+				<C Type="And" V="178" U="3ba10ddc-f1e5-aca1-aed4a4e20b2548ab" Title="Ferien mit gültigen Daten (Ferien)" Px="17280" Py="1344" Px2="18624" Py2="2040" Cl="141,255,112" Nio="3" LtE="560166852" WF="147456">
 					<Co K="I1" Nc="1" U="1d549a22-6544-5ed1-8ad764f727128583">
 						<In Input="9f145813-b209-c781-a4dab7aa518cecab"/>
 					</Co>
@@ -29070,7 +29070,7 @@
 					</Co>
 					<Co K="Q" U="bf0a4b81-60a0-6adb-a856504601ac0773"/>
 				</C>
-				<C Type="And" V="178" U="b5660cff-b5eb-7835-2f1705aeba1d177e" Title="Ferien als freie Tage (Ferien)" Px="21984" Py="1344" Px2="23328" Py2="2040" Cl="141,255,112" Nio="3" LtE="560166852">
+				<C Type="And" V="178" U="b5660cff-b5eb-7835-2f1705aeba1d177e" Title="Ferien als freie Tage (Ferien)" Px="21984" Py="1344" Px2="23328" Py2="2040" Cl="141,255,112" Nio="3" LtE="560166852" WF="16384">
 					<Co K="I1" Nc="1" U="98050976-354a-0016-3fe1a4afe82f5004">
 						<In Input="bf0a4b81-60a0-6adb-a856504601ac0773"/>
 					</Co>
@@ -29079,36 +29079,36 @@
 					</Co>
 					<Co K="Q" U="4cd83bcb-7a8a-b0fa-bd1c8abc3c5758d7"/>
 				</C>
-				<C Type="OutputRefLM" V="178" U="334a7b4d-04fb-7173-90f840afb0f56ce9" Title="Meldung Kalenderdaten veralten (Ferien)" Px="9792" Py="3168" Px2="11904" Py2="3360" Cl="0,0,0" Nio="2" Ref="e9fe600a-1591-53b9-9bafaf21e2d1cbdf" WF="131072">
-					<Co K="AI" Nc="1" U="98f36dd1-2214-551f-333f9a904920f17d">
-						<In Input="3ef3c016-355a-5441-5b614cdc5d9290cd"/>
-					</Co>
-					<Co K="AQ" U="16bb105f-0bd4-1ca0-5aca0bcdae26b4d9"/>
-					<LoggerMailer RefNotification="e9fe600a-1591-53b9-9bafaf21e2d1cbdf" On="&lt;v&gt;" Off="&lt;v&gt;" MinimumTime="5000" NL="1"/>
-				</C>
-				<C Type="OutputRef" V="178" U="2177cb67-0314-4ef9-ffff17a0b1886726" Title="Freier Tag/Schulferien" Px="21408" Py="3168" Px2="23520" Py2="3360" Cl="0,0,0" Nio="2" Ref="00000000-0000-0003-1500000000000000" WF="131072" LinkRefType="21">
+				<C Type="OutputRef" V="178" U="2177cb67-0314-4ef9-ffff17a0b1886726" Title="Freier Tag/Schulferien" Px="21408" Py="3168" Px2="23520" Py2="3360" Cl="0,0,0" Nio="2" Ref="00000000-0000-0003-1500000000000000" WF="147456" LinkRefType="21">
 					<Co K="AI" Nc="1" U="2177cb67-0314-4ef7-00ffb12de1f80bfd">
 						<In Input="4cd83bcb-7a8a-b0fa-bd1c8abc3c5758d7"/>
 					</Co>
 					<Co K="AQ" U="2177cb67-0314-4ef8-01ffb12de1f80bfd"/>
 				</C>
-				<C Type="OutputRef" V="178" U="2177cb52-022d-47fb-ffff17a0b1886726" Title="Feiertag" Px="21312" Py="384" Px2="23424" Py2="576" Cl="0,0,0" Nio="2" Ref="00000000-0000-0001-1500000000000000" WF="131072" LinkRefType="21">
+				<C Type="OutputRef" V="178" U="2177cb52-022d-47fb-ffff17a0b1886726" Title="Feiertag" Px="21312" Py="384" Px2="23424" Py2="576" Cl="0,0,0" Nio="2" Ref="00000000-0000-0001-1500000000000000" WF="147456" LinkRefType="21">
 					<Co K="AI" Nc="1" U="2177cb52-022d-47f9-00ff0c4e2a6053e8">
 						<In Input="b9493077-ff68-1615-14d9875c80a42d0f"/>
 					</Co>
 					<Co K="AQ" U="2177cb52-022d-47fa-01ff0c4e2a6053e8"/>
 				</C>
-				<C Type="OutputRefLM" V="178" U="47857cd2-3c7d-cda3-e4a8798772177612" Title="Meldung Plugin gestört (Ferien)" Px="16128" Py="672" Px2="18240" Py2="864" Cl="0,0,0" Nio="2" Ref="b4b1e278-42a7-3f16-1dd0a135ae839532" WF="131072">
+				<C Type="OutputRefLM" V="178" U="47857cd2-3c7d-cda3-e4a8798772177612" Title="Meldung Plugin gestört (Ferien)" Px="16128" Py="672" Px2="18240" Py2="864" Cl="0,0,0" Nio="2" Ref="b4b1e278-42a7-3f16-1dd0a135ae839532" WF="147456">
 					<Co K="AI" Nc="1" U="0b154911-cab6-fc4e-b5918ebdaabb5409">
 						<In Input="8785f5a1-8c34-42fb-f68cfe16c92a694a"/>
 					</Co>
 					<Co K="AQ" U="15212753-70b9-b934-76908650b870e0eb"/>
 					<LoggerMailer RefNotification="b4b1e278-42a7-3f16-1dd0a135ae839532" On="&lt;v&gt;" Off="&lt;v&gt;" MinimumTime="5000" NL="1"/>
 				</C>
+				<C Type="OutputRefLM" V="178" U="334a7b4d-04fb-7173-90f840afb0f56ce9" Title="Meldung Kalenderdaten veralten (Ferien)" Px="9792" Py="3168" Px2="11904" Py2="3360" Cl="0,0,0" Nio="2" Ref="e9fe600a-1591-53b9-9bafaf21e2d1cbdf" WF="147456">
+					<Co K="AI" Nc="1" U="98f36dd1-2214-551f-333f9a904920f17d">
+						<In Input="3ef3c016-355a-5441-5b614cdc5d9290cd"/>
+					</Co>
+					<Co K="AQ" U="16bb105f-0bd4-1ca0-5aca0bcdae26b4d9"/>
+					<LoggerMailer RefNotification="e9fe600a-1591-53b9-9bafaf21e2d1cbdf" On="&lt;v&gt;" Off="&lt;v&gt;" MinimumTime="5000" NL="1"/>
+				</C>
 			</C>
 			<C Type="Page" V="178" U="941564b4-d8b6-4fec-0ef12b77138289a5" Title="Ferien und Feiertage Haus" LtE="561168340" WF="16384">
 				<IoData Cr="216373ab-00cf-42fc-ffffe001fe9bf86f" Pr="216373ab-00cf-42f8-ffffe001fe9bf86f"/>
-				<C Type="InputRef" V="178" U="480a2e87-3f51-c5d6-b91761691323ce23" Title="FERIEN_SCHULTAG" Px="6624" Py="864" Px2="8736" Py2="1056" Cl="0,0,0" Nio="4" Ref="0ddf900e-f798-b4a3-25b021717194eb2d" WF="133120" LinkRefType="87">
+				<C Type="InputRef" V="178" U="480a2e87-3f51-c5d6-b91761691323ce23" Title="FERIEN_SCHULTAG" Px="6624" Py="864" Px2="8736" Py2="1056" Cl="0,0,0" Nio="4" Ref="0ddf900e-f798-b4a3-25b021717194eb2d" WF="149504" LinkRefType="87">
 					<Co K="AI" Nc="1" U="6900630f-95f1-e4c3-3fb47a70753989d8">
 						<In Input="12fff299-e7e6-b3aa-a3368754731c41a9"/>
 					</Co>
@@ -29118,7 +29118,7 @@
 					<Co K="AQ" U="68d5c60e-a97d-6fc8-d838f476130519a9"/>
 					<Co K="Q" U="d322b4a7-f576-5b36-035ae5ddf3b0aabd"/>
 				</C>
-				<C Type="InputRef" V="178" U="b3a4818d-2012-4ef7-d7739f1ef35bd6eb" Title="FERIEN_FREITAGE" Px="10752" Py="9504" Px2="12864" Py2="9696" Cl="0,0,0" Nio="4" Ref="afc85b78-39b0-e93e-4734767f63a82916" WF="133120" Analog="true" LinkRefType="87">
+				<C Type="InputRef" V="178" U="b3a4818d-2012-4ef7-d7739f1ef35bd6eb" Title="FERIEN_FREITAGE" Px="10752" Py="9504" Px2="12864" Py2="9696" Cl="0,0,0" Nio="4" Ref="afc85b78-39b0-e93e-4734767f63a82916" WF="149504" Analog="true" LinkRefType="87">
 					<Co K="AI" Nc="1" U="45aa976d-c219-5e79-69dd18b08abd2469">
 						<In Input="8fc0d583-3769-0cc6-a40e4ad2c4aa5765"/>
 					</Co>
@@ -29128,7 +29128,7 @@
 					<Co K="AQ" U="dca71c1d-267c-9ec9-4e45b0d47edced69"/>
 					<Co K="Q" U="b0ef5182-1d26-96d8-c101e9b0a199577b"/>
 				</C>
-				<C Type="InputRef" V="178" U="54d0c076-ab92-9c88-595829eb75a2e92f" Title="FERIEN_URLAUB" Px="960" Py="4032" Px2="3072" Py2="4224" Cl="0,0,0" Nio="4" Ref="c76fb653-e2db-94a9-0897db021e522d63" WF="133120" LinkRefType="87">
+				<C Type="InputRef" V="178" U="54d0c076-ab92-9c88-595829eb75a2e92f" Title="FERIEN_URLAUB" Px="960" Py="4032" Px2="3072" Py2="4224" Cl="0,0,0" Nio="4" Ref="c76fb653-e2db-94a9-0897db021e522d63" WF="149504" LinkRefType="87">
 					<Co K="AI" Nc="1" U="db5a8d5b-55c7-41ef-c0010170a3e9531a">
 						<In Input="74fe61df-5f71-6e1b-16809602e534ce33"/>
 					</Co>
@@ -29138,7 +29138,7 @@
 					<Co K="AQ" U="1d60ada3-ad04-7ce9-2aa8c5c1f9c8c7a9"/>
 					<Co K="Q" U="14224f26-e630-4f0c-bf281f7772ce7a0f"/>
 				</C>
-				<C Type="InputRef" V="178" U="bc3a43d2-0f31-98c4-29484edae1b48678" Title="FERIEN_URLAUBHEIM" Px="1056" Py="8640" Px2="3168" Py2="8832" Cl="0,0,0" Nio="4" Ref="48141fe0-be78-0877-91adb7d8be6dfa0c" WF="133120" LinkRefType="87">
+				<C Type="InputRef" V="178" U="bc3a43d2-0f31-98c4-29484edae1b48678" Title="FERIEN_URLAUBHEIM" Px="1056" Py="8640" Px2="3168" Py2="8832" Cl="0,0,0" Nio="4" Ref="48141fe0-be78-0877-91adb7d8be6dfa0c" WF="149504" LinkRefType="87">
 					<Co K="AI" Nc="1" U="7639afe4-4f11-12a2-7bacb6a14a535dc4">
 						<In Input="8fdfa9cd-29fd-76d7-39e868403b7e0b83"/>
 					</Co>
@@ -29148,7 +29148,7 @@
 					<Co K="AQ" U="96b89949-57af-1958-1d969593f6697c5c"/>
 					<Co K="Q" U="89ad8234-6f40-b685-cb441b0b99f9af83"/>
 				</C>
-				<C Type="InputRef" V="178" U="c7d0ab13-00fd-3f0d-098ea9d9f92bd242" Title="FERIEN_URLAUBREST" Px="16896" Py="1248" Px2="19008" Py2="1440" Cl="0,0,0" Nio="4" Ref="71b34f8e-aa0c-d994-2705335b7145c533" WF="133120" Analog="true" LinkRefType="87">
+				<C Type="InputRef" V="178" U="c7d0ab13-00fd-3f0d-098ea9d9f92bd242" Title="FERIEN_URLAUBREST" Px="16896" Py="1248" Px2="19008" Py2="1440" Cl="0,0,0" Nio="4" Ref="71b34f8e-aa0c-d994-2705335b7145c533" WF="149504" Analog="true" LinkRefType="87">
 					<Co K="AI" Nc="1" U="0c0b0d70-4c3c-4ec0-0342a1bc4ef6abee">
 						<In Input="6f72e96c-d6ca-4935-8a03e3a5e7b396c8"/>
 					</Co>
@@ -29158,7 +29158,7 @@
 					<Co K="AQ" U="f1d93097-af42-049c-87fb0877df58b03c"/>
 					<Co K="Q" U="9e6c259a-59af-ee43-421276847d199184"/>
 				</C>
-				<C Type="InputRef" V="178" U="e0cd7c1e-33db-a899-9624a8c32c61cb2e" Title="FERIEN_URLAUBIN" Px="16896" Py="1440" Px2="19008" Py2="1632" Cl="0,0,0" Nio="4" Ref="dbf3e335-d874-14f5-b28a8a2f4b4e73e1" WF="133120" Analog="true" LinkRefType="87">
+				<C Type="InputRef" V="178" U="e0cd7c1e-33db-a899-9624a8c32c61cb2e" Title="FERIEN_URLAUBIN" Px="16896" Py="1440" Px2="19008" Py2="1632" Cl="0,0,0" Nio="4" Ref="dbf3e335-d874-14f5-b28a8a2f4b4e73e1" WF="149504" Analog="true" LinkRefType="87">
 					<Co K="AI" Nc="1" U="2f13029e-d050-8428-51ebbf82f8291a34">
 						<In Input="5500c24f-ac36-18c5-522f17b2aecc2edf"/>
 					</Co>
@@ -29168,7 +29168,7 @@
 					<Co K="AQ" U="f423a17b-1f26-0237-f2d6d9c76046ca6a"/>
 					<Co K="Q" U="8f75ad69-2035-9e08-a8796f93525327f9"/>
 				</C>
-				<C Type="InputRef" V="178" U="26dd99a9-bd43-8af9-a49e669f30830f11" Title="FERIEN_URLAUBDAUER" Px="16896" Py="1632" Px2="19008" Py2="1824" Cl="0,0,0" Nio="4" Ref="2a530d05-5551-ea22-382bbb70dc362f83" WF="133120" Analog="true" LinkRefType="87">
+				<C Type="InputRef" V="178" U="26dd99a9-bd43-8af9-a49e669f30830f11" Title="FERIEN_URLAUBDAUER" Px="16896" Py="1632" Px2="19008" Py2="1824" Cl="0,0,0" Nio="4" Ref="2a530d05-5551-ea22-382bbb70dc362f83" WF="149504" Analog="true" LinkRefType="87">
 					<Co K="AI" Nc="1" U="bfea494b-b61b-a5ec-4b079d4f97271e11">
 						<In Input="bf8298e2-a703-521f-3bc9b2939339a6a3"/>
 					</Co>
@@ -29178,7 +29178,7 @@
 					<Co K="AQ" U="99c450ab-1e2b-9afa-23d8f45bb1147562"/>
 					<Co K="Q" U="26eb6c96-7c49-4802-6fcf2f49d463cd5a"/>
 				</C>
-				<C Type="InputRef" V="178" U="2480023c-27ac-dbcd-1565b4c97ad47a5a" Title="FERIEN_MURLAUB" Px="16896" Py="2208" Px2="19008" Py2="2400" Cl="0,0,0" Nio="4" Ref="aeb9ba9d-a4ad-3f25-af17f4c72d7b92c3" WF="133120" LinkRefType="87">
+				<C Type="InputRef" V="178" U="2480023c-27ac-dbcd-1565b4c97ad47a5a" Title="FERIEN_MURLAUB" Px="16896" Py="2208" Px2="19008" Py2="2400" Cl="0,0,0" Nio="4" Ref="aeb9ba9d-a4ad-3f25-af17f4c72d7b92c3" WF="149504" LinkRefType="87">
 					<Co K="AI" Nc="1" U="fe0523dc-28fe-a577-85d90a48be935b6e">
 						<In Input="f5bc0a32-d276-b8b7-f9e1d08e3d21bf8a"/>
 					</Co>
@@ -29188,7 +29188,7 @@
 					<Co K="AQ" U="dd114ae0-f132-a065-8df84af9272600f5"/>
 					<Co K="Q" U="ff4e9686-3b04-f92a-4da03fe98fb159b4"/>
 				</C>
-				<C Type="InputRef" V="178" U="82f2f295-53af-4026-e6e44649cefcff1f" Title="Wecker aktiv (Ferien)" Px="1344" Py="1056" Px2="3456" Py2="1248" Cl="0,0,0" Nio="4" Ref="66d2fa12-3786-7bf8-64853f660f0c717a" WF="133120" LinkRefType="71">
+				<C Type="InputRef" V="178" U="82f2f295-53af-4026-e6e44649cefcff1f" Title="Wecker aktiv (Ferien)" Px="1344" Py="1056" Px2="3456" Py2="1248" Cl="0,0,0" Nio="4" Ref="66d2fa12-3786-7bf8-64853f660f0c717a" WF="149504" LinkRefType="71">
 					<Co K="AI" Nc="1" U="f1b68f3a-908b-6796-8b84f0a0a3a63096">
 						<In Input="e8f2af50-9fdb-461b-8288471df1306970"/>
 					</Co>
@@ -29198,7 +29198,7 @@
 					<Co K="AQ" U="01abf004-0da5-9d13-2166b9c0c63f28e9"/>
 					<Co K="Q" U="ec5d7658-0e1b-a2b3-e1fbbdb675b415a0"/>
 				</C>
-				<C Type="InputRef" V="178" U="65effd04-d763-793e-48350da2c824d3df" Title="Niemand zu Hause (eigene Quelle)" Px="1248" Py="7776" Px2="3360" Py2="7968" Cl="0,0,0" Nio="4" Ref="21715e1a-0288-1586-ffffe001fe9bf86f" WF="133120" LinkRefType="71">
+				<C Type="InputRef" V="178" U="65effd04-d763-793e-48350da2c824d3df" Title="Niemand zu Hause (eigene Quelle)" Px="1248" Py="7776" Px2="3360" Py2="7968" Cl="0,0,0" Nio="4" Ref="21715e1a-0288-1586-ffffe001fe9bf86f" WF="149504" LinkRefType="71">
 					<Co K="AI" Nc="1" U="522b7278-1c30-9158-b97c9b3662a5d39f">
 						<In Input="21715e1a-0288-1584-00ffda51a7e80bdf"/>
 					</Co>
@@ -29208,7 +29208,7 @@
 					<Co K="AQ" U="bdc15c81-66a7-c25e-fca05a823e6399f6"/>
 					<Co K="Q" U="12ed9bf9-43fd-d5cb-bb60814bb9332058"/>
 				</C>
-				<C Type="InputRef" V="178" U="b5483130-e3f8-b671-971449042120b5f3" Title="FERIEN_SCHULTAG2" Px="3072" Py="10272" Px2="5184" Py2="10464" Cl="0,0,0" Nio="4" Ref="0fb170df-b977-0255-65ba0954b5719ba1" WF="133120" LinkRefType="87">
+				<C Type="InputRef" V="178" U="b5483130-e3f8-b671-971449042120b5f3" Title="FERIEN_SCHULTAG2" Px="3072" Py="10272" Px2="5184" Py2="10464" Cl="0,0,0" Nio="4" Ref="0fb170df-b977-0255-65ba0954b5719ba1" WF="149504" LinkRefType="87">
 					<Co K="AI" Nc="1" U="88df59b4-4e0d-1668-1eb7bd1336077873">
 						<In Input="5df622a1-1ab0-a450-9545c59f9974e5a7"/>
 					</Co>
@@ -29218,7 +29218,7 @@
 					<Co K="AQ" U="ae9fefb2-075a-41ed-59bb218b713492d4"/>
 					<Co K="Q" U="792c2475-ba58-111b-76719bc3afc1eff9"/>
 				</C>
-				<C Type="InputRef" V="178" U="b5f6c96e-1389-0519-10e1dded29d747a5" Title="FERIEN_MSCHULTAG2" Px="3072" Py="10464" Px2="5184" Py2="10656" Cl="0,0,0" Nio="4" Ref="bc3bd68a-138d-13aa-b1c0d12e7678f90d" WF="133120" LinkRefType="87">
+				<C Type="InputRef" V="178" U="b5f6c96e-1389-0519-10e1dded29d747a5" Title="FERIEN_MSCHULTAG2" Px="3072" Py="10464" Px2="5184" Py2="10656" Cl="0,0,0" Nio="4" Ref="bc3bd68a-138d-13aa-b1c0d12e7678f90d" WF="149504" LinkRefType="87">
 					<Co K="AI" Nc="1" U="757f1cce-07bb-b30d-b1d0cfd3b463061c">
 						<In Input="93a930da-ac27-d7b5-3432947f9a3d34f0"/>
 					</Co>
@@ -29228,7 +29228,7 @@
 					<Co K="AQ" U="59760160-bee2-6704-53c8613b782bbe6a"/>
 					<Co K="Q" U="29c40513-814d-9cb8-e50ea3c2cf787b9b"/>
 				</C>
-				<C Type="InputRef" V="178" U="d61fe159-d853-1376-03e349fcc33e1f28" Title="FERIEN_FERIEN2" Px="3072" Py="10656" Px2="5184" Py2="10848" Cl="0,0,0" Nio="4" Ref="7e24ef5d-14f5-44b8-c567e4155f989081" WF="133120" LinkRefType="87">
+				<C Type="InputRef" V="178" U="d61fe159-d853-1376-03e349fcc33e1f28" Title="FERIEN_FERIEN2" Px="3072" Py="10656" Px2="5184" Py2="10848" Cl="0,0,0" Nio="4" Ref="7e24ef5d-14f5-44b8-c567e4155f989081" WF="149504" LinkRefType="87">
 					<Co K="AI" Nc="1" U="2804bb71-5c88-59a8-19c981b93bd36f4b">
 						<In Input="fdcfe089-0b02-b3dd-603ad15551eb4ffd"/>
 					</Co>
@@ -29238,7 +29238,7 @@
 					<Co K="AQ" U="d809d5fa-1eb2-e8aa-1bc56cc68a93a66c"/>
 					<Co K="Q" U="eb376ff4-7f31-64a1-d201003a15e08111"/>
 				</C>
-				<C Type="InputRef" V="178" U="c374a0e4-1a6d-748b-d7f7aed8412ebc7c" Title="FERIEN_FERIEN2IN" Px="3072" Py="10848" Px2="5184" Py2="11040" Cl="0,0,0" Nio="4" Ref="647c7c81-858d-0b30-424b4bfa119c213c" WF="133120" Analog="true" LinkRefType="87">
+				<C Type="InputRef" V="178" U="c374a0e4-1a6d-748b-d7f7aed8412ebc7c" Title="FERIEN_FERIEN2IN" Px="3072" Py="10848" Px2="5184" Py2="11040" Cl="0,0,0" Nio="4" Ref="647c7c81-858d-0b30-424b4bfa119c213c" WF="149504" Analog="true" LinkRefType="87">
 					<Co K="AI" Nc="1" U="695ffb3a-29fb-c216-30358f96aa5c62e5">
 						<In Input="215d474f-9581-c7cf-795f63dd7b193fd2"/>
 					</Co>
@@ -29248,7 +29248,7 @@
 					<Co K="AQ" U="b278576f-c74d-ffdb-d0ff4d5267ff4553"/>
 					<Co K="Q" U="cb94c311-85bd-66e4-8b4ecaf60619aa2e"/>
 				</C>
-				<C Type="InputRef" V="178" U="26c46a1e-1966-6d28-88ab6bf80d5cd923" Title="Wecker Kind 2 aktiv (Ferien)" Px="3072" Py="11808" Px2="5184" Py2="12000" Cl="0,0,0" Nio="4" Ref="b158a571-ff86-4aca-efe86b04f2ff2c44" WF="133120" LinkRefType="71">
+				<C Type="InputRef" V="178" U="26c46a1e-1966-6d28-88ab6bf80d5cd923" Title="Wecker Kind 2 aktiv (Ferien)" Px="3072" Py="11808" Px2="5184" Py2="12000" Cl="0,0,0" Nio="4" Ref="b158a571-ff86-4aca-efe86b04f2ff2c44" WF="149504" LinkRefType="71">
 					<Co K="AI" Nc="1" U="ddd33fff-0316-5ba7-86a44ea3b98c099f">
 						<In Input="48caf8c7-cfa7-e256-beb0ad428123b1b0"/>
 					</Co>
@@ -29258,7 +29258,7 @@
 					<Co K="AQ" U="0ebe3060-1594-1d19-453e8e964004dc66"/>
 					<Co K="Q" U="5259bdd5-3e74-2899-61a6f5f9473421b8"/>
 				</C>
-				<C Type="InputRef" V="178" U="9f3637d8-148c-9196-3aecafece0152de9" Title="Urlaub von Hand (Ferien)" Px="1248" Py="1440" Px2="3360" Py2="1632" Cl="0,0,0" Nio="4" Ref="fe2d8fd2-2f40-c017-914184074f67bb93" WF="133120" LinkRefType="71">
+				<C Type="InputRef" V="178" U="9f3637d8-148c-9196-3aecafece0152de9" Title="Urlaub von Hand (Ferien)" Px="1248" Py="1440" Px2="3360" Py2="1632" Cl="0,0,0" Nio="4" Ref="fe2d8fd2-2f40-c017-914184074f67bb93" WF="149504" LinkRefType="71">
 					<Co K="AI" Nc="1" U="08a78d68-8042-9b19-f79af7f053192221">
 						<In Input="7b14540c-3dca-3564-919714a752fb25f4"/>
 					</Co>
@@ -29268,7 +29268,7 @@
 					<Co K="AQ" U="bcecee43-2893-4165-4c44648aa6ea0b9a"/>
 					<Co K="Q" U="9a243f8d-0f26-46c5-811f7c6d9b49691d"/>
 				</C>
-				<C Type="And" V="178" U="405c8510-a362-1563-a9522257ff03815a" Title="Wecker an Schultagen (Ferien)" Px="4416" Py="576" Px2="5760" Py2="1272" Cl="141,255,112" Nio="3" LtE="560166852">
+				<C Type="And" V="178" U="405c8510-a362-1563-a9522257ff03815a" Title="Wecker an Schultagen (Ferien)" Px="4416" Py="576" Px2="5760" Py2="1272" Cl="141,255,112" Nio="3" LtE="560166852" WF="147456">
 					<Co K="I1" Nc="1" U="ced95381-16ed-b415-d6fa43dcfab023f1">
 						<In Input="68d5c60e-a97d-6fc8-d838f476130519a9"/>
 					</Co>
@@ -29277,13 +29277,13 @@
 					</Co>
 					<Co K="Q" U="2577ea8e-ec42-d46c-24c9b94e982c6ff3"/>
 				</C>
-				<C Type="Not" V="178" U="eed6eddb-4600-3a16-f2b7905b83983f84" Title="Heute frei (Ferien)" Px="13824" Py="480" Px2="15168" Py2="984" Cl="141,255,112" Nio="2" LtE="560934942">
+				<C Type="Not" V="178" U="eed6eddb-4600-3a16-f2b7905b83983f84" Title="Heute frei (Ferien)" Px="13824" Py="480" Px2="15168" Py2="984" Cl="141,255,112" Nio="2" LtE="560934942" WF="147456">
 					<Co K="I" Nc="1" U="00d70608-3c7b-9350-60c499bf0aba92a6">
 						<In Input="68d5c60e-a97d-6fc8-d838f476130519a9"/>
 					</Co>
 					<Co K="Q" U="3240bdc8-e403-4cb0-e35280d48dac73a8"/>
 				</C>
-				<C Type="PulseAt" V="178" U="9c846ed4-4608-7d12-7181a1ad23913851" Title="Rollladen auf an Schultagen (Ferien)" Px="8160" Py="2880" Px2="10848" Py2="3768" Cl="141,255,112" Nio="5" LtE="561142739" WF="131072" Sec="24300" SpStates="4b3677fb-91d1-fb0f-b7be348794069662,4620e3ec-545d-c600-a2052d7ef4e0f2b1,2f5a3b12-8103-300c-27daf06e4d188aea" Typ="0">
+				<C Type="PulseAt" V="178" U="9c846ed4-4608-7d12-7181a1ad23913851" Title="Rollladen auf an Schultagen (Ferien)" Px="8160" Py="2880" Px2="10848" Py2="3768" Cl="141,255,112" Nio="5" LtE="561142739" WF="147456" Sec="24300" SpStates="4b3677fb-91d1-fb0f-b7be348794069662,4620e3ec-545d-c600-a2052d7ef4e0f2b1,2f5a3b12-8103-300c-27daf06e4d188aea" Typ="0">
 					<Co K="InputDisable" U="1582f574-17bc-6bfb-00d411c1b5dcd3a1"/>
 					<Co K="Remanence" U="7d3b1666-14e4-7d2d-d7cf1b6ae1620efb"/>
 					<Co K="Time" Def="1" U="694fd3b1-cf1f-3774-d626441c5c975253"/>
@@ -29291,7 +29291,7 @@
 					<Co K="OutputAPI" U="25e69a29-1fc1-f843-2cbb9911148c2102"/>
 					<IoData Visu="true" Cr="216373ab-00cf-42fc-ffffe001fe9bf86f" Pr="216373ab-00cf-42f8-ffffe001fe9bf86f"/>
 				</C>
-				<C Type="PulseAt" V="178" U="4884e7d2-ed2a-2cae-e978f578babe73c0" Title="Rollladen auf an freien Tagen (Ferien)" Px="4416" Py="1728" Px2="7104" Py2="2616" Cl="141,255,112" Nio="5" LtE="561142739" WF="131072" Sec="30600" SpStates="6a7cd7c2-7eb7-3ab8-4802ad04bc3e80dc,9ca55c7c-ea03-e6b0-fde3ef8d66bbc99a,a893f732-570a-00c4-dcf63da002d35ba8" Typ="0">
+				<C Type="PulseAt" V="178" U="4884e7d2-ed2a-2cae-e978f578babe73c0" Title="Rollladen auf an freien Tagen (Ferien)" Px="4416" Py="1728" Px2="7104" Py2="2616" Cl="141,255,112" Nio="5" LtE="561142739" WF="147456" Sec="30600" SpStates="6a7cd7c2-7eb7-3ab8-4802ad04bc3e80dc,9ca55c7c-ea03-e6b0-fde3ef8d66bbc99a,a893f732-570a-00c4-dcf63da002d35ba8" Typ="0">
 					<Co K="InputDisable" U="98ae0c14-d9d4-56aa-7b8cf28a2e87b5fb"/>
 					<Co K="Remanence" U="15735011-38df-9d40-d3c61816f2748ef3"/>
 					<Co K="Time" Def="1" U="7cfdbb11-28f4-b668-d3a01f360213a4e7"/>
@@ -29299,7 +29299,7 @@
 					<Co K="OutputAPI" U="289540f0-a20f-62ec-a85780bf7b28a669"/>
 					<IoData Visu="true" Cr="216373ab-00cf-42fc-ffffe001fe9bf86f" Pr="216373ab-00cf-42f8-ffffe001fe9bf86f"/>
 				</C>
-				<C Type="And" V="178" U="61c043f3-0265-89a6-8c2081758b219ecb" Title="Schultag-Morgen (Ferien)" Px="13824" Py="2880" Px2="15168" Py2="3576" Cl="141,255,112" Nio="3" LtE="560166852">
+				<C Type="And" V="178" U="61c043f3-0265-89a6-8c2081758b219ecb" Title="Schultag-Morgen (Ferien)" Px="13824" Py="2880" Px2="15168" Py2="3576" Cl="141,255,112" Nio="3" LtE="560166852" WF="147456">
 					<Co K="I1" Nc="1" U="d2ae6c08-0bbf-ab54-19d3819edc8b4160">
 						<In Input="68d5c60e-a97d-6fc8-d838f476130519a9"/>
 					</Co>
@@ -29308,7 +29308,7 @@
 					</Co>
 					<Co K="Q" U="979b9dec-3e7a-1d3d-cad868097e27f6ef"/>
 				</C>
-				<C Type="And" V="178" U="0dee4f49-2144-50d3-fc87ec4ba6a44398" Title="Freier Morgen (Ferien)" Px="4416" Py="3168" Px2="5760" Py2="3864" Cl="141,255,112" Nio="3" LtE="560166852" WF="131072">
+				<C Type="And" V="178" U="0dee4f49-2144-50d3-fc87ec4ba6a44398" Title="Freier Morgen (Ferien)" Px="4416" Py="3168" Px2="5760" Py2="3864" Cl="141,255,112" Nio="3" LtE="560166852" WF="147456">
 					<Co K="I1" Nc="1" U="dbd17d87-da9e-e1ff-6d6934d00d2f0362">
 						<In Input="3240bdc8-e403-4cb0-e35280d48dac73a8"/>
 					</Co>
@@ -29317,7 +29317,7 @@
 					</Co>
 					<Co K="Q" U="923edf17-5f07-cae6-0a797e67b065a9ac"/>
 				</C>
-				<C Type="Or" V="178" U="5aa5d68c-6a4d-bfe5-d834801a48309aa9" Title="Rollladen morgens auf (Ferien)" Px="13824" Py="4032" Px2="15168" Py2="4728" Cl="141,255,112" Nio="3" LtE="560934948">
+				<C Type="Or" V="178" U="5aa5d68c-6a4d-bfe5-d834801a48309aa9" Title="Rollladen morgens auf (Ferien)" Px="13824" Py="4032" Px2="15168" Py2="4728" Cl="141,255,112" Nio="3" LtE="560934948" WF="16384">
 					<Co K="I1" Nc="1" U="f6a31196-6731-3970-94f95c7e15af3e14">
 						<In Input="979b9dec-3e7a-1d3d-cad868097e27f6ef"/>
 					</Co>
@@ -29326,7 +29326,7 @@
 					</Co>
 					<Co K="Q" U="f46274bc-dc2a-23d5-c9d65dfd73c17366"/>
 				</C>
-				<C Type="Or" V="178" U="bc9d0de4-3bb4-13aa-d34c22da6e68af1d" Title="Urlaubsmodus (Ferien)" Px="4416" Py="4320" Px2="5760" Py2="5016" Cl="141,255,112" Nio="3" LtE="560934948">
+				<C Type="Or" V="178" U="bc9d0de4-3bb4-13aa-d34c22da6e68af1d" Title="Urlaubsmodus (Ferien)" Px="4416" Py="4320" Px2="5760" Py2="5016" Cl="141,255,112" Nio="3" LtE="560934948" WF="16384">
 					<Co K="I1" Nc="1" U="3e4b6987-0335-f279-9d5a16f9506794d9">
 						<In Input="1d60ada3-ad04-7ce9-2aa8c5c1f9c8c7a9"/>
 					</Co>
@@ -29335,7 +29335,7 @@
 					</Co>
 					<Co K="Q" U="9990b441-3a4c-1abe-c70b268af802fed7"/>
 				</C>
-				<C Type="AnalogThresholdTrigger" V="178" U="328d9138-27dc-a5d0-5eca7c8b362467c4" Title="Lange frei (Ferien)" Px="13824" Py="5184" Px2="15168" Py2="6072" Cl="141,255,112" Nio="8" LtE="560166800">
+				<C Type="AnalogThresholdTrigger" V="178" U="328d9138-27dc-a5d0-5eca7c8b362467c4" Title="Lange frei (Ferien)" Px="13824" Py="5184" Px2="15168" Py2="6072" Cl="141,255,112" Nio="8" LtE="560166800" WF="147456">
 					<Co K="Input" Nc="1" U="5830511c-d09f-ce50-970ab628d47723d2">
 						<In Input="dca71c1d-267c-9ec9-4e45b0d47edced69"/>
 					</Co>
@@ -29347,7 +29347,7 @@
 					<Co K="RisingEdge" U="cfebd198-63d9-8b5e-a30f3e7be62bc255"/>
 					<Co K="FallingEdge" U="294ab6e4-ab37-4aa8-ffb68a672718a0a7"/>
 				</C>
-				<C Type="OnDelay" V="178" U="278a2d46-7dc2-4c90-1ee5002d0ee7868c" Title="Lange frei bestätigt (Ferien)" Px="4320" Py="6048" Px2="5664" Py2="6744" Cl="141,255,112" Nio="5" LtE="560167128" WF="131072">
+				<C Type="OnDelay" V="178" U="278a2d46-7dc2-4c90-1ee5002d0ee7868c" Title="Lange frei bestätigt (Ferien)" Px="4320" Py="6048" Px2="5664" Py2="6744" Cl="141,255,112" Nio="5" LtE="560167128" WF="147456">
 					<Co K="InputTrigger" Nc="1" U="c634c6b6-4b9c-e313-de1280935660c893">
 						<In Input="bca9df77-e2bb-c177-b33b8103deee9f91"/>
 					</Co>
@@ -29356,7 +29356,7 @@
 					<Co K="Time" Def="600" U="14fe0ef9-fdbd-208b-2b8860c68872817c"/>
 					<Co K="Q" U="9902523e-b2ec-7207-cd09f8bbf403726c"/>
 				</C>
-				<C Type="And" V="178" U="88e8ae74-bfc5-a28d-baefd9e600645b8d" Title="Lange frei und niemand da (Ferien)" Px="4320" Py="7296" Px2="5664" Py2="7992" Cl="141,255,112" Nio="3" LtE="560166852">
+				<C Type="And" V="178" U="88e8ae74-bfc5-a28d-baefd9e600645b8d" Title="Lange frei und niemand da (Ferien)" Px="4320" Py="7296" Px2="5664" Py2="7992" Cl="141,255,112" Nio="3" LtE="560166852" WF="147456">
 					<Co K="I1" Nc="1" U="39c74c49-1fb0-e8ad-b0411390d646488c">
 						<In Input="9902523e-b2ec-7207-cd09f8bbf403726c"/>
 					</Co>
@@ -29365,7 +29365,7 @@
 					</Co>
 					<Co K="Q" U="8f56141e-472c-5ee8-4f3eaa76d2f432c3"/>
 				</C>
-				<C Type="Or" V="178" U="cf0c896d-788e-3f89-1d07736686f62e66" Title="Absenken angefordert (Ferien)" Px="13824" Py="6528" Px2="15168" Py2="7224" Cl="141,255,112" Nio="3" LtE="560934948" WF="131072">
+				<C Type="Or" V="178" U="cf0c896d-788e-3f89-1d07736686f62e66" Title="Absenken angefordert (Ferien)" Px="13824" Py="6528" Px2="15168" Py2="7224" Cl="141,255,112" Nio="3" LtE="560934948" WF="147456">
 					<Co K="I1" Nc="1" U="d80228bd-c125-7777-b1f33a267e4fcf7e">
 						<In Input="9990b441-3a4c-1abe-c70b268af802fed7"/>
 					</Co>
@@ -29374,7 +29374,7 @@
 					</Co>
 					<Co K="Q" U="3f91e97e-9fdb-cc40-91bef60f694e629f"/>
 				</C>
-				<C Type="And" V="178" U="a4cdea2b-843b-69fc-0eae9d86b74cba3b" Title="Heizung absenken (Ferien)" Px="4320" Py="8832" Px2="5664" Py2="9528" Cl="141,255,112" Nio="3" LtE="560166852">
+				<C Type="And" V="178" U="a4cdea2b-843b-69fc-0eae9d86b74cba3b" Title="Heizung absenken (Ferien)" Px="4320" Py="8832" Px2="5664" Py2="9528" Cl="141,255,112" Nio="3" LtE="560166852" WF="147456">
 					<Co K="I1" Nc="1" U="4018896a-8446-8e98-1bb9354e08aadfe1">
 						<In Input="3f91e97e-9fdb-cc40-91bef60f694e629f"/>
 					</Co>
@@ -29383,7 +29383,7 @@
 					</Co>
 					<Co K="Q" U="8454d776-5a70-96bf-305dbca411bec86d"/>
 				</C>
-				<C Type="State" V="178" U="1d0f6cb4-1e7e-4dc7-d582fc4e7e665a90" Title="Urlaub (Ferien)" Px="19968" Py="576" Px2="22656" Py2="2616" Cl="141,255,112" Nio="11" LtE="560167149">
+				<C Type="State" V="178" U="1d0f6cb4-1e7e-4dc7-d582fc4e7e665a90" Title="Urlaub (Ferien)" Px="19968" Py="576" Px2="22656" Py2="2616" Cl="141,255,112" Nio="11" LtE="560167149" WF="16384">
 					<Co K="I1" Nc="1" U="1ef643a8-ab36-cc18-f6c39eac240816b4">
 						<In Input="1d60ada3-ad04-7ce9-2aa8c5c1f9c8c7a9"/>
 					</Co>
@@ -29413,7 +29413,7 @@
 					<Display Unit="&lt;v.pr&gt;"/>
 					<StateTexts></StateTexts>
 				</C>
-				<C Type="State" V="178" U="d8767ba4-47dd-d913-9acce9dfff6ab777" Title="Haus heute (Ferien)" Px="19968" Py="8064" Px2="22656" Py2="9912" Cl="141,255,112" Nio="11" LtE="560167149">
+				<C Type="State" V="178" U="d8767ba4-47dd-d913-9acce9dfff6ab777" Title="Haus heute (Ferien)" Px="19968" Py="8064" Px2="22656" Py2="9912" Cl="141,255,112" Nio="11" LtE="560167149" WF="16384">
 					<Co K="I1" Nc="1" U="0b0b6a88-9b4a-7481-508a12013d8c9196">
 						<In Input="68d5c60e-a97d-6fc8-d838f476130519a9"/>
 					</Co>
@@ -29441,7 +29441,7 @@
 					<Display Unit="&lt;v.pr&gt;"/>
 					<StateTexts></StateTexts>
 				</C>
-				<C Type="And" V="178" U="8bc96376-231c-f065-26fd71f28fa250c7" Title="Wecker Kind 2 an Schultagen (Ferien)" Px="5952" Py="11328" Px2="7296" Py2="12024" Cl="141,255,112" Nio="3" LtE="560166852">
+				<C Type="And" V="178" U="8bc96376-231c-f065-26fd71f28fa250c7" Title="Wecker Kind 2 an Schultagen (Ferien)" Px="5952" Py="11328" Px2="7296" Py2="12024" Cl="141,255,112" Nio="3" LtE="560166852" WF="16384">
 					<Co K="I1" Nc="1" U="42639d4f-15ee-b1d5-2accb48921fe0d2b">
 						<In Input="ae9fefb2-075a-41ed-59bb218b713492d4"/>
 					</Co>
@@ -29450,7 +29450,7 @@
 					</Co>
 					<Co K="Q" U="524df166-7244-164d-48f467464b9ceb57"/>
 				</C>
-				<C Type="State" V="178" U="a78ee1d9-2b63-8db0-2f4036bb7416a1c7" Title="Zweite Region (Ferien)" Px="5952" Py="9792" Px2="8640" Py2="11256" Cl="141,255,112" Nio="11" LtE="560167149">
+				<C Type="State" V="178" U="a78ee1d9-2b63-8db0-2f4036bb7416a1c7" Title="Zweite Region (Ferien)" Px="5952" Py="9792" Px2="8640" Py2="11256" Cl="141,255,112" Nio="11" LtE="560167149" WF="16384">
 					<Co K="I1" Nc="1" U="43e2e4b5-a184-571d-a388254b2722553b">
 						<In Input="ae9fefb2-075a-41ed-59bb218b713492d4"/>
 					</Co>
@@ -29474,17 +29474,17 @@
 					<Display Unit="&lt;v.pr&gt;"/>
 					<StateTexts></StateTexts>
 				</C>
-				<C Type="OutputRef" V="178" U="2177caee-02d7-32f5-ffff2b77138289a5" Title="Urlaub" Px="6432" Py="5184" Px2="8544" Py2="5376" Cl="0,0,0" Nio="2" Ref="00000000-0000-0002-1500000000000000" WF="131072" LinkRefType="21">
-					<Co K="AI" Nc="1" U="2177caee-02d7-32f3-00ff2062785453d1">
-						<In Input="9990b441-3a4c-1abe-c70b268af802fed7"/>
-					</Co>
-					<Co K="AQ" U="2177caee-02d7-32f4-01ff2062785453d1"/>
-				</C>
-				<C Type="OutputRef" V="178" U="2177cb16-0326-b687-ffff2b77138289a5" Title="Anwesenheitssimulation" Px="6432" Py="4896" Px2="8544" Py2="5088" Cl="0,0,0" Nio="2" Ref="216373ab-00cd-42c0-ffffe001fe9bf86f" WF="131072" LinkRefType="21">
+				<C Type="OutputRef" V="178" U="2177cb16-0326-b687-ffff2b77138289a5" Title="Anwesenheitssimulation" Px="6432" Py="4896" Px2="8544" Py2="5088" Cl="0,0,0" Nio="2" Ref="216373ab-00cd-42c0-ffffe001fe9bf86f" WF="147456" LinkRefType="21">
 					<Co K="AI" Nc="1" U="2177cb16-0326-b685-00ffb934db949190">
 						<In Input="9990b441-3a4c-1abe-c70b268af802fed7"/>
 					</Co>
 					<Co K="AQ" U="2177cb16-0326-b686-01ffb934db949190"/>
+				</C>
+				<C Type="OutputRef" V="178" U="2177caee-02d7-32f5-ffff2b77138289a5" Title="Urlaub" Px="6432" Py="5184" Px2="8544" Py2="5376" Cl="0,0,0" Nio="2" Ref="00000000-0000-0002-1500000000000000" WF="147456" LinkRefType="21">
+					<Co K="AI" Nc="1" U="2177caee-02d7-32f3-00ff2062785453d1">
+						<In Input="9990b441-3a4c-1abe-c70b268af802fed7"/>
+					</Co>
+					<Co K="AQ" U="2177caee-02d7-32f4-01ff2062785453d1"/>
 				</C>
 			</C>
 			<C Type="Page" V="178" U="b4969997-e1d9-59e1-87dcfb36e96c9330" Title="Ferien und Feiertage Meldungen" LtE="561168340" WF="16384">
@@ -29813,12 +29813,6 @@
 					<Display Unit="&lt;v.pr&gt;"/>
 					<StateTexts></StateTexts>
 				</C>
-				<C Type="OutputRef" V="178" U="c8b54fd8-9ce0-640f-d9e617c101709838" Title="Test-Push auslösen" Px="5952" Py="9216" Px2="8064" Py2="9408" Cl="0,0,0" Nio="2" Ref="190620a5-f9e7-f65d-1f8b50401d4095fc" WF="16384" LinkRefType="74">
-					<Co K="AI" Nc="1" U="c5b1cce0-0f4c-de42-fa461a0c3180b8d9">
-						<In Input="4db89012-93be-103d-7e0f443f8dc2484d"/>
-					</Co>
-					<Co K="AQ" U="c58fbbcc-11d4-ccf8-595712e1aaea92d0"/>
-				</C>
 				<C Type="OutputRefLM" V="178" U="1c0073f4-866a-8194-a373f0d8460e4f72" Title="Meldung Morgen frei (Ferien)" Px="12864" Py="1728" Px2="14976" Py2="1920" Cl="0,0,0" Nio="2" Ref="05d88d45-8853-b629-3c66793f87aa2777" WF="147456">
 					<Co K="AI" Nc="1" U="efe16f85-2877-147b-8af18de00a950370">
 						<In Input="47dd9ab1-ad49-26aa-68612d7310661079"/>
@@ -29845,6 +29839,12 @@
 						<In Input="dd8a861d-1b9e-49f7-7af65e9e95682b55"/>
 					</Co>
 					<Co K="AQ" U="17a19738-2f52-6b01-995d25036f39aa01"/>
+				</C>
+				<C Type="OutputRef" V="178" U="c8b54fd8-9ce0-640f-d9e617c101709838" Title="Test-Push auslösen" Px="5952" Py="9216" Px2="8064" Py2="9408" Cl="0,0,0" Nio="2" Ref="190620a5-f9e7-f65d-1f8b50401d4095fc" WF="16384" LinkRefType="74">
+					<Co K="AI" Nc="1" U="c5b1cce0-0f4c-de42-fa461a0c3180b8d9">
+						<In Input="4db89012-93be-103d-7e0f443f8dc2484d"/>
+					</Co>
+					<Co K="AQ" U="c58fbbcc-11d4-ccf8-595712e1aaea92d0"/>
 				</C>
 			</C>
 			<C Type="Page" V="178" U="216c920c-00ea-006d-ffffe001fe9bf86f" Title="Funkwacht" LtE="560763407" WF="16384">
@@ -30786,13 +30786,6 @@
 					<Display Unit="&lt;v.pr&gt;"/>
 					<StateTexts></StateTexts>
 				</C>
-				<C Type="OutputRefLM" V="178" U="21721dde-037f-903e-ffffe001fe9bf86f" Title="Kino-Szene unvollständig" Px="9696" Py="7296" Px2="11808" Py2="7488" Cl="0,0,0" Nio="2" Ref="21721dbe-025c-d86b-ffffe001fe9bf86f" WF="147456">
-					<Co K="AI" Nc="1" U="21721dde-037f-903c-00ff38f9d882a020">
-						<In Input="21721cdb-024d-1d0f-09ff20bdecbce393"/>
-					</Co>
-					<Co K="AQ" U="21721dde-037f-903d-01ff38f9d882a020"/>
-					<LoggerMailer RefNotification="21721dbe-025c-d86b-ffffe001fe9bf86f" On="&lt;v&gt;" Off="&lt;v&gt;" MinimumTime="5000" NL="1"/>
-				</C>
 				<C Type="OutputRefLM" V="178" U="21721dd4-0072-6243-ffffe001fe9bf86f" Title="Heimkino ausgefallen" Px="13152" Py="480" Px2="15264" Py2="672" Cl="0,0,0" Nio="2" Ref="21721db9-0375-7c8b-ffffe001fe9bf86f" WF="147456">
 					<Co K="AI" Nc="1" U="21721dd4-0072-6241-00ff6963f23d29ed">
 						<In Input="21721cb6-03bf-0b8c-04ffaf093ec2fb6e"/>
@@ -30813,6 +30806,13 @@
 					</Co>
 					<Co K="AQ" U="216d2ef9-0170-872d-01ffa2b71a0247f0"/>
 					<LoggerMailer RefNotification="216d2ecd-03db-3393-ffffe001fe9bf86f" On="&lt;v&gt;" Off="&lt;v&gt;" MinimumTime="5000" NL="1"/>
+				</C>
+				<C Type="OutputRefLM" V="178" U="21721dde-037f-903e-ffffe001fe9bf86f" Title="Kino-Szene unvollständig" Px="9696" Py="7296" Px2="11808" Py2="7488" Cl="0,0,0" Nio="2" Ref="21721dbe-025c-d86b-ffffe001fe9bf86f" WF="147456">
+					<Co K="AI" Nc="1" U="21721dde-037f-903c-00ff38f9d882a020">
+						<In Input="21721cdb-024d-1d0f-09ff20bdecbce393"/>
+					</Co>
+					<Co K="AQ" U="21721dde-037f-903d-01ff38f9d882a020"/>
+					<LoggerMailer RefNotification="21721dbe-025c-d86b-ffffe001fe9bf86f" On="&lt;v&gt;" Off="&lt;v&gt;" MinimumTime="5000" NL="1"/>
 				</C>
 			</C>
 			<C Type="Page" V="178" U="2172230d-0310-ee87-ffffe001fe9bf86f" Title="Heimkino Bild und Ton" LtE="561128209" WF="16384">
@@ -31308,19 +31308,19 @@
 					<Co K="Time" Def="900" U="217221ef-0338-a3dc-03ff8538c46525a9"/>
 					<Co K="Q" U="217221ef-0338-a3dd-04ff8538c46525a9"/>
 				</C>
-				<C Type="OutputRefLM" V="178" U="21722295-0162-a20f-ffffe001fe9bf86f" Title="Beamer nicht erreichbar" Px="10368" Py="4032" Px2="12480" Py2="4224" Cl="0,0,0" Nio="2" Ref="21722284-0251-e47b-ffffe001fe9bf86f" WF="147456">
-					<Co K="AI" Nc="1" U="21722295-0162-a20d-00ff11fbe9cc0acd">
-						<In Input="217221e5-039b-161e-04ff6ce37ab04e29"/>
-					</Co>
-					<Co K="AQ" U="21722295-0162-a20e-01ff11fbe9cc0acd"/>
-					<LoggerMailer RefNotification="21722284-0251-e47b-ffffe001fe9bf86f" On="&lt;v&gt;" Off="&lt;v&gt;" MinimumTime="5000" NL="1"/>
-				</C>
 				<C Type="OutputRefLM" V="178" U="217222a0-0064-d17d-ffffe001fe9bf86f" Title="Xbox nicht erreichbar" Px="10560" Py="2400" Px2="12672" Py2="2592" Cl="0,0,0" Nio="2" Ref="21722289-013d-4341-ffffe001fe9bf86f" WF="147456">
 					<Co K="AI" Nc="1" U="217222a0-0064-d17b-00ffc4a8f3629239">
 						<In Input="217221ef-0338-a3dd-04ff8538c46525a9"/>
 					</Co>
 					<Co K="AQ" U="217222a0-0064-d17c-01ffc4a8f3629239"/>
 					<LoggerMailer RefNotification="21722289-013d-4341-ffffe001fe9bf86f" On="&lt;v&gt;" Off="&lt;v&gt;" MinimumTime="5000" NL="1"/>
+				</C>
+				<C Type="OutputRefLM" V="178" U="21722295-0162-a20f-ffffe001fe9bf86f" Title="Beamer nicht erreichbar" Px="10368" Py="4032" Px2="12480" Py2="4224" Cl="0,0,0" Nio="2" Ref="21722284-0251-e47b-ffffe001fe9bf86f" WF="147456">
+					<Co K="AI" Nc="1" U="21722295-0162-a20d-00ff11fbe9cc0acd">
+						<In Input="217221e5-039b-161e-04ff6ce37ab04e29"/>
+					</Co>
+					<Co K="AQ" U="21722295-0162-a20e-01ff11fbe9cc0acd"/>
+					<LoggerMailer RefNotification="21722284-0251-e47b-ffffe001fe9bf86f" On="&lt;v&gt;" Off="&lt;v&gt;" MinimumTime="5000" NL="1"/>
 				</C>
 			</C>
 			<C Type="Page" V="178" U="21721df9-03ca-ec30-ffffe001fe9bf86f" Title="Heimkino Steuerung" LtE="561127428" WF="16384">
@@ -31806,12 +31806,6 @@
 					<Display Unit="&lt;v.pr&gt;"/>
 					<StateTexts></StateTexts>
 				</C>
-				<C Type="OutputRef" V="178" U="8714dfe9-273d-4416-06c0a933f2985e39" Title="Foto Intercom" Px="9792" Py="2496" Px2="11904" Py2="2688" Cl="0,0,0" Nio="2" Ref="2a5b035c-111b-d2c6-85c6273a51de693f" WF="147456" LinkRefType="74">
-					<Co K="AI" Nc="1" U="6822eae2-b1da-998c-91e5fbd40a797cf2">
-						<In Input="c67c14ea-aa19-ba62-57fe90d9bdf7646b"/>
-					</Co>
-					<Co K="AQ" U="11762a01-5320-0c3e-5911bb4976fe8ec8"/>
-				</C>
 				<C Type="OutputRef" V="178" U="6bac682d-eb13-7c9f-78b57d355514c6cc" Title="Foto Intercom ohne Meldung" Px="12096" Py="2304" Px2="14208" Py2="2496" Cl="0,0,0" Nio="2" Ref="e663d82a-026a-1570-4bdbf0a648b29ee6" WF="147456" LinkRefType="74">
 					<Co K="AI" Nc="1" U="38b79e36-9d02-495b-4a7b322e709c1edb">
 						<In Input="a115cda7-826a-95d9-c0ed36685bd78e22"/>
@@ -31830,6 +31824,12 @@
 					</Co>
 					<Co K="AQ" U="aae688cf-2007-830c-99f430c78f17d145"/>
 					<LoggerMailer RefNotification="dc00cd1c-5853-3683-bf707dca5966bd33" On="&lt;v&gt;" Off="&lt;v&gt;" MinimumTime="5000" NL="1"/>
+				</C>
+				<C Type="OutputRef" V="178" U="8714dfe9-273d-4416-06c0a933f2985e39" Title="Foto Intercom" Px="9792" Py="2496" Px2="11904" Py2="2688" Cl="0,0,0" Nio="2" Ref="2a5b035c-111b-d2c6-85c6273a51de693f" WF="147456" LinkRefType="74">
+					<Co K="AI" Nc="1" U="6822eae2-b1da-998c-91e5fbd40a797cf2">
+						<In Input="c67c14ea-aa19-ba62-57fe90d9bdf7646b"/>
+					</Co>
+					<Co K="AQ" U="11762a01-5320-0c3e-5911bb4976fe8ec8"/>
 				</C>
 			</C>
 			<C Type="Page" V="178" U="216d2f4e-03bd-b106-ffffe001fe9bf86f" Title="Kodi-NG" LtE="560803670" WF="16384">
@@ -32105,13 +32105,6 @@
 					<Display Unit="&lt;v.pr&gt;"/>
 					<StateTexts></StateTexts>
 				</C>
-				<C Type="OutputRefLM" V="178" U="21715b92-0155-b469-ffffe001fe9bf86f" Title="Kodi antwortet nicht" Px="16032" Py="8352" Px2="18144" Py2="8544" Cl="0,0,0" Nio="2" Ref="21715b80-014c-35b1-ffffe001fe9bf86f" WF="147456">
-					<Co K="AI" Nc="1" U="21715b92-0155-b467-00ff9655c59b1d37">
-						<In Input="21715b46-03d5-116b-04ffc1cd2224cac7"/>
-					</Co>
-					<Co K="AQ" U="21715b92-0155-b468-01ff9655c59b1d37"/>
-					<LoggerMailer RefNotification="21715b80-014c-35b1-ffffe001fe9bf86f" On="&lt;v&gt;" Off="&lt;v&gt;" MinimumTime="5000" NL="1"/>
-				</C>
 				<C Type="OutputRefLM" V="178" U="216d30c2-0108-0ca2-ffffe001fe9bf86f" Title="Kodi NG Meldung" Px="18816" Py="5376" Px2="20928" Py2="5568" Cl="0,0,0" Nio="2" Ref="216d30ae-005c-e0f3-ffffe001fe9bf86f" WF="147456">
 					<Co K="AI" Nc="1" U="216d30c2-0108-0ca0-00ffdfaa645abead">
 						<In Input="216d306c-005e-4fb6-04ffc447d88a3236"/>
@@ -32125,6 +32118,13 @@
 					</Co>
 					<Co K="AQ" U="21715b8e-027c-8a26-01ffe4deadbefc1c"/>
 					<LoggerMailer RefNotification="21715b7c-0121-e143-ffffe001fe9bf86f" On="&lt;v&gt;" Off="&lt;v&gt;" MinimumTime="5000" NL="1"/>
+				</C>
+				<C Type="OutputRefLM" V="178" U="21715b92-0155-b469-ffffe001fe9bf86f" Title="Kodi antwortet nicht" Px="16032" Py="8352" Px2="18144" Py2="8544" Cl="0,0,0" Nio="2" Ref="21715b80-014c-35b1-ffffe001fe9bf86f" WF="147456">
+					<Co K="AI" Nc="1" U="21715b92-0155-b467-00ff9655c59b1d37">
+						<In Input="21715b46-03d5-116b-04ffc1cd2224cac7"/>
+					</Co>
+					<Co K="AQ" U="21715b92-0155-b468-01ff9655c59b1d37"/>
+					<LoggerMailer RefNotification="21715b80-014c-35b1-ffffe001fe9bf86f" On="&lt;v&gt;" Off="&lt;v&gt;" MinimumTime="5000" NL="1"/>
 				</C>
 			</C>
 			<C Type="Page" V="178" U="21715b9f-01bf-dea8-ffffe001fe9bf86f" Title="Kodi-NG Fernbedienung" LtE="561077154" WF="16384">
@@ -33049,12 +33049,6 @@
 					<statGrp id="2" m="11" acc="true"/>
 					<statGrp id="3" m="11"/>
 				</C>
-				<C Type="OutputRef" V="178" U="14a67524-d8bf-9de2-64c943c49383623c" Title="Handbetrieb: Modus AI" Px="11424" Py="11616" Px2="13536" Py2="11808" Cl="0,0,0" Nio="2" Ref="c2f17319-b083-3f8c-5b7aa1c007271c93" WF="16384" LinkRefType="74">
-					<Co K="AI" Nc="1" U="e51009db-8e8e-1a43-b7fc3d3af102d84e">
-						<In Input="155ef0f5-6204-458d-b7edd1cf19470ca8"/>
-					</Co>
-					<Co K="AQ" U="d7e8d635-b467-e59d-842ba78395ac383d"/>
-				</C>
 				<C Type="OutputRefLM" V="178" U="e8c95bf0-878d-7447-2eee04d314317d9c" Title="Meldung Marstek Venus E" Px="21600" Py="3744" Px2="23712" Py2="3936" Cl="0,0,0" Nio="2" Ref="7dc5010e-58ae-c088-57885d8abca66c87" WF="147456">
 					<Co K="AI" Nc="1" U="df137269-1e0a-13e9-bbb7baa39c5ff1ea">
 						<In Input="7664ccac-bda5-666d-02dbe6af9dcc532a"/>
@@ -33067,6 +33061,12 @@
 						<In Input="71647236-c83d-0269-05344722f6a63b09"/>
 					</Co>
 					<Co K="AQ" U="fef962fb-4dd3-4ad0-b65110fada61b6b8"/>
+				</C>
+				<C Type="OutputRef" V="178" U="14a67524-d8bf-9de2-64c943c49383623c" Title="Handbetrieb: Modus AI" Px="11424" Py="11616" Px2="13536" Py2="11808" Cl="0,0,0" Nio="2" Ref="c2f17319-b083-3f8c-5b7aa1c007271c93" WF="16384" LinkRefType="74">
+					<Co K="AI" Nc="1" U="e51009db-8e8e-1a43-b7fc3d3af102d84e">
+						<In Input="155ef0f5-6204-458d-b7edd1cf19470ca8"/>
+					</Co>
+					<Co K="AQ" U="d7e8d635-b467-e59d-842ba78395ac383d"/>
 				</C>
 			</C>
 			<C Type="Page" V="178" U="759fe91b-3fbb-3989-02dbb1b57aab8365" Title="Marstek Venus E Steuerung" LtE="561077562" WF="16384">
@@ -34072,13 +34072,6 @@
 					<Display Unit="&lt;v.pr&gt;"/>
 					<StateTexts></StateTexts>
 				</C>
-				<C Type="OutputRefLM" V="178" U="216c918e-02fc-e094-ffffe001fe9bf86f" Title="Pumpe meldet sich" Px="14112" Py="1824" Px2="16224" Py2="2016" Cl="0,0,0" Nio="2" Ref="216c9180-01f8-d312-ffffe001fe9bf86f" WF="147456">
-					<Co K="AI" Nc="1" U="216c918e-02fc-e092-00ff0e8e089efcef">
-						<In Input="e8ac3790-4ccf-4cb8-6af176177c7f9bc2"/>
-					</Co>
-					<Co K="AQ" U="216c918e-02fc-e093-01ff0e8e089efcef"/>
-					<LoggerMailer RefNotification="216c9180-01f8-d312-ffffe001fe9bf86f" On="&lt;v&gt;" Off="&lt;v&gt;" MinimumTime="5000" NL="1"/>
-				</C>
 				<C Type="OutputRef" V="178" U="4c3439eb-835f-d10a-012584fda8bcedb6" Title="Sperre quittieren" Px="6048" Py="7104" Px2="8160" Py2="7296" Cl="0,0,0" Nio="2" Ref="2d88bf76-afee-681d-804ac70d9d9a2a7b" WF="16384" LinkRefType="74">
 					<Co K="AI" Nc="1" U="b19ea1e1-5654-04f9-f65c51591cfde30b">
 						<In Input="500f9237-41fb-948f-46c06b2a9ec96d2a"/>
@@ -34096,6 +34089,13 @@
 						<In Input="f5a5c2f4-9801-2331-4547e758a9855d76"/>
 					</Co>
 					<Co K="AQ" U="d7c253f5-13a0-3cce-64c9a6301e16e739"/>
+				</C>
+				<C Type="OutputRefLM" V="178" U="216c918e-02fc-e094-ffffe001fe9bf86f" Title="Pumpe meldet sich" Px="14112" Py="1824" Px2="16224" Py2="2016" Cl="0,0,0" Nio="2" Ref="216c9180-01f8-d312-ffffe001fe9bf86f" WF="147456">
+					<Co K="AI" Nc="1" U="216c918e-02fc-e092-00ff0e8e089efcef">
+						<In Input="e8ac3790-4ccf-4cb8-6af176177c7f9bc2"/>
+					</Co>
+					<Co K="AQ" U="216c918e-02fc-e093-01ff0e8e089efcef"/>
+					<LoggerMailer RefNotification="216c9180-01f8-d312-ffffe001fe9bf86f" On="&lt;v&gt;" Off="&lt;v&gt;" MinimumTime="5000" NL="1"/>
 				</C>
 			</C>
 			<C Type="Page" V="178" U="8063caee-0063-aeb1-a39b267e8b18d71b" Title="Pumpenwacht Betrieb" LtE="560762956" WF="16384">
@@ -35233,19 +35233,19 @@
 					<Co K="Time" Def="60" U="83d39192-ca33-657a-5e7cf3bd72148092"/>
 					<Co K="Q" U="0b15f668-2796-79c5-2c26e0b37a0937e4"/>
 				</C>
-				<C Type="OutputRefLM" V="178" U="c2740f53-de96-854a-89df58e734c8d50b" Title="Raumklima Fenster schließen" Px="8256" Py="7968" Px2="10368" Py2="8160" Cl="0,0,0" Nio="2" Ref="47de2c41-a78b-223f-d78a082b3350f6a0" WF="147456">
-					<Co K="AI" Nc="1" U="3dd31dae-6475-f931-354a82869aeb6d0a">
-						<In Input="f6c7852d-5544-f57b-8255c9ce4725d344"/>
-					</Co>
-					<Co K="AQ" U="d46325a1-b47f-cef8-3123286eb37ec0ec"/>
-					<LoggerMailer RefNotification="47de2c41-a78b-223f-d78a082b3350f6a0" On="&lt;v&gt;" Off="&lt;v&gt;" MinimumTime="5000" NL="1"/>
-				</C>
 				<C Type="OutputRefLM" V="178" U="5d28b28f-d298-5c56-a0b11d2879f52cc9" Title="Raumklima Lüftungsanlage Vereisung" Px="8256" Py="5184" Px2="10368" Py2="5376" Cl="0,0,0" Nio="2" Ref="74394003-dac1-1b57-550d83d40b9da930" WF="147456">
 					<Co K="AI" Nc="1" U="c1e8e13c-3008-dc18-307e5322116cf385">
 						<In Input="7b655d97-21a6-d710-2c4713315f9ba407"/>
 					</Co>
 					<Co K="AQ" U="24e3bf45-d451-a882-d54d7585e72091fb"/>
 					<LoggerMailer RefNotification="74394003-dac1-1b57-550d83d40b9da930" On="&lt;v&gt;" Off="&lt;v&gt;" MinimumTime="5000" NL="1"/>
+				</C>
+				<C Type="OutputRefLM" V="178" U="c2740f53-de96-854a-89df58e734c8d50b" Title="Raumklima Fenster schließen" Px="8256" Py="7968" Px2="10368" Py2="8160" Cl="0,0,0" Nio="2" Ref="47de2c41-a78b-223f-d78a082b3350f6a0" WF="147456">
+					<Co K="AI" Nc="1" U="3dd31dae-6475-f931-354a82869aeb6d0a">
+						<In Input="f6c7852d-5544-f57b-8255c9ce4725d344"/>
+					</Co>
+					<Co K="AQ" U="d46325a1-b47f-cef8-3123286eb37ec0ec"/>
+					<LoggerMailer RefNotification="47de2c41-a78b-223f-d78a082b3350f6a0" On="&lt;v&gt;" Off="&lt;v&gt;" MinimumTime="5000" NL="1"/>
 				</C>
 			</C>
 			<C Type="Page" V="178" U="0e4cb379-dd6c-6e20-7ad6951a47ea24ae" Title="Raumklima Werte" LtE="560772581" WF="16384">
@@ -36026,13 +36026,6 @@
 					<Co K="Time" Def="600" U="67d9d812-8880-97d9-41e6578635a72e44"/>
 					<Co K="Q" U="b63236de-c705-7ec2-2b4d05bde319ea5f"/>
 				</C>
-				<C Type="OutputRefLM" V="178" U="48c2bd83-e8f0-5bec-869fa32e17e52ae1" Title="Meldung Ladung beendet (Renault)" Px="11904" Py="7872" Px2="14016" Py2="8064" Cl="0,0,0" Nio="2" Ref="5047ef0c-555e-de32-4377b6919bd4d4d9" WF="147456">
-					<Co K="AI" Nc="1" U="3907d89e-9671-1491-1b69040b100c17fd">
-						<In Input="106e3363-7d7f-02ee-fd46681911f5ef59"/>
-					</Co>
-					<Co K="AQ" U="c4513099-af50-24ff-141f1467340d7e6f"/>
-					<LoggerMailer RefNotification="5047ef0c-555e-de32-4377b6919bd4d4d9" On="&lt;v&gt;" Off="&lt;v&gt;" MinimumTime="5000" NL="1"/>
-				</C>
 				<C Type="OutputRefLM" V="178" U="03490b06-0b60-8c46-8804f12dd121e5e6" Title="Meldung Ladestörung (Renault)" Px="14208" Py="9408" Px2="16320" Py2="9600" Cl="0,0,0" Nio="2" Ref="3071b860-8adb-9922-9e46d7d983b97cd1" WF="147456">
 					<Co K="AI" Nc="1" U="786d1194-c2af-4e2c-220f317edff077e4">
 						<In Input="b63236de-c705-7ec2-2b4d05bde319ea5f"/>
@@ -36053,6 +36046,13 @@
 					</Co>
 					<Co K="AQ" U="ef350733-4b1a-acbe-33187f3012358b15"/>
 					<LoggerMailer RefNotification="2d9e3dea-fcec-cc2a-e45d1dfe45b2686f" On="&lt;v&gt;" Off="&lt;v&gt;" MinimumTime="5000" NL="1"/>
+				</C>
+				<C Type="OutputRefLM" V="178" U="48c2bd83-e8f0-5bec-869fa32e17e52ae1" Title="Meldung Ladung beendet (Renault)" Px="11904" Py="7872" Px2="14016" Py2="8064" Cl="0,0,0" Nio="2" Ref="5047ef0c-555e-de32-4377b6919bd4d4d9" WF="147456">
+					<Co K="AI" Nc="1" U="3907d89e-9671-1491-1b69040b100c17fd">
+						<In Input="106e3363-7d7f-02ee-fd46681911f5ef59"/>
+					</Co>
+					<Co K="AQ" U="c4513099-af50-24ff-141f1467340d7e6f"/>
+					<LoggerMailer RefNotification="5047ef0c-555e-de32-4377b6919bd4d4d9" On="&lt;v&gt;" Off="&lt;v&gt;" MinimumTime="5000" NL="1"/>
 				</C>
 			</C>
 			<C Type="Page" V="178" U="28736eb1-462e-11de-1139d86fe7535b12" Title="Renault NG Fahrzeug" LtE="560772581" WF="16384">
@@ -36616,12 +36616,6 @@
 					</Co>
 					<Co K="Q" U="6d3b71c9-68a8-7a2c-462004e10f813228"/>
 				</C>
-				<C Type="OutputRef" V="178" U="ac0805c8-7923-66af-b6fa1ef0fea24bdc" Title="Ladeplan aktivieren" Px="9600" Py="6144" Px2="11712" Py2="6336" Cl="0,0,0" Nio="2" Ref="f5723a5e-6bd9-db1a-45485f7fef339fbb" WF="147456" LinkRefType="74">
-					<Co K="AI" Nc="1" U="547cba26-78b9-080e-5089451e7749bc7b">
-						<In Input="419194c1-9636-3140-73c8ae1478e69bee"/>
-					</Co>
-					<Co K="AQ" U="79ebdcab-3fea-e481-43b82750ba391e3c"/>
-				</C>
 				<C Type="OutputRef" V="178" U="33c1772a-fa7c-c8bc-7aaedb5d5966c082" Title="Ladeplan abschalten (immer laden)" Px="9600" Py="6336" Px2="11712" Py2="6528" Cl="0,0,0" Nio="2" Ref="2f915e77-dac0-4dd4-25f486192b5a710a" WF="147456" LinkRefType="74">
 					<Co K="AI" Nc="1" U="31d14b74-b7bb-37ee-db07d22d2fba090d">
 						<In Input="f8d21cae-0cd6-d020-c49c391f15eb41cb"/>
@@ -36651,6 +36645,12 @@
 						<In Input="5b0b58f1-5ea7-e076-ca0bea424cfe1746"/>
 					</Co>
 					<Co K="AQ" U="2cfd6c07-20da-ec0b-fb47a01315284abb"/>
+				</C>
+				<C Type="OutputRef" V="178" U="ac0805c8-7923-66af-b6fa1ef0fea24bdc" Title="Ladeplan aktivieren" Px="9600" Py="6144" Px2="11712" Py2="6336" Cl="0,0,0" Nio="2" Ref="f5723a5e-6bd9-db1a-45485f7fef339fbb" WF="147456" LinkRefType="74">
+					<Co K="AI" Nc="1" U="547cba26-78b9-080e-5089451e7749bc7b">
+						<In Input="419194c1-9636-3140-73c8ae1478e69bee"/>
+					</Co>
+					<Co K="AQ" U="79ebdcab-3fea-e481-43b82750ba391e3c"/>
 				</C>
 			</C>
 			<C Type="Page" V="178" U="216eab22-008f-b8ca-ffffe001fe9bf86f" Title="Robonect" LtE="560900985" WF="16384">
@@ -37045,13 +37045,6 @@
 					</Co>
 					<Co K="Q" U="216ff884-0289-b3ea-02ffd7e0477bd74a"/>
 				</C>
-				<C Type="OutputRefLM" V="178" U="216ff7f8-0071-3bda-ffffe001fe9bf86f" Title="Rasenmäher Akku schwach" Px="10080" Py="10560" Px2="12192" Py2="10752" Cl="0,0,0" Nio="2" Ref="216ff7cf-038d-8866-ffffe001fe9bf86f" WF="147456">
-					<Co K="AI" Nc="1" U="216ff7f8-0071-3bd8-00ffa4841a283a40">
-						<In Input="216ff884-0289-b3ea-02ffd7e0477bd74a"/>
-					</Co>
-					<Co K="AQ" U="216ff7f8-0071-3bd9-01ffa4841a283a40"/>
-					<LoggerMailer RefNotification="216ff7cf-038d-8866-ffffe001fe9bf86f" On="&lt;v&gt;" Off="&lt;v&gt;" MinimumTime="5000" NL="1"/>
-				</C>
 				<C Type="OutputRefLM" V="178" U="216eae4c-0155-d9b3-ffffe001fe9bf86f" Title="Rasenmäher gestört" Px="20832" Py="2112" Px2="22944" Py2="2304" Cl="0,0,0" Nio="2" Ref="216eae41-0290-b345-ffffe001fe9bf86f" WF="147456">
 					<Co K="AI" Nc="1" U="216eae4c-0155-d9b1-00ff141bcd112a60">
 						<In Input="216eae17-01ea-4017-04ff1e672cacaf51"/>
@@ -37098,6 +37091,13 @@
 					</Co>
 					<Co K="AQ" U="216ff7f4-00a0-1de8-01ff6eac75805e34"/>
 					<LoggerMailer RefNotification="216ff7c7-02ba-4ca2-ffffe001fe9bf86f" On="&lt;v&gt;" Off="&lt;v&gt;" MinimumTime="5000" NL="1"/>
+				</C>
+				<C Type="OutputRefLM" V="178" U="216ff7f8-0071-3bda-ffffe001fe9bf86f" Title="Rasenmäher Akku schwach" Px="10080" Py="10560" Px2="12192" Py2="10752" Cl="0,0,0" Nio="2" Ref="216ff7cf-038d-8866-ffffe001fe9bf86f" WF="147456">
+					<Co K="AI" Nc="1" U="216ff7f8-0071-3bd8-00ffa4841a283a40">
+						<In Input="216ff884-0289-b3ea-02ffd7e0477bd74a"/>
+					</Co>
+					<Co K="AQ" U="216ff7f8-0071-3bd9-01ffa4841a283a40"/>
+					<LoggerMailer RefNotification="216ff7cf-038d-8866-ffffe001fe9bf86f" On="&lt;v&gt;" Off="&lt;v&gt;" MinimumTime="5000" NL="1"/>
 				</C>
 			</C>
 			<C Type="Page" V="178" U="216ff899-01d5-f047-ffffe001fe9bf86f" Title="Robonect Steuerung" LtE="560986283" WF="16384">
@@ -37899,13 +37899,6 @@
 					</Co>
 					<Co K="Q" U="216ffec1-00ac-c38d-02ffaa95208675b7"/>
 				</C>
-				<C Type="OutputRefLM" V="178" U="216eb0d0-005e-62cf-ffffe001fe9bf86f" Title="Push Saugroboter" Px="5952" Py="8352" Px2="8064" Py2="8544" Cl="0,0,0" Nio="2" Ref="216eb0a7-0005-c2e5-ffffe001fe9bf86f" WF="147456">
-					<Co K="AI" Nc="1" U="216eb0d0-005e-62cd-00ff045578b829b3">
-						<In Input="216eb036-01b9-20ca-02ff3881aad45be4"/>
-					</Co>
-					<Co K="AQ" U="216eb0d0-005e-62ce-01ff045578b829b3"/>
-					<LoggerMailer RefNotification="216eb0a7-0005-c2e5-ffffe001fe9bf86f" On="&lt;v&gt;" Off="&lt;v&gt;" MinimumTime="5000" NL="1"/>
-				</C>
 				<C Type="OutputRefLM" V="178" U="216eb167-032a-16f9-ffffe001fe9bf86f" Title="Saugroboter gestört" Px="21696" Py="10080" Px2="23808" Py2="10272" Cl="0,0,0" Nio="2" Ref="216eb0ba-0032-12c7-ffffe001fe9bf86f" WF="147456">
 					<Co K="AI" Nc="1" U="216eb167-0329-16f7-00ff88b8d236e47d">
 						<In Input="216eb081-035d-4b28-04ff8c9fa01ca1d8"/>
@@ -37932,6 +37925,13 @@
 					</Co>
 					<Co K="AQ" U="216eb0c4-0379-3ac0-01fff8fbd703f0ca"/>
 					<LoggerMailer RefNotification="216eb0b5-0037-ead5-ffffe001fe9bf86f" On="&lt;v&gt;" Off="&lt;v&gt;" MinimumTime="5000" NL="1"/>
+				</C>
+				<C Type="OutputRefLM" V="178" U="216eb0d0-005e-62cf-ffffe001fe9bf86f" Title="Push Saugroboter" Px="5952" Py="8352" Px2="8064" Py2="8544" Cl="0,0,0" Nio="2" Ref="216eb0a7-0005-c2e5-ffffe001fe9bf86f" WF="147456">
+					<Co K="AI" Nc="1" U="216eb0d0-005e-62cd-00ff045578b829b3">
+						<In Input="216eb036-01b9-20ca-02ff3881aad45be4"/>
+					</Co>
+					<Co K="AQ" U="216eb0d0-005e-62ce-01ff045578b829b3"/>
+					<LoggerMailer RefNotification="216eb0a7-0005-c2e5-ffffe001fe9bf86f" On="&lt;v&gt;" Off="&lt;v&gt;" MinimumTime="5000" NL="1"/>
 				</C>
 			</C>
 			<C Type="Page" V="178" U="2170015c-03bd-b3bb-ffffe001fe9bf86f" Title="Saugroboter Steuerung" LtE="560988512" WF="16384">
@@ -39074,19 +39074,19 @@
 					<Display Unit="&lt;v.pr&gt;"/>
 					<StateTexts></StateTexts>
 				</C>
-				<C Type="OutputRefLM" V="178" U="75345279-52e0-cbec-6ecf8ec16a21c19d" Title="Meldung Sicherheit (SignalBot)" Px="13152" Py="1824" Px2="15264" Py2="2016" Cl="0,0,0" Nio="2" Ref="2502083a-4d6a-35be-2b54e13a730b647f" WF="147456">
-					<Co K="AI" Nc="1" U="1a40b251-4f94-3d6e-e9d0eaebae1df700">
-						<In Input="0380dffd-3f90-91f3-da495940e82e6e2e"/>
-					</Co>
-					<Co K="AQ" U="04ccecd4-2f56-38cd-44526b521bb56960"/>
-					<LoggerMailer RefNotification="2502083a-4d6a-35be-2b54e13a730b647f" On="&lt;v&gt;" Off="&lt;v&gt;" MinimumTime="5000" NL="1"/>
-				</C>
 				<C Type="OutputRefLM" V="178" U="1fae531f-df7b-0eef-ee3aa22177eaeb18" Title="Meldung Plugin gestört (SignalBot)" Px="19008" Py="1248" Px2="21120" Py2="1440" Cl="0,0,0" Nio="2" Ref="3fa15e0a-1e1b-bf67-f8f5b158d5d38cfb" WF="147456">
 					<Co K="AI" Nc="1" U="5a01f604-31c1-e195-ac35561d25ba1fd6">
 						<In Input="be810c10-dc93-ee85-6e0801d624e7abac"/>
 					</Co>
 					<Co K="AQ" U="a40d2c7c-9daa-2b32-f8d3dae55c9793d6"/>
 					<LoggerMailer RefNotification="3fa15e0a-1e1b-bf67-f8f5b158d5d38cfb" On="&lt;v&gt;" Off="&lt;v&gt;" MinimumTime="5000" NL="1"/>
+				</C>
+				<C Type="OutputRefLM" V="178" U="75345279-52e0-cbec-6ecf8ec16a21c19d" Title="Meldung Sicherheit (SignalBot)" Px="13152" Py="1824" Px2="15264" Py2="2016" Cl="0,0,0" Nio="2" Ref="2502083a-4d6a-35be-2b54e13a730b647f" WF="147456">
+					<Co K="AI" Nc="1" U="1a40b251-4f94-3d6e-e9d0eaebae1df700">
+						<In Input="0380dffd-3f90-91f3-da495940e82e6e2e"/>
+					</Co>
+					<Co K="AQ" U="04ccecd4-2f56-38cd-44526b521bb56960"/>
+					<LoggerMailer RefNotification="2502083a-4d6a-35be-2b54e13a730b647f" On="&lt;v&gt;" Off="&lt;v&gt;" MinimumTime="5000" NL="1"/>
 				</C>
 			</C>
 			<C Type="Page" V="178" U="8ff444c2-1648-48ca-a0bd0b303fc88b2e" Title="SignalBot Befehle und Meldungen" LtE="560987880" WF="16384">
@@ -39305,12 +39305,6 @@
 					<Display Unit="&lt;v.pr&gt;"/>
 					<StateTexts></StateTexts>
 				</C>
-				<C Type="OutputRef" V="178" U="00f0749d-6c88-29d5-ae451d04121f03e0" Title="Signal - dringende Meldung" Px="5952" Py="6624" Px2="8064" Py2="6816" Cl="0,0,0" Nio="2" Ref="fa9c6923-a231-a171-2c43d662a0ca071a" WF="16384" LinkRefType="74">
-					<Co K="AI" Nc="1" U="90761a0a-5671-386b-ed52c14b7c0210b5">
-						<In Input="96b7572c-a47f-d309-c5f239d535414dcf"/>
-					</Co>
-					<Co K="AQ" U="282ac9e2-10fd-7bb5-c802dd0f87424925"/>
-				</C>
 				<C Type="OutputRef" V="178" U="263a23a4-bddc-14b4-0db2804acd8785b7" Title="Signal - Zustand melden" Px="5952" Py="6240" Px2="8064" Py2="6432" Cl="0,0,0" Nio="2" Ref="40bb99ce-5cd4-cef3-07da68980dd89e27" WF="16384" Analog="true" LinkRefType="74">
 					<Co K="AI" Nc="1" U="9d910fdd-4336-442f-73a76938946f6a94">
 						<In Input="5dde8a37-3dcd-e916-67831a0ced070b69"/>
@@ -39347,6 +39341,12 @@
 						<In Input="22344cb8-13a2-157e-e75161039070e594"/>
 					</Co>
 					<Co K="AQ" U="86149e39-c15d-63da-e243369e4b8e3e3a"/>
+				</C>
+				<C Type="OutputRef" V="178" U="00f0749d-6c88-29d5-ae451d04121f03e0" Title="Signal - dringende Meldung" Px="5952" Py="6624" Px2="8064" Py2="6816" Cl="0,0,0" Nio="2" Ref="fa9c6923-a231-a171-2c43d662a0ca071a" WF="16384" LinkRefType="74">
+					<Co K="AI" Nc="1" U="90761a0a-5671-386b-ed52c14b7c0210b5">
+						<In Input="96b7572c-a47f-d309-c5f239d535414dcf"/>
+					</Co>
+					<Co K="AQ" U="282ac9e2-10fd-7bb5-c802dd0f87424925"/>
 				</C>
 			</C>
 			<C Type="Page" V="178" U="40ded224-fa2d-a1dc-659027aeffc0ef50" Title="Skoda-Connect-NG" LtE="560987880" WF="16384">
@@ -39666,13 +39666,6 @@
 					<Co K="RisingEdge" U="32fe05b6-5d24-874a-6a83d4df121960bd"/>
 					<Co K="FallingEdge" U="bcf9732b-80ee-0df6-e657ff6442e817d5"/>
 				</C>
-				<C Type="OutputRefLM" V="178" U="2e67eea7-2a4c-8cf3-7493f4de5f522fd7" Title="Meldung Ladung beendet (Skoda)" Px="16992" Py="7296" Px2="19104" Py2="7488" Cl="0,0,0" Nio="2" Ref="8c313cf7-ec97-ef88-15157e80a0c833ce" WF="147456">
-					<Co K="AI" Nc="1" U="72836eef-2040-9d82-0a4737b4fe149c32">
-						<In Input="bcf9732b-80ee-0df6-e657ff6442e817d5"/>
-					</Co>
-					<Co K="AQ" U="bfd33581-6eea-bcf6-2792d4be3c4c17b1"/>
-					<LoggerMailer RefNotification="8c313cf7-ec97-ef88-15157e80a0c833ce" On="&lt;v&gt;" Off="&lt;v&gt;" MinimumTime="5000" NL="1"/>
-				</C>
 				<C Type="OutputRefLM" V="178" U="0257fa29-ceb2-929d-8512eb4ffc2f894b" Title="Meldung Auto gestört (Skoda)" Px="12672" Py="864" Px2="14784" Py2="1056" Cl="0,0,0" Nio="2" Ref="00850a5d-00fc-6b2c-24953f9e15d86710" WF="147456">
 					<Co K="AI" Nc="1" U="e060a117-af21-aea7-0f6283e4600b7221">
 						<In Input="75ff2224-aacc-77cd-1764d11bddb5f781"/>
@@ -39686,6 +39679,13 @@
 					</Co>
 					<Co K="AQ" U="4f4ce334-4336-72c4-3fce23c950ad90b9"/>
 					<LoggerMailer RefNotification="e6c003ba-cd36-e633-61030998450cc496" On="&lt;v&gt;" Off="&lt;v&gt;" MinimumTime="5000" NL="1"/>
+				</C>
+				<C Type="OutputRefLM" V="178" U="2e67eea7-2a4c-8cf3-7493f4de5f522fd7" Title="Meldung Ladung beendet (Skoda)" Px="16992" Py="7296" Px2="19104" Py2="7488" Cl="0,0,0" Nio="2" Ref="8c313cf7-ec97-ef88-15157e80a0c833ce" WF="147456">
+					<Co K="AI" Nc="1" U="72836eef-2040-9d82-0a4737b4fe149c32">
+						<In Input="bcf9732b-80ee-0df6-e657ff6442e817d5"/>
+					</Co>
+					<Co K="AQ" U="bfd33581-6eea-bcf6-2792d4be3c4c17b1"/>
+					<LoggerMailer RefNotification="8c313cf7-ec97-ef88-15157e80a0c833ce" On="&lt;v&gt;" Off="&lt;v&gt;" MinimumTime="5000" NL="1"/>
 				</C>
 			</C>
 			<C Type="Page" V="178" U="7ffb0ecc-47e5-f1aa-2004b98b00289556" Title="Skoda-Connect-NG Fahrzeug" LtE="560987880" WF="16384">
@@ -40077,19 +40077,19 @@
 					<Display Unit="&lt;v.pr&gt;"/>
 					<StateTexts></StateTexts>
 				</C>
-				<C Type="OutputRefLM" V="178" U="88e7f677-c3ed-76f2-7a6002024ad71e17" Title="Meldung Fahrzeug offen (Skoda)" Px="19584" Py="864" Px2="21696" Py2="1056" Cl="0,0,0" Nio="2" Ref="5e91c739-6f1c-a572-0e236f41ded677ee" WF="147456">
-					<Co K="AI" Nc="1" U="51d67129-6e51-c1ec-6417c017e3ff4eb3">
-						<In Input="1fac124e-87dc-2bde-ba847ea15b74c4b6"/>
-					</Co>
-					<Co K="AQ" U="b9f48727-e263-7be0-80fdc72296dcca92"/>
-					<LoggerMailer RefNotification="5e91c739-6f1c-a572-0e236f41ded677ee" On="&lt;v&gt;" Off="&lt;v&gt;" MinimumTime="5000" NL="1"/>
-				</C>
 				<C Type="OutputRefLM" V="178" U="0390d6dd-023c-31e1-f01f6bd70777c7d9" Title="Meldung Service fällig (Skoda)" Px="18528" Py="7584" Px2="20640" Py2="7776" Cl="0,0,0" Nio="2" Ref="ed0cf331-6b4f-498e-25cde92b5e461f8a" WF="147456">
 					<Co K="AI" Nc="1" U="2b3011b8-b4e7-cb7d-8a520898c3b63591">
 						<In Input="da17648a-f348-1edd-018b7b98241b790b"/>
 					</Co>
 					<Co K="AQ" U="d225c77d-15cd-f6e3-4fefad198bd467a8"/>
 					<LoggerMailer RefNotification="ed0cf331-6b4f-498e-25cde92b5e461f8a" On="&lt;v&gt;" Off="&lt;v&gt;" MinimumTime="5000" NL="1"/>
+				</C>
+				<C Type="OutputRefLM" V="178" U="88e7f677-c3ed-76f2-7a6002024ad71e17" Title="Meldung Fahrzeug offen (Skoda)" Px="19584" Py="864" Px2="21696" Py2="1056" Cl="0,0,0" Nio="2" Ref="5e91c739-6f1c-a572-0e236f41ded677ee" WF="147456">
+					<Co K="AI" Nc="1" U="51d67129-6e51-c1ec-6417c017e3ff4eb3">
+						<In Input="1fac124e-87dc-2bde-ba847ea15b74c4b6"/>
+					</Co>
+					<Co K="AQ" U="b9f48727-e263-7be0-80fdc72296dcca92"/>
+					<LoggerMailer RefNotification="5e91c739-6f1c-a572-0e236f41ded677ee" On="&lt;v&gt;" Off="&lt;v&gt;" MinimumTime="5000" NL="1"/>
 				</C>
 			</C>
 			<C Type="Page" V="178" U="76ed9c18-0e66-cd1f-4b2e2059557ff99d" Title="Skoda-Connect-NG Klima und Befehle" LtE="560987880" WF="16384">
@@ -40302,12 +40302,6 @@
 					<Co K="AQ" U="34eaeeb9-0bc8-618b-2ed0d50f8ee54767"/>
 					<Co K="TQ" U="15792c52-7e90-7313-d91dd469ef5a9aae"/>
 				</C>
-				<C Type="OutputRef" V="178" U="0aa873a3-e37d-d88d-03519b5a160a9b29" Title="SKODA_1_WECKEN" Px="5952" Py="3744" Px2="8064" Py2="3936" Cl="0,0,0" Nio="2" Ref="0711aaa4-f2c1-de8f-499769801e286260" WF="16384" LinkRefType="74">
-					<Co K="AI" Nc="1" U="512f92de-4022-c532-b9a75757f75a62df">
-						<In Input="68c1e2f9-9b27-82d1-6462afc9cc60ee9b"/>
-					</Co>
-					<Co K="AQ" U="6632bfcb-c32d-ac36-29e479ce8ad8bb60"/>
-				</C>
 				<C Type="OutputRef" V="178" U="d1805e3b-2294-190c-5d9245fb3323cac0" Title="SKODA_1_ABRUF" Px="5952" Py="3360" Px2="8064" Py2="3552" Cl="0,0,0" Nio="2" Ref="db99886e-cdd5-59b1-61715bc7de9b29be" WF="16384" LinkRefType="74">
 					<Co K="AI" Nc="1" U="f87cafc2-15ad-d89e-76f92b240ae000b0">
 						<In Input="582e5c63-e2a1-db23-2f9c52dc42e415a0"/>
@@ -40349,6 +40343,12 @@
 						<In Input="6b3c6f58-ff71-e3d0-67eede2ba225ebfd"/>
 					</Co>
 					<Co K="AQ" U="e5198ae5-5061-e39a-783baec2a82f2456"/>
+				</C>
+				<C Type="OutputRef" V="178" U="0aa873a3-e37d-d88d-03519b5a160a9b29" Title="SKODA_1_WECKEN" Px="5952" Py="3744" Px2="8064" Py2="3936" Cl="0,0,0" Nio="2" Ref="0711aaa4-f2c1-de8f-499769801e286260" WF="16384" LinkRefType="74">
+					<Co K="AI" Nc="1" U="512f92de-4022-c532-b9a75757f75a62df">
+						<In Input="68c1e2f9-9b27-82d1-6462afc9cc60ee9b"/>
+					</Co>
+					<Co K="AQ" U="6632bfcb-c32d-ac36-29e479ce8ad8bb60"/>
 				</C>
 			</C>
 			<C Type="Page" V="178" U="b8b5e7bc-5581-3229-b53a66903cd2a3b8" Title="Skoda-Connect-NG Laden" LtE="560987880" WF="16384">
@@ -40603,12 +40603,6 @@
 					<Display Unit="&lt;v.pr&gt;"/>
 					<StateTexts></StateTexts>
 				</C>
-				<C Type="OutputRef" V="178" U="86d64cbd-f27a-37de-faca1b5973e0097a" Title="SKODA_1_LADEN_STOP" Px="17280" Py="2016" Px2="19392" Py2="2208" Cl="0,0,0" Nio="2" Ref="d80e93c2-f35f-fce9-d4fc06127b629f13" WF="147456" LinkRefType="74">
-					<Co K="AI" Nc="1" U="40b461c2-f3e0-3400-be262598db84c3e6">
-						<In Input="67231ff2-b88c-7d68-25e8b1b4bd542b5c"/>
-					</Co>
-					<Co K="AQ" U="0255cb0a-a6db-d8df-007442c7fc2ca815"/>
-				</C>
 				<C Type="OutputRef" V="178" U="430ced33-a195-0b4b-b18b29c2ae189b9b" Title="SKODA_1_LADEGRENZE" Px="5952" Py="6048" Px2="8064" Py2="6240" Cl="0,0,0" Nio="2" Ref="cc2da5e9-4057-7ff4-574d2e47d8314c8e" WF="16384" Analog="true" LinkRefType="74">
 					<Co K="AI" Nc="1" U="31b21d62-f3bd-aa96-dcba8cd82f036d9b">
 						<In Input="dc75095a-f839-3a16-03a769ef8d1e6a74"/>
@@ -40620,6 +40614,12 @@
 						<In Input="74cbbedd-6acf-89cf-362748be0e8fe447"/>
 					</Co>
 					<Co K="AQ" U="725f30fc-c46f-3fa3-137ba89ad462a332"/>
+				</C>
+				<C Type="OutputRef" V="178" U="86d64cbd-f27a-37de-faca1b5973e0097a" Title="SKODA_1_LADEN_STOP" Px="17280" Py="2016" Px2="19392" Py2="2208" Cl="0,0,0" Nio="2" Ref="d80e93c2-f35f-fce9-d4fc06127b629f13" WF="147456" LinkRefType="74">
+					<Co K="AI" Nc="1" U="40b461c2-f3e0-3400-be262598db84c3e6">
+						<In Input="67231ff2-b88c-7d68-25e8b1b4bd542b5c"/>
+					</Co>
+					<Co K="AQ" U="0255cb0a-a6db-d8df-007442c7fc2ca815"/>
 				</C>
 			</C>
 			<C Type="Page" V="178" U="216e80d1-03d3-7446-ffffe001fe9bf86f" Title="Smartmeter klassisch" LtE="560890082" WF="16384">
@@ -41193,19 +41193,19 @@
 					<Display Unit="&lt;v.pr&gt;"/>
 					<StateTexts></StateTexts>
 				</C>
-				<C Type="OutputRefLM" V="178" U="2171533d-01d5-d610-ffffe001fe9bf86f" Title="Stromkosten ohne Preise" Px="11712" Py="3360" Px2="13824" Py2="3552" Cl="0,0,0" Nio="2" Ref="2171532a-0224-3c60-ffffe001fe9bf86f" WF="147456">
-					<Co K="AI" Nc="1" U="2171533d-01d5-d60e-00ff4b4d689e9947">
-						<In Input="217152dc-037d-fd25-04ff252cb570ac63"/>
-					</Co>
-					<Co K="AQ" U="2171533d-01d5-d60f-01ff4b4d689e9947"/>
-					<LoggerMailer RefNotification="2171532a-0224-3c60-ffffe001fe9bf86f" On="&lt;v&gt;" Off="&lt;v&gt;" MinimumTime="5000" NL="1"/>
-				</C>
 				<C Type="OutputRefLM" V="178" U="21715341-00c2-fc85-ffffe001fe9bf86f" Title="Fahrplan-Regel 1 zieht nicht" Px="13632" Py="6816" Px2="15744" Py2="7008" Cl="0,0,0" Nio="2" Ref="2171532e-02ef-8934-ffffe001fe9bf86f" WF="147456">
 					<Co K="AI" Nc="1" U="21715341-00c2-fc83-00ff6ec661551d0c">
 						<In Input="217152c9-01cd-8a5a-02ff7dd1b2e57829"/>
 					</Co>
 					<Co K="AQ" U="21715341-00c2-fc84-01ff6ec661551d0c"/>
 					<LoggerMailer RefNotification="2171532e-02ef-8934-ffffe001fe9bf86f" On="&lt;v&gt;" Off="&lt;v&gt;" MinimumTime="5000" NL="1"/>
+				</C>
+				<C Type="OutputRefLM" V="178" U="2171533d-01d5-d610-ffffe001fe9bf86f" Title="Stromkosten ohne Preise" Px="11712" Py="3360" Px2="13824" Py2="3552" Cl="0,0,0" Nio="2" Ref="2171532a-0224-3c60-ffffe001fe9bf86f" WF="147456">
+					<Co K="AI" Nc="1" U="2171533d-01d5-d60e-00ff4b4d689e9947">
+						<In Input="217152dc-037d-fd25-04ff252cb570ac63"/>
+					</Co>
+					<Co K="AQ" U="2171533d-01d5-d60f-01ff4b4d689e9947"/>
+					<LoggerMailer RefNotification="2171532a-0224-3c60-ffffe001fe9bf86f" On="&lt;v&gt;" Off="&lt;v&gt;" MinimumTime="5000" NL="1"/>
 				</C>
 			</C>
 			<C Type="Page" V="178" U="216e82de-00ae-879e-ffffe001fe9bf86f" Title="Smartmeter vzLogger" LtE="560890600" WF="16384">
@@ -41817,13 +41817,6 @@
 					<Display Unit="&lt;v.pr&gt;"/>
 					<StateTexts></StateTexts>
 				</C>
-				<C Type="OutputRefLM" V="178" U="c0ddab97-8ea6-7545-aad4243404fe61b4" Title="Meldung Test-Push (aWATTar)" Px="8640" Py="8256" Px2="10752" Py2="8448" Cl="0,0,0" Nio="2" Ref="219997b8-1126-91a1-00e108093394a7d0" WF="16384">
-					<Co K="AI" Nc="1" U="5188e353-8be6-4be8-d301ad2f2cd13a9c">
-						<In Input="76965193-7dad-05df-6616c28b9a732c84"/>
-					</Co>
-					<Co K="AQ" U="00fe5b6c-dca8-849d-5d73aeb978386c50"/>
-					<LoggerMailer RefNotification="219997b8-1126-91a1-00e108093394a7d0" On="&lt;v&gt;" Off="&lt;v&gt;" MinimumTime="5000" NL="1"/>
-				</C>
 				<C Type="OutputRefLM" V="178" U="9ced753d-cc42-c9fa-f36e1da7776488c9" Title="Meldung Spotpreis gestört (aWATTar)" Px="14016" Py="2400" Px2="16128" Py2="2592" Cl="0,0,0" Nio="2" Ref="b026308c-dd92-364e-1134f1f4feacc6e1" WF="147456">
 					<Co K="AI" Nc="1" U="2a841dbe-ad2f-13bd-32838c2ce9e60f4c">
 						<In Input="4fa075dc-ea80-6c79-86a2b2c15d50e208"/>
@@ -41837,6 +41830,13 @@
 					</Co>
 					<Co K="AQ" U="976885b5-ef43-d570-d263cf2a2a04a6c8"/>
 					<LoggerMailer RefNotification="b7c5b4c6-4f7e-0c77-7c2fa30a95b18b10" On="&lt;v&gt;" Off="&lt;v&gt;" MinimumTime="5000" NL="1"/>
+				</C>
+				<C Type="OutputRefLM" V="178" U="c0ddab97-8ea6-7545-aad4243404fe61b4" Title="Meldung Test-Push (aWATTar)" Px="8640" Py="8256" Px2="10752" Py2="8448" Cl="0,0,0" Nio="2" Ref="219997b8-1126-91a1-00e108093394a7d0" WF="16384">
+					<Co K="AI" Nc="1" U="5188e353-8be6-4be8-d301ad2f2cd13a9c">
+						<In Input="76965193-7dad-05df-6616c28b9a732c84"/>
+					</Co>
+					<Co K="AQ" U="00fe5b6c-dca8-849d-5d73aeb978386c50"/>
+					<LoggerMailer RefNotification="219997b8-1126-91a1-00e108093394a7d0" On="&lt;v&gt;" Off="&lt;v&gt;" MinimumTime="5000" NL="1"/>
 				</C>
 			</C>
 			<C Type="Page" V="178" U="78dba3f7-ae35-e5be-3676c086bace70ae" Title="Spotpreis aWATTar Freigaben und Tarif" LtE="560890600" WF="16384">
@@ -43748,13 +43748,6 @@
 					<Co K="TQ4" U="21773ae5-00f6-f6a7-10ff50ae26341ae3"/>
 					<Co K="OutputAPI" U="21773ae5-00f6-f6a8-11ff50ae26341ae3"/>
 				</C>
-				<C Type="OutputRefLM" V="178" U="0bb54792-526c-956f-faab55ad04f457e3" Title="Meldung Test-Push (Octopus)" Px="4416" Py="576" Px2="6528" Py2="768" Cl="0,0,0" Nio="2" Ref="7879bec4-d122-ca61-cf43e9c77ebc1d80" WF="16384">
-					<Co K="AI" Nc="1" U="7c66b8b9-1764-42be-5d14d30e9345d008">
-						<In Input="8deaa91f-8a38-8d5b-1631a1a8a9ed6cbc"/>
-					</Co>
-					<Co K="AQ" U="2a232f24-49b9-da3d-def7f43852dcdd43"/>
-					<LoggerMailer RefNotification="7879bec4-d122-ca61-cf43e9c77ebc1d80" On="&lt;v&gt;" Off="&lt;v&gt;" MinimumTime="5000" NL="1"/>
-				</C>
 				<C Type="OutputRefLM" V="178" U="b1edd29e-7fce-430b-15dbab55db91fdb2" Title="Meldung Spotpreis gestört (Octopus)" Px="18624" Py="1248" Px2="20736" Py2="1440" Cl="0,0,0" Nio="2" Ref="d5772de7-33c2-8820-1c4dfa5e9be3b158" WF="147456">
 					<Co K="AI" Nc="1" U="fd5dadb2-fa3c-060d-10d55c1fdfe3979d">
 						<In Input="7b46b81a-98a4-f954-5a355ac43233c064"/>
@@ -43786,6 +43779,13 @@
 						<In Input="3c54e2e8-49cc-e227-940309c358837810"/>
 					</Co>
 					<Co K="AQ" U="e48bde9a-d111-cb50-69bec32ba1adf46a"/>
+				</C>
+				<C Type="OutputRefLM" V="178" U="0bb54792-526c-956f-faab55ad04f457e3" Title="Meldung Test-Push (Octopus)" Px="4416" Py="576" Px2="6528" Py2="768" Cl="0,0,0" Nio="2" Ref="7879bec4-d122-ca61-cf43e9c77ebc1d80" WF="16384">
+					<Co K="AI" Nc="1" U="7c66b8b9-1764-42be-5d14d30e9345d008">
+						<In Input="8deaa91f-8a38-8d5b-1631a1a8a9ed6cbc"/>
+					</Co>
+					<Co K="AQ" U="2a232f24-49b9-da3d-def7f43852dcdd43"/>
+					<LoggerMailer RefNotification="7879bec4-d122-ca61-cf43e9c77ebc1d80" On="&lt;v&gt;" Off="&lt;v&gt;" MinimumTime="5000" NL="1"/>
 				</C>
 			</C>
 			<C Type="Page" V="178" U="55920c1a-5ff8-f042-47d1ba07098e9d43" Title="Spotpreis Octopus Freigaben und Tarif" LtE="560890600" WF="16384">
@@ -45636,19 +45636,19 @@
 					<Display Unit="&lt;v.pr&gt;"/>
 					<StateTexts></StateTexts>
 				</C>
-				<C Type="OutputRefLM" V="178" U="7a66e35f-d7b5-ddd6-1613ca784bb073b8" Title="Meldung Strompreis negativ (Tibber)" Px="21600" Py="3168" Px2="23712" Py2="3360" Cl="0,0,0" Nio="2" Ref="2f9315dd-a228-e731-4d5aebc247a11fd0" WF="16384">
-					<Co K="AI" Nc="1" U="e67128aa-dfd8-1060-e53ba58fa39726d2">
-						<In Input="5298014d-4775-d515-beca6f4e76902132"/>
-					</Co>
-					<Co K="AQ" U="05023e26-4cf8-b34d-e1696119797557aa"/>
-					<LoggerMailer RefNotification="2f9315dd-a228-e731-4d5aebc247a11fd0" On="&lt;v&gt;" Off="&lt;v&gt;" MinimumTime="5000" NL="1"/>
-				</C>
 				<C Type="OutputRefLM" V="178" U="bd437601-f007-8764-7f8d2f31c894aeae" Title="Meldung Spotpreis gestört (Tibber)" Px="6720" Py="3456" Px2="8832" Py2="3648" Cl="0,0,0" Nio="2" Ref="967c9d7e-5e47-a803-cbbe007a279470d1" WF="147456">
 					<Co K="AI" Nc="1" U="e289d555-4289-b5d9-6e0a3e1dc2ddbcb0">
 						<In Input="4765f5fd-86b7-4781-cced6dc3858f8305"/>
 					</Co>
 					<Co K="AQ" U="d233f44d-898e-95ce-ba7d22c1c3dca0cc"/>
 					<LoggerMailer RefNotification="967c9d7e-5e47-a803-cbbe007a279470d1" On="&lt;v&gt;" Off="&lt;v&gt;" MinimumTime="5000" NL="1"/>
+				</C>
+				<C Type="OutputRefLM" V="178" U="7a66e35f-d7b5-ddd6-1613ca784bb073b8" Title="Meldung Strompreis negativ (Tibber)" Px="21600" Py="3168" Px2="23712" Py2="3360" Cl="0,0,0" Nio="2" Ref="2f9315dd-a228-e731-4d5aebc247a11fd0" WF="16384">
+					<Co K="AI" Nc="1" U="e67128aa-dfd8-1060-e53ba58fa39726d2">
+						<In Input="5298014d-4775-d515-beca6f4e76902132"/>
+					</Co>
+					<Co K="AQ" U="05023e26-4cf8-b34d-e1696119797557aa"/>
+					<LoggerMailer RefNotification="2f9315dd-a228-e731-4d5aebc247a11fd0" On="&lt;v&gt;" Off="&lt;v&gt;" MinimumTime="5000" NL="1"/>
 				</C>
 			</C>
 			<C Type="Page" V="178" U="1d7c0bb6-809e-e55e-bf08c60a48cf6b49" Title="Spotpreis Tibber Steuerung" LtE="560890600" WF="16384">
@@ -46752,19 +46752,19 @@
 					<Co K="Time" Def="3600" U="12463805-f68c-c0b5-fc8cdba9fbe405d6"/>
 					<Co K="Q" U="3c3f388e-37ac-03f2-e97b6fa0a04764fb"/>
 				</C>
-				<C Type="OutputRefLM" V="178" U="32322c00-3ea1-459e-a3cf44fede50f215" Title="Meldung teurer als Festpreis (Tibber)" Px="10368" Py="864" Px2="12480" Py2="1056" Cl="0,0,0" Nio="2" Ref="a079178e-0ba4-414d-9d35dd7251ba00ac" WF="147456">
-					<Co K="AI" Nc="1" U="c88d2f32-7ed0-dcd9-372e3a77b2560663">
-						<In Input="3c3f388e-37ac-03f2-e97b6fa0a04764fb"/>
-					</Co>
-					<Co K="AQ" U="decb516e-b5df-deca-39bc4ebb68e04238"/>
-					<LoggerMailer RefNotification="a079178e-0ba4-414d-9d35dd7251ba00ac" On="&lt;v&gt;" Off="&lt;v&gt;" MinimumTime="5000" NL="1"/>
-				</C>
 				<C Type="OutputRefLM" V="178" U="61c7b919-ef81-ca76-34c2730b49d7a65b" Title="Meldung Pulse liefert nicht (Tibber)" Px="9024" Py="5376" Px2="11136" Py2="5568" Cl="0,0,0" Nio="2" Ref="5c214948-f288-387c-623b038634388867" WF="147456">
 					<Co K="AI" Nc="1" U="47ef2fe1-ffea-f314-c468c289f1d93900">
 						<In Input="a1b3b375-2bf7-a5a1-eab9e5fcdfab802e"/>
 					</Co>
 					<Co K="AQ" U="bcb80aad-ae7a-f15c-d998b5ed93c92f7a"/>
 					<LoggerMailer RefNotification="5c214948-f288-387c-623b038634388867" On="&lt;v&gt;" Off="&lt;v&gt;" MinimumTime="5000" NL="1"/>
+				</C>
+				<C Type="OutputRefLM" V="178" U="32322c00-3ea1-459e-a3cf44fede50f215" Title="Meldung teurer als Festpreis (Tibber)" Px="10368" Py="864" Px2="12480" Py2="1056" Cl="0,0,0" Nio="2" Ref="a079178e-0ba4-414d-9d35dd7251ba00ac" WF="147456">
+					<Co K="AI" Nc="1" U="c88d2f32-7ed0-dcd9-372e3a77b2560663">
+						<In Input="3c3f388e-37ac-03f2-e97b6fa0a04764fb"/>
+					</Co>
+					<Co K="AQ" U="decb516e-b5df-deca-39bc4ebb68e04238"/>
+					<LoggerMailer RefNotification="a079178e-0ba4-414d-9d35dd7251ba00ac" On="&lt;v&gt;" Off="&lt;v&gt;" MinimumTime="5000" NL="1"/>
 				</C>
 			</C>
 			<C Type="Page" V="178" U="670a5717-67c4-d8da-a1eb1186756177f5" Title="Spotpreis Tibber Werte" LtE="560890600" WF="16384">
@@ -47161,19 +47161,19 @@
 					<Co K="Time" Def="60" U="5dbc69ce-3d4a-9dad-edb25ad24f108d96"/>
 					<Co K="Q" U="2deee81e-ab13-b50c-4636f50f22c08cb2"/>
 				</C>
-				<C Type="OutputRefLM" V="178" U="9b5a9068-c2ea-769b-dfce57df37ddbec2" Title="Meldung Preise für morgen (Tibber)" Px="5952" Py="7296" Px2="8064" Py2="7488" Cl="0,0,0" Nio="2" Ref="09194454-f2e9-ff65-86ccb36c79f1a9e3" WF="16384">
-					<Co K="AI" Nc="1" U="80b86501-5892-86e8-d70986f122f21d7c">
-						<In Input="60253479-6ec7-680f-aa6a493a51d35619"/>
-					</Co>
-					<Co K="AQ" U="16b2e0ba-7495-53b0-34c58aef90f64482"/>
-					<LoggerMailer RefNotification="09194454-f2e9-ff65-86ccb36c79f1a9e3" On="&lt;v&gt;" Off="&lt;v&gt;" MinimumTime="5000" NL="1"/>
-				</C>
 				<C Type="OutputRefLM" V="178" U="ffc1be2a-aa91-fa47-92b203c482d5580e" Title="Meldung günstiges Fenster (Tibber)" Px="10368" Py="864" Px2="12480" Py2="1056" Cl="0,0,0" Nio="2" Ref="118a589e-1d9d-b6b0-c7129024496b831b" WF="147456">
 					<Co K="AI" Nc="1" U="c1fd870d-0584-e1a1-e4e0a5b5ea9b5cd9">
 						<In Input="2deee81e-ab13-b50c-4636f50f22c08cb2"/>
 					</Co>
 					<Co K="AQ" U="a9bb99ce-8ace-9413-a49fb4331ff2412b"/>
 					<LoggerMailer RefNotification="118a589e-1d9d-b6b0-c7129024496b831b" On="&lt;v&gt;" Off="&lt;v&gt;" MinimumTime="5000" NL="1"/>
+				</C>
+				<C Type="OutputRefLM" V="178" U="9b5a9068-c2ea-769b-dfce57df37ddbec2" Title="Meldung Preise für morgen (Tibber)" Px="5952" Py="7296" Px2="8064" Py2="7488" Cl="0,0,0" Nio="2" Ref="09194454-f2e9-ff65-86ccb36c79f1a9e3" WF="16384">
+					<Co K="AI" Nc="1" U="80b86501-5892-86e8-d70986f122f21d7c">
+						<In Input="60253479-6ec7-680f-aa6a493a51d35619"/>
+					</Co>
+					<Co K="AQ" U="16b2e0ba-7495-53b0-34c58aef90f64482"/>
+					<LoggerMailer RefNotification="09194454-f2e9-ff65-86ccb36c79f1a9e3" On="&lt;v&gt;" Off="&lt;v&gt;" MinimumTime="5000" NL="1"/>
 				</C>
 			</C>
 			<C Type="Page" V="178" U="8279e34d-1af5-7084-9e1ccf79d155944d" Title="Sprachsteuerung" LtE="560890600" WF="16384">
@@ -47456,19 +47456,19 @@
 					<Display Unit="&lt;v.pr&gt;"/>
 					<StateTexts></StateTexts>
 				</C>
-				<C Type="OutputRefLM" V="178" U="0caa98de-d0d5-36e3-051e50fb73274663" Title="Meldung Mikrofon getrennt (Sprachsteuerung)" Px="15744" Py="1632" Px2="17856" Py2="1824" Cl="0,0,0" Nio="2" Ref="192fd54e-61d1-9956-1e7a321e93d72071" WF="147456">
-					<Co K="AI" Nc="1" U="0c30c0aa-6c95-e3cc-f5da40c74a872749">
-						<In Input="2f3d0625-fe41-f38a-6e84a29132310182"/>
-					</Co>
-					<Co K="AQ" U="0f1a91ae-e52a-1902-6ab28710e8229a87"/>
-					<LoggerMailer RefNotification="192fd54e-61d1-9956-1e7a321e93d72071" On="&lt;v&gt;" Off="&lt;v&gt;" MinimumTime="5000" NL="1"/>
-				</C>
 				<C Type="OutputRefLM" V="178" U="d53641d6-e1ed-9e2d-12a7086e281b9222" Title="Meldung Plugin gestört (Sprachsteuerung)" Px="20256" Py="3552" Px2="22368" Py2="3744" Cl="0,0,0" Nio="2" Ref="70839ebd-061f-7319-1f3bf060ac9c69b9" WF="147456">
 					<Co K="AI" Nc="1" U="0f4699e9-d1f9-d9f0-54ab051ae6a17cfb">
 						<In Input="ea1d5264-71a4-66f5-5342183ed9672369"/>
 					</Co>
 					<Co K="AQ" U="224c1bcc-e54b-6aa7-8dcbdde587bfd682"/>
 					<LoggerMailer RefNotification="70839ebd-061f-7319-1f3bf060ac9c69b9" On="&lt;v&gt;" Off="&lt;v&gt;" MinimumTime="5000" NL="1"/>
+				</C>
+				<C Type="OutputRefLM" V="178" U="0caa98de-d0d5-36e3-051e50fb73274663" Title="Meldung Mikrofon getrennt (Sprachsteuerung)" Px="15744" Py="1632" Px2="17856" Py2="1824" Cl="0,0,0" Nio="2" Ref="192fd54e-61d1-9956-1e7a321e93d72071" WF="147456">
+					<Co K="AI" Nc="1" U="0c30c0aa-6c95-e3cc-f5da40c74a872749">
+						<In Input="2f3d0625-fe41-f38a-6e84a29132310182"/>
+					</Co>
+					<Co K="AQ" U="0f1a91ae-e52a-1902-6ab28710e8229a87"/>
+					<LoggerMailer RefNotification="192fd54e-61d1-9956-1e7a321e93d72071" On="&lt;v&gt;" Off="&lt;v&gt;" MinimumTime="5000" NL="1"/>
 				</C>
 			</C>
 			<C Type="Page" V="178" U="f4a56e50-2f2f-8c17-a8f4ab5d5c3007bf" Title="Sprachsteuerung Ansagen" LtE="560890600" WF="16384">
@@ -47678,12 +47678,6 @@
 					<Display Unit="&lt;v.pr&gt;"/>
 					<StateTexts></StateTexts>
 				</C>
-				<C Type="OutputRef" V="178" U="13742527-1753-af50-c725059f87308916" Title="Sprachsteuerung Alarm" Px="5952" Py="4032" Px2="8064" Py2="4224" Cl="0,0,0" Nio="2" Ref="1df3f052-fdfb-ff06-2fc56c1c2c8cee1c" WF="16384" LinkRefType="74">
-					<Co K="AI" Nc="1" U="d7be7b75-c5b8-254e-97cede00b04e55a6">
-						<In Input="180a355e-d4d0-06f5-14a23be73d42938a"/>
-					</Co>
-					<Co K="AQ" U="8af3da7c-d579-f1ed-04f6792d006e64f3"/>
-				</C>
 				<C Type="OutputRef" V="178" U="fcb48fd3-6bd7-f83e-1b97607c40b644fa" Title="Sprachsteuerung Satz" Px="5952" Py="3648" Px2="8064" Py2="3840" Cl="0,0,0" Nio="2" Ref="8c1e44ac-9333-366f-57c0a3bc5ba169fd" WF="16384" LinkRefType="74">
 					<Co K="AI" Nc="1" U="1e54e7c9-fcba-d3f6-8da06d2b55fbb675">
 						<In Input="0eacd7af-c087-4d5d-51b78b3b1fea87a8"/>
@@ -47701,6 +47695,12 @@
 						<In Input="92862252-4233-ff2a-850c5347a01d98eb"/>
 					</Co>
 					<Co K="AQ" U="680f4474-dc66-b316-35d0aec46ea16dc5"/>
+				</C>
+				<C Type="OutputRef" V="178" U="13742527-1753-af50-c725059f87308916" Title="Sprachsteuerung Alarm" Px="5952" Py="4032" Px2="8064" Py2="4224" Cl="0,0,0" Nio="2" Ref="1df3f052-fdfb-ff06-2fc56c1c2c8cee1c" WF="16384" LinkRefType="74">
+					<Co K="AI" Nc="1" U="d7be7b75-c5b8-254e-97cede00b04e55a6">
+						<In Input="180a355e-d4d0-06f5-14a23be73d42938a"/>
+					</Co>
+					<Co K="AQ" U="8af3da7c-d579-f1ed-04f6792d006e64f3"/>
 				</C>
 			</C>
 			<C Type="Page" V="178" U="65ab145a-3a91-2b78-4407e3ce561b2a5f" Title="Sprachsteuerung Befehle" LtE="560890600" WF="16384">
@@ -48213,13 +48213,6 @@
 					<Display Unit="&lt;v.pr&gt;"/>
 					<StateTexts></StateTexts>
 				</C>
-				<C Type="OutputRefLM" V="178" U="216d2b90-02e4-6fc3-ffffe001fe9bf86f" Title="Ultraschall ausgefallen" Px="20928" Py="7392" Px2="23040" Py2="7584" Cl="0,0,0" Nio="2" Ref="216d2b16-0278-47f1-ffffe001fe9bf86f" WF="147456">
-					<Co K="AI" Nc="1" U="216d2b90-02e4-6fc1-00ff28999b8b081a">
-						<In Input="216d2ae9-000f-ddec-04ffeb8e7b28fb61"/>
-					</Co>
-					<Co K="AQ" U="216d2b90-02e4-6fc2-01ff28999b8b081a"/>
-					<LoggerMailer RefNotification="216d2b16-0278-47f1-ffffe001fe9bf86f" On="&lt;v&gt;" Off="&lt;v&gt;" MinimumTime="5000" NL="1"/>
-				</C>
 				<C Type="OutputRefLM" V="178" U="21720cc5-0085-f5a1-ffffe001fe9bf86f" Title="Ultraschall misst nicht" Px="18144" Py="6720" Px2="20256" Py2="6912" Cl="0,0,0" Nio="2" Ref="21720c9b-0214-8a53-ffffe001fe9bf86f" WF="147456">
 					<Co K="AI" Nc="1" U="21720cc5-0085-f59f-00ff647cb188ce09">
 						<In Input="21720b0a-00c3-10ed-04ff900ba044e257"/>
@@ -48247,6 +48240,13 @@
 					</Co>
 					<Co K="AQ" U="216d2be8-030a-ccc8-01ffa8031f31fefa"/>
 					<LoggerMailer RefNotification="216d2b10-028d-2d6d-ffffe001fe9bf86f" On="&lt;v&gt;" Off="&lt;v&gt;" MinimumTime="5000" NL="1"/>
+				</C>
+				<C Type="OutputRefLM" V="178" U="216d2b90-02e4-6fc3-ffffe001fe9bf86f" Title="Ultraschall ausgefallen" Px="20928" Py="7392" Px2="23040" Py2="7584" Cl="0,0,0" Nio="2" Ref="216d2b16-0278-47f1-ffffe001fe9bf86f" WF="147456">
+					<Co K="AI" Nc="1" U="216d2b90-02e4-6fc1-00ff28999b8b081a">
+						<In Input="216d2ae9-000f-ddec-04ffeb8e7b28fb61"/>
+					</Co>
+					<Co K="AQ" U="216d2b90-02e4-6fc2-01ff28999b8b081a"/>
+					<LoggerMailer RefNotification="216d2b16-0278-47f1-ffffe001fe9bf86f" On="&lt;v&gt;" Off="&lt;v&gt;" MinimumTime="5000" NL="1"/>
 				</C>
 			</C>
 			<C Type="Page" V="178" U="7b8aaaf9-b20e-5671-ca690f0d2eda876a" Title="VolkswagenID" LtE="560802182" WF="16384">
@@ -48576,13 +48576,6 @@
 					<Co K="RisingEdge" U="9aeebe41-bc17-e283-59ac29d3f974a2b0"/>
 					<Co K="FallingEdge" U="b437339c-5704-2387-df1bf06614730abe"/>
 				</C>
-				<C Type="OutputRefLM" V="178" U="a16c469a-ad29-486e-41b23e6634f8655c" Title="Meldung Ladung beendet (VW)" Px="23040" Py="1824" Px2="25152" Py2="2016" Cl="0,0,0" Nio="2" Ref="eda4a32c-0336-8ed1-5d3477c6de030cf4" WF="147456">
-					<Co K="AI" Nc="1" U="e14777aa-6ad1-5fe1-22c28790474cf774">
-						<In Input="b437339c-5704-2387-df1bf06614730abe"/>
-					</Co>
-					<Co K="AQ" U="596afa85-d471-8b57-7e544be6fe2fe390"/>
-					<LoggerMailer RefNotification="eda4a32c-0336-8ed1-5d3477c6de030cf4" On="&lt;v&gt;" Off="&lt;v&gt;" MinimumTime="5000" NL="1"/>
-				</C>
 				<C Type="OutputRefLM" V="178" U="f0d967f8-b902-2236-bd8b2a0934cda782" Title="Meldung Auto gestört (VW)" Px="23040" Py="480" Px2="25152" Py2="672" Cl="0,0,0" Nio="2" Ref="e9f32b33-117b-90dd-c4a23493afc71683" WF="147456">
 					<Co K="AI" Nc="1" U="6b8f1db9-0101-f3f9-f929b4fea267f867">
 						<In Input="0ebb1f69-5bc2-c47f-647fa671b0f2d521"/>
@@ -48596,6 +48589,13 @@
 					</Co>
 					<Co K="AQ" U="f2000da7-de39-2125-34cbd07e451f946a"/>
 					<LoggerMailer RefNotification="6d43b5be-4dd0-3638-3e06bf56e9383eff" On="&lt;v&gt;" Off="&lt;v&gt;" MinimumTime="5000" NL="1"/>
+				</C>
+				<C Type="OutputRefLM" V="178" U="a16c469a-ad29-486e-41b23e6634f8655c" Title="Meldung Ladung beendet (VW)" Px="23040" Py="1824" Px2="25152" Py2="2016" Cl="0,0,0" Nio="2" Ref="eda4a32c-0336-8ed1-5d3477c6de030cf4" WF="147456">
+					<Co K="AI" Nc="1" U="e14777aa-6ad1-5fe1-22c28790474cf774">
+						<In Input="b437339c-5704-2387-df1bf06614730abe"/>
+					</Co>
+					<Co K="AQ" U="596afa85-d471-8b57-7e544be6fe2fe390"/>
+					<LoggerMailer RefNotification="eda4a32c-0336-8ed1-5d3477c6de030cf4" On="&lt;v&gt;" Off="&lt;v&gt;" MinimumTime="5000" NL="1"/>
 				</C>
 			</C>
 			<C Type="Page" V="178" U="5fce534a-3893-57f1-461f19450a19ed5a" Title="VolkswagenID Fahrzeug" LtE="560802182" WF="16384">
@@ -48986,19 +48986,19 @@
 					<Display Unit="&lt;v.pr&gt;"/>
 					<StateTexts></StateTexts>
 				</C>
-				<C Type="OutputRefLM" V="178" U="e41fd401-0687-59d4-3f06cb8348215168" Title="Meldung Fahrzeug offen (VW)" Px="18048" Py="3264" Px2="20160" Py2="3456" Cl="0,0,0" Nio="2" Ref="8d0d6ab2-3937-1ee2-fa9e1d56d8c88bfd" WF="147456">
-					<Co K="AI" Nc="1" U="6d3979c7-3fce-3c03-a43ba4dc41e4e58f">
-						<In Input="faed7181-0bfc-6cd4-6bbc6900d183e86f"/>
-					</Co>
-					<Co K="AQ" U="c001ef23-8023-dcbe-056cb286cc4425ea"/>
-					<LoggerMailer RefNotification="8d0d6ab2-3937-1ee2-fa9e1d56d8c88bfd" On="&lt;v&gt;" Off="&lt;v&gt;" MinimumTime="5000" NL="1"/>
-				</C>
 				<C Type="OutputRefLM" V="178" U="f575ab81-5a2f-7c01-b6a16f7747ef254d" Title="Meldung Service fällig (VW)" Px="13632" Py="8832" Px2="15744" Py2="9024" Cl="0,0,0" Nio="2" Ref="9b8d31a1-8f2f-a6a4-1733a1e43bb58f05" WF="147456">
 					<Co K="AI" Nc="1" U="93cf0c44-90fe-9319-910600570204c3c1">
 						<In Input="ce371658-1c71-120f-43c2acb9d7d05d7f"/>
 					</Co>
 					<Co K="AQ" U="9573ab14-6d1e-1848-7c55052ec2e02935"/>
 					<LoggerMailer RefNotification="9b8d31a1-8f2f-a6a4-1733a1e43bb58f05" On="&lt;v&gt;" Off="&lt;v&gt;" MinimumTime="5000" NL="1"/>
+				</C>
+				<C Type="OutputRefLM" V="178" U="e41fd401-0687-59d4-3f06cb8348215168" Title="Meldung Fahrzeug offen (VW)" Px="18048" Py="3264" Px2="20160" Py2="3456" Cl="0,0,0" Nio="2" Ref="8d0d6ab2-3937-1ee2-fa9e1d56d8c88bfd" WF="147456">
+					<Co K="AI" Nc="1" U="6d3979c7-3fce-3c03-a43ba4dc41e4e58f">
+						<In Input="faed7181-0bfc-6cd4-6bbc6900d183e86f"/>
+					</Co>
+					<Co K="AQ" U="c001ef23-8023-dcbe-056cb286cc4425ea"/>
+					<LoggerMailer RefNotification="8d0d6ab2-3937-1ee2-fa9e1d56d8c88bfd" On="&lt;v&gt;" Off="&lt;v&gt;" MinimumTime="5000" NL="1"/>
 				</C>
 			</C>
 			<C Type="Page" V="178" U="0682a6d9-eb45-3e83-d2efc4f7556618ad" Title="VolkswagenID Klima und Befehle" LtE="560802182" WF="16384">
@@ -49245,12 +49245,6 @@
 					<Co K="AQ" U="87ce0ba0-f5c9-fff3-1afbd729ff3cdb26"/>
 					<Co K="TQ" U="dc5fe6ff-c68d-a1d4-b8a31bdef91bf0cd"/>
 				</C>
-				<C Type="OutputRef" V="178" U="4eb3d1f6-5b1c-2983-3849388619ae5f53" Title="VW 1 Fahrzeug wecken" Px="5952" Py="4128" Px2="8064" Py2="4320" Cl="0,0,0" Nio="2" Ref="d22595b9-48f8-8b09-86fa2d5a0bee45e3" WF="16384" LinkRefType="74">
-					<Co K="AI" Nc="1" U="dd80553b-52bf-73ec-af453d20f9e38dcc">
-						<In Input="ede29667-2576-cafb-419c023cf8b3a531"/>
-					</Co>
-					<Co K="AQ" U="cc23bfbb-eb4a-e78e-732c878acca6ca47"/>
-				</C>
 				<C Type="OutputRef" V="178" U="f6fd45e5-e82a-ffb7-13a3b5660b45171e" Title="VW 1 Sofort abrufen" Px="5952" Py="3744" Px2="8064" Py2="3936" Cl="0,0,0" Nio="2" Ref="544708dc-6e01-64bd-57b1dbecb0c7de0d" WF="16384" LinkRefType="74">
 					<Co K="AI" Nc="1" U="c62a6902-f77d-8395-f06967cfda4c0b62">
 						<In Input="1288d2a7-7c35-1a94-ba405c033986b270"/>
@@ -49292,6 +49286,12 @@
 						<In Input="6e13f523-beac-9f4a-b7ca6fb9070e3edb"/>
 					</Co>
 					<Co K="AQ" U="98da94ae-5cab-c99e-ade575b45bf5c8bd"/>
+				</C>
+				<C Type="OutputRef" V="178" U="4eb3d1f6-5b1c-2983-3849388619ae5f53" Title="VW 1 Fahrzeug wecken" Px="5952" Py="4128" Px2="8064" Py2="4320" Cl="0,0,0" Nio="2" Ref="d22595b9-48f8-8b09-86fa2d5a0bee45e3" WF="16384" LinkRefType="74">
+					<Co K="AI" Nc="1" U="dd80553b-52bf-73ec-af453d20f9e38dcc">
+						<In Input="ede29667-2576-cafb-419c023cf8b3a531"/>
+					</Co>
+					<Co K="AQ" U="cc23bfbb-eb4a-e78e-732c878acca6ca47"/>
 				</C>
 			</C>
 			<C Type="Page" V="178" U="3214071c-0faf-a297-8e145de18ad4b6b4" Title="VolkswagenID Laden" LtE="560802182" WF="16384">
@@ -49682,12 +49682,6 @@
 					</Co>
 					<Co K="Q" U="bdf12047-a527-c29f-02adcfd4b9fe0a17"/>
 				</C>
-				<C Type="OutputRef" V="178" U="620a3fdc-4fd5-14fc-e6a09b972645727c" Title="VW 1 Laden starten / Laden anhalten" Px="16896" Py="864" Px2="19008" Py2="1056" Cl="0,0,0" Nio="2" Ref="c8b7bf04-965f-edf6-6f2f53ac1e21e664" WF="147456" LinkRefType="74">
-					<Co K="AI" Nc="1" U="da7e5214-ded3-c800-9758526ad40dbfe5">
-						<In Input="bdf12047-a527-c29f-02adcfd4b9fe0a17"/>
-					</Co>
-					<Co K="AQ" U="a5906d72-cb57-5086-25d9fd8b400d85f9"/>
-				</C>
 				<C Type="OutputRef" V="178" U="c307285a-85d2-0820-e192c927e2aa10d6" Title="VW 1 Ladegrenze setzen" Px="5952" Py="8256" Px2="8064" Py2="8448" Cl="0,0,0" Nio="2" Ref="debc77af-5aff-d0fb-701cb5af72c5fdd5" WF="16384" Analog="true" LinkRefType="74">
 					<Co K="AI" Nc="1" U="7f3972a9-6b9e-b3c0-0b33ce7ccc9ad91e">
 						<In Input="eda4e4df-970c-e80c-f39cab53f82dab2e"/>
@@ -49699,6 +49693,12 @@
 						<In Input="835752ab-d8d1-3178-add44c83f00d7327"/>
 					</Co>
 					<Co K="AQ" U="d1cf29ef-7a18-c73c-a7b767d6393bc0e6"/>
+				</C>
+				<C Type="OutputRef" V="178" U="620a3fdc-4fd5-14fc-e6a09b972645727c" Title="VW 1 Laden starten / Laden anhalten" Px="16896" Py="864" Px2="19008" Py2="1056" Cl="0,0,0" Nio="2" Ref="c8b7bf04-965f-edf6-6f2f53ac1e21e664" WF="147456" LinkRefType="74">
+					<Co K="AI" Nc="1" U="da7e5214-ded3-c800-9758526ad40dbfe5">
+						<In Input="bdf12047-a527-c29f-02adcfd4b9fe0a17"/>
+					</Co>
+					<Co K="AQ" U="a5906d72-cb57-5086-25d9fd8b400d85f9"/>
 				</C>
 			</C>
 			<C Type="Page" V="178" U="216ced7c-019d-0448-ffffe001fe9bf86f" Title="WaermepumpeCloud" LtE="560786822" WF="16384">
@@ -50123,17 +50123,17 @@
 					<Display Unit="&lt;v.pr&gt;"/>
 					<StateTexts></StateTexts>
 				</C>
-				<C Type="OutputRef" V="178" U="21725045-00ce-81bc-ffffe001fe9bf86f" Title="WP_SGREADY_3" Px="21504" Py="12864" Px2="23616" Py2="13056" Cl="0,0,0" Nio="2" Ref="216cedd7-0283-323d-ffffe001fe9bf86f" WF="147456" LinkRefType="74">
-					<Co K="AI" Nc="1" U="21725045-00ce-81ba-00ffda9f224f1787">
-						<In Input="2172523e-00da-5e36-02ffe74ddc1a0bed"/>
-					</Co>
-					<Co K="AQ" U="21725045-00ce-81bb-01ffda9f224f1787"/>
-				</C>
 				<C Type="OutputRef" V="178" U="21725027-0113-e5e0-ffffe001fe9bf86f" Title="WP_WW_BOOST" Px="8256" Py="5088" Px2="10368" Py2="5280" Cl="0,0,0" Nio="2" Ref="21725013-02f4-7dfb-ffffe001fe9bf86f" WF="147456" LinkRefType="74">
 					<Co K="AI" Nc="1" U="21725027-0113-e5de-00ffe4671889196e">
 						<In Input="217251a8-0358-7a12-02ffbbdacc7a92d6"/>
 					</Co>
 					<Co K="AQ" U="21725027-0113-e5df-01ffe4671889196e"/>
+				</C>
+				<C Type="OutputRef" V="178" U="21725045-00ce-81bc-ffffe001fe9bf86f" Title="WP_SGREADY_3" Px="21504" Py="12864" Px2="23616" Py2="13056" Cl="0,0,0" Nio="2" Ref="216cedd7-0283-323d-ffffe001fe9bf86f" WF="147456" LinkRefType="74">
+					<Co K="AI" Nc="1" U="21725045-00ce-81ba-00ffda9f224f1787">
+						<In Input="2172523e-00da-5e36-02ffe74ddc1a0bed"/>
+					</Co>
+					<Co K="AQ" U="21725045-00ce-81bb-01ffda9f224f1787"/>
 				</C>
 			</C>
 			<C Type="Page" V="178" U="2172a0ad-0219-6a5e-ffffe001fe9bf86f" Title="WaermepumpeCloud Ausfall" WF="16384">
@@ -50986,13 +50986,6 @@
 					<Display Unit="&lt;v.pr&gt;"/>
 					<StateTexts></StateTexts>
 				</C>
-				<C Type="OutputRefLM" V="178" U="9e210a9f-b318-9303-7cd9cde5ce6ffa66" Title="Erinnerung Weissware ausräumen" Px="8256" Py="7200" Px2="10368" Py2="7392" Cl="0,0,0" Nio="2" Ref="c77919d5-49f7-12ef-17f021806592ee1d" WF="147456">
-					<Co K="AI" Nc="1" U="fb524403-cb1b-caaf-f5b8ce2499506752">
-						<In Input="faec98cd-f10a-5100-00d4acb451d63e9e"/>
-					</Co>
-					<Co K="AQ" U="bb8f693b-3a74-6f2d-07ecc217480d49ac"/>
-					<LoggerMailer RefNotification="c77919d5-49f7-12ef-17f021806592ee1d" On="&lt;v&gt;" Off="&lt;v&gt;" MinimumTime="5000" NL="1"/>
-				</C>
 				<C Type="OutputRefLM" V="178" U="cce20005-0f94-9297-ef7be09ea869920d" Title="Meldung Weissware Störung" Px="12672" Py="1248" Px2="14784" Py2="1440" Cl="0,0,0" Nio="2" Ref="8e5c77ba-e915-fd78-3a90ee214df6dd0c" WF="147456">
 					<Co K="AI" Nc="1" U="c7f4b27f-4513-1186-24166bab11098c36">
 						<In Input="a94622e6-47e3-414a-a9adcce6feee769d"/>
@@ -51013,6 +51006,13 @@
 					</Co>
 					<Co K="AQ" U="ef379680-36e1-62a3-95fb94b0d99ab443"/>
 					<LoggerMailer RefNotification="385acd99-171e-cd46-9c9a1f4528de6018" On="&lt;v&gt;" Off="&lt;v&gt;" MinimumTime="5000" NL="1"/>
+				</C>
+				<C Type="OutputRefLM" V="178" U="9e210a9f-b318-9303-7cd9cde5ce6ffa66" Title="Erinnerung Weissware ausräumen" Px="8256" Py="7200" Px2="10368" Py2="7392" Cl="0,0,0" Nio="2" Ref="c77919d5-49f7-12ef-17f021806592ee1d" WF="147456">
+					<Co K="AI" Nc="1" U="fb524403-cb1b-caaf-f5b8ce2499506752">
+						<In Input="faec98cd-f10a-5100-00d4acb451d63e9e"/>
+					</Co>
+					<Co K="AQ" U="bb8f693b-3a74-6f2d-07ecc217480d49ac"/>
+					<LoggerMailer RefNotification="c77919d5-49f7-12ef-17f021806592ee1d" On="&lt;v&gt;" Off="&lt;v&gt;" MinimumTime="5000" NL="1"/>
 				</C>
 			</C>
 			<C Type="Page" V="178" U="784f0454-b567-3bf6-8f2dc78162616433" Title="Weissware PV-Start" LtE="561140528" WF="16384">
@@ -51341,18 +51341,18 @@
 					<Display Unit="&lt;v.pr&gt;"/>
 					<StateTexts></StateTexts>
 				</C>
+				<C Type="OutputRef" V="178" U="9205feea-3865-c6bb-9bd9c9de2694d4a2" Title="WW 1 Start (Befehl)" Px="12000" Py="10848" Px2="14112" Py2="11040" Cl="0,0,0" Nio="2" Ref="b388fa71-a9f3-8785-99fbee0986cc523d" WF="147456" LinkRefType="74">
+					<Co K="AI" Nc="1" U="519f1ace-5325-7181-11f9e7a18e1772f3">
+						<In Input="e654f4b8-4731-6f46-82ebbd4d0e911aa8"/>
+					</Co>
+					<Co K="AQ" U="aaab1ff1-dadf-aa6a-80941f6a81c48bd8"/>
+				</C>
 				<C Type="OutputRefLM" V="178" U="d528265c-d6d6-f6d7-8424db1e3ed59a8f" Title="Meldung Weissware gestartet" Px="6720" Py="13344" Px2="8832" Py2="13536" Cl="0,0,0" Nio="2" Ref="b3a58e89-dc80-513a-8f492ca0c624c225" WF="147456">
 					<Co K="AI" Nc="1" U="2a0d1caa-56cd-7711-f9f0a12b0c750097">
 						<In Input="7694934a-7447-5a74-24741ac802bd6af0"/>
 					</Co>
 					<Co K="AQ" U="a64e6024-8999-aede-ab3d8a7054446450"/>
 					<LoggerMailer RefNotification="b3a58e89-dc80-513a-8f492ca0c624c225" On="&lt;v&gt;" Off="&lt;v&gt;" MinimumTime="5000" NL="1"/>
-				</C>
-				<C Type="OutputRef" V="178" U="9205feea-3865-c6bb-9bd9c9de2694d4a2" Title="WW 1 Start (Befehl)" Px="12000" Py="10848" Px2="14112" Py2="11040" Cl="0,0,0" Nio="2" Ref="b388fa71-a9f3-8785-99fbee0986cc523d" WF="147456" LinkRefType="74">
-					<Co K="AI" Nc="1" U="519f1ace-5325-7181-11f9e7a18e1772f3">
-						<In Input="e654f4b8-4731-6f46-82ebbd4d0e911aa8"/>
-					</Co>
-					<Co K="AQ" U="aaab1ff1-dadf-aa6a-80941f6a81c48bd8"/>
 				</C>
 			</C>
 			<C Type="Page" V="178" U="5e8462b5-af73-fbbc-8a062475d6a064c5" Title="Weissware Steuerung und Verbrauch" LtE="561140528" WF="16384">
@@ -51798,12 +51798,6 @@
 					<Display Unit="&lt;v.pr&gt;"/>
 					<StateTexts></StateTexts>
 				</C>
-				<C Type="OutputRef" V="178" U="b064f443-7639-c9e6-a49a9ecf22ba78c4" Title="WIFI_SUCHE_AUS" Px="6720" Py="7392" Px2="8832" Py2="7584" Cl="0,0,0" Nio="2" Ref="c8025fcd-5ae6-8819-aea5853a3ea82eb2" WF="16384" LinkRefType="74">
-					<Co K="AI" Nc="1" U="ded772dc-c398-6b1a-943fa2c1f1cdb153">
-						<In Input="cb6c4ece-b576-f031-f95c7a0bc56092bd"/>
-					</Co>
-					<Co K="AQ" U="0c3f6ec4-064b-d8c5-28c7b8119f06490f"/>
-				</C>
 				<C Type="OutputRef" V="178" U="10f91be6-91f1-1e53-5d2aded20112c53d" Title="WIFI_TAKT_SCHNELL" Px="19392" Py="1056" Px2="21504" Py2="1248" Cl="0,0,0" Nio="2" Ref="eeb0f8c7-15fc-a8d4-47df1d5142908be2" WF="147456" LinkRefType="74">
 					<Co K="AI" Nc="1" U="59bc1e58-2f9e-de60-cf7e3f3ccf39ba1e">
 						<In Input="216cdf5a-0210-571f-02ff97cb6c433bc7"/>
@@ -51828,6 +51822,12 @@
 						<In Input="be55c4ba-7250-3465-ab1daab4f2c796b6"/>
 					</Co>
 					<Co K="AQ" U="f261a48b-8ee0-622f-197b6b14c0980d5b"/>
+				</C>
+				<C Type="OutputRef" V="178" U="b064f443-7639-c9e6-a49a9ecf22ba78c4" Title="WIFI_SUCHE_AUS" Px="6720" Py="7392" Px2="8832" Py2="7584" Cl="0,0,0" Nio="2" Ref="c8025fcd-5ae6-8819-aea5853a3ea82eb2" WF="16384" LinkRefType="74">
+					<Co K="AI" Nc="1" U="ded772dc-c398-6b1a-943fa2c1f1cdb153">
+						<In Input="cb6c4ece-b576-f031-f95c7a0bc56092bd"/>
+					</Co>
+					<Co K="AQ" U="0c3f6ec4-064b-d8c5-28c7b8119f06490f"/>
 				</C>
 			</C>
 			<C Type="Page" V="178" U="216f3073-0143-ee4f-ffffe001fe9bf86f" Title="Zendure SolarFlow" LtE="560935037" WF="16384">
@@ -52526,12 +52526,6 @@
 					<Display Unit="&lt;v.pr&gt;"/>
 					<StateTexts></StateTexts>
 				</C>
-				<C Type="OutputRef" V="178" U="216f4f29-023f-c099-ffffe001fe9bf86f" Title="ZENDURE_1_CMD_AUS" Px="21696" Py="1920" Px2="23808" Py2="2112" Cl="0,0,0" Nio="2" Ref="216f2f21-03c0-be59-ffffe001fe9bf86f" WF="147456" LinkRefType="74">
-					<Co K="AI" Nc="1" U="216f4f29-023f-c097-00ff00ae873f7efd">
-						<In Input="216f4b9e-030d-7ccc-02ff0685c5c2c342"/>
-					</Co>
-					<Co K="AQ" U="216f4f29-023f-c098-01ff00ae873f7efd"/>
-				</C>
 				<C Type="OutputRef" V="178" U="216f4e8a-0387-33e6-ffffe001fe9bf86f" Title="ZENDURE_1_CMD_ENTLADEN" Px="10176" Py="10560" Px2="12288" Py2="10752" Cl="0,0,0" Nio="2" Ref="216f2f21-03b6-be47-ffffe001fe9bf86f" WF="147456" Analog="true" LinkRefType="74">
 					<Co K="AI" Nc="1" U="216f4e8a-0387-33e4-00ff9429ce26f6e9">
 						<In Input="216f4b72-0128-a126-04ff800d28068c8e"/>
@@ -52573,6 +52567,12 @@
 						<In Input="216f4d2b-03a3-d892-02ff7aa5bb6596a6"/>
 					</Co>
 					<Co K="AQ" U="216f4e5f-03a8-52e7-01fff2197bc4d160"/>
+				</C>
+				<C Type="OutputRef" V="178" U="216f4f29-023f-c099-ffffe001fe9bf86f" Title="ZENDURE_1_CMD_AUS" Px="21696" Py="1920" Px2="23808" Py2="2112" Cl="0,0,0" Nio="2" Ref="216f2f21-03c0-be59-ffffe001fe9bf86f" WF="147456" LinkRefType="74">
+					<Co K="AI" Nc="1" U="216f4f29-023f-c097-00ff00ae873f7efd">
+						<In Input="216f4b9e-030d-7ccc-02ff0685c5c2c342"/>
+					</Co>
+					<Co K="AQ" U="216f4f29-023f-c098-01ff00ae873f7efd"/>
 				</C>
 			</C>
 			<C Type="Page" V="178" U="216c8eab-0188-be05-ffffe001fe9bf86f" Title="Zigbee2MqttNG" LtE="560762556" WF="16384">
@@ -52877,12 +52877,6 @@
 					<Co K="Time" Def="120" U="0f74ed70-9961-a2ac-e6ab8c13f2377147"/>
 					<Co K="Q" U="da690be7-99be-d0fd-da1a2347bfe18d37"/>
 				</C>
-				<C Type="OutputRef" V="178" U="cfdd26e1-ec33-3d15-14d5994f3b78fcfe" Title="ZIGBEE_WOHNZIMMER_STECKDOSE_STATE_TOGGLE" Px="9600" Py="2304" Px2="11712" Py2="2496" Cl="0,0,0" Nio="2" Ref="6382ad48-5146-0064-e25a03c6d40a6fec" WF="147456" LinkRefType="74">
-					<Co K="AI" Nc="1" U="43fc3cab-8b3c-dcf6-3d841a3f30a6e439">
-						<In Input="2260304e-7357-6175-14918a7cd0b3d7d8"/>
-					</Co>
-					<Co K="AQ" U="c6ee1bb9-ea95-c317-bd54f8eae8ae7141"/>
-				</C>
 				<C Type="OutputRef" V="178" U="e0233ded-2ece-a75b-a982e198c42a79d8" Title="ZIGBEE_WOHNZIMMER_STECKDOSE_STATE" Px="9792" Py="864" Px2="11904" Py2="1056" Cl="0,0,0" Nio="2" Ref="e101ba5d-3f18-6624-6e016f8f551ce851" WF="147456" LinkRefType="74">
 					<Co K="AI" Nc="1" U="b2a1a8d0-7aaf-53f1-2803fd0aa65892aa">
 						<In Input="42b7bdef-7963-5817-67a30525f5848de2"/>
@@ -52901,6 +52895,12 @@
 						<In Input="36cfb6ae-c99b-d462-878e3dfa00ff3a8a"/>
 					</Co>
 					<Co K="AQ" U="8cc177c9-a35a-e4cf-6eaf34513431c3a6"/>
+				</C>
+				<C Type="OutputRef" V="178" U="cfdd26e1-ec33-3d15-14d5994f3b78fcfe" Title="ZIGBEE_WOHNZIMMER_STECKDOSE_STATE_TOGGLE" Px="9600" Py="2304" Px2="11712" Py2="2496" Cl="0,0,0" Nio="2" Ref="6382ad48-5146-0064-e25a03c6d40a6fec" WF="147456" LinkRefType="74">
+					<Co K="AI" Nc="1" U="43fc3cab-8b3c-dcf6-3d841a3f30a6e439">
+						<In Input="2260304e-7357-6175-14918a7cd0b3d7d8"/>
+					</Co>
+					<Co K="AQ" U="c6ee1bb9-ea95-c317-bd54f8eae8ae7141"/>
 				</C>
 			</C>
 		</C>
