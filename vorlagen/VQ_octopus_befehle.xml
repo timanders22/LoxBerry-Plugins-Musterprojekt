@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<VirtualOut HintText="" Title="Octopus Dynamic Befehle" Comment="Octopus Dynamic: Befehle, enthält das Aktionstoken" Address="http://loxberry" CmdInit="" CloseAfterSend="true" CmdSep="">
+	<Info templateType="3" minVersion="17010727"/>
+	<VirtualOutCmd Title="OCTOPUS_ANSAGE" Comment="Octopus: Preisansage jetzt" CmdOnMethod="GET" CmdOffMethod="GET" CmdOn="/plugins/octopus/index.php?token=DEIN_TOKEN&amp;aktion=say" CmdOnHTTP="" CmdOnPost="" CmdOff="" CmdOffHTTP="" CmdOffPost="" CmdAnswer="" Analog="false" Repeat="0" RepeatRate="0" HintText=""/>
+	<VirtualOutCmd Title="OCTOPUS_ANSAGE_MORGEN" Comment="Octopus: Ansage Preise morgen" CmdOnMethod="GET" CmdOffMethod="GET" CmdOn="/plugins/octopus/index.php?token=DEIN_TOKEN&amp;aktion=saytomorrow" CmdOnHTTP="" CmdOnPost="" CmdOff="" CmdOffHTTP="" CmdOffPost="" CmdAnswer="" Analog="false" Repeat="0" RepeatRate="0" HintText=""/>
+	<VirtualOutCmd Title="OCTOPUS_TESTPUSH" Comment="Octopus: Test-Pushnachricht" CmdOnMethod="GET" CmdOffMethod="GET" CmdOn="/plugins/octopus/index.php?token=DEIN_TOKEN&amp;aktion=ptest" CmdOnHTTP="" CmdOnPost="" CmdOff="" CmdOffHTTP="" CmdOffPost="" CmdAnswer="" Analog="false" Repeat="0" RepeatRate="0" HintText=""/>
+</VirtualOut>

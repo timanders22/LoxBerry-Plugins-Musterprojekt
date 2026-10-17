@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<VirtualInHttp HintText="" Title="Weissware 1 Verbrauch" Comment="vom LoxBerry-Plugin" Address="http://loxberry/plugins/weissware/index.php?token=DEIN_TOKEN&amp;aktion=verbrauch&amp;geraet=1" PollingTime="300">
+	<Info templateType="2" minVersion="17010727"/>
+	<VirtualInHttpCmd Title="WW 1 Energie" Comment="Energieverbrauch des laufenden Programms [kWh]" Check="\iENERGIE=\i\v" Signed="false" Analog="true" SourceValLow="0" DestValLow="0" SourceValHigh="1" DestValHigh="1" DefVal="0" MinVal="0" MaxVal="1000" Unit="&lt;v.1&gt; kWh" HintText=""/>
+	<VirtualInHttpCmd Title="WW 1 Wasser" Comment="Wasserverbrauch des laufenden Programms [l]" Check="\iWASSER=\i\v" Signed="false" Analog="true" SourceValLow="0" DestValLow="0" SourceValHigh="1" DestValHigh="1" DefVal="0" MinVal="0" MaxVal="10000" Unit="&lt;v.1&gt; l" HintText=""/>
+	<VirtualInHttpCmd Title="WW 1 Temperatur" Comment="Eingestellte Temperatur [°C]" Check="\iTEMP=\i\v" Signed="false" Analog="true" SourceValLow="0" DestValLow="0" SourceValHigh="1" DestValHigh="1" DefVal="0" MinVal="0" MaxVal="300" Unit="&lt;v.1&gt; °C" HintText=""/>
+	<VirtualInHttpCmd Title="WW 1 Schleuderdrehzahl" Comment="Eingestellte Schleuderdrehzahl [U/min]" Check="\iSCHLEUDER=\i\v" Signed="false" Analog="true" SourceValLow="0" DestValLow="0" SourceValHigh="1" DestValHigh="1" DefVal="0" MinVal="0" MaxVal="2000" Unit="&lt;v.1&gt; U/min" HintText=""/>
+	<VirtualInHttpCmd Title="WW 1 OK (Verbrauch)" Comment="1 = der letzte Abruf war erfolgreich und liegt höchstens dreimal den Ruhetakt zurück; bei mehreren Anbietern zusätzlich: der Anbieter dieses Geräts hat geantwortet" Check="\iOK=\i\v" Signed="false" Analog="false" SourceValLow="0" DestValLow="0" SourceValHigh="1" DestValHigh="1" DefVal="0" MinVal="0" MaxVal="1" Unit="&lt;v.1&gt;" HintText=""/>
+</VirtualInHttp>

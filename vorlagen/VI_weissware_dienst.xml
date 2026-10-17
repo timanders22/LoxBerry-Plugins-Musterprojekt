@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<VirtualInHttp HintText="" Title="Weissware Dienst" Comment="vom LoxBerry-Plugin" Address="http://loxberry/plugins/weissware/index.php?token=DEIN_TOKEN&amp;aktion=dienst" PollingTime="60">
+	<Info templateType="2" minVersion="17010727"/>
+	<VirtualInHttpCmd Title="WW Geräte" Comment="Anzahl der erkannten Geräte" Check="\iGERAETE=\i\v" Signed="false" Analog="true" SourceValLow="0" DestValLow="0" SourceValHigh="1" DestValHigh="1" DefVal="0" MinVal="0" MaxVal="99" Unit="&lt;v.1&gt;" HintText=""/>
+	<VirtualInHttpCmd Title="WW Geräte laufen" Comment="Anzahl der Geräte, in denen ein Programm läuft" Check="\iLAEUFT=\i\v" Signed="false" Analog="true" SourceValLow="0" DestValLow="0" SourceValHigh="1" DestValHigh="1" DefVal="0" MinVal="0" MaxVal="99" Unit="&lt;v.1&gt;" HintText=""/>
+	<VirtualInHttpCmd Title="WW Geräte fertig" Comment="Anzahl der Geräte, die fertig und noch nicht ausgeräumt sind" Check="\iFERTIG=\i\v" Signed="false" Analog="true" SourceValLow="0" DestValLow="0" SourceValHigh="1" DestValHigh="1" DefVal="0" MinVal="0" MaxVal="99" Unit="&lt;v.1&gt;" HintText=""/>
+	<VirtualInHttpCmd Title="WW Fehlversuche" Comment="Fehlgeschlagene Abrufe in Folge. 0 heißt: der letzte saß." Check="\iFEHLERFOLGE=\i\v" Signed="false" Analog="true" SourceValLow="0" DestValLow="0" SourceValHigh="1" DestValHigh="1" DefVal="0" MinVal="0" MaxVal="9999" Unit="&lt;v.1&gt;" HintText=""/>
+	<VirtualInHttpCmd Title="WW Anbieter still" Comment="Zahl der Hersteller-Clouds, die beim letzten Abruf nicht geantwortet haben" Check="\iAUSFAELLE=\i\v" Signed="false" Analog="true" SourceValLow="0" DestValLow="0" SourceValHigh="1" DestValHigh="1" DefVal="0" MinVal="0" MaxVal="3" Unit="&lt;v.1&gt;" HintText=""/>
+	<VirtualInHttpCmd Title="WW Dienst OK" Comment="1 = der letzte Abruf war erfolgreich" Check="\iOK=\i\v" Signed="false" Analog="false" SourceValLow="0" DestValLow="0" SourceValHigh="1" DestValHigh="1" DefVal="0" MinVal="0" MaxVal="1" Unit="&lt;v.1&gt;" HintText=""/>
+	<VirtualInHttpCmd Title="WW Dienst Alter" Comment="Alter des Abbilds [s]" Check="\iALTER=\i\v" Signed="true" Analog="true" SourceValLow="0" DestValLow="0" SourceValHigh="1" DestValHigh="1" DefVal="0" MinVal="-1" MaxVal="2147483647" Unit="&lt;v.1&gt; s" HintText=""/>
+</VirtualInHttp>
