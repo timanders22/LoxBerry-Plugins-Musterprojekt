@@ -44,6 +44,8 @@ Eine gemeinsame Loxone-Config-Projektdatei mit je einer Seite pro LoxBerry-Plugi
 | Fensterbilanz Messwerte | [LoxBerry-Plugin-Beschattung_Fensterbilanz](https://github.com/timanders22/LoxBerry-Plugin-Beschattung_Fensterbilanz) |
 | Fensterbilanz Werte | [LoxBerry-Plugin-Beschattung_Fensterbilanz](https://github.com/timanders22/LoxBerry-Plugin-Beschattung_Fensterbilanz) |
 | Funkwacht | [LoxBerry-Plugin-Funkwacht](https://github.com/timanders22/LoxBerry-Plugin-Funkwacht) |
+| Funkwacht Sticks | [LoxBerry-Plugin-Funkwacht](https://github.com/timanders22/LoxBerry-Plugin-Funkwacht) |
+| Funkwacht Steuerung | [LoxBerry-Plugin-Funkwacht](https://github.com/timanders22/LoxBerry-Plugin-Funkwacht) |
 | Heimkino | [LoxBerry-Plugin-Heimkino](https://github.com/timanders22/LoxBerry-Plugin-Heimkino) |
 | Heimkino Steuerung | [LoxBerry-Plugin-Heimkino](https://github.com/timanders22/LoxBerry-Plugin-Heimkino) |
 | Heimkino Geräte | [LoxBerry-Plugin-Heimkino](https://github.com/timanders22/LoxBerry-Plugin-Heimkino) |
@@ -52,7 +54,10 @@ Eine gemeinsame Loxone-Config-Projektdatei mit je einer Seite pro LoxBerry-Plugi
 | Kodi-NG Fernbedienung | [LoxBerry-Plugin-KODI-NG](https://github.com/timanders22/LoxBerry-Plugin-KODI-NG) |
 | Kodi-NG Wiedergabe | [LoxBerry-Plugin-KODI-NG](https://github.com/timanders22/LoxBerry-Plugin-KODI-NG) |
 | Pumpenwacht | [LoxBerry-Plugin-Pumpenwacht](https://github.com/timanders22/LoxBerry-Plugin-Pumpenwacht) |
+| Pumpenwacht Betrieb | [LoxBerry-Plugin-Pumpenwacht](https://github.com/timanders22/LoxBerry-Plugin-Pumpenwacht) |
 | Raumklima | [LoxBerry-Plugin-Raumklima](https://github.com/timanders22/LoxBerry-Plugin-Raumklima) |
+| Raumklima Werte | [LoxBerry-Plugin-Raumklima](https://github.com/timanders22/LoxBerry-Plugin-Raumklima) |
+| Raumklima Lüften und Kühlen | [LoxBerry-Plugin-Raumklima](https://github.com/timanders22/LoxBerry-Plugin-Raumklima) |
 | Robonect | [LoxBerry-Plugin-Robonect](https://github.com/timanders22/LoxBerry-Plugin-Robonect) |
 | Robonect Steuerung | [LoxBerry-Plugin-Robonect](https://github.com/timanders22/LoxBerry-Plugin-Robonect) |
 | Saugroboter | [LoxBerry-Plugin-Saugroboter-Valetudo](https://github.com/timanders22/LoxBerry-Plugin-Saugroboter-Valetudo) |
@@ -69,6 +74,7 @@ Eine gemeinsame Loxone-Config-Projektdatei mit je einer Seite pro LoxBerry-Plugi
 | Zendure SolarFlow | [LoxBerry-Plugin-ZendureSolarFlow](https://github.com/timanders22/LoxBerry-Plugin-ZendureSolarFlow) |
 | Zendure SolarFlow Steuerung | [LoxBerry-Plugin-ZendureSolarFlow](https://github.com/timanders22/LoxBerry-Plugin-ZendureSolarFlow) |
 | Zigbee2MqttNG | [LoxBerry-Plugin-Zigbee2MqttNG](https://github.com/timanders22/LoxBerry-Plugin-Zigbee2MqttNG) |
+| Zigbee2MqttNG Geräte | [LoxBerry-Plugin-Zigbee2MqttNG](https://github.com/timanders22/LoxBerry-Plugin-Zigbee2MqttNG) |
 
 Weitere Plugins folgen.
 
