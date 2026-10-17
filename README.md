@@ -56,6 +56,7 @@ Eine gemeinsame Loxone-Config-Projektdatei mit je einer Seite pro LoxBerry-Plugi
 | Pumpenwacht | [LoxBerry-Plugin-Pumpenwacht](https://github.com/timanders22/LoxBerry-Plugin-Pumpenwacht) |
 | Pumpenwacht Betrieb | [LoxBerry-Plugin-Pumpenwacht](https://github.com/timanders22/LoxBerry-Plugin-Pumpenwacht) |
 | Raumklima | [LoxBerry-Plugin-Raumklima](https://github.com/timanders22/LoxBerry-Plugin-Raumklima) |
+| Raumklima 2 | [LoxBerry-Plugin-Raumklima](https://github.com/timanders22/LoxBerry-Plugin-Raumklima) |
 | Raumklima Werte | [LoxBerry-Plugin-Raumklima](https://github.com/timanders22/LoxBerry-Plugin-Raumklima) |
 | Raumklima Lüften und Kühlen | [LoxBerry-Plugin-Raumklima](https://github.com/timanders22/LoxBerry-Plugin-Raumklima) |
 | Robonect | [LoxBerry-Plugin-Robonect](https://github.com/timanders22/LoxBerry-Plugin-Robonect) |
