@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<VirtualOut HintText="" Title="WiFi-Scanner-NG Steuerung" Comment="WiFi-Scanner-NG vom 17.10.2026, enthält das Merkwort" Address="http://loxberry" CmdInit="" CloseAfterSend="true" CmdSep="">
+	<Info templateType="3" minVersion="17010727"/>
+	<VirtualOutCmd Title="WIFI_SUCHE_JETZT" Comment="Sofort-Suche starten" CmdOnMethod="GET" CmdOffMethod="GET" CmdOn="/plugins/wifi_ng/index.php?token=DEIN_TOKEN&amp;aktion=scan" CmdOnHTTP="" CmdOnPost="" CmdOff="" CmdOffHTTP="" CmdOffPost="" CmdAnswer="" Analog="false" Repeat="0" RepeatRate="0" HintText=""/>
+	<VirtualOutCmd Title="WIFI_SUCHE_EIN" Comment="Regelmäßige Suche einschalten" CmdOnMethod="GET" CmdOffMethod="GET" CmdOn="/plugins/wifi_ng/index.php?token=DEIN_TOKEN&amp;aktion=enable&amp;wert=1" CmdOnHTTP="" CmdOnPost="" CmdOff="" CmdOffHTTP="" CmdOffPost="" CmdAnswer="" Analog="false" Repeat="0" RepeatRate="0" HintText=""/>
+	<VirtualOutCmd Title="WIFI_SUCHE_AUS" Comment="Regelmäßige Suche ausschalten" CmdOnMethod="GET" CmdOffMethod="GET" CmdOn="/plugins/wifi_ng/index.php?token=DEIN_TOKEN&amp;aktion=enable&amp;wert=0" CmdOnHTTP="" CmdOnPost="" CmdOff="" CmdOffHTTP="" CmdOffPost="" CmdAnswer="" Analog="false" Repeat="0" RepeatRate="0" HintText=""/>
+	<VirtualOutCmd Title="WIFI_TAKT_SCHNELL" Comment="Ein: jede Minute suchen, Aus: 3 Minuten" CmdOnMethod="GET" CmdOffMethod="GET" CmdOn="/plugins/wifi_ng/index.php?token=DEIN_TOKEN&amp;aktion=interval&amp;wert=1" CmdOnHTTP="" CmdOnPost="" CmdOff="/plugins/wifi_ng/index.php?token=DEIN_TOKEN&amp;aktion=interval&amp;wert=3" CmdOffHTTP="" CmdOffPost="" CmdAnswer="" Analog="false" Repeat="0" RepeatRate="0" HintText=""/>
+</VirtualOut>
