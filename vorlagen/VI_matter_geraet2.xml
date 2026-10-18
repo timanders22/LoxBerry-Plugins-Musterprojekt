@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<VirtualInHttp HintText="" Title="Matter 2 Steckdose Terrasse" Comment="Erzeugt vom LoxBerry-Plugin Matter to Loxone" Address="http://loxberry/plugins/matter2lox/index.php?token=DEIN_TOKEN&amp;aktion=status&amp;geraet=2" PollingTime="60">
+	<Info templateType="2" minVersion="17010727"/>
+	<VirtualInHttpCmd Title="MATTER_2_OK" Comment="1 = verbunden, Herzschlag max. 3x Takt" Check="\i;OK=\i\v" Analog="false" Signed="false" SourceValLow="0" DestValLow="0" SourceValHigh="1" DestValHigh="1" DefVal="0" MinVal="0" MaxVal="1" Unit="&lt;v.0&gt;" HintText=""/>
+	<VirtualInHttpCmd Title="MATTER_2_ERREICH" Comment="1 = dieses Gerät antwortet" Check="\i;ERREICH=\i\v" Analog="false" Signed="false" SourceValLow="0" DestValLow="0" SourceValHigh="1" DestValHigh="1" DefVal="0" MinVal="0" MaxVal="1" Unit="&lt;v.0&gt;" HintText=""/>
+	<VirtualInHttpCmd Title="MATTER_2_ALTER" Comment="Alter der Werte in Sekunden" Check="\i;ALTER=\i\v" Analog="true" Signed="true" SourceValLow="0" DestValLow="0" SourceValHigh="1" DestValHigh="1" DefVal="0" MinVal="-2147483647" MaxVal="2147483647" Unit="&lt;v.0&gt; s" HintText=""/>
+	<VirtualInHttpCmd Title="MATTER_2_1_SCHALTER" Comment="Ein- oder ausgeschaltet" Check="\i;1_SCHALTER=\i\v" Analog="false" Signed="false" SourceValLow="0" DestValLow="0" SourceValHigh="1" DestValHigh="1" DefVal="0" MinVal="0" MaxVal="1" Unit="&lt;v.0&gt;" HintText=""/>
+	<VirtualInHttpCmd Title="MATTER_2_1_LEISTUNG" Comment="Wirkleistung in Watt" Check="\i;1_LEISTUNG=\i\v" Analog="true" Signed="true" SourceValLow="0" DestValLow="0" SourceValHigh="1" DestValHigh="1" DefVal="0" MinVal="-25000" MaxVal="25000" Unit="&lt;v.1&gt; W" HintText=""/>
+	<VirtualInHttpCmd Title="MATTER_2_1_ENERGIE_BEZUG" Comment="Bezogene Energie, Zählerstand" Check="\i;1_ENERGIE_BEZUG=\i\v" Analog="true" Signed="false" SourceValLow="0" DestValLow="0" SourceValHigh="1" DestValHigh="1" DefVal="0" MinVal="0" MaxVal="100000000" Unit="&lt;v.1&gt; kWh" HintText=""/>
+</VirtualInHttp>

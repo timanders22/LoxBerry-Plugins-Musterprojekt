@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<VirtualInHttp HintText="" Title="Matter 3 Klimasensor Bad" Comment="Erzeugt vom LoxBerry-Plugin Matter to Loxone" Address="http://loxberry/plugins/matter2lox/index.php?token=DEIN_TOKEN&amp;aktion=status&amp;geraet=3" PollingTime="60">
+	<Info templateType="2" minVersion="17010727"/>
+	<VirtualInHttpCmd Title="MATTER_3_OK" Comment="1 = verbunden, Herzschlag max. 3x Takt" Check="\i;OK=\i\v" Analog="false" Signed="false" SourceValLow="0" DestValLow="0" SourceValHigh="1" DestValHigh="1" DefVal="0" MinVal="0" MaxVal="1" Unit="&lt;v.0&gt;" HintText=""/>
+	<VirtualInHttpCmd Title="MATTER_3_ERREICH" Comment="1 = dieses Gerät antwortet" Check="\i;ERREICH=\i\v" Analog="false" Signed="false" SourceValLow="0" DestValLow="0" SourceValHigh="1" DestValHigh="1" DefVal="0" MinVal="0" MaxVal="1" Unit="&lt;v.0&gt;" HintText=""/>
+	<VirtualInHttpCmd Title="MATTER_3_ALTER" Comment="Alter der Werte in Sekunden" Check="\i;ALTER=\i\v" Analog="true" Signed="true" SourceValLow="0" DestValLow="0" SourceValHigh="1" DestValHigh="1" DefVal="0" MinVal="-2147483647" MaxVal="2147483647" Unit="&lt;v.0&gt; s" HintText=""/>
+	<VirtualInHttpCmd Title="MATTER_3_1_TEMPERATUR" Comment="Temperatur in Grad Celsius" Check="\i;1_TEMPERATUR=\i\v" Analog="true" Signed="true" SourceValLow="0" DestValLow="0" SourceValHigh="1" DestValHigh="1" DefVal="0" MinVal="-273" MaxVal="328" Unit="&lt;v.1&gt; °C" HintText=""/>
+	<VirtualInHttpCmd Title="MATTER_3_1_BATTERIE" Comment="Batterie in Prozent" Check="\i;1_BATTERIE=\i\v" Analog="true" Signed="false" SourceValLow="0" DestValLow="0" SourceValHigh="1" DestValHigh="1" DefVal="0" MinVal="0" MaxVal="100" Unit="&lt;v.1&gt; %" HintText=""/>
+	<VirtualInHttpCmd Title="MATTER_3_2_FEUCHTE" Comment="Relative Luftfeuchte in Prozent" Check="\i;2_FEUCHTE=\i\v" Analog="true" Signed="false" SourceValLow="0" DestValLow="0" SourceValHigh="1" DestValHigh="1" DefVal="0" MinVal="0" MaxVal="100" Unit="&lt;v.1&gt; %" HintText=""/>
+</VirtualInHttp>

@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<VirtualOut HintText="" Title="Matter 2 Steckdose Terrasse Befehle" Comment="Schreibende Befehle müssen im Reiter Einstellungen freigegeben sein. Erzeugt vom LoxBerry-Plugin Matter to Loxone" Address="http://loxberry/plugins/matter2lox" CmdInit="" CloseAfterSend="true" CmdSep="">
+	<Info templateType="3" minVersion="17010727"/>
+	<VirtualOutCmd Title="MATTER_2_EIN_AUS" Comment="Ein- und Ausschalten" CmdOnMethod="GET" CmdOffMethod="GET" CmdOn="/index.php?token=DEIN_TOKEN&amp;geraet=2&amp;aktion=ein&amp;endpunkt=1" CmdOnHTTP="" CmdOnPost="" CmdOff="/index.php?token=DEIN_TOKEN&amp;geraet=2&amp;aktion=aus&amp;endpunkt=1" CmdOffHTTP="" CmdOffPost="" CmdAnswer="" Analog="false" Repeat="0" RepeatRate="0" HintText=""/>
+</VirtualOut>
