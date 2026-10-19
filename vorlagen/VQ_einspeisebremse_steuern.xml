@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<VirtualOut HintText="" Title="Einspeisebremse steuern" Comment="LoxBerry-Plugin Einspeisebremse" Address="http://loxberry" CmdInit="" CloseAfterSend="true" CmdSep="">
-	<Info templateType="3" minVersion="17010727"/>
-	<VirtualOutCmd Title="Regelung einschalten" Comment="Regelung ein; das Plugin lehnt ab, solange ein sperrender Mangel besteht" CmdOnMethod="GET" CmdOn="/plugins/einspeisebremse/index.php?token=DEIN_TOKEN&amp;aktion=ein&amp;wert=1" CmdOffMethod="GET" CmdOff="" Analog="false" Repeat="0" RepeatRate="0" HintText=""/>
-	<VirtualOutCmd Title="Regelung ausschalten" Comment="Regelung aus; gibt die Anlage einmal ganz frei" CmdOnMethod="GET" CmdOn="/plugins/einspeisebremse/index.php?token=DEIN_TOKEN&amp;aktion=ein&amp;wert=0" CmdOffMethod="GET" CmdOff="" Analog="false" Repeat="0" RepeatRate="0" HintText=""/>
-	<VirtualOutCmd Title="Zielstufe wählen" Comment="Stufe 0, 1 oder 2 (Werte im Reiter Einstellungen)" CmdOnMethod="GET" CmdOn="/plugins/einspeisebremse/index.php?token=DEIN_TOKEN&amp;aktion=stufe&amp;wert=&lt;v.0&gt;" CmdOffMethod="GET" CmdOff="" Analog="true" Repeat="0" RepeatRate="0" HintText=""/>
-</VirtualOut>
