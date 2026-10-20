@@ -15288,16 +15288,6 @@
 						<Display Unit="&lt;v.1&gt;" StateOnly="true"/>
 					</C>
 				</C>
-				<C Type="VirtualOut" Desc="Steuerbefehle über das Plugin marstekvenus — enthält das Aktionstoken." IName="VQ28" V="178" U="447d996f-e7cf-19b4-0fac1c771c2a5138" Title="Marstek steuern Venus E" WF="16384" Address="http://loxberry" CloseAfterSend="true">
-					<IoData Pr="216373ab-00ce-42f4-ffffe001fe9bf86f"/>
-					<C Type="VirtualOutCmd" IName="VQC224" V="178" U="a9701af6-26af-dd6c-e2d73690ac855651" Title="Sollwert setzen (W, + lädt / - entlädt)" Nio="1" WF="16400" Analog="true" Comment="Marstek Venus E: Sollwert setzen (W)" CmdOn="/plugins/marstekvenus/marstek.php?p=&lt;v.0&gt;&amp;t=240&amp;von=loxone&amp;token=DEIN_TOKEN" SourceValHigh="10" DestValHigh="10" Tx="false">
-						<Co K="I" Nc="1" U="3b1c6575-dae9-3e83-c3de52e5218d3691">
-							<In Input="f76f514b-9036-289d-ff89d5e5398070c2"/>
-						</Co>
-						<IoData Cr="216373ab-00cf-42fc-ffffe001fe9bf86f" Pr="216373ab-00ce-42f4-ffffe001fe9bf86f" St="2"/>
-						<Display Unit="&lt;v.1&gt;" StateOnly="true"/>
-					</C>
-				</C>
 				<C Type="VirtualOut" Desc="Octopus Dynamic: Befehle, enthält das Aktionstoken" IName="VQ27" V="178" U="1ac5c47b-3c77-8538-a973c5b5b6654ba3" Title="Octopus Dynamic Befehle" WF="16384" Address="http://loxberry" CloseAfterSend="true">
 					<IoData Pr="216373ab-00ce-42f4-ffffe001fe9bf86f"/>
 					<C Type="VirtualOutCmd" IName="VQC221" V="178" U="0d258c9f-7422-1221-f66bc2fb605390b5" Title="OCTOPUS_ANSAGE" Cl="238,238,238" Nio="1" WF="16400" Comment="Octopus: Preisansage jetzt" CmdOn="/plugins/octopus/index.php?token=DEIN_TOKEN&amp;aktion=say" SourceValHigh="10" DestValHigh="10" Tx="false">
@@ -16433,6 +16423,13 @@
 					<C Type="VirtualOutCmd" IName="VQC436" V="178" U="e1e68483-5281-5ad3-bc8df11f766d90d3" Title="Marstek Handbetrieb: Modus AI" Cl="238,238,238" Nio="1" WF="16400" Comment="Marstek Venus E: Handbetrieb AI (MQTT)" CmdOn="publish marstek/befehl/modus_ai 1" SourceValHigh="10" DestValHigh="10" Tx="false">
 						<Co K="I" Nc="1" U="d1d0cf93-be83-c66d-3df675ed6cc668cd">
 							<In Input="d7e8d635-b467-e59d-842ba78395ac383d"/>
+						</Co>
+						<IoData Cr="216373ab-00cf-42fc-ffffe001fe9bf86f" Pr="216373ab-00cf-42f8-ffffe001fe9bf86f" St="2"/>
+						<Display Unit="&lt;v.1&gt;" StateOnly="true"/>
+					</C>
+					<C Type="VirtualOutCmd" IName="VQC224" V="178" U="a9701af6-26af-dd6c-e2d73690ac855651" Title="Marstek Sollwert senden" Nio="1" WF="16400" Analog="true" Comment="Marstek Venus E: Sollwert in W, + lädt / - entlädt (MQTT)" CmdOn="publish marstek/befehl/sollwert &lt;v.0&gt;" SourceValHigh="10" DestValHigh="10" Tx="false">
+						<Co K="I" Nc="1" U="3b1c6575-dae9-3e83-c3de52e5218d3691">
+							<In Input="f76f514b-9036-289d-ff89d5e5398070c2"/>
 						</Co>
 						<IoData Cr="216373ab-00cf-42fc-ffffe001fe9bf86f" Pr="216373ab-00cf-42f8-ffffe001fe9bf86f" St="2"/>
 						<Display Unit="&lt;v.1&gt;" StateOnly="true"/>
@@ -39501,7 +39498,7 @@
 					<Display Unit="&lt;v.pr&gt;"/>
 					<StateTexts></StateTexts>
 				</C>
-				<C Type="OutputRef" V="178" U="9fdcf07c-3021-ac59-2798193380096805" Title="Sollwert setzen (W, + lädt / - entlädt)" Px="21792" Py="6432" Px2="23904" Py2="6624" Cl="0,0,0" Nio="2" Ref="a9701af6-26af-dd6c-e2d73690ac855651" WF="147456" Analog="true" LinkRefType="74">
+				<C Type="OutputRef" V="178" U="9fdcf07c-3021-ac59-2798193380096805" Title="Marstek Sollwert senden" Px="21792" Py="6432" Px2="23904" Py2="6624" Cl="0,0,0" Nio="2" Ref="a9701af6-26af-dd6c-e2d73690ac855651" WF="147456" Analog="true" LinkRefType="74">
 					<Co K="AI" Nc="1" U="915197b8-e00d-aecb-796a8c73518aa7a5">
 						<In Input="e8237555-1cd9-b5d8-2d9cd1522e40d443"/>
 					</Co>
