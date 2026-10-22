@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<VirtualOut HintText="" Title="Alexa NG Lampen-Rückmeldung" Comment="Alexa NG Lampen: Rückmeldung an das MQTT-Gateway (15.10.2026)" Address="/dev/udp/loxberry/11884" CmdInit="" CloseAfterSend="true" CmdSep="">
-	<Info templateType="3" minVersion="17010727"/>
-	<VirtualOutCmd Title="Alexa Kaffeemaschine Rückmeldung" Comment="Rückmeldung kaffeemaschine" CmdOnMethod="GET" CmdOffMethod="GET" CmdOn="publish alexang/hue/kaffeemaschine/status 1" CmdOnHTTP="" CmdOnPost="" CmdOff="publish alexang/hue/kaffeemaschine/status 0" CmdOffHTTP="" CmdOffPost="" CmdAnswer="" Analog="false" Repeat="0" RepeatRate="0" HintText=""/>
-	<VirtualOutCmd Title="Alexa Stehlampe Rückmeldung" Comment="Rückmeldung stehlampe" CmdOnMethod="GET" CmdOffMethod="GET" CmdOn="publish alexang/hue/stehlampe/status 1" CmdOnHTTP="" CmdOnPost="" CmdOff="publish alexang/hue/stehlampe/status 0" CmdOffHTTP="" CmdOffPost="" CmdAnswer="" Analog="false" Repeat="0" RepeatRate="0" HintText=""/>
-	<VirtualOutCmd Title="Alexa Esstisch Rückmeldung" Comment="Rückmeldung esstisch" CmdOnMethod="GET" CmdOffMethod="GET" CmdOn="publish alexang/hue/esstisch/status 1" CmdOnHTTP="" CmdOnPost="" CmdOff="publish alexang/hue/esstisch/status 0" CmdOffHTTP="" CmdOffPost="" CmdAnswer="" Analog="false" Repeat="0" RepeatRate="0" HintText=""/>
-	<VirtualOutCmd Title="Alexa Esstisch Rückmeldung Helligkeit" Comment="Helligkeit esstisch %" CmdOnMethod="GET" CmdOffMethod="GET" CmdOn="publish alexang/hue/esstisch/status_helligkeit &lt;v&gt;" CmdOnHTTP="" CmdOnPost="" CmdOff="" CmdOffHTTP="" CmdOffPost="" CmdAnswer="" Analog="true" Repeat="0" RepeatRate="0" SourceValLow="0" DestValLow="0" SourceValHigh="10" DestValHigh="10" HintText=""/>
-</VirtualOut>

@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<VirtualOut HintText="" Title="Alexa NG Aktionen" Comment="Alexa NG Sperre und Routinen, trägt das Aktionstoken (15.10.2026)" Address="http://loxberry" CmdInit="" CloseAfterSend="true" CmdSep="">
-	<Info templateType="3" minVersion="17010727"/>
-	<VirtualOutCmd Title="Alexa Ansagen sperren" Comment="Ansagen sperren (Ein) oder freigeben (Aus)" CmdOnMethod="GET" CmdOffMethod="GET" CmdOn="/plugins/alexang/?token=DEIN_AKTIONSTOKEN&amp;aktion=sperre&amp;wert=1" CmdOnHTTP="" CmdOnPost="" CmdOff="/plugins/alexang/?token=DEIN_AKTIONSTOKEN&amp;aktion=sperre&amp;wert=0" CmdOffHTTP="" CmdOffPost="" CmdAnswer="" Analog="false" Repeat="0" RepeatRate="0" HintText=""/>
-	<VirtualOutCmd Title="Alexa Routine Gute Nacht" Comment="Alexa-Routine Gute Nacht starten" CmdOnMethod="GET" CmdOffMethod="GET" CmdOn="/plugins/alexang/?token=DEIN_AKTIONSTOKEN&amp;aktion=routine&amp;name=Gute%20Nacht" CmdOnHTTP="" CmdOnPost="" CmdOff="" CmdOffHTTP="" CmdOffPost="" CmdAnswer="" Analog="false" Repeat="0" RepeatRate="0" HintText=""/>
-	<VirtualOutCmd Title="Alexa Routine Haus verlassen" Comment="Alexa-Routine Haus verlassen starten" CmdOnMethod="GET" CmdOffMethod="GET" CmdOn="/plugins/alexang/?token=DEIN_AKTIONSTOKEN&amp;aktion=routine&amp;name=Haus%20verlassen" CmdOnHTTP="" CmdOnPost="" CmdOff="" CmdOffHTTP="" CmdOffPost="" CmdAnswer="" Analog="false" Repeat="0" RepeatRate="0" HintText=""/>
-</VirtualOut>

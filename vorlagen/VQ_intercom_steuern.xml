@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<VirtualOut HintText="Adresse prüfen: der Miniserver muss den LoxBerry unter diesem Namen erreichen. Foto holt ein Standbild und legt es ins Archiv; Video nimmt 10 Sekunden auf - erlaubt sind 1 bis 300 über &amp;s=, ein Wert außerhalb wird abgewiesen." Title="Intercom (LoxBerry-Plugin)" Comment="Erzeugt vom Plugin Intercom. Loxone Config legt beim Import NEU an." Address="http://loxberry/plugins/intercom/getpicture.php?token=DEIN_TOKEN&amp;station=1&amp;trigger=klingel" CmdInit="" CloseAfterSend="true" CmdSep="">
-	<Info templateType="3" minVersion="17010727"/>
-	<VirtualOutCmd Title="Foto Intercom" Comment="Foto ins Archiv" CmdOnMethod="GET" CmdOn="http://loxberry/plugins/intercom/getpicture.php?token=DEIN_TOKEN&amp;station=1&amp;trigger=klingel" CmdOffMethod="GET" CmdOff="" Analog="false" Repeat="0" RepeatRate="0" HintText=""/>
-	<VirtualOutCmd Title="Foto Intercom ohne Meldung" Comment="Foto ohne Meldung" CmdOnMethod="GET" CmdOn="http://loxberry/plugins/intercom/getpicture.php?token=DEIN_TOKEN&amp;station=1&amp;trigger=hand" CmdOffMethod="GET" CmdOff="" Analog="false" Repeat="0" RepeatRate="0" HintText=""/>
-	<VirtualOutCmd Title="Video Intercom" Comment="Video 10 s" CmdOnMethod="GET" CmdOn="http://loxberry/plugins/intercom/getvideo.php?token=DEIN_TOKEN&amp;station=1&amp;s=10" CmdOffMethod="GET" CmdOff="" Analog="false" Repeat="0" RepeatRate="0" HintText=""/>
-</VirtualOut>
