@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<VirtualOut HintText="" Title="Beschattungswaechter MQTT-Befehle" Comment="UDP-Eingang des MQTT-Gateways auf dem LoxBerry; wirkt nur mit Haken &quot;Befehle ueber MQTT annehmen&quot;" Address="/dev/udp/loxberry/11884" CmdInit="" CloseAfterSend="true" CmdSep="">
+	<Info templateType="3" minVersion="17010727"/>
+	<VirtualOutCmd Title="Beschattungswaechter A jetzt druecken (MQTT)" Comment="puls, eingreifend, nie retain" CmdOnMethod="GET" CmdOffMethod="GET" CmdOn="publish beschattung/befehl/jetzt 1" CmdOnHTTP="" CmdOnPost="" CmdOff="" CmdOffHTTP="" CmdOffPost="" CmdAnswer="" Repeat="0" RepeatRate="0" HintText=""/>
+	<VirtualOutCmd Title="Beschattungswaechter Automatiken zaehlen (MQTT)" Comment="puls, nie retain" CmdOnMethod="GET" CmdOffMethod="GET" CmdOn="publish beschattung/befehl/pruefen 1" CmdOnHTTP="" CmdOnPost="" CmdOff="" CmdOffHTTP="" CmdOffPost="" CmdAnswer="" Repeat="0" RepeatRate="0" HintText=""/>
+</VirtualOut>
