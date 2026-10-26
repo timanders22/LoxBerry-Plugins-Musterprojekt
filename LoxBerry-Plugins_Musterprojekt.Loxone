@@ -51165,7 +51165,12 @@
 					<Co K="OutputAPI" U="2feb65c1-56ec-a4c8-2960b5bb0eacf536"/>
 					<IoData Visu="true" Cr="216373ab-00cf-42fc-ffffe001fe9bf86f" Pr="216373ab-00ce-42f4-ffffe001fe9bf86f"/>
 					<Display Unit="&lt;v.pr&gt;"/>
-					<StateTexts></StateTexts>
+					<StateTexts Num="4">
+						<StateText Valid="true" ValidV="true" Text="Plugin meldet sich seit mindestens 15 Minuten nicht – der Laufzähler bleibt bei &lt;v4&gt;; im Plugin Reiter MQTT nachsehen, ob MQTT eingeschaltet ist, und im LoxBerry unter System → MQTT Gateway das Abo (Fassung 1) bzw. die Haken (Fassung 2) prüfen" TextV="0" Icon="00000000-0000-0000-0000000000000000" Input0="2" CondV0="1" CondT0="1"/>
+						<StateText Valid="true" ValidV="true" Text="keine Preise für heute – aWATTar nicht erreichbar oder Plugin frisch installiert; im Plugin Reiter Test die Selbstprüfung lesen" TextV="0" Icon="00000000-0000-0000-0000000000000000" Input0="1" CondT0="0"/>
+						<StateText Valid="true" ValidV="true" Text="läuft – aber für die laufende Stunde fehlt der Preis; angezeigt wird der höchste bekannte Preis" TextV="0" Icon="00000000-0000-0000-0000000000000000" Input0="3" CondV0="1" CondT0="1"/>
+						<StateText Valid="true" ValidV="true" Text="läuft – Preise für heute da, Laufzähler &lt;v4&gt;" TextV="0" Icon="00000000-0000-0000-0000000000000000"/>
+					</StateTexts>
 				</C>
 				<C Type="State" V="178" U="2623fa34-d170-3e16-b6aca84874a7dacb" Title="Strompreis jetzt (aWATTar)" Px="12576" Py="3072" Px2="15264" Py2="5304" Cl="141,255,112" Nio="11" LtE="560167149" WF="16384">
 					<Co K="I1" Nc="1" U="acf7794e-db9a-99a0-68a168b07ea6f061">
@@ -51197,7 +51202,14 @@
 					<Co K="OutputAPI" U="9fe9bb85-d34d-eb4d-f58e4bd97e2246c9"/>
 					<IoData Visu="true" Cr="216373ab-00cf-42fc-ffffe001fe9bf86f" Pr="216373ab-00ce-42f4-ffffe001fe9bf86f"/>
 					<Display Unit="&lt;v.pr&gt;"/>
-					<StateTexts></StateTexts>
+					<StateTexts Num="6">
+						<StateText Valid="true" ValidV="true" Text="keine Preise – Status ‚Spotpreis-Zustand (aWATTar)‘ lesen" TextV="0" Icon="00000000-0000-0000-0000000000000000" Input0="4" Cond0="3" CondT0="0"/>
+						<StateText Valid="true" ValidV="true" Text="Preis dieser Stunde fehlt – Ersatzwert &lt;v1.1&gt; ct/kWh (höchster bekannter Preis)" TextV="0" Icon="00000000-0000-0000-0000000000000000" Input0="8" CondV0="1" CondT0="1"/>
+						<StateText Valid="true" ValidV="true" Text="Börsenpreis negativ (&lt;v2.1&gt; ct) – jetzt verbrauchen; Endpreis &lt;v1.1&gt; ct/kWh, nächste Stunde &lt;v3.1&gt; ct" TextV="0" Icon="00000000-0000-0000-0000000000000000" Input0="7" CondV0="1" CondT0="1"/>
+						<StateText Valid="true" ValidV="true" Text="günstig: &lt;v1.1&gt; ct/kWh (Börse &lt;v2.1&gt; ct), Rang &lt;v5&gt; von 24, nächste Stunde &lt;v3.1&gt; ct" TextV="0" Icon="00000000-0000-0000-0000000000000000" Input0="4" CondV0="1" CondT0="1"/>
+						<StateText Valid="true" ValidV="true" Text="teuer: &lt;v1.1&gt; ct/kWh (Börse &lt;v2.1&gt; ct), Rang &lt;v6&gt; von hinten, nächste Stunde &lt;v3.1&gt; ct" TextV="0" Icon="00000000-0000-0000-0000000000000000" Input0="4" CondV0="3" CondT0="3"/>
+						<StateText Valid="true" ValidV="true" Text="normal: &lt;v1.1&gt; ct/kWh (Börse &lt;v2.1&gt; ct), Rang &lt;v5&gt; von 24, nächste Stunde &lt;v3.1&gt; ct" TextV="0" Icon="00000000-0000-0000-0000000000000000"/>
+					</StateTexts>
 				</C>
 				<C Type="And" V="178" U="9f5c98f1-601b-a9ec-4e840d011a2d2eb0" Title="Preis-Push jetzt (aWATTar)" Px="8640" Py="5952" Px2="9984" Py2="6648" Cl="141,255,112" Nio="3" LtE="560166852" WF="16384">
 					<Co K="I1" Nc="1" U="80d52181-4f25-38b6-a41d95b0fb43155c">
@@ -51230,7 +51242,14 @@
 					<Co K="OutputAPI" U="14859552-ccf7-c36e-022246d20b09843b"/>
 					<IoData Visu="true" Cr="216373ab-00cf-42fc-ffffe001fe9bf86f" Pr="216373ab-00ce-42f4-ffffe001fe9bf86f"/>
 					<Display Unit="&lt;v.pr&gt;"/>
-					<StateTexts></StateTexts>
+					<StateTexts Num="6">
+						<StateText Valid="true" ValidV="true" Text="Test-Push angefordert – die ‚Meldung Test-Push (aWATTar)‘ muss innerhalb von 5 Minuten kommen" TextV="0" Icon="00000000-0000-0000-0000000000000000" Input0="4" CondV0="1" CondT0="1"/>
+						<StateText Valid="true" ValidV="true" Text="Meldefenster offen – der Preis-Push geht jetzt hinaus" TextV="0" Icon="00000000-0000-0000-0000000000000000" Input0="1" CondV0="1" CondT0="1" Input1="3" CondV1="1" CondT1="1"/>
+						<StateText Valid="true" ValidV="true" Text="Push und Ansage im Plugin aus – im Plugin Reiter Einstellungen einschalten und die Stunden wählen" TextV="0" Icon="00000000-0000-0000-0000000000000000" Input0="1" CondT0="0" Input1="2" CondT1="0"/>
+						<StateText Valid="true" ValidV="true" Text="nur Ansage an – kein Push" TextV="0" Icon="00000000-0000-0000-0000000000000000" Input0="1" CondT0="0"/>
+						<StateText Valid="true" ValidV="true" Text="nur Push an – keine Ansage" TextV="0" Icon="00000000-0000-0000-0000000000000000" Input0="2" CondT0="0"/>
+						<StateText Valid="true" ValidV="true" Text="Push und Ansage an" TextV="0" Icon="00000000-0000-0000-0000000000000000"/>
+					</StateTexts>
 				</C>
 				<C Type="OutputRefLM" V="178" U="0b78a945-6e00-320d-190a35d1310607e2" Title="Meldung Strompreis-Push (aWATTar)" Px="10944" Py="6240" Px2="13056" Py2="6432" Cl="0,0,0" Nio="2" Ref="b7c5b4c6-4f7e-0c77-7c2fa30a95b18b10" WF="147456">
 					<Co K="AI" Nc="1" U="653b8287-a4dd-ce7f-a0e527f55476b4a7">
@@ -51519,7 +51538,11 @@
 					<Co K="OutputAPI" U="fa5dccdf-fa90-2366-fb053a1ecd9b0038"/>
 					<IoData Visu="true" Cr="216373ab-00cf-42fc-ffffe001fe9bf86f" Pr="216373ab-00ce-42f4-ffffe001fe9bf86f"/>
 					<Display Unit="&lt;v.pr&gt;"/>
-					<StateTexts></StateTexts>
+					<StateTexts Num="3">
+						<StateText Valid="true" ValidV="true" Text="Ökostrom-Zeit: jetzt &lt;v1&gt; g CO₂/kWh – sauberste Stunde um &lt;v3&gt; Uhr (&lt;v2&gt; g)" TextV="0" Icon="00000000-0000-0000-0000000000000000" Input0="4" CondV0="1" CondT0="1"/>
+						<StateText Valid="true" ValidV="true" Text="jetzt &lt;v1&gt; g CO₂/kWh – keine Vorhersage" TextV="0" Icon="00000000-0000-0000-0000000000000000" Input0="3" Cond0="3" CondT0="0"/>
+						<StateText Valid="true" ValidV="true" Text="jetzt &lt;v1&gt; g CO₂/kWh – sauberste Stunde um &lt;v3&gt; Uhr (&lt;v2&gt; g)" TextV="0" Icon="00000000-0000-0000-0000000000000000"/>
+					</StateTexts>
 				</C>
 				<C Type="State" V="178" U="e6c7ca35-356a-18f7-cbde2c7b9dbdf98e" Title="Freigaben jetzt (aWATTar)" Px="14976" Py="3264" Px2="17664" Py2="5304" Cl="141,255,112" Nio="11" LtE="560167149" WF="16384">
 					<Co K="I1" Nc="1" U="50a698fc-038e-1dfe-4de536781ad25d49">
@@ -51549,7 +51572,16 @@
 					<Co K="OutputAPI" U="8dc66678-4d89-9574-409dbe80577d2ccf"/>
 					<IoData Visu="true" Cr="216373ab-00cf-42fc-ffffe001fe9bf86f" Pr="216373ab-00ce-42f4-ffffe001fe9bf86f"/>
 					<Display Unit="&lt;v.pr&gt;"/>
-					<StateTexts></StateTexts>
+					<StateTexts Num="8">
+						<StateText Valid="true" ValidV="true" Text="Plugin meldet sich seit 15 Minuten nicht – alle Freigaben aus; Status ‚Spotpreis-Zustand (aWATTar)‘ lesen" TextV="0" Icon="00000000-0000-0000-0000000000000000" Input0="7" CondV0="1" CondT0="1"/>
+						<StateText Valid="true" ValidV="true" Text="keine Preise – alle Freigaben aus" TextV="0" Icon="00000000-0000-0000-0000000000000000" Input0="5" Cond0="3" CondT0="0"/>
+						<StateText Valid="true" ValidV="true" Text="Hochpreis-Sperre aktiv – &lt;v6.1&gt; ct/kWh" TextV="0" Icon="00000000-0000-0000-0000000000000000" Input0="3" CondV0="1" CondT0="1"/>
+						<StateText Valid="true" ValidV="true" Text="große Verbraucher und Warmwasser frei – &lt;v6.1&gt; ct/kWh" TextV="0" Icon="00000000-0000-0000-0000000000000000" Input0="1" CondV0="1" CondT0="1" Input1="4" CondV1="1" CondT1="1"/>
+						<StateText Valid="true" ValidV="true" Text="große Verbraucher frei – &lt;v6.1&gt; ct/kWh" TextV="0" Icon="00000000-0000-0000-0000000000000000" Input0="1" CondV0="1" CondT0="1"/>
+						<StateText Valid="true" ValidV="true" Text="nur ‚sauber oder günstig‘ frei – &lt;v6.1&gt; ct/kWh" TextV="0" Icon="00000000-0000-0000-0000000000000000" Input0="4" CondV0="1" CondT0="1"/>
+						<StateText Valid="true" ValidV="true" Text="teuer – &lt;v6.1&gt; ct/kWh, Hochpreis-Sperre in der App aus" TextV="0" Icon="00000000-0000-0000-0000000000000000" Input0="2" CondV0="1" CondT0="1"/>
+						<StateText Valid="true" ValidV="true" Text="keine Freigabe – &lt;v6.1&gt; ct/kWh" TextV="0" Icon="00000000-0000-0000-0000000000000000"/>
+					</StateTexts>
 				</C>
 				<C Type="State" V="178" U="ac24509c-69a7-96ec-7d33920f3b301242" Title="Tarifvergleich (aWATTar)" Px="4416" Py="11136" Px2="7104" Py2="12792" Cl="141,255,112" Nio="11" LtE="560167149" WF="16384">
 					<Co K="I1" Nc="1" U="ae2d5266-0f8a-f1e2-19a106e447aa7e8a">
@@ -51575,7 +51607,11 @@
 					<Co K="OutputAPI" U="9e1b1051-6d01-5c59-40fbff2caa62b963"/>
 					<IoData Visu="true" Cr="216373ab-00cf-42fc-ffffe001fe9bf86f" Pr="216373ab-00ce-42f4-ffffe001fe9bf86f"/>
 					<Display Unit="&lt;v.pr&gt;"/>
-					<StateTexts></StateTexts>
+					<StateTexts Num="3">
+						<StateText Valid="true" ValidV="true" Text="noch keine Werte für diesen Monat – die erste Tageszeile kommt um 23:50; Verschieben brächte &lt;v5.0&gt; EUR im Jahr" TextV="0" Icon="00000000-0000-0000-0000000000000000" Input0="1" CondT0="0"/>
+						<StateText Valid="true" ValidV="true" Text="dynamisch günstiger: &lt;v1.1&gt; ct gegen fest &lt;v2.1&gt; ct – Vorteil &lt;v3.1&gt; ct/kWh, &lt;v4.2&gt; EUR im Monat; Verschieben brächte &lt;v5.0&gt; EUR im Jahr" TextV="0" Icon="00000000-0000-0000-0000000000000000" Input0="3" Cond0="1" CondT0="0"/>
+						<StateText Valid="true" ValidV="true" Text="fest günstiger oder gleich: dynamisch &lt;v1.1&gt; ct gegen fest &lt;v2.1&gt; ct (&lt;v3.1&gt; ct/kWh, &lt;v4.2&gt; EUR im Monat); Verschieben brächte &lt;v5.0&gt; EUR im Jahr" TextV="0" Icon="00000000-0000-0000-0000000000000000"/>
+					</StateTexts>
 				</C>
 				<C Type="AnalogThresholdTrigger" V="178" U="691f188d-7af8-9295-e44aaae13edb17fb" Title="Dynamisch wäre günstiger" Px="4416" Py="10176" Px2="5760" Py2="11064" Cl="141,255,112" Nio="8" LtE="560166800" WF="147456">
 					<Co K="Input" Nc="1" U="d36d615a-c1f0-7d56-acc0b13321112315">
@@ -51618,7 +51654,9 @@
 					<Co K="OutputAPI" U="b9bf5df3-9703-e2ec-f157ffedf49fd404"/>
 					<IoData Visu="true" Cr="216373ab-00cf-42fc-ffffe001fe9bf86f" Pr="216373ab-00ce-42f4-ffffe001fe9bf86f"/>
 					<Display Unit="&lt;v.pr&gt;"/>
-					<StateTexts></StateTexts>
+					<StateTexts Num="1">
+						<StateText Valid="true" ValidV="true" Text="Zählpunkt §14a jetzt &lt;v1.1&gt; ct/kWh (Haushalt &lt;v3.1&gt; ct/kWh), nächste Stunde &lt;v2.1&gt; ct/kWh" TextV="0" Icon="00000000-0000-0000-0000000000000000"/>
+					</StateTexts>
 				</C>
 				<C Type="Validator" V="178" U="ce21cae8-1c2c-b8dd-2b36eadc6631aaa7" Title="Freigaben ohne Lebenszeichen (aWATTar)" Px="4416" Py="6624" Px2="5760" Py2="7512" Cl="141,255,112" Nio="8" LtE="560782872" WF="147456">
 					<Co K="inval" Nc="1" U="f756f410-78fc-f483-60109d26be8a6745">
@@ -52007,7 +52045,16 @@
 					<Co K="OutputAPI" U="9dd91852-b1a7-bc5c-1286cc43ba5cd6af"/>
 					<IoData Visu="true" Cr="216373ab-00cf-42fc-ffffe001fe9bf86f" Pr="216373ab-00ce-42f4-ffffe001fe9bf86f"/>
 					<Display Unit="&lt;v.pr&gt;"/>
-					<StateTexts></StateTexts>
+					<StateTexts Num="8">
+						<StateText Valid="true" ValidV="true" Text="ausgesetzt – der LoxBerry antwortet nicht, das Gerät bleibt aus" TextV="0" Icon="00000000-0000-0000-0000000000000000" Input0="7" CondV0="1" CondT0="1"/>
+						<StateText Valid="true" ValidV="true" Text="läuft – noch &lt;v3&gt; Stunden, Schnitt &lt;v4.1&gt; ct/kWh" TextV="0" Icon="00000000-0000-0000-0000000000000000" Input0="1" CondV0="1" CondT0="1"/>
+						<StateText Valid="true" ValidV="true" Text="gesperrt – die PV-Prognose liegt über der Grenze der Regel" TextV="0" Icon="00000000-0000-0000-0000000000000000" Input0="6" CondV0="1" CondT0="1"/>
+						<StateText Valid="true" ValidV="true" Text="gesperrt – Speicher unter der unteren Grenze der Regel" TextV="0" Icon="00000000-0000-0000-0000000000000000" Input0="6" CondV0="2" CondT0="2"/>
+						<StateText Valid="true" ValidV="true" Text="gesperrt – Speicher über der oberen Grenze der Regel" TextV="0" Icon="00000000-0000-0000-0000000000000000" Input0="6" CondV0="3" CondT0="3"/>
+						<StateText Valid="true" ValidV="true" Text="wartet – Start in &lt;v2&gt; Stunden, Schnitt &lt;v4.1&gt; ct/kWh; &lt;v5&gt; Stunden ans Leistungsbudget verloren" TextV="0" Icon="00000000-0000-0000-0000000000000000" Input0="2" Cond0="2" CondT0="0" Input1="5" Cond1="1" CondT1="0"/>
+						<StateText Valid="true" ValidV="true" Text="wartet – Start in &lt;v2&gt; Stunden, Schnitt &lt;v4.1&gt; ct/kWh" TextV="0" Icon="00000000-0000-0000-0000000000000000" Input0="2" Cond0="2" CondT0="0"/>
+						<StateText Valid="true" ValidV="true" Text="nichts geplant – Regel im Plugin aus oder keine passende Zeit im Horizont" TextV="0" Icon="00000000-0000-0000-0000000000000000"/>
+					</StateTexts>
 				</C>
 				<C Type="State" V="178" U="3a04e72e-2daf-a69b-6ddaac60b16f3346" Title="Schaltregel 2 (aWATTar)" Px="12288" Py="5472" Px2="14976" Py2="7512" Cl="141,255,112" Nio="11" LtE="560167149" WF="16384">
 					<Co K="I1" Nc="1" U="3a6b7fb1-5178-904b-203e7d4c6c0c312a">
@@ -52037,7 +52084,16 @@
 					<Co K="OutputAPI" U="bdd81e3d-f931-b3e1-b980c76067ed51a0"/>
 					<IoData Visu="true" Cr="216373ab-00cf-42fc-ffffe001fe9bf86f" Pr="216373ab-00ce-42f4-ffffe001fe9bf86f"/>
 					<Display Unit="&lt;v.pr&gt;"/>
-					<StateTexts></StateTexts>
+					<StateTexts Num="8">
+						<StateText Valid="true" ValidV="true" Text="ausgesetzt – der LoxBerry antwortet nicht, das Gerät bleibt aus" TextV="0" Icon="00000000-0000-0000-0000000000000000" Input0="7" CondV0="1" CondT0="1"/>
+						<StateText Valid="true" ValidV="true" Text="läuft – noch &lt;v3&gt; Stunden, Schnitt &lt;v4.1&gt; ct/kWh" TextV="0" Icon="00000000-0000-0000-0000000000000000" Input0="1" CondV0="1" CondT0="1"/>
+						<StateText Valid="true" ValidV="true" Text="gesperrt – die PV-Prognose liegt über der Grenze der Regel" TextV="0" Icon="00000000-0000-0000-0000000000000000" Input0="6" CondV0="1" CondT0="1"/>
+						<StateText Valid="true" ValidV="true" Text="gesperrt – Speicher unter der unteren Grenze der Regel" TextV="0" Icon="00000000-0000-0000-0000000000000000" Input0="6" CondV0="2" CondT0="2"/>
+						<StateText Valid="true" ValidV="true" Text="gesperrt – Speicher über der oberen Grenze der Regel" TextV="0" Icon="00000000-0000-0000-0000000000000000" Input0="6" CondV0="3" CondT0="3"/>
+						<StateText Valid="true" ValidV="true" Text="wartet – Start in &lt;v2&gt; Stunden, Schnitt &lt;v4.1&gt; ct/kWh; &lt;v5&gt; Stunden ans Leistungsbudget verloren" TextV="0" Icon="00000000-0000-0000-0000000000000000" Input0="2" Cond0="2" CondT0="0" Input1="5" Cond1="1" CondT1="0"/>
+						<StateText Valid="true" ValidV="true" Text="wartet – Start in &lt;v2&gt; Stunden, Schnitt &lt;v4.1&gt; ct/kWh" TextV="0" Icon="00000000-0000-0000-0000000000000000" Input0="2" Cond0="2" CondT0="0"/>
+						<StateText Valid="true" ValidV="true" Text="nichts geplant – Regel im Plugin aus oder keine passende Zeit im Horizont" TextV="0" Icon="00000000-0000-0000-0000000000000000"/>
+					</StateTexts>
 				</C>
 				<C Type="State" V="178" U="152b13ef-c3f1-556c-532c651524808341" Title="Schaltregel 3 (aWATTar)" Px="12384" Py="7680" Px2="15072" Py2="9720" Cl="141,255,112" Nio="11" LtE="560167149" WF="16384">
 					<Co K="I1" Nc="1" U="430c1cbd-e7ef-f5ef-6cb0ad929b2e7d73">
@@ -52067,7 +52123,16 @@
 					<Co K="OutputAPI" U="a59465bd-f3d8-0a7c-96ab2787f6b6d83e"/>
 					<IoData Visu="true" Cr="216373ab-00cf-42fc-ffffe001fe9bf86f" Pr="216373ab-00ce-42f4-ffffe001fe9bf86f"/>
 					<Display Unit="&lt;v.pr&gt;"/>
-					<StateTexts></StateTexts>
+					<StateTexts Num="8">
+						<StateText Valid="true" ValidV="true" Text="ausgesetzt – der LoxBerry antwortet nicht, das Gerät bleibt aus" TextV="0" Icon="00000000-0000-0000-0000000000000000" Input0="7" CondV0="1" CondT0="1"/>
+						<StateText Valid="true" ValidV="true" Text="läuft – noch &lt;v3&gt; Stunden, Schnitt &lt;v4.1&gt; ct/kWh" TextV="0" Icon="00000000-0000-0000-0000000000000000" Input0="1" CondV0="1" CondT0="1"/>
+						<StateText Valid="true" ValidV="true" Text="gesperrt – die PV-Prognose liegt über der Grenze der Regel" TextV="0" Icon="00000000-0000-0000-0000000000000000" Input0="6" CondV0="1" CondT0="1"/>
+						<StateText Valid="true" ValidV="true" Text="gesperrt – Speicher unter der unteren Grenze der Regel" TextV="0" Icon="00000000-0000-0000-0000000000000000" Input0="6" CondV0="2" CondT0="2"/>
+						<StateText Valid="true" ValidV="true" Text="gesperrt – Speicher über der oberen Grenze der Regel" TextV="0" Icon="00000000-0000-0000-0000000000000000" Input0="6" CondV0="3" CondT0="3"/>
+						<StateText Valid="true" ValidV="true" Text="wartet – Start in &lt;v2&gt; Stunden, Schnitt &lt;v4.1&gt; ct/kWh; &lt;v5&gt; Stunden ans Leistungsbudget verloren" TextV="0" Icon="00000000-0000-0000-0000000000000000" Input0="2" Cond0="2" CondT0="0" Input1="5" Cond1="1" CondT1="0"/>
+						<StateText Valid="true" ValidV="true" Text="wartet – Start in &lt;v2&gt; Stunden, Schnitt &lt;v4.1&gt; ct/kWh" TextV="0" Icon="00000000-0000-0000-0000000000000000" Input0="2" Cond0="2" CondT0="0"/>
+						<StateText Valid="true" ValidV="true" Text="nichts geplant – Regel im Plugin aus oder keine passende Zeit im Horizont" TextV="0" Icon="00000000-0000-0000-0000000000000000"/>
+					</StateTexts>
 				</C>
 				<C Type="State" V="178" U="f529caf0-b7bb-49b8-9753c85a61af37e9" Title="Schaltregel 4 (aWATTar)" Px="12384" Py="9888" Px2="15072" Py2="11928" Cl="141,255,112" Nio="11" LtE="560167149" WF="16384">
 					<Co K="I1" Nc="1" U="6cffa299-d685-c003-0966f743134cf6af">
@@ -52097,7 +52162,16 @@
 					<Co K="OutputAPI" U="b915a0f3-cf05-a7fd-ea0332f0ad3f5cb5"/>
 					<IoData Visu="true" Cr="216373ab-00cf-42fc-ffffe001fe9bf86f" Pr="216373ab-00ce-42f4-ffffe001fe9bf86f"/>
 					<Display Unit="&lt;v.pr&gt;"/>
-					<StateTexts></StateTexts>
+					<StateTexts Num="8">
+						<StateText Valid="true" ValidV="true" Text="ausgesetzt – der LoxBerry antwortet nicht, das Gerät bleibt aus" TextV="0" Icon="00000000-0000-0000-0000000000000000" Input0="7" CondV0="1" CondT0="1"/>
+						<StateText Valid="true" ValidV="true" Text="läuft – noch &lt;v3&gt; Stunden, Schnitt &lt;v4.1&gt; ct/kWh" TextV="0" Icon="00000000-0000-0000-0000000000000000" Input0="1" CondV0="1" CondT0="1"/>
+						<StateText Valid="true" ValidV="true" Text="gesperrt – die PV-Prognose liegt über der Grenze der Regel" TextV="0" Icon="00000000-0000-0000-0000000000000000" Input0="6" CondV0="1" CondT0="1"/>
+						<StateText Valid="true" ValidV="true" Text="gesperrt – Speicher unter der unteren Grenze der Regel" TextV="0" Icon="00000000-0000-0000-0000000000000000" Input0="6" CondV0="2" CondT0="2"/>
+						<StateText Valid="true" ValidV="true" Text="gesperrt – Speicher über der oberen Grenze der Regel" TextV="0" Icon="00000000-0000-0000-0000000000000000" Input0="6" CondV0="3" CondT0="3"/>
+						<StateText Valid="true" ValidV="true" Text="wartet – Start in &lt;v2&gt; Stunden, Schnitt &lt;v4.1&gt; ct/kWh; &lt;v5&gt; Stunden ans Leistungsbudget verloren" TextV="0" Icon="00000000-0000-0000-0000000000000000" Input0="2" Cond0="2" CondT0="0" Input1="5" Cond1="1" CondT1="0"/>
+						<StateText Valid="true" ValidV="true" Text="wartet – Start in &lt;v2&gt; Stunden, Schnitt &lt;v4.1&gt; ct/kWh" TextV="0" Icon="00000000-0000-0000-0000000000000000" Input0="2" Cond0="2" CondT0="0"/>
+						<StateText Valid="true" ValidV="true" Text="nichts geplant – Regel im Plugin aus oder keine passende Zeit im Horizont" TextV="0" Icon="00000000-0000-0000-0000000000000000"/>
+					</StateTexts>
 				</C>
 			</C>
 			<C Type="Page" V="178" U="afb76907-c794-dcee-5f7fea845db99522" Title="Spotpreis aWATTar Stundenprofil" LtE="560890600" WF="16384">
@@ -52386,7 +52460,11 @@
 					<Co K="OutputAPI" U="25586af8-bd5d-d918-5406c555dd649cd0"/>
 					<IoData Visu="true" Cr="216373ab-00cf-42fc-ffffe001fe9bf86f" Pr="216373ab-00ce-42f4-ffffe001fe9bf86f"/>
 					<Display Unit="&lt;v.pr&gt;"/>
-					<StateTexts></StateTexts>
+					<StateTexts Num="3">
+						<StateText Valid="true" ValidV="true" Text="keine Preise für heute – die Stundenpreise sind vom Vortag, der Optimierer plant mit alten Preisen; Status ‚Spotpreis-Zustand (aWATTar)‘ lesen" TextV="0" Icon="00000000-0000-0000-0000000000000000" Input0="6" CondT0="0"/>
+						<StateText Valid="true" ValidV="true" Text="Spotpreis-Optimierer schaltet ein – jetzt &lt;v1.2&gt; ct/kWh (heute &lt;v2.2&gt; bis &lt;v3.2&gt;, Mittel &lt;v4.2&gt;)" TextV="0" Icon="00000000-0000-0000-0000000000000000" Input0="5" CondV0="1" CondT0="1"/>
+						<StateText Valid="true" ValidV="true" Text="aus – jetzt &lt;v1.2&gt; ct/kWh (heute &lt;v2.2&gt; bis &lt;v3.2&gt;, Mittel &lt;v4.2&gt;)" TextV="0" Icon="00000000-0000-0000-0000000000000000"/>
+					</StateTexts>
 				</C>
 				<C Type="SpotOpt" V="178" U="217739ef-0099-63ff-ffffea845db99522" Title="Günstigste Stunden (aWATTar)" Px="10368" Py="1056" Px2="13056" Py2="6552" Cl="15,164,255" Nio="43" LtE="561461824" WF="16384" SpStates="217739ef-0099-63d1-ffff081d35966843,217739ef-0099-63d2-ffff081d35966843,217739ef-0099-63d3-ffff081d35966843" Un="&lt;v.3&gt;€/kWh" Mod="1" EpxM="AT" Sec="36600" Fm="I1" StatsType="8">
 					<Co K="R" U="217739ef-0099-63d4-00ff081d35966843"/>
@@ -52739,7 +52817,9 @@
 					<Co K="OutputAPI" U="bd82f624-9628-e5ae-bb72f88a8c03c0ea"/>
 					<IoData Visu="true" Cr="216373ab-00cf-42fc-ffffe001fe9bf86f" Pr="216373ab-00ce-42f4-ffffe001fe9bf86f"/>
 					<Display Unit="&lt;v.pr&gt;"/>
-					<StateTexts></StateTexts>
+					<StateTexts Num="1">
+						<StateText Valid="true" ValidV="true" Text="heute am günstigsten um &lt;v1&gt; Uhr (&lt;v2.1&gt; ct/kWh), am teuersten um &lt;v3&gt; Uhr (&lt;v4.1&gt; ct/kWh), Mittel &lt;v5.1&gt; ct/kWh" TextV="0" Icon="00000000-0000-0000-0000000000000000"/>
+					</StateTexts>
 				</C>
 				<C Type="State" V="178" U="5db8a23e-ae69-f025-290dd73810406bfc" Title="Strompreise morgen (aWATTar)" Px="8736" Py="4032" Px2="11424" Py2="5880" Cl="141,255,112" Nio="11" LtE="560167149" WF="16384">
 					<Co K="I1" Nc="1" U="fc7c4028-0c48-f41c-c812024dbde7ede8">
@@ -52767,7 +52847,10 @@
 					<Co K="OutputAPI" U="cff7d962-a376-9177-e7e29c85b8755102"/>
 					<IoData Visu="true" Cr="216373ab-00cf-42fc-ffffe001fe9bf86f" Pr="216373ab-00ce-42f4-ffffe001fe9bf86f"/>
 					<Display Unit="&lt;v.pr&gt;"/>
-					<StateTexts></StateTexts>
+					<StateTexts Num="2">
+						<StateText Valid="true" ValidV="true" Text="Preise für morgen noch nicht da – sie kommen börsentäglich ab etwa 14 Uhr" TextV="0" Icon="00000000-0000-0000-0000000000000000" Input0="1" CondT0="0"/>
+						<StateText Valid="true" ValidV="true" Text="morgen am günstigsten um &lt;v2&gt; Uhr (&lt;v3.1&gt; ct/kWh), am teuersten um &lt;v4&gt; Uhr (&lt;v5.1&gt; ct/kWh), Mittel &lt;v6.1&gt; ct/kWh" TextV="0" Icon="00000000-0000-0000-0000000000000000"/>
+					</StateTexts>
 				</C>
 				<C Type="State" V="178" U="80d2b761-c7b6-4b45-014c200eca053ce8" Title="Günstigstes Fenster (aWATTar)" Px="4416" Py="1344" Px2="7104" Py2="2616" Cl="141,255,112" Nio="11" LtE="560167149" WF="16384">
 					<Co K="I1" Nc="1" U="aa27e861-0e85-179b-7739c7aec1424b48">
@@ -52789,7 +52872,11 @@
 					<Co K="OutputAPI" U="7f821860-25e0-6df2-efe6a00f892b4a68"/>
 					<IoData Visu="true" Cr="216373ab-00cf-42fc-ffffe001fe9bf86f" Pr="216373ab-00ce-42f4-ffffe001fe9bf86f"/>
 					<Display Unit="&lt;v.pr&gt;"/>
-					<StateTexts></StateTexts>
+					<StateTexts Num="3">
+						<StateText Valid="true" ValidV="true" Text="kein günstiges Fenster bekannt – zu wenig Preise" TextV="0" Icon="00000000-0000-0000-0000000000000000" Input0="1" Cond0="3" CondT0="0"/>
+						<StateText Valid="true" ValidV="true" Text="günstigstes Fenster läuft jetzt (seit &lt;v1&gt; Uhr, Schnitt &lt;v2.1&gt; ct/kWh)" TextV="0" Icon="00000000-0000-0000-0000000000000000" Input0="3" CondT0="0"/>
+						<StateText Valid="true" ValidV="true" Text="günstigstes Fenster ab &lt;v1&gt; Uhr (in &lt;v3&gt; Stunden), Schnitt &lt;v2.1&gt; ct/kWh" TextV="0" Icon="00000000-0000-0000-0000000000000000"/>
+					</StateTexts>
 				</C>
 				<C Type="PulseAt" V="178" U="fb3aa60f-f075-ba84-4f922233f766c13d" Title="Tagesvorschau 20:00" Px="1344" Py="2784" Px2="4032" Py2="3672" Cl="141,255,112" Nio="5" LtE="561142739" WF="147456" Sec="72000" SpStates="9f64b29c-903b-5764-b20c9b757a82fd2e,df4ac997-08be-a772-13aecc2f168869c9,20cdf0fc-75fd-de1a-dc8992137a2f2a87" Typ="0">
 					<Co K="InputDisable" U="1c975d96-a4ad-2df4-871b8222ff198a50"/>
@@ -52855,7 +52942,12 @@
 					<Co K="OutputAPI" U="af4cfa4f-75d0-c557-c19c3989b1e04ff7"/>
 					<IoData Visu="true" Cr="216373ab-00cf-42fc-ffffe001fe9bf86f" Pr="216373ab-00ce-42f4-ffffe001fe9bf86f"/>
 					<Display Unit="&lt;v.pr&gt;"/>
-					<StateTexts></StateTexts>
+					<StateTexts Num="4">
+						<StateText Valid="true" ValidV="true" Text="kein Leistungsbudget, keine Speicherquelle – PV-Prognose 24 h &lt;v1.1&gt; kWh (0 = keine eingetragen)" TextV="0" Icon="00000000-0000-0000-0000000000000000" Input0="3" CondT0="0" Input1="2" Cond1="3" CondT1="0"/>
+						<StateText Valid="true" ValidV="true" Text="kein Leistungsbudget – PV-Prognose 24 h &lt;v1.1&gt; kWh, Speicher &lt;v2&gt; %" TextV="0" Icon="00000000-0000-0000-0000000000000000" Input0="3" CondT0="0"/>
+						<StateText Valid="true" ValidV="true" Text="verplant &lt;v4.1&gt; von &lt;v3.1&gt; kW – PV-Prognose 24 h &lt;v1.1&gt; kWh, keine Speicherquelle" TextV="0" Icon="00000000-0000-0000-0000000000000000" Input0="2" Cond0="3" CondT0="0"/>
+						<StateText Valid="true" ValidV="true" Text="verplant &lt;v4.1&gt; von &lt;v3.1&gt; kW – PV-Prognose 24 h &lt;v1.1&gt; kWh, Speicher &lt;v2&gt; %" TextV="0" Icon="00000000-0000-0000-0000000000000000"/>
+					</StateTexts>
 				</C>
 				<C Type="And" V="178" U="d4538fec-fbde-5377-5ba261db0841acf7" Title="Tagesvorschau freigegeben (aWATTar)" Px="7776" Py="6336" Px2="9120" Py2="7032" Cl="141,255,112" Nio="3" LtE="560166852" WF="147456">
 					<Co K="I1" Nc="1" U="cefd5917-2015-8b96-cebc2d4e5f210a2e">
@@ -52967,7 +53059,10 @@
 					<Co K="OutputAPI" U="1152ec7f-2735-b30a-15a8ba10af3bd4a9"/>
 					<IoData Cr="216373ab-00cf-42fc-ffffe001fe9bf86f" Pr="216373ab-00ce-42f4-ffffe001fe9bf86f"/>
 					<Display Unit="&lt;v.pr&gt;"/>
-					<StateTexts></StateTexts>
+					<StateTexts Num="2">
+						<StateText Valid="true" ValidV="true" Text="" TextV="0" Icon="00000000-0000-0000-0000000000000000" Input0="6" CondT0="0"/>
+						<StateText Valid="true" ValidV="true" Text="Strom morgen: am günstigsten &lt;v1&gt; Uhr (&lt;v2.1&gt; ct/kWh), am teuersten &lt;v3&gt; Uhr (&lt;v4.1&gt; ct/kWh), Mittel &lt;v5.1&gt; ct/kWh" TextV="0" Icon="00000000-0000-0000-0000000000000000"/>
+					</StateTexts>
 				</C>
 				<C Type="OutputRefLM" V="178" U="36f6aaf6-cd30-ff50-324a835afb1cc1d3" Title="Meldung Tagesvorschau mit Zahlen (aWATTar)" Px="21120" Py="10080" Px2="23232" Py2="10272" Cl="0,0,0" Nio="2" Ref="c24671ef-f8af-4f0e-a8b38eedd85f6daa" WF="147456">
 					<Co K="AI" Nc="1" U="e1ceaab6-b7c4-da0b-4d7a124f503a43df">
