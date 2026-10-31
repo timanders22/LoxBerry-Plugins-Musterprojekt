@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<VirtualOut HintText="" Title="Funkwacht Steuerbefehle" Comment="Funkwacht Steuerbefehle — erzeugt am 17.10.2026. Sie quittieren und schalten die Wartung; einen Heilbefehl gibt es bewusst nicht." Address="http://loxberry" CloseAfterSend="true" CmdInit="" CmdSep="">
-	<Info templateType="3" minVersion="17010727"/>
-	<VirtualOutCmd Title="FW_QUITTIEREN" Comment="Bremse und Eskalation für alle Sticks zurücksetzen" CmdOnMethod="GET" CmdOn="/plugins/funkwacht/index.php?token=DEIN_TOKEN&amp;aktion=quittieren" CmdOnHTTP="" CmdOnPost="" CmdOffMethod="GET" CmdOff="" CmdOffHTTP="" CmdOffPost="" Analog="false" Repeat="0" RepeatRate="0" HintText=""/>
-	<VirtualOutCmd Title="FW_WARTUNG_EIN" Comment="Wartung: EIN hält das Heilen 60 Minuten an, AUS beendet sie sofort" CmdOnMethod="GET" CmdOn="/plugins/funkwacht/index.php?token=DEIN_TOKEN&amp;aktion=wartung&amp;dauer=60" CmdOnHTTP="" CmdOnPost="" CmdOffMethod="GET" CmdOff="/plugins/funkwacht/index.php?token=DEIN_TOKEN&amp;aktion=wartung&amp;dauer=0" CmdOffHTTP="" CmdOffPost="" Analog="false" Repeat="0" RepeatRate="0" HintText=""/>
-	<VirtualOutCmd Title="FW_QUITT_ZIGBEE" Comment="Bremse und Eskalation für Zigbee zurücksetzen" CmdOnMethod="GET" CmdOn="/plugins/funkwacht/index.php?token=DEIN_TOKEN&amp;aktion=quittieren&amp;nr=1" CmdOnHTTP="" CmdOnPost="" CmdOffMethod="GET" CmdOff="" CmdOffHTTP="" CmdOffPost="" Analog="false" Repeat="0" RepeatRate="0" HintText=""/>
-</VirtualOut>
