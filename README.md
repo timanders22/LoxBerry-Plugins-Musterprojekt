@@ -160,6 +160,8 @@ Eine gemeinsame Loxone-Config-Projektdatei mit je einer Seite pro LoxBerry-Plugi
 | WOLF ISM NG Bedienung | [LoxBerry-Plugin-WOLF-ISM-NG](https://github.com/timanders22/LoxBerry-Plugin-WOLF-ISM-NG) |
 | Xiaomi Licht | [LoxBerry-Plugin-Xiaomi-Licht](https://github.com/timanders22/LoxBerry-Plugin-Xiaomi-Licht) |
 | Xiaomi Licht Steuerung | [LoxBerry-Plugin-Xiaomi-Licht](https://github.com/timanders22/LoxBerry-Plugin-Xiaomi-Licht) |
+| Weatherdata | [LoxBerry-Plugin-Weatherdata](https://github.com/timanders22/LoxBerry-Plugin-Weatherdata) |
+| Weatherdata Werte und Signale | [LoxBerry-Plugin-Weatherdata](https://github.com/timanders22/LoxBerry-Plugin-Weatherdata) |
 
 Weitere Plugins folgen.
 
