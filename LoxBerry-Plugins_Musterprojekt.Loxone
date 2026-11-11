@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ControlList Version="274" LxAV="87" NextObj="1352" NextConst="1" NextNote="1" NextMem="4">
-	<C Type="Document" V="17020828" U="216373ab-00cc-41fa-ffffe001fe9bf86f" Title="LoxBerry-Plugins Musterprojekt" ConfigVersion="17020828" PaperFormat="2" SPSfreq="100" OpenIsHigh="false" Date="2026-11-05 21:53:58" CDate="" BDate="" DateS="563144038" Street="" Town="" PostCode="" Ctry="" Latitude="0.000" Longitude="0.000" Timezone="Europe/Vienna" Timeserver="" Logo="" uuidNotifications="216373ab-00cb-41f6-ffffe001fe9bf86f" uuidFavSeq="216373ab-00cb-41f8-ffffe001fe9bf86f" uuidFavCol="216373ab-00cb-41f9-ffffe001fe9bf86f" FC="hsv(25,96,50);hsv(24,95,80);hsv(337,94,50)" uuidTime="216373ab-00cb-41f7-ffffe001fe9bf86f" UnitPrecipitation="1" Currency="€" UpdTime="120" AUE="true" DeviceTelemetry="true" CrashL="true" Geo="0" NumO="7508" APPKEY="717BCB5938494F35EA25202FC850B65F" APPID="227A0B">
+	<C Type="Document" V="17020828" U="216373ab-00cc-41fa-ffffe001fe9bf86f" Title="LoxBerry-Plugins Musterprojekt" ConfigVersion="17020828" PaperFormat="2" SPSfreq="100" OpenIsHigh="false" Date="2026-11-05 21:53:58" CDate="" BDate="" DateS="563144038" Street="" Town="" PostCode="" Ctry="" Latitude="0.000" Longitude="0.000" Timezone="Europe/Vienna" Timeserver="" Logo="" uuidNotifications="216373ab-00cb-41f6-ffffe001fe9bf86f" uuidFavSeq="216373ab-00cb-41f8-ffffe001fe9bf86f" uuidFavCol="216373ab-00cb-41f9-ffffe001fe9bf86f" FC="hsv(25,96,50);hsv(24,95,80);hsv(337,94,50)" uuidTime="216373ab-00cb-41f7-ffffe001fe9bf86f" UnitPrecipitation="1" Currency="€" UpdTime="120" AUE="true" DeviceTelemetry="true" CrashL="true" Geo="0" NumO="7516" APPKEY="717BCB5938494F35EA25202FC850B65F" APPID="227A0B">
 		<HP H="" Sc="-2" S="WGpiqX5LbyaIrGD1MuWTTyrxvlVqUpqf" Alg="1"/>
 		<C Type="LoxCaption" V="178" U="216373ab-00cd-41fc-ffffe001fe9bf86f" Title="Symbole" Cl="0,0,0" WF="16384" CaptionType="5" SubType="5"/>
 		<C Type="CategoryCaption" V="178" U="216373ab-00cd-41fe-ffffe001fe9bf86f" Title="Kategorien" WF="16384">
@@ -8549,6 +8549,12 @@
 					<IoData Visu="true" Cr="216373ab-00cf-42fc-ffffe001fe9bf86f" Pr="216373ab-00cf-42f8-ffffe001fe9bf86f"/>
 					<Display Type="2" Unit="&lt;v.0&gt;" StateOnly="true"/>
 				</C>
+				<C Type="VirtualIn" Desc="BLE-Scanner NG: Personen im Raum wohnzimmer" IName="VI1957" V="178" U="7af0710e-0a98-43fe-8aa224a220ae896b" Title="blescanner_summary_raum_wohnzimmer_anzahl" Cl="238,238,238" Nio="2" WF="16400" ValOT="1" Analog="true" EnVal="true" MaxVal="999">
+					<Co K="Q" U="a396f3a5-8b4c-47cc-93277bd639a667f6"/>
+					<Co K="Qm" U="7f8c5396-4d2d-4f9b-9730eba6ecf1f011"/>
+					<IoData Visu="true" Cr="216373ab-00cf-42fc-ffffe001fe9bf86f" Pr="216373ab-00cf-42f8-ffffe001fe9bf86f"/>
+					<Display Type="2" Unit="&lt;v.0&gt;" StateOnly="true"/>
+				</C>
 				<C Type="VirtualIn" Desc="BLE-Scanner NG: Person 1 anwesend" IName="VI1270" V="178" U="f8bbc2b2-65da-8608-315d9333eb5daa57" Title="blescanner_person_Person1_anwesend_gesamt" Cl="238,238,238" Nio="2" WF="16400" ValOT="1" Analog="true" EnVal="true" MinVal="-1" MaxVal="1">
 					<Co K="Q" U="06d0f7f8-1985-6d30-381bbe7d8f0b5012"/>
 					<Co K="Qm" U="0cd911c2-9be3-22c9-a2fd924fc16e2c41"/>
@@ -8584,6 +8590,12 @@
 					<Co K="Qm" U="88eb1bdd-579f-8970-84fd173361440c4b"/>
 					<IoData Visu="true" Cr="216373ab-00cf-42fc-ffffe001fe9bf86f" Pr="216373ab-00cf-42f8-ffffe001fe9bf86f"/>
 					<Display Type="2" Unit="&lt;v.0&gt; s" StateOnly="true"/>
+				</C>
+				<C Type="VirtualIn" Desc="BLE-Scanner NG: Person 1 im Raum seit (Unix-Zeit)" IName="VI1956" V="178" U="521bb1f1-edb7-4941-92b6fe7715882f46" Title="blescanner_person_Person1_raum_seit" Cl="238,238,238" Nio="2" WF="16400" ValOT="1" Analog="true" EnVal="true" MinVal="-1" MaxVal="2147483647">
+					<Co K="Q" U="a82c4f35-48ad-4177-803261721f2f1864"/>
+					<Co K="Qm" U="8e6306e2-0bf4-4095-8011dd6521dcdbdc"/>
+					<IoData Visu="true" Cr="216373ab-00cf-42fc-ffffe001fe9bf86f" Pr="216373ab-00cf-42f8-ffffe001fe9bf86f"/>
+					<Display Type="2" Unit="&lt;v.0&gt;" StateOnly="true"/>
 				</C>
 				<C Type="VirtualIn" Desc="BLE-Scanner NG: Entfernung Schlüssel 1 (m)" IName="VI1276" V="178" U="c38c8117-0ba4-b9b7-43d3244ee63a14ae" Title="blescanner_schluessel1_distance" Cl="238,238,238" Nio="2" WF="16400" ValOT="1" Analog="true" EnVal="true" MinVal="-1" MaxVal="1000">
 					<Co K="Q" U="e4f56dd7-55a3-ae7b-dcca0266d4db1730"/>
@@ -9694,8 +9706,18 @@
 					<IoData Visu="true" Cr="216373ab-00cf-42fc-ffffe001fe9bf86f" Pr="216373ab-00cf-42f8-ffffe001fe9bf86f"/>
 					<Display Unit="&lt;v.1&gt;"/>
 				</C>
+				<C Type="VirtualTextIn" IName="VTI89" V="178" U="34e91039-0c3e-49e5-b0cda5ef6df0ba69" Title="blescanner_person_Person1_raum" Cl="238,238,238" Nio="1" WF="16400">
+					<Co K="TQ" U="2514a111-1da9-469f-96b06d312dd6acb3"/>
+					<IoData Visu="true" Cr="216373ab-00cf-42fc-ffffe001fe9bf86f" Pr="216373ab-00cf-42f8-ffffe001fe9bf86f"/>
+					<Display Unit="&lt;v.1&gt;"/>
+				</C>
 				<C Type="VirtualTextIn" IName="VTI60" V="178" U="2bce2a3a-875f-0660-2f208cc1f2f7e3e5" Title="blescanner_summary_names" Cl="238,238,238" Nio="1" WF="16400">
 					<Co K="TQ" U="1c12fe10-74b6-80ab-46c0f7e1ea32418c"/>
+					<IoData Visu="true" Cr="216373ab-00cf-42fc-ffffe001fe9bf86f" Pr="216373ab-00cf-42f8-ffffe001fe9bf86f"/>
+					<Display Unit="&lt;v.1&gt;"/>
+				</C>
+				<C Type="VirtualTextIn" IName="VTI90" V="178" U="99a9d171-e129-4020-8a6ff71907eef7a7" Title="blescanner_summary_raum_wohnzimmer_namen" Cl="238,238,238" Nio="1" WF="16400">
+					<Co K="TQ" U="d9783ea0-15c3-4e04-ab88f23c05d50011"/>
 					<IoData Visu="true" Cr="216373ab-00cf-42fc-ffffe001fe9bf86f" Pr="216373ab-00cf-42f8-ffffe001fe9bf86f"/>
 					<Display Unit="&lt;v.1&gt;"/>
 				</C>
@@ -26586,6 +26608,42 @@ Die Eingänge Alarm und Feueralarm des Players sind frei für eine eigene Alarma
 						<In Input="11c40195-3957-6426-7a515313b3697378"/>
 					</Co>
 					<Co K="AQ" U="f9e02dc8-e35f-9ac8-86bfbff5f1d38493"/>
+				</C>
+				<C Type="InputRef" V="178" U="379f40dc-6c4d-4178-9b408d583c0c5ab8" Title="blescanner_person_Person1_raum" Px="2880" Py="7392" Px2="4992" Py2="7584" Cl="0,0,0" Nio="4" Ref="34e91039-0c3e-49e5-b0cda5ef6df0ba69" WF="18432" Text="true" LinkRefType="83">
+					<Co K="AI" Nc="1" U="f530695d-52e6-4cfe-a4c1db56a71e36ea">
+						<In Input="2514a111-1da9-469f-96b06d312dd6acb3"/>
+					</Co>
+					<Co K="I" U="f84247c7-0b1b-4c48-ba7dca80dd460c55"/>
+					<Co K="AQ" U="a2f9d6fe-37e7-4199-aca907aa61e1c075"/>
+					<Co K="Q" U="e0cfe1f2-8a98-4195-824a00b6f10bdc9c"/>
+				</C>
+				<C Type="InputRef" V="178" U="ead49869-276b-47a5-9f409f277735693b" Title="blescanner_person_Person1_raum_seit" Px="2880" Py="7776" Px2="4992" Py2="7968" Cl="0,0,0" Nio="4" Ref="521bb1f1-edb7-4941-92b6fe7715882f46" WF="149504" Analog="true" LinkRefType="71">
+					<Co K="AI" Nc="1" U="42160d0c-966e-4f81-a35efaabd97fdd8a">
+						<In Input="a82c4f35-48ad-4177-803261721f2f1864"/>
+					</Co>
+					<Co K="I" Nc="1" U="76dd5cd7-c1c2-4e09-b1d3d2603cf2a76f">
+						<In Input="8e6306e2-0bf4-4095-8011dd6521dcdbdc"/>
+					</Co>
+					<Co K="AQ" U="d5a9c235-4358-4cd7-bcf77973643275dd"/>
+					<Co K="Q" U="6a039e95-f2f7-4ab2-985676fa32a12d30"/>
+				</C>
+				<C Type="InputRef" V="178" U="fe8d8d7d-a69a-43b5-8b848278fb7a491a" Title="blescanner_summary_raum_wohnzimmer_anzahl" Px="2880" Py="8160" Px2="4992" Py2="8352" Cl="0,0,0" Nio="4" Ref="7af0710e-0a98-43fe-8aa224a220ae896b" WF="149504" Analog="true" LinkRefType="71">
+					<Co K="AI" Nc="1" U="d1100984-220a-4ca4-a9c3011b43a366b1">
+						<In Input="a396f3a5-8b4c-47cc-93277bd639a667f6"/>
+					</Co>
+					<Co K="I" Nc="1" U="7bd7fde0-3514-46c7-80f96a05b25b22d4">
+						<In Input="7f8c5396-4d2d-4f9b-9730eba6ecf1f011"/>
+					</Co>
+					<Co K="AQ" U="d77269a4-8500-4a16-a77a4e9e74de7261"/>
+					<Co K="Q" U="9cdf3cdb-b27b-4c88-a55a8d3ece87d9bd"/>
+				</C>
+				<C Type="InputRef" V="178" U="c517a99e-2f94-4bcd-94de98a9b3ff6a5d" Title="blescanner_summary_raum_wohnzimmer_namen" Px="2880" Py="8544" Px2="4992" Py2="8736" Cl="0,0,0" Nio="4" Ref="99a9d171-e129-4020-8a6ff71907eef7a7" WF="18432" Text="true" LinkRefType="83">
+					<Co K="AI" Nc="1" U="04ef0a61-6d7e-4a63-a1c592db13047741">
+						<In Input="d9783ea0-15c3-4e04-ab88f23c05d50011"/>
+					</Co>
+					<Co K="I" U="1388c3ac-d779-4c87-a0842309ba7f64b6"/>
+					<Co K="AQ" U="bdba2073-a10c-4c21-b94dc15a3f30e6dc"/>
+					<Co K="Q" U="e739adff-3f75-4cda-934ee0d79d2b6363"/>
 				</C>
 			</C>
 			<C Type="Page" V="178" U="3e65eea2-2ef6-5063-d0482c4fefd83c9a" Title="BYD Autos" LtE="561075614" WF="16384">
