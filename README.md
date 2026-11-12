@@ -6,7 +6,7 @@ Eine gemeinsame Loxone-Config-Projektdatei mit je einer Seite pro LoxBerry-Plugi
 
 | Datei | Zweck |
 |---|---|
-| `LoxBerry-Plugins_Musterprojekt.Loxone` | Projektdatei (Loxone Config 17.2), eine Seite je Plugin |
+| `LoxBerry-Plugins_Musterprojekt.Loxone` | Projektdatei (Loxone Config 17.3), eine Seite je Plugin |
 | `vorlagen/*.xml` | Vorlagen für „Virtuelle HTTP-Eingänge“ und „Virtuelle Ausgänge“, die die Seiten benutzen (Werte über das MQTT-Gateway brauchen keine Vorlage, siehe unten) |
 | `bilder/einbindung_<plugin>.png` | Bild jeder Seite, wie es im Reiter „Einbindung in Loxone“ erscheint |
 
@@ -162,6 +162,8 @@ Eine gemeinsame Loxone-Config-Projektdatei mit je einer Seite pro LoxBerry-Plugi
 | Xiaomi Licht Steuerung | [LoxBerry-Plugin-Xiaomi-Licht](https://github.com/timanders22/LoxBerry-Plugin-Xiaomi-Licht) |
 | Weatherdata | [LoxBerry-Plugin-Weatherdata](https://github.com/timanders22/LoxBerry-Plugin-Weatherdata) |
 | Weatherdata Werte und Signale | [LoxBerry-Plugin-Weatherdata](https://github.com/timanders22/LoxBerry-Plugin-Weatherdata) |
+| Creality2Lox | [LoxBerry-Plugin-Creality2Lox](https://github.com/timanders22/LoxBerry-Plugin-Creality2Lox) |
+| Fronius-Wächter | [LoxBerry-Plugin-FroniusWaechter](https://github.com/timanders22/LoxBerry-Plugin-FroniusWaechter) |
 
 Weitere Plugins folgen.
 
