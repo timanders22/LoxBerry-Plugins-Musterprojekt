@@ -68,6 +68,7 @@ Eine gemeinsame Loxone-Config-Projektdatei mit je einer Seite pro LoxBerry-Plugi
 | Saugroboter | [LoxBerry-Plugin-Saugroboter-Valetudo](https://github.com/timanders22/LoxBerry-Plugin-Saugroboter-Valetudo) |
 | Saugroboter Steuerung | [LoxBerry-Plugin-Saugroboter-Valetudo](https://github.com/timanders22/LoxBerry-Plugin-Saugroboter-Valetudo) |
 | Saugroboter Wartung | [LoxBerry-Plugin-Saugroboter-Valetudo](https://github.com/timanders22/LoxBerry-Plugin-Saugroboter-Valetudo) |
+| Shelly-Weiche | [LoxBerry-Plugin-Shelly-Weiche](https://github.com/timanders22/LoxBerry-Plugin-Shelly-Weiche) |
 | Smartmeter klassisch | [LoxBerry-Plugin-Smartmeter-classic](https://github.com/timanders22/LoxBerry-Plugin-Smartmeter-classic) |
 | Smartmeter Kosten und Fahrplan | [LoxBerry-Plugin-Smartmeter-classic](https://github.com/timanders22/LoxBerry-Plugin-Smartmeter-classic) |
 | Smartmeter vzLogger | [LoxBerry-Plugin-Smartmeter-classic](https://github.com/timanders22/LoxBerry-Plugin-Smartmeter-classic) |
